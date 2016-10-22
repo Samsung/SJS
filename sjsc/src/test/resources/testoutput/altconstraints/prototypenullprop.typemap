@@ -1,0 +1,12 @@
+SplayTree --> ctor<0>[{  | root_: {  |  } }]() -> { root_: {  |  } |  }
+SplayTree --> ctor<0>[{  | root_: {  |  } }]() -> { root_: {  |  } |  }
+SplayTree --> ctor<0>[{  | root_: {  |  } }]() -> { root_: {  |  } |  }
+SplayTree.prototype --> {  | root_: {  |  } }
+SplayTree.prototype.root_ --> {  |  }
+SplayTree.prototype.root_ = null --> {  |  }
+function SplayTree() {
+}
+ --> ctor<0>[{  | root_: {  |  } }]() -> { root_: {  |  } |  }
+new SplayTree() --> { root_: {  |  } |  }
+null --> {  |  }
+x --> { root_: {  |  } |  }

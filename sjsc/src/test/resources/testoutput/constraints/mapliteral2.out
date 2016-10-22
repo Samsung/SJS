@@ -1,0 +1,17 @@
+Elem(|a|)=|a["hello"]|
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|4|]
+MakeConcreteConstraint [term=|a["hello"]|]
+MakeConcreteConstraint [term=|{"x": 2, "y": 4, "z": 1}|]
+|"hello"|=Key(|a|)
+|"hello"|=string
+|1|<:Elem(|{"x": 2, "y": 4, "z": 1}|)
+|1|=integer
+|2|<:Elem(|{"x": 2, "y": 4, "z": 1}|)
+|2|=integer
+|4|<:Elem(|{"x": 2, "y": 4, "z": 1}|)
+|4|=integer
+|a["hello"]|<:|p|
+|a|=|a|
+|{"x": 2, "y": 4, "z": 1}|<:|a|

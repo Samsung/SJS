@@ -1,0 +1,210 @@
+(i = j) --> integer
+(last * IA + IC) % IM --> integer
+(last * IA + IC) --> integer
+(last = (last * IA + IC) % IM) --> integer
+(max * (last = (last * IA + IC) % IM) / IM) --> float
+(n >> 1) + 1 --> integer
+(n >> 1) --> integer
+++j --> integer
+--ir --> integer
+--ir == 1 --> boolean
+--l --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1.0 --> float
+10 --> integer
+10 --> integer
+139968 --> integer
+29573 --> integer
+3877 --> integer
+42 --> integer
+Array --> () -> Array<float> INTERSECT (integer) -> Array<float> INTERSECT (float,float) -> Array<float>
+Array(n + 1) --> Array<float>
+IA --> integer
+IA --> integer
+IC --> integer
+IC --> integer
+IM --> integer
+IM --> integer
+IM --> integer
+ary --> Array<float>
+ary --> Array<float>
+ary --> Array<float>
+ary --> Array<float>
+ary --> Array<float>
+ary = Array(n + 1) --> Array<float>
+ary[i] --> float
+ary[i] = gen_random(1.0) --> float
+ary[n] --> float
+ary[n].toFixed --> [](integer) -> string
+ary[n].toFixed(10) --> string
+function gen_random(max) {
+  return (max * (last = (last * IA + IC) % IM) / IM);
+}
+ --> (float) -> float
+function heapsort(n, ra) {
+  var l, j, ir, i;
+  var rra;
+  l = (n >> 1) + 1;
+  ir = n;
+  for (; ; ) 
+    {
+      if (l > 1) 
+      {
+        rra = ra[--l];
+      } else {
+        rra = ra[ir];
+        ra[ir] = ra[1];
+        if (--ir == 1) 
+        {
+          ra[1] = rra;
+          return;
+        }
+      }
+      i = l;
+      j = l << 1;
+      while (j <= ir) 
+        {
+          if (j < ir && ra[j] < ra[j + 1]) 
+          {
+            ++j;
+          }
+          if (rra < ra[j]) 
+          {
+            ra[i] = ra[j];
+            j += (i = j);
+          } else {
+            j = ir + 1;
+          }
+        }
+      ra[i] = rra;
+    }
+}
+ --> (integer,Array<float>) -> void
+gen_random --> (float) -> float
+gen_random --> (float) -> float
+gen_random(1.0) --> float
+heapsort --> (integer,Array<float>) -> void
+heapsort --> (integer,Array<float>) -> void
+heapsort(n, ary) --> void
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i <= n --> boolean
+i = 1 --> integer
+i = j --> integer
+i = l --> integer
+i++ --> integer
+ir + 1 --> integer
+ir --> integer
+ir --> integer
+ir --> integer
+ir --> integer
+ir --> integer
+ir --> integer
+ir --> integer
+ir --> integer
+ir = n --> integer
+j + 1 --> integer
+j += (i = j) --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j < ir && ra[j] < ra[j + 1] --> boolean
+j < ir --> boolean
+j <= ir --> boolean
+j = ir + 1 --> integer
+j = l << 1 --> integer
+l --> integer
+l --> integer
+l --> integer
+l --> integer
+l --> integer
+l --> integer
+l << 1 --> integer
+l = (n >> 1) + 1 --> integer
+l > 1 --> boolean
+last * IA + IC --> integer
+last * IA --> integer
+last --> integer
+last --> integer
+last --> integer
+last = (last * IA + IC) % IM --> integer
+max * (last = (last * IA + IC) % IM) --> float
+max * (last = (last * IA + IC) % IM) / IM --> float
+max --> float
+max --> float
+n + 1 --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n >> 1 --> integer
+printString --> (string) -> void
+printString(ary[n].toFixed(10)) --> void
+ra --> Array<float>
+ra --> Array<float>
+ra --> Array<float>
+ra --> Array<float>
+ra --> Array<float>
+ra --> Array<float>
+ra --> Array<float>
+ra --> Array<float>
+ra --> Array<float>
+ra --> Array<float>
+ra --> Array<float>
+ra --> Array<float>
+ra[--l] --> float
+ra[1] --> float
+ra[1] --> float
+ra[1] = rra --> float
+ra[i] --> float
+ra[i] --> float
+ra[i] = ra[j] --> float
+ra[i] = rra --> float
+ra[ir] --> float
+ra[ir] --> float
+ra[ir] = ra[1] --> float
+ra[j + 1] --> float
+ra[j] --> float
+ra[j] --> float
+ra[j] --> float
+ra[j] < ra[j + 1] --> boolean
+rra --> float
+rra --> float
+rra --> float
+rra --> float
+rra --> float
+rra --> float
+rra < ra[j] --> boolean
+rra = ra[--l] --> float
+rra = ra[ir] --> float

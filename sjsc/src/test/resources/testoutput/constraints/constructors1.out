@@ -1,0 +1,55 @@
+CheckArity(ret(|C|))
+CheckArity(ret(|assert|))
+CheckArity(ret(|assert|))
+CheckArity(ret(|console.log|))
+MakeConcreteConstraint [term=|"asdf"|]
+MakeConcreteConstraint [term=|3|]
+MakeConcreteConstraint [term=|9|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|new C()|]
+MakeConcreteConstraint [term=|x.a == 3|]
+MakeConcreteConstraint [term=|x.a == 9|]
+MakeConcreteConstraint [term=|x.b|]
+prototype(|constructor C|)=__proto__(ret(|constructor C|))
+|"asdf"|<:prop(|this|,b)
+|"asdf"|=string
+|3|<:prop(|this|,a)
+|3|=integer
+|3|=integer
+|9|<:prop(|x|,a)
+|9|=integer
+|9|=integer
+|C|<:ctor<0>[X1]() -> X0
+|C|=|C|
+|assert(x.a == 3)|=ret(|assert|)
+|assert(x.a == 9)|=ret(|assert|)
+|assert|=|assert|
+|assert|=|assert|
+|console.log(x.b)|=ret(|console.log|)
+|console.log|=prop(|console|,log)
+|console|=|console|
+|constructor C|<:|C|
+|new C()|<:|x|
+|new C()|=ret(|C|)
+|this.a = 3|=prop(|this|,a)
+|this.a|=prop(|this|,a)
+|this.b = "asdf"|=prop(|this|,b)
+|this.b|=prop(|this|,b)
+|this|=ret(|constructor C|)
+|this|=ret(|constructor C|)
+|this|=|this|
+|this|=|this|
+|x.a = 9|=prop(|x|,a)
+|x.a == 3|<:param(|assert|,0)
+|x.a == 3|=op(|x.a|==|3|)
+|x.a == 9|<:param(|assert|,0)
+|x.a == 9|=op(|x.a|==|9|)
+|x.a|=prop(|x|,a)
+|x.a|=prop(|x|,a)
+|x.a|=prop(|x|,a)
+|x.b|<:param(|console.log|,0)
+|x.b|=prop(|x|,b)
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|

@@ -1,0 +1,75 @@
+(function modx() {
+  x = 490;
+}) --> () -> void
+(function modx() {
+  x = 490;
+})() --> void
+(function modx2_outer() {
+  return function modx2_inner() {
+  x = 265;
+};
+}) --> () -> () -> void
+(function modx2_outer() {
+  return function modx2_inner() {
+  x = 265;
+};
+})() --> () -> void
+(function modx2_outer() {
+  return function modx2_inner() {
+  x = 265;
+};
+})()() --> void
+130 --> integer
+130 --> integer
+2 --> integer
+239 --> integer
+239 --> integer
+260 --> integer
+265 --> integer
+265 --> integer
+490 --> integer
+490 --> integer
+assert --> (boolean) -> void
+assert --> (boolean) -> void
+assert --> (boolean) -> void
+assert --> (boolean) -> void
+assert --> (boolean) -> void
+assert(x == 130) --> void
+assert(x == 260) --> void
+assert(x == 265) --> void
+assert(x == 490) --> void
+assert(y == 239) --> void
+function modx() {
+  x = 490;
+} --> () -> void
+function modx2_inner() {
+  x = 265;
+} --> () -> void
+function modx2_outer() {
+  return function modx2_inner() {
+  x = 265;
+};
+} --> () -> () -> void
+modx --> () -> void
+modx2_inner --> () -> void
+modx2_outer --> () -> () -> void
+x * 2 --> integer
+x --> integer
+x --> integer
+x --> integer
+x --> integer
+x --> integer
+x --> integer
+x --> integer
+x --> integer
+x --> integer
+x = 265 --> integer
+x = 490 --> integer
+x = x * 2 --> integer
+x == 130 --> boolean
+x == 260 --> boolean
+x == 265 --> boolean
+x == 490 --> boolean
+y --> integer
+y --> integer
+y == 239 --> boolean

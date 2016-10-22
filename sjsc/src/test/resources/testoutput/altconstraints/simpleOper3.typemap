@@ -1,0 +1,12 @@
+"Hi" --> string
+3 --> integer
+o --> {  | foo: string, bar: integer }
+o --> {  | foo: string, bar: integer }
+o --> {  | foo: string, bar: integer }
+o.bar --> integer
+o.foo + o.bar --> string
+o.foo --> string
+x --> string
+x --> string
+z --> string
+{foo: x, bar: 3} --> {  | foo: string, bar: integer }

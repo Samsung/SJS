@@ -1,0 +1,349 @@
+CheckArity(ret(|Math.cos|))
+CheckArity(ret(|Math.pow|))
+CheckArity(ret(|Math.pow|))
+CheckArity(ret(|Math.sin|))
+CheckArity(ret(|a1.toFixed|))
+CheckArity(ret(|a2.toFixed|))
+CheckArity(ret(|a3.toFixed|))
+CheckArity(ret(|a4.toFixed|))
+CheckArity(ret(|a5.toFixed|))
+CheckArity(ret(|a6.toFixed|))
+CheckArity(ret(|a7.toFixed|))
+CheckArity(ret(|a8.toFixed|))
+CheckArity(ret(|a9.toFixed|))
+CheckArity(ret(|printString|))
+CheckArity(ret(|printString|))
+CheckArity(ret(|printString|))
+CheckArity(ret(|printString|))
+CheckArity(ret(|printString|))
+CheckArity(ret(|printString|))
+CheckArity(ret(|printString|))
+CheckArity(ret(|printString|))
+CheckArity(ret(|printString|))
+MakeConcreteConstraint [term=op(-|0.5|)]
+MakeConcreteConstraint [term=op(-|1.0|)]
+MakeConcreteConstraint [term=op(-|alt|)]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|1.0 / (k * (k + 1.0))|]
+MakeConcreteConstraint [term=|1.0 / (k3 * ck * ck)|]
+MakeConcreteConstraint [term=|1.0 / (k3 * sk * sk)|]
+MakeConcreteConstraint [term=|1.0 / k2|]
+MakeConcreteConstraint [term=|1.0 / k|]
+MakeConcreteConstraint [term=|10000|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|2.0 / 3.0|]
+MakeConcreteConstraint [term=|9|]
+MakeConcreteConstraint [term=|9|]
+MakeConcreteConstraint [term=|9|]
+MakeConcreteConstraint [term=|9|]
+MakeConcreteConstraint [term=|9|]
+MakeConcreteConstraint [term=|9|]
+MakeConcreteConstraint [term=|9|]
+MakeConcreteConstraint [term=|9|]
+MakeConcreteConstraint [term=|9|]
+MakeConcreteConstraint [term=|Math.cos(k * 1.0)|]
+MakeConcreteConstraint [term=|Math.pow(k * 1.0, -0.5)|]
+MakeConcreteConstraint [term=|Math.pow(twothirds, k - 1.0)|]
+MakeConcreteConstraint [term=|Math.sin(k * 1.0)|]
+MakeConcreteConstraint [term=|Math|]
+MakeConcreteConstraint [term=|Math|]
+MakeConcreteConstraint [term=|Math|]
+MakeConcreteConstraint [term=|Math|]
+MakeConcreteConstraint [term=|a1.toFixed(9) + "\t(2/3)^k"|]
+MakeConcreteConstraint [term=|a1|]
+MakeConcreteConstraint [term=|a2.toFixed(9) + "\tk^-0.5"|]
+MakeConcreteConstraint [term=|a2|]
+MakeConcreteConstraint [term=|a3.toFixed(9) + "\t1/k(k+1)"|]
+MakeConcreteConstraint [term=|a3|]
+MakeConcreteConstraint [term=|a4.toFixed(9) + "\tFlint Hills"|]
+MakeConcreteConstraint [term=|a4|]
+MakeConcreteConstraint [term=|a5.toFixed(9) + "\tCookson Hills"|]
+MakeConcreteConstraint [term=|a5|]
+MakeConcreteConstraint [term=|a6.toFixed(9) + "\tHarmonic"|]
+MakeConcreteConstraint [term=|a6|]
+MakeConcreteConstraint [term=|a7.toFixed(9) + "\tRiemann Zeta"|]
+MakeConcreteConstraint [term=|a7|]
+MakeConcreteConstraint [term=|a8.toFixed(9) + "\tAlternating Harmonic"|]
+MakeConcreteConstraint [term=|a8|]
+MakeConcreteConstraint [term=|a9.toFixed(9) + "\tGregory"|]
+MakeConcreteConstraint [term=|a9|]
+MakeConcreteConstraint [term=|alt / (2 * k - 1)|]
+MakeConcreteConstraint [term=|alt / k|]
+MakeConcreteConstraint [term=|k * 1.0|]
+MakeConcreteConstraint [term=|k * 1.0|]
+MakeConcreteConstraint [term=|k * 1.0|]
+MakeConcreteConstraint [term=|k * k * 1.0|]
+MakeConcreteConstraint [term=|k - 1.0|]
+MakeConcreteConstraint [term=|k2 * k|]
+MakeConcreteConstraint [term=|twothirds|]
+op(-|0.5|)<:param(|Math.pow|,1)
+op(-|1.0|)<:|alt|
+op(-|alt|)<:|alt|
+|"\t(2/3)^k"|=string
+|"\t1/k(k+1)"|=string
+|"\tAlternating Harmonic"|=string
+|"\tCookson Hills"|=string
+|"\tFlint Hills"|=string
+|"\tGregory"|=string
+|"\tHarmonic"|=string
+|"\tRiemann Zeta"|=string
+|"\tk^-0.5"|=string
+|(2 * k - 1)|=|2 * k - 1|
+|(k * (k + 1.0))|=|k * (k + 1.0)|
+|(k + 1.0)|=|k + 1.0|
+|(k3 * ck * ck)|=|k3 * ck * ck|
+|(k3 * sk * sk)|=|k3 * sk * sk|
+|-0.5|=op(-|0.5|)
+|-1.0|=op(-|1.0|)
+|-alt|=op(-|alt|)
+|0.0|<:|a1|
+|0.0|<:|a2|
+|0.0|<:|a3|
+|0.0|<:|a4|
+|0.0|<:|a5|
+|0.0|<:|a6|
+|0.0|<:|a7|
+|0.0|<:|a8|
+|0.0|<:|a9|
+|0.0|<:|ck|
+|0.0|<:|k2|
+|0.0|<:|k3|
+|0.0|<:|sk|
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.5|=float
+|1.0 / (k * (k + 1.0))|<:|a3|
+|1.0 / (k * (k + 1.0))|=op(|1.0|/|(k * (k + 1.0))|)
+|1.0 / (k3 * ck * ck)|<:|a5|
+|1.0 / (k3 * ck * ck)|=op(|1.0|/|(k3 * ck * ck)|)
+|1.0 / (k3 * sk * sk)|<:|a4|
+|1.0 / (k3 * sk * sk)|=op(|1.0|/|(k3 * sk * sk)|)
+|1.0 / k2|<:|a7|
+|1.0 / k2|=op(|1.0|/|k2|)
+|1.0 / k|<:|a6|
+|1.0 / k|=op(|1.0|/|k|)
+|1.0|=float
+|1.0|=float
+|1.0|=float
+|1.0|=float
+|1.0|=float
+|1.0|=float
+|1.0|=float
+|1.0|=float
+|1.0|=float
+|1.0|=float
+|1.0|=float
+|1.0|=float
+|10000|<:|n|
+|10000|=integer
+|1|<:|k|
+|1|=integer
+|1|=integer
+|2 * k - 1|=op(|2 * k|-|1|)
+|2 * k|=op(|2|*|k|)
+|2.0 / 3.0|<:|twothirds|
+|2.0 / 3.0|=op(|2.0|/|3.0|)
+|2.0|=float
+|2|=integer
+|3.0|=float
+|9|<:param(|a1.toFixed|,0)
+|9|<:param(|a2.toFixed|,0)
+|9|<:param(|a3.toFixed|,0)
+|9|<:param(|a4.toFixed|,0)
+|9|<:param(|a5.toFixed|,0)
+|9|<:param(|a6.toFixed|,0)
+|9|<:param(|a7.toFixed|,0)
+|9|<:param(|a8.toFixed|,0)
+|9|<:param(|a9.toFixed|,0)
+|9|=integer
+|9|=integer
+|9|=integer
+|9|=integer
+|9|=integer
+|9|=integer
+|9|=integer
+|9|=integer
+|9|=integer
+|Math.cos(k * 1.0)|<:|ck|
+|Math.cos(k * 1.0)|=ret(|Math.cos|)
+|Math.cos|=prop(|Math|,cos)
+|Math.pow(k * 1.0, -0.5)|<:|a2|
+|Math.pow(k * 1.0, -0.5)|=ret(|Math.pow|)
+|Math.pow(twothirds, k - 1.0)|<:|a1|
+|Math.pow(twothirds, k - 1.0)|=ret(|Math.pow|)
+|Math.pow|=prop(|Math|,pow)
+|Math.pow|=prop(|Math|,pow)
+|Math.sin(k * 1.0)|<:|sk|
+|Math.sin(k * 1.0)|=ret(|Math.sin|)
+|Math.sin|=prop(|Math|,sin)
+|Math|=|Math|
+|Math|=|Math|
+|Math|=|Math|
+|Math|=|Math|
+|a1 += Math.pow(twothirds, k - 1.0)|=|a1|
+|a1.toFixed(9) + "\t(2/3)^k"|<:param(|printString|,0)
+|a1.toFixed(9) + "\t(2/3)^k"|=op(|a1.toFixed(9)|+|"\t(2/3)^k"|)
+|a1.toFixed(9)|=ret(|a1.toFixed|)
+|a1.toFixed|=prop(|a1|,toFixed)
+|a1|=|a1|
+|a1|=|a1|
+|a2 += Math.pow(k * 1.0, -0.5)|=|a2|
+|a2.toFixed(9) + "\tk^-0.5"|<:param(|printString|,0)
+|a2.toFixed(9) + "\tk^-0.5"|=op(|a2.toFixed(9)|+|"\tk^-0.5"|)
+|a2.toFixed(9)|=ret(|a2.toFixed|)
+|a2.toFixed|=prop(|a2|,toFixed)
+|a2|=|a2|
+|a2|=|a2|
+|a3 += 1.0 / (k * (k + 1.0))|=|a3|
+|a3.toFixed(9) + "\t1/k(k+1)"|<:param(|printString|,0)
+|a3.toFixed(9) + "\t1/k(k+1)"|=op(|a3.toFixed(9)|+|"\t1/k(k+1)"|)
+|a3.toFixed(9)|=ret(|a3.toFixed|)
+|a3.toFixed|=prop(|a3|,toFixed)
+|a3|=|a3|
+|a3|=|a3|
+|a4 += 1.0 / (k3 * sk * sk)|=|a4|
+|a4.toFixed(9) + "\tFlint Hills"|<:param(|printString|,0)
+|a4.toFixed(9) + "\tFlint Hills"|=op(|a4.toFixed(9)|+|"\tFlint Hills"|)
+|a4.toFixed(9)|=ret(|a4.toFixed|)
+|a4.toFixed|=prop(|a4|,toFixed)
+|a4|=|a4|
+|a4|=|a4|
+|a5 += 1.0 / (k3 * ck * ck)|=|a5|
+|a5.toFixed(9) + "\tCookson Hills"|<:param(|printString|,0)
+|a5.toFixed(9) + "\tCookson Hills"|=op(|a5.toFixed(9)|+|"\tCookson Hills"|)
+|a5.toFixed(9)|=ret(|a5.toFixed|)
+|a5.toFixed|=prop(|a5|,toFixed)
+|a5|=|a5|
+|a5|=|a5|
+|a6 += 1.0 / k|=|a6|
+|a6.toFixed(9) + "\tHarmonic"|<:param(|printString|,0)
+|a6.toFixed(9) + "\tHarmonic"|=op(|a6.toFixed(9)|+|"\tHarmonic"|)
+|a6.toFixed(9)|=ret(|a6.toFixed|)
+|a6.toFixed|=prop(|a6|,toFixed)
+|a6|=|a6|
+|a6|=|a6|
+|a7 += 1.0 / k2|=|a7|
+|a7.toFixed(9) + "\tRiemann Zeta"|<:param(|printString|,0)
+|a7.toFixed(9) + "\tRiemann Zeta"|=op(|a7.toFixed(9)|+|"\tRiemann Zeta"|)
+|a7.toFixed(9)|=ret(|a7.toFixed|)
+|a7.toFixed|=prop(|a7|,toFixed)
+|a7|=|a7|
+|a7|=|a7|
+|a8 += alt / k|=|a8|
+|a8.toFixed(9) + "\tAlternating Harmonic"|<:param(|printString|,0)
+|a8.toFixed(9) + "\tAlternating Harmonic"|=op(|a8.toFixed(9)|+|"\tAlternating Harmonic"|)
+|a8.toFixed(9)|=ret(|a8.toFixed|)
+|a8.toFixed|=prop(|a8|,toFixed)
+|a8|=|a8|
+|a8|=|a8|
+|a9 += alt / (2 * k - 1)|=|a9|
+|a9.toFixed(9) + "\tGregory"|<:param(|printString|,0)
+|a9.toFixed(9) + "\tGregory"|=op(|a9.toFixed(9)|+|"\tGregory"|)
+|a9.toFixed(9)|=ret(|a9.toFixed|)
+|a9.toFixed|=prop(|a9|,toFixed)
+|a9|=|a9|
+|a9|=|a9|
+|alt / (2 * k - 1)|<:|a9|
+|alt / (2 * k - 1)|=op(|alt|/|(2 * k - 1)|)
+|alt / k|<:|a8|
+|alt / k|=op(|alt|/|k|)
+|alt = -alt|=|alt|
+|alt|=|alt|
+|alt|=|alt|
+|alt|=|alt|
+|alt|=|alt|
+|ck = Math.cos(k * 1.0)|=|ck|
+|ck|=|ck|
+|ck|=|ck|
+|ck|=|ck|
+|k * (k + 1.0)|=op(|k|*|(k + 1.0)|)
+|k * 1.0|<:param(|Math.cos|,0)
+|k * 1.0|<:param(|Math.pow|,0)
+|k * 1.0|<:param(|Math.sin|,0)
+|k * 1.0|=op(|k|*|1.0|)
+|k * 1.0|=op(|k|*|1.0|)
+|k * 1.0|=op(|k|*|1.0|)
+|k * k * 1.0|<:|k2|
+|k * k * 1.0|=op(|k * k|*|1.0|)
+|k * k|=op(|k|*|k|)
+|k + 1.0|=op(|k|+|1.0|)
+|k - 1.0|<:param(|Math.pow|,1)
+|k - 1.0|=op(|k|-|1.0|)
+|k <= n|=op(|k|<=|n|)
+|k++|=op(|k|++)
+|k2 * k|<:|k3|
+|k2 * k|=op(|k2|*|k|)
+|k2 = k * k * 1.0|=|k2|
+|k2|=|k2|
+|k2|=|k2|
+|k2|=|k2|
+|k3 * ck * ck|=op(|k3 * ck|*|ck|)
+|k3 * ck|=op(|k3|*|ck|)
+|k3 * sk * sk|=op(|k3 * sk|*|sk|)
+|k3 * sk|=op(|k3|*|sk|)
+|k3 = k2 * k|=|k3|
+|k3|=|k3|
+|k3|=|k3|
+|k3|=|k3|
+|k|=|k|
+|k|=|k|
+|k|=|k|
+|k|=|k|
+|k|=|k|
+|k|=|k|
+|k|=|k|
+|k|=|k|
+|k|=|k|
+|k|=|k|
+|k|=|k|
+|k|=|k|
+|k|=|k|
+|k|=|k|
+|n|=|n|
+|printString(a1.toFixed(9) + "\t(2/3)^k")|=ret(|printString|)
+|printString(a2.toFixed(9) + "\tk^-0.5")|=ret(|printString|)
+|printString(a3.toFixed(9) + "\t1/k(k+1)")|=ret(|printString|)
+|printString(a4.toFixed(9) + "\tFlint Hills")|=ret(|printString|)
+|printString(a5.toFixed(9) + "\tCookson Hills")|=ret(|printString|)
+|printString(a6.toFixed(9) + "\tHarmonic")|=ret(|printString|)
+|printString(a7.toFixed(9) + "\tRiemann Zeta")|=ret(|printString|)
+|printString(a8.toFixed(9) + "\tAlternating Harmonic")|=ret(|printString|)
+|printString(a9.toFixed(9) + "\tGregory")|=ret(|printString|)
+|printString|=|printString|
+|printString|=|printString|
+|printString|=|printString|
+|printString|=|printString|
+|printString|=|printString|
+|printString|=|printString|
+|printString|=|printString|
+|printString|=|printString|
+|printString|=|printString|
+|sk = Math.sin(k * 1.0)|=|sk|
+|sk|=|sk|
+|sk|=|sk|
+|sk|=|sk|
+|twothirds|<:param(|Math.pow|,0)
+|twothirds|=|twothirds|

@@ -1,0 +1,12 @@
+#!/bin/bash
+export JAVA_HOME=$(/usr/libexec/java_home)
+#export MAVEN_OPTS="-ea"
+#
+#mvn exec:java -D exec.mainClass=com.samsung.App -D exec.args=$1
+
+# The rest of this script is from:
+# http://forums.gradle.org/gradle/topics/how_can_i_provide_command_line_args_to_application_started_with_gradle_run
+
+printf -v var "'%s', " "$@"
+var=${var%??}
+gradle run -PappArgs="[$var]"

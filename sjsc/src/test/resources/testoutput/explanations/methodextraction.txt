@@ -1,0 +1,1 @@
+Error on line 23: in a.fire: it is illegal to detach a method from an object

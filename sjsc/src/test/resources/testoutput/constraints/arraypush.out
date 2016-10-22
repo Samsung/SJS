@@ -1,0 +1,16 @@
+CheckArity(ret(|a.push|))
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|a|]
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(|[]|)
+TP([])=param(prop(|[]|,push),0)
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,shift))
+|1|<:param(|a.push|,0)
+|1|=integer
+|[]|<:|a|
+|a.push(1)|=ret(|a.push|)
+|a.push|=prop(|a|,push)
+|a|=|a|

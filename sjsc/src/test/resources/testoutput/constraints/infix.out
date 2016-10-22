@@ -1,0 +1,31 @@
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|w = z|]
+MakeConcreteConstraint [term=|x + y|]
+MakeConcreteConstraint [term=|z|]
+|0|<:|v|
+|0|<:|w|
+|0|<:|x|
+|0|<:|y|
+|0|<:|z|
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|v = w = z|=|v|
+|v|=|v|
+|w = z|<:|v|
+|w = z|=|w|
+|w|=|w|
+|x + y|<:|x|
+|x + y|=op(|x|+|y|)
+|x = x + y|=|x|
+|x|=|x|
+|x|=|x|
+|y|=|y|
+|z|<:|w|
+|z|=|z|

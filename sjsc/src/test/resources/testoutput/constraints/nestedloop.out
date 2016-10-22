@@ -1,0 +1,44 @@
+CheckArity(ret(|printInt|))
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|10|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|x|]
+|0|<:|x|
+|0|=integer
+|10|<:|n|
+|10|=integer
+|a--|=op(|a|--)
+|a|=|a|
+|b--|=op(|b|--)
+|b|=|b|
+|c--|=op(|c|--)
+|c|=|c|
+|d--|=op(|d|--)
+|d|=|d|
+|e--|=op(|e|--)
+|e|=|e|
+|f--|=op(|f|--)
+|f|=|f|
+|n|<:|a|
+|n|<:|b|
+|n|<:|c|
+|n|<:|d|
+|n|<:|e|
+|n|<:|f|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|printInt(x)|=ret(|printInt|)
+|printInt|=|printInt|
+|x++|=op(|x|++)
+|x|<:param(|printInt|,0)
+|x|=|x|
+|x|=|x|

@@ -1,0 +1,39 @@
+CheckArity(ret(|fib|))
+CheckArity(ret(|fib|))
+CheckArity(ret(|fib|))
+CheckArity(ret(|printInt|))
+MakeConcreteConstraint [term=|17|]
+MakeConcreteConstraint [term=|fib(n)|]
+MakeConcreteConstraint [term=|n - 1|]
+MakeConcreteConstraint [term=|n - 2|]
+MakeConcreteConstraint [term=|n|]
+param(|function fib|,0)=|n|
+|17|<:|n|
+|17|=integer
+|1|<:ret(|function fib|)
+|1|=integer
+|1|=integer
+|2|=integer
+|2|=integer
+|fib(n - 1)|=ret(|fib|)
+|fib(n - 2) + fib(n - 1)|<:ret(|function fib|)
+|fib(n - 2) + fib(n - 1)|=op(|fib(n - 2)|+|fib(n - 1)|)
+|fib(n - 2)|=ret(|fib|)
+|fib(n)|<:param(|printInt|,0)
+|fib(n)|=ret(|fib|)
+|fib|=|fib|
+|fib|=|fib|
+|fib|=|fib|
+|function fib|<:|fib|
+|n - 1|<:param(|fib|,0)
+|n - 1|=op(|n|-|1|)
+|n - 2|<:param(|fib|,0)
+|n - 2|=op(|n|-|2|)
+|n < 2|=op(|n|<|2|)
+|n|<:param(|fib|,0)
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|printInt(fib(n))|=ret(|printInt|)
+|printInt|=|printInt|

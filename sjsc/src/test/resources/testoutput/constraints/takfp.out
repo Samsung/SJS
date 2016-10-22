@@ -1,0 +1,92 @@
+CheckArity(ret(|printString|))
+CheckArity(ret(|tak(n * 3, n * 2, n).toFixed|))
+CheckArity(ret(|tak|))
+CheckArity(ret(|tak|))
+CheckArity(ret(|tak|))
+CheckArity(ret(|tak|))
+CheckArity(ret(|tak|))
+MakeConcreteConstraint [term=|10|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|n * 2|]
+MakeConcreteConstraint [term=|n * 3|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|tak(n * 3, n * 2, n).toFixed(1)|]
+MakeConcreteConstraint [term=|tak(n * 3, n * 2, n)|]
+MakeConcreteConstraint [term=|tak(x - 1, y, z)|]
+MakeConcreteConstraint [term=|tak(y - 1, z, x)|]
+MakeConcreteConstraint [term=|tak(z - 1, x, y)|]
+MakeConcreteConstraint [term=|x - 1|]
+MakeConcreteConstraint [term=|x|]
+MakeConcreteConstraint [term=|x|]
+MakeConcreteConstraint [term=|y - 1|]
+MakeConcreteConstraint [term=|y|]
+MakeConcreteConstraint [term=|y|]
+MakeConcreteConstraint [term=|z - 1|]
+MakeConcreteConstraint [term=|z|]
+MakeConcreteConstraint [term=|z|]
+param(|function tak|,0)=|x|
+param(|function tak|,1)=|y|
+param(|function tak|,2)=|z|
+|10|<:|n|
+|10|=integer
+|1|<:param(|tak(n * 3, n * 2, n).toFixed|,0)
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|2|=integer
+|3|=integer
+|function tak|<:|tak|
+|n * 2|<:param(|tak|,1)
+|n * 2|=op(|n|*|2|)
+|n * 3|<:param(|tak|,0)
+|n * 3|=op(|n|*|3|)
+|n|<:param(|tak|,2)
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|printString(tak(n * 3, n * 2, n).toFixed(1))|=ret(|printString|)
+|printString|=|printString|
+|tak(n * 3, n * 2, n).toFixed(1)|<:param(|printString|,0)
+|tak(n * 3, n * 2, n).toFixed(1)|=ret(|tak(n * 3, n * 2, n).toFixed|)
+|tak(n * 3, n * 2, n).toFixed|=prop(|tak(n * 3, n * 2, n)|,toFixed)
+|tak(n * 3, n * 2, n)|=ret(|tak|)
+|tak(tak(x - 1, y, z), tak(y - 1, z, x), tak(z - 1, x, y))|<:ret(|function tak|)
+|tak(tak(x - 1, y, z), tak(y - 1, z, x), tak(z - 1, x, y))|=ret(|tak|)
+|tak(x - 1, y, z)|<:param(|tak|,0)
+|tak(x - 1, y, z)|=ret(|tak|)
+|tak(y - 1, z, x)|<:param(|tak|,1)
+|tak(y - 1, z, x)|=ret(|tak|)
+|tak(z - 1, x, y)|<:param(|tak|,2)
+|tak(z - 1, x, y)|=ret(|tak|)
+|tak|=|tak|
+|tak|=|tak|
+|tak|=|tak|
+|tak|=|tak|
+|tak|=|tak|
+|x - 1|<:param(|tak|,0)
+|x - 1|=op(|x|-|1|)
+|x|<:param(|tak|,1)
+|x|<:param(|tak|,2)
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|y - 1|<:param(|tak|,0)
+|y - 1|=op(|y|-|1|)
+|y >= x|=op(|y|>=|x|)
+|y|<:param(|tak|,1)
+|y|<:param(|tak|,2)
+|y|=|y|
+|y|=|y|
+|y|=|y|
+|y|=|y|
+|z - 1|<:param(|tak|,0)
+|z - 1|=op(|z|-|1|)
+|z|<:param(|tak|,1)
+|z|<:param(|tak|,2)
+|z|<:ret(|function tak|)
+|z|=|z|
+|z|=|z|
+|z|=|z|
+|z|=|z|

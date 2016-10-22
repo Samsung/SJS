@@ -1,0 +1,167 @@
+CheckArity(ret(|body|))
+CheckArity(ret(|jupiter.offsetMomentum|))
+MakeConcreteConstraint [term=op(-|1.03622044471123109e-01|)]
+MakeConcreteConstraint [term=op(-|1.16032004402742839e+00|)]
+MakeConcreteConstraint [term=|-6.90460016972063023e-05 * DAYS_PER_YEAR|]
+MakeConcreteConstraint [term=|-px / SOLAR_MASS|]
+MakeConcreteConstraint [term=|-py / SOLAR_MASS|]
+MakeConcreteConstraint [term=|-pz / SOLAR_MASS|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|1.66007664274403694e-03 * DAYS_PER_YEAR|]
+MakeConcreteConstraint [term=|3.141592653589793|]
+MakeConcreteConstraint [term=|365.24|]
+MakeConcreteConstraint [term=|4 * PI * PI|]
+MakeConcreteConstraint [term=|4.84143144246472090e+00|]
+MakeConcreteConstraint [term=|7.69901118419740425e-03 * DAYS_PER_YEAR|]
+MakeConcreteConstraint [term=|9.54791938424326609e-04 * SOLAR_MASS|]
+MakeConcreteConstraint [term=|body(4.84143144246472090e+00, -1.16032004402742839e+00, -1.03622044471123109e-01, 1.66007664274403694e-03 * DAYS_PER_YEAR, 7.69901118419740425e-03 * DAYS_PER_YEAR, -6.90460016972063023e-05 * DAYS_PER_YEAR, 9.54791938424326609e-04 * SOLAR_MASS)|]
+MakeConcreteConstraint [term=|jupiter|]
+MakeConcreteConstraint [term=|mass|]
+MakeConcreteConstraint [term=|method <anonymous>|]
+MakeConcreteConstraint [term=|vx|]
+MakeConcreteConstraint [term=|vy|]
+MakeConcreteConstraint [term=|vz|]
+MakeConcreteConstraint [term=|x|]
+MakeConcreteConstraint [term=|y|]
+MakeConcreteConstraint [term=|z|]
+op(-|1.03622044471123109e-01|)<:param(|body|,2)
+op(-|1.16032004402742839e+00|)<:param(|body|,1)
+param(|function body|,0)=|x|
+param(|function body|,1)=|y|
+param(|function body|,2)=|z|
+param(|function body|,3)=|vx|
+param(|function body|,4)=|vy|
+param(|function body|,5)=|vz|
+param(|function body|,6)=|mass|
+param(|method <anonymous>|,0)=|px|
+param(|method <anonymous>|,1)=|py|
+param(|method <anonymous>|,2)=|pz|
+ret(|method <anonymous>|)=void
+ret(|method <anonymous>|)=void
+|-1.03622044471123109e-01|=op(-|1.03622044471123109e-01|)
+|-1.16032004402742839e+00|=op(-|1.16032004402742839e+00|)
+|-6.90460016972063023e-05 * DAYS_PER_YEAR|<:param(|body|,5)
+|-6.90460016972063023e-05 * DAYS_PER_YEAR|=op(op(-|6.90460016972063023e-05|)*|DAYS_PER_YEAR|)
+|-6.90460016972063023e-05|=op(-|6.90460016972063023e-05|)
+|-px / SOLAR_MASS|<:prop(|this|,vx)
+|-px / SOLAR_MASS|=op(op(-|px|)/|SOLAR_MASS|)
+|-px|=op(-|px|)
+|-py / SOLAR_MASS|<:prop(|this|,vy)
+|-py / SOLAR_MASS|=op(op(-|py|)/|SOLAR_MASS|)
+|-py|=op(-|py|)
+|-pz / SOLAR_MASS|<:prop(|this|,vz)
+|-pz / SOLAR_MASS|=op(op(-|pz|)/|SOLAR_MASS|)
+|-pz|=op(-|pz|)
+|0.0|<:param(|jupiter.offsetMomentum|,0)
+|0.0|<:param(|jupiter.offsetMomentum|,1)
+|0.0|<:param(|jupiter.offsetMomentum|,2)
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|1.03622044471123109e-01|=float
+|1.16032004402742839e+00|=float
+|1.66007664274403694e-03 * DAYS_PER_YEAR|<:param(|body|,3)
+|1.66007664274403694e-03 * DAYS_PER_YEAR|=op(|1.66007664274403694e-03|*|DAYS_PER_YEAR|)
+|1.66007664274403694e-03|=float
+|3.141592653589793|<:|PI|
+|3.141592653589793|=float
+|365.24|<:|DAYS_PER_YEAR|
+|365.24|=float
+|4 * PI * PI|<:|SOLAR_MASS|
+|4 * PI * PI|=op(|4 * PI|*|PI|)
+|4 * PI|=op(|4|*|PI|)
+|4.84143144246472090e+00|<:param(|body|,0)
+|4.84143144246472090e+00|=float
+|4|=integer
+|6.90460016972063023e-05|=float
+|7.69901118419740425e-03 * DAYS_PER_YEAR|<:param(|body|,4)
+|7.69901118419740425e-03 * DAYS_PER_YEAR|=op(|7.69901118419740425e-03|*|DAYS_PER_YEAR|)
+|7.69901118419740425e-03|=float
+|9.54791938424326609e-04 * SOLAR_MASS|<:param(|body|,6)
+|9.54791938424326609e-04 * SOLAR_MASS|=op(|9.54791938424326609e-04|*|SOLAR_MASS|)
+|9.54791938424326609e-04|=float
+|DAYS_PER_YEAR|=|DAYS_PER_YEAR|
+|DAYS_PER_YEAR|=|DAYS_PER_YEAR|
+|DAYS_PER_YEAR|=|DAYS_PER_YEAR|
+|PI|=|PI|
+|PI|=|PI|
+|SOLAR_MASS|=|SOLAR_MASS|
+|SOLAR_MASS|=|SOLAR_MASS|
+|SOLAR_MASS|=|SOLAR_MASS|
+|SOLAR_MASS|=|SOLAR_MASS|
+|body(4.84143144246472090e+00, -1.16032004402742839e+00, -1.03622044471123109e-01, 1.66007664274403694e-03 * DAYS_PER_YEAR, 7.69901118419740425e-03 * DAYS_PER_YEAR, -6.90460016972063023e-05 * DAYS_PER_YEAR, 9.54791938424326609e-04 * SOLAR_MASS)|<:|jupiter|
+|body(4.84143144246472090e+00, -1.16032004402742839e+00, -1.03622044471123109e-01, 1.66007664274403694e-03 * DAYS_PER_YEAR, 7.69901118419740425e-03 * DAYS_PER_YEAR, -6.90460016972063023e-05 * DAYS_PER_YEAR, 9.54791938424326609e-04 * SOLAR_MASS)|=ret(|body|)
+|body|=|body|
+|function body|<:|body|
+|jupiter.offsetMomentum(0.0, 0.0, 0.0)|=ret(|jupiter.offsetMomentum|)
+|jupiter.offsetMomentum|=prop(|jupiter|,offsetMomentum)
+|jupiter|=|jupiter|
+|mass|<:prop(|{x: x, y: y, z: z, vx: vx, vy: vy, vz: vz, mass: mass, offsetMomentum: function(px, py, pz) {
+  this.vx = -px / SOLAR_MASS;
+  this.vy = -py / SOLAR_MASS;
+  this.vz = -pz / SOLAR_MASS;
+}}|,mass)
+|mass|=|mass|
+|method <anonymous>|<:prop(|{x: x, y: y, z: z, vx: vx, vy: vy, vz: vz, mass: mass, offsetMomentum: function(px, py, pz) {
+  this.vx = -px / SOLAR_MASS;
+  this.vy = -py / SOLAR_MASS;
+  this.vz = -pz / SOLAR_MASS;
+}}|,offsetMomentum)
+|px|=|px|
+|py|=|py|
+|pz|=|pz|
+|this.vx = -px / SOLAR_MASS|=prop(|this|,vx)
+|this.vx|=prop(|this|,vx)
+|this.vy = -py / SOLAR_MASS|=prop(|this|,vy)
+|this.vy|=prop(|this|,vy)
+|this.vz = -pz / SOLAR_MASS|=prop(|this|,vz)
+|this.vz|=prop(|this|,vz)
+|this|=receiver(|method <anonymous>|)
+|this|=receiver(|method <anonymous>|)
+|this|=receiver(|method <anonymous>|)
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|vx|<:prop(|{x: x, y: y, z: z, vx: vx, vy: vy, vz: vz, mass: mass, offsetMomentum: function(px, py, pz) {
+  this.vx = -px / SOLAR_MASS;
+  this.vy = -py / SOLAR_MASS;
+  this.vz = -pz / SOLAR_MASS;
+}}|,vx)
+|vx|=|vx|
+|vy|<:prop(|{x: x, y: y, z: z, vx: vx, vy: vy, vz: vz, mass: mass, offsetMomentum: function(px, py, pz) {
+  this.vx = -px / SOLAR_MASS;
+  this.vy = -py / SOLAR_MASS;
+  this.vz = -pz / SOLAR_MASS;
+}}|,vy)
+|vy|=|vy|
+|vz|<:prop(|{x: x, y: y, z: z, vx: vx, vy: vy, vz: vz, mass: mass, offsetMomentum: function(px, py, pz) {
+  this.vx = -px / SOLAR_MASS;
+  this.vy = -py / SOLAR_MASS;
+  this.vz = -pz / SOLAR_MASS;
+}}|,vz)
+|vz|=|vz|
+|x|<:prop(|{x: x, y: y, z: z, vx: vx, vy: vy, vz: vz, mass: mass, offsetMomentum: function(px, py, pz) {
+  this.vx = -px / SOLAR_MASS;
+  this.vy = -py / SOLAR_MASS;
+  this.vz = -pz / SOLAR_MASS;
+}}|,x)
+|x|=|x|
+|y|<:prop(|{x: x, y: y, z: z, vx: vx, vy: vy, vz: vz, mass: mass, offsetMomentum: function(px, py, pz) {
+  this.vx = -px / SOLAR_MASS;
+  this.vy = -py / SOLAR_MASS;
+  this.vz = -pz / SOLAR_MASS;
+}}|,y)
+|y|=|y|
+|z|<:prop(|{x: x, y: y, z: z, vx: vx, vy: vy, vz: vz, mass: mass, offsetMomentum: function(px, py, pz) {
+  this.vx = -px / SOLAR_MASS;
+  this.vy = -py / SOLAR_MASS;
+  this.vz = -pz / SOLAR_MASS;
+}}|,z)
+|z|=|z|
+|{x: x, y: y, z: z, vx: vx, vy: vy, vz: vz, mass: mass, offsetMomentum: function(px, py, pz) {
+  this.vx = -px / SOLAR_MASS;
+  this.vy = -py / SOLAR_MASS;
+  this.vz = -pz / SOLAR_MASS;
+}}|<:ret(|function body|)

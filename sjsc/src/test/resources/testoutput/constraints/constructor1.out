@@ -1,0 +1,41 @@
+CheckArity(ret(|C|))
+MakeConcreteConstraint [term=|"foo"|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|2.2|]
+MakeConcreteConstraint [term=|new C(1, 2.2, "foo")|]
+MakeConcreteConstraint [term=|x|]
+MakeConcreteConstraint [term=|y|]
+MakeConcreteConstraint [term=|z|]
+param(|constructor C|,0)=|x|
+param(|constructor C|,1)=|y|
+param(|constructor C|,2)=|z|
+prototype(|constructor C|)=__proto__(ret(|constructor C|))
+|"foo"|<:param(|C|,2)
+|"foo"|=string
+|1|<:param(|C|,0)
+|1|=integer
+|2.2|<:param(|C|,1)
+|2.2|=float
+|C|<:ctor<0>[X4](X0,X1,X2) -> X3
+|C|=|C|
+|constructor C|<:|C|
+|new C(1, 2.2, "foo")|<:|x|
+|new C(1, 2.2, "foo")|=ret(|C|)
+|this.x = x|=prop(|this|,x)
+|this.x|=prop(|this|,x)
+|this.y = y|=prop(|this|,y)
+|this.y|=prop(|this|,y)
+|this.z = z|=prop(|this|,z)
+|this.z|=prop(|this|,z)
+|this|=ret(|constructor C|)
+|this|=ret(|constructor C|)
+|this|=ret(|constructor C|)
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|x|<:prop(|this|,x)
+|x|=|x|
+|y|<:prop(|this|,y)
+|y|=|y|
+|z|<:prop(|this|,z)
+|z|=|z|

@@ -1,0 +1,12 @@
+Error on line 15: bad argument x passed to function
+    Note: type is integer
+    Note: expected string
+Error on line 16: bad argument x passed to function
+    Note: type is integer
+    Note: expected string
+Error on line 17: bad argument x passed to function
+    Note: type is integer
+    Note: expected string
+Error on line 18: bad argument x passed to function
+    Note: type is integer
+    Note: expected string

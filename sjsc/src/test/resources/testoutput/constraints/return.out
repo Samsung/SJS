@@ -1,0 +1,26 @@
+CheckArity(ret(|console.log|))
+CheckArity(ret(|foo|))
+MakeConcreteConstraint [term=|"result = " + result|]
+MakeConcreteConstraint [term=|7|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|foo(7)|]
+param(|function foo|,0)=|x|
+void=ret(|function foo|)
+|"bar"|<:ret(|function foo|)
+|"bar"|=string
+|"result = " + result|<:param(|console.log|,0)
+|"result = " + result|=op(|"result = "|+|result|)
+|"result = "|=string
+|5|=integer
+|7|<:param(|foo|,0)
+|7|=integer
+|console.log("result = " + result)|=ret(|console.log|)
+|console.log|=prop(|console|,log)
+|console|=|console|
+|foo(7)|<:|result|
+|foo(7)|=ret(|foo|)
+|foo|=|foo|
+|function foo|<:|foo|
+|result|=|result|
+|x > 5|=op(|x|>|5|)
+|x|=|x|

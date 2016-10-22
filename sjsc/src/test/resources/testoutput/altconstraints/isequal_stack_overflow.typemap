@@ -1,0 +1,17 @@
+null --> {  | a: <<recursive>> }
+x --> {  | a: <<recursive>> }
+x --> {  | a: <<recursive>> }
+x --> {  | a: <<recursive>> }
+y --> {  | a: <<recursive>> }
+y --> {  | a: <<recursive>> }
+y --> {  | a: <<recursive>> }
+y --> {  | a: <<recursive>> }
+z --> {  | q: {  | a: <<recursive>> } }
+z --> {  | q: {  | a: <<recursive>> } }
+z --> {  | q: {  | a: <<recursive>> } }
+z = {q: x} --> {  | q: {  | a: <<recursive>> } }
+z = {q: y} --> {  | q: {  | a: <<recursive>> } }
+{a: x} --> {  | a: <<recursive>> }
+{a: y} --> {  | a: <<recursive>> }
+{q: x} --> {  | q: {  | a: <<recursive>> } }
+{q: y} --> {  | q: {  | a: <<recursive>> } }

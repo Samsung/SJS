@@ -1,0 +1,3 @@
+Error on line 1: bad initialization of d
+    Note: type is () -> void
+    Note: expected ctor<0>[null]() -> ___

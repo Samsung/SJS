@@ -1,0 +1,4 @@
+type float flows into |1.0|, which is used as type integer
+type source: |1.0| at line 1
+use: unknown
+target term: |1.0| at line 1

@@ -1,0 +1,94 @@
+-1.03622044471123109e-01 --> float
+-1.16032004402742839e+00 --> float
+-6.90460016972063023e-05 * DAYS_PER_YEAR --> float
+-6.90460016972063023e-05 --> float
+-px --> float
+-px / SOLAR_MASS --> float
+-py --> float
+-py / SOLAR_MASS --> float
+-pz --> float
+-pz / SOLAR_MASS --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+1.03622044471123109e-01 --> float
+1.16032004402742839e+00 --> float
+1.66007664274403694e-03 * DAYS_PER_YEAR --> float
+1.66007664274403694e-03 --> float
+3.141592653589793 --> float
+365.24 --> float
+4 * PI * PI --> float
+4 * PI --> float
+4 --> integer
+4.84143144246472090e+00 --> float
+6.90460016972063023e-05 --> float
+7.69901118419740425e-03 * DAYS_PER_YEAR --> float
+7.69901118419740425e-03 --> float
+9.54791938424326609e-04 * SOLAR_MASS --> float
+9.54791938424326609e-04 --> float
+DAYS_PER_YEAR --> float
+DAYS_PER_YEAR --> float
+DAYS_PER_YEAR --> float
+DAYS_PER_YEAR --> float
+PI --> float
+PI --> float
+PI --> float
+SOLAR_MASS --> float
+SOLAR_MASS --> float
+SOLAR_MASS --> float
+SOLAR_MASS --> float
+SOLAR_MASS --> float
+body --> (float,float,float,float,float,float,float) -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+body --> (float,float,float,float,float,float,float) -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+body(4.84143144246472090e+00, -1.16032004402742839e+00, -1.03622044471123109e-01, 1.66007664274403694e-03 * DAYS_PER_YEAR, 7.69901118419740425e-03 * DAYS_PER_YEAR, -6.90460016972063023e-05 * DAYS_PER_YEAR, 9.54791938424326609e-04 * SOLAR_MASS) --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+function body(x, y, z, vx, vy, vz, mass) {
+  return {x: x, y: y, z: z, vx: vx, vy: vy, vz: vz, mass: mass, offsetMomentum: function(px, py, pz) {
+  this.vx = -px / SOLAR_MASS;
+  this.vy = -py / SOLAR_MASS;
+  this.vz = -pz / SOLAR_MASS;
+}};
+}
+ --> (float,float,float,float,float,float,float) -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+function(px, py, pz) {
+  this.vx = -px / SOLAR_MASS;
+  this.vy = -py / SOLAR_MASS;
+  this.vz = -pz / SOLAR_MASS;
+} --> [{  | vz: float, vx: float, vy: float }](float,float,float) -> void
+jupiter --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+jupiter --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+jupiter.offsetMomentum --> [](float,float,float) -> void
+jupiter.offsetMomentum(0.0, 0.0, 0.0) --> void
+mass --> float
+mass --> float
+px --> float
+px --> float
+py --> float
+py --> float
+pz --> float
+pz --> float
+this --> {  | vz: float, vx: float, vy: float }
+this --> {  | vz: float, vx: float, vy: float }
+this --> {  | vz: float, vx: float, vy: float }
+this.vx --> float
+this.vx = -px / SOLAR_MASS --> float
+this.vy --> float
+this.vy = -py / SOLAR_MASS --> float
+this.vz --> float
+this.vz = -pz / SOLAR_MASS --> float
+vx --> float
+vx --> float
+vy --> float
+vy --> float
+vz --> float
+vz --> float
+x --> float
+x --> float
+y --> float
+y --> float
+z --> float
+z --> float
+{x: x, y: y, z: z, vx: vx, vy: vy, vz: vz, mass: mass, offsetMomentum: function(px, py, pz) {
+  this.vx = -px / SOLAR_MASS;
+  this.vy = -py / SOLAR_MASS;
+  this.vz = -pz / SOLAR_MASS;
+}} --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }

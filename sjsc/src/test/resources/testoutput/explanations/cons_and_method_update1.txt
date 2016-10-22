@@ -1,0 +1,3 @@
+Error on line 16: bad assignment to property 'm1'
+    Note: type is [{  | a: integer }](integer) -> void
+    Note: expected [](integer) -> void

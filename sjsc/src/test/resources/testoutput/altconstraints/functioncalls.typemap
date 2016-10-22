@@ -1,0 +1,34 @@
+"hello" --> string
+17 --> integer
+18 --> integer
+a --> string
+a --> string
+b + c --> integer
+b --> integer
+b --> integer
+bar --> (string) -> string
+bar --> (string) -> string
+bar("hello") --> string
+c --> integer
+c --> integer
+foo --> (integer,integer) -> integer
+foo --> (integer,integer) -> integer
+foo(17, 18) --> integer
+function bar(a) {
+  return a;
+}
+ --> (string) -> string
+function foo(b, c) {
+  return b + c;
+}
+ --> (integer,integer) -> integer
+function top() {
+  function bar(a) {
+    return a;
+  }
+  var x = bar("hello");
+}
+ --> () -> void
+top --> () -> void
+x --> string
+y --> integer

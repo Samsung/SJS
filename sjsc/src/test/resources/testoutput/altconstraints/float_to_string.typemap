@@ -1,0 +1,114 @@
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0.5 --> float
+2 --> integer
+7000 --> integer
+7100 --> integer
+FluidField --> ctor<0>[null]({  |  }) -> {  | getDens: () -> Array<float> }
+FluidField --> ctor<0>[null]({  |  }) -> {  | getDens: () -> Array<float> }
+b --> integer
+canvas --> {  |  }
+checkResult --> () -> void
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log(solver.getDens()[0].toString()) --> void
+dens --> Array<float>
+dens --> Array<float>
+dens --> Array<float>
+dens[i] --> float
+dens[i] = v[i] = 0 --> float
+function FluidField(canvas) {
+  function set_bnd(b, x) {
+    var maxEdge = height;
+    x[maxEdge] = 0.5;
+  }
+  function project() {
+    set_bnd(2, v);
+  }
+  var dens;
+  var v;
+  var height;
+  function reset() {
+    for (var i = 0; ; ) 
+      dens[i] = v[i] = 0;
+  }
+  this.getDens = function() {
+  return dens;
+};
+}
+ --> ctor<0>[null]({  |  }) -> {  | getDens: () -> Array<float> }
+function checkResult() {
+  for (var i = 7000; 7100; ) 
+    {
+    }
+}
+ --> () -> void
+function project() {
+  set_bnd(2, v);
+}
+ --> () -> void
+function reset() {
+  for (var i = 0; ; ) 
+    dens[i] = v[i] = 0;
+}
+ --> () -> void
+function runNavierStokes() {
+  console.log(solver.getDens()[0].toString());
+}
+ --> () -> void
+function set_bnd(b, x) {
+  var maxEdge = height;
+  x[maxEdge] = 0.5;
+}
+ --> (integer,Array<float>) -> void
+function setupNavierStokes() {
+  solver = new FluidField(null);
+}
+ --> () -> void
+function() {
+  return dens;
+} --> () -> Array<float>
+height --> integer
+height --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+maxEdge --> integer
+maxEdge --> integer
+new FluidField(null) --> {  | getDens: () -> Array<float> }
+nsFrameCounter --> integer
+null --> {  |  }
+null --> {  | getDens: () -> Array<float> }
+project --> () -> void
+reset --> () -> void
+runNavierStokes --> () -> void
+set_bnd --> (integer,Array<float>) -> void
+set_bnd --> (integer,Array<float>) -> void
+set_bnd(2, v) --> void
+setupNavierStokes --> () -> void
+solver --> {  | getDens: () -> Array<float> }
+solver --> {  | getDens: () -> Array<float> }
+solver --> {  | getDens: () -> Array<float> }
+solver = new FluidField(null) --> {  | getDens: () -> Array<float> }
+solver.getDens --> () -> Array<float>
+solver.getDens() --> Array<float>
+solver.getDens()[0] --> float
+solver.getDens()[0].toString --> []() -> string INTERSECT [](integer) -> string
+solver.getDens()[0].toString() --> string
+this --> {  | getDens: () -> Array<float> }
+this.getDens --> () -> Array<float>
+this.getDens = function() {
+  return dens;
+} --> () -> Array<float>
+v --> Array<float>
+v --> Array<float>
+v --> Array<float>
+v[i] --> float
+v[i] = 0 --> float
+x --> Array<float>
+x --> Array<float>
+x[maxEdge] --> float
+x[maxEdge] = 0.5 --> float

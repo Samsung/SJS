@@ -1,0 +1,157 @@
+"Primes up to" + pad(m, 9) + pad(count, 9) --> string
+"Primes up to" + pad(m, 9) --> string
+"Primes up to" --> string
+' ' + s --> string
+' ' --> string
+(1 << (j & 31)) --> integer
+(10000 << n) + 31 --> integer
+(10000 << n) + 31 >> 5 --> integer
+(10000 << n) --> integer
+(i & 31) --> integer
+(j & 31) --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 << (i & 31) --> integer
+1 << (j & 31) --> integer
+10000 --> integer
+10000 --> integer
+10000 << n --> integer
+10000 << n --> integer
+12 --> integer
+2 --> integer
+2 --> integer
+31 --> integer
+31 --> integer
+31 --> integer
+31 --> integer
+5 --> integer
+5 --> integer
+5 --> integer
+5 --> integer
+9 --> integer
+9 --> integer
+Array --> () -> Array<integer> INTERSECT (integer) -> Array<integer> INTERSECT (integer,integer) -> Array<integer>
+count --> integer
+count --> integer
+count --> integer
+count++ --> integer
+ffffffff --> float
+ffffffff | 0 --> integer
+function pad(n, width) {
+  var s = n.toString();
+  while (s.length < width) 
+    s = ' ' + s;
+  return s;
+}
+ --> (integer,integer) -> string
+function primes(isPrime, n) {
+  var i, count = 0, m = 10000 << n, size = m + 31 >> 5;
+  for (i = 0; i < size; i++) 
+    isPrime[i] = ffffffff | 0;
+  for (i = 2; i < m; i++) 
+    if (isPrime[i >> 5] & 1 << (i & 31)) 
+    {
+      for (var j = i + i; j < m; j += i) 
+        isPrime[j >> 5] &= ~(1 << (j & 31));
+      count++;
+    }
+  printString("Primes up to" + pad(m, 9) + pad(count, 9));
+}
+ --> (Array<integer>,integer) -> void
+i & 31 --> integer
+i + i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i < m --> boolean
+i < size --> boolean
+i = 0 --> integer
+i = 2 --> integer
+i >> 5 --> integer
+i++ --> integer
+i++ --> integer
+isPrime --> Array<integer>
+isPrime --> Array<integer>
+isPrime --> Array<integer>
+isPrime --> Array<integer>
+isPrime --> Array<integer>
+isPrime --> Array<integer>
+isPrime --> Array<integer>
+isPrime --> Array<integer>
+isPrime[i >> 5] & 1 << (i & 31) --> integer
+isPrime[i >> 5] --> integer
+isPrime[i] --> integer
+isPrime[i] = ffffffff | 0 --> integer
+isPrime[j >> 5] &= ~(1 << (j & 31)) --> integer
+isPrime[j >> 5] --> integer
+j & 31 --> integer
+j += i --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j < m --> boolean
+j >> 5 --> integer
+m + 31 --> integer
+m + 31 >> 5 --> integer
+m --> integer
+m --> integer
+m --> integer
+m --> integer
+m --> integer
+n - 1 --> integer
+n - 2 --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n.toString --> []() -> string INTERSECT [](integer) -> string
+n.toString() --> string
+new Array((10000 << n) + 31 >> 5) --> Array<integer>
+pad --> (integer,integer) -> string
+pad --> (integer,integer) -> string
+pad --> (integer,integer) -> string
+pad(count, 9) --> string
+pad(m, 9) --> string
+primes --> (Array<integer>,integer) -> void
+primes --> (Array<integer>,integer) -> void
+primes --> (Array<integer>,integer) -> void
+primes --> (Array<integer>,integer) -> void
+primes(isPrime, n - 1) --> void
+primes(isPrime, n - 2) --> void
+primes(isPrime, n) --> void
+printString --> (string) -> void
+printString("Primes up to" + pad(m, 9) + pad(count, 9)) --> void
+s --> string
+s --> string
+s --> string
+s --> string
+s --> string
+s = ' ' + s --> string
+s.length --> integer
+s.length < width --> boolean
+size --> integer
+size --> integer
+width --> integer
+width --> integer
+~(1 << (j & 31)) --> integer

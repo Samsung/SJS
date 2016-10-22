@@ -1,0 +1,2 @@
+Error on line 2: property 'f' does not have type {  | h: integer }
+    Note: type is {  | g: integer }

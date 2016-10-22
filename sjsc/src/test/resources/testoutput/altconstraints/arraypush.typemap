@@ -1,0 +1,6 @@
+1 --> integer
+[] --> Array<integer>
+a --> Array<integer>
+a --> Array<integer>
+a.push --> [](integer) -> integer
+a.push(1) --> integer

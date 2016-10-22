@@ -1,0 +1,9 @@
+1.0 --> float
+3 --> integer
+true --> boolean
+true ? x : y --> float
+x --> integer
+x --> integer
+y --> float
+y --> float
+z --> float

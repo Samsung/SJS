@@ -1,0 +1,5 @@
+{x: x, y: y, z: z, vx: vx, vy: vy, vz: vz, mass: mass, offsetMomentum: function(px, py, pz) {
+  this.vx = -px / SOLAR_MASS;
+  this.vy = -py / SOLAR_MASS;
+  this.vz = -pz / SOLAR_MASS;
+}} (line 6) --> [MRO=[], MRW=[vx, vy, vz]]

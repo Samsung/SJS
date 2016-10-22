@@ -1,0 +1,5 @@
+3 --> integer
+undefined --> integer
+x --> integer
+x --> integer
+x = undefined --> integer

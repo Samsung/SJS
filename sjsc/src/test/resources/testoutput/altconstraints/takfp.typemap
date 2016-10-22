@@ -1,0 +1,53 @@
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+10 --> integer
+2 --> integer
+3 --> integer
+function tak(x, y, z) {
+  if (y >= x) 
+  return z;
+  return tak(tak(x - 1, y, z), tak(y - 1, z, x), tak(z - 1, x, y));
+}
+ --> (integer,integer,integer) -> integer
+n * 2 --> integer
+n * 3 --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+printString --> (string) -> void
+printString(tak(n * 3, n * 2, n).toFixed(1)) --> void
+tak --> (integer,integer,integer) -> integer
+tak --> (integer,integer,integer) -> integer
+tak --> (integer,integer,integer) -> integer
+tak --> (integer,integer,integer) -> integer
+tak --> (integer,integer,integer) -> integer
+tak --> (integer,integer,integer) -> integer
+tak(n * 3, n * 2, n) --> integer
+tak(n * 3, n * 2, n).toFixed --> [](integer) -> string
+tak(n * 3, n * 2, n).toFixed(1) --> string
+tak(tak(x - 1, y, z), tak(y - 1, z, x), tak(z - 1, x, y)) --> integer
+tak(x - 1, y, z) --> integer
+tak(y - 1, z, x) --> integer
+tak(z - 1, x, y) --> integer
+x - 1 --> integer
+x --> integer
+x --> integer
+x --> integer
+x --> integer
+x --> integer
+y - 1 --> integer
+y --> integer
+y --> integer
+y --> integer
+y --> integer
+y --> integer
+y >= x --> boolean
+z - 1 --> integer
+z --> integer
+z --> integer
+z --> integer
+z --> integer
+z --> integer

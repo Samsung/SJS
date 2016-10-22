@@ -1,0 +1,16 @@
+3 --> integer
+33 --> integer
+7 --> integer
+false --> boolean
+w --> {  | foo: integer }
+w --> {  | foo: integer }
+w --> {  | foo: integer }
+w = y --> {  | foo: integer }
+w = z --> {  | foo: integer }
+y --> {  | foo: integer, bar: boolean }
+y --> {  | foo: integer, bar: boolean }
+z --> {  | foo: integer, baz: integer }
+z --> {  | foo: integer, baz: integer }
+z --> {  | foo: integer, baz: integer }
+{foo: 3, bar: false} --> {  | foo: integer, bar: boolean }
+{foo: 7, baz: 33} --> {  | foo: integer, baz: integer }

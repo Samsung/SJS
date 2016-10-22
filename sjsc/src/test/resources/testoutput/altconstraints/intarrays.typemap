@@ -1,0 +1,11 @@
+1 --> integer
+2 --> integer
+2 --> integer
+3 --> integer
+4 --> integer
+5 --> integer
+[1, 2, 3, 4, 5] --> Array<integer>
+a --> Array<integer>
+a --> Array<integer>
+a[2] --> integer
+r --> integer

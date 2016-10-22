@@ -1,0 +1,11 @@
+3 --> integer
+null --> {  |  }
+null --> {  | h: integer }
+v --> {  | f: {  |  } }
+w --> {  | g: {  | h: integer } }
+w --> {  | g: {  | h: integer } }
+w.g --> {  | h: integer }
+w.g = {h: 3} --> {  | h: integer }
+{f: null} --> {  | f: {  |  } }
+{g: null} --> {  | g: {  | h: integer } }
+{h: 3} --> {  | h: integer }

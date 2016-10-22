@@ -1,0 +1,20 @@
+"a" --> string
+"b" --> string
+"c" --> string
+0 --> integer
+0 --> integer
+1 --> integer
+["a", "b", "c"] --> Array<string>
+i + j --> integer
+i --> integer
+i --> integer
+j --> integer
+j --> integer
+k --> integer
+k --> integer
+x --> Array<string>
+x --> Array<string>
+x --> Array<string>
+x[i + j] --> string
+x[k] --> string
+x[k] = x[i + j] --> string

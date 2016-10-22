@@ -1,0 +1,32 @@
+CheckArity(ret(|bar|))
+CheckArity(ret(|foo|))
+MakeConcreteConstraint [term=|"hello"|]
+MakeConcreteConstraint [term=|17|]
+MakeConcreteConstraint [term=|18|]
+MakeConcreteConstraint [term=|bar("hello")|]
+MakeConcreteConstraint [term=|foo(17, 18)|]
+param(|function bar|,0)=|a|
+param(|function foo|,0)=|b|
+param(|function foo|,1)=|c|
+ret(|function top|)=void
+|"hello"|<:param(|bar|,0)
+|"hello"|=string
+|17|<:param(|foo|,0)
+|17|=integer
+|18|<:param(|foo|,1)
+|18|=integer
+|a|<:ret(|function bar|)
+|a|=|a|
+|b + c|<:ret(|function foo|)
+|b + c|=op(|b|+|c|)
+|bar("hello")|<:|x|
+|bar("hello")|=ret(|bar|)
+|bar|=|bar|
+|b|=|b|
+|c|=|c|
+|foo(17, 18)|<:|y|
+|foo(17, 18)|=ret(|foo|)
+|foo|=|foo|
+|function bar|<:|bar|
+|function foo|<:|foo|
+|function top|<:|top|

@@ -1,0 +1,255 @@
+((i + j) * (i + j + 1.0) / 2.0 + i + 1.0) --> float
+(i + j + 1.0) --> float
+(i + j) * (i + j + 1.0) --> float
+(i + j) * (i + j + 1.0) / 2.0 + i + 1.0 --> float
+(i + j) * (i + j + 1.0) / 2.0 + i --> float
+(i + j) * (i + j + 1.0) / 2.0 --> float
+(i + j) --> integer
+++i --> integer
+++i --> integer
+++i --> integer
+++i --> integer
+++i --> integer
+++j --> integer
+++j --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+1.0 --> float
+1.0 --> float
+1.0 --> float
+1.0 --> float
+1.0 / ((i + j) * (i + j + 1.0) / 2.0 + i + 1.0) --> float
+10 --> integer
+2.0 --> float
+34 --> integer
+9 --> integer
+Math --> { E: float, LN2: float, LN10: float, LOG2E: float, LOG10E: float, PI: float, SQRT1_2: float, SQRT2: float, abs: [](float) -> float, acos: [](float) -> float, acosh: [](float) -> float, asin: [](float) -> float, asinh: [](float) -> float, atan: [](float) -> float, atanh: [](float) -> float, atan2: [](float,float) -> float, cbrt: [](float) -> float, ceil: [](float) -> float, cos: [](float) -> float, cosh: [](float) -> float, exp: [](float) -> float, expm1: [](float) -> float, floor: [](float) -> integer, fround: [](float) -> float, hypot: [](float,float) -> float, imul: [](float,float) -> float, log: [](float) -> float, log1p: [](float) -> float, log10: [](float) -> float, log2: [](float) -> float, max: [](float,float) -> float, min: [](float,float) -> float, pow: [](float,float) -> float, random: []() -> float, round: [](float) -> float, sign: [](float) -> float, sin: [](float) -> float, sinh: [](float) -> float, sqrt: [](float) -> float, tan: [](float) -> float, tanh: [](float) -> float, toSource: []() -> string, trunc: [](float) -> float |  }
+Math.sqrt --> [](float) -> float
+Math.sqrt(vBv / vv) --> float
+[] --> Array<float>
+[] --> Array<float>
+[] --> Array<float>
+a --> (integer,integer) -> float
+a --> (integer,integer) -> float
+a --> (integer,integer) -> float
+a(i, j) * u[j] --> float
+a(i, j) --> float
+a(j, i) * u[j] --> float
+a(j, i) --> float
+argument --> integer
+argument --> integer
+atAu --> (Array<float>,Array<float>,Array<float>) -> void
+atAu --> (Array<float>,Array<float>,Array<float>) -> void
+atAu --> (Array<float>,Array<float>,Array<float>) -> void
+atAu(u, v, w) --> void
+atAu(v, u, w) --> void
+atu --> (Array<float>,Array<float>) -> void
+atu --> (Array<float>,Array<float>) -> void
+atu(w, v) --> void
+au --> (Array<float>,Array<float>) -> void
+au --> (Array<float>,Array<float>) -> void
+au(u, w) --> void
+function a(i, j) {
+  return 1.0 / ((i + j) * (i + j + 1.0) / 2.0 + i + 1.0);
+}
+ --> (integer,integer) -> float
+function atAu(u, v, w) {
+  au(u, w);
+  atu(w, v);
+}
+ --> (Array<float>,Array<float>,Array<float>) -> void
+function atu(u, v) {
+  for (var i = 0; i < u.length; ++i) 
+    {
+      var t = 0.0;
+      for (var j = 0; j < u.length; ++j) 
+        t += a(j, i) * u[j];
+      v[i] = t;
+    }
+}
+ --> (Array<float>,Array<float>) -> void
+function au(u, v) {
+  for (var i = 0; i < u.length; ++i) 
+    {
+      var t = 0.0;
+      for (var j = 0; j < u.length; ++j) 
+        t += a(i, j) * u[j];
+      v[i] = t;
+    }
+}
+ --> (Array<float>,Array<float>) -> void
+function spectralnorm(n) {
+  var i, u = [], v = [], w = [], vv = 0.0, vBv = 0.0;
+  for (i = 0; i < n; ++i) 
+    {
+      u[i] = 1.0;
+      v[i] = w[i] = 0.0;
+    }
+  for (i = 0; i < 10; ++i) 
+    {
+      atAu(u, v, w);
+      atAu(v, u, w);
+    }
+  for (i = 0; i < n; ++i) 
+    {
+      vBv += u[i] * v[i];
+      vv += v[i] * v[i];
+    }
+  return Math.sqrt(vBv / vv);
+}
+ --> (integer) -> float
+i + j + 1.0 --> float
+i + j --> integer
+i + j --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i < 10 --> boolean
+i < n --> boolean
+i < n --> boolean
+i < u.length --> boolean
+i < u.length --> boolean
+i = 0 --> integer
+i = 0 --> integer
+i = 0 --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j < u.length --> boolean
+j < u.length --> boolean
+n --> integer
+n --> integer
+n --> integer
+printString --> (string) -> void
+printString(y) --> void
+spectralnorm --> (integer) -> float
+spectralnorm --> (integer) -> float
+spectralnorm(argument) --> float
+t += a(i, j) * u[j] --> float
+t += a(j, i) * u[j] --> float
+t --> float
+t --> float
+t --> float
+t --> float
+t --> float
+t --> float
+u --> Array<float>
+u --> Array<float>
+u --> Array<float>
+u --> Array<float>
+u --> Array<float>
+u --> Array<float>
+u --> Array<float>
+u --> Array<float>
+u --> Array<float>
+u --> Array<float>
+u --> Array<float>
+u --> Array<float>
+u --> Array<float>
+u --> Array<float>
+u --> Array<float>
+u.length --> integer
+u.length --> integer
+u.length --> integer
+u.length --> integer
+u[i] * v[i] --> float
+u[i] --> float
+u[i] --> float
+u[i] = 1.0 --> float
+u[j] --> float
+u[j] --> float
+v --> Array<float>
+v --> Array<float>
+v --> Array<float>
+v --> Array<float>
+v --> Array<float>
+v --> Array<float>
+v --> Array<float>
+v --> Array<float>
+v --> Array<float>
+v --> Array<float>
+v --> Array<float>
+v --> Array<float>
+v --> Array<float>
+vBv += u[i] * v[i] --> float
+vBv --> float
+vBv --> float
+vBv --> float
+vBv / vv --> float
+v[i] * v[i] --> float
+v[i] --> float
+v[i] --> float
+v[i] --> float
+v[i] --> float
+v[i] --> float
+v[i] --> float
+v[i] = t --> float
+v[i] = t --> float
+v[i] = w[i] = 0.0 --> float
+vv += v[i] * v[i] --> float
+vv --> float
+vv --> float
+vv --> float
+w --> Array<float>
+w --> Array<float>
+w --> Array<float>
+w --> Array<float>
+w --> Array<float>
+w --> Array<float>
+w --> Array<float>
+w[i] --> float
+w[i] = 0.0 --> float
+x --> float
+x --> float
+x.toFixed --> [](integer) -> string
+x.toFixed(9) --> string
+y --> string
+y --> string

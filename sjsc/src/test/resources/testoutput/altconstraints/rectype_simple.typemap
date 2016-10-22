@@ -1,0 +1,8 @@
+3 --> integer
+null --> {  | v: integer, n: <<recursive>> }
+x --> {  | v: integer, n: <<recursive>> }
+x --> {  | v: integer, n: <<recursive>> }
+x --> {  | v: integer, n: <<recursive>> }
+x.n --> {  | v: integer, n: <<recursive>> }
+x.n = x --> {  | v: integer, n: <<recursive>> }
+{v: 3, n: null} --> {  | v: integer, n: <<recursive>> }

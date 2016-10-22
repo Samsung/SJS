@@ -1,0 +1,4 @@
+type float flows into |(x + 1)|, which is used as type integer
+type source: unknown
+use: |y| at line 3
+target term: |(x + 1)| at line 2

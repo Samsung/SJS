@@ -1,0 +1,2 @@
+Error on line 8: cannot attach method to field 'init'
+    Note: methods may only be attached to object literals, 'this', and constructor prototypes

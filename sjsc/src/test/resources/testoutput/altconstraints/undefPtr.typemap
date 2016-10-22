@@ -1,0 +1,38 @@
+"" --> string
+3 --> integer
+clos --> () -> void
+clos --> () -> void
+clos --> () -> void
+clos = function() {
+  return;
+} --> () -> void
+clos === undefined --> boolean
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.assert --> [](boolean) -> void
+console.assert --> [](boolean) -> void
+console.assert --> [](boolean) -> void
+console.assert(clos === undefined) --> void
+console.assert(obj === undefined) --> void
+console.assert(str === undefined) --> void
+function() {
+  return;
+} --> () -> void
+obj --> {  | x: integer }
+obj --> {  | x: integer }
+obj --> {  | x: integer }
+obj = {x: 3} --> {  | x: integer }
+obj === undefined --> boolean
+str --> string
+str --> string
+str --> string
+str = "" --> string
+str === undefined --> boolean
+undefined --> () -> void
+undefined --> string
+undefined --> {  |  }
+undefined --> {  |  }
+undefined --> {  |  }
+undefined --> {  | x: integer }
+{x: 3} --> {  | x: integer }

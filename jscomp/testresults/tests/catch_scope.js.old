@@ -1,0 +1,1525 @@
+
+id: 0
+vars: {
+	"Object": "var",
+	"Function": "var",
+	"Array": "var",
+	"RegExp": "var",
+	"console": "var",
+	"gl": "var",
+	"gl2": "var"
+}
+captured: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp",
+	"console",
+	"gl",
+	"gl2"
+]
+environment: []
+usesArguments: false
+isCatch: false
+parent: -1
+
+
+id: 1
+vars: {
+	"sl": "var",
+	"f2": "var",
+	"f3": "var",
+	"f1": "defun"
+}
+captured: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp",
+	"console",
+	"sl",
+	"f3",
+	"gl2",
+	"gl",
+	"f2"
+]
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp",
+	"console",
+	"gl",
+	"gl2"
+]
+usesArguments: false
+isCatch: false
+parent: 0
+
+
+id: 2
+vars: {
+	"arguments": "special"
+}
+captured: []
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp"
+]
+usesArguments: false
+isCatch: false
+parent: 1
+
+
+id: 3
+vars: {
+	"arguments": "special"
+}
+captured: []
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp"
+]
+usesArguments: false
+isCatch: false
+parent: 1
+
+
+id: 4
+vars: {
+	"arguments": "special",
+	"str": "arg"
+}
+captured: []
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp"
+]
+usesArguments: false
+isCatch: false
+parent: 1
+
+
+id: 5
+vars: {
+	"arguments": "special"
+}
+captured: []
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp"
+]
+usesArguments: false
+isCatch: false
+parent: 1
+
+
+id: 6
+vars: {
+	"arguments": "special"
+}
+captured: []
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp"
+]
+usesArguments: false
+isCatch: false
+parent: 1
+
+
+id: 7
+vars: {
+	"arguments": "special",
+	"e": "var",
+	"x": "var",
+	"#1_e": "catch",
+	"z": "var",
+	"#2_e": "catch"
+}
+captured: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp",
+	"console",
+	"#2_e",
+	"sl",
+	"f3",
+	"gl2",
+	"e",
+	"gl"
+]
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp",
+	"console",
+	"sl",
+	"f3",
+	"gl2",
+	"gl",
+	"f2"
+]
+usesArguments: false
+isCatch: false
+parent: 1
+
+
+id: 8
+vars: {
+	"arguments": "special",
+	"#3_e": "catch"
+}
+captured: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp",
+	"console",
+	"#3_e"
+]
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp",
+	"console",
+	"#2_e",
+	"sl",
+	"f3"
+]
+usesArguments: false
+isCatch: false
+parent: 7
+
+
+id: 9
+vars: {
+	"arguments": "special"
+}
+captured: []
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp",
+	"console",
+	"#3_e"
+]
+usesArguments: true
+isCatch: false
+parent: 8
+
+
+id: 10
+vars: {
+	"arguments": "special",
+	"#4_e": "catch"
+}
+captured: []
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp",
+	"gl2",
+	"console",
+	"e",
+	"gl"
+]
+usesArguments: false
+isCatch: false
+parent: 7
+
+Function = function () {
+};
+Object = function () {
+};
+console = {};
+console.log = function (str) {
+    'use js: console.log(str);';
+};
+Array = function () {
+};
+RegExp = function () {
+};
+gl = 2;
+var sl = 1;
+var f2, f3;
+function f1() {
+    var e = 1;
+    var x = 2;
+    console.log(z);
+    try {
+        throw 'Exception 1';
+    } catch (#1_e) {
+        console.log(#1_e);
+        var x = 3;
+        var z = 4;
+        console.log(x);
+        try {
+            throw 'Exception2';
+        } catch (#2_e) {
+            return function () {
+                console.log(#2_e);
+                console.log(sl);
+                try {
+                    throw 'Exception 3';
+                } catch (#3_e) {
+                    f3 = function () {
+                        console.log(#3_e);
+                        console.log(arguments[0]);
+                    };
+                }
+            };
+        }
+    }
+    console.log(z);
+    console.log(x);
+    console.log(e);
+    f2 = function () {
+        gl2 = 1;
+        console.log(e);
+        console.log(gl);
+        try {
+            throw 'Exception 4';
+        } catch (#4_e) {
+        }
+    };
+}
+console.log(sl);
+f1()();
+var args = [];
+var nonExistentValue = new Object();
+var target = -1; // default target is -1
+
+function OBJECT_FUNCTION() {
+    this.properties = new Object(null);
+}
+
+function BOX () {
+    this.value = undefined;
+}
+
+function ToObject(arg) {
+    return arg; // @todo consider the case where arg is a primitive value, undefined, or null
+}
+
+function ToString(arg) {
+    return arg+""; // @todo consider the case where arg is an instance of OBJECT_FUNCTION
+}
+
+function OP_CLEARARGS() {
+    args = [];
+}
+
+function OP_POPARG() {
+    return args.pop();
+}
+
+function OP_PUSHARG(arg1) {
+    args.push(arg1);
+}
+
+function OP_TYPEOF(arg1) {
+    return typeof args1;
+}
+
+function OP_POS(arg1) {
+    return +arg1;
+}
+
+function OP_NEG() {
+    return -arg1;
+}
+
+function OP_INC(arg1) {
+    return ++arg1;
+}
+
+function OP_DEC(arg1) {
+    return --arg1;
+}
+
+function OP_BITNOT(arg1) {
+    return ~arg1;
+}
+
+function OP_LOGNOT(arg1) {
+    return !arg1;
+}
+
+function OP_ITERATOR(arg1) {
+    var ret = [], proto = null;
+    while(arg1 !== null) {
+        arg1 = ToObject(arg1);
+        for (var key in arg1.properties) {
+            if (key === "*__proto__") {
+                proto = arg1.properties[key]["[[Value]]"];
+            } else if (arg1.properties[key] !== undefined && arg1.properties[key] !== nonExistentValue) {
+                ret.push(key.substring(1));
+            }
+        }
+        arg1 = proto;
+    }
+    return {keys: ret, index: 0};
+}
+
+function OP_NEXTKEY(iter) {
+    return iter.keys[iter.index++];
+}
+
+function OP_BITOR(arg1, arg2) {
+    return arg1 | arg2;
+}
+
+function OP_BITXOR(arg1, arg2) {
+    return arg1 ^ arg2;
+}
+
+function OP_BITAND(arg1, arg2) {
+    arg1 & arg2;
+}
+
+function OP_EQ(arg1, arg2) {
+    return arg1 == arg2;
+}
+
+function OP_NE(arg1, arg2) {
+    return arg1 != arg2;
+}
+
+function OP_STRICTEQ(arg1, arg2) {
+    return arg1 === arg2;
+}
+
+function OP_STRICTNE(arg1, arg2) {
+    return arg1 !== arg2;
+}
+
+function OP_LT(arg1, arg2) {
+    return arg1 < arg2;
+}
+
+function OP_GT(arg1, arg2) {
+    return arg1 > arg2;
+}
+
+function OP_LE(arg1, arg2) {
+    return arg1 <= arg2;
+}
+
+function OP_GE(arg1, arg2) {
+    return arg1 >= arg2;
+}
+
+function OP_INSTANCEOF(arg1, arg2) {
+    return arg1 instanceof arg2;
+}
+
+function OP_IN(arg1, arg2) {
+    arg2 = ToString(arg2);
+    do {
+        arg1 = ToObject(arg1);
+        var ret = arg1.properties["*" + arg2];
+        if (ret === undefined || ret === nonExistentValue) {
+            arg1 = arg1.properties["*__proto__"]["[[Value]]"];
+        } else {
+            return true;
+        }
+    } while(arg1 !== null);
+    return false;
+}
+
+function OP_SHL(arg1, arg2) {
+    return arg1 << arg2;
+}
+
+function OP_SHR(arg1, arg2) {
+    return arg1 >> arg2;
+}
+
+function OP_USHR(arg1, arg2) {
+    return arg1 >>> arg2;
+}
+
+function OP_ADD(arg1, arg2) {
+    return arg1 + arg2;
+}
+
+function OP_SUB(arg1, arg2) {
+    return arg1 - arg2;
+}
+
+function OP_MUL(arg1, arg2) { 
+    return arg1 * arg2;
+}
+
+function OP_DIV(arg1, arg2) { 
+    return arg1 / arg2;
+}
+
+function OP_MOD(arg1, arg2) { 
+    return arg1 % arg2;
+}
+
+function OP_NAN() {
+    return NaN;
+}
+
+function OP_UNDEF() {
+    return undefined;
+}
+
+function OP_NONEXISTENT() {
+    return nonExistentValue;
+}
+
+function OP_INFINITY() {
+    return Infinity;
+}
+
+function OP_NULL() {
+    return null;
+}
+
+function OP_NUMBER(arg1) {
+    return arg1;
+}
+
+function OP_STRING(arg1) {
+    return arg1;
+}
+
+
+
+
+function OP_FUNCTION (fun, env) {
+    var ret = new OBJECT_FUNCTION();
+    ret["[[Class]]"] = "Function";
+    ret["[[Call]]"] = fun;
+    ret["[[Scope]]"] = env;
+    return ret;
+}
+
+function OP_NEWOBJECT() {
+    var ret =  new OBJECT_FUNCTION();
+    ret["[[Class]]"] = "Object";
+    return ret;
+}
+function OP_NEWARRAY() {
+    var ret =  new OBJECT_FUNCTION();
+    ret["[[Class]]"] = "Array";
+    return ret;
+}
+
+function OP_NEWENV (size) {
+    return new Array(size);
+}
+
+function OP_NEWREGEXP(pattern, flags) {
+    var ret = new OBJECT_FUNCTION();
+    ret["[[Class]]"] = "Function";
+    ret["[[Pattern]]"] = pattern;
+    ret["[[Flags]]"] = flags;
+    return ret;
+}
+
+function OP_BOOLEAN (arg1) {
+    return arg1;
+}
+
+function OP_NEWBOX() {
+    var ret = new BOX();
+    ret.value = undefined;
+    return ret;
+}
+
+function OP_GETPROP(arg1, arg2) {
+    arg2 = ToString(arg2);
+    do {
+        var ret = arg1.properties["*" + arg2];
+        if (ret === undefined || ret === nonExistentValue) {
+            arg1 = arg1.properties["*__proto__"]["[[Value]]"];
+        } else {
+            return ret["[[Value]]"];
+        }
+    } while(arg1 !== null);
+    return undefined;
+}
+
+function OP_SETPROP (arg1, arg2, arg3) {
+    arg2 = ToString(arg2);
+    var ret = arg1.properties["*" + arg2];
+    if (ret === undefined || ret === nonExistentValue) {
+        ret = {"[[Writable]]": true, "[[Enumerable]]": true, "[[Configurable]]": true, isData: true};
+    }
+    ret["[[Value]]"] = arg3;
+    return arg3;
+}
+
+function OP_SETGETTER (arg1, arg2, arg3) {
+    arg2 = ToString(arg2);
+    var ret = arg1.properties["*" + arg2];
+    if (ret === undefined || ret === nonExistentValue) {
+        ret = {"[[Enumerable]]": true, "[[Configurable]]": true, isData: false};
+    }
+    ret["[[Get]]"] = arg3;
+    return arg3;
+}
+
+function OP_SETSETTER (arg1, arg2, arg3) {
+    arg2 = ToString(arg2);
+    var ret = arg1.properties["*" + arg2];
+    if (ret === undefined || ret === nonExistentValue) {
+        ret = {"[[Enumerable]]": true, "[[Configurable]]": true, isData: false};
+    }
+    ret["[[Set]]"] = arg3;
+    return arg3;
+}
+
+function OP_DELPROP(arg1, arg2) {
+    arg2 = ToString(arg2);
+    var ret = arg1.properties["*" + arg2];
+    if (ret !== undefined || ret === nonExistentValue) {
+        if (ret["[[Configurable]]"]) {
+            arg1.properties["*" + arg2] = nonExistentValue;
+            return true;
+        } else {
+            return false;
+        }
+    }
+    return true;
+}
+
+function OP_GETINDEX (env, index) {
+    return env[index];
+}
+
+function OP_GETINDEXSTAR (env, index) {
+    var ret = env[index];
+    if (ret !== undefined) {
+        return ret.value;
+    } else {
+        return ret;
+    }
+}
+
+function OP_SETINDEX (env, index, val) {
+    env[index] = val;
+}
+
+function OP_SETINDEXSTAR (env, index, val) {
+    env[index].value = val;
+}
+
+function OP_GETVAR (val) {
+    return val;
+}
+
+function OP_GETVARSTAR (box) {
+    return box.value;
+}
+
+function OP_SETVARSTAR (box, val) {
+    return box.value = val;
+}
+
+function OP_TARGET() {
+    return target;
+}
+
+function OP_IFTRUE (val, label) {
+    if (val) {
+        target = label;
+        return true;
+    }
+    return false;
+}
+
+function OP_IFFALSE(val, label) {
+    if (!val) {
+        target = label;
+        return true;
+    }
+    return false;
+}
+
+function OP_JUMP(label) {
+        target = label;
+        return true;
+}
+
+function OP_JUMPNE(val1, val2, label) {
+    if (val1 !== val2) {
+        target = label;
+        return true;
+    }
+    return false;
+}
+
+    //
+function OP_CALL (fun) {
+    var f = fun["[[Call]]"];
+    OP_PUSHARG(fun);
+    OP_PUSHARG(fun["[[Scope]]"]);
+    f();
+}
+
+function OP_NEW (fun) {
+    OP_CALL(fun);
+}
+
+
+var JS_Return;
+var JS_JumpType;
+
+
+function JS_Fun1(){
+ while(true){
+  switch(OP_TARGET()) {
+    case -1:
+        var JS_R0;
+        var JS_R1;
+        var JS_R2;
+        var JS_R3;
+        var JS_R4;
+        JS_R0 = OP_NEWENV( 7 );
+        // Object;
+        JS_R1 = OP_NEWBOX( );
+        OP_SETINDEX( JS_R0 , 0 , JS_R1 );
+        JS_R1 = OP_NONEXISTENT( );
+        OP_SETINDEXSTAR( JS_R0 , 0 , JS_R1 );
+        // Function;
+        JS_R1 = OP_NEWBOX( );
+        OP_SETINDEX( JS_R0 , 1 , JS_R1 );
+        JS_R1 = OP_NONEXISTENT( );
+        OP_SETINDEXSTAR( JS_R0 , 1 , JS_R1 );
+        // Array;
+        JS_R1 = OP_NEWBOX( );
+        OP_SETINDEX( JS_R0 , 2 , JS_R1 );
+        JS_R1 = OP_NONEXISTENT( );
+        OP_SETINDEXSTAR( JS_R0 , 2 , JS_R1 );
+        // RegExp;
+        JS_R1 = OP_NEWBOX( );
+        OP_SETINDEX( JS_R0 , 3 , JS_R1 );
+        JS_R1 = OP_NONEXISTENT( );
+        OP_SETINDEXSTAR( JS_R0 , 3 , JS_R1 );
+        // console;
+        JS_R1 = OP_NEWBOX( );
+        OP_SETINDEX( JS_R0 , 4 , JS_R1 );
+        JS_R1 = OP_NONEXISTENT( );
+        OP_SETINDEXSTAR( JS_R0 , 4 , JS_R1 );
+        // gl;
+        JS_R1 = OP_NEWBOX( );
+        OP_SETINDEX( JS_R0 , 5 , JS_R1 );
+        JS_R1 = OP_NONEXISTENT( );
+        OP_SETINDEXSTAR( JS_R0 , 5 , JS_R1 );
+        // gl2;
+        JS_R1 = OP_NEWBOX( );
+        OP_SETINDEX( JS_R0 , 6 , JS_R1 );
+        JS_R1 = OP_NONEXISTENT( );
+        OP_SETINDEXSTAR( JS_R0 , 6 , JS_R1 );
+        var JS_Env = JS_R0;
+        JS_R0 = OP_UNDEF( );
+        var JS_Base = JS_R0;
+        // sl;
+        JS_R0 = OP_NEWBOX( );
+        var sl = JS_R0;
+        // f2;
+        JS_R0 = OP_NEWBOX( );
+        var f2 = JS_R0;
+        // f3;
+        JS_R0 = OP_NEWBOX( );
+        var f3 = JS_R0;
+        // f1;
+        JS_R0 = OP_UNDEF( );
+        var f1 = JS_R0;
+        JS_R0 = OP_NEWENV( 4 );
+        // Object;
+        JS_R1 = OP_GETINDEX( JS_Env , 0 );
+        OP_SETINDEX( JS_R0 , 0 , JS_R1 );
+        // Function;
+        JS_R1 = OP_GETINDEX( JS_Env , 1 );
+        OP_SETINDEX( JS_R0 , 1 , JS_R1 );
+        // Array;
+        JS_R1 = OP_GETINDEX( JS_Env , 2 );
+        OP_SETINDEX( JS_R0 , 2 , JS_R1 );
+        // RegExp;
+        JS_R1 = OP_GETINDEX( JS_Env , 3 );
+        OP_SETINDEX( JS_R0 , 3 , JS_R1 );
+        JS_R0 = OP_FUNCTION( JS_Fun2 , JS_R0 );
+        // Function;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 1 );
+        JS_R2 = OP_STRING( "prototype" );
+        JS_R2 = OP_GETPROP( JS_R1 , JS_R2 );
+        JS_R1 = OP_STRING( "__proto__" );
+        JS_R1 = OP_SETPROP( JS_R0 , JS_R1 , JS_R2 );
+        // Function;
+        JS_R0 = OP_SETINDEXSTAR( JS_Env , 1 , JS_R0 );
+        JS_R0 = OP_NEWENV( 4 );
+        // Object;
+        JS_R1 = OP_GETINDEX( JS_Env , 0 );
+        OP_SETINDEX( JS_R0 , 0 , JS_R1 );
+        // Function;
+        JS_R1 = OP_GETINDEX( JS_Env , 1 );
+        OP_SETINDEX( JS_R0 , 1 , JS_R1 );
+        // Array;
+        JS_R1 = OP_GETINDEX( JS_Env , 2 );
+        OP_SETINDEX( JS_R0 , 2 , JS_R1 );
+        // RegExp;
+        JS_R1 = OP_GETINDEX( JS_Env , 3 );
+        OP_SETINDEX( JS_R0 , 3 , JS_R1 );
+        JS_R0 = OP_FUNCTION( JS_Fun3 , JS_R0 );
+        // Function;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 1 );
+        JS_R2 = OP_STRING( "prototype" );
+        JS_R2 = OP_GETPROP( JS_R1 , JS_R2 );
+        JS_R1 = OP_STRING( "__proto__" );
+        JS_R1 = OP_SETPROP( JS_R0 , JS_R1 , JS_R2 );
+        // Object;
+        JS_R0 = OP_SETINDEXSTAR( JS_Env , 0 , JS_R0 );
+        JS_R0 = OP_NEWOBJECT( );
+        // Object;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 0 );
+        JS_R2 = OP_STRING( "prototype" );
+        JS_R2 = OP_GETPROP( JS_R1 , JS_R2 );
+        JS_R1 = OP_STRING( "__proto__" );
+        JS_R1 = OP_SETPROP( JS_R0 , JS_R1 , JS_R2 );
+        // console;
+        JS_R0 = OP_SETINDEXSTAR( JS_Env , 4 , JS_R0 );
+        // console;
+        JS_R0 = OP_GETINDEXSTAR( JS_Env , 4 );
+        JS_R1 = OP_STRING( "log" );
+        JS_R2 = OP_NEWENV( 4 );
+        // Object;
+        JS_R3 = OP_GETINDEX( JS_Env , 0 );
+        OP_SETINDEX( JS_R2 , 0 , JS_R3 );
+        // Function;
+        JS_R3 = OP_GETINDEX( JS_Env , 1 );
+        OP_SETINDEX( JS_R2 , 1 , JS_R3 );
+        // Array;
+        JS_R3 = OP_GETINDEX( JS_Env , 2 );
+        OP_SETINDEX( JS_R2 , 2 , JS_R3 );
+        // RegExp;
+        JS_R3 = OP_GETINDEX( JS_Env , 3 );
+        OP_SETINDEX( JS_R2 , 3 , JS_R3 );
+        JS_R2 = OP_FUNCTION( JS_Fun4 , JS_R2 );
+        // Function;
+        JS_R3 = OP_GETINDEXSTAR( JS_Env , 1 );
+        JS_R4 = OP_STRING( "prototype" );
+        JS_R4 = OP_GETPROP( JS_R3 , JS_R4 );
+        JS_R3 = OP_STRING( "__proto__" );
+        JS_R3 = OP_SETPROP( JS_R2 , JS_R3 , JS_R4 );
+        JS_R0 = OP_SETPROP( JS_R0 , JS_R1 , JS_R2 );
+        JS_R0 = OP_NEWENV( 4 );
+        // Object;
+        JS_R1 = OP_GETINDEX( JS_Env , 0 );
+        OP_SETINDEX( JS_R0 , 0 , JS_R1 );
+        // Function;
+        JS_R1 = OP_GETINDEX( JS_Env , 1 );
+        OP_SETINDEX( JS_R0 , 1 , JS_R1 );
+        // Array;
+        JS_R1 = OP_GETINDEX( JS_Env , 2 );
+        OP_SETINDEX( JS_R0 , 2 , JS_R1 );
+        // RegExp;
+        JS_R1 = OP_GETINDEX( JS_Env , 3 );
+        OP_SETINDEX( JS_R0 , 3 , JS_R1 );
+        JS_R0 = OP_FUNCTION( JS_Fun5 , JS_R0 );
+        // Function;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 1 );
+        JS_R2 = OP_STRING( "prototype" );
+        JS_R2 = OP_GETPROP( JS_R1 , JS_R2 );
+        JS_R1 = OP_STRING( "__proto__" );
+        JS_R1 = OP_SETPROP( JS_R0 , JS_R1 , JS_R2 );
+        // Array;
+        JS_R0 = OP_SETINDEXSTAR( JS_Env , 2 , JS_R0 );
+        JS_R0 = OP_NEWENV( 4 );
+        // Object;
+        JS_R1 = OP_GETINDEX( JS_Env , 0 );
+        OP_SETINDEX( JS_R0 , 0 , JS_R1 );
+        // Function;
+        JS_R1 = OP_GETINDEX( JS_Env , 1 );
+        OP_SETINDEX( JS_R0 , 1 , JS_R1 );
+        // Array;
+        JS_R1 = OP_GETINDEX( JS_Env , 2 );
+        OP_SETINDEX( JS_R0 , 2 , JS_R1 );
+        // RegExp;
+        JS_R1 = OP_GETINDEX( JS_Env , 3 );
+        OP_SETINDEX( JS_R0 , 3 , JS_R1 );
+        JS_R0 = OP_FUNCTION( JS_Fun6 , JS_R0 );
+        // Function;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 1 );
+        JS_R2 = OP_STRING( "prototype" );
+        JS_R2 = OP_GETPROP( JS_R1 , JS_R2 );
+        JS_R1 = OP_STRING( "__proto__" );
+        JS_R1 = OP_SETPROP( JS_R0 , JS_R1 , JS_R2 );
+        // RegExp;
+        JS_R0 = OP_SETINDEXSTAR( JS_Env , 3 , JS_R0 );
+        JS_R0 = OP_NUMBER( 2 );
+        // gl;
+        JS_R0 = OP_SETINDEXSTAR( JS_Env , 5 , JS_R0 );
+        JS_R0 = OP_NUMBER( 1 );
+        // sl;
+        JS_R0 = OP_SETVARSTAR( sl , JS_R0 );
+        JS_R0 = OP_NEWENV( 10 );
+        // Object;
+        JS_R1 = OP_GETINDEX( JS_Env , 0 );
+        OP_SETINDEX( JS_R0 , 0 , JS_R1 );
+        // Function;
+        JS_R1 = OP_GETINDEX( JS_Env , 1 );
+        OP_SETINDEX( JS_R0 , 1 , JS_R1 );
+        // Array;
+        JS_R1 = OP_GETINDEX( JS_Env , 2 );
+        OP_SETINDEX( JS_R0 , 2 , JS_R1 );
+        // RegExp;
+        JS_R1 = OP_GETINDEX( JS_Env , 3 );
+        OP_SETINDEX( JS_R0 , 3 , JS_R1 );
+        // console;
+        JS_R1 = OP_GETINDEX( JS_Env , 4 );
+        OP_SETINDEX( JS_R0 , 4 , JS_R1 );
+        // sl;
+        JS_R1 = OP_GETVAR( sl );
+        OP_SETINDEX( JS_R0 , 5 , JS_R1 );
+        // f3;
+        JS_R1 = OP_GETVAR( f3 );
+        OP_SETINDEX( JS_R0 , 6 , JS_R1 );
+        // gl2;
+        JS_R1 = OP_GETINDEX( JS_Env , 6 );
+        OP_SETINDEX( JS_R0 , 7 , JS_R1 );
+        // gl;
+        JS_R1 = OP_GETINDEX( JS_Env , 5 );
+        OP_SETINDEX( JS_R0 , 8 , JS_R1 );
+        // f2;
+        JS_R1 = OP_GETVAR( f2 );
+        OP_SETINDEX( JS_R0 , 9 , JS_R1 );
+        JS_R0 = OP_FUNCTION( JS_Fun7 , JS_R0 );
+        // Function;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 1 );
+        JS_R2 = OP_STRING( "prototype" );
+        JS_R2 = OP_GETPROP( JS_R1 , JS_R2 );
+        JS_R1 = OP_STRING( "__proto__" );
+        JS_R1 = OP_SETPROP( JS_R0 , JS_R1 , JS_R2 );
+        // f1;
+        JS_R0 = f1 = JS_R0;
+        // console;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 4 );
+        JS_R2 = OP_STRING( "log" );
+        JS_R0 = OP_GETPROP( JS_R1 , JS_R2 );
+        OP_CLEARARGS( );
+        // sl;
+        JS_R2 = OP_GETVARSTAR( sl );
+        OP_PUSHARG( JS_R2 );
+        OP_PUSHARG( JS_R1 );
+        OP_CALL( JS_R0 );
+        if (OP_JUMPNE( JS_JumpType, 2 , 8 )) break ;
+        // throw after return;
+        if (OP_JUMP( 2 )) break;
+    case 8:
+        JS_R0 = JS_Return;
+        // f1;
+        JS_R0 = OP_GETVAR( f1 );
+        JS_R1 = OP_UNDEF( );
+        OP_CLEARARGS( );
+        OP_PUSHARG( JS_R1 );
+        OP_CALL( JS_R0 );
+        if (OP_JUMPNE( JS_JumpType, 2 , 13 )) break ;
+        // throw after return;
+        if (OP_JUMP( 2 )) break;
+    case 13:
+        JS_R0 = JS_Return;
+        JS_R1 = OP_UNDEF( );
+        OP_CLEARARGS( );
+        OP_PUSHARG( JS_R1 );
+        OP_CALL( JS_R0 );
+        if (OP_JUMPNE( JS_JumpType, 2 , 18 )) break ;
+        // throw after return;
+        if (OP_JUMP( 2 )) break;
+    case 18:
+        JS_R0 = JS_Return;
+    case 2:
+        return;
+  }
+ }
+}
+function JS_Fun2(){
+ while(true){
+  switch(OP_TARGET()) {
+    case -1:
+        var JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Env = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Fun = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Base = JS_R0;
+        JS_R0 = OP_UNDEF( );
+        JS_Return = JS_R0;
+        JS_JumpType = 1;
+    case 2:
+        return;
+  }
+ }
+}
+function JS_Fun3(){
+ while(true){
+  switch(OP_TARGET()) {
+    case -1:
+        var JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Env = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Fun = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Base = JS_R0;
+        JS_R0 = OP_UNDEF( );
+        JS_Return = JS_R0;
+        JS_JumpType = 1;
+    case 2:
+        return;
+  }
+ }
+}
+function JS_Fun4(){
+ while(true){
+  switch(OP_TARGET()) {
+    case -1:
+        var JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Env = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Fun = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Base = JS_R0;
+        // str;
+        JS_R0 = OP_POPARG( );
+        var str = JS_R0;
+         console.log(str);;
+        JS_R0 = OP_UNDEF( );
+        JS_Return = JS_R0;
+        JS_JumpType = 1;
+    case 2:
+        return;
+  }
+ }
+}
+function JS_Fun5(){
+ while(true){
+  switch(OP_TARGET()) {
+    case -1:
+        var JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Env = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Fun = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Base = JS_R0;
+        JS_R0 = OP_UNDEF( );
+        JS_Return = JS_R0;
+        JS_JumpType = 1;
+    case 2:
+        return;
+  }
+ }
+}
+function JS_Fun6(){
+ while(true){
+  switch(OP_TARGET()) {
+    case -1:
+        var JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Env = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Fun = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Base = JS_R0;
+        JS_R0 = OP_UNDEF( );
+        JS_Return = JS_R0;
+        JS_JumpType = 1;
+    case 2:
+        return;
+  }
+ }
+}
+function JS_Fun7(){
+ while(true){
+  switch(OP_TARGET()) {
+    case -1:
+        var JS_R0;
+        var JS_R1;
+        var JS_R2;
+        JS_R0 = OP_POPARG( );
+        var JS_Env = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Fun = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Base = JS_R0;
+        // e;
+        JS_R0 = OP_NEWBOX( );
+        var e = JS_R0;
+        // x;
+        JS_R0 = OP_UNDEF( );
+        var x = JS_R0;
+        // #1_e;
+        JS_R0 = OP_UNDEF( );
+        var JS1_e = JS_R0;
+        // z;
+        JS_R0 = OP_UNDEF( );
+        var z = JS_R0;
+        // #2_e;
+        JS_R0 = OP_UNDEF( );
+        var JS2_e = JS_R0;
+        JS_R0 = OP_NUMBER( 1 );
+        // e;
+        JS_R0 = OP_SETVARSTAR( e , JS_R0 );
+        JS_R0 = OP_NUMBER( 2 );
+        // x;
+        JS_R0 = x = JS_R0;
+        // console;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 4 );
+        JS_R2 = OP_STRING( "log" );
+        JS_R0 = OP_GETPROP( JS_R1 , JS_R2 );
+        OP_CLEARARGS( );
+        // z;
+        JS_R2 = OP_GETVAR( z );
+        OP_PUSHARG( JS_R2 );
+        OP_PUSHARG( JS_R1 );
+        OP_CALL( JS_R0 );
+        if (OP_JUMPNE( JS_JumpType, 2 , 8 )) break ;
+        // throw after return;
+        if (OP_JUMP( 2 )) break;
+    case 8:
+        JS_R0 = JS_Return;
+        // try-catch-finally;
+        // throw;
+        JS_R0 = OP_STRING( "Exception 1" );
+        JS_Return = JS_R0;
+        JS_JumpType = 2;
+        if (OP_JUMP( 15 )) break;
+        if (OP_JUMP( 13 )) break;
+        // catch;
+    case 15:
+        JS_JumpType = 0;
+        JS_R0 = JS_Return;
+        // #1_e;
+        JS_R0 = JS1_e = JS_R0;
+        // #1_e;
+        JS_R0 = OP_GETVAR( JS1_e );
+        // console;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 4 );
+        JS_R2 = OP_STRING( "log" );
+        JS_R0 = OP_GETPROP( JS_R1 , JS_R2 );
+        OP_CLEARARGS( );
+        // #1_e;
+        JS_R2 = OP_GETVAR( JS1_e );
+        OP_PUSHARG( JS_R2 );
+        OP_PUSHARG( JS_R1 );
+        OP_CALL( JS_R0 );
+        if (OP_JUMPNE( JS_JumpType, 2 , 23 )) break ;
+        // throw after return;
+        if (OP_JUMP( 15 )) break;
+    case 23:
+        JS_R0 = JS_Return;
+        JS_R0 = OP_NUMBER( 3 );
+        // x;
+        JS_R0 = x = JS_R0;
+        JS_R0 = OP_NUMBER( 4 );
+        // z;
+        JS_R0 = z = JS_R0;
+        // console;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 4 );
+        JS_R2 = OP_STRING( "log" );
+        JS_R0 = OP_GETPROP( JS_R1 , JS_R2 );
+        OP_CLEARARGS( );
+        // x;
+        JS_R2 = OP_GETVAR( x );
+        OP_PUSHARG( JS_R2 );
+        OP_PUSHARG( JS_R1 );
+        OP_CALL( JS_R0 );
+        if (OP_JUMPNE( JS_JumpType, 2 , 28 )) break ;
+        // throw after return;
+        if (OP_JUMP( 15 )) break;
+    case 28:
+        JS_R0 = JS_Return;
+        // try-catch-finally;
+        // throw;
+        JS_R0 = OP_STRING( "Exception2" );
+        JS_Return = JS_R0;
+        JS_JumpType = 2;
+        if (OP_JUMP( 35 )) break;
+        if (OP_JUMP( 33 )) break;
+        // catch;
+    case 35:
+        JS_JumpType = 0;
+        JS_R0 = OP_NEWBOX( );
+        JS2_e = JS_R0;
+        JS_R0 = JS_Return;
+        // #2_e;
+        JS_R0 = OP_SETVARSTAR( JS2_e , JS_R0 );
+        // #2_e;
+        JS_R0 = OP_GETVARSTAR( JS2_e );
+        // return;
+        JS_R0 = OP_NEWENV( 8 );
+        // Object;
+        JS_R1 = OP_GETINDEX( JS_Env , 0 );
+        OP_SETINDEX( JS_R0 , 0 , JS_R1 );
+        // Function;
+        JS_R1 = OP_GETINDEX( JS_Env , 1 );
+        OP_SETINDEX( JS_R0 , 1 , JS_R1 );
+        // Array;
+        JS_R1 = OP_GETINDEX( JS_Env , 2 );
+        OP_SETINDEX( JS_R0 , 2 , JS_R1 );
+        // RegExp;
+        JS_R1 = OP_GETINDEX( JS_Env , 3 );
+        OP_SETINDEX( JS_R0 , 3 , JS_R1 );
+        // console;
+        JS_R1 = OP_GETINDEX( JS_Env , 4 );
+        OP_SETINDEX( JS_R0 , 4 , JS_R1 );
+        // #2_e;
+        JS_R1 = OP_GETVAR( JS2_e );
+        OP_SETINDEX( JS_R0 , 5 , JS_R1 );
+        // sl;
+        JS_R1 = OP_GETINDEX( JS_Env , 5 );
+        OP_SETINDEX( JS_R0 , 6 , JS_R1 );
+        // f3;
+        JS_R1 = OP_GETINDEX( JS_Env , 6 );
+        OP_SETINDEX( JS_R0 , 7 , JS_R1 );
+        JS_R0 = OP_FUNCTION( JS_Fun8 , JS_R0 );
+        // Function;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 1 );
+        JS_R2 = OP_STRING( "prototype" );
+        JS_R2 = OP_GETPROP( JS_R1 , JS_R2 );
+        JS_R1 = OP_STRING( "__proto__" );
+        JS_R1 = OP_SETPROP( JS_R0 , JS_R1 , JS_R2 );
+        JS_Return = JS_R0;
+        JS_JumpType = 1;
+        if (OP_JUMP( 2 )) break;
+    case 33:
+    case 13:
+        // console;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 4 );
+        JS_R2 = OP_STRING( "log" );
+        JS_R0 = OP_GETPROP( JS_R1 , JS_R2 );
+        OP_CLEARARGS( );
+        // z;
+        JS_R2 = OP_GETVAR( z );
+        OP_PUSHARG( JS_R2 );
+        OP_PUSHARG( JS_R1 );
+        OP_CALL( JS_R0 );
+        if (OP_JUMPNE( JS_JumpType, 2 , 43 )) break ;
+        // throw after return;
+        if (OP_JUMP( 2 )) break;
+    case 43:
+        JS_R0 = JS_Return;
+        // console;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 4 );
+        JS_R2 = OP_STRING( "log" );
+        JS_R0 = OP_GETPROP( JS_R1 , JS_R2 );
+        OP_CLEARARGS( );
+        // x;
+        JS_R2 = OP_GETVAR( x );
+        OP_PUSHARG( JS_R2 );
+        OP_PUSHARG( JS_R1 );
+        OP_CALL( JS_R0 );
+        if (OP_JUMPNE( JS_JumpType, 2 , 48 )) break ;
+        // throw after return;
+        if (OP_JUMP( 2 )) break;
+    case 48:
+        JS_R0 = JS_Return;
+        // console;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 4 );
+        JS_R2 = OP_STRING( "log" );
+        JS_R0 = OP_GETPROP( JS_R1 , JS_R2 );
+        OP_CLEARARGS( );
+        // e;
+        JS_R2 = OP_GETVARSTAR( e );
+        OP_PUSHARG( JS_R2 );
+        OP_PUSHARG( JS_R1 );
+        OP_CALL( JS_R0 );
+        if (OP_JUMPNE( JS_JumpType, 2 , 53 )) break ;
+        // throw after return;
+        if (OP_JUMP( 2 )) break;
+    case 53:
+        JS_R0 = JS_Return;
+        JS_R0 = OP_NEWENV( 8 );
+        // Object;
+        JS_R1 = OP_GETINDEX( JS_Env , 0 );
+        OP_SETINDEX( JS_R0 , 0 , JS_R1 );
+        // Function;
+        JS_R1 = OP_GETINDEX( JS_Env , 1 );
+        OP_SETINDEX( JS_R0 , 1 , JS_R1 );
+        // Array;
+        JS_R1 = OP_GETINDEX( JS_Env , 2 );
+        OP_SETINDEX( JS_R0 , 2 , JS_R1 );
+        // RegExp;
+        JS_R1 = OP_GETINDEX( JS_Env , 3 );
+        OP_SETINDEX( JS_R0 , 3 , JS_R1 );
+        // gl2;
+        JS_R1 = OP_GETINDEX( JS_Env , 7 );
+        OP_SETINDEX( JS_R0 , 4 , JS_R1 );
+        // console;
+        JS_R1 = OP_GETINDEX( JS_Env , 4 );
+        OP_SETINDEX( JS_R0 , 5 , JS_R1 );
+        // e;
+        JS_R1 = OP_GETVAR( e );
+        OP_SETINDEX( JS_R0 , 6 , JS_R1 );
+        // gl;
+        JS_R1 = OP_GETINDEX( JS_Env , 8 );
+        OP_SETINDEX( JS_R0 , 7 , JS_R1 );
+        JS_R0 = OP_FUNCTION( JS_Fun10 , JS_R0 );
+        // Function;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 1 );
+        JS_R2 = OP_STRING( "prototype" );
+        JS_R2 = OP_GETPROP( JS_R1 , JS_R2 );
+        JS_R1 = OP_STRING( "__proto__" );
+        JS_R1 = OP_SETPROP( JS_R0 , JS_R1 , JS_R2 );
+        // f2;
+        JS_R0 = OP_SETINDEXSTAR( JS_Env , 9 , JS_R0 );
+        JS_R0 = OP_UNDEF( );
+        JS_Return = JS_R0;
+        JS_JumpType = 1;
+    case 2:
+        return;
+  }
+ }
+}
+function JS_Fun8(){
+ while(true){
+  switch(OP_TARGET()) {
+    case -1:
+        var JS_R0;
+        var JS_R1;
+        var JS_R2;
+        JS_R0 = OP_POPARG( );
+        var JS_Env = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Fun = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Base = JS_R0;
+        // #3_e;
+        JS_R0 = OP_UNDEF( );
+        var JS3_e = JS_R0;
+        // console;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 4 );
+        JS_R2 = OP_STRING( "log" );
+        JS_R0 = OP_GETPROP( JS_R1 , JS_R2 );
+        OP_CLEARARGS( );
+        // #2_e;
+        JS_R2 = OP_GETINDEXSTAR( JS_Env , 5 );
+        OP_PUSHARG( JS_R2 );
+        OP_PUSHARG( JS_R1 );
+        OP_CALL( JS_R0 );
+        if (OP_JUMPNE( JS_JumpType, 2 , 8 )) break ;
+        // throw after return;
+        if (OP_JUMP( 2 )) break;
+    case 8:
+        JS_R0 = JS_Return;
+        // console;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 4 );
+        JS_R2 = OP_STRING( "log" );
+        JS_R0 = OP_GETPROP( JS_R1 , JS_R2 );
+        OP_CLEARARGS( );
+        // sl;
+        JS_R2 = OP_GETINDEXSTAR( JS_Env , 6 );
+        OP_PUSHARG( JS_R2 );
+        OP_PUSHARG( JS_R1 );
+        OP_CALL( JS_R0 );
+        if (OP_JUMPNE( JS_JumpType, 2 , 13 )) break ;
+        // throw after return;
+        if (OP_JUMP( 2 )) break;
+    case 13:
+        JS_R0 = JS_Return;
+        // try-catch-finally;
+        // throw;
+        JS_R0 = OP_STRING( "Exception 3" );
+        JS_Return = JS_R0;
+        JS_JumpType = 2;
+        if (OP_JUMP( 20 )) break;
+        if (OP_JUMP( 18 )) break;
+        // catch;
+    case 20:
+        JS_JumpType = 0;
+        JS_R0 = OP_NEWBOX( );
+        JS3_e = JS_R0;
+        JS_R0 = JS_Return;
+        // #3_e;
+        JS_R0 = OP_SETVARSTAR( JS3_e , JS_R0 );
+        // #3_e;
+        JS_R0 = OP_GETVARSTAR( JS3_e );
+        JS_R0 = OP_NEWENV( 6 );
+        // Object;
+        JS_R1 = OP_GETINDEX( JS_Env , 0 );
+        OP_SETINDEX( JS_R0 , 0 , JS_R1 );
+        // Function;
+        JS_R1 = OP_GETINDEX( JS_Env , 1 );
+        OP_SETINDEX( JS_R0 , 1 , JS_R1 );
+        // Array;
+        JS_R1 = OP_GETINDEX( JS_Env , 2 );
+        OP_SETINDEX( JS_R0 , 2 , JS_R1 );
+        // RegExp;
+        JS_R1 = OP_GETINDEX( JS_Env , 3 );
+        OP_SETINDEX( JS_R0 , 3 , JS_R1 );
+        // console;
+        JS_R1 = OP_GETINDEX( JS_Env , 4 );
+        OP_SETINDEX( JS_R0 , 4 , JS_R1 );
+        // #3_e;
+        JS_R1 = OP_GETVAR( JS3_e );
+        OP_SETINDEX( JS_R0 , 5 , JS_R1 );
+        JS_R0 = OP_FUNCTION( JS_Fun9 , JS_R0 );
+        // Function;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 1 );
+        JS_R2 = OP_STRING( "prototype" );
+        JS_R2 = OP_GETPROP( JS_R1 , JS_R2 );
+        JS_R1 = OP_STRING( "__proto__" );
+        JS_R1 = OP_SETPROP( JS_R0 , JS_R1 , JS_R2 );
+        // f3;
+        JS_R0 = OP_SETINDEXSTAR( JS_Env , 7 , JS_R0 );
+    case 18:
+        JS_R0 = OP_UNDEF( );
+        JS_Return = JS_R0;
+        JS_JumpType = 1;
+    case 2:
+        return;
+  }
+ }
+}
+function JS_Fun9(){
+ while(true){
+  switch(OP_TARGET()) {
+    case -1:
+        var JS_R0;
+        var JS_R1;
+        var JS_R2;
+        var JS_R3;
+        JS_R0 = OP_POPARG( );
+        var JS_Env = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Fun = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Base = JS_R0;
+        // console;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 4 );
+        JS_R2 = OP_STRING( "log" );
+        JS_R0 = OP_GETPROP( JS_R1 , JS_R2 );
+        OP_CLEARARGS( );
+        // #3_e;
+        JS_R2 = OP_GETINDEXSTAR( JS_Env , 5 );
+        OP_PUSHARG( JS_R2 );
+        OP_PUSHARG( JS_R1 );
+        OP_CALL( JS_R0 );
+        if (OP_JUMPNE( JS_JumpType, 2 , 8 )) break ;
+        // throw after return;
+        if (OP_JUMP( 2 )) break;
+    case 8:
+        JS_R0 = JS_Return;
+        // console;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 4 );
+        JS_R2 = OP_STRING( "log" );
+        JS_R0 = OP_GETPROP( JS_R1 , JS_R2 );
+        OP_CLEARARGS( );
+        // arguments;
+        JS_R2 = OP_GETVAR( JS_Args );
+        JS_R3 = OP_NUMBER( 0 );
+        JS_R2 = OP_GETPROP( JS_R2 , JS_R3 );
+        OP_PUSHARG( JS_R2 );
+        OP_PUSHARG( JS_R1 );
+        OP_CALL( JS_R0 );
+        if (OP_JUMPNE( JS_JumpType, 2 , 13 )) break ;
+        // throw after return;
+        if (OP_JUMP( 2 )) break;
+    case 13:
+        JS_R0 = JS_Return;
+        JS_R0 = OP_UNDEF( );
+        JS_Return = JS_R0;
+        JS_JumpType = 1;
+    case 2:
+        return;
+  }
+ }
+}
+function JS_Fun10(){
+ while(true){
+  switch(OP_TARGET()) {
+    case -1:
+        var JS_R0;
+        var JS_R1;
+        var JS_R2;
+        JS_R0 = OP_POPARG( );
+        var JS_Env = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Fun = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Base = JS_R0;
+        // #4_e;
+        JS_R0 = OP_UNDEF( );
+        var JS4_e = JS_R0;
+        JS_R0 = OP_NUMBER( 1 );
+        // gl2;
+        JS_R0 = OP_SETINDEXSTAR( JS_Env , 4 , JS_R0 );
+        // console;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 5 );
+        JS_R2 = OP_STRING( "log" );
+        JS_R0 = OP_GETPROP( JS_R1 , JS_R2 );
+        OP_CLEARARGS( );
+        // e;
+        JS_R2 = OP_GETINDEXSTAR( JS_Env , 6 );
+        OP_PUSHARG( JS_R2 );
+        OP_PUSHARG( JS_R1 );
+        OP_CALL( JS_R0 );
+        if (OP_JUMPNE( JS_JumpType, 2 , 8 )) break ;
+        // throw after return;
+        if (OP_JUMP( 2 )) break;
+    case 8:
+        JS_R0 = JS_Return;
+        // console;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 5 );
+        JS_R2 = OP_STRING( "log" );
+        JS_R0 = OP_GETPROP( JS_R1 , JS_R2 );
+        OP_CLEARARGS( );
+        // gl;
+        JS_R2 = OP_GETINDEXSTAR( JS_Env , 7 );
+        OP_PUSHARG( JS_R2 );
+        OP_PUSHARG( JS_R1 );
+        OP_CALL( JS_R0 );
+        if (OP_JUMPNE( JS_JumpType, 2 , 13 )) break ;
+        // throw after return;
+        if (OP_JUMP( 2 )) break;
+    case 13:
+        JS_R0 = JS_Return;
+        // try-catch-finally;
+        // throw;
+        JS_R0 = OP_STRING( "Exception 4" );
+        JS_Return = JS_R0;
+        JS_JumpType = 2;
+        if (OP_JUMP( 20 )) break;
+        if (OP_JUMP( 18 )) break;
+        // catch;
+    case 20:
+        JS_JumpType = 0;
+        JS_R0 = JS_Return;
+        // #4_e;
+        JS_R0 = JS4_e = JS_R0;
+        // #4_e;
+        JS_R0 = OP_GETVAR( JS4_e );
+    case 18:
+        JS_R0 = OP_UNDEF( );
+        JS_Return = JS_R0;
+        JS_JumpType = 1;
+    case 2:
+        return;
+  }
+ }
+}
+JS_Fun1();

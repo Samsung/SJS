@@ -1,0 +1,70 @@
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+2 --> integer
+a --> {  | f: integer, p: [](___) -> void }
+b --> {  | f: integer, p: []() -> integer }
+c --> {  | f: integer, p1: [](___) -> void, p2: []() -> integer }
+d --> {  | f: integer, g: integer, p1: [](___) -> void, p2: []() -> integer }
+function m1(x) {
+  this.f = x;
+} --> [{  | f: integer }](___) -> void
+function m2() {
+  return this.f;
+} --> [{ f: integer |  }]() -> integer
+function m3(x) {
+  this.f = x;
+} --> [{  | f: integer }](___) -> void
+function m4() {
+  return this.f;
+} --> [{ f: integer |  }]() -> integer
+function m5(x) {
+  this.g = x;
+} --> [{  | g: integer }](___) -> void
+function m6() {
+  return this.f;
+} --> [{ f: integer |  }]() -> integer
+m1 --> [{  | f: integer }](___) -> void
+m2 --> [{ f: integer |  }]() -> integer
+m3 --> [{  | f: integer }](___) -> void
+m4 --> [{ f: integer |  }]() -> integer
+m5 --> [{  | g: integer }](___) -> void
+m6 --> [{ f: integer |  }]() -> integer
+this --> {  | f: integer }
+this --> {  | f: integer }
+this --> {  | g: integer }
+this --> { f: integer |  }
+this --> { f: integer |  }
+this --> { f: integer |  }
+this.f --> integer
+this.f --> integer
+this.f --> integer
+this.f --> integer
+this.f --> integer
+this.f = x --> integer
+this.f = x --> integer
+this.g --> integer
+this.g = x --> integer
+x --> ___
+x --> ___
+x --> ___
+x --> ___
+x --> ___
+x --> ___
+{f: 1, g: 2, p1: function m5(x) {
+  this.g = x;
+}, p2: function m6() {
+  return this.f;
+}} --> {  | f: integer, g: integer, p1: [](___) -> void, p2: []() -> integer }
+{f: 1, p1: function m3(x) {
+  this.f = x;
+}, p2: function m4() {
+  return this.f;
+}} --> {  | f: integer, p1: [](___) -> void, p2: []() -> integer }
+{f: 1, p: function m1(x) {
+  this.f = x;
+}} --> {  | f: integer, p: [](___) -> void }
+{f: 1, p: function m2() {
+  return this.f;
+}} --> {  | f: integer, p: []() -> integer }

@@ -1,0 +1,2 @@
+Error on line 6: wrong number of parameters in call: x.m(3, 4)
+    Note: 1 expected, 2 given

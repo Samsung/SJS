@@ -1,0 +1,280 @@
+">ONE Homo sapiens alu" --> string
+">THREE Homo sapiens frequency" --> string
+">TWO IUB ambiguity codes" --> string
+"ACAAAAATTAGCCGGGCGTGGTGGCGCGCGCCTGTAATCCCA" --> string
+"AGCCTGGGCGACAGAGCGAGACTCCGTCTCAAAAA" --> string
+"AGGCGGAGGTTGCAGTGAGCCGAGATCGCGCCACTGCACTCC" --> string
+"CCAGCCTGGCCAACATGGTGAAACCCCGTCTCTACTAAAAAT" --> string
+"GAGGCCGAGGCGGGCGGATCACCTGAGGTCAGGAGTTCGAGA" --> string
+"GCTACTCGGGAGGCTGAGGCAGGAGAATCGCTTGAACCCGGG" --> string
+"GGCCGGGCGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGG" + "GAGGCCGAGGCGGGCGGATCACCTGAGGTCAGGAGTTCGAGA" + "CCAGCCTGGCCAACATGGTGAAACCCCGTCTCTACTAAAAAT" + "ACAAAAATTAGCCGGGCGTGGTGGCGCGCGCCTGTAATCCCA" + "GCTACTCGGGAGGCTGAGGCAGGAGAATCGCTTGAACCCGGG" + "AGGCGGAGGTTGCAGTGAGCCGAGATCGCGCCACTGCACTCC" + "AGCCTGGGCGACAGAGCGAGACTCCGTCTCAAAAA" --> string
+"GGCCGGGCGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGG" + "GAGGCCGAGGCGGGCGGATCACCTGAGGTCAGGAGTTCGAGA" + "CCAGCCTGGCCAACATGGTGAAACCCCGTCTCTACTAAAAAT" + "ACAAAAATTAGCCGGGCGTGGTGGCGCGCGCCTGTAATCCCA" + "GCTACTCGGGAGGCTGAGGCAGGAGAATCGCTTGAACCCGGG" + "AGGCGGAGGTTGCAGTGAGCCGAGATCGCGCCACTGCACTCC" --> string
+"GGCCGGGCGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGG" + "GAGGCCGAGGCGGGCGGATCACCTGAGGTCAGGAGTTCGAGA" + "CCAGCCTGGCCAACATGGTGAAACCCCGTCTCTACTAAAAAT" + "ACAAAAATTAGCCGGGCGTGGTGGCGCGCGCCTGTAATCCCA" + "GCTACTCGGGAGGCTGAGGCAGGAGAATCGCTTGAACCCGGG" --> string
+"GGCCGGGCGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGG" + "GAGGCCGAGGCGGGCGGATCACCTGAGGTCAGGAGTTCGAGA" + "CCAGCCTGGCCAACATGGTGAAACCCCGTCTCTACTAAAAAT" + "ACAAAAATTAGCCGGGCGTGGTGGCGCGCGCCTGTAATCCCA" --> string
+"GGCCGGGCGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGG" + "GAGGCCGAGGCGGGCGGATCACCTGAGGTCAGGAGTTCGAGA" + "CCAGCCTGGCCAACATGGTGAAACCCCGTCTCTACTAAAAAT" --> string
+"GGCCGGGCGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGG" + "GAGGCCGAGGCGGGCGGATCACCTGAGGTCAGGAGTTCGAGA" --> string
+"GGCCGGGCGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGG" --> string
+(last * A + C) % M --> integer
+(last * A + C) --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0.02 --> float
+0.02 --> float
+0.02 --> float
+0.02 --> float
+0.02 --> float
+0.02 --> float
+0.02 --> float
+0.02 --> float
+0.02 --> float
+0.02 --> float
+0.02 --> float
+0.12 --> float
+0.12 --> float
+0.1975473066391 --> float
+0.1979883004921 --> float
+0.27 --> float
+0.27 --> float
+0.3015094502008 --> float
+0.3029549426680 --> float
+1 --> integer
+10 --> integer
+139968 --> integer
+2 * n --> integer
+2 --> integer
+29573 --> integer
+3 * n --> integer
+3 --> integer
+3877 --> integer
+42 --> integer
+5 * n --> integer
+5 --> integer
+60 --> integer
+60 --> integer
+A --> integer
+A --> integer
+ALU --> string
+ALU --> string
+Array --> () -> Array<string> INTERSECT (integer) -> Array<string> INTERSECT (string,string) -> Array<string>
+Array --> () -> Array<string> INTERSECT (integer) -> Array<string> INTERSECT (string,string) -> Array<string>
+Array(60) --> Array<string>
+Array(n) --> Array<string>
+C --> integer
+C --> integer
+HomoSap --> Map<float>
+HomoSap --> Map<float>
+IUB --> Map<float>
+IUB --> Map<float>
+IUB --> Map<float>
+M --> integer
+M --> integer
+M --> integer
+c --> string
+c --> string
+c --> string
+c --> string
+c --> string
+c --> string
+fastaRandom --> (integer,Map<float>) -> void
+fastaRandom --> (integer,Map<float>) -> void
+fastaRandom --> (integer,Map<float>) -> void
+fastaRandom(3 * n, IUB) --> void
+fastaRandom(5 * n, HomoSap) --> void
+fastaRepeat --> (integer,string) -> void
+fastaRepeat --> (integer,string) -> void
+fastaRepeat(2 * n, ALU) --> void
+function fastaRandom(n, table) {
+  var line = Array(60);
+  makeCumulative(table);
+  while (n > 0) 
+    {
+      if (n < line.length) 
+      line = Array(n);
+      for (var i = 0; i < line.length; i++) 
+        {
+          var r = rand(1);
+          for (var c in table) 
+            {
+              if (r < table[c]) 
+              {
+                line[i] = c;
+                break;
+              }
+            }
+        }
+      n -= line.length;
+    }
+}
+ --> (integer,Map<float>) -> void
+function fastaRepeat(n, seq) {
+  var seqi = 0, lenOut = 60;
+  while (n > 0) 
+    {
+      if (n < lenOut) 
+      lenOut = n;
+      if (seqi + lenOut < seq.length) 
+      {
+        printString(seq.substring(seqi, seqi + lenOut));
+        seqi += lenOut;
+      } else {
+        var s = seq.substring(seqi, seq.length);
+        seqi = lenOut - s.length;
+        printString(s + seq.substring(0, seqi));
+      }
+      n -= lenOut;
+    }
+}
+ --> (integer,string) -> void
+function makeCumulative(table) {
+  hint = table;
+  var last = null;
+  for (var c in table) 
+    {
+      if (last) 
+      table[c] += table[last];
+      last = c;
+    }
+}
+ --> (Map<float>) -> void
+function rand(max) {
+  last = (last * A + C) % M;
+  return max * last / M;
+}
+ --> (integer) -> float
+hint --> Map<float>
+hint --> Map<float>
+hint = table --> Map<float>
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i < line.length --> boolean
+i++ --> integer
+last * A + C --> integer
+last * A --> integer
+last --> integer
+last --> integer
+last --> integer
+last --> integer
+last --> string
+last --> string
+last --> string
+last --> string
+last = (last * A + C) % M --> integer
+last = c --> string
+lenOut - s.length --> integer
+lenOut --> integer
+lenOut --> integer
+lenOut --> integer
+lenOut --> integer
+lenOut --> integer
+lenOut --> integer
+lenOut --> integer
+lenOut --> integer
+lenOut = n --> integer
+line --> Array<string>
+line --> Array<string>
+line --> Array<string>
+line --> Array<string>
+line --> Array<string>
+line --> Array<string>
+line = Array(n) --> Array<string>
+line.length --> integer
+line.length --> integer
+line.length --> integer
+line[i] --> string
+line[i] = c --> string
+makeCumulative --> (Map<float>) -> void
+makeCumulative --> (Map<float>) -> void
+makeCumulative(table) --> void
+max * last --> integer
+max * last / M --> float
+max --> integer
+max --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n -= lenOut --> integer
+n -= line.length --> integer
+n < lenOut --> boolean
+n < line.length --> boolean
+n > 0 --> boolean
+n > 0 --> boolean
+null --> string
+printString --> (string) -> void
+printString --> (string) -> void
+printString --> (string) -> void
+printString --> (string) -> void
+printString --> (string) -> void
+printString(">ONE Homo sapiens alu") --> void
+printString(">THREE Homo sapiens frequency") --> void
+printString(">TWO IUB ambiguity codes") --> void
+printString(s + seq.substring(0, seqi)) --> void
+printString(seq.substring(seqi, seqi + lenOut)) --> void
+r --> float
+r --> float
+r < table[c] --> boolean
+rand --> (integer) -> float
+rand --> (integer) -> float
+rand(1) --> float
+s + seq.substring(0, seqi) --> string
+s --> string
+s --> string
+s --> string
+s.length --> integer
+seq --> string
+seq --> string
+seq --> string
+seq --> string
+seq --> string
+seq --> string
+seq.length --> integer
+seq.length --> integer
+seq.substring --> [](integer,integer) -> string
+seq.substring --> [](integer,integer) -> string
+seq.substring --> [](integer,integer) -> string
+seq.substring(0, seqi) --> string
+seq.substring(seqi, seq.length) --> string
+seq.substring(seqi, seqi + lenOut) --> string
+seqi + lenOut --> integer
+seqi + lenOut --> integer
+seqi + lenOut < seq.length --> boolean
+seqi += lenOut --> integer
+seqi --> integer
+seqi --> integer
+seqi --> integer
+seqi --> integer
+seqi --> integer
+seqi --> integer
+seqi --> integer
+seqi --> integer
+seqi = lenOut - s.length --> integer
+table --> Map<float>
+table --> Map<float>
+table --> Map<float>
+table --> Map<float>
+table --> Map<float>
+table --> Map<float>
+table --> Map<float>
+table --> Map<float>
+table --> Map<float>
+table[c] += table[last] --> float
+table[c] --> float
+table[c] --> float
+table[last] --> float
+{"a": 0.27, "c": 0.12, "g": 0.12, "t": 0.27, "B": 0.02, "D": 0.02, "H": 0.02, "K": 0.02, "M": 0.02, "N": 0.02, "R": 0.02, "S": 0.02, "V": 0.02, "W": 0.02, "Y": 0.02} --> Map<float>
+{"a": 0.3029549426680, "c": 0.1979883004921, "g": 0.1975473066391, "t": 0.3015094502008} --> Map<float>

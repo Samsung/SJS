@@ -1,0 +1,9 @@
+B.prototype (line 4) --> [MRO=[], MRW=[a]]
+B.prototype = {a: 1, f: function(x) {
+  this.a = x;
+}} (line 4) --> [MRO=[], MRW=[a]]
+new B() (line 5) --> [MRO=[], MRW=[a]]
+this (line 2) --> [MRO=[], MRW=[a]]
+{a: 1, f: function(x) {
+  this.a = x;
+}} (line 4) --> [MRO=[], MRW=[a]]

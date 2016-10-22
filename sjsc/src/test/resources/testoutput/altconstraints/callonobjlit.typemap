@@ -1,0 +1,20 @@
+3 --> integer
+f --> [{ a: integer |  }]() -> integer
+function f() {
+  return this.a;
+} --> [{ a: integer |  }]() -> integer
+printInt --> (integer) -> void
+printInt({a: 3, p: function f() {
+  return this.a;
+}}.p()) --> void
+this --> { a: integer |  }
+this.a --> integer
+{a: 3, p: function f() {
+  return this.a;
+}} --> {  | a: integer, p: []() -> integer }
+{a: 3, p: function f() {
+  return this.a;
+}}.p --> []() -> integer
+{a: 3, p: function f() {
+  return this.a;
+}}.p() --> integer

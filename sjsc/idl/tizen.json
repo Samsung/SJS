@@ -1,0 +1,847 @@
+/* 
+ * Copyright 2014-2016 Samsung Research America, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+[
+    {
+        "type": {
+            "typefamily": "object", 
+            "members": [
+                {
+                    "type": {
+                        "typefamily": "constructor", 
+                        "args": [], 
+                        "return": {
+                            "typename": "Control", 
+                            "typefamily": "object", 
+                            "members": [
+                                {
+                                    "type": {
+                                        "typefamily": "void"
+                                    }, 
+                                    "name": "_____cpp_receiver"
+                                }
+                            ]
+                        }
+                    }, 
+                    "name": "Control"
+                }, 
+                {
+                    "type": {
+                        "typefamily": "constructor", 
+                        "args": [
+                            {
+                                "type": {
+                                    "typefamily": "string"
+                                }, 
+                                "name": "x"
+                            }
+                        ], 
+                        "return": {
+                            "typename": "String", 
+                            "typefamily": "object", 
+                            "members": [
+                                {
+                                    "type": {
+                                        "typefamily": "void"
+                                    }, 
+                                    "name": "_____cpp_receiver"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "void"
+                                    }, 
+                                    "name": "_____gen_cpp_proxy"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [
+                                            {
+                                                "type": {
+                                                    "typefamily": "string"
+                                                }, 
+                                                "name": "x"
+                                            }, 
+                                            {
+                                                "type": {
+                                                    "typefamily": "int"
+                                                }, 
+                                                "name": "x"
+                                            }
+                                        ], 
+                                        "return": {
+                                            "typefamily": "int"
+                                        }
+                                    }, 
+                                    "name": "IndexOf"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [], 
+                                        "return": {
+                                            "typefamily": "void"
+                                        }
+                                    }, 
+                                    "name": "Clear"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [
+                                            {
+                                                "type": {
+                                                    "typefamily": "name", 
+                                                    "name": "String"
+                                                }, 
+                                                "name": "x"
+                                            }
+                                        ], 
+                                        "return": {
+                                            "typefamily": "bool"
+                                        }
+                                    }, 
+                                    "name": "Contains"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [
+                                            {
+                                                "type": {
+                                                    "typefamily": "int"
+                                                }, 
+                                                "name": "x"
+                                            }
+                                        ], 
+                                        "return": {
+                                            "typefamily": "name", 
+                                            "name": "String"
+                                        }
+                                    }, 
+                                    "name": "SubString"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [], 
+                                        "return": {
+                                            "typefamily": "bool"
+                                        }
+                                    }, 
+                                    "name": "IsEmpty"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [
+                                            {
+                                                "type": {
+                                                    "typefamily": "name", 
+                                                    "name": "String"
+                                                }, 
+                                                "name": "x"
+                                            }
+                                        ], 
+                                        "return": {
+                                            "typefamily": "int"
+                                        }
+                                    }, 
+                                    "name": "CompareTo"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [], 
+                                        "return": {
+                                            "typefamily": "string"
+                                        }
+                                    }, 
+                                    "name": "GetPointer"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [
+                                            {
+                                                "type": {
+                                                    "typefamily": "name", 
+                                                    "name": "String"
+                                                }, 
+                                                "name": "x"
+                                            }
+                                        ], 
+                                        "return": {
+                                            "typefamily": "int"
+                                        }
+                                    }, 
+                                    "name": "Append"
+                                }
+                            ]
+                        }
+                    }, 
+                    "name": "String"
+                }, 
+                {
+                    "type": {
+                        "typefamily": "constructor", 
+                        "args": [], 
+                        "return": {
+                            "typename": "Form", 
+                            "typefamily": "object", 
+                            "members": [
+                                {
+                                    "type": {
+                                        "typefamily": "void"
+                                    }, 
+                                    "name": "_____cpp_receiver"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "void"
+                                    }, 
+                                    "name": "_____gen_cpp_proxy"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [
+                                            {
+                                                "type": {
+                                                    "typefamily": "name", 
+                                                    "name": "String"
+                                                }, 
+                                                "name": "x"
+                                            }
+                                        ], 
+                                        "return": {
+                                            "typefamily": "name", 
+                                            "name": "Control"
+                                        }
+                                    }, 
+                                    "name": "GetControl"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [], 
+                                        "return": {
+                                            "typefamily": "void"
+                                        }
+                                    }, 
+                                    "name": "Draw"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [], 
+                                        "return": {
+                                            "typefamily": "int"
+                                        }
+                                    }, 
+                                    "name": "OnTerminating"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [], 
+                                        "return": {
+                                            "typefamily": "name", 
+                                            "name": "Header"
+                                        }
+                                    }, 
+                                    "name": "GetHeader"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [], 
+                                        "return": {
+                                            "typefamily": "int"
+                                        }
+                                    }, 
+                                    "name": "OnDraw"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [
+                                            {
+                                                "type": {
+                                                    "typefamily": "name", 
+                                                    "name": "IFormBackEventListener"
+                                                }, 
+                                                "name": "x"
+                                            }
+                                        ], 
+                                        "return": {
+                                            "typefamily": "void"
+                                        }
+                                    }, 
+                                    "name": "SetFormBackEventListener"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [
+                                            {
+                                                "type": {
+                                                    "typefamily": "name", 
+                                                    "name": "String"
+                                                }, 
+                                                "name": "x"
+                                            }
+                                        ], 
+                                        "return": {
+                                            "typefamily": "int"
+                                        }
+                                    }, 
+                                    "name": "Construct"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [], 
+                                        "return": {
+                                            "typefamily": "int"
+                                        }
+                                    }, 
+                                    "name": "OnInitializing"
+                                }
+                            ]
+                        }
+                    }, 
+                    "name": "Form"
+                }, 
+                {
+                    "type": {
+                        "typefamily": "constructor", 
+                        "args": [], 
+                        "return": {
+                            "typename": "Application", 
+                            "typefamily": "object", 
+                            "members": [
+                                {
+                                    "type": {
+                                        "typefamily": "void"
+                                    }, 
+                                    "name": "_____cpp_receiver"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "void"
+                                    }, 
+                                    "name": "_____gen_cpp_proxy"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [
+                                            {
+                                                "type": {
+                                                    "typefamily": "name", 
+                                                    "name": "AppRegistry"
+                                                }, 
+                                                "name": "x"
+                                            }, 
+                                            {
+                                                "type": {
+                                                    "typefamily": "bool"
+                                                }, 
+                                                "name": "x"
+                                            }
+                                        ], 
+                                        "return": {
+                                            "typefamily": "bool"
+                                        }
+                                    }, 
+                                    "name": "OnAppTerminating"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [
+                                            {
+                                                "type": {
+                                                    "typefamily": "name", 
+                                                    "name": "Frame"
+                                                }, 
+                                                "name": "x"
+                                            }
+                                        ], 
+                                        "return": {
+                                            "typefamily": "int"
+                                        }
+                                    }, 
+                                    "name": "AddFrame"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [
+                                            {
+                                                "type": {
+                                                    "typefamily": "name", 
+                                                    "name": "AppRegistry"
+                                                }, 
+                                                "name": "x"
+                                            }
+                                        ], 
+                                        "return": {
+                                            "typefamily": "bool"
+                                        }
+                                    }, 
+                                    "name": "OnAppInitializing"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [], 
+                                        "return": {
+                                            "typefamily": "void"
+                                        }
+                                    }, 
+                                    "name": "Terminate"
+                                }
+                            ]
+                        }
+                    }, 
+                    "name": "Application"
+                }, 
+                {
+                    "type": {
+                        "typefamily": "constructor", 
+                        "args": [], 
+                        "return": {
+                            "typename": "Button", 
+                            "typefamily": "object", 
+                            "members": [
+                                {
+                                    "type": {
+                                        "typefamily": "void"
+                                    }, 
+                                    "name": "_____cpp_receiver"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [
+                                            {
+                                                "type": {
+                                                    "typefamily": "name", 
+                                                    "name": "String"
+                                                }, 
+                                                "name": "x"
+                                            }
+                                        ], 
+                                        "return": {
+                                            "typefamily": "void"
+                                        }
+                                    }, 
+                                    "name": "SetText"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [
+                                            {
+                                                "type": {
+                                                    "typefamily": "int"
+                                                }, 
+                                                "name": "x"
+                                            }
+                                        ], 
+                                        "return": {
+                                            "typefamily": "void"
+                                        }
+                                    }, 
+                                    "name": "SetActionId"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [
+                                            {
+                                                "type": {
+                                                    "typefamily": "name", 
+                                                    "name": "IActionEventListener"
+                                                }, 
+                                                "name": "x"
+                                            }
+                                        ], 
+                                        "return": {
+                                            "typefamily": "void"
+                                        }
+                                    }, 
+                                    "name": "AddActionEventListener"
+                                }
+                            ]
+                        }
+                    }, 
+                    "name": "Button"
+                }, 
+                {
+                    "type": {
+                        "typefamily": "constructor", 
+                        "args": [], 
+                        "return": {
+                            "typename": "IFormBackEventListener", 
+                            "typefamily": "object", 
+                            "members": [
+                                {
+                                    "type": {
+                                        "typefamily": "void"
+                                    }, 
+                                    "name": "_____cpp_receiver"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "void"
+                                    }, 
+                                    "name": "_____gen_cpp_proxy"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [
+                                            {
+                                                "type": {
+                                                    "typefamily": "name", 
+                                                    "name": "Form"
+                                                }, 
+                                                "name": "x"
+                                            }
+                                        ], 
+                                        "return": {
+                                            "typefamily": "void"
+                                        }
+                                    }, 
+                                    "name": "OnFormBackRequested"
+                                }
+                            ]
+                        }
+                    }, 
+                    "name": "IFormBackEventListener"
+                }, 
+                {
+                    "type": {
+                        "typefamily": "constructor", 
+                        "args": [], 
+                        "return": {
+                            "typename": "IActionEventListener", 
+                            "typefamily": "object", 
+                            "members": [
+                                {
+                                    "type": {
+                                        "typefamily": "void"
+                                    }, 
+                                    "name": "_____cpp_receiver"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "void"
+                                    }, 
+                                    "name": "_____gen_cpp_proxy"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [
+                                            {
+                                                "type": {
+                                                    "typefamily": "name", 
+                                                    "name": "Control"
+                                                }, 
+                                                "name": "x"
+                                            }, 
+                                            {
+                                                "type": {
+                                                    "typefamily": "int"
+                                                }, 
+                                                "name": "x"
+                                            }
+                                        ], 
+                                        "return": {
+                                            "typefamily": "void"
+                                        }
+                                    }, 
+                                    "name": "OnActionPerformed"
+                                }
+                            ]
+                        }
+                    }, 
+                    "name": "IActionEventListener"
+                }, 
+                {
+                    "type": {
+                        "typefamily": "constructor", 
+                        "args": [], 
+                        "return": {
+                            "typename": "AppRegistry", 
+                            "typefamily": "object", 
+                            "members": [
+                                {
+                                    "type": {
+                                        "typefamily": "void"
+                                    }, 
+                                    "name": "_____cpp_receiver"
+                                }
+                            ]
+                        }
+                    }, 
+                    "name": "AppRegistry"
+                }, 
+                {
+                    "type": {
+                        "typefamily": "constructor", 
+                        "args": [], 
+                        "return": {
+                            "typename": "Header", 
+                            "typefamily": "object", 
+                            "members": [
+                                {
+                                    "type": {
+                                        "typefamily": "void"
+                                    }, 
+                                    "name": "_____cpp_receiver"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [
+                                            {
+                                                "type": {
+                                                    "typefamily": "name", 
+                                                    "name": "String"
+                                                }, 
+                                                "name": "x"
+                                            }
+                                        ], 
+                                        "return": {
+                                            "typefamily": "int"
+                                        }
+                                    }, 
+                                    "name": "SetTitleText"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [
+                                            {
+                                                "type": {
+                                                    "typefamily": "int"
+                                                }, 
+                                                "name": "x"
+                                            }
+                                        ], 
+                                        "return": {
+                                            "typefamily": "int"
+                                        }
+                                    }, 
+                                    "name": "SetStyle"
+                                }
+                            ]
+                        }
+                    }, 
+                    "name": "Header"
+                }, 
+                {
+                    "type": {
+                        "typefamily": "constructor", 
+                        "args": [], 
+                        "return": {
+                            "typename": "Label", 
+                            "typefamily": "object", 
+                            "members": [
+                                {
+                                    "type": {
+                                        "typefamily": "void"
+                                    }, 
+                                    "name": "_____cpp_receiver"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [
+                                            {
+                                                "type": {
+                                                    "typefamily": "int"
+                                                }, 
+                                                "name": "x"
+                                            }
+                                        ], 
+                                        "return": {
+                                            "typefamily": "void"
+                                        }
+                                    }, 
+                                    "name": "SetTextHorizontalAlignment"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [
+                                            {
+                                                "type": {
+                                                    "typefamily": "name", 
+                                                    "name": "String"
+                                                }, 
+                                                "name": "x"
+                                            }
+                                        ], 
+                                        "return": {
+                                            "typefamily": "void"
+                                        }
+                                    }, 
+                                    "name": "SetText"
+                                }
+                            ]
+                        }
+                    }, 
+                    "name": "Label"
+                }, 
+                {
+                    "type": {
+                        "typefamily": "constructor", 
+                        "args": [], 
+                        "return": {
+                            "typename": "Frame", 
+                            "typefamily": "object", 
+                            "members": [
+                                {
+                                    "type": {
+                                        "typefamily": "void"
+                                    }, 
+                                    "name": "_____cpp_receiver"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [
+                                            {
+                                                "type": {
+                                                    "typefamily": "name", 
+                                                    "name": "Form"
+                                                }, 
+                                                "name": "x"
+                                            }
+                                        ], 
+                                        "return": {
+                                            "typefamily": "int"
+                                        }
+                                    }, 
+                                    "name": "SetCurrentForm"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [
+                                            {
+                                                "type": {
+                                                    "typefamily": "name", 
+                                                    "name": "Form"
+                                                }, 
+                                                "name": "x"
+                                            }
+                                        ], 
+                                        "return": {
+                                            "typefamily": "int"
+                                        }
+                                    }, 
+                                    "name": "AddControl"
+                                }, 
+                                {
+                                    "type": {
+                                        "typefamily": "method", 
+                                        "args": [], 
+                                        "return": {
+                                            "typefamily": "int"
+                                        }
+                                    }, 
+                                    "name": "Construct"
+                                }
+                            ]
+                        }
+                    }, 
+                    "name": "Frame"
+                }, 
+                {
+                    "type": {
+                        "typefamily": "object", 
+                        "members": [
+                            {
+                                "type": {
+                                    "typefamily": "function", 
+                                    "args": [
+                                        {
+                                            "type": {
+                                                "typefamily": "name", 
+                                                "name": "Control"
+                                            }, 
+                                            "name": "x"
+                                        }
+                                    ], 
+                                    "return": {
+                                        "typefamily": "name", 
+                                        "name": "Button"
+                                    }
+                                }, 
+                                "name": "Button_of_Control"
+                            }, 
+                            {
+                                "type": {
+                                    "typefamily": "function", 
+                                    "args": [
+                                        {
+                                            "type": {
+                                                "typefamily": "name", 
+                                                "name": "Control"
+                                            }, 
+                                            "name": "x"
+                                        }
+                                    ], 
+                                    "return": {
+                                        "typefamily": "name", 
+                                        "name": "Label"
+                                    }
+                                }, 
+                                "name": "Label_of_Control"
+                            }
+                        ]
+                    }, 
+                    "name": "casts"
+                }
+            ]
+        }, 
+        "name": "TizenLib"
+    }, 
+    {
+        "type": {
+            "typefamily": "function", 
+            "args": [
+                {
+                    "type": {
+                        "typefamily": "name", 
+                        "name": "Application"
+                    }, 
+                    "name": "asdf"
+                }
+            ], 
+            "return": {
+                "typefamily": "void"
+            }
+        }, 
+        "name": "__platform_return"
+    }
+]

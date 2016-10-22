@@ -1,0 +1,27 @@
+17 --> integer
+a --> (___) -> ___
+b --> (___,___) -> integer
+bar --> (___,___) -> integer
+bar --> (___,___) -> integer
+baz --> (___,___) -> void
+baz --> (___,___) -> void
+c --> (___,___) -> void
+foo --> (___) -> ___
+foo --> (___) -> ___
+function bar(v, w) {
+  return 17;
+}
+ --> (___,___) -> integer
+function baz(y, z) {
+}
+ --> (___,___) -> void
+function foo(x) {
+  return x;
+}
+ --> (___) -> ___
+v --> ___
+w --> ___
+x --> ___
+x --> ___
+y --> ___
+z --> ___

@@ -1,0 +1,19 @@
+3 --> integer
+Array --> () -> Array<boolean> INTERSECT (integer) -> Array<boolean> INTERSECT (boolean,boolean) -> Array<boolean>
+false --> boolean
+foo --> (() -> Array<boolean> INTERSECT (integer) -> Array<boolean> INTERSECT (boolean,boolean) -> Array<boolean>) -> void
+foo --> (() -> Array<boolean> INTERSECT (integer) -> Array<boolean> INTERSECT (boolean,boolean) -> Array<boolean>) -> void
+foo(Array) --> void
+function foo(p) {
+  var x = p(3);
+  var y = p(false, true);
+}
+ --> (() -> Array<boolean> INTERSECT (integer) -> Array<boolean> INTERSECT (boolean,boolean) -> Array<boolean>) -> void
+p --> () -> Array<boolean> INTERSECT (integer) -> Array<boolean> INTERSECT (boolean,boolean) -> Array<boolean>
+p --> () -> Array<boolean> INTERSECT (integer) -> Array<boolean> INTERSECT (boolean,boolean) -> Array<boolean>
+p --> () -> Array<boolean> INTERSECT (integer) -> Array<boolean> INTERSECT (boolean,boolean) -> Array<boolean>
+p(3) --> Array<boolean>
+p(false, true) --> Array<boolean>
+true --> boolean
+x --> Array<boolean>
+y --> Array<boolean>

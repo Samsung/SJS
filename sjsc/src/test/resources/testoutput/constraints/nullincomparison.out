@@ -1,0 +1,19 @@
+MakeConcreteConstraint [term=|"foo"|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|{}|]
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(|[]|)
+TP([])=param(prop(|[]|,push),0)
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,shift))
+|"foo"|<:|s|
+|"foo"|=string
+|[]|<:|a|
+|a === null|=op(|a|===|null|)
+|a|=|a|
+|s !== null|=op(|s|!==|null|)
+|s|=|s|
+|x == null|=op(|x|==|null|)
+|x|=|x|
+|{}|<:|x|

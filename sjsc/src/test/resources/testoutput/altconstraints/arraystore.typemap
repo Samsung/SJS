@@ -1,0 +1,10 @@
+"a" --> string
+"b" --> string
+"c" --> string
+"d" --> string
+6 --> integer
+["a", "b", "c"] --> Array<string>
+x --> Array<string>
+x --> Array<string>
+x[6] --> string
+x[6] = "d" --> string

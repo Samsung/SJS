@@ -1,0 +1,6 @@
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|2|]
+|1|<:|x|
+|1|=integer
+|2|<:|y|
+|2|=integer

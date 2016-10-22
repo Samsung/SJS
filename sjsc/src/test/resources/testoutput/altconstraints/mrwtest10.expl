@@ -1,0 +1,7 @@
+|{g: function() {
+  return this.a;
+}}| is missing some MRO/MRW property, and hence cannot appear here
+line 5
+type {  | g: []() -> ___ }
+[MRO=[a], MRW=[]]
+missing MRO: [a]

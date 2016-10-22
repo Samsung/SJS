@@ -1,0 +1,77 @@
+CheckArity(ret(|Node|))
+CheckArity(ret(|console.log|))
+CheckArity(ret(|string_of_int|))
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|i|]
+MakeConcreteConstraint [term=|new Node(i, x)|]
+MakeConcreteConstraint [term=|null|]
+MakeConcreteConstraint [term=|nxt|]
+MakeConcreteConstraint [term=|string_of_int(x.val)|]
+MakeConcreteConstraint [term=|v|]
+MakeConcreteConstraint [term=|x.next|]
+MakeConcreteConstraint [term=|x.val|]
+MakeConcreteConstraint [term=|x|]
+param(|constructor Node|,0)=|v|
+param(|constructor Node|,1)=|nxt|
+prototype(|constructor Node|)=__proto__(ret(|constructor Node|))
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|=integer
+|0|=integer
+|0|=integer
+|10|=integer
+|10|=integer
+|Node|<:ctor<0>[X3](X0,X1) -> X2
+|Node|=|Node|
+|console.log(string_of_int(x.val))|=ret(|console.log|)
+|console.log|=prop(|console|,log)
+|console|=|console|
+|constructor Node|<:|Node|
+|i < 10|=op(|i|<|10|)
+|i < 10|=op(|i|<|10|)
+|i = 0|=|i|
+|i = 0|=|i|
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i|<:param(|Node|,0)
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|new Node(i, x)|<:|x|
+|new Node(i, x)|=ret(|Node|)
+|null|=|x|
+|nxt|<:prop(|this|,next)
+|nxt|=|nxt|
+|string_of_int(x.val)|<:param(|console.log|,0)
+|string_of_int(x.val)|=ret(|string_of_int|)
+|string_of_int|=|string_of_int|
+|this.next = nxt|=prop(|this|,next)
+|this.next|=prop(|this|,next)
+|this.val = v|=prop(|this|,val)
+|this.val|=prop(|this|,val)
+|this|=ret(|constructor Node|)
+|this|=ret(|constructor Node|)
+|this|=|this|
+|this|=|this|
+|v|<:prop(|this|,val)
+|v|=|v|
+|x = new Node(i, x)|=|x|
+|x = x.next|=|x|
+|x.next|<:|x|
+|x.next|=prop(|x|,next)
+|x.val|<:param(|string_of_int|,0)
+|x.val|=prop(|x|,val)
+|x|<:param(|Node|,1)
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|

@@ -1,0 +1,27 @@
+"foo" --> string
+1 --> integer
+2 --> integer
+3 --> integer
+5 --> integer
+6.6 --> float
+7 --> integer
+8 --> integer
+9 --> integer
+Array --> () -> Array<float> INTERSECT (integer) -> Array<float> INTERSECT (float,float) -> Array<float>
+Array --> () -> Array<integer> INTERSECT (integer) -> Array<integer> INTERSECT (integer,integer) -> Array<integer>
+Array --> () -> Array<string> INTERSECT (integer) -> Array<string> INTERSECT (string,string) -> Array<string>
+Array(7) --> Array<float>
+Array(8) --> Array<integer>
+Array(9) --> Array<string>
+x --> Array<integer>
+x --> Array<integer>
+x[1] --> integer
+x[1] = 5 --> integer
+y --> Array<float>
+y --> Array<float>
+y[2] --> float
+y[2] = 6.6 --> float
+z --> Array<string>
+z --> Array<string>
+z[3] --> string
+z[3] = "foo" --> string

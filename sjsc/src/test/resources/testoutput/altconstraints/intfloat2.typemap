@@ -1,0 +1,8 @@
+1 --> integer
+printFloat --> (float) -> void
+printFloat(x) --> void
+printInt --> (integer) -> void
+printInt(x) --> void
+x --> integer
+x --> integer
+x --> integer

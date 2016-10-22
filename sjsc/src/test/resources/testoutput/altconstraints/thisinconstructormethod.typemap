@@ -1,0 +1,44 @@
+0 --> integer
+4.4 --> float
+Body --> ctor<0>[null](float) -> {  | x: float }
+Body --> ctor<0>[null](float) -> {  | x: float }
+NBodySystem --> ctor<0>[null](Array<{  | x: float }>) -> {  | bodies: Array<{  | x: float }>, advance: [](___) -> void }
+NBodySystem --> ctor<0>[null](Array<{  | x: float }>) -> {  | bodies: Array<{  | x: float }>, advance: [](___) -> void }
+[new Body(4.4)] --> Array<{  | x: float }>
+bodies2 --> {  | bodies: Array<{  | x: float }>, advance: [](___) -> void }
+bodies3 --> Array<{  | x: float }>
+bodies3 --> Array<{  | x: float }>
+bodyi --> {  | x: float }
+dt --> ___
+function Body(x) {
+  this.x = x;
+}
+ --> ctor<0>[null](float) -> {  | x: float }
+function NBodySystem(bodies3) {
+  this.bodies = bodies3;
+  this.advance = function(dt) {
+  var bodyi = this.bodies[0];
+};
+}
+ --> ctor<0>[null](Array<{  | x: float }>) -> {  | bodies: Array<{  | x: float }>, advance: [](___) -> void }
+function(dt) {
+  var bodyi = this.bodies[0];
+} --> [{ bodies: Array<{  | x: float }> |  }](___) -> void
+new Body(4.4) --> {  | x: float }
+new NBodySystem([new Body(4.4)]) --> {  | bodies: Array<{  | x: float }>, advance: [](___) -> void }
+this --> {  | bodies: Array<{  | x: float }>, advance: [](___) -> void }
+this --> {  | bodies: Array<{  | x: float }>, advance: [](___) -> void }
+this --> {  | x: float }
+this --> { bodies: Array<{  | x: float }> |  }
+this.advance --> [](___) -> void
+this.advance = function(dt) {
+  var bodyi = this.bodies[0];
+} --> [](___) -> void
+this.bodies --> Array<{  | x: float }>
+this.bodies --> Array<{  | x: float }>
+this.bodies = bodies3 --> Array<{  | x: float }>
+this.bodies[0] --> {  | x: float }
+this.x --> float
+this.x = x --> float
+x --> float
+x --> float

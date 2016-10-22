@@ -1,0 +1,126 @@
+CheckArity(ret(|Array|))
+CheckArity(ret(|Array|))
+Elem(|m[1]|)=|m[1][2]|
+Elem(|m|)=|m[0]|
+Elem(|m|)=|m[1]|
+MakeConcreteConstraint [term=|3|]
+MakeConcreteConstraint [term=|4|]
+MakeConcreteConstraint [term=|5|]
+MakeConcreteConstraint [term=|new Array(3)|]
+MakeConcreteConstraint [term=|new Array(4)|]
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,1)
+TP(Array)=param(|Array|,1)
+TP(Array)=param(|Array|,1)
+TP(Array)=param(|Array|,1)
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+|0|=Key(|m|)
+|0|=integer
+|1|=Key(|m|)
+|1|=integer
+|2|=Key(|m[1]|)
+|2|=integer
+|3|<:param(|Array|,0)
+|3|=integer
+|4|<:param(|Array|,0)
+|4|=integer
+|5|<:|m[1][2]|
+|5|=integer
+|Array|<:ctor<0>[X2](X0) -> X1
+|Array|<:ctor<0>[X5](X3) -> X4
+|Array|=|Array|
+|Array|=|Array|
+|m[0] = new Array(4)|=|m[0]|
+|m[1][2] = 5|=|m[1][2]|
+|m|=|m|
+|m|=|m|
+|new Array(3)|<:|m|
+|new Array(3)|=ret(|Array|)
+|new Array(4)|<:|m[0]|
+|new Array(4)|=ret(|Array|)

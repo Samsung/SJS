@@ -1,0 +1,11 @@
+0 --> integer
+0 --> integer
+3 --> integer
+[3] --> Array<integer>
+printInt --> (integer) -> void
+printInt(q[0]) --> void
+q --> Array<integer>
+q --> Array<integer>
+q[0] --> integer
+void 0 --> Array<integer>
+void 0 || [3] --> Array<integer>

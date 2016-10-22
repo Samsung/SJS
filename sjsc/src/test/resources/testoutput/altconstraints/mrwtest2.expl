@@ -1,0 +1,5 @@
+|new B()| is missing some MRO/MRW property, and hence cannot appear here
+line 5
+type { a: integer, f: [](integer) -> void | b: integer }
+[MRO=[], MRW=[a]]
+missing MRW: [a]

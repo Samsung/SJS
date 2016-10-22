@@ -1,0 +1,26 @@
+MakeConcreteConstraint [term=op(+|x|)]
+MakeConcreteConstraint [term=op(-|x|)]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|x + x|]
+MakeConcreteConstraint [term=|z + z + -z|]
+op(+|x|)<:|y|
+op(-|x|)<:|y|
+|+x|=op(+|x|)
+|-x|=op(-|x|)
+|-z|=op(-|z|)
+|1|<:|x|
+|1|=integer
+|x + x|<:|z|
+|x + x|=op(|x|+|x|)
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|y = -x|=|y|
+|y|=|y|
+|z + z + -z|<:|zz|
+|z + z + -z|=op(|z + z|+op(-|z|))
+|z + z|=op(|z|+|z|)
+|z|=|z|
+|z|=|z|
+|z|=|z|

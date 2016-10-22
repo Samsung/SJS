@@ -1,0 +1,37 @@
+CheckArity(ret(|bar|))
+CheckArity(ret(|foo|))
+MakeConcreteConstraint [term=|17|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|3.3|]
+MakeConcreteConstraint [term=|false|]
+MakeConcreteConstraint [term=|x|]
+MakeConcreteConstraint [term=|x|]
+param(|function bar|,0)=|w|
+param(|function foo|,0)=|v|
+ret(|function zap|)=void
+|17|<:param(|foo|,0)
+|17|=integer
+|18|<:ret(|function zip|)
+|18|=integer
+|1|<:|x|
+|1|=integer
+|3.3|<:param(|bar|,0)
+|3.3|=float
+|bar(3.3)|=ret(|bar|)
+|bar|=|bar|
+|false|<:|x|
+|false|=boolean
+|foo(17)|=ret(|foo|)
+|foo|=|foo|
+|function bar|<:|bar|
+|function foo|<:|foo|
+|function zap|<:|zap|
+|function zip|<:|zip|
+|v|<:ret(|function foo|)
+|v|=|v|
+|w|<:ret(|function bar|)
+|w|=|w|
+|x|<:|y|
+|x|<:|z|
+|x|=|x|
+|x|=|x|

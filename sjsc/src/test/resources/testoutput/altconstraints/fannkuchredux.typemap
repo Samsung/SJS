@@ -1,0 +1,333 @@
+") = " --> string
+"Pfannkuchen(" --> string
+"\n" --> string
+-1 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+17 --> integer
+2 --> integer
+2 --> integer
+2 --> integer
+3 --> integer
+Array --> () -> Array<integer> INTERSECT (integer) -> Array<integer> INTERSECT (integer,integer) -> Array<integer>
+Array --> () -> Array<integer> INTERSECT (integer) -> Array<integer> INTERSECT (integer,integer) -> Array<integer>
+Array --> () -> Array<integer> INTERSECT (integer) -> Array<integer> INTERSECT (integer,integer) -> Array<integer>
+Array --> () -> Array<integer> INTERSECT (integer) -> Array<integer> INTERSECT (integer,integer) -> Array<integer>
+Array(n) --> Array<integer>
+Array(n) --> Array<integer>
+Array(n) --> Array<integer>
+Array(sum, maxflips) --> Array<integer>
+fannkuch --> (integer) -> Array<integer>
+fannkuch --> (integer) -> Array<integer>
+fannkuch(n) --> Array<integer>
+flips --> integer
+flips --> integer
+flips --> integer
+flips --> integer
+flips --> integer
+flips > maxflips --> boolean
+flips++ --> integer
+function fannkuch(n) {
+  var p = Array(n), q = Array(n), s = Array(n);
+  var sign = 1, maxflips = 0, sum = 0, m = n - 1;
+  for (var i = 0; i < n; i++) 
+    {
+      p[i] = i;
+      q[i] = i;
+      s[i] = i;
+    }
+  do {
+    var q0 = p[0];
+    if (q0 != 0) 
+    {
+      for (var i = 1; i < n; i++) 
+        q[i] = p[i];
+      var flips = 1;
+      do {
+        var qq = q[q0];
+        if (qq == 0) 
+        {
+          sum += sign * flips;
+          if (flips > maxflips) 
+          maxflips = flips;
+          break;
+        }
+        q[q0] = q0;
+        if (q0 >= 3) 
+        {
+          var i = 1, j = q0 - 1, t;
+          do {
+            t = q[i];
+            q[i] = q[j];
+            q[j] = t;
+            i++;
+            j--;
+          } while (i < j);
+        }
+        q0 = qq;
+        flips++;
+      } while (true);
+    }
+    if (sign == 1) 
+    {
+      var t = p[1];
+      p[1] = p[0];
+      p[0] = t;
+      sign = -1;
+    } else {
+      var t = p[1];
+      p[1] = p[2];
+      p[2] = t;
+      sign = 1;
+      for (var i = 2; i < n; i++) 
+        {
+          var sx = s[i];
+          if (sx != 0) 
+          {
+            s[i] = sx - 1;
+            break;
+          }
+          if (i == m) 
+          return Array(sum, maxflips);
+          s[i] = i;
+          t = p[0];
+          for (var j = 0; j <= i; j++) 
+            {
+              p[j] = p[j + 1];
+            }
+          p[i + 1] = t;
+        }
+    }
+  } while (true);
+}
+ --> (integer) -> Array<integer>
+i + 1 --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i < j --> boolean
+i < n --> boolean
+i < n --> boolean
+i < n --> boolean
+i == m --> boolean
+i++ --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+j + 1 --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j <= i --> boolean
+j++ --> integer
+j-- --> integer
+m --> integer
+m --> integer
+maxflips --> integer
+maxflips --> integer
+maxflips --> integer
+maxflips --> integer
+maxflips = flips --> integer
+n - 1 --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+p --> Array<integer>
+p --> Array<integer>
+p --> Array<integer>
+p --> Array<integer>
+p --> Array<integer>
+p --> Array<integer>
+p --> Array<integer>
+p --> Array<integer>
+p --> Array<integer>
+p --> Array<integer>
+p --> Array<integer>
+p --> Array<integer>
+p --> Array<integer>
+p --> Array<integer>
+p --> Array<integer>
+p --> Array<integer>
+p[0] --> integer
+p[0] --> integer
+p[0] --> integer
+p[0] --> integer
+p[0] = t --> integer
+p[1] --> integer
+p[1] --> integer
+p[1] --> integer
+p[1] --> integer
+p[1] = p[0] --> integer
+p[1] = p[2] --> integer
+p[2] --> integer
+p[2] --> integer
+p[2] = t --> integer
+p[i + 1] --> integer
+p[i + 1] = t --> integer
+p[i] --> integer
+p[i] --> integer
+p[i] = i --> integer
+p[j + 1] --> integer
+p[j] --> integer
+p[j] = p[j + 1] --> integer
+pf --> Array<integer>
+pf --> Array<integer>
+pf --> Array<integer>
+pf[0] + "\n" + "Pfannkuchen(" + n + ") = " + pf[1] --> string
+pf[0] + "\n" + "Pfannkuchen(" + n + ") = " --> string
+pf[0] + "\n" + "Pfannkuchen(" + n --> string
+pf[0] + "\n" + "Pfannkuchen(" --> string
+pf[0] + "\n" --> string
+pf[0] --> integer
+pf[1] --> integer
+printString --> (string) -> void
+printString(pf[0] + "\n" + "Pfannkuchen(" + n + ") = " + pf[1]) --> void
+q --> Array<integer>
+q --> Array<integer>
+q --> Array<integer>
+q --> Array<integer>
+q --> Array<integer>
+q --> Array<integer>
+q --> Array<integer>
+q --> Array<integer>
+q --> Array<integer>
+q0 != 0 --> boolean
+q0 - 1 --> integer
+q0 --> integer
+q0 --> integer
+q0 --> integer
+q0 --> integer
+q0 --> integer
+q0 --> integer
+q0 --> integer
+q0 --> integer
+q0 = qq --> integer
+q0 >= 3 --> boolean
+q[i] --> integer
+q[i] --> integer
+q[i] --> integer
+q[i] --> integer
+q[i] = i --> integer
+q[i] = p[i] --> integer
+q[i] = q[j] --> integer
+q[j] --> integer
+q[j] --> integer
+q[j] = t --> integer
+q[q0] --> integer
+q[q0] --> integer
+q[q0] = q0 --> integer
+qq --> integer
+qq --> integer
+qq --> integer
+qq == 0 --> boolean
+s --> Array<integer>
+s --> Array<integer>
+s --> Array<integer>
+s --> Array<integer>
+s --> Array<integer>
+s[i] --> integer
+s[i] --> integer
+s[i] --> integer
+s[i] --> integer
+s[i] = i --> integer
+s[i] = i --> integer
+s[i] = sx - 1 --> integer
+sign * flips --> integer
+sign --> integer
+sign --> integer
+sign --> integer
+sign --> integer
+sign --> integer
+sign = -1 --> integer
+sign = 1 --> integer
+sign == 1 --> boolean
+sum += sign * flips --> integer
+sum --> integer
+sum --> integer
+sum --> integer
+sx != 0 --> boolean
+sx - 1 --> integer
+sx --> integer
+sx --> integer
+sx --> integer
+t --> integer
+t --> integer
+t --> integer
+t --> integer
+t --> integer
+t --> integer
+t --> integer
+t --> integer
+t --> integer
+t = p[0] --> integer
+t = q[i] --> integer
+true --> boolean
+true --> boolean

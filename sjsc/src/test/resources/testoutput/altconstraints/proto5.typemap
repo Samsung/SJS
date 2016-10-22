@@ -1,0 +1,23 @@
+"hello" --> string
+C --> ctor<0>[{  | get_str: () -> string }]() -> { get_str: () -> string |  }
+C --> ctor<0>[{  | get_str: () -> string }]() -> { get_str: () -> string |  }
+C --> ctor<0>[{  | get_str: () -> string }]() -> { get_str: () -> string |  }
+C.prototype --> {  | get_str: () -> string }
+C.prototype.get_str --> () -> string
+C.prototype.get_str = function() {
+  return "hello";
+} --> () -> string
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log(myC.get_str()) --> void
+function C() {
+}
+ --> ctor<0>[{  | get_str: () -> string }]() -> { get_str: () -> string |  }
+function() {
+  return "hello";
+} --> () -> string
+myC --> { get_str: () -> string |  }
+myC --> { get_str: () -> string |  }
+myC.get_str --> () -> string
+myC.get_str() --> string
+new C() --> { get_str: () -> string |  }

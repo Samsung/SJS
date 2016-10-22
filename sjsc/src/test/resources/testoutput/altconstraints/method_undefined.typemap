@@ -1,0 +1,79 @@
+"C" --> string
+"C1" --> string
+"salaried" --> string
+C --> ctor<0>[{  | who: []() -> void }]() -> { who: []() -> void | name: string }
+C --> ctor<0>[{  | who: []() -> void }]() -> { who: []() -> void | name: string }
+C --> ctor<0>[{  | who: []() -> void }]() -> { who: []() -> void | name: string }
+C.prototype --> {  | who: []() -> void }
+C.prototype --> {  | who: []() -> void }
+C.prototype.who --> []() -> void
+C.prototype.who = function() {
+  console.log(this.name);
+} --> []() -> void
+C1 --> ctor<0>[{ who: []() -> void | what: []() -> void }]() -> { what: []() -> void, who: []() -> void | name: string, job: string }
+C1 --> ctor<0>[{ who: []() -> void | what: []() -> void }]() -> { what: []() -> void, who: []() -> void | name: string, job: string }
+C1 --> ctor<0>[{ who: []() -> void | what: []() -> void }]() -> { what: []() -> void, who: []() -> void | name: string, job: string }
+C1 --> ctor<0>[{ who: []() -> void | what: []() -> void }]() -> { what: []() -> void, who: []() -> void | name: string, job: string }
+C1.prototype --> { who: []() -> void | what: []() -> void }
+C1.prototype --> { who: []() -> void | what: []() -> void }
+C1.prototype = new C1Inheritor() --> { who: []() -> void | what: []() -> void }
+C1.prototype.what --> []() -> void
+C1.prototype.what = function() {
+  console.log(this.job);
+} --> []() -> void
+C1Inheritor --> ctor<0>[{  | who: []() -> void }]() -> { who: []() -> void | what: []() -> void }
+C1Inheritor --> ctor<0>[{  | who: []() -> void }]() -> { who: []() -> void | what: []() -> void }
+C1Inheritor --> ctor<0>[{  | who: []() -> void }]() -> { who: []() -> void | what: []() -> void }
+C1Inheritor.prototype --> {  | who: []() -> void }
+C1Inheritor.prototype = C.prototype --> {  | who: []() -> void }
+c1 --> { what: []() -> void, who: []() -> void | name: string, job: string }
+c1 --> { what: []() -> void, who: []() -> void | name: string, job: string }
+c1 --> { what: []() -> void, who: []() -> void | name: string, job: string }
+c1.what --> []() -> void
+c1.what() --> void
+c1.who --> []() -> void
+c1.who() --> void
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log(this.job) --> void
+console.log(this.name) --> void
+function C() {
+  this.name = "C";
+}
+ --> ctor<0>[{  | who: []() -> void }]() -> { who: []() -> void | name: string }
+function C1() {
+  this.name = "C1";
+  this.job = "salaried";
+}
+ --> ctor<0>[{ who: []() -> void | what: []() -> void }]() -> { what: []() -> void, who: []() -> void | name: string, job: string }
+function C1Inheritor() {
+  this.what = undefined;
+}
+ --> ctor<0>[{  | who: []() -> void }]() -> { who: []() -> void | what: []() -> void }
+function() {
+  console.log(this.job);
+} --> [{ job: string |  }]() -> void
+function() {
+  console.log(this.name);
+} --> [{ name: string |  }]() -> void
+new C1() --> { what: []() -> void, who: []() -> void | name: string, job: string }
+new C1Inheritor() --> { who: []() -> void | what: []() -> void }
+this --> { job: string |  }
+this --> { name: string |  }
+this --> { what: []() -> void, who: []() -> void | name: string, job: string }
+this --> { what: []() -> void, who: []() -> void | name: string, job: string }
+this --> { who: []() -> void | name: string }
+this --> { who: []() -> void | what: []() -> void }
+this.job --> string
+this.job --> string
+this.job = "salaried" --> string
+this.name --> string
+this.name --> string
+this.name --> string
+this.name = "C" --> string
+this.name = "C1" --> string
+this.what --> []() -> void
+this.what = undefined --> []() -> void
+undefined --> []() -> void

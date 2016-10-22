@@ -1,0 +1,193 @@
+//
+// grammar:
+//
+//  decl ::=
+//  (interface | class) ident {
+//      (modifier* ident : methty;)*
+//  }
+//
+//  methty ::= [](arg*)->ty
+//  arg ::= name[&] | primty
+//  primty ::= int | bool | void | double
+//  ty ::= primty | name
+//
+///
+
+//interface IActionEventListener {
+//    // virtual indicates we should generate code in the C++-wrapping-SJS case
+//    // pure indicates the above code should fail (terminate with error) if the SJS object the
+//    // generated C++ wrapper proxies has no such member.  Without this, it will check the SJS object
+//    // for the member, calling that if present and otherwise calling the supertype's method.
+//    pure virtual onActionPerformed : [](Control&, int)->void;
+//}
+
+#include <FBase.h>
+#include <FUi.h>
+#include <FAppAppRegistry.h>
+#include <FAppApplication.h>
+using namespace Tizen::Base;
+using namespace Tizen::App;
+using namespace Tizen::Ui;
+using namespace Tizen::Ui::Controls;
+
+// class implies a 0-arg constructor (unless we need support for other constructor arities)
+//class Button {
+//    virtual SetActionId : [](int)->void;
+//    virtual AddActionEventListener : [](IActionEventListener&)->void;
+//    Construct : [](enum, String&)->void;
+//    virtual SetActionId : [](int)->void;
+//}
+
+class String {
+    deriving Wrappable;
+
+    // Constructors:
+    // For now, just one
+    ^^constructor : [](string) -> String;
+
+    // Skipping Compare: static aside, it looks at (likely) private members of String, so an
+    // SJS-generated subclass that wraps an SJS object wouldn't reflect the JS state in the C++
+    // inherited private members in any way... I'm not sure I can implement that
+    IsEmpty : []() -> bool;
+    // Append had several static overloads, which SJS doesn't support (yet?)
+    Append : [](String&) -> int;
+    Clear : []() -> void;
+
+    CompareTo : [](String&) -> int;
+    // Skip Equals for now, no decl for Object, so sjsc bails
+    //virtual Equals : [](Object&) -> bool;
+    // Skip Format --- SJS doesn't have a 
+    IndexOf : [](string, int, out int) -> int;
+    // For now, skip; similar char/str mismatch as in the native JS version
+    //GetCharAt : [](int, string) -> int;
+    // The out annotation indicates: out-argument passed by reference.  Trampoline needs to alloc
+    // out = new String() and pass *out
+    SubString : [](int, out String) -> int;
+    Contains : [](String&) -> bool;
+
+    // static const int DEFAULT_CAPACITY = 16;
+
+    // This seems useful for debugging --- fetch internal wchar_t*
+    GetPointer : []() -> string;
+}
+
+class Control {
+    // This is really a nominal supertype of Button and a bunch of other things...
+    // There should be a bunch of stuff here that's repeated in those subclasses, but we'll punt for
+    // now; we just need the name for the moment
+    noconstructor;
+}
+
+class IActionEventListener {
+    deriving Wrappable;
+
+    pure virtual OnActionPerformed : [](const Control&, int)->void;
+}
+class IFormBackEventListener {
+    deriving Wrappable;
+
+    pure virtual OnFormBackRequested : [](Form&) -> void;
+}
+
+class Form {
+    deriving Wrappable;
+
+    Construct : [](String&) -> int;
+
+    virtual Header *GetHeader();
+    virtual GetHeader : []() -> Header;
+
+    SetFormBackEventListener : [](IFormBackEventListener)->void;
+   
+    virtual GetControl : [](String&) -> Control;
+
+    virtual Draw : []()->void;
+    pure virtual OnInitializing : []() -> uint;
+    pure virtual OnTerminating : []() -> uint;
+    virtual OnDraw : []() -> uint;
+}
+
+class Header {
+    noconstructor;
+   virtual SetStyle : [](enum HeaderStyle) -> int;
+   virtual SetTitleText : [](String&) -> int;
+}
+
+// This class is actualy deprecated in the Tizen 2.2 release...
+class Application {
+    deriving Wrappable;
+
+ // TODO: Static method...
+ //static result Execute(Application* (*pUiAppFactory)(void), const Tizen::Base::Collection::IList* pArguments);
+
+ pure virtual OnAppInitializing : [](AppRegistry&) -> bool;
+ pure virtual OnAppTerminating : [](AppRegistry&, bool) -> bool;
+ virtual AddFrame : [](Frame&) -> int;
+
+ // TODO static method...
+ //static GetInstance : []() -> Application ;
+
+ virtual Terminate : []()->void;
+
+ //Execute : [](Application)->void; // technically static and returns an int, but this should work
+}
+
+class AppRegistry {
+    noconstructor;
+
+}
+
+class Label {
+    cast from Control;
+   virtual SetTextHorizontalAlignment : [](enum HorizontalAlignment) -> void;
+   virtual SetText : [](String&)->void;
+   
+}
+
+class Button {
+    cast from Control;
+   virtual SetActionId : [](int)->void;
+   virtual AddActionEventListener : [](IActionEventListener&)->void;
+   virtual SetActionId : [](int)->void;
+   virtual SetText : [](String&)->void;
+}
+
+class Frame {
+  virtual Construct : []()->int;
+  virtual AddControl : [](Form)->int;
+  virtual SetCurrentForm : [](Form)->int;
+}
+
+inline:
+
+    using namespace std;
+#include<iostream>
+extern "C" {
+extern "C" int __sjs_main(int);
+_EXPORT_ int OspMain(int argc, char* pArgv[]);
+
+Application* ___get_app() {
+    return (Application*)__platform_return_val->fields[0].ptr;
+}
+    
+int OspMain(int argc, char* pArgv[]) {
+
+	AppLog("asdf");
+    __sjs_main(argc);
+
+    Tizen::Base::Collection::ArrayList args;
+	args.Construct();
+	for (int i = 0; i < argc; i++)
+	{
+		args.Add(*(new (std::nothrow) String(pArgv[i])));
+	}
+    Application* app = (Application*)__platform_return_val->fields[0].ptr;
+    wprintf(L"Passing Application* %p to Application::Execute...\n", app);
+    unsigned long res = Tizen::App::Application::Execute(___get_app, &args);
+    cout << res << endl;
+    wprintf(L"Application::Execute(..) --> %d\n", res);
+    fflush(stdout);
+    return 0;
+}
+
+} // extern C

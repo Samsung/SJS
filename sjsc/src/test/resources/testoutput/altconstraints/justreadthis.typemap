@@ -1,0 +1,7 @@
+function m() {
+  var x = this;
+}
+ --> [{  |  }]() -> void
+m --> [{  |  }]() -> void
+this --> ___
+x --> ___

@@ -1,0 +1,11 @@
+--y --> integer
+1 --> integer
+3.3 --> float
+x --> integer
+x --> integer
+x++ --> integer
+y --> integer
+y --> integer
+z --> float
+z --> float
+z++ --> float

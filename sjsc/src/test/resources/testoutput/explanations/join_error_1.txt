@@ -1,0 +1,3 @@
+Error on line 3: conditional expression branches are incompatible
+    Note: type is boolean
+    Note: expected integer

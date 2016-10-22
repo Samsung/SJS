@@ -1,0 +1,1 @@
+printInt({ a: 3, p: function f() { return this.a; }}.p());

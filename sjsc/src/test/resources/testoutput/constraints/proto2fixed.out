@@ -1,0 +1,63 @@
+CheckArity(ret(|T1|))
+CheckArity(ret(|T2|))
+CheckArity(ret(|T3|))
+CheckArity(ret(|console.log|))
+MakeConcreteConstraint [term=|"foo"|]
+MakeConcreteConstraint [term=|17|]
+MakeConcreteConstraint [term=|42|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|new T3()|]
+MakeConcreteConstraint [term=|t3.a + t3.b + ""|]
+prototype(|constructor T1|)=__proto__(ret(|constructor T1|))
+prototype(|constructor T2|)=__proto__(ret(|constructor T2|))
+prototype(|constructor T3|)=__proto__(ret(|constructor T3|))
+|""|=string
+|"foo"|<:prop(|this|,c)
+|"foo"|=string
+|17|<:prop(|this|,b)
+|17|=integer
+|42|<:prop(|this|,a)
+|42|=integer
+|T1|<:ctor<0>[X1]() -> X0
+|T1|=|T1|
+|T2.prototype = new T1()|=prototype(|T2|)
+|T2.prototype|=prototype(|T2|)
+|T2|<:ctor<0>[X3]() -> X2
+|T2|=|T2|
+|T2|=|T2|
+|T3.prototype = new T2()|=prototype(|T3|)
+|T3.prototype|=prototype(|T3|)
+|T3|<:ctor<0>[X5]() -> X4
+|T3|=|T3|
+|T3|=|T3|
+|console.log(t3.a + t3.b + "")|=ret(|console.log|)
+|console.log|=prop(|console|,log)
+|console|=|console|
+|constructor T1|<:|T1|
+|constructor T2|<:|T2|
+|constructor T3|<:|T3|
+|new T1()|=prototype(|T2|)
+|new T1()|=ret(|T1|)
+|new T2()|=prototype(|T3|)
+|new T2()|=ret(|T2|)
+|new T3()|<:|t3|
+|new T3()|=ret(|T3|)
+|t3.a + t3.b + ""|<:param(|console.log|,0)
+|t3.a + t3.b + ""|=op(|t3.a + t3.b|+|""|)
+|t3.a + t3.b|=op(|t3.a|+|t3.b|)
+|t3.a|=prop(|t3|,a)
+|t3.b|=prop(|t3|,b)
+|t3|=|t3|
+|t3|=|t3|
+|this.a = 42|=prop(|this|,a)
+|this.a|=prop(|this|,a)
+|this.b = 17|=prop(|this|,b)
+|this.b|=prop(|this|,b)
+|this.c = "foo"|=prop(|this|,c)
+|this.c|=prop(|this|,c)
+|this|=ret(|constructor T1|)
+|this|=ret(|constructor T2|)
+|this|=ret(|constructor T3|)
+|this|=|this|
+|this|=|this|
+|this|=|this|

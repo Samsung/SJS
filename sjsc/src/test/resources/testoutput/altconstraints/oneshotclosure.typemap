@@ -1,0 +1,33 @@
+(function() {
+  function foo(o) {
+    return o;
+  }
+  return {add: foo};
+}) --> () -> {  | add: (integer) -> integer }
+(function() {
+  function foo(o) {
+    return o;
+  }
+  return {add: foo};
+})() --> {  | add: (integer) -> integer }
+(functions.add) --> (integer) -> integer
+(functions.add)(4) --> integer
+4 --> integer
+foo --> (integer) -> integer
+foo --> (integer) -> integer
+function foo(o) {
+  return o;
+}
+ --> (integer) -> integer
+function() {
+  function foo(o) {
+    return o;
+  }
+  return {add: foo};
+} --> () -> {  | add: (integer) -> integer }
+functions --> {  | add: (integer) -> integer }
+functions --> {  | add: (integer) -> integer }
+functions.add --> (integer) -> integer
+o --> integer
+o --> integer
+{add: foo} --> {  | add: (integer) -> integer }

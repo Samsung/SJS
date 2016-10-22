@@ -1,0 +1,14 @@
+0 --> integer
+0 --> integer
+10 --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i < 10 --> boolean
+i++ --> integer
+result + i --> integer
+result --> integer
+result --> integer
+result --> integer
+result = result + i --> integer

@@ -1,0 +1,42 @@
+CheckArity(ret(|printInt|))
+CheckArity(ret(|printInt|))
+Elem(|a.z|)=|a.z[0]|
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|4|]
+MakeConcreteConstraint [term=|[1]|]
+MakeConcreteConstraint [term=|a.x|]
+MakeConcreteConstraint [term=|a.y + a.z[0]|]
+MakeConcreteConstraint [term=|p|]
+MakeConcreteConstraint [term=|{x: 2, y: 4, z: [1]}|]
+TP([1])=Elem(ret(prop(|[1]|,concat)))
+TP([1])=Elem(ret(prop(|[1]|,reverse)))
+TP([1])=Elem(|[1]|)
+TP([1])=param(prop(|[1]|,push),0)
+TP([1])=ret(prop(|[1]|,pop))
+TP([1])=ret(prop(|[1]|,shift))
+|0|=Key(|a.z|)
+|0|=integer
+|1|<:Elem(|[1]|)
+|1|=integer
+|2|<:prop(|{x: 2, y: 4, z: [1]}|,x)
+|2|=integer
+|4|<:prop(|{x: 2, y: 4, z: [1]}|,y)
+|4|=integer
+|[1]|<:prop(|{x: 2, y: 4, z: [1]}|,z)
+|a.x|<:param(|printInt|,0)
+|a.x|=prop(|a|,x)
+|a.y + a.z[0]|<:|p|
+|a.y + a.z[0]|=op(|a.y|+|a.z[0]|)
+|a.y|=prop(|a|,y)
+|a.z|=prop(|a|,z)
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|printInt(a.x)|=ret(|printInt|)
+|printInt(p)|=ret(|printInt|)
+|printInt|=|printInt|
+|printInt|=|printInt|
+|p|<:param(|printInt|,0)
+|p|=|p|
+|{x: 2, y: 4, z: [1]}|<:|a|

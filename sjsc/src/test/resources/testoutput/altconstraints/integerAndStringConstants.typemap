@@ -1,0 +1,6 @@
+"a string" --> string
+1 --> integer
+2 --> integer
+x --> integer
+y --> integer
+z --> string

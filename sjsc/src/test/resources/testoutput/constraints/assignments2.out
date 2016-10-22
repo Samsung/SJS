@@ -1,0 +1,11 @@
+MakeConcreteConstraint [term=|"hello"|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|y|]
+|"hello"|<:|y|
+|"hello"|=string
+|1|<:|x|
+|1|=integer
+|x = y|=|x|
+|x|=|x|
+|y|<:|x|
+|y|=|y|

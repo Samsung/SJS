@@ -1,0 +1,9 @@
+MakeConcreteConstraint [term=|"a string"|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|2|]
+|"a string"|<:|z|
+|"a string"|=string
+|1|<:|x|
+|1|=integer
+|2|<:|y|
+|2|=integer

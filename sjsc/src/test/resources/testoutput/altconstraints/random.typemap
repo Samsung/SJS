@@ -1,0 +1,50 @@
+(last * A + C) % M --> float
+(last * A + C) --> float
+1 --> integer
+100 --> integer
+100 --> integer
+139968 --> integer
+17 --> integer
+29573 --> integer
+3877 --> integer
+42.0 --> float
+9 --> integer
+A --> integer
+A --> integer
+C --> integer
+C --> integer
+M --> integer
+M --> integer
+M --> integer
+function rand(max) {
+  last = (last * A + C) % M;
+  return max * last / M;
+}
+ --> (integer) -> float
+i --> integer
+i --> integer
+i --> integer
+i < n --> boolean
+i++ --> integer
+last * A + C --> float
+last * A --> float
+last --> float
+last --> float
+last --> float
+last --> float
+last = (last * A + C) % M --> float
+max * last --> float
+max * last / M --> float
+max --> integer
+max --> integer
+n --> integer
+n --> integer
+printString --> (string) -> void
+printString(rand(100).toFixed(9)) --> void
+rand --> (integer) -> float
+rand --> (integer) -> float
+rand --> (integer) -> float
+rand(100) --> float
+rand(100) --> float
+rand(100).toFixed --> [](integer) -> string
+rand(100).toFixed(9) --> string

@@ -1,0 +1,9 @@
+"abracadabra" --> string
+0 --> integer
+printString --> (string) -> void
+printString(y) --> void
+x --> string
+x --> string
+x[0] --> string
+y --> string
+y --> string

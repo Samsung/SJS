@@ -1,0 +1,43 @@
+CheckArity(ret(|Quo|))
+CheckArity(ret(|console.log|))
+CheckArity(ret(|myQuo.get_status|))
+MakeConcreteConstraint [term=|"confused"|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|method <anonymous>|]
+MakeConcreteConstraint [term=|myQuo.get_status()|]
+MakeConcreteConstraint [term=|myQuo|]
+MakeConcreteConstraint [term=|new Quo("confused")|]
+MakeConcreteConstraint [term=|string|]
+param(|constructor Quo|,0)=|string|
+prototype(|constructor Quo|)=__proto__(ret(|constructor Quo|))
+|"confused"|<:param(|Quo|,0)
+|"confused"|=string
+|Quo.prototype.get_status = function() {
+  return this.status;
+}|=prop(|Quo.prototype|,get_status)
+|Quo.prototype.get_status|=prop(|Quo.prototype|,get_status)
+|Quo.prototype|=prototype(|Quo|)
+|Quo|<:ctor<0>[X2](X0) -> X1
+|Quo|=|Quo|
+|Quo|=|Quo|
+|console.log(myQuo.get_status())|=ret(|console.log|)
+|console.log|=prop(|console|,log)
+|console|=|console|
+|constructor Quo|<:|Quo|
+|method <anonymous>|<:prop(|Quo.prototype|,get_status)
+|myQuo.get_status()|<:param(|console.log|,0)
+|myQuo.get_status()|=ret(|myQuo.get_status|)
+|myQuo.get_status|=prop(|myQuo|,get_status)
+|myQuo|=|myQuo|
+|new Quo("confused")|<:|myQuo|
+|new Quo("confused")|=ret(|Quo|)
+|string|<:prop(|this|,status)
+|string|=|string|
+|this.status = string|=prop(|this|,status)
+|this.status|<:ret(|method <anonymous>|)
+|this.status|=prop(|this|,status)
+|this.status|=prop(|this|,status)
+|this|=receiver(|method <anonymous>|)
+|this|=ret(|constructor Quo|)
+|this|=|this|
+|this|=|this|

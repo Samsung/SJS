@@ -1,0 +1,182 @@
+CheckArity(ret(|Array|))
+CheckArity(ret(|Array|))
+CheckArity(ret(|Li1.concat|))
+CheckArity(ret(|Li1.push|))
+CheckArity(ret(|Li1.reverse|))
+CheckArity(ret(|Li2.push|))
+CheckArity(ret(|Li2.shift|))
+CheckArity(ret(|Li3.pop|))
+CheckArity(ret(|Li3.push|))
+CheckArity(ret(|printInt|))
+CheckArity(ret(|test_lists|))
+Elem(|Li1|)=|Li1[0]|
+Elem(|Li1|)=|Li1[tmp]|
+Elem(|Li2|)=|Li2[tmp]|
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|10000|]
+MakeConcreteConstraint [term=|17|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|Array()|]
+MakeConcreteConstraint [term=|Array()|]
+MakeConcreteConstraint [term=|Li1.concat()|]
+MakeConcreteConstraint [term=|Li1|]
+MakeConcreteConstraint [term=|Li1|]
+MakeConcreteConstraint [term=|Li1|]
+MakeConcreteConstraint [term=|Li2.shift()|]
+MakeConcreteConstraint [term=|Li2|]
+MakeConcreteConstraint [term=|Li2|]
+MakeConcreteConstraint [term=|Li3.pop()|]
+MakeConcreteConstraint [term=|Li3|]
+MakeConcreteConstraint [term=|Li3|]
+MakeConcreteConstraint [term=|result|]
+MakeConcreteConstraint [term=|test_lists()|]
+MakeConcreteConstraint [term=|tmp|]
+MakeConcreteConstraint [term=|tmp|]
+MakeConcreteConstraint [term=|tmp|]
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,1)
+TP(Array)=param(|Array|,1)
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+|(tmp = Li2.shift())|=|tmp = Li2.shift()|
+|(tmp = Li3.pop())|=|tmp = Li3.pop()|
+|0|<:ret(|function test_lists|)
+|0|<:ret(|function test_lists|)
+|0|<:|tmp|
+|0|=Key(|Li1|)
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|10000|<:|SIZE|
+|10000|=integer
+|17|<:|n|
+|17|=integer
+|1|<:|tmp|
+|1|=integer
+|Array()|<:|Li1|
+|Array()|<:|Li3|
+|Array()|=ret(|Array|)
+|Array()|=ret(|Array|)
+|Array|=|Array|
+|Array|=|Array|
+|Li1 = Array()|=|Li1|
+|Li1.concat()|<:|Li2|
+|Li1.concat()|=ret(|Li1.concat|)
+|Li1.concat|=prop(|Li1|,concat)
+|Li1.length|<:ret(|function test_lists|)
+|Li1.length|=prop(|Li1|,length)
+|Li1.push(tmp)|=ret(|Li1.push|)
+|Li1.push|=prop(|Li1|,push)
+|Li1.reverse()|=ret(|Li1.reverse|)
+|Li1.reverse|=prop(|Li1|,reverse)
+|Li1[0] != SIZE|=op(|Li1[0]|!=|SIZE|)
+|Li1[tmp] != Li2[tmp]|=op(|Li1[tmp]|!=|Li2[tmp]|)
+|Li1|=|Li1|
+|Li1|=|Li1|
+|Li1|=|Li1|
+|Li1|=|Li1|
+|Li1|=|Li1|
+|Li1|=|Li1|
+|Li1|=|Li1|
+|Li2 = Li1.concat()|=|Li2|
+|Li2.push(tmp)|=ret(|Li2.push|)
+|Li2.push|=prop(|Li2|,push)
+|Li2.shift()|<:|tmp|
+|Li2.shift()|=ret(|Li2.shift|)
+|Li2.shift|=prop(|Li2|,shift)
+|Li2|=|Li2|
+|Li2|=|Li2|
+|Li2|=|Li2|
+|Li2|=|Li2|
+|Li3 = Array()|=|Li3|
+|Li3.pop()|<:|tmp|
+|Li3.pop()|=ret(|Li3.pop|)
+|Li3.pop|=prop(|Li3|,pop)
+|Li3.push(tmp)|=ret(|Li3.push|)
+|Li3.push|=prop(|Li3|,push)
+|Li3|=|Li3|
+|Li3|=|Li3|
+|Li3|=|Li3|
+|SIZE|=|SIZE|
+|SIZE|=|SIZE|
+|SIZE|=|SIZE|
+|function test_lists|<:|test_lists|
+|n--|=op(|n|--)
+|n|=|n|
+|printInt(result)|=ret(|printInt|)
+|printInt|=|printInt|
+|result = test_lists()|=|result|
+|result|<:param(|printInt|,0)
+|result|=|result|
+|result|=|result|
+|test_lists()|<:|result|
+|test_lists()|=ret(|test_lists|)
+|test_lists|=|test_lists|
+|tmp < SIZE|=op(|tmp|<|SIZE|)
+|tmp <= SIZE|=op(|tmp|<=|SIZE|)
+|tmp = 0|=|tmp|
+|tmp = 1|=|tmp|
+|tmp = Li2.shift()|=|tmp|
+|tmp = Li3.pop()|=|tmp|
+|tmp++|=op(|tmp|++)
+|tmp++|=op(|tmp|++)
+|tmp|<:param(|Li1.push|,0)
+|tmp|<:param(|Li2.push|,0)
+|tmp|<:param(|Li3.push|,0)
+|tmp|=Key(|Li1|)
+|tmp|=Key(|Li2|)
+|tmp|=|tmp|
+|tmp|=|tmp|
+|tmp|=|tmp|
+|tmp|=|tmp|
+|tmp|=|tmp|
+|tmp|=|tmp|
+|tmp|=|tmp|
+|tmp|=|tmp|
+|tmp|=|tmp|
+|tmp|=|tmp|
+|tmp|=|tmp|
+|tmp|=|tmp|
+|tmp|=|tmp|

@@ -1,0 +1,26 @@
+"" --> string
+"" --> string
+"i = " + i --> string
+"i = " --> string
+"j = " + j + "" --> string
+"j = " + j --> string
+"j = " --> string
+1 --> integer
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log("i = " + i) --> void
+console.log("j = " + j + "") --> void
+console.log(i + "") --> void
+i + "" --> string
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i || 1 --> integer
+j --> integer
+j --> integer
+undefined --> integer

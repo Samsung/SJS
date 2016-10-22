@@ -1,0 +1,21 @@
+CheckArity(ret(|bar|))
+MakeConcreteConstraint [term=|18|]
+MakeConcreteConstraint [term=|19|]
+MakeConcreteConstraint [term=|bar(18, 19)|]
+MakeConcreteConstraint [term=|foo|]
+param(|function foo|,0)=|m|
+param(|function foo|,1)=|n|
+|18|<:param(|bar|,0)
+|18|=integer
+|19|<:param(|bar|,1)
+|19|=integer
+|bar(18, 19)|<:|x|
+|bar(18, 19)|=ret(|bar|)
+|bar|=|bar|
+|foo|<:|bar|
+|foo|=|foo|
+|function foo|<:|foo|
+|m + n|<:ret(|function foo|)
+|m + n|=op(|m|+|n|)
+|m|=|m|
+|n|=|n|

@@ -1,0 +1,19 @@
+CheckArity(ret(|printString|))
+CheckArity(ret(|x.toFixed|))
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|34.5678|]
+MakeConcreteConstraint [term=|x.toFixed(2)|]
+MakeConcreteConstraint [term=|x|]
+MakeConcreteConstraint [term=|y|]
+|2|<:param(|x.toFixed|,0)
+|2|=integer
+|34.5678|<:|x|
+|34.5678|=float
+|printString(y)|=ret(|printString|)
+|printString|=|printString|
+|x.toFixed(2)|<:|y|
+|x.toFixed(2)|=ret(|x.toFixed|)
+|x.toFixed|=prop(|x|,toFixed)
+|x|=|x|
+|y|<:param(|printString|,0)
+|y|=|y|

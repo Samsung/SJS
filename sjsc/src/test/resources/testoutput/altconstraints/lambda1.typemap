@@ -1,0 +1,19 @@
+(function a() {
+  return 0;
+}) --> () -> integer
+(function a() {
+  return 0;
+})() --> integer
+(function a() {
+  return 0;
+})() == 0 --> boolean
+0 --> integer
+0 --> integer
+a --> () -> integer
+assert --> (boolean) -> void
+assert((function a() {
+  return 0;
+})() == 0) --> void
+function a() {
+  return 0;
+} --> () -> integer

@@ -1,0 +1,3 @@
+Error on line 2: bad assignment of 17 to x[6]
+    Note: type is integer
+    Note: expected string

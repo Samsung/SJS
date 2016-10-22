@@ -1,0 +1,10 @@
+2 --> integer
+34.5678 --> float
+printString --> (string) -> void
+printString(y) --> void
+x --> float
+x --> float
+x.toFixed --> [](integer) -> string
+x.toFixed(2) --> string
+y --> string
+y --> string

@@ -1,0 +1,2 @@
+Error on line 5: new B() is abstract
+    Note: missing read-write property 'a'

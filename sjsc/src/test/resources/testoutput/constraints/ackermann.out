@@ -1,0 +1,86 @@
+CheckArity(ret(|ack|))
+CheckArity(ret(|ack|))
+CheckArity(ret(|ack|))
+CheckArity(ret(|ack|))
+CheckArity(ret(|printInt|))
+CheckArity(ret(|printInt|))
+CheckArity(ret(|printString|))
+CheckArity(ret(|printString|))
+MakeConcreteConstraint [term=|"): "|]
+MakeConcreteConstraint [term=|"ack(3, "|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|3|]
+MakeConcreteConstraint [term=|7|]
+MakeConcreteConstraint [term=|ack(3, n)|]
+MakeConcreteConstraint [term=|ack(m, n - 1)|]
+MakeConcreteConstraint [term=|m - 1|]
+MakeConcreteConstraint [term=|m - 1|]
+MakeConcreteConstraint [term=|m|]
+MakeConcreteConstraint [term=|n - 1|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|n|]
+param(|function ack|,0)=|m|
+param(|function ack|,1)=|n|
+|"): "|<:param(|printString|,0)
+|"): "|=string
+|"ack(3, "|<:param(|printString|,0)
+|"ack(3, "|=string
+|(m == 0 ? n + 1 : (n == 0 ? ack(m - 1, 1) : ack(m - 1, ack(m, n - 1))))|<:ret(|function ack|)
+|(m == 0 ? n + 1 : (n == 0 ? ack(m - 1, 1) : ack(m - 1, ack(m, n - 1))))|=|m == 0 ? n + 1 : (n == 0 ? ack(m - 1, 1) : ack(m - 1, ack(m, n - 1)))|
+|(n == 0 ? ack(m - 1, 1) : ack(m - 1, ack(m, n - 1)))|<:|m == 0 ? n + 1 : (n == 0 ? ack(m - 1, 1) : ack(m - 1, ack(m, n - 1)))|
+|(n == 0 ? ack(m - 1, 1) : ack(m - 1, ack(m, n - 1)))|=|n == 0 ? ack(m - 1, 1) : ack(m - 1, ack(m, n - 1))|
+|0|=integer
+|0|=integer
+|1|<:param(|ack|,1)
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|3|<:param(|ack|,0)
+|3|=integer
+|7|<:|n|
+|7|=integer
+|ack(3, n)|<:param(|printInt|,0)
+|ack(3, n)|=ret(|ack|)
+|ack(m - 1, 1)|<:|n == 0 ? ack(m - 1, 1) : ack(m - 1, ack(m, n - 1))|
+|ack(m - 1, 1)|=ret(|ack|)
+|ack(m - 1, ack(m, n - 1))|<:|n == 0 ? ack(m - 1, 1) : ack(m - 1, ack(m, n - 1))|
+|ack(m - 1, ack(m, n - 1))|=ret(|ack|)
+|ack(m, n - 1)|<:param(|ack|,1)
+|ack(m, n - 1)|=ret(|ack|)
+|ack|=|ack|
+|ack|=|ack|
+|ack|=|ack|
+|ack|=|ack|
+|function ack|<:|ack|
+|m - 1|<:param(|ack|,0)
+|m - 1|<:param(|ack|,0)
+|m - 1|=op(|m|-|1|)
+|m - 1|=op(|m|-|1|)
+|m == 0|=op(|m|==|0|)
+|m|<:param(|ack|,0)
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|n + 1|<:|m == 0 ? n + 1 : (n == 0 ? ack(m - 1, 1) : ack(m - 1, ack(m, n - 1)))|
+|n + 1|=op(|n|+|1|)
+|n - 1|<:param(|ack|,1)
+|n - 1|=op(|n|-|1|)
+|n == 0|=op(|n|==|0|)
+|n|<:param(|ack|,1)
+|n|<:param(|printInt|,0)
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|printInt(ack(3, n))|=ret(|printInt|)
+|printInt(n)|=ret(|printInt|)
+|printInt|=|printInt|
+|printInt|=|printInt|
+|printString("): ")|=ret(|printString|)
+|printString("ack(3, ")|=ret(|printString|)
+|printString|=|printString|
+|printString|=|printString|

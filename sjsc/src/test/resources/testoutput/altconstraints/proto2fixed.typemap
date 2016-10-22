@@ -1,0 +1,50 @@
+"" --> string
+"foo" --> string
+17 --> integer
+42 --> integer
+T1 --> ctor<0>[null]() -> {  | a: integer }
+T1 --> ctor<0>[null]() -> {  | a: integer }
+T2 --> ctor<0>[{  | a: integer }]() -> { a: integer | b: integer }
+T2 --> ctor<0>[{  | a: integer }]() -> { a: integer | b: integer }
+T2 --> ctor<0>[{  | a: integer }]() -> { a: integer | b: integer }
+T2.prototype --> {  | a: integer }
+T2.prototype = new T1() --> {  | a: integer }
+T3 --> ctor<0>[{ a: integer | b: integer }]() -> { b: integer, a: integer | c: string }
+T3 --> ctor<0>[{ a: integer | b: integer }]() -> { b: integer, a: integer | c: string }
+T3 --> ctor<0>[{ a: integer | b: integer }]() -> { b: integer, a: integer | c: string }
+T3.prototype --> { a: integer | b: integer }
+T3.prototype = new T2() --> { a: integer | b: integer }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log(t3.a + t3.b + "") --> void
+function T1() {
+  this.a = 42;
+}
+ --> ctor<0>[null]() -> {  | a: integer }
+function T2() {
+  this.b = 17;
+}
+ --> ctor<0>[{  | a: integer }]() -> { a: integer | b: integer }
+function T3() {
+  this.c = "foo";
+}
+ --> ctor<0>[{ a: integer | b: integer }]() -> { b: integer, a: integer | c: string }
+new T1() --> {  | a: integer }
+new T2() --> { a: integer | b: integer }
+new T3() --> { b: integer, a: integer | c: string }
+t3 --> { b: integer, a: integer | c: string }
+t3 --> { b: integer, a: integer | c: string }
+t3 --> { b: integer, a: integer | c: string }
+t3.a + t3.b + "" --> string
+t3.a + t3.b --> integer
+t3.a --> integer
+t3.b --> integer
+this --> {  | a: integer }
+this --> { a: integer | b: integer }
+this --> { b: integer, a: integer | c: string }
+this.a --> integer
+this.a = 42 --> integer
+this.b --> integer
+this.b = 17 --> integer
+this.c --> string
+this.c = "foo" --> string

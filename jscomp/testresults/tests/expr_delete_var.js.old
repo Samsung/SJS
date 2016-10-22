@@ -1,0 +1,137 @@
+
+id: 0
+vars: {
+	"Object": "var",
+	"Function": "var",
+	"Array": "var",
+	"RegExp": "var",
+	"console": "var"
+}
+captured: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp",
+	"console"
+]
+environment: []
+usesArguments: false
+isCatch: false
+parent: -1
+
+
+id: 1
+vars: {}
+captured: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp"
+]
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp",
+	"console"
+]
+usesArguments: false
+isCatch: false
+parent: 0
+
+
+id: 2
+vars: {
+	"arguments": "special"
+}
+captured: []
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp"
+]
+usesArguments: false
+isCatch: false
+parent: 1
+
+
+id: 3
+vars: {
+	"arguments": "special"
+}
+captured: []
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp"
+]
+usesArguments: false
+isCatch: false
+parent: 1
+
+
+id: 4
+vars: {
+	"arguments": "special",
+	"str": "arg"
+}
+captured: []
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp"
+]
+usesArguments: false
+isCatch: false
+parent: 1
+
+
+id: 5
+vars: {
+	"arguments": "special"
+}
+captured: []
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp"
+]
+usesArguments: false
+isCatch: false
+parent: 1
+
+
+id: 6
+vars: {
+	"arguments": "special"
+}
+captured: []
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp"
+]
+usesArguments: false
+isCatch: false
+parent: 1
+
+/Users/koushik.sen/work/jscomp/src/js/compiler/compile.js:1355
+                throw new Error("To be implemented");
+                ^
+
+Error: To be implemented
+    at visitors.UnaryExpression (/Users/koushik.sen/work/jscomp/src/js/compiler/compile.js:1355:23)
+    at visit (/Users/koushik.sen/work/jscomp/src/js/compiler/compile.js:778:13)
+    at visit (/Users/koushik.sen/work/jscomp/src/js/compiler/compile.js:784:21)
+    at visit (/Users/koushik.sen/work/jscomp/src/js/compiler/compile.js:784:21)
+    at visitors.Program (/Users/koushik.sen/work/jscomp/src/js/compiler/compile.js:1267:13)
+    at visit (/Users/koushik.sen/work/jscomp/src/js/compiler/compile.js:778:13)
+    at compileCode (/Users/koushik.sen/work/jscomp/src/js/compiler/compile.js:2147:9)
+    at compileFile (/Users/koushik.sen/work/jscomp/src/js/compiler/compile.js:2178:9)
+    at /Users/koushik.sen/work/jscomp/src/js/compiler/compile.js:2184:9
+    at Object.<anonymous> (/Users/koushik.sen/work/jscomp/src/js/compiler/compile.js:2186:2)

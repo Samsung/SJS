@@ -1,0 +1,8 @@
+"hello" --> string
+"hi" --> string
+4 --> integer
+a --> {  | foo: integer, bar: string }
+a --> {  | foo: integer, bar: string }
+a.bar --> string
+a.bar = "hi" --> string
+{foo: 4, bar: "hello"} --> {  | foo: integer, bar: string }

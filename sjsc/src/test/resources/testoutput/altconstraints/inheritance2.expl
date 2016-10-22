@@ -1,0 +1,5 @@
+|new F()| is missing some MRO/MRW property, and hence cannot appear here
+line 14
+type { m1: []() -> integer, m2: [](integer) -> void, f: integer |  }
+[MRO=[], MRW=[f]]
+missing MRW: [f]

@@ -1,0 +1,2 @@
+Error on line 2: .prototype is only legal on constructors
+    Note: type of x is ___

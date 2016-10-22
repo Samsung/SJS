@@ -1,0 +1,81 @@
+CheckArity(ret(|C.prototype.m().toString|))
+CheckArity(ret(|C.prototype.m|))
+CheckArity(ret(|C|))
+CheckArity(ret(|c.m().toString|))
+CheckArity(ret(|c.m|))
+CheckArity(ret(|console.log|))
+CheckArity(ret(|console.log|))
+MakeConcreteConstraint [term=|19|]
+MakeConcreteConstraint [term=|3|]
+MakeConcreteConstraint [term=|C.prototype.m().toString()|]
+MakeConcreteConstraint [term=|C.prototype.m()|]
+MakeConcreteConstraint [term=|C.prototype|]
+MakeConcreteConstraint [term=|c.m().toString()|]
+MakeConcreteConstraint [term=|c.m()|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|c|]
+MakeConcreteConstraint [term=|method <anonymous>|]
+MakeConcreteConstraint [term=|new C(19)|]
+MakeConcreteConstraint [term=|s|]
+MakeConcreteConstraint [term=|s|]
+MakeConcreteConstraint [term=|v|]
+param(|constructor C|,0)=|v|
+prototype(|constructor C|)=__proto__(ret(|constructor C|))
+|19|<:param(|C|,0)
+|19|=integer
+|3|<:prop(|{x: 3, m: function() {
+  return this.x;
+}}|,x)
+|3|=integer
+|C.prototype = {x: 3, m: function() {
+  return this.x;
+}}|=prototype(|C|)
+|C.prototype.m().toString()|<:|s|
+|C.prototype.m().toString()|=ret(|C.prototype.m().toString|)
+|C.prototype.m().toString|=prop(|C.prototype.m()|,toString)
+|C.prototype.m()|=ret(|C.prototype.m|)
+|C.prototype.m|=prop(|C.prototype|,m)
+|C.prototype|=prototype(|C|)
+|C.prototype|=prototype(|C|)
+|C|<:ctor<0>[X2](X0) -> X1
+|C|=|C|
+|C|=|C|
+|C|=|C|
+|c.m().toString()|<:|s|
+|c.m().toString()|=ret(|c.m().toString|)
+|c.m().toString|=prop(|c.m()|,toString)
+|c.m()|=ret(|c.m|)
+|c.m|=prop(|c|,m)
+|console.log(s)|=ret(|console.log|)
+|console.log(s)|=ret(|console.log|)
+|console.log|=prop(|console|,log)
+|console.log|=prop(|console|,log)
+|console|=|console|
+|console|=|console|
+|constructor C|<:|C|
+|c|=|c|
+|method <anonymous>|<:prop(|{x: 3, m: function() {
+  return this.x;
+}}|,m)
+|new C(19)|<:|c|
+|new C(19)|=ret(|C|)
+|s = c.m().toString()|=|s|
+|s|<:param(|console.log|,0)
+|s|<:param(|console.log|,0)
+|s|=|s|
+|s|=|s|
+|s|=|s|
+|this.x = v|=prop(|this|,x)
+|this.x|<:ret(|method <anonymous>|)
+|this.x|=prop(|this|,x)
+|this.x|=prop(|this|,x)
+|this|=receiver(|method <anonymous>|)
+|this|=ret(|constructor C|)
+|this|=|this|
+|this|=|this|
+|v|<:prop(|this|,x)
+|v|=|v|
+|{x: 3, m: function() {
+  return this.x;
+}}|=prototype(|C|)

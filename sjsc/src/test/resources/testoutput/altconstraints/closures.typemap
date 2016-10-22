@@ -1,0 +1,17 @@
+18 --> integer
+19 --> integer
+bar --> (integer,integer) -> integer
+bar --> (integer,integer) -> integer
+bar(18, 19) --> integer
+foo --> (integer,integer) -> integer
+foo --> (integer,integer) -> integer
+function foo(m, n) {
+  return m + n;
+}
+ --> (integer,integer) -> integer
+m + n --> integer
+m --> integer
+m --> integer
+n --> integer
+n --> integer
+x --> integer

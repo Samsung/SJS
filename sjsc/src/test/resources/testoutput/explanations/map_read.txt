@@ -1,0 +1,2 @@
+Error on line 2: misuse of binary operator in in ""foo" in p"
+    Note: right operand has type { foo: ___ |  } instead of Map<___>

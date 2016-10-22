@@ -1,0 +1,3 @@
+Error on line 3: bad argument x passed to function
+    Note: type is string
+    Note: expected integer

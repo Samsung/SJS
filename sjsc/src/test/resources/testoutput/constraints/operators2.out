@@ -1,0 +1,14 @@
+MakeConcreteConstraint [term=op(|x|++)]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|3.3|]
+op(|x|++)<:|y|
+|--y|=op(--|y|)
+|1|<:|x|
+|1|=integer
+|3.3|<:|z|
+|3.3|=float
+|x++|=op(|x|++)
+|x|=|x|
+|y|=|y|
+|z++|=op(|z|++)
+|z|=|z|

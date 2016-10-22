@@ -1,0 +1,23 @@
+(m == 0 ? n + 1 : m + 3) --> integer
+0 --> integer
+1 --> integer
+2 --> integer
+3 --> integer
+3 --> integer
+ack --> (integer,integer) -> integer
+ack --> (integer,integer) -> integer
+ack(3, 2) --> integer
+function ack(m, n) {
+  return (m == 0 ? n + 1 : m + 3);
+}
+ --> (integer,integer) -> integer
+m + 3 --> integer
+m --> integer
+m --> integer
+m --> integer
+m == 0 --> boolean
+m == 0 ? n + 1 : m + 3 --> integer
+n + 1 --> integer
+n --> integer
+n --> integer
+x --> integer

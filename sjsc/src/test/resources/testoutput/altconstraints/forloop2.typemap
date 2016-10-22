@@ -1,0 +1,14 @@
+0 --> integer
+3 --> integer
+function spectralnorm() {
+  var i;
+  for (i = 0; true; 3) 
+    {
+    }
+}
+ --> () -> void
+i --> integer
+i --> integer
+i = 0 --> integer
+spectralnorm --> () -> void
+true --> boolean

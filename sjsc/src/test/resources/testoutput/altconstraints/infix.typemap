@@ -1,0 +1,20 @@
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+v --> integer
+v --> integer
+v = w = z --> integer
+w --> integer
+w --> integer
+w = z --> integer
+x + y --> integer
+x --> integer
+x --> integer
+x --> integer
+x = x + y --> integer
+y --> integer
+y --> integer
+z --> integer
+z --> integer

@@ -1,0 +1,40 @@
+0 --> integer
+0 --> integer
+1 --> integer
+2 --> integer
+3 --> integer
+4 --> integer
+5 --> integer
+[1, 2, 3, 4, 5] --> Array<integer>
+a --> Array<integer>
+a --> Array<integer>
+a --> Array<integer>
+a.length --> integer
+a[i] --> integer
+arr --> Array<integer>
+arr --> Array<integer>
+function sum(a) {
+  var result = 0;
+  for (var i = 0; i < a.length; i++) 
+    {
+      result = result + a[i];
+    }
+  return result;
+}
+ --> (Array<integer>) -> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i < a.length --> boolean
+i++ --> integer
+r --> integer
+result + a[i] --> integer
+result --> integer
+result --> integer
+result --> integer
+result --> integer
+result = result + a[i] --> integer
+sum --> (Array<integer>) -> integer
+sum --> (Array<integer>) -> integer
+sum(arr) --> integer

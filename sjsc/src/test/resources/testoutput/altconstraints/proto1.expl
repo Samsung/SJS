@@ -1,0 +1,2 @@
+Found 1 syntax errors:
+  expression t1 cannot be assigned to a constructor prototype (line 11) (at line 11)

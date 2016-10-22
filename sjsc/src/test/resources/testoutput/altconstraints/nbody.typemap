@@ -1,0 +1,717 @@
+(bodyi.mass * bodyj.mass) --> float
+(bodyi.mass * bodyj.mass) / distance --> float
+(bodyi.vx * bodyi.vx + bodyi.vy * bodyi.vy + bodyi.vz * bodyi.vz) --> float
+(distance * distance * distance) --> float
+-1.03622044471123109e-01 --> float
+-1.16032004402742839e+00 --> float
+-1.51111514016986312e+01 --> float
+-2.23307578892655734e-01 --> float
+-2.59193146099879641e+01 --> float
+-2.76742510726862411e-03 * DAYS_PER_YEAR --> float
+-2.76742510726862411e-03 --> float
+-2.96589568540237556e-05 * DAYS_PER_YEAR --> float
+-2.96589568540237556e-05 --> float
+-4.03523417114321381e-01 --> float
+-6.90460016972063023e-05 * DAYS_PER_YEAR --> float
+-6.90460016972063023e-05 --> float
+-9.51592254519715870e-05 * DAYS_PER_YEAR --> float
+-9.51592254519715870e-05 --> float
+-px --> float
+-px / SOLAR_MASS --> float
+-py --> float
+-py / SOLAR_MASS --> float
+-pz --> float
+-pz / SOLAR_MASS --> float
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.01 --> float
+0.5 * bodyi.mass * (bodyi.vx * bodyi.vx + bodyi.vy * bodyi.vy + bodyi.vz * bodyi.vz) --> float
+0.5 * bodyi.mass --> float
+0.5 --> float
+1 --> integer
+1 --> integer
+1.03622044471123109e-01 --> float
+1.16032004402742839e+00 --> float
+1.28943695621391310e+01 --> float
+1.51111514016986312e+01 --> float
+1.53796971148509165e+01 --> float
+1.62824170038242295e-03 * DAYS_PER_YEAR --> float
+1.62824170038242295e-03 --> float
+1.66007664274403694e-03 * DAYS_PER_YEAR --> float
+1.66007664274403694e-03 --> float
+1.79258772950371181e-01 --> float
+2.23307578892655734e-01 --> float
+2.30417297573763929e-05 * DAYS_PER_YEAR --> float
+2.30417297573763929e-05 --> float
+2.37847173959480950e-03 * DAYS_PER_YEAR --> float
+2.37847173959480950e-03 --> float
+2.59193146099879641e+01 --> float
+2.68067772490389322e-03 * DAYS_PER_YEAR --> float
+2.68067772490389322e-03 --> float
+2.76742510726862411e-03 --> float
+2.85885980666130812e-04 * SOLAR_MASS --> float
+2.85885980666130812e-04 --> float
+2.96460137564761618e-03 * DAYS_PER_YEAR --> float
+2.96460137564761618e-03 --> float
+2.96589568540237556e-05 --> float
+20 --> integer
+3.141592653589793 --> float
+365.24 --> float
+4 * PI * PI --> float
+4 * PI --> float
+4 --> integer
+4.03523417114321381e-01 --> float
+4.12479856412430479e+00 --> float
+4.36624404335156298e-05 * SOLAR_MASS --> float
+4.36624404335156298e-05 --> float
+4.84143144246472090e+00 --> float
+4.99852801234917238e-03 * DAYS_PER_YEAR --> float
+4.99852801234917238e-03 --> float
+5.15138902046611451e-05 * SOLAR_MASS --> float
+5.15138902046611451e-05 --> float
+6.90460016972063023e-05 --> float
+7.69901118419740425e-03 * DAYS_PER_YEAR --> float
+7.69901118419740425e-03 --> float
+8.34336671824457987e+00 --> float
+9 --> integer
+9 --> integer
+9.51592254519715870e-05 --> float
+9.54791938424326609e-04 * SOLAR_MASS --> float
+9.54791938424326609e-04 --> float
+DAYS_PER_YEAR --> float
+DAYS_PER_YEAR --> float
+DAYS_PER_YEAR --> float
+DAYS_PER_YEAR --> float
+DAYS_PER_YEAR --> float
+DAYS_PER_YEAR --> float
+DAYS_PER_YEAR --> float
+DAYS_PER_YEAR --> float
+DAYS_PER_YEAR --> float
+DAYS_PER_YEAR --> float
+DAYS_PER_YEAR --> float
+DAYS_PER_YEAR --> float
+DAYS_PER_YEAR --> float
+Math --> { E: float, LN2: float, LN10: float, LOG2E: float, LOG10E: float, PI: float, SQRT1_2: float, SQRT2: float, abs: [](float) -> float, acos: [](float) -> float, acosh: [](float) -> float, asin: [](float) -> float, asinh: [](float) -> float, atan: [](float) -> float, atanh: [](float) -> float, atan2: [](float,float) -> float, cbrt: [](float) -> float, ceil: [](float) -> float, cos: [](float) -> float, cosh: [](float) -> float, exp: [](float) -> float, expm1: [](float) -> float, floor: [](float) -> integer, fround: [](float) -> float, hypot: [](float,float) -> float, imul: [](float,float) -> float, log: [](float) -> float, log1p: [](float) -> float, log10: [](float) -> float, log2: [](float) -> float, max: [](float,float) -> float, min: [](float,float) -> float, pow: [](float,float) -> float, random: []() -> float, round: [](float) -> float, sign: [](float) -> float, sin: [](float) -> float, sinh: [](float) -> float, sqrt: [](float) -> float, tan: [](float) -> float, tanh: [](float) -> float, toSource: []() -> string, trunc: [](float) -> float |  }
+Math --> { E: float, LN2: float, LN10: float, LOG2E: float, LOG10E: float, PI: float, SQRT1_2: float, SQRT2: float, abs: [](float) -> float, acos: [](float) -> float, acosh: [](float) -> float, asin: [](float) -> float, asinh: [](float) -> float, atan: [](float) -> float, atanh: [](float) -> float, atan2: [](float,float) -> float, cbrt: [](float) -> float, ceil: [](float) -> float, cos: [](float) -> float, cosh: [](float) -> float, exp: [](float) -> float, expm1: [](float) -> float, floor: [](float) -> integer, fround: [](float) -> float, hypot: [](float,float) -> float, imul: [](float,float) -> float, log: [](float) -> float, log1p: [](float) -> float, log10: [](float) -> float, log2: [](float) -> float, max: [](float,float) -> float, min: [](float,float) -> float, pow: [](float,float) -> float, random: []() -> float, round: [](float) -> float, sign: [](float) -> float, sin: [](float) -> float, sinh: [](float) -> float, sqrt: [](float) -> float, tan: [](float) -> float, tanh: [](float) -> float, toSource: []() -> string, trunc: [](float) -> float |  }
+Math.sqrt --> [](float) -> float
+Math.sqrt --> [](float) -> float
+Math.sqrt(dx * dx + dy * dy + dz * dz) --> float
+Math.sqrt(dx * dx + dy * dy + dz * dz) --> float
+PI --> float
+PI --> float
+PI --> float
+SOLAR_MASS --> float
+SOLAR_MASS --> float
+SOLAR_MASS --> float
+SOLAR_MASS --> float
+SOLAR_MASS --> float
+SOLAR_MASS --> float
+SOLAR_MASS --> float
+SOLAR_MASS --> float
+SOLAR_MASS --> float
+[sun(), jupiter(), saturn(), uranus(), neptune()] --> Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>
+b --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+b --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+b --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+b --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+b --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+b.mass --> float
+b.vx * m --> float
+b.vx --> float
+b.vy * m --> float
+b.vy --> float
+b.vz * m --> float
+b.vz --> float
+bodies --> Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>
+bodies --> Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>
+bodies --> Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>
+bodies --> Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>
+bodies --> Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>
+bodies --> {  | bodies: Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>, advance: [](float) -> void, energy: []() -> float }
+bodies --> {  | bodies: Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>, advance: [](float) -> void, energy: []() -> float }
+bodies --> {  | bodies: Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>, advance: [](float) -> void, energy: []() -> float }
+bodies --> {  | bodies: Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>, advance: [](float) -> void, energy: []() -> float }
+bodies.advance --> [](float) -> void
+bodies.advance(0.01) --> void
+bodies.energy --> []() -> float
+bodies.energy --> []() -> float
+bodies.energy() --> float
+bodies.energy() --> float
+bodies.energy().toFixed --> [](integer) -> string
+bodies.energy().toFixed --> [](integer) -> string
+bodies.energy().toFixed(9) --> string
+bodies.energy().toFixed(9) --> string
+bodies.length --> integer
+bodies[0] --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodies[0].offsetMomentum --> [](float,float,float) -> void
+bodies[0].offsetMomentum(px, py, pz) --> void
+bodies[i] --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+body --> (float,float,float,float,float,float,float) -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+body --> (float,float,float,float,float,float,float) -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+body --> (float,float,float,float,float,float,float) -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+body --> (float,float,float,float,float,float,float) -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+body --> (float,float,float,float,float,float,float) -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+body --> (float,float,float,float,float,float,float) -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+body --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+body --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+body --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+body --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+body --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+body --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+body --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+body(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, SOLAR_MASS) --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+body(1.28943695621391310e+01, -1.51111514016986312e+01, -2.23307578892655734e-01, 2.96460137564761618e-03 * DAYS_PER_YEAR, 2.37847173959480950e-03 * DAYS_PER_YEAR, -2.96589568540237556e-05 * DAYS_PER_YEAR, 4.36624404335156298e-05 * SOLAR_MASS) --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+body(1.53796971148509165e+01, -2.59193146099879641e+01, 1.79258772950371181e-01, 2.68067772490389322e-03 * DAYS_PER_YEAR, 1.62824170038242295e-03 * DAYS_PER_YEAR, -9.51592254519715870e-05 * DAYS_PER_YEAR, 5.15138902046611451e-05 * SOLAR_MASS) --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+body(4.84143144246472090e+00, -1.16032004402742839e+00, -1.03622044471123109e-01, 1.66007664274403694e-03 * DAYS_PER_YEAR, 7.69901118419740425e-03 * DAYS_PER_YEAR, -6.90460016972063023e-05 * DAYS_PER_YEAR, 9.54791938424326609e-04 * SOLAR_MASS) --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+body(8.34336671824457987e+00, 4.12479856412430479e+00, -4.03523417114321381e-01, -2.76742510726862411e-03 * DAYS_PER_YEAR, 4.99852801234917238e-03 * DAYS_PER_YEAR, 2.30417297573763929e-05 * DAYS_PER_YEAR, 2.85885980666130812e-04 * SOLAR_MASS) --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+body.vx --> float
+body.vy --> float
+body.vz --> float
+body.x += dt * body.vx --> float
+body.x --> float
+body.y += dt * body.vy --> float
+body.y --> float
+body.z += dt * body.vz --> float
+body.z --> float
+bodyi --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyi --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyi --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyi --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyi --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyi --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyi --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyi --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyi --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyi --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyi --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyi --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyi --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyi --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyi --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyi --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyi --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyi --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyi --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyi --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyi --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyi --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyi.mass * bodyj.mass --> float
+bodyi.mass --> float
+bodyi.mass --> float
+bodyi.mass --> float
+bodyi.mass --> float
+bodyi.mass --> float
+bodyi.vx * bodyi.vx + bodyi.vy * bodyi.vy + bodyi.vz * bodyi.vz --> float
+bodyi.vx * bodyi.vx + bodyi.vy * bodyi.vy --> float
+bodyi.vx * bodyi.vx --> float
+bodyi.vx --> float
+bodyi.vx --> float
+bodyi.vx --> float
+bodyi.vx -= dx * bodyj.mass * mag --> float
+bodyi.vy * bodyi.vy --> float
+bodyi.vy --> float
+bodyi.vy --> float
+bodyi.vy --> float
+bodyi.vy -= dy * bodyj.mass * mag --> float
+bodyi.vz * bodyi.vz --> float
+bodyi.vz --> float
+bodyi.vz --> float
+bodyi.vz --> float
+bodyi.vz -= dz * bodyj.mass * mag --> float
+bodyi.x - bodyj.x --> float
+bodyi.x - bodyj.x --> float
+bodyi.x --> float
+bodyi.x --> float
+bodyi.y - bodyj.y --> float
+bodyi.y - bodyj.y --> float
+bodyi.y --> float
+bodyi.y --> float
+bodyi.z - bodyj.z --> float
+bodyi.z - bodyj.z --> float
+bodyi.z --> float
+bodyi.z --> float
+bodyj --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyj --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyj --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyj --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyj --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyj --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyj --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyj --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyj --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyj --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyj --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyj --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyj --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyj --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyj --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+bodyj.mass --> float
+bodyj.mass --> float
+bodyj.mass --> float
+bodyj.mass --> float
+bodyj.vx += dx * bodyi.mass * mag --> float
+bodyj.vx --> float
+bodyj.vy += dy * bodyi.mass * mag --> float
+bodyj.vy --> float
+bodyj.vz += dz * bodyi.mass * mag --> float
+bodyj.vz --> float
+bodyj.x --> float
+bodyj.x --> float
+bodyj.y --> float
+bodyj.y --> float
+bodyj.z --> float
+bodyj.z --> float
+distance * distance * distance --> float
+distance * distance --> float
+distance --> float
+distance --> float
+distance --> float
+distance --> float
+distance --> float
+distance --> float
+distance --> float
+distance --> float
+distance = Math.sqrt(dx * dx + dy * dy + dz * dz) --> float
+distance = Math.sqrt(dx * dx + dy * dy + dz * dz) --> float
+dt * body.vx --> float
+dt * body.vy --> float
+dt * body.vz --> float
+dt --> float
+dt --> float
+dt --> float
+dt --> float
+dt --> float
+dt / (distance * distance * distance) --> float
+dx * bodyi.mass * mag --> float
+dx * bodyi.mass --> float
+dx * bodyj.mass * mag --> float
+dx * bodyj.mass --> float
+dx * dx + dy * dy + dz * dz --> float
+dx * dx + dy * dy + dz * dz --> float
+dx * dx + dy * dy --> float
+dx * dx + dy * dy --> float
+dx * dx --> float
+dx * dx --> float
+dx --> float
+dx --> float
+dx --> float
+dx --> float
+dx --> float
+dx --> float
+dx --> float
+dx --> float
+dx --> float
+dx --> float
+dx = bodyi.x - bodyj.x --> float
+dx = bodyi.x - bodyj.x --> float
+dy * bodyi.mass * mag --> float
+dy * bodyi.mass --> float
+dy * bodyj.mass * mag --> float
+dy * bodyj.mass --> float
+dy * dy --> float
+dy * dy --> float
+dy --> float
+dy --> float
+dy --> float
+dy --> float
+dy --> float
+dy --> float
+dy --> float
+dy --> float
+dy --> float
+dy --> float
+dy = bodyi.y - bodyj.y --> float
+dy = bodyi.y - bodyj.y --> float
+dz * bodyi.mass * mag --> float
+dz * bodyi.mass --> float
+dz * bodyj.mass * mag --> float
+dz * bodyj.mass --> float
+dz * dz --> float
+dz * dz --> float
+dz --> float
+dz --> float
+dz --> float
+dz --> float
+dz --> float
+dz --> float
+dz --> float
+dz --> float
+dz --> float
+dz --> float
+dz = bodyi.z - bodyj.z --> float
+dz = bodyi.z - bodyj.z --> float
+e += 0.5 * bodyi.mass * (bodyi.vx * bodyi.vx + bodyi.vy * bodyi.vy + bodyi.vz * bodyi.vz) --> float
+e --> float
+e --> float
+e --> float
+e --> float
+e -= (bodyi.mass * bodyj.mass) / distance --> float
+function body(x, y, z, vx, vy, vz, mass) {
+  return {x: x, y: y, z: z, vx: vx, vy: vy, vz: vz, mass: mass, offsetMomentum: function(px, py, pz) {
+  this.vx = -px / SOLAR_MASS;
+  this.vy = -py / SOLAR_MASS;
+  this.vz = -pz / SOLAR_MASS;
+}};
+}
+ --> (float,float,float,float,float,float,float) -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+function jupiter() {
+  return body(4.84143144246472090e+00, -1.16032004402742839e+00, -1.03622044471123109e-01, 1.66007664274403694e-03 * DAYS_PER_YEAR, 7.69901118419740425e-03 * DAYS_PER_YEAR, -6.90460016972063023e-05 * DAYS_PER_YEAR, 9.54791938424326609e-04 * SOLAR_MASS);
+}
+ --> () -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+function nBodySystem(bodies) {
+  var px = 0.0;
+  var py = 0.0;
+  var pz = 0.0;
+  var size = bodies.length;
+  for (var i = 0; i < size; i++) 
+    {
+      var b = bodies[i];
+      var m = b.mass;
+      px += b.vx * m;
+      py += b.vy * m;
+      pz += b.vz * m;
+    }
+  bodies[0].offsetMomentum(px, py, pz);
+  return {bodies: bodies, advance: function(dt) {
+  var dx, dy, dz, distance, mag;
+  var size = this.bodies.length;
+  for (var i = 0; i < size; i++) 
+    {
+      var bodyi = this.bodies[i];
+      for (var j = i + 1; j < size; j++) 
+        {
+          var bodyj = this.bodies[j];
+          dx = bodyi.x - bodyj.x;
+          dy = bodyi.y - bodyj.y;
+          dz = bodyi.z - bodyj.z;
+          distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
+          mag = dt / (distance * distance * distance);
+          bodyi.vx -= dx * bodyj.mass * mag;
+          bodyi.vy -= dy * bodyj.mass * mag;
+          bodyi.vz -= dz * bodyj.mass * mag;
+          bodyj.vx += dx * bodyi.mass * mag;
+          bodyj.vy += dy * bodyi.mass * mag;
+          bodyj.vz += dz * bodyi.mass * mag;
+        }
+    }
+  for (var i = 0; i < size; i++) 
+    {
+      var body = this.bodies[i];
+      body.x += dt * body.vx;
+      body.y += dt * body.vy;
+      body.z += dt * body.vz;
+    }
+}, energy: function() {
+  var dx, dy, dz, distance;
+  var e = 0.0;
+  var size = this.bodies.length;
+  for (var i = 0; i < size; i++) 
+    {
+      var bodyi = this.bodies[i];
+      e += 0.5 * bodyi.mass * (bodyi.vx * bodyi.vx + bodyi.vy * bodyi.vy + bodyi.vz * bodyi.vz);
+      for (var j = i + 1; j < size; j++) 
+        {
+          var bodyj = this.bodies[j];
+          dx = bodyi.x - bodyj.x;
+          dy = bodyi.y - bodyj.y;
+          dz = bodyi.z - bodyj.z;
+          distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
+          e -= (bodyi.mass * bodyj.mass) / distance;
+        }
+    }
+  return e;
+}};
+}
+ --> (Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>) -> {  | bodies: Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>, advance: [](float) -> void, energy: []() -> float }
+function neptune() {
+  return body(1.53796971148509165e+01, -2.59193146099879641e+01, 1.79258772950371181e-01, 2.68067772490389322e-03 * DAYS_PER_YEAR, 1.62824170038242295e-03 * DAYS_PER_YEAR, -9.51592254519715870e-05 * DAYS_PER_YEAR, 5.15138902046611451e-05 * SOLAR_MASS);
+}
+ --> () -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+function saturn() {
+  return body(8.34336671824457987e+00, 4.12479856412430479e+00, -4.03523417114321381e-01, -2.76742510726862411e-03 * DAYS_PER_YEAR, 4.99852801234917238e-03 * DAYS_PER_YEAR, 2.30417297573763929e-05 * DAYS_PER_YEAR, 2.85885980666130812e-04 * SOLAR_MASS);
+}
+ --> () -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+function sun() {
+  return body(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, SOLAR_MASS);
+}
+ --> () -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+function uranus() {
+  return body(1.28943695621391310e+01, -1.51111514016986312e+01, -2.23307578892655734e-01, 2.96460137564761618e-03 * DAYS_PER_YEAR, 2.37847173959480950e-03 * DAYS_PER_YEAR, -2.96589568540237556e-05 * DAYS_PER_YEAR, 4.36624404335156298e-05 * SOLAR_MASS);
+}
+ --> () -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+function() {
+  var dx, dy, dz, distance;
+  var e = 0.0;
+  var size = this.bodies.length;
+  for (var i = 0; i < size; i++) 
+    {
+      var bodyi = this.bodies[i];
+      e += 0.5 * bodyi.mass * (bodyi.vx * bodyi.vx + bodyi.vy * bodyi.vy + bodyi.vz * bodyi.vz);
+      for (var j = i + 1; j < size; j++) 
+        {
+          var bodyj = this.bodies[j];
+          dx = bodyi.x - bodyj.x;
+          dy = bodyi.y - bodyj.y;
+          dz = bodyi.z - bodyj.z;
+          distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
+          e -= (bodyi.mass * bodyj.mass) / distance;
+        }
+    }
+  return e;
+} --> [{ bodies: Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }> |  }]() -> float
+function(dt) {
+  var dx, dy, dz, distance, mag;
+  var size = this.bodies.length;
+  for (var i = 0; i < size; i++) 
+    {
+      var bodyi = this.bodies[i];
+      for (var j = i + 1; j < size; j++) 
+        {
+          var bodyj = this.bodies[j];
+          dx = bodyi.x - bodyj.x;
+          dy = bodyi.y - bodyj.y;
+          dz = bodyi.z - bodyj.z;
+          distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
+          mag = dt / (distance * distance * distance);
+          bodyi.vx -= dx * bodyj.mass * mag;
+          bodyi.vy -= dy * bodyj.mass * mag;
+          bodyi.vz -= dz * bodyj.mass * mag;
+          bodyj.vx += dx * bodyi.mass * mag;
+          bodyj.vy += dy * bodyi.mass * mag;
+          bodyj.vz += dz * bodyi.mass * mag;
+        }
+    }
+  for (var i = 0; i < size; i++) 
+    {
+      var body = this.bodies[i];
+      body.x += dt * body.vx;
+      body.y += dt * body.vy;
+      body.z += dt * body.vz;
+    }
+} --> [{ bodies: Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }> |  }](float) -> void
+function(px, py, pz) {
+  this.vx = -px / SOLAR_MASS;
+  this.vy = -py / SOLAR_MASS;
+  this.vz = -pz / SOLAR_MASS;
+} --> [{  | vz: float, vy: float, vx: float }](float,float,float) -> void
+i + 1 --> integer
+i + 1 --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i < n --> boolean
+i < size --> boolean
+i < size --> boolean
+i < size --> boolean
+i < size --> boolean
+i++ --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j < size --> boolean
+j < size --> boolean
+j++ --> integer
+j++ --> integer
+jupiter --> () -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+jupiter --> () -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+jupiter() --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+m --> float
+m --> float
+m --> float
+m --> float
+mag --> float
+mag --> float
+mag --> float
+mag --> float
+mag --> float
+mag --> float
+mag --> float
+mag --> float
+mag = dt / (distance * distance * distance) --> float
+mass --> float
+mass --> float
+n --> integer
+n --> integer
+nBodySystem --> (Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>) -> {  | bodies: Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>, advance: [](float) -> void, energy: []() -> float }
+nBodySystem --> (Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>) -> {  | bodies: Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>, advance: [](float) -> void, energy: []() -> float }
+nBodySystem([sun(), jupiter(), saturn(), uranus(), neptune()]) --> {  | bodies: Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>, advance: [](float) -> void, energy: []() -> float }
+neptune --> () -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+neptune --> () -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+neptune() --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+printString --> (string) -> void
+printString --> (string) -> void
+printString(bodies.energy().toFixed(9)) --> void
+printString(bodies.energy().toFixed(9)) --> void
+px += b.vx * m --> float
+px --> float
+px --> float
+px --> float
+px --> float
+px --> float
+py += b.vy * m --> float
+py --> float
+py --> float
+py --> float
+py --> float
+py --> float
+pz += b.vz * m --> float
+pz --> float
+pz --> float
+pz --> float
+pz --> float
+pz --> float
+saturn --> () -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+saturn --> () -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+saturn() --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+size --> integer
+size --> integer
+size --> integer
+size --> integer
+size --> integer
+size --> integer
+size --> integer
+size --> integer
+size --> integer
+sun --> () -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+sun --> () -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+sun() --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+this --> {  | vz: float, vy: float, vx: float }
+this --> {  | vz: float, vy: float, vx: float }
+this --> {  | vz: float, vy: float, vx: float }
+this --> { bodies: Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }> |  }
+this --> { bodies: Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }> |  }
+this --> { bodies: Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }> |  }
+this --> { bodies: Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }> |  }
+this --> { bodies: Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }> |  }
+this --> { bodies: Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }> |  }
+this --> { bodies: Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }> |  }
+this.bodies --> Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>
+this.bodies --> Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>
+this.bodies --> Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>
+this.bodies --> Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>
+this.bodies --> Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>
+this.bodies --> Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>
+this.bodies --> Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>
+this.bodies.length --> integer
+this.bodies.length --> integer
+this.bodies[i] --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+this.bodies[i] --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+this.bodies[i] --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+this.bodies[j] --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+this.bodies[j] --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+this.vx --> float
+this.vx = -px / SOLAR_MASS --> float
+this.vy --> float
+this.vy = -py / SOLAR_MASS --> float
+this.vz --> float
+this.vz = -pz / SOLAR_MASS --> float
+uranus --> () -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+uranus --> () -> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+uranus() --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }
+vx --> float
+vx --> float
+vy --> float
+vy --> float
+vz --> float
+vz --> float
+x --> float
+x --> float
+y --> float
+y --> float
+z --> float
+z --> float
+{bodies: bodies, advance: function(dt) {
+  var dx, dy, dz, distance, mag;
+  var size = this.bodies.length;
+  for (var i = 0; i < size; i++) 
+    {
+      var bodyi = this.bodies[i];
+      for (var j = i + 1; j < size; j++) 
+        {
+          var bodyj = this.bodies[j];
+          dx = bodyi.x - bodyj.x;
+          dy = bodyi.y - bodyj.y;
+          dz = bodyi.z - bodyj.z;
+          distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
+          mag = dt / (distance * distance * distance);
+          bodyi.vx -= dx * bodyj.mass * mag;
+          bodyi.vy -= dy * bodyj.mass * mag;
+          bodyi.vz -= dz * bodyj.mass * mag;
+          bodyj.vx += dx * bodyi.mass * mag;
+          bodyj.vy += dy * bodyi.mass * mag;
+          bodyj.vz += dz * bodyi.mass * mag;
+        }
+    }
+  for (var i = 0; i < size; i++) 
+    {
+      var body = this.bodies[i];
+      body.x += dt * body.vx;
+      body.y += dt * body.vy;
+      body.z += dt * body.vz;
+    }
+}, energy: function() {
+  var dx, dy, dz, distance;
+  var e = 0.0;
+  var size = this.bodies.length;
+  for (var i = 0; i < size; i++) 
+    {
+      var bodyi = this.bodies[i];
+      e += 0.5 * bodyi.mass * (bodyi.vx * bodyi.vx + bodyi.vy * bodyi.vy + bodyi.vz * bodyi.vz);
+      for (var j = i + 1; j < size; j++) 
+        {
+          var bodyj = this.bodies[j];
+          dx = bodyi.x - bodyj.x;
+          dy = bodyi.y - bodyj.y;
+          dz = bodyi.z - bodyj.z;
+          distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
+          e -= (bodyi.mass * bodyj.mass) / distance;
+        }
+    }
+  return e;
+}} --> {  | bodies: Array<{  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }>, advance: [](float) -> void, energy: []() -> float }
+{x: x, y: y, z: z, vx: vx, vy: vy, vz: vz, mass: mass, offsetMomentum: function(px, py, pz) {
+  this.vx = -px / SOLAR_MASS;
+  this.vy = -py / SOLAR_MASS;
+  this.vz = -pz / SOLAR_MASS;
+}} --> {  | x: float, y: float, z: float, vx: float, vy: float, vz: float, mass: float, offsetMomentum: [](float,float,float) -> void }

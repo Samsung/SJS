@@ -1,0 +1,322 @@
+CheckArity(ret(|Math.sqrt|))
+CheckArity(ret(|atAu|))
+CheckArity(ret(|atAu|))
+CheckArity(ret(|atu|))
+CheckArity(ret(|au|))
+CheckArity(ret(|a|))
+CheckArity(ret(|a|))
+CheckArity(ret(|printString|))
+CheckArity(ret(|spectralnorm|))
+CheckArity(ret(|x.toFixed|))
+Elem(|u|)=|u[i]|
+Elem(|u|)=|u[i]|
+Elem(|u|)=|u[j]|
+Elem(|u|)=|u[j]|
+Elem(|v|)=|v[i]|
+Elem(|v|)=|v[i]|
+Elem(|v|)=|v[i]|
+Elem(|v|)=|v[i]|
+Elem(|v|)=|v[i]|
+Elem(|v|)=|v[i]|
+Elem(|w|)=|w[i]|
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|1.0|]
+MakeConcreteConstraint [term=|34|]
+MakeConcreteConstraint [term=|9|]
+MakeConcreteConstraint [term=|Math|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|a(i, j) * u[j]|]
+MakeConcreteConstraint [term=|a(j, i) * u[j]|]
+MakeConcreteConstraint [term=|argument|]
+MakeConcreteConstraint [term=|i|]
+MakeConcreteConstraint [term=|i|]
+MakeConcreteConstraint [term=|j|]
+MakeConcreteConstraint [term=|j|]
+MakeConcreteConstraint [term=|spectralnorm(argument)|]
+MakeConcreteConstraint [term=|t|]
+MakeConcreteConstraint [term=|t|]
+MakeConcreteConstraint [term=|u[i] * v[i]|]
+MakeConcreteConstraint [term=|u|]
+MakeConcreteConstraint [term=|u|]
+MakeConcreteConstraint [term=|u|]
+MakeConcreteConstraint [term=|vBv / vv|]
+MakeConcreteConstraint [term=|v[i] * v[i]|]
+MakeConcreteConstraint [term=|v|]
+MakeConcreteConstraint [term=|v|]
+MakeConcreteConstraint [term=|v|]
+MakeConcreteConstraint [term=|w[i] = 0.0|]
+MakeConcreteConstraint [term=|w|]
+MakeConcreteConstraint [term=|w|]
+MakeConcreteConstraint [term=|w|]
+MakeConcreteConstraint [term=|w|]
+MakeConcreteConstraint [term=|x.toFixed(9)|]
+MakeConcreteConstraint [term=|x|]
+MakeConcreteConstraint [term=|y|]
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+param(|function atAu|,0)=|u|
+param(|function atAu|,1)=|v|
+param(|function atAu|,2)=|w|
+param(|function atu|,0)=|u|
+param(|function atu|,1)=|v|
+param(|function au|,0)=|u|
+param(|function au|,1)=|v|
+param(|function a|,0)=|i|
+param(|function a|,1)=|j|
+param(|function spectralnorm|,0)=|n|
+ret(|function atAu|)=void
+ret(|function atu|)=void
+ret(|function au|)=void
+|((i + j) * (i + j + 1.0) / 2.0 + i + 1.0)|=|(i + j) * (i + j + 1.0) / 2.0 + i + 1.0|
+|(i + j + 1.0)|=|i + j + 1.0|
+|(i + j) * (i + j + 1.0) / 2.0 + i + 1.0|=op(|(i + j) * (i + j + 1.0) / 2.0 + i|+|1.0|)
+|(i + j) * (i + j + 1.0) / 2.0 + i|=op(|(i + j) * (i + j + 1.0) / 2.0|+|i|)
+|(i + j) * (i + j + 1.0) / 2.0|=op(|(i + j) * (i + j + 1.0)|/|2.0|)
+|(i + j) * (i + j + 1.0)|=op(|(i + j)|*|(i + j + 1.0)|)
+|(i + j)|=|i + j|
+|++i|=op(++|i|)
+|++i|=op(++|i|)
+|++i|=op(++|i|)
+|++i|=op(++|i|)
+|++i|=op(++|i|)
+|++j|=op(++|j|)
+|++j|=op(++|j|)
+|0.0|<:|t|
+|0.0|<:|t|
+|0.0|<:|vBv|
+|0.0|<:|vv|
+|0.0|<:|w[i]|
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|j|
+|0|<:|j|
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|1.0 / ((i + j) * (i + j + 1.0) / 2.0 + i + 1.0)|<:ret(|function a|)
+|1.0 / ((i + j) * (i + j + 1.0) / 2.0 + i + 1.0)|=op(|1.0|/|((i + j) * (i + j + 1.0) / 2.0 + i + 1.0)|)
+|1.0|<:|u[i]|
+|1.0|=float
+|1.0|=float
+|1.0|=float
+|1.0|=float
+|10|=integer
+|2.0|=float
+|34|<:|argument|
+|34|=integer
+|9|<:param(|x.toFixed|,0)
+|9|=integer
+|Math.sqrt(vBv / vv)|<:ret(|function spectralnorm|)
+|Math.sqrt(vBv / vv)|=ret(|Math.sqrt|)
+|Math.sqrt|=prop(|Math|,sqrt)
+|Math|=|Math|
+|[]|<:|u|
+|[]|<:|v|
+|[]|<:|w|
+|a(i, j) * u[j]|<:|t|
+|a(i, j) * u[j]|=op(|a(i, j)|*|u[j]|)
+|a(i, j)|=ret(|a|)
+|a(j, i) * u[j]|<:|t|
+|a(j, i) * u[j]|=op(|a(j, i)|*|u[j]|)
+|a(j, i)|=ret(|a|)
+|argument|<:param(|spectralnorm|,0)
+|argument|=|argument|
+|atAu(u, v, w)|=ret(|atAu|)
+|atAu(v, u, w)|=ret(|atAu|)
+|atAu|=|atAu|
+|atAu|=|atAu|
+|atu(w, v)|=ret(|atu|)
+|atu|=|atu|
+|au(u, w)|=ret(|au|)
+|au|=|au|
+|a|=|a|
+|a|=|a|
+|function atAu|<:|atAu|
+|function atu|<:|atu|
+|function au|<:|au|
+|function a|<:|a|
+|function spectralnorm|<:|spectralnorm|
+|i + j + 1.0|=op(|i + j|+|1.0|)
+|i + j|=op(|i|+|j|)
+|i + j|=op(|i|+|j|)
+|i < 10|=op(|i|<|10|)
+|i < n|=op(|i|<|n|)
+|i < n|=op(|i|<|n|)
+|i < u.length|=op(|i|<|u.length|)
+|i < u.length|=op(|i|<|u.length|)
+|i = 0|=|i|
+|i = 0|=|i|
+|i = 0|=|i|
+|i|<:param(|a|,0)
+|i|<:param(|a|,1)
+|i|=Key(|u|)
+|i|=Key(|u|)
+|i|=Key(|v|)
+|i|=Key(|v|)
+|i|=Key(|v|)
+|i|=Key(|v|)
+|i|=Key(|v|)
+|i|=Key(|v|)
+|i|=Key(|w|)
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|j < u.length|=op(|j|<|u.length|)
+|j < u.length|=op(|j|<|u.length|)
+|j|<:param(|a|,0)
+|j|<:param(|a|,1)
+|j|=Key(|u|)
+|j|=Key(|u|)
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|n|=|n|
+|n|=|n|
+|printString(y)|=ret(|printString|)
+|printString|=|printString|
+|spectralnorm(argument)|<:|x|
+|spectralnorm(argument)|=ret(|spectralnorm|)
+|spectralnorm|=|spectralnorm|
+|t += a(i, j) * u[j]|=|t|
+|t += a(j, i) * u[j]|=|t|
+|t|<:|v[i]|
+|t|<:|v[i]|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|u.length|=prop(|u|,length)
+|u.length|=prop(|u|,length)
+|u.length|=prop(|u|,length)
+|u.length|=prop(|u|,length)
+|u[i] * v[i]|<:|vBv|
+|u[i] * v[i]|=op(|u[i]|*|v[i]|)
+|u[i] = 1.0|=|u[i]|
+|u|<:param(|atAu|,0)
+|u|<:param(|atAu|,1)
+|u|<:param(|au|,0)
+|u|=|u|
+|u|=|u|
+|u|=|u|
+|u|=|u|
+|u|=|u|
+|u|=|u|
+|u|=|u|
+|u|=|u|
+|u|=|u|
+|u|=|u|
+|u|=|u|
+|vBv += u[i] * v[i]|=|vBv|
+|vBv / vv|<:param(|Math.sqrt|,0)
+|vBv / vv|=op(|vBv|/|vv|)
+|vBv|=|vBv|
+|vBv|=|vBv|
+|v[i] * v[i]|<:|vv|
+|v[i] * v[i]|=op(|v[i]|*|v[i]|)
+|v[i] = t|=|v[i]|
+|v[i] = t|=|v[i]|
+|v[i] = w[i] = 0.0|=|v[i]|
+|vv += v[i] * v[i]|=|vv|
+|vv|=|vv|
+|vv|=|vv|
+|v|<:param(|atAu|,0)
+|v|<:param(|atAu|,1)
+|v|<:param(|atu|,1)
+|v|=|v|
+|v|=|v|
+|v|=|v|
+|v|=|v|
+|v|=|v|
+|v|=|v|
+|v|=|v|
+|v|=|v|
+|v|=|v|
+|w[i] = 0.0|<:|v[i]|
+|w[i] = 0.0|=|w[i]|
+|w|<:param(|atAu|,2)
+|w|<:param(|atAu|,2)
+|w|<:param(|atu|,0)
+|w|<:param(|au|,1)
+|w|=|w|
+|w|=|w|
+|w|=|w|
+|w|=|w|
+|w|=|w|
+|x.toFixed(9)|<:|y|
+|x.toFixed(9)|=ret(|x.toFixed|)
+|x.toFixed|=prop(|x|,toFixed)
+|x|=|x|
+|y|<:param(|printString|,0)
+|y|=|y|

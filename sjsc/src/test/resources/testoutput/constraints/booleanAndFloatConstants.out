@@ -1,0 +1,9 @@
+MakeConcreteConstraint [term=|2.0|]
+MakeConcreteConstraint [term=|false|]
+MakeConcreteConstraint [term=|true|]
+|2.0|<:|y|
+|2.0|=float
+|false|<:|z|
+|false|=boolean
+|true|<:|x|
+|true|=boolean

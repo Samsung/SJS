@@ -1,0 +1,11 @@
+3 --> integer
+4 --> integer
+false --> boolean
+printInt --> (integer) -> void
+printInt --> (integer) -> void
+printInt(3) --> void
+printInt(4) --> void
+x --> {  | f: boolean }
+x --> {  | f: boolean }
+x.f --> boolean
+{f: false} --> {  | f: boolean }

@@ -1,0 +1,4 @@
+MEET not defined on types: string and integer
+use: |x| at line 2
+use: |x| at line 3
+target term: |x| at line 2

@@ -1,0 +1,67 @@
+CheckArity(ret(|console.log|))
+CheckArity(ret(|console.log|))
+CheckArity(ret(|console.log|))
+CheckArity(ret(|console.log|))
+CheckArity(ret(|say|))
+CheckArity(ret(|say|))
+CheckArity(ret(|say|))
+CheckArity(ret(|say|))
+MakeConcreteConstraint [term=|"Double"|]
+MakeConcreteConstraint [term=|"Single"|]
+MakeConcreteConstraint [term=|"Too many"|]
+MakeConcreteConstraint [term=|"Triple"|]
+MakeConcreteConstraint [term=|11|]
+MakeConcreteConstraint [term=|12|]
+MakeConcreteConstraint [term=|13|]
+MakeConcreteConstraint [term=|14|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+param(|function say|,0)=|k|
+ret(|function say|)=void
+void=ret(|function say|)
+|"Double"|<:param(|console.log|,0)
+|"Double"|=string
+|"Single"|<:param(|console.log|,0)
+|"Single"|=string
+|"Too many"|<:param(|console.log|,0)
+|"Too many"|=string
+|"Triple"|<:param(|console.log|,0)
+|"Triple"|=string
+|11|<:param(|say|,0)
+|11|=integer
+|12|<:param(|say|,0)
+|12|=integer
+|13|<:param(|say|,0)
+|13|=integer
+|14|<:param(|say|,0)
+|14|=integer
+|1|=integer
+|2|=integer
+|3|=integer
+|console.log("Double")|=ret(|console.log|)
+|console.log("Single")|=ret(|console.log|)
+|console.log("Too many")|=ret(|console.log|)
+|console.log("Triple")|=ret(|console.log|)
+|console.log|=prop(|console|,log)
+|console.log|=prop(|console|,log)
+|console.log|=prop(|console|,log)
+|console.log|=prop(|console|,log)
+|console|=|console|
+|console|=|console|
+|console|=|console|
+|console|=|console|
+|function say|<:|say|
+|k|=|1|
+|k|=|2|
+|k|=|3|
+|k|=|k|
+|say(11)|=ret(|say|)
+|say(12)|=ret(|say|)
+|say(13)|=ret(|say|)
+|say(14)|=ret(|say|)
+|say|=|say|
+|say|=|say|
+|say|=|say|
+|say|=|say|

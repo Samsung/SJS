@@ -1,0 +1,2 @@
+Error on line 4: wrong number of parameters in call: new C(B)
+    Note: 0 expected, 1 given

@@ -1,0 +1,468 @@
+CheckArity(ret(|Array|))
+CheckArity(ret(|Array|))
+CheckArity(ret(|Array|))
+CheckArity(ret(|Array|))
+CheckArity(ret(|fannkuch|))
+CheckArity(ret(|printString|))
+Elem(|pf|)=|pf[0]|
+Elem(|pf|)=|pf[1]|
+Elem(|p|)=|p[0]|
+Elem(|p|)=|p[0]|
+Elem(|p|)=|p[0]|
+Elem(|p|)=|p[0]|
+Elem(|p|)=|p[1]|
+Elem(|p|)=|p[1]|
+Elem(|p|)=|p[1]|
+Elem(|p|)=|p[1]|
+Elem(|p|)=|p[2]|
+Elem(|p|)=|p[2]|
+Elem(|p|)=|p[i + 1]|
+Elem(|p|)=|p[i]|
+Elem(|p|)=|p[i]|
+Elem(|p|)=|p[j + 1]|
+Elem(|p|)=|p[j]|
+Elem(|q|)=|q[i]|
+Elem(|q|)=|q[i]|
+Elem(|q|)=|q[i]|
+Elem(|q|)=|q[i]|
+Elem(|q|)=|q[j]|
+Elem(|q|)=|q[j]|
+Elem(|q|)=|q[q0]|
+Elem(|q|)=|q[q0]|
+Elem(|s|)=|s[i]|
+Elem(|s|)=|s[i]|
+Elem(|s|)=|s[i]|
+Elem(|s|)=|s[i]|
+MakeConcreteConstraint [term=op(-|1|)]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|17|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|Array(n)|]
+MakeConcreteConstraint [term=|Array(n)|]
+MakeConcreteConstraint [term=|Array(n)|]
+MakeConcreteConstraint [term=|fannkuch(n)|]
+MakeConcreteConstraint [term=|flips|]
+MakeConcreteConstraint [term=|i|]
+MakeConcreteConstraint [term=|i|]
+MakeConcreteConstraint [term=|i|]
+MakeConcreteConstraint [term=|i|]
+MakeConcreteConstraint [term=|maxflips|]
+MakeConcreteConstraint [term=|n - 1|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|p[0]|]
+MakeConcreteConstraint [term=|p[0]|]
+MakeConcreteConstraint [term=|p[0]|]
+MakeConcreteConstraint [term=|p[1]|]
+MakeConcreteConstraint [term=|p[1]|]
+MakeConcreteConstraint [term=|p[2]|]
+MakeConcreteConstraint [term=|p[i]|]
+MakeConcreteConstraint [term=|p[j + 1]|]
+MakeConcreteConstraint [term=|pf[0] + "\n" + "Pfannkuchen(" + n + ") = " + pf[1]|]
+MakeConcreteConstraint [term=|q0 - 1|]
+MakeConcreteConstraint [term=|q0|]
+MakeConcreteConstraint [term=|q[i]|]
+MakeConcreteConstraint [term=|q[j]|]
+MakeConcreteConstraint [term=|q[q0]|]
+MakeConcreteConstraint [term=|qq|]
+MakeConcreteConstraint [term=|s[i]|]
+MakeConcreteConstraint [term=|sign * flips|]
+MakeConcreteConstraint [term=|sum|]
+MakeConcreteConstraint [term=|sx - 1|]
+MakeConcreteConstraint [term=|t|]
+MakeConcreteConstraint [term=|t|]
+MakeConcreteConstraint [term=|t|]
+MakeConcreteConstraint [term=|t|]
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,1)
+TP(Array)=param(|Array|,1)
+TP(Array)=param(|Array|,1)
+TP(Array)=param(|Array|,1)
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+op(-|1|)<:|sign|
+param(|function fannkuch|,0)=|n|
+|") = "|=string
+|"Pfannkuchen("|=string
+|"\n"|=string
+|-1|=op(-|1|)
+|0|<:|i|
+|0|<:|j|
+|0|<:|maxflips|
+|0|<:|sum|
+|0|=Key(|pf|)
+|0|=Key(|p|)
+|0|=Key(|p|)
+|0|=Key(|p|)
+|0|=Key(|p|)
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|17|<:|n|
+|17|=integer
+|1|<:|flips|
+|1|<:|i|
+|1|<:|i|
+|1|<:|sign|
+|1|<:|sign|
+|1|=Key(|pf|)
+|1|=Key(|p|)
+|1|=Key(|p|)
+|1|=Key(|p|)
+|1|=Key(|p|)
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|2|<:|i|
+|2|=Key(|p|)
+|2|=Key(|p|)
+|2|=integer
+|2|=integer
+|2|=integer
+|3|=integer
+|Array(n)|<:|p|
+|Array(n)|<:|q|
+|Array(n)|<:|s|
+|Array(n)|=ret(|Array|)
+|Array(n)|=ret(|Array|)
+|Array(n)|=ret(|Array|)
+|Array(sum, maxflips)|<:ret(|function fannkuch|)
+|Array(sum, maxflips)|=ret(|Array|)
+|Array|=|Array|
+|Array|=|Array|
+|Array|=|Array|
+|Array|=|Array|
+|fannkuch(n)|<:|pf|
+|fannkuch(n)|=ret(|fannkuch|)
+|fannkuch|=|fannkuch|
+|flips > maxflips|=op(|flips|>|maxflips|)
+|flips++|=op(|flips|++)
+|flips|<:|maxflips|
+|flips|=|flips|
+|flips|=|flips|
+|flips|=|flips|
+|flips|=|flips|
+|function fannkuch|<:|fannkuch|
+|i + 1|=Key(|p|)
+|i + 1|=op(|i|+|1|)
+|i < j|=op(|i|<|j|)
+|i < n|=op(|i|<|n|)
+|i < n|=op(|i|<|n|)
+|i < n|=op(|i|<|n|)
+|i == m|=op(|i|==|m|)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i|<:|p[i]|
+|i|<:|q[i]|
+|i|<:|s[i]|
+|i|<:|s[i]|
+|i|=Key(|p|)
+|i|=Key(|p|)
+|i|=Key(|q|)
+|i|=Key(|q|)
+|i|=Key(|q|)
+|i|=Key(|q|)
+|i|=Key(|s|)
+|i|=Key(|s|)
+|i|=Key(|s|)
+|i|=Key(|s|)
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|j + 1|=Key(|p|)
+|j + 1|=op(|j|+|1|)
+|j <= i|=op(|j|<=|i|)
+|j++|=op(|j|++)
+|j--|=op(|j|--)
+|j|=Key(|p|)
+|j|=Key(|q|)
+|j|=Key(|q|)
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|maxflips = flips|=|maxflips|
+|maxflips|<:param(|Array|,1)
+|maxflips|=|maxflips|
+|maxflips|=|maxflips|
+|maxflips|=|maxflips|
+|m|=|m|
+|n - 1|<:|m|
+|n - 1|=op(|n|-|1|)
+|n|<:param(|Array|,0)
+|n|<:param(|Array|,0)
+|n|<:param(|Array|,0)
+|n|<:param(|fannkuch|,0)
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|p[0] = t|=|p[0]|
+|p[0]|<:|p[1]|
+|p[0]|<:|q0|
+|p[0]|<:|t|
+|p[1] = p[0]|=|p[1]|
+|p[1] = p[2]|=|p[1]|
+|p[1]|<:|t|
+|p[1]|<:|t|
+|p[2] = t|=|p[2]|
+|p[2]|<:|p[1]|
+|p[i + 1] = t|=|p[i + 1]|
+|p[i] = i|=|p[i]|
+|p[i]|<:|q[i]|
+|p[j + 1]|<:|p[j]|
+|p[j] = p[j + 1]|=|p[j]|
+|pf[0] + "\n" + "Pfannkuchen(" + n + ") = " + pf[1]|<:param(|printString|,0)
+|pf[0] + "\n" + "Pfannkuchen(" + n + ") = " + pf[1]|=op(|pf[0] + "\n" + "Pfannkuchen(" + n + ") = "|+|pf[1]|)
+|pf[0] + "\n" + "Pfannkuchen(" + n + ") = "|=op(|pf[0] + "\n" + "Pfannkuchen(" + n|+|") = "|)
+|pf[0] + "\n" + "Pfannkuchen(" + n|=op(|pf[0] + "\n" + "Pfannkuchen("|+|n|)
+|pf[0] + "\n" + "Pfannkuchen("|=op(|pf[0] + "\n"|+|"Pfannkuchen("|)
+|pf[0] + "\n"|=op(|pf[0]|+|"\n"|)
+|pf|=|pf|
+|pf|=|pf|
+|printString(pf[0] + "\n" + "Pfannkuchen(" + n + ") = " + pf[1])|=ret(|printString|)
+|printString|=|printString|
+|p|=|p|
+|p|=|p|
+|p|=|p|
+|p|=|p|
+|p|=|p|
+|p|=|p|
+|p|=|p|
+|p|=|p|
+|p|=|p|
+|p|=|p|
+|p|=|p|
+|p|=|p|
+|p|=|p|
+|p|=|p|
+|p|=|p|
+|q0 != 0|=op(|q0|!=|0|)
+|q0 - 1|<:|j|
+|q0 - 1|=op(|q0|-|1|)
+|q0 = qq|=|q0|
+|q0 >= 3|=op(|q0|>=|3|)
+|q0|<:|q[q0]|
+|q0|=Key(|q|)
+|q0|=Key(|q|)
+|q0|=|q0|
+|q0|=|q0|
+|q0|=|q0|
+|q0|=|q0|
+|q0|=|q0|
+|q0|=|q0|
+|q0|=|q0|
+|q[i] = i|=|q[i]|
+|q[i] = p[i]|=|q[i]|
+|q[i] = q[j]|=|q[i]|
+|q[i]|<:|t|
+|q[j] = t|=|q[j]|
+|q[j]|<:|q[i]|
+|q[q0] = q0|=|q[q0]|
+|q[q0]|<:|qq|
+|qq == 0|=op(|qq|==|0|)
+|qq|<:|q0|
+|qq|=|qq|
+|qq|=|qq|
+|q|=|q|
+|q|=|q|
+|q|=|q|
+|q|=|q|
+|q|=|q|
+|q|=|q|
+|q|=|q|
+|q|=|q|
+|s[i] = i|=|s[i]|
+|s[i] = i|=|s[i]|
+|s[i] = sx - 1|=|s[i]|
+|s[i]|<:|sx|
+|sign * flips|<:|sum|
+|sign * flips|=op(|sign|*|flips|)
+|sign = -1|=|sign|
+|sign = 1|=|sign|
+|sign == 1|=op(|sign|==|1|)
+|sign|=|sign|
+|sign|=|sign|
+|sign|=|sign|
+|sign|=|sign|
+|sum += sign * flips|=|sum|
+|sum|<:param(|Array|,0)
+|sum|=|sum|
+|sum|=|sum|
+|sx != 0|=op(|sx|!=|0|)
+|sx - 1|<:|s[i]|
+|sx - 1|=op(|sx|-|1|)
+|sx|=|sx|
+|sx|=|sx|
+|s|=|s|
+|s|=|s|
+|s|=|s|
+|s|=|s|
+|t = p[0]|=|t|
+|t = q[i]|=|t|
+|true|=boolean
+|true|=boolean
+|t|<:|p[0]|
+|t|<:|p[2]|
+|t|<:|p[i + 1]|
+|t|<:|q[j]|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|

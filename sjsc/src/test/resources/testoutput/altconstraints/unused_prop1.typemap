@@ -1,0 +1,20 @@
+1 --> integer
+C --> ctor<0>[null]() -> {  | a: integer, b: ___ }
+C --> ctor<0>[null]() -> {  | a: integer, b: ___ }
+function C() {
+  this.a = 1;
+  this.b = undefined;
+}
+ --> ctor<0>[null]() -> {  | a: integer, b: ___ }
+new C() --> {  | a: integer, b: ___ }
+this --> {  | a: integer, b: ___ }
+this --> {  | a: integer, b: ___ }
+this.a --> integer
+this.a = 1 --> integer
+this.b --> ___
+this.b = undefined --> ___
+undefined --> ___
+x --> {  | a: integer, b: ___ }
+x --> {  | a: integer, b: ___ }
+x.a --> integer
+y --> integer

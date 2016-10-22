@@ -1,0 +1,4 @@
+join not defined on types: string and integer
+type source: |"hello"| at line 2
+type source: |1| at line 1
+target term: |x| at line 1

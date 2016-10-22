@@ -1,0 +1,799 @@
+
+id: 0
+vars: {
+	"Object": "var",
+	"Function": "var",
+	"Array": "var",
+	"RegExp": "var",
+	"console": "var",
+	"x": "var"
+}
+captured: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp",
+	"console",
+	"x"
+]
+environment: []
+usesArguments: false
+isCatch: false
+parent: -1
+
+
+id: 1
+vars: {}
+captured: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp"
+]
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp",
+	"console",
+	"x"
+]
+usesArguments: false
+isCatch: false
+parent: 0
+
+
+id: 2
+vars: {
+	"arguments": "special"
+}
+captured: []
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp"
+]
+usesArguments: false
+isCatch: false
+parent: 1
+
+
+id: 3
+vars: {
+	"arguments": "special"
+}
+captured: []
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp"
+]
+usesArguments: false
+isCatch: false
+parent: 1
+
+
+id: 4
+vars: {
+	"arguments": "special",
+	"str": "arg"
+}
+captured: []
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp"
+]
+usesArguments: false
+isCatch: false
+parent: 1
+
+
+id: 5
+vars: {
+	"arguments": "special"
+}
+captured: []
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp"
+]
+usesArguments: false
+isCatch: false
+parent: 1
+
+
+id: 6
+vars: {
+	"arguments": "special"
+}
+captured: []
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp"
+]
+usesArguments: false
+isCatch: false
+parent: 1
+
+Function = function () {
+};
+Object = function () {
+};
+console = {};
+console.log = function (str) {
+    'use js: console.log(str);';
+};
+Array = function () {
+};
+RegExp = function () {
+};
+x += 3;
+var args = [];
+var nonExistentValue = new Object();
+var target = -1; // default target is -1
+
+function OBJECT_FUNCTION() {
+    this.properties = new Object(null);
+}
+
+function BOX () {
+    this.value = undefined;
+}
+
+function ToObject(arg) {
+    return arg; // @todo consider the case where arg is a primitive value, undefined, or null
+}
+
+function ToString(arg) {
+    return arg+""; // @todo consider the case where arg is an instance of OBJECT_FUNCTION
+}
+
+function OP_CLEARARGS() {
+    args = [];
+}
+
+function OP_POPARG() {
+    return args.pop();
+}
+
+function OP_PUSHARG(arg1) {
+    args.push(arg1);
+}
+
+function OP_TYPEOF(arg1) {
+    return typeof args1;
+}
+
+function OP_POS(arg1) {
+    return +arg1;
+}
+
+function OP_NEG() {
+    return -arg1;
+}
+
+function OP_INC(arg1) {
+    return ++arg1;
+}
+
+function OP_DEC(arg1) {
+    return --arg1;
+}
+
+function OP_BITNOT(arg1) {
+    return ~arg1;
+}
+
+function OP_LOGNOT(arg1) {
+    return !arg1;
+}
+
+function OP_ITERATOR(arg1) {
+    var ret = [], proto = null;
+    while(arg1 !== null) {
+        arg1 = ToObject(arg1);
+        for (var key in arg1.properties) {
+            if (key === "*__proto__") {
+                proto = arg1.properties[key]["[[Value]]"];
+            } else if (arg1.properties[key] !== undefined && arg1.properties[key] !== nonExistentValue) {
+                ret.push(key.substring(1));
+            }
+        }
+        arg1 = proto;
+    }
+    return {keys: ret, index: 0};
+}
+
+function OP_NEXTKEY(iter) {
+    return iter.keys[iter.index++];
+}
+
+function OP_BITOR(arg1, arg2) {
+    return arg1 | arg2;
+}
+
+function OP_BITXOR(arg1, arg2) {
+    return arg1 ^ arg2;
+}
+
+function OP_BITAND(arg1, arg2) {
+    arg1 & arg2;
+}
+
+function OP_EQ(arg1, arg2) {
+    return arg1 == arg2;
+}
+
+function OP_NE(arg1, arg2) {
+    return arg1 != arg2;
+}
+
+function OP_STRICTEQ(arg1, arg2) {
+    return arg1 === arg2;
+}
+
+function OP_STRICTNE(arg1, arg2) {
+    return arg1 !== arg2;
+}
+
+function OP_LT(arg1, arg2) {
+    return arg1 < arg2;
+}
+
+function OP_GT(arg1, arg2) {
+    return arg1 > arg2;
+}
+
+function OP_LE(arg1, arg2) {
+    return arg1 <= arg2;
+}
+
+function OP_GE(arg1, arg2) {
+    return arg1 >= arg2;
+}
+
+function OP_INSTANCEOF(arg1, arg2) {
+    return arg1 instanceof arg2;
+}
+
+function OP_IN(arg1, arg2) {
+    arg2 = ToString(arg2);
+    do {
+        arg1 = ToObject(arg1);
+        var ret = arg1.properties["*" + arg2];
+        if (ret === undefined || ret === nonExistentValue) {
+            arg1 = arg1.properties["*__proto__"]["[[Value]]"];
+        } else {
+            return true;
+        }
+    } while(arg1 !== null);
+    return false;
+}
+
+function OP_SHL(arg1, arg2) {
+    return arg1 << arg2;
+}
+
+function OP_SHR(arg1, arg2) {
+    return arg1 >> arg2;
+}
+
+function OP_USHR(arg1, arg2) {
+    return arg1 >>> arg2;
+}
+
+function OP_ADD(arg1, arg2) {
+    return arg1 + arg2;
+}
+
+function OP_SUB(arg1, arg2) {
+    return arg1 - arg2;
+}
+
+function OP_MUL(arg1, arg2) { 
+    return arg1 * arg2;
+}
+
+function OP_DIV(arg1, arg2) { 
+    return arg1 / arg2;
+}
+
+function OP_MOD(arg1, arg2) { 
+    return arg1 % arg2;
+}
+
+function OP_NAN() {
+    return NaN;
+}
+
+function OP_UNDEF() {
+    return undefined;
+}
+
+function OP_NONEXISTENT() {
+    return nonExistentValue;
+}
+
+function OP_INFINITY() {
+    return Infinity;
+}
+
+function OP_NULL() {
+    return null;
+}
+
+function OP_NUMBER(arg1) {
+    return arg1;
+}
+
+function OP_STRING(arg1) {
+    return arg1;
+}
+
+
+
+
+function OP_FUNCTION (fun, env) {
+    var ret = new OBJECT_FUNCTION();
+    ret["[[Class]]"] = "Function";
+    ret["[[Call]]"] = fun;
+    ret["[[Scope]]"] = env;
+    return ret;
+}
+
+function OP_NEWOBJECT() {
+    var ret =  new OBJECT_FUNCTION();
+    ret["[[Class]]"] = "Object";
+    return ret;
+}
+function OP_NEWARRAY() {
+    var ret =  new OBJECT_FUNCTION();
+    ret["[[Class]]"] = "Array";
+    return ret;
+}
+
+function OP_NEWENV (size) {
+    return new Array(size);
+}
+
+function OP_NEWREGEXP(pattern, flags) {
+    var ret = new OBJECT_FUNCTION();
+    ret["[[Class]]"] = "Function";
+    ret["[[Pattern]]"] = pattern;
+    ret["[[Flags]]"] = flags;
+    return ret;
+}
+
+function OP_BOOLEAN (arg1) {
+    return arg1;
+}
+
+function OP_NEWBOX() {
+    var ret = new BOX();
+    ret.value = undefined;
+    return ret;
+}
+
+function OP_GETPROP(arg1, arg2) {
+    arg2 = ToString(arg2);
+    do {
+        var ret = arg1.properties["*" + arg2];
+        if (ret === undefined || ret === nonExistentValue) {
+            arg1 = arg1.properties["*__proto__"]["[[Value]]"];
+        } else {
+            return ret["[[Value]]"];
+        }
+    } while(arg1 !== null);
+    return undefined;
+}
+
+function OP_SETPROP (arg1, arg2, arg3) {
+    arg2 = ToString(arg2);
+    var ret = arg1.properties["*" + arg2];
+    if (ret === undefined || ret === nonExistentValue) {
+        ret = {"[[Writable]]": true, "[[Enumerable]]": true, "[[Configurable]]": true, isData: true};
+    }
+    ret["[[Value]]"] = arg3;
+    return arg3;
+}
+
+function OP_SETGETTER (arg1, arg2, arg3) {
+    arg2 = ToString(arg2);
+    var ret = arg1.properties["*" + arg2];
+    if (ret === undefined || ret === nonExistentValue) {
+        ret = {"[[Enumerable]]": true, "[[Configurable]]": true, isData: false};
+    }
+    ret["[[Get]]"] = arg3;
+    return arg3;
+}
+
+function OP_SETSETTER (arg1, arg2, arg3) {
+    arg2 = ToString(arg2);
+    var ret = arg1.properties["*" + arg2];
+    if (ret === undefined || ret === nonExistentValue) {
+        ret = {"[[Enumerable]]": true, "[[Configurable]]": true, isData: false};
+    }
+    ret["[[Set]]"] = arg3;
+    return arg3;
+}
+
+function OP_DELPROP(arg1, arg2) {
+    arg2 = ToString(arg2);
+    var ret = arg1.properties["*" + arg2];
+    if (ret !== undefined || ret === nonExistentValue) {
+        if (ret["[[Configurable]]"]) {
+            arg1.properties["*" + arg2] = nonExistentValue;
+            return true;
+        } else {
+            return false;
+        }
+    }
+    return true;
+}
+
+function OP_GETINDEX (env, index) {
+    return env[index];
+}
+
+function OP_GETINDEXSTAR (env, index) {
+    var ret = env[index];
+    if (ret !== undefined) {
+        return ret.value;
+    } else {
+        return ret;
+    }
+}
+
+function OP_SETINDEX (env, index, val) {
+    env[index] = val;
+}
+
+function OP_SETINDEXSTAR (env, index, val) {
+    env[index].value = val;
+}
+
+function OP_GETVAR (val) {
+    return val;
+}
+
+function OP_GETVARSTAR (box) {
+    return box.value;
+}
+
+function OP_SETVARSTAR (box, val) {
+    return box.value = val;
+}
+
+function OP_TARGET() {
+    return target;
+}
+
+function OP_IFTRUE (val, label) {
+    if (val) {
+        target = label;
+        return true;
+    }
+    return false;
+}
+
+function OP_IFFALSE(val, label) {
+    if (!val) {
+        target = label;
+        return true;
+    }
+    return false;
+}
+
+function OP_JUMP(label) {
+        target = label;
+        return true;
+}
+
+function OP_JUMPNE(val1, val2, label) {
+    if (val1 !== val2) {
+        target = label;
+        return true;
+    }
+    return false;
+}
+
+    //
+function OP_CALL (fun) {
+    var f = fun["[[Call]]"];
+    OP_PUSHARG(fun);
+    OP_PUSHARG(fun["[[Scope]]"]);
+    f();
+}
+
+function OP_NEW (fun) {
+    OP_CALL(fun);
+}
+
+
+var JS_Return;
+var JS_JumpType;
+
+
+function JS_Fun1(){
+ while(true){
+  switch(OP_TARGET()) {
+    case -1:
+        var JS_R0;
+        var JS_R1;
+        var JS_R2;
+        var JS_R3;
+        var JS_R4;
+        JS_R0 = OP_NEWENV( 6 );
+        // Object;
+        JS_R1 = OP_NEWBOX( );
+        OP_SETINDEX( JS_R0 , 0 , JS_R1 );
+        JS_R1 = OP_NONEXISTENT( );
+        OP_SETINDEXSTAR( JS_R0 , 0 , JS_R1 );
+        // Function;
+        JS_R1 = OP_NEWBOX( );
+        OP_SETINDEX( JS_R0 , 1 , JS_R1 );
+        JS_R1 = OP_NONEXISTENT( );
+        OP_SETINDEXSTAR( JS_R0 , 1 , JS_R1 );
+        // Array;
+        JS_R1 = OP_NEWBOX( );
+        OP_SETINDEX( JS_R0 , 2 , JS_R1 );
+        JS_R1 = OP_NONEXISTENT( );
+        OP_SETINDEXSTAR( JS_R0 , 2 , JS_R1 );
+        // RegExp;
+        JS_R1 = OP_NEWBOX( );
+        OP_SETINDEX( JS_R0 , 3 , JS_R1 );
+        JS_R1 = OP_NONEXISTENT( );
+        OP_SETINDEXSTAR( JS_R0 , 3 , JS_R1 );
+        // console;
+        JS_R1 = OP_NEWBOX( );
+        OP_SETINDEX( JS_R0 , 4 , JS_R1 );
+        JS_R1 = OP_NONEXISTENT( );
+        OP_SETINDEXSTAR( JS_R0 , 4 , JS_R1 );
+        // x;
+        JS_R1 = OP_NEWBOX( );
+        OP_SETINDEX( JS_R0 , 5 , JS_R1 );
+        JS_R1 = OP_NONEXISTENT( );
+        OP_SETINDEXSTAR( JS_R0 , 5 , JS_R1 );
+        var JS_Env = JS_R0;
+        JS_R0 = OP_UNDEF( );
+        var JS_Base = JS_R0;
+        JS_R0 = OP_NEWENV( 4 );
+        // Object;
+        JS_R1 = OP_GETINDEX( JS_Env , 0 );
+        OP_SETINDEX( JS_R0 , 0 , JS_R1 );
+        // Function;
+        JS_R1 = OP_GETINDEX( JS_Env , 1 );
+        OP_SETINDEX( JS_R0 , 1 , JS_R1 );
+        // Array;
+        JS_R1 = OP_GETINDEX( JS_Env , 2 );
+        OP_SETINDEX( JS_R0 , 2 , JS_R1 );
+        // RegExp;
+        JS_R1 = OP_GETINDEX( JS_Env , 3 );
+        OP_SETINDEX( JS_R0 , 3 , JS_R1 );
+        JS_R0 = OP_FUNCTION( JS_Fun2 , JS_R0 );
+        // Function;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 1 );
+        JS_R2 = OP_STRING( "prototype" );
+        JS_R2 = OP_GETPROP( JS_R1 , JS_R2 );
+        JS_R1 = OP_STRING( "__proto__" );
+        JS_R1 = OP_SETPROP( JS_R0 , JS_R1 , JS_R2 );
+        // Function;
+        JS_R0 = OP_SETINDEXSTAR( JS_Env , 1 , JS_R0 );
+        JS_R0 = OP_NEWENV( 4 );
+        // Object;
+        JS_R1 = OP_GETINDEX( JS_Env , 0 );
+        OP_SETINDEX( JS_R0 , 0 , JS_R1 );
+        // Function;
+        JS_R1 = OP_GETINDEX( JS_Env , 1 );
+        OP_SETINDEX( JS_R0 , 1 , JS_R1 );
+        // Array;
+        JS_R1 = OP_GETINDEX( JS_Env , 2 );
+        OP_SETINDEX( JS_R0 , 2 , JS_R1 );
+        // RegExp;
+        JS_R1 = OP_GETINDEX( JS_Env , 3 );
+        OP_SETINDEX( JS_R0 , 3 , JS_R1 );
+        JS_R0 = OP_FUNCTION( JS_Fun3 , JS_R0 );
+        // Function;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 1 );
+        JS_R2 = OP_STRING( "prototype" );
+        JS_R2 = OP_GETPROP( JS_R1 , JS_R2 );
+        JS_R1 = OP_STRING( "__proto__" );
+        JS_R1 = OP_SETPROP( JS_R0 , JS_R1 , JS_R2 );
+        // Object;
+        JS_R0 = OP_SETINDEXSTAR( JS_Env , 0 , JS_R0 );
+        JS_R0 = OP_NEWOBJECT( );
+        // Object;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 0 );
+        JS_R2 = OP_STRING( "prototype" );
+        JS_R2 = OP_GETPROP( JS_R1 , JS_R2 );
+        JS_R1 = OP_STRING( "__proto__" );
+        JS_R1 = OP_SETPROP( JS_R0 , JS_R1 , JS_R2 );
+        // console;
+        JS_R0 = OP_SETINDEXSTAR( JS_Env , 4 , JS_R0 );
+        // console;
+        JS_R0 = OP_GETINDEXSTAR( JS_Env , 4 );
+        JS_R1 = OP_STRING( "log" );
+        JS_R2 = OP_NEWENV( 4 );
+        // Object;
+        JS_R3 = OP_GETINDEX( JS_Env , 0 );
+        OP_SETINDEX( JS_R2 , 0 , JS_R3 );
+        // Function;
+        JS_R3 = OP_GETINDEX( JS_Env , 1 );
+        OP_SETINDEX( JS_R2 , 1 , JS_R3 );
+        // Array;
+        JS_R3 = OP_GETINDEX( JS_Env , 2 );
+        OP_SETINDEX( JS_R2 , 2 , JS_R3 );
+        // RegExp;
+        JS_R3 = OP_GETINDEX( JS_Env , 3 );
+        OP_SETINDEX( JS_R2 , 3 , JS_R3 );
+        JS_R2 = OP_FUNCTION( JS_Fun4 , JS_R2 );
+        // Function;
+        JS_R3 = OP_GETINDEXSTAR( JS_Env , 1 );
+        JS_R4 = OP_STRING( "prototype" );
+        JS_R4 = OP_GETPROP( JS_R3 , JS_R4 );
+        JS_R3 = OP_STRING( "__proto__" );
+        JS_R3 = OP_SETPROP( JS_R2 , JS_R3 , JS_R4 );
+        JS_R0 = OP_SETPROP( JS_R0 , JS_R1 , JS_R2 );
+        JS_R0 = OP_NEWENV( 4 );
+        // Object;
+        JS_R1 = OP_GETINDEX( JS_Env , 0 );
+        OP_SETINDEX( JS_R0 , 0 , JS_R1 );
+        // Function;
+        JS_R1 = OP_GETINDEX( JS_Env , 1 );
+        OP_SETINDEX( JS_R0 , 1 , JS_R1 );
+        // Array;
+        JS_R1 = OP_GETINDEX( JS_Env , 2 );
+        OP_SETINDEX( JS_R0 , 2 , JS_R1 );
+        // RegExp;
+        JS_R1 = OP_GETINDEX( JS_Env , 3 );
+        OP_SETINDEX( JS_R0 , 3 , JS_R1 );
+        JS_R0 = OP_FUNCTION( JS_Fun5 , JS_R0 );
+        // Function;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 1 );
+        JS_R2 = OP_STRING( "prototype" );
+        JS_R2 = OP_GETPROP( JS_R1 , JS_R2 );
+        JS_R1 = OP_STRING( "__proto__" );
+        JS_R1 = OP_SETPROP( JS_R0 , JS_R1 , JS_R2 );
+        // Array;
+        JS_R0 = OP_SETINDEXSTAR( JS_Env , 2 , JS_R0 );
+        JS_R0 = OP_NEWENV( 4 );
+        // Object;
+        JS_R1 = OP_GETINDEX( JS_Env , 0 );
+        OP_SETINDEX( JS_R0 , 0 , JS_R1 );
+        // Function;
+        JS_R1 = OP_GETINDEX( JS_Env , 1 );
+        OP_SETINDEX( JS_R0 , 1 , JS_R1 );
+        // Array;
+        JS_R1 = OP_GETINDEX( JS_Env , 2 );
+        OP_SETINDEX( JS_R0 , 2 , JS_R1 );
+        // RegExp;
+        JS_R1 = OP_GETINDEX( JS_Env , 3 );
+        OP_SETINDEX( JS_R0 , 3 , JS_R1 );
+        JS_R0 = OP_FUNCTION( JS_Fun6 , JS_R0 );
+        // Function;
+        JS_R1 = OP_GETINDEXSTAR( JS_Env , 1 );
+        JS_R2 = OP_STRING( "prototype" );
+        JS_R2 = OP_GETPROP( JS_R1 , JS_R2 );
+        JS_R1 = OP_STRING( "__proto__" );
+        JS_R1 = OP_SETPROP( JS_R0 , JS_R1 , JS_R2 );
+        // RegExp;
+        JS_R0 = OP_SETINDEXSTAR( JS_Env , 3 , JS_R0 );
+        // x;
+        JS_R0 = OP_GETINDEXSTAR( JS_Env , 5 );
+        JS_R1 = OP_NUMBER( 3 );
+        JS_R0 = OP_ADD( JS_R0 , JS_R1 );
+        // x;
+        JS_R0 = OP_SETINDEXSTAR( JS_Env , 5 , JS_R0 );
+    case 2:
+        return;
+  }
+ }
+}
+function JS_Fun2(){
+ while(true){
+  switch(OP_TARGET()) {
+    case -1:
+        var JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Env = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Fun = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Base = JS_R0;
+        JS_R0 = OP_UNDEF( );
+        JS_Return = JS_R0;
+        JS_JumpType = 1;
+    case 2:
+        return;
+  }
+ }
+}
+function JS_Fun3(){
+ while(true){
+  switch(OP_TARGET()) {
+    case -1:
+        var JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Env = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Fun = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Base = JS_R0;
+        JS_R0 = OP_UNDEF( );
+        JS_Return = JS_R0;
+        JS_JumpType = 1;
+    case 2:
+        return;
+  }
+ }
+}
+function JS_Fun4(){
+ while(true){
+  switch(OP_TARGET()) {
+    case -1:
+        var JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Env = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Fun = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Base = JS_R0;
+        // str;
+        JS_R0 = OP_POPARG( );
+        var str = JS_R0;
+         console.log(str);;
+        JS_R0 = OP_UNDEF( );
+        JS_Return = JS_R0;
+        JS_JumpType = 1;
+    case 2:
+        return;
+  }
+ }
+}
+function JS_Fun5(){
+ while(true){
+  switch(OP_TARGET()) {
+    case -1:
+        var JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Env = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Fun = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Base = JS_R0;
+        JS_R0 = OP_UNDEF( );
+        JS_Return = JS_R0;
+        JS_JumpType = 1;
+    case 2:
+        return;
+  }
+ }
+}
+function JS_Fun6(){
+ while(true){
+  switch(OP_TARGET()) {
+    case -1:
+        var JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Env = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Fun = JS_R0;
+        JS_R0 = OP_POPARG( );
+        var JS_Base = JS_R0;
+        JS_R0 = OP_UNDEF( );
+        JS_Return = JS_R0;
+        JS_JumpType = 1;
+    case 2:
+        return;
+  }
+ }
+}
+JS_Fun1();

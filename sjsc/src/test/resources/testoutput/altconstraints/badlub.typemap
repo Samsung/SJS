@@ -1,0 +1,21 @@
+"hello" --> string
+3 --> integer
+6 --> integer
+9.2 --> float
+a --> {  | f: integer, val: string }
+a --> {  | f: integer, val: string }
+b --> {  | f: integer, val: float }
+b --> {  | f: integer, val: float }
+o --> {  | f: integer }
+o --> {  | f: integer }
+o --> {  | f: integer }
+o --> {  | f: integer }
+o = b --> {  | f: integer }
+o.f --> integer
+o.f --> integer
+printInt --> (integer) -> void
+printInt --> (integer) -> void
+printInt(o.f) --> void
+printInt(o.f) --> void
+{f: 3, val: "hello"} --> {  | f: integer, val: string }
+{f: 6, val: 9.2} --> {  | f: integer, val: float }

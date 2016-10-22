@@ -1,0 +1,28 @@
+3 --> integer
+33 --> integer
+4 --> integer
+7 --> integer
+y --> {  | foo: integer, bar: {  | fizz: integer } }
+y --> {  | foo: integer, bar: {  | fizz: integer } }
+y --> {  | foo: integer, bar: {  | fizz: integer } }
+y --> {  | foo: integer, bar: {  | fizz: integer } }
+y.bar --> {  | fizz: integer }
+y.bar.fizz --> integer
+y.foo --> integer
+y.foo --> integer
+z --> {  | foo: integer, bar: {  | baz: integer } }
+z --> {  | foo: integer, bar: {  | baz: integer } }
+z --> {  | foo: integer, bar: {  | baz: integer } }
+z --> {  | foo: integer, bar: {  | baz: integer } }
+z.bar --> {  | baz: integer }
+z.bar --> {  | baz: integer }
+z.bar.baz --> integer
+z.bar.baz --> integer
+z.bar.baz = y.bar.fizz --> integer
+z.bar.baz = y.foo --> integer
+z.foo --> integer
+z.foo = y.foo --> integer
+{baz: 33} --> {  | baz: integer }
+{fizz: 4} --> {  | fizz: integer }
+{foo: 3, bar: {fizz: 4}} --> {  | foo: integer, bar: {  | fizz: integer } }
+{foo: 7, bar: {baz: 33}} --> {  | foo: integer, bar: {  | baz: integer } }

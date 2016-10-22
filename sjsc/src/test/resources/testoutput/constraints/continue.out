@@ -1,0 +1,53 @@
+CheckArity(ret(|console.log|))
+Elem(|a|)=|a[i]|
+Elem(|a|)=|a[i]|
+MakeConcreteConstraint [term=|"" + x|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|3|]
+MakeConcreteConstraint [term=|[1, 2, 3]|]
+MakeConcreteConstraint [term=|a[i]|]
+MakeConcreteConstraint [term=|console|]
+TP([1, 2, 3])=Elem(ret(prop(|[1, 2, 3]|,concat)))
+TP([1, 2, 3])=Elem(ret(prop(|[1, 2, 3]|,reverse)))
+TP([1, 2, 3])=Elem(|[1, 2, 3]|)
+TP([1, 2, 3])=param(prop(|[1, 2, 3]|,push),0)
+TP([1, 2, 3])=ret(prop(|[1, 2, 3]|,pop))
+TP([1, 2, 3])=ret(prop(|[1, 2, 3]|,shift))
+|"" + x|<:param(|console.log|,0)
+|"" + x|=op(|""|+|x|)
+|""|=string
+|0|<:|i|
+|0|<:|x|
+|0|=integer
+|0|=integer
+|1|<:Elem(|[1, 2, 3]|)
+|1|=integer
+|2|<:Elem(|[1, 2, 3]|)
+|2|=integer
+|2|=integer
+|3|<:Elem(|[1, 2, 3]|)
+|3|=integer
+|[1, 2, 3]|<:|a|
+|a.length|=prop(|a|,length)
+|a[i] == 2|=op(|a[i]|==|2|)
+|a[i]|<:|x|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|console.log("" + x)|=ret(|console.log|)
+|console.log|=prop(|console|,log)
+|console|=|console|
+|i < a.length|=op(|i|<|a.length|)
+|i++|=op(|i|++)
+|i|=Key(|a|)
+|i|=Key(|a|)
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|x += a[i]|=|x|
+|x|=|x|
+|x|=|x|

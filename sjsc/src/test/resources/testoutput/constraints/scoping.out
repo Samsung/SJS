@@ -1,0 +1,37 @@
+CheckArity(ret(|console.log|))
+CheckArity(ret(|console.log|))
+MakeConcreteConstraint [term=|"Hello, 1"|]
+MakeConcreteConstraint [term=|"Hello, 1"|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|j|]
+|"Hello, 1"|<:param(|console.log|,0)
+|"Hello, 1"|<:param(|console.log|,0)
+|"Hello, 1"|=string
+|"Hello, 1"|=string
+|0|<:|i|
+|0|<:|j|
+|0|=integer
+|0|=integer
+|10|=integer
+|10|=integer
+|console.log("Hello, 1")|=ret(|console.log|)
+|console.log("Hello, 1")|=ret(|console.log|)
+|console.log|=prop(|console|,log)
+|console.log|=prop(|console|,log)
+|console|=|console|
+|console|=|console|
+|i < 10|=op(|i|<|10|)
+|i = 0|=|i|
+|i++|=op(|i|++)
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|j < 10|=op(|j|<|10|)
+|j++|=op(|j|++)
+|j|<:|i|
+|j|=|j|
+|j|=|j|
+|j|=|j|

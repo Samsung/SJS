@@ -1,0 +1,9 @@
+MakeConcreteConstraint [term=|0|]
+ret(|function spectralnorm|)=void
+|0|<:|i|
+|0|=integer
+|3|=integer
+|function spectralnorm|<:|spectralnorm|
+|i = 0|=|i|
+|i|=|i|
+|true|=boolean

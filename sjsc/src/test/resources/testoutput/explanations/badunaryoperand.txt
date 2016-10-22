@@ -1,0 +1,3 @@
+Error on line 2: misuse of unary operator ~ in ~"hello"
+    Note: input has type string
+Error on line 2: ~"hello" is abstract

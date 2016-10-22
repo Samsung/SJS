@@ -1,0 +1,27 @@
+MakeConcreteConstraint [term=|"hi"|]
+MakeConcreteConstraint [term=|"there"|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|3.3|]
+MakeConcreteConstraint [term=|4.4|]
+MakeConcreteConstraint [term=|4|]
+MakeConcreteConstraint [term=|{"a": "hi", "b": "there"}|]
+MakeConcreteConstraint [term=|{"a": 3.3, "b": 4.4}|]
+MakeConcreteConstraint [term=|{"x": 2, "y": 4, "z": 1}|]
+|"hi"|<:Elem(|{"a": "hi", "b": "there"}|)
+|"hi"|=string
+|"there"|<:Elem(|{"a": "hi", "b": "there"}|)
+|"there"|=string
+|1|<:Elem(|{"x": 2, "y": 4, "z": 1}|)
+|1|=integer
+|2|<:Elem(|{"x": 2, "y": 4, "z": 1}|)
+|2|=integer
+|3.3|<:Elem(|{"a": 3.3, "b": 4.4}|)
+|3.3|=float
+|4.4|<:Elem(|{"a": 3.3, "b": 4.4}|)
+|4.4|=float
+|4|<:Elem(|{"x": 2, "y": 4, "z": 1}|)
+|4|=integer
+|{"a": "hi", "b": "there"}|<:|c|
+|{"a": 3.3, "b": 4.4}|<:|b|
+|{"x": 2, "y": 4, "z": 1}|<:|a|

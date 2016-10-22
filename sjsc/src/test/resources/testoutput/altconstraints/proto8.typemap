@@ -1,0 +1,43 @@
+0 --> integer
+1 --> integer
+1 --> integer
+C --> ctor<0>[{  | m1: []() -> integer, m2: []() -> integer }]() -> { m1: []() -> integer, m2: []() -> integer | f: integer }
+C --> ctor<0>[{  | m1: []() -> integer, m2: []() -> integer }]() -> { m1: []() -> integer, m2: []() -> integer | f: integer }
+C --> ctor<0>[{  | m1: []() -> integer, m2: []() -> integer }]() -> { m1: []() -> integer, m2: []() -> integer | f: integer }
+C --> ctor<0>[{  | m1: []() -> integer, m2: []() -> integer }]() -> { m1: []() -> integer, m2: []() -> integer | f: integer }
+C.prototype --> {  | m1: []() -> integer, m2: []() -> integer }
+C.prototype --> {  | m1: []() -> integer, m2: []() -> integer }
+C.prototype.m1 --> []() -> integer
+C.prototype.m1 = function() {
+  return this.f + 1;
+} --> []() -> integer
+C.prototype.m2 --> []() -> integer
+C.prototype.m2 = function() {
+  return this.f - 1;
+} --> []() -> integer
+function C() {
+  this.f = 0;
+}
+ --> ctor<0>[{  | m1: []() -> integer, m2: []() -> integer }]() -> { m1: []() -> integer, m2: []() -> integer | f: integer }
+function() {
+  return this.f + 1;
+} --> [{ f: integer |  }]() -> integer
+function() {
+  return this.f - 1;
+} --> [{ f: integer |  }]() -> integer
+new C() --> { m1: []() -> integer, m2: []() -> integer | f: integer }
+printInt --> (integer) -> void
+printInt(x.m2()) --> void
+this --> { f: integer |  }
+this --> { f: integer |  }
+this --> { m1: []() -> integer, m2: []() -> integer | f: integer }
+this.f + 1 --> integer
+this.f - 1 --> integer
+this.f --> integer
+this.f --> integer
+this.f --> integer
+this.f = 0 --> integer
+x --> { m1: []() -> integer, m2: []() -> integer | f: integer }
+x --> { m1: []() -> integer, m2: []() -> integer | f: integer }
+x.m2 --> []() -> integer
+x.m2() --> integer

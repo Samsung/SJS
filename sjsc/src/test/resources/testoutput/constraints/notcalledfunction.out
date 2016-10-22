@@ -1,0 +1,22 @@
+MakeConcreteConstraint [term=|bar|]
+MakeConcreteConstraint [term=|baz|]
+MakeConcreteConstraint [term=|foo|]
+param(|function bar|,0)=|v|
+param(|function bar|,1)=|w|
+param(|function baz|,0)=|y|
+param(|function baz|,1)=|z|
+param(|function foo|,0)=|x|
+ret(|function baz|)=void
+|17|<:ret(|function bar|)
+|17|=integer
+|bar|<:|b|
+|bar|=|bar|
+|baz|<:|c|
+|baz|=|baz|
+|foo|<:|a|
+|foo|=|foo|
+|function bar|<:|bar|
+|function baz|<:|baz|
+|function foo|<:|foo|
+|x|<:ret(|function foo|)
+|x|=|x|

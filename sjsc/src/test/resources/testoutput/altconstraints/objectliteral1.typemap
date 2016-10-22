@@ -1,0 +1,6 @@
+1 --> integer
+2 --> integer
+4 --> integer
+[1] --> Array<integer>
+a --> {  | x: integer, y: integer, z: Array<integer> }
+{x: 2, y: 4, z: [1]} --> {  | x: integer, y: integer, z: Array<integer> }

@@ -1,0 +1,57 @@
+CheckArity(ret(|console.log|))
+Elem(|m|)=|m["colin"]|
+Elem(|m|)=|m["satish"]|
+Elem(|m|)=|m[i]|
+Elem(|m|)=|m[i]|
+MakeConcreteConstraint [term=|"Name[" + i + "] = " + m[i].last + " ," + m[i].first|]
+MakeConcreteConstraint [term=|"chandra"|]
+MakeConcreteConstraint [term=|"colin"|]
+MakeConcreteConstraint [term=|"gordon"|]
+MakeConcreteConstraint [term=|"satish"|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|{first: "colin", last: "gordon"}|]
+MakeConcreteConstraint [term=|{first: "satish", last: "chandra"}|]
+MakeConcreteConstraint [term=|{}|]
+|" ,"|=string
+|"Name[" + i + "] = " + m[i].last + " ," + m[i].first|<:param(|console.log|,0)
+|"Name[" + i + "] = " + m[i].last + " ," + m[i].first|=op(|"Name[" + i + "] = " + m[i].last + " ,"|+|m[i].first|)
+|"Name[" + i + "] = " + m[i].last + " ,"|=op(|"Name[" + i + "] = " + m[i].last|+|" ,"|)
+|"Name[" + i + "] = " + m[i].last|=op(|"Name[" + i + "] = "|+|m[i].last|)
+|"Name[" + i + "] = "|=op(|"Name[" + i|+|"] = "|)
+|"Name[" + i|=op(|"Name["|+|i|)
+|"Name["|=string
+|"] = "|=string
+|"chandra"|<:prop(|{first: "satish", last: "chandra"}|,last)
+|"chandra"|=string
+|"colin"|<:prop(|{first: "colin", last: "gordon"}|,first)
+|"colin"|=Key(|m|)
+|"colin"|=string
+|"colin"|=string
+|"gordon"|<:prop(|{first: "colin", last: "gordon"}|,last)
+|"gordon"|=string
+|"satish"|<:prop(|{first: "satish", last: "chandra"}|,first)
+|"satish"|=Key(|m|)
+|"satish"|=string
+|"satish"|=string
+|console.log("Name[" + i + "] = " + m[i].last + " ," + m[i].first)|=ret(|console.log|)
+|console.log|=prop(|console|,log)
+|console|=|console|
+|i|<:string
+|i|=Key(|m|)
+|i|=Key(|m|)
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|m["colin"] = {first: "colin", last: "gordon"}|=|m["colin"]|
+|m["satish"] = {first: "satish", last: "chandra"}|=|m["satish"]|
+|m[i].first|=prop(|m[i]|,first)
+|m[i].last|=prop(|m[i]|,last)
+|m|<:Map<X0>
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|{first: "colin", last: "gordon"}|<:|m["colin"]|
+|{first: "satish", last: "chandra"}|<:|m["satish"]|
+|{}|<:|m|

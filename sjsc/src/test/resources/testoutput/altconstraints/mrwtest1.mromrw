@@ -1,0 +1,16 @@
+{f: 1, g: 2, p1: function m5(x) {
+  this.g = x;
+}, p2: function m6() {
+  return this.f;
+}} (line 11) --> [MRO=[f], MRW=[g]]
+{f: 1, p1: function m3(x) {
+  this.f = x;
+}, p2: function m4() {
+  return this.f;
+}} (line 5) --> [MRO=[], MRW=[f]]
+{f: 1, p: function m1(x) {
+  this.f = x;
+}} (line 1) --> [MRO=[], MRW=[f]]
+{f: 1, p: function m2() {
+  return this.f;
+}} (line 3) --> [MRO=[f], MRW=[]]

@@ -1,0 +1,45 @@
+CheckArity(ret(|console.log|))
+CheckArity(ret(|foo|))
+CheckArity(ret(|g|))
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|foo|]
+MakeConcreteConstraint [term=|function <anonymous>|]
+MakeConcreteConstraint [term=|g(2) + ""|]
+MakeConcreteConstraint [term=|x - 1|]
+param(|function <anonymous>|,0)=|p|
+param(|function foo|,0)=|x|
+|""|=string
+|0|<:ret(|function foo|)
+|0|=integer
+|0|=integer
+|1|=integer
+|2|<:param(|g|,0)
+|2|=integer
+|2|=integer
+|console.log(g(2) + "")|=ret(|console.log|)
+|console.log|=prop(|console|,log)
+|console|=|console|
+|foo = function(p) {
+  return p;
+}|=|foo|
+|foo(x - 1) + 2|<:ret(|function foo|)
+|foo(x - 1) + 2|=op(|foo(x - 1)|+|2|)
+|foo(x - 1)|=ret(|foo|)
+|foo|<:|g|
+|foo|=|foo|
+|foo|=|foo|
+|foo|=|foo|
+|function <anonymous>|<:|foo|
+|function foo|<:|foo|
+|g(2) + ""|<:param(|console.log|,0)
+|g(2) + ""|=op(|g(2)|+|""|)
+|g(2)|=ret(|g|)
+|g|=|g|
+|p|<:ret(|function <anonymous>|)
+|p|=|p|
+|x - 1|<:param(|foo|,0)
+|x - 1|=op(|x|-|1|)
+|x == 0|=op(|x|==|0|)
+|x|=|x|
+|x|=|x|

@@ -1,0 +1,9 @@
+0 --> integer
+5 --> integer
+index --> integer
+index --> integer
+index --> integer
+index++ --> integer
+seed --> integer
+seed --> integer
+seed >= index --> boolean

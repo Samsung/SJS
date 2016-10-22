@@ -1,0 +1,30 @@
+CheckArity(ret(|console.log|))
+CheckArity(ret(|parseInt|))
+CheckArity(ret(|readline|))
+MakeConcreteConstraint [term=|"" + t|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|l|]
+MakeConcreteConstraint [term=|parseInt(l)|]
+MakeConcreteConstraint [term=|readline()|]
+|"" + t|<:param(|console.log|,0)
+|"" + t|=op(|""|+|t|)
+|""|=string
+|0|<:|t|
+|0|=integer
+|console.log("" + t)|=ret(|console.log|)
+|console.log|=prop(|console|,log)
+|console|=|console|
+|l = readline()|=|l|
+|l|<:param(|parseInt|,0)
+|l|=|l|
+|l|=|l|
+|parseInt(l)|<:|t|
+|parseInt(l)|=ret(|parseInt|)
+|parseInt|=|parseInt|
+|readline()|<:|l|
+|readline()|=ret(|readline|)
+|readline|=|readline|
+|t += parseInt(l)|=|t|
+|t|=|t|
+|t|=|t|

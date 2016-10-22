@@ -1,0 +1,41 @@
+0 --> integer
+0 --> integer
+1 --> integer
+10 --> integer
+16 --> integer
+X --> Map<integer>
+X --> Map<integer>
+X --> Map<integer>
+X[i.toString()] --> integer
+X[i.toString(16)] --> integer
+X[i.toString(16)] = i --> integer
+c --> integer
+c --> integer
+c --> integer
+c++ --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i <= n --> boolean
+i = 1 --> integer
+i = n --> integer
+i > 0 --> boolean
+i++ --> integer
+i-- --> integer
+i.toString --> []() -> string INTERSECT [](integer) -> string
+i.toString --> []() -> string INTERSECT [](integer) -> string
+i.toString() --> string
+i.toString(16) --> string
+n --> integer
+n --> integer
+n --> integer
+printInt --> (integer) -> void
+printInt(c) --> void
+{} --> Map<integer>

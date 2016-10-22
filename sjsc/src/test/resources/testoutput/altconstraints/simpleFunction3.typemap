@@ -1,0 +1,51 @@
+3 --> integer
+4 --> integer
+5 --> integer
+7 --> integer
+f --> ({  | foo: integer, bar: integer }) -> {  | foo: integer }
+f --> ({  | foo: integer, bar: integer }) -> {  | foo: integer }
+f(x) --> {  | foo: integer }
+function g(f, x) {
+  return f(x);
+}
+ --> (({  | foo: integer, bar: integer }) -> {  | foo: integer },{  | foo: integer, bar: integer }) -> {  | foo: integer }
+function p(x) {
+  return {foo: x.foo + x.bar};
+}
+ --> ({  | foo: integer, bar: integer }) -> {  | foo: integer }
+function q(x) {
+  return {foo: x.foo, bar: x.foo};
+}
+ --> ({  | foo: integer, bar: integer }) -> {  | foo: integer }
+g --> (({  | foo: integer, bar: integer }) -> {  | foo: integer },{  | foo: integer, bar: integer }) -> {  | foo: integer }
+g --> (({  | foo: integer, bar: integer }) -> {  | foo: integer },{  | foo: integer, bar: integer }) -> {  | foo: integer }
+g --> (({  | foo: integer, bar: integer }) -> {  | foo: integer },{  | foo: integer, bar: integer }) -> {  | foo: integer }
+g(p, {foo: 3, bar: 4}) --> {  | foo: integer }
+g(p, {foo: 3, bar: 4}).foo --> integer
+g(q, {foo: 5, bar: 7}) --> {  | foo: integer }
+g(q, {foo: 5, bar: 7}).foo --> integer
+p --> ({  | foo: integer, bar: integer }) -> {  | foo: integer }
+p --> ({  | foo: integer, bar: integer }) -> {  | foo: integer }
+printInt --> (integer) -> void
+printInt --> (integer) -> void
+printInt(g(p, {foo: 3, bar: 4}).foo) --> void
+printInt(g(q, {foo: 5, bar: 7}).foo) --> void
+q --> ({  | foo: integer, bar: integer }) -> {  | foo: integer }
+q --> ({  | foo: integer, bar: integer }) -> {  | foo: integer }
+x --> {  | foo: integer, bar: integer }
+x --> {  | foo: integer, bar: integer }
+x --> {  | foo: integer, bar: integer }
+x --> {  | foo: integer, bar: integer }
+x --> {  | foo: integer, bar: integer }
+x --> {  | foo: integer, bar: integer }
+x --> {  | foo: integer, bar: integer }
+x --> {  | foo: integer, bar: integer }
+x.bar --> integer
+x.foo + x.bar --> integer
+x.foo --> integer
+x.foo --> integer
+x.foo --> integer
+{foo: 3, bar: 4} --> {  | foo: integer, bar: integer }
+{foo: 5, bar: 7} --> {  | foo: integer, bar: integer }
+{foo: x.foo + x.bar} --> {  | foo: integer }
+{foo: x.foo, bar: x.foo} --> {  | foo: integer, bar: integer }

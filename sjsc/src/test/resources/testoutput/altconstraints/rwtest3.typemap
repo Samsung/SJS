@@ -1,0 +1,27 @@
+3 --> integer
+4 --> integer
+5 --> integer
+7 --> integer
+8 --> integer
+B --> ctor<0>[{  | f: integer }]() -> { f: integer | g: integer }
+B --> ctor<0>[{  | f: integer }]() -> { f: integer | g: integer }
+B --> ctor<0>[{  | f: integer }]() -> { f: integer | g: integer }
+B.prototype --> {  | f: integer }
+B.prototype = {f: 3} --> {  | f: integer }
+b --> { f: integer | g: integer }
+b --> { f: integer | g: integer }
+c --> {  | g: integer, f: integer, h: integer }
+c --> {  | g: integer, f: integer, h: integer }
+d --> { f: integer | g: integer }
+false --> boolean
+false ? c : b --> { f: integer | g: integer }
+function B() {
+  this.g = 4;
+}
+ --> ctor<0>[{  | f: integer }]() -> { f: integer | g: integer }
+new B() --> { f: integer | g: integer }
+this --> { f: integer | g: integer }
+this.g --> integer
+this.g = 4 --> integer
+{f: 3} --> {  | f: integer }
+{g: 5, f: 7, h: 8} --> {  | g: integer, f: integer, h: integer }

@@ -1,0 +1,12 @@
+false --> boolean
+foo --> (___) -> void
+function foo(x) {
+  var z = false;
+  z = x;
+}
+ --> (___) -> void
+x --> ___
+x --> ___
+z --> boolean
+z --> boolean
+z = x --> boolean

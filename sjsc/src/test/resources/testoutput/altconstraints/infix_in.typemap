@@ -1,0 +1,11 @@
+"foo" --> string
+"foo" in x --> boolean
+"found foo" --> string
+3 --> integer
+7 --> integer
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log("found foo") --> void
+x --> Map<integer>
+x --> Map<integer>
+{"foo": 3, "bar": 7} --> Map<integer>

@@ -1,0 +1,8 @@
+"Hi" --> string
+2 --> integer
+x + y --> string
+x --> string
+x --> string
+y --> integer
+y --> integer
+z --> string

@@ -1,0 +1,19 @@
+"bar" --> string
+"baz" --> string
+"foo" --> string
+"foo" --> string
+c --> string
+c --> string
+c --> string
+last --> string
+last --> string
+last --> string
+last = c --> string
+table --> Map<string>
+table --> Map<string>
+table --> Map<string>
+table --> Map<string>
+table[c] += table[last] --> string
+table[c] --> string
+table[last] --> string
+{"x": "foo", "y": "bar", "z": "baz"} --> Map<string>

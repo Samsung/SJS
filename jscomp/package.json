@@ -1,0 +1,13 @@
+{
+  "name":"jscomp",
+  "version":"0.0.1",
+  "description":"JavaScript compiler",
+  "dependencies":{
+    "acorn": "1.0.3",
+    "argparse": "0.1.6",
+    "esotope": "1.4.5",
+    "estraverse": "4.0.0"
+  },
+  "bin": "./src/js/compiler/compile.js",
+  "license":"Apache"
+}

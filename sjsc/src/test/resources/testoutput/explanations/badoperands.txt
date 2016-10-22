@@ -1,0 +1,3 @@
+Error on line 2: misuse of binary operator + in "'' + x"
+    Note: left operand has type string
+    Note: right operand has type {  | f: integer }

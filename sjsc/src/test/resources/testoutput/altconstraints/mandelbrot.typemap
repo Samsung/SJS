@@ -1,0 +1,197 @@
+" " --> string
+"P4\n" + w + " " + h + "\n" --> string
+"P4\n" + w + " " + h --> string
+"P4\n" + w + " " --> string
+"P4\n" + w --> string
+"P4\n" --> string
+"\n" --> string
+(2.0 * x / w - 1.5) --> float
+(2.0 * y / h - 1.0) --> float
+(8 - w % 8) --> integer
+(Tr + Ti <= limit2) --> boolean
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+1 --> integer
+1 --> integer
+1 --> integer
+1.0 --> float
+1.5 --> float
+2.0 * Zr * Zi + Ci --> float
+2.0 * Zr * Zi --> float
+2.0 * Zr --> float
+2.0 * x --> float
+2.0 * x / w - 1.5 --> float
+2.0 * x / w --> float
+2.0 * y --> float
+2.0 * y / h - 1.0 --> float
+2.0 * y / h --> float
+2.0 --> float
+2.0 --> float
+2.0 --> float
+3000 --> integer
+4 --> integer
+50 --> integer
+8 - w % 8 --> integer
+8 --> integer
+8 --> integer
+8 --> integer
+Ci --> float
+Ci --> float
+Ci --> float
+Ci = (2.0 * y / h - 1.0) --> float
+Cr --> float
+Cr --> float
+Cr --> float
+Cr = (2.0 * x / w - 1.5) --> float
+String --> { fromCharCode: [](integer) -> string |  } INTERSECT () -> string INTERSECT (string) -> string
+String --> { fromCharCode: [](integer) -> string |  } INTERSECT () -> string INTERSECT (string) -> string
+String.fromCharCode --> [](integer) -> string
+String.fromCharCode --> [](integer) -> string
+String.fromCharCode(byte_acc) --> string
+String.fromCharCode(byte_acc) --> string
+Ti --> float
+Ti --> float
+Ti --> float
+Ti --> float
+Ti --> float
+Ti --> float
+Ti = 0.0 --> float
+Ti = Zi * Zi --> float
+Tr + Ti --> float
+Tr + Ti --> float
+Tr + Ti <= limit2 --> boolean
+Tr + Ti <= limit2 --> boolean
+Tr - Ti + Cr --> float
+Tr - Ti --> float
+Tr --> float
+Tr --> float
+Tr --> float
+Tr --> float
+Tr --> float
+Tr --> float
+Tr = 0.0 --> float
+Tr = Zr * Zr --> float
+Zi * Zi --> float
+Zi --> float
+Zi --> float
+Zi --> float
+Zi --> float
+Zi --> float
+Zi --> float
+Zi = 0.0 --> float
+Zi = 2.0 * Zr * Zi + Ci --> float
+Zr * Zr --> float
+Zr --> float
+Zr --> float
+Zr --> float
+Zr --> float
+Zr --> float
+Zr --> float
+Zr = 0.0 --> float
+Zr = Tr - Ti + Cr --> float
+bit_num --> integer
+bit_num --> integer
+bit_num --> integer
+bit_num --> integer
+bit_num --> integer
+bit_num = 0 --> integer
+bit_num = 0 --> integer
+bit_num == 8 --> boolean
+bit_num++ --> integer
+byte_acc --> integer
+byte_acc --> integer
+byte_acc --> integer
+byte_acc --> integer
+byte_acc --> integer
+byte_acc --> integer
+byte_acc --> integer
+byte_acc --> integer
+byte_acc --> integer
+byte_acc --> integer
+byte_acc --> integer
+byte_acc << (8 - w % 8) --> integer
+byte_acc << 1 --> integer
+byte_acc = 0 --> integer
+byte_acc = 0 --> integer
+byte_acc = byte_acc << (8 - w % 8) --> integer
+byte_acc = byte_acc << 1 --> integer
+byte_acc = byte_acc | 1 --> integer
+byte_acc | 1 --> integer
+document --> { write: [](string) -> void |  }
+document --> { write: [](string) -> void |  }
+document --> { write: [](string) -> void |  }
+document.write --> [](string) -> void
+document.write --> [](string) -> void
+document.write --> [](string) -> void
+document.write("P4\n" + w + " " + h + "\n") --> void
+document.write(String.fromCharCode(byte_acc)) --> void
+document.write(String.fromCharCode(byte_acc)) --> void
+h --> integer
+h --> integer
+h --> integer
+h --> integer
+h --> integer
+h --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i < iter && (Tr + Ti <= limit2) --> boolean
+i < iter --> boolean
+i = 0 --> integer
+i++ --> integer
+iter --> integer
+iter --> integer
+limit2 --> integer
+limit2 --> integer
+limit2 --> integer
+w % 8 --> integer
+w - 1 --> integer
+w --> integer
+w --> integer
+w --> integer
+w --> integer
+w --> integer
+w --> integer
+w --> integer
+w = h --> integer
+x --> integer
+x --> integer
+x --> integer
+x --> integer
+x --> integer
+x --> integer
+x < w --> boolean
+x = 0 --> integer
+x == w - 1 --> boolean
+x++ --> integer
+y --> integer
+y --> integer
+y --> integer
+y --> integer
+y --> integer
+y < h --> boolean
+y = 0 --> integer
+y++ --> integer

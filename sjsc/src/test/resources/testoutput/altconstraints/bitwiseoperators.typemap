@@ -1,0 +1,70 @@
+((max - min) * (prev / 16777216)) --> float
+(48271 * prev + 12820163) & 16777215 --> integer
+(48271 * prev + 12820163) --> integer
+(max - min) * (prev / 16777216) --> float
+(max - min) --> integer
+(prev / 16777216) --> float
+0 --> integer
+0 --> integer
+0 --> integer
+12820163 --> integer
+16777215 --> integer
+16777216 --> integer
+48271 * prev + 12820163 --> integer
+48271 * prev --> integer
+48271 --> integer
+function rand(min, max) {
+  prev = (48271 * prev + 12820163) & 16777215;
+  var result = min + ((max - min) * (prev / 16777216));
+  return result | 0;
+  max = intHint;
+  min = intHint;
+}
+ --> (integer,integer) -> integer
+function randGen(seed) {
+  var prev = seed;
+  function rand(min, max) {
+    prev = (48271 * prev + 12820163) & 16777215;
+    var result = min + ((max - min) * (prev / 16777216));
+    return result | 0;
+    max = intHint;
+    min = intHint;
+  }
+  return rand;
+  intHint = seed;
+}
+ --> (integer) -> (integer,integer) -> integer
+intHint --> integer
+intHint --> integer
+intHint --> integer
+intHint --> integer
+intHint = seed --> integer
+max - min --> integer
+max --> integer
+max --> integer
+max --> integer
+max = intHint --> integer
+min + ((max - min) * (prev / 16777216)) --> float
+min --> integer
+min --> integer
+min --> integer
+min --> integer
+min = intHint --> integer
+prev --> integer
+prev --> integer
+prev --> integer
+prev --> integer
+prev / 16777216 --> float
+prev = (48271 * prev + 12820163) & 16777215 --> integer
+rand --> (integer,integer) -> integer
+rand --> (integer,integer) -> integer
+rand --> (integer,integer) -> integer
+randGen --> (integer) -> (integer,integer) -> integer
+randGen --> (integer) -> (integer,integer) -> integer
+randGen(0) --> (integer,integer) -> integer
+result --> float
+result --> float
+result | 0 --> integer
+seed --> integer
+seed --> integer
+seed --> integer

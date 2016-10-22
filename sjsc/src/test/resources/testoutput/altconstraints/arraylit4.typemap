@@ -1,0 +1,106 @@
+0 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+10 --> integer
+10 --> integer
+11 --> integer
+11 --> integer
+2 --> integer
+2 --> integer
+2 --> integer
+2 --> integer
+3 --> integer
+3 --> integer
+3 --> integer
+3 --> integer
+4 --> integer
+4 --> integer
+4 --> integer
+4 --> integer
+5 --> integer
+9 --> integer
+9 --> integer
+[1, 2, 3, 4] --> Array<integer>
+a --> Array<integer>
+a --> Array<integer>
+a --> Array<integer>
+a --> Array<integer>
+a --> Array<integer>
+a --> Array<integer>
+a --> Array<integer>
+a --> Array<integer>
+a --> Array<integer>
+a --> Array<integer>
+a --> Array<integer>
+a --> Array<integer>
+a --> Array<integer>
+a --> Array<integer>
+a --> Array<integer>
+a.length --> integer
+a.length --> integer
+a.length --> integer
+a.length --> integer
+a.length == 2 --> boolean
+a.length == 3 --> boolean
+a.length == 4 --> boolean
+a.length == 5 --> boolean
+a.pop --> []() -> integer
+a.pop --> []() -> integer
+a.pop() --> integer
+a.pop() --> integer
+a.push --> [](integer) -> integer
+a.push --> [](integer) -> integer
+a.push --> [](integer) -> integer
+a.push(10) --> integer
+a.push(11) --> integer
+a.push(9) --> integer
+a[0] --> integer
+a[0] == 1 --> boolean
+a[1] --> integer
+a[1] == 2 --> boolean
+a[2] --> integer
+a[2] == 9 --> boolean
+a[3] --> integer
+a[3] == 10 --> boolean
+a[4] --> integer
+a[4] == 11 --> boolean
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.assert --> [](boolean) -> void
+console.assert --> [](boolean) -> void
+console.assert --> [](boolean) -> void
+console.assert --> [](boolean) -> void
+console.assert --> [](boolean) -> void
+console.assert --> [](boolean) -> void
+console.assert --> [](boolean) -> void
+console.assert --> [](boolean) -> void
+console.assert --> [](boolean) -> void
+console.assert --> [](boolean) -> void
+console.assert --> [](boolean) -> void
+console.assert(a.length == 2) --> void
+console.assert(a.length == 3) --> void
+console.assert(a.length == 4) --> void
+console.assert(a.length == 5) --> void
+console.assert(a[0] == 1) --> void
+console.assert(a[1] == 2) --> void
+console.assert(a[2] == 9) --> void
+console.assert(a[3] == 10) --> void
+console.assert(a[4] == 11) --> void
+console.assert(x == 4) --> void
+console.assert(y == 3) --> void
+x --> integer
+x --> integer
+x == 4 --> boolean
+y --> integer
+y --> integer
+y == 3 --> boolean

@@ -1,0 +1,12 @@
+"x = " + x --> string
+"x = " --> string
+++x --> integer
+3 --> integer
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log("x = " + x) --> void
+x --> integer
+x --> integer
+x --> integer
+x --> integer
+x++ --> integer

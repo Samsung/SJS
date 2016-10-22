@@ -1,0 +1,2 @@
+Error on line 4: prototype has unexpected type
+    Note: field p2 is missing

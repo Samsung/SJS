@@ -1,0 +1,54 @@
+"): " --> string
+"ack(3, " --> string
+(m == 0 ? n + 1 : (n == 0 ? ack(m - 1, 1) : ack(m - 1, ack(m, n - 1)))) --> integer
+(n == 0 ? ack(m - 1, 1) : ack(m - 1, ack(m, n - 1))) --> integer
+0 --> integer
+0 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+3 --> integer
+7 --> integer
+ack --> (integer,integer) -> integer
+ack --> (integer,integer) -> integer
+ack --> (integer,integer) -> integer
+ack --> (integer,integer) -> integer
+ack --> (integer,integer) -> integer
+ack(3, n) --> integer
+ack(m - 1, 1) --> integer
+ack(m - 1, ack(m, n - 1)) --> integer
+ack(m, n - 1) --> integer
+function ack(m, n) {
+  return (m == 0 ? n + 1 : (n == 0 ? ack(m - 1, 1) : ack(m - 1, ack(m, n - 1))));
+}
+ --> (integer,integer) -> integer
+m - 1 --> integer
+m - 1 --> integer
+m --> integer
+m --> integer
+m --> integer
+m --> integer
+m --> integer
+m == 0 --> boolean
+m == 0 ? n + 1 : (n == 0 ? ack(m - 1, 1) : ack(m - 1, ack(m, n - 1))) --> integer
+n + 1 --> integer
+n - 1 --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n == 0 --> boolean
+n == 0 ? ack(m - 1, 1) : ack(m - 1, ack(m, n - 1)) --> integer
+printInt --> (integer) -> void
+printInt --> (integer) -> void
+printInt(ack(3, n)) --> void
+printInt(n) --> void
+printString --> (string) -> void
+printString --> (string) -> void
+printString("): ") --> void
+printString("ack(3, ") --> void

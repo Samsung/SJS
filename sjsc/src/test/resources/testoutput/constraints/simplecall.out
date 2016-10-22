@@ -1,0 +1,10 @@
+CheckArity(ret(|foo|))
+MakeConcreteConstraint [term=|17|]
+param(|function foo|,0)=|v|
+|17|<:param(|foo|,0)
+|17|=integer
+|foo(17)|=ret(|foo|)
+|foo|=|foo|
+|function foo|<:|foo|
+|v|<:ret(|function foo|)
+|v|=|v|

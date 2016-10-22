@@ -1,0 +1,119 @@
+CheckArity(ret(|Array|))
+CheckArity(ret(|flagsorig.concat|))
+CheckArity(ret(|printInt|))
+CheckArity(ret(|printString|))
+Elem(|flagsorig|)=|flagsorig[i]|
+Elem(|flags|)=|flags[i]|
+Elem(|flags|)=|flags[k]|
+MakeConcreteConstraint [term=|"Count:"|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|17|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|8193|]
+MakeConcreteConstraint [term=|Array(8193)|]
+MakeConcreteConstraint [term=|count|]
+MakeConcreteConstraint [term=|flagsorig.concat()|]
+MakeConcreteConstraint [term=|flagsorig|]
+MakeConcreteConstraint [term=|i + i|]
+MakeConcreteConstraint [term=|i|]
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,1)
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+|"Count:"|<:param(|printString|,0)
+|"Count:"|=string
+|0|<:|count|
+|0|<:|flags[k]|
+|0|=integer
+|0|=integer
+|17|<:|n|
+|17|=integer
+|1|<:|flagsorig[i]|
+|1|=integer
+|2|<:|i|
+|2|<:|i|
+|2|=integer
+|2|=integer
+|8192|=integer
+|8192|=integer
+|8192|=integer
+|8193|<:param(|Array|,0)
+|8193|=integer
+|Array(8193)|<:|flagsorig|
+|Array(8193)|=ret(|Array|)
+|Array|=|Array|
+|count = 0|=|count|
+|count++|=op(|count|++)
+|count|<:param(|printInt|,0)
+|count|=|count|
+|count|=|count|
+|count|=|count|
+|flags = flagsorig.concat()|=|flags|
+|flags[k] = 0|=|flags[k]|
+|flagsorig.concat()|<:|flags|
+|flagsorig.concat()|=ret(|flagsorig.concat|)
+|flagsorig.concat|=prop(|flagsorig|,concat)
+|flagsorig[i] = 1|=|flagsorig[i]|
+|flagsorig|=|flagsorig|
+|flagsorig|=|flagsorig|
+|flags|=|flags|
+|flags|=|flags|
+|flags|=|flags|
+|i + i|<:|k|
+|i + i|=op(|i|+|i|)
+|i <= 8192|=op(|i|<=|8192|)
+|i <= 8192|=op(|i|<=|8192|)
+|i = 2|=|i|
+|i = 2|=|i|
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i|<:|k|
+|i|=Key(|flagsorig|)
+|i|=Key(|flags|)
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|k += i|=|k|
+|k <= 8192|=op(|k|<=|8192|)
+|k = i + i|=|k|
+|k|=Key(|flags|)
+|k|=|k|
+|k|=|k|
+|k|=|k|
+|k|=|k|
+|n--|=op(|n|--)
+|n|=|n|
+|printInt(count)|=ret(|printInt|)
+|printInt|=|printInt|
+|printString("Count:")|=ret(|printString|)
+|printString|=|printString|

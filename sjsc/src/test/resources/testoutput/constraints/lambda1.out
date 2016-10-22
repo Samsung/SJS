@@ -1,0 +1,31 @@
+CheckArity(ret(|(function a() {
+  return 0;
+})|))
+CheckArity(ret(|assert|))
+MakeConcreteConstraint [term=|(function a() {
+  return 0;
+})() == 0|]
+|(function a() {
+  return 0;
+})() == 0|<:param(|assert|,0)
+|(function a() {
+  return 0;
+})() == 0|=op(|(function a() {
+  return 0;
+})()|==|0|)
+|(function a() {
+  return 0;
+})()|=ret(|(function a() {
+  return 0;
+})|)
+|(function a() {
+  return 0;
+})|=|function a|
+|0|<:ret(|function a|)
+|0|=integer
+|0|=integer
+|assert((function a() {
+  return 0;
+})() == 0)|=ret(|assert|)
+|assert|=|assert|
+|function a|<:|a|

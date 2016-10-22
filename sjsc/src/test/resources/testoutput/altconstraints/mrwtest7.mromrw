@@ -1,0 +1,9 @@
+C.prototype (line 5) --> [MRO=[a], MRW=[]]
+C.prototype = {get_a: function m() {
+  return this.a;
+}} (line 5) --> [MRO=[a], MRW=[]]
+new C() (line 11) --> [MRO=[a], MRW=[]]
+this (line 2) --> [MRO=[a], MRW=[]]
+{get_a: function m() {
+  return this.a;
+}} (line 5) --> [MRO=[a], MRW=[]]

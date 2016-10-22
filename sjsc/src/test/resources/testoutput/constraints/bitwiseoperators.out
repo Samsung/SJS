@@ -1,0 +1,66 @@
+CheckArity(ret(|randGen|))
+MakeConcreteConstraint [term=|(48271 * prev + 12820163) & 16777215|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|intHint|]
+MakeConcreteConstraint [term=|intHint|]
+MakeConcreteConstraint [term=|min + ((max - min) * (prev / 16777216))|]
+MakeConcreteConstraint [term=|randGen(0)|]
+MakeConcreteConstraint [term=|seed|]
+MakeConcreteConstraint [term=|seed|]
+param(|function randGen|,0)=|seed|
+param(|function rand|,0)=|min|
+param(|function rand|,1)=|max|
+|((max - min) * (prev / 16777216))|=|(max - min) * (prev / 16777216)|
+|(48271 * prev + 12820163) & 16777215|<:|prev|
+|(48271 * prev + 12820163) & 16777215|=op(|(48271 * prev + 12820163)|&|16777215|)
+|(48271 * prev + 12820163)|=|48271 * prev + 12820163|
+|(max - min) * (prev / 16777216)|=op(|(max - min)|*|(prev / 16777216)|)
+|(max - min)|=|max - min|
+|(prev / 16777216)|=|prev / 16777216|
+|0|<:param(|randGen|,0)
+|0|<:|intHint|
+|0|=integer
+|0|=integer
+|0|=integer
+|12820163|=integer
+|16777215|=integer
+|16777216|=integer
+|48271 * prev + 12820163|=op(|48271 * prev|+|12820163|)
+|48271 * prev|=op(|48271|*|prev|)
+|48271|=integer
+|function randGen|<:|randGen|
+|function rand|<:|rand|
+|intHint = seed|=|intHint|
+|intHint|<:|max|
+|intHint|<:|min|
+|intHint|=|intHint|
+|intHint|=|intHint|
+|intHint|=|intHint|
+|max - min|=op(|max|-|min|)
+|max = intHint|=|max|
+|max|=|max|
+|max|=|max|
+|min + ((max - min) * (prev / 16777216))|<:|result|
+|min + ((max - min) * (prev / 16777216))|=op(|min|+|((max - min) * (prev / 16777216))|)
+|min = intHint|=|min|
+|min|=|min|
+|min|=|min|
+|min|=|min|
+|prev / 16777216|=op(|prev|/|16777216|)
+|prev = (48271 * prev + 12820163) & 16777215|=|prev|
+|prev|=|prev|
+|prev|=|prev|
+|prev|=|prev|
+|randGen(0)|<:|rand|
+|randGen(0)|=ret(|randGen|)
+|randGen|=|randGen|
+|rand|<:ret(|function randGen|)
+|rand|=|rand|
+|result | 0|<:ret(|function rand|)
+|result | 0|=op(|result|||0|)
+|result|=|result|
+|seed|<:|intHint|
+|seed|<:|prev|
+|seed|=|seed|
+|seed|=|seed|

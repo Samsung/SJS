@@ -1,0 +1,1 @@
+Error on line 6: cannot assign to read-only field 'f'

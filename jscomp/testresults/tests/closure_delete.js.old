@@ -1,0 +1,209 @@
+
+id: 0
+vars: {
+	"Object": "var",
+	"Function": "var",
+	"Array": "var",
+	"RegExp": "var",
+	"console": "var"
+}
+captured: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp",
+	"console"
+]
+environment: []
+usesArguments: false
+isCatch: false
+parent: -1
+
+
+id: 1
+vars: {
+	"x": "var",
+	"f1": "defun"
+}
+captured: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp",
+	"console"
+]
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp",
+	"console"
+]
+usesArguments: false
+isCatch: false
+parent: 0
+
+
+id: 2
+vars: {
+	"arguments": "special"
+}
+captured: []
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp"
+]
+usesArguments: false
+isCatch: false
+parent: 1
+
+
+id: 3
+vars: {
+	"arguments": "special"
+}
+captured: []
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp"
+]
+usesArguments: false
+isCatch: false
+parent: 1
+
+
+id: 4
+vars: {
+	"arguments": "special",
+	"str": "arg"
+}
+captured: []
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp"
+]
+usesArguments: false
+isCatch: false
+parent: 1
+
+
+id: 5
+vars: {
+	"arguments": "special"
+}
+captured: []
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp"
+]
+usesArguments: false
+isCatch: false
+parent: 1
+
+
+id: 6
+vars: {
+	"arguments": "special"
+}
+captured: []
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp"
+]
+usesArguments: false
+isCatch: false
+parent: 1
+
+
+id: 7
+vars: {
+	"arguments": "special",
+	"x": "var",
+	"f2": "defun"
+}
+captured: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp",
+	"console"
+]
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp",
+	"console"
+]
+usesArguments: false
+isCatch: false
+parent: 1
+
+
+id: 8
+vars: {
+	"arguments": "special",
+	"x": "var",
+	"f3": "defun"
+}
+captured: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp",
+	"console"
+]
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp",
+	"console"
+]
+usesArguments: false
+isCatch: false
+parent: 7
+
+
+id: 9
+vars: {
+	"arguments": "special",
+	"x": "var"
+}
+captured: []
+environment: [
+	"Object",
+	"Function",
+	"Array",
+	"RegExp",
+	"console"
+]
+usesArguments: false
+isCatch: false
+parent: 8
+
+/Users/koushik.sen/work/jscomp/src/js/compiler/compile.js:1355
+                throw new Error("To be implemented");
+                ^
+
+Error: To be implemented
+    at visitors.UnaryExpression (/Users/koushik.sen/work/jscomp/src/js/compiler/compile.js:1355:23)
+    at visit (/Users/koushik.sen/work/jscomp/src/js/compiler/compile.js:778:13)
+    at visit (/Users/koushik.sen/work/jscomp/src/js/compiler/compile.js:784:21)
+    at visit (/Users/koushik.sen/work/jscomp/src/js/compiler/compile.js:784:21)
+    at visitors.BlockStatement (/Users/koushik.sen/work/jscomp/src/js/compiler/compile.js:1674:13)
+    at visit (/Users/koushik.sen/work/jscomp/src/js/compiler/compile.js:778:13)
+    at visitors.FunctionDeclaration (/Users/koushik.sen/work/jscomp/src/js/compiler/compile.js:1324:13)
+    at visit (/Users/koushik.sen/work/jscomp/src/js/compiler/compile.js:778:13)
+    at visit (/Users/koushik.sen/work/jscomp/src/js/compiler/compile.js:784:21)
+    at visitors.BlockStatement (/Users/koushik.sen/work/jscomp/src/js/compiler/compile.js:1674:13)

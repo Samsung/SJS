@@ -1,0 +1,287 @@
+CheckArity(ret(|Array|))
+CheckArity(ret(|nsieve|))
+CheckArity(ret(|nsieve|))
+CheckArity(ret(|nsieve|))
+CheckArity(ret(|number.toString|))
+CheckArity(ret(|pad|))
+CheckArity(ret(|pad|))
+CheckArity(ret(|pad|))
+CheckArity(ret(|pad|))
+CheckArity(ret(|pad|))
+CheckArity(ret(|pad|))
+CheckArity(ret(|printString|))
+CheckArity(ret(|printString|))
+CheckArity(ret(|printString|))
+Elem(|isPrime|)=|isPrime[i]|
+Elem(|isPrime|)=|isPrime[i]|
+Elem(|isPrime|)=|isPrime[k]|
+MakeConcreteConstraint [term=|" " + s|]
+MakeConcreteConstraint [term=|"Primes up to " + pad(m, 8) + " " + pad(nsieve(m, flags), 8)|]
+MakeConcreteConstraint [term=|"Primes up to " + pad(m, 8) + " " + pad(nsieve(m, flags), 8)|]
+MakeConcreteConstraint [term=|"Primes up to " + pad(m, 8) + " " + pad(nsieve(m, flags), 8)|]
+MakeConcreteConstraint [term=|(1 << n - 1) * 10000|]
+MakeConcreteConstraint [term=|(1 << n - 2) * 10000|]
+MakeConcreteConstraint [term=|(1 << n) * 10000|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|12|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|8|]
+MakeConcreteConstraint [term=|8|]
+MakeConcreteConstraint [term=|8|]
+MakeConcreteConstraint [term=|8|]
+MakeConcreteConstraint [term=|8|]
+MakeConcreteConstraint [term=|8|]
+MakeConcreteConstraint [term=|Array(m + 1)|]
+MakeConcreteConstraint [term=|false|]
+MakeConcreteConstraint [term=|flags|]
+MakeConcreteConstraint [term=|flags|]
+MakeConcreteConstraint [term=|flags|]
+MakeConcreteConstraint [term=|i + i|]
+MakeConcreteConstraint [term=|i|]
+MakeConcreteConstraint [term=|m + 1|]
+MakeConcreteConstraint [term=|m|]
+MakeConcreteConstraint [term=|m|]
+MakeConcreteConstraint [term=|m|]
+MakeConcreteConstraint [term=|m|]
+MakeConcreteConstraint [term=|m|]
+MakeConcreteConstraint [term=|m|]
+MakeConcreteConstraint [term=|nsieve(m, flags)|]
+MakeConcreteConstraint [term=|nsieve(m, flags)|]
+MakeConcreteConstraint [term=|nsieve(m, flags)|]
+MakeConcreteConstraint [term=|number.toString()|]
+MakeConcreteConstraint [term=|number|]
+MakeConcreteConstraint [term=|true|]
+MakeConcreteConstraint [term=|width - s.length|]
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,1)
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+param(|function nsieve|,0)=|m|
+param(|function nsieve|,1)=|isPrime|
+param(|function pad|,0)=|number|
+param(|function pad|,1)=|width|
+|" " + s|<:|s|
+|" " + s|=op(|" "|+|s|)
+|" "|=string
+|" "|=string
+|" "|=string
+|" "|=string
+|"Primes up to " + pad(m, 8) + " " + pad(nsieve(m, flags), 8)|<:param(|printString|,0)
+|"Primes up to " + pad(m, 8) + " " + pad(nsieve(m, flags), 8)|<:param(|printString|,0)
+|"Primes up to " + pad(m, 8) + " " + pad(nsieve(m, flags), 8)|<:param(|printString|,0)
+|"Primes up to " + pad(m, 8) + " " + pad(nsieve(m, flags), 8)|=op(|"Primes up to " + pad(m, 8) + " "|+|pad(nsieve(m, flags), 8)|)
+|"Primes up to " + pad(m, 8) + " " + pad(nsieve(m, flags), 8)|=op(|"Primes up to " + pad(m, 8) + " "|+|pad(nsieve(m, flags), 8)|)
+|"Primes up to " + pad(m, 8) + " " + pad(nsieve(m, flags), 8)|=op(|"Primes up to " + pad(m, 8) + " "|+|pad(nsieve(m, flags), 8)|)
+|"Primes up to " + pad(m, 8) + " "|=op(|"Primes up to " + pad(m, 8)|+|" "|)
+|"Primes up to " + pad(m, 8) + " "|=op(|"Primes up to " + pad(m, 8)|+|" "|)
+|"Primes up to " + pad(m, 8) + " "|=op(|"Primes up to " + pad(m, 8)|+|" "|)
+|"Primes up to " + pad(m, 8)|=op(|"Primes up to "|+|pad(m, 8)|)
+|"Primes up to " + pad(m, 8)|=op(|"Primes up to "|+|pad(m, 8)|)
+|"Primes up to " + pad(m, 8)|=op(|"Primes up to "|+|pad(m, 8)|)
+|"Primes up to "|=string
+|"Primes up to "|=string
+|"Primes up to "|=string
+|(1 << n - 1) * 10000|<:|m|
+|(1 << n - 1) * 10000|=op(|(1 << n - 1)|*|10000|)
+|(1 << n - 1)|=|1 << n - 1|
+|(1 << n - 2) * 10000|<:|m|
+|(1 << n - 2) * 10000|=op(|(1 << n - 2)|*|10000|)
+|(1 << n - 2)|=|1 << n - 2|
+|(1 << n) * 10000|<:|m|
+|(1 << n) * 10000|=op(|(1 << n)|*|10000|)
+|(1 << n)|=|1 << n|
+|0|<:|count|
+|0|=integer
+|0|=integer
+|1 << n - 1|=op(|1|<<|n - 1|)
+|1 << n - 2|=op(|1|<<|n - 2|)
+|1 << n|=op(|1|<<|n|)
+|10000|=integer
+|10000|=integer
+|10000|=integer
+|12|<:|n|
+|12|=integer
+|1|<:|i|
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|2|<:|i|
+|2|<:|i|
+|2|<:|n|
+|2|=integer
+|2|=integer
+|2|=integer
+|2|=integer
+|2|=integer
+|8|<:param(|pad|,1)
+|8|<:param(|pad|,1)
+|8|<:param(|pad|,1)
+|8|<:param(|pad|,1)
+|8|<:param(|pad|,1)
+|8|<:param(|pad|,1)
+|8|=integer
+|8|=integer
+|8|=integer
+|8|=integer
+|8|=integer
+|8|=integer
+|Array(m + 1)|<:|flags|
+|Array(m + 1)|=ret(|Array|)
+|Array|=|Array|
+|count = 0|=|count|
+|count++|=op(|count|++)
+|count|<:ret(|function nsieve|)
+|count|=|count|
+|count|=|count|
+|count|=|count|
+|false|<:|isPrime[k]|
+|false|=boolean
+|flags|<:param(|nsieve|,1)
+|flags|<:param(|nsieve|,1)
+|flags|<:param(|nsieve|,1)
+|flags|=|flags|
+|flags|=|flags|
+|flags|=|flags|
+|function nsieve|<:|nsieve|
+|function pad|<:|pad|
+|i + i|<:|k|
+|i + i|=op(|i|+|i|)
+|i <= m|=op(|i|<=|m|)
+|i <= m|=op(|i|<=|m|)
+|i <= prefixWidth|=op(|i|<=|prefixWidth|)
+|i = 2|=|i|
+|i = 2|=|i|
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|isPrime[i] = true|=|isPrime[i]|
+|isPrime[k] = false|=|isPrime[k]|
+|isPrime|=|isPrime|
+|isPrime|=|isPrime|
+|isPrime|=|isPrime|
+|i|<:|k|
+|i|=Key(|isPrime|)
+|i|=Key(|isPrime|)
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|k += i|=|k|
+|k <= m|=op(|k|<=|m|)
+|k = i + i|=|k|
+|k|=Key(|isPrime|)
+|k|=|k|
+|k|=|k|
+|k|=|k|
+|k|=|k|
+|m + 1|<:param(|Array|,0)
+|m + 1|=op(|m|+|1|)
+|m = (1 << n - 1) * 10000|=|m|
+|m = (1 << n - 2) * 10000|=|m|
+|m|<:param(|nsieve|,0)
+|m|<:param(|nsieve|,0)
+|m|<:param(|nsieve|,0)
+|m|<:param(|pad|,0)
+|m|<:param(|pad|,0)
+|m|<:param(|pad|,0)
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|n - 1|=op(|n|-|1|)
+|n - 2|=op(|n|-|2|)
+|n < 2|=op(|n|<|2|)
+|n = 2|=|n|
+|nsieve(m, flags)|<:param(|pad|,0)
+|nsieve(m, flags)|<:param(|pad|,0)
+|nsieve(m, flags)|<:param(|pad|,0)
+|nsieve(m, flags)|=ret(|nsieve|)
+|nsieve(m, flags)|=ret(|nsieve|)
+|nsieve(m, flags)|=ret(|nsieve|)
+|nsieve|=|nsieve|
+|nsieve|=|nsieve|
+|nsieve|=|nsieve|
+|number.toString()|<:|s|
+|number.toString()|=ret(|number.toString|)
+|number.toString|=prop(|number|,toString)
+|number|=|number|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|pad(m, 8)|=ret(|pad|)
+|pad(m, 8)|=ret(|pad|)
+|pad(m, 8)|=ret(|pad|)
+|pad(nsieve(m, flags), 8)|=ret(|pad|)
+|pad(nsieve(m, flags), 8)|=ret(|pad|)
+|pad(nsieve(m, flags), 8)|=ret(|pad|)
+|pad|=|pad|
+|pad|=|pad|
+|pad|=|pad|
+|pad|=|pad|
+|pad|=|pad|
+|pad|=|pad|
+|prefixWidth > 0|=op(|prefixWidth|>|0|)
+|prefixWidth|=|prefixWidth|
+|prefixWidth|=|prefixWidth|
+|printString("Primes up to " + pad(m, 8) + " " + pad(nsieve(m, flags), 8))|=ret(|printString|)
+|printString("Primes up to " + pad(m, 8) + " " + pad(nsieve(m, flags), 8))|=ret(|printString|)
+|printString("Primes up to " + pad(m, 8) + " " + pad(nsieve(m, flags), 8))|=ret(|printString|)
+|printString|=|printString|
+|printString|=|printString|
+|printString|=|printString|
+|s = " " + s|=|s|
+|s.length|=prop(|s|,length)
+|s|<:ret(|function pad|)
+|s|=|s|
+|s|=|s|
+|s|=|s|
+|s|=|s|
+|true|<:|isPrime[i]|
+|true|=boolean
+|width - s.length|<:|prefixWidth|
+|width - s.length|=op(|width|-|s.length|)
+|width|=|width|

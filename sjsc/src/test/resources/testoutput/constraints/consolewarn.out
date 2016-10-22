@@ -1,0 +1,8 @@
+CheckArity(ret(|console.warn|))
+MakeConcreteConstraint [term=|"stderror test 2"|]
+MakeConcreteConstraint [term=|console|]
+|"stderror test 2"|<:param(|console.warn|,0)
+|"stderror test 2"|=string
+|console.warn("stderror test 2")|=ret(|console.warn|)
+|console.warn|=prop(|console|,warn)
+|console|=|console|

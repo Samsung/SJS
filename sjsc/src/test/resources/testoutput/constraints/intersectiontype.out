@@ -1,0 +1,51 @@
+CheckArity(ret(|foo|))
+CheckArity(ret(|p|))
+CheckArity(ret(|p|))
+MakeConcreteConstraint [term=|3|]
+MakeConcreteConstraint [term=|Array|]
+MakeConcreteConstraint [term=|false|]
+MakeConcreteConstraint [term=|p(3)|]
+MakeConcreteConstraint [term=|p(false, true)|]
+MakeConcreteConstraint [term=|true|]
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,1)
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+param(|function foo|,0)=|p|
+ret(|function foo|)=void
+|3|<:param(|p|,0)
+|3|=integer
+|Array|<:param(|foo|,0)
+|Array|=|Array|
+|false|<:param(|p|,0)
+|false|=boolean
+|foo(Array)|=ret(|foo|)
+|foo|=|foo|
+|function foo|<:|foo|
+|p(3)|<:|x|
+|p(3)|=ret(|p|)
+|p(false, true)|<:|y|
+|p(false, true)|=ret(|p|)
+|p|=|p|
+|p|=|p|
+|true|<:param(|p|,1)
+|true|=boolean

@@ -1,0 +1,18 @@
+"" + str.length --> string
+"" --> string
+"" --> string
+"hello\n" --> string
+10 --> integer
+String --> { fromCharCode: [](integer) -> string |  } INTERSECT () -> string INTERSECT (string) -> string
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log("" + str.length) --> void
+n --> integer
+n --> integer
+n-- --> integer
+new String("") --> string
+str += "hello\n" --> string
+str --> string
+str --> string
+str --> string
+str.length --> integer

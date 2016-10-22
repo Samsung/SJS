@@ -1,0 +1,9 @@
+"hello" --> string
+f --> () -> string
+f --> () -> string
+f() --> string
+function f() {
+  return "hello";
+}
+ --> () -> string
+x --> string

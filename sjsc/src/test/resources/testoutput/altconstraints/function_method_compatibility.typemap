@@ -1,0 +1,52 @@
+3 --> integer
+4 --> integer
+C --> ctor<0>[null]() -> {  | a: integer, m: []() -> integer }
+C --> ctor<0>[null]() -> {  | a: integer, m: []() -> integer }
+function C() {
+  this.a = 3;
+  var x = null;
+  if (true) 
+  {
+    x = function() {
+  return this.a;
+};
+  } else {
+    x = function() {
+  return 4;
+};
+  }
+  this.m = x;
+}
+ --> ctor<0>[null]() -> {  | a: integer, m: []() -> integer }
+function() {
+  return 4;
+} --> () -> integer
+function() {
+  return this.a;
+} --> [{ a: integer |  }]() -> integer
+new C() --> {  | a: integer, m: []() -> integer }
+null --> [{ a: integer |  }]() -> integer
+this --> {  | a: integer, m: []() -> integer }
+this --> {  | a: integer, m: []() -> integer }
+this --> { a: integer |  }
+this.a --> integer
+this.a --> integer
+this.a = 3 --> integer
+this.m --> []() -> integer
+this.m = x --> []() -> integer
+true --> boolean
+x --> [{ a: integer |  }]() -> integer
+x --> [{ a: integer |  }]() -> integer
+x --> [{ a: integer |  }]() -> integer
+x --> [{ a: integer |  }]() -> integer
+x = function() {
+  return 4;
+} --> [{ a: integer |  }]() -> integer
+x = function() {
+  return this.a;
+} --> [{ a: integer |  }]() -> integer
+y --> {  | a: integer, m: []() -> integer }
+y --> {  | a: integer, m: []() -> integer }
+y.m --> []() -> integer
+y.m() --> integer
+z --> integer

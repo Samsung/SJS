@@ -1,0 +1,18 @@
+"bar" --> string
+"foo" --> string
+0 --> integer
+0 --> integer
+17 --> integer
+3000 --> integer
+function zap() {
+  var y = "foo";
+  var y = "bar";
+}
+ --> () -> void
+h --> integer
+h --> integer
+h --> integer
+x --> integer
+y --> string
+y --> string
+zap --> () -> void

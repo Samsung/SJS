@@ -1,0 +1,13 @@
+1 --> integer
+1 --> integer
+2 --> integer
+3 --> integer
+[1, 2] --> Array<integer>
+x --> Array<integer>
+x --> Array<integer>
+x[1] --> integer
+x[1] = y.foo --> integer
+y --> {  | foo: integer }
+y --> {  | foo: integer }
+y.foo --> integer
+{foo: 3} --> {  | foo: integer }

@@ -1,0 +1,4 @@
+/bin/
+/src/test/resources/testinput/**/*.c
+/src/test/resources/testinput/**/*.h
+/profiling_data/**
