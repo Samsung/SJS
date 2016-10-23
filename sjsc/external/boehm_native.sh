@@ -1,3 +1,4 @@
+#!/bin/bash
 # Copyright 2014-2016 Samsung Research America, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,27 +12,26 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#!/bin/bash
 cd `dirname $0`
 BASE=`pwd`
 if [ -e "$BASE/gc/native/lib/libgc.a" ]; then
     exit 0;
 fi
-pushd gc
+cd gc
 
 git clone https://github.com/ivmai/bdwgc boehm_native
-pushd boehm_native
+cd boehm_native
 git clone https://github.com/ivmai/libatomic_ops
 
 # Still in gc/boehm_native
 
-pushd libatomic_ops
+cd libatomic_ops
 autoreconf -vif
-popd
+cd ..
 autoreconf -vif
 automake --add-missing
 ./configure --prefix=$BASE/gc/native --enable-single-obj-compilation
 make
 make install
 
-popd
+cd ..

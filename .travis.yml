@@ -1,0 +1,12 @@
+sudo: required
+dist: trusty
+language: java
+jdk: 
+    - oraclejdk8
+install:
+    - sudo apt-get update -qq
+    - sudo apt-get install -qq pkg-config libtool libbsd-dev g++-multilib clang nodejs
+    - sh -c 'cd sjsc/external && bash ./boehm_native.sh'
+    - sh -c 'cd sjsc/external && bash ./boehm_32.sh'
+script:
+    - sh -c 'cd sjsc && gradle test -Dtest.single=EndToEndTest'

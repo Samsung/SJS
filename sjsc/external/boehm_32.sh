@@ -1,3 +1,4 @@
+#!/bin/bash
 # Copyright 2014-2016 Samsung Research America, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,7 +12,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#!/bin/bash
 
 export CFLAGS="-m32"
 export CXXFLAGS="-m32"
@@ -26,17 +26,17 @@ if [ -e "$BASE/gc/x86/lib/libgc.a" ]; then
     exit 0;
 fi
 
-pushd gc
+cd gc
 
 git clone https://github.com/ivmai/bdwgc boehm_32
-pushd boehm_32
+cd boehm_32
 git clone https://github.com/ivmai/libatomic_ops
 
 # Still in gc/boehm_32
 
-pushd libatomic_ops
+cd libatomic_ops
 autoreconf -vif
-popd
+cd ..
 
 # Back in gc/boehm_32
 autoreconf -vif
@@ -45,7 +45,7 @@ autoreconf -vif
 make
 make install
 
-popd
+cd ..
 
 # If you're unsure whether this successfully generated ARM code, run 'file' on
 # .../gc/i386_tizen/lib/libgc.so or .../gc/boehm_32/extra/gc.o
