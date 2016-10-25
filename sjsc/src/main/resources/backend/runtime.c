@@ -59,11 +59,11 @@ void printInt(int s) {
  */
 void printFloat(double s) {
     //printf("%f\n", s);
-    printf("%.17g\n", s);
+    wprintf(L"%.17g\n", s);
 }
 void printFloat10(double s) {
     //printf("%f\n", s);
-    printf("%.10f\n", s);
+    wprintf(L"%.10f\n", s);
 }
 
 // Since we control the runtime, we can ensure all strings are null-terminated...
@@ -103,7 +103,7 @@ void* env_alloc_prim(int count, ...) {
 // align to 8 bytes by padding allocation and shifting result
 // We need this so closure allocations are 8-byte aligned
 void* last_align_basis = NULL;
-void* aligned_alloc(size_t n) {
+void* sjs_aligned_alloc(size_t n) {
     void* m = MEM_ALLOC(n+7);
     last_align_basis = m;
     assert(m != NULL);
