@@ -1,0 +1,60 @@
+CheckArity(ret(|console.assert|))
+CheckArity(ret(|console.assert|))
+CheckArity(ret(|console.assert|))
+MakeConcreteConstraint [term=|""|]
+MakeConcreteConstraint [term=|3|]
+MakeConcreteConstraint [term=|clos === undefined|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|function <anonymous>|]
+MakeConcreteConstraint [term=|obj === undefined|]
+MakeConcreteConstraint [term=|str === undefined|]
+MakeConcreteConstraint [term=|undefined|]
+MakeConcreteConstraint [term=|undefined|]
+MakeConcreteConstraint [term=|undefined|]
+MakeConcreteConstraint [term=|{x: 3}|]
+TP(undefined)=|undefined|
+TP(undefined)=|undefined|
+TP(undefined)=|undefined|
+TP(undefined)=|undefined|
+TP(undefined)=|undefined|
+TP(undefined)=|undefined|
+ret(|function <anonymous>|)=void
+ret(|function <anonymous>|)=void
+void=ret(|function <anonymous>|)
+|""|<:|str|
+|""|=string
+|3|<:prop(|{x: 3}|,x)
+|3|=integer
+|clos = function() {
+  return;
+}|=|clos|
+|clos === undefined|<:param(|console.assert|,0)
+|clos === undefined|=op(|clos|===|undefined|)
+|clos|=|clos|
+|clos|=|clos|
+|console.assert(clos === undefined)|=ret(|console.assert|)
+|console.assert(obj === undefined)|=ret(|console.assert|)
+|console.assert(str === undefined)|=ret(|console.assert|)
+|console.assert|=prop(|console|,assert)
+|console.assert|=prop(|console|,assert)
+|console.assert|=prop(|console|,assert)
+|console|=|console|
+|console|=|console|
+|console|=|console|
+|function <anonymous>|<:|clos|
+|obj = {x: 3}|=|obj|
+|obj === undefined|<:param(|console.assert|,0)
+|obj === undefined|=op(|obj|===|undefined|)
+|obj|=|obj|
+|obj|=|obj|
+|str = ""|=|str|
+|str === undefined|<:param(|console.assert|,0)
+|str === undefined|=op(|str|===|undefined|)
+|str|=|str|
+|str|=|str|
+|undefined|=|clos|
+|undefined|=|obj|
+|undefined|=|str|
+|{x: 3}|<:|obj|

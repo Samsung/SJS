@@ -1,0 +1,9 @@
+(x + 1) --> float
+(x + 1) >> 2 --> integer
+1 --> integer
+2 --> integer
+3.0 --> float
+x + 1 --> float
+x --> float
+x --> float
+y --> integer

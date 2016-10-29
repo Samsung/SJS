@@ -1,0 +1,21 @@
+0 --> integer
+1 --> integer
+2 --> integer
+4 --> integer
+[1] --> Array<integer>
+a --> {  | x: integer, y: integer, z: Array<integer> }
+a --> {  | x: integer, y: integer, z: Array<integer> }
+a --> {  | x: integer, y: integer, z: Array<integer> }
+a --> {  | x: integer, y: integer, z: Array<integer> }
+a.x --> integer
+a.y + a.z[0] --> integer
+a.y --> integer
+a.z --> Array<integer>
+a.z[0] --> integer
+p --> integer
+p --> integer
+printInt --> (integer) -> void
+printInt --> (integer) -> void
+printInt(a.x) --> void
+printInt(p) --> void
+{x: 2, y: 4, z: [1]} --> {  | x: integer, y: integer, z: Array<integer> }

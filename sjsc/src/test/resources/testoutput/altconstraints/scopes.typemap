@@ -1,0 +1,18 @@
+1.0 --> float
+bar --> (float) -> void
+bar --> (float) -> void
+bar(u) --> void
+foo --> (float) -> void
+function bar(u) {
+}
+ --> (float) -> void
+function foo(u) {
+  u = 1.0;
+  bar(u);
+}
+ --> (float) -> void
+u --> float
+u --> float
+u --> float
+u --> float
+u = 1.0 --> float

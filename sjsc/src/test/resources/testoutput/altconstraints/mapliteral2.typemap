@@ -1,0 +1,9 @@
+"hello" --> string
+1 --> integer
+2 --> integer
+4 --> integer
+a --> Map<integer>
+a --> Map<integer>
+a["hello"] --> integer
+p --> integer
+{"x": 2, "y": 4, "z": 1} --> Map<integer>

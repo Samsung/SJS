@@ -1,0 +1,98 @@
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+apply plugin: "jacoco"
+
+mainClassName = "com.samsung.sjs.Compiler"
+applicationDefaultJvmArgs = ["-ea"]
+// The next block is from a gradle forum post:
+//    http://forums.gradle.org/gradle/topics/how_can_i_provide_command_line_args_to_application_started_with_gradle_run
+// Apparently that, plus the stuff in parse.sh, are the simplest way to invoke a gradle-built application from the command line...
+run {
+    if(project.hasProperty('appArgs')){
+        args Eval.me(appArgs)
+    }
+}
+
+task getBoehmGC32(type: Exec) {
+    workingDir 'external'
+    commandLine './boehm_32.sh'
+}
+
+getBoehmGC32.onlyIf { !(new File('external/gc/x86')).exists() }
+
+tasks.test.dependsOn(getBoehmGC32)
+
+task getBoehmGC(type: Exec) {
+    workingDir 'external'
+    commandLine './boehm_native.sh'
+}
+
+getBoehmGC.onlyIf { !(new File('external/gc/native')).exists() }
+
+tasks.test.dependsOn(getBoehmGC)
+
+tasks.withType(JavaCompile) {
+    options.compilerArgs << '-Xlint:deprecation'
+    options.compilerArgs << '-Xlint:unchecked'
+}
+
+// Test output modeled after: http://stackoverflow.com/questions/3963708/gradle-how-to-display-test-results-in-the-console-in-real-time
+test {
+    afterTest { desc, result ->
+        if(result.resultType == TestResult.ResultType.FAILURE) {
+            println "Executing ${desc.className}::${desc.name} --> \u001B[31m${result.resultType}\u001B[0m"
+        } else if (result.resultType == TestResult.ResultType.SKIPPED) {
+            println "Executing ${desc.className}::${desc.name} --> \u001B[33m${result.resultType}\u001B[0m"
+        } else {
+            println "Executing ${desc.className}::${desc.name} --> \u001B[32m${result.resultType}\u001B[0m"
+        }
+    }
+}
+
+sourceCompatibility = 1.8
+version = '0.1-alpha'
+
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName, 'Manifest-Version': version, 'Application-Name': "Samsung SJS Compiler Prototype"
+    }
+}
+
+task depJar(type: Jar) {
+    manifest {
+        attributes 'Main-Class': mainClassName, 'Manifest-Version': version, 'Application-Name': "Samsung SJS Compiler Prototype"
+    }
+    from sourceSets.main.output // compiled .class files, resources
+    // From https://issues.gradle.org/browse/GRADLE-1361, last comment
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+}
+
+repositories {
+    mavenCentral()
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination "${buildDir}/reports/coverage"
+    }
+}
+jacocoTestReport.dependsOn.add(test)
+task coverage(dependsOn: jacocoTestReport)
+
+dependencies {
+    compile group: 'com.google.code.gson', name: 'gson', version: '2.3'
+    compile group: 'org.mozilla', name: 'rhino', version: '1.7R4'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.3.2'
+    compile group: 'commons-io', name: 'commons-io', version: '2.4'
+    compile group: 'commons-cli', name: 'commons-cli', version: '1.2'
+    compile group: 'commons-lang', name: 'commons-lang', version: '2.6'
+    compile('com.ibm.wala:com.ibm.wala.util:1.3.8')
+    compile 'ch.qos.logback:logback-classic:1.1.3'
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+    compile 'org.sat4j:org.sat4j.core:2.3.1'
+    compile 'org.sat4j:org.sat4j.maxsat:2.3.1'
+}

@@ -1,0 +1,205 @@
+" " + s --> string
+" " --> string
+" " --> string
+" " --> string
+" " --> string
+"Primes up to " + pad(m, 8) + " " + pad(nsieve(m, flags), 8) --> string
+"Primes up to " + pad(m, 8) + " " + pad(nsieve(m, flags), 8) --> string
+"Primes up to " + pad(m, 8) + " " + pad(nsieve(m, flags), 8) --> string
+"Primes up to " + pad(m, 8) + " " --> string
+"Primes up to " + pad(m, 8) + " " --> string
+"Primes up to " + pad(m, 8) + " " --> string
+"Primes up to " + pad(m, 8) --> string
+"Primes up to " + pad(m, 8) --> string
+"Primes up to " + pad(m, 8) --> string
+"Primes up to " --> string
+"Primes up to " --> string
+"Primes up to " --> string
+(1 << n - 1) * 10000 --> integer
+(1 << n - 1) --> integer
+(1 << n - 2) * 10000 --> integer
+(1 << n - 2) --> integer
+(1 << n) * 10000 --> integer
+(1 << n) --> integer
+0 --> integer
+0 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 << n - 1 --> integer
+1 << n - 2 --> integer
+1 << n --> integer
+10000 --> integer
+10000 --> integer
+10000 --> integer
+12 --> integer
+2 --> integer
+2 --> integer
+2 --> integer
+2 --> integer
+2 --> integer
+8 --> integer
+8 --> integer
+8 --> integer
+8 --> integer
+8 --> integer
+8 --> integer
+Array --> () -> Array<boolean> INTERSECT (integer) -> Array<boolean> INTERSECT (boolean,boolean) -> Array<boolean>
+Array(m + 1) --> Array<boolean>
+count --> integer
+count --> integer
+count --> integer
+count --> integer
+count = 0 --> integer
+count++ --> integer
+false --> boolean
+flags --> Array<boolean>
+flags --> Array<boolean>
+flags --> Array<boolean>
+flags --> Array<boolean>
+function nsieve(m, isPrime) {
+  var i, k, count;
+  for (i = 2; i <= m; i++) 
+    {
+      isPrime[i] = true;
+    }
+  count = 0;
+  for (i = 2; i <= m; i++) 
+    {
+      if (isPrime[i]) 
+      {
+        for (k = i + i; k <= m; k += i) 
+          isPrime[k] = false;
+        count++;
+      }
+    }
+  return count;
+}
+ --> (integer,Array<boolean>) -> integer
+function pad(number, width) {
+  var s = number.toString();
+  var prefixWidth = width - s.length;
+  if (prefixWidth > 0) 
+  {
+    for (var i = 1; i <= prefixWidth; i++) 
+      s = " " + s;
+  }
+  return s;
+}
+ --> (integer,integer) -> string
+i + i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i <= m --> boolean
+i <= m --> boolean
+i <= prefixWidth --> boolean
+i = 2 --> integer
+i = 2 --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+isPrime --> Array<boolean>
+isPrime --> Array<boolean>
+isPrime --> Array<boolean>
+isPrime --> Array<boolean>
+isPrime[i] --> boolean
+isPrime[i] --> boolean
+isPrime[i] = true --> boolean
+isPrime[k] --> boolean
+isPrime[k] = false --> boolean
+k += i --> integer
+k --> integer
+k --> integer
+k --> integer
+k --> integer
+k --> integer
+k <= m --> boolean
+k = i + i --> integer
+m + 1 --> integer
+m --> integer
+m --> integer
+m --> integer
+m --> integer
+m --> integer
+m --> integer
+m --> integer
+m --> integer
+m --> integer
+m --> integer
+m --> integer
+m --> integer
+m --> integer
+m --> integer
+m = (1 << n - 1) * 10000 --> integer
+m = (1 << n - 2) * 10000 --> integer
+n - 1 --> integer
+n - 2 --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n < 2 --> boolean
+n = 2 --> integer
+nsieve --> (integer,Array<boolean>) -> integer
+nsieve --> (integer,Array<boolean>) -> integer
+nsieve --> (integer,Array<boolean>) -> integer
+nsieve --> (integer,Array<boolean>) -> integer
+nsieve(m, flags) --> integer
+nsieve(m, flags) --> integer
+nsieve(m, flags) --> integer
+number --> integer
+number --> integer
+number.toString --> []() -> string INTERSECT [](integer) -> string
+number.toString() --> string
+pad --> (integer,integer) -> string
+pad --> (integer,integer) -> string
+pad --> (integer,integer) -> string
+pad --> (integer,integer) -> string
+pad --> (integer,integer) -> string
+pad --> (integer,integer) -> string
+pad --> (integer,integer) -> string
+pad(m, 8) --> string
+pad(m, 8) --> string
+pad(m, 8) --> string
+pad(nsieve(m, flags), 8) --> string
+pad(nsieve(m, flags), 8) --> string
+pad(nsieve(m, flags), 8) --> string
+prefixWidth --> integer
+prefixWidth --> integer
+prefixWidth --> integer
+prefixWidth > 0 --> boolean
+printString --> (string) -> void
+printString --> (string) -> void
+printString --> (string) -> void
+printString("Primes up to " + pad(m, 8) + " " + pad(nsieve(m, flags), 8)) --> void
+printString("Primes up to " + pad(m, 8) + " " + pad(nsieve(m, flags), 8)) --> void
+printString("Primes up to " + pad(m, 8) + " " + pad(nsieve(m, flags), 8)) --> void
+s --> string
+s --> string
+s --> string
+s --> string
+s --> string
+s = " " + s --> string
+s.length --> integer
+true --> boolean
+width - s.length --> integer
+width --> integer
+width --> integer

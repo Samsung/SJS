@@ -1,0 +1,9 @@
+C --> ctor<0>[null]() -> {  |  }
+C --> ctor<0>[null]() -> {  |  }
+d --> ctor<0>[null]() -> {  |  }
+d --> ctor<0>[null]() -> {  |  }
+function C() {
+}
+ --> ctor<0>[null]() -> {  |  }
+new d() --> {  |  }
+x --> {  |  }

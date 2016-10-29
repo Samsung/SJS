@@ -1,0 +1,4 @@
+Error on line 33: bad initialization of list1
+    Note: field forEach has incompatible type []((string) -> void) -> void instead of (({ toString: () -> string |  }) -> void) -> ___
+    Note: field pop has incompatible type []() -> string instead of () -> ___
+    Note: field push has incompatible type [](string) -> void instead of (integer) -> ___

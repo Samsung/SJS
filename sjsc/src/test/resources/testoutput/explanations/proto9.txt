@@ -1,0 +1,2 @@
+Error on line 8: read of missing property 'm3' on x
+    Note: type is { m1: []() -> integer, m2: []() -> integer | f: integer }

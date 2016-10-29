@@ -1,0 +1,115 @@
+CheckArity(ret(|(function modx() {
+  x = 490;
+})|))
+CheckArity(ret(|(function modx2_outer() {
+  return function modx2_inner() {
+  x = 265;
+};
+})()|))
+CheckArity(ret(|(function modx2_outer() {
+  return function modx2_inner() {
+  x = 265;
+};
+})|))
+CheckArity(ret(|assert|))
+CheckArity(ret(|assert|))
+CheckArity(ret(|assert|))
+CheckArity(ret(|assert|))
+CheckArity(ret(|assert|))
+MakeConcreteConstraint [term=|130|]
+MakeConcreteConstraint [term=|239|]
+MakeConcreteConstraint [term=|265|]
+MakeConcreteConstraint [term=|490|]
+MakeConcreteConstraint [term=|x * 2|]
+MakeConcreteConstraint [term=|x == 130|]
+MakeConcreteConstraint [term=|x == 260|]
+MakeConcreteConstraint [term=|x == 265|]
+MakeConcreteConstraint [term=|x == 490|]
+MakeConcreteConstraint [term=|y == 239|]
+ret(|function modx2_inner|)=void
+ret(|function modx2_inner|)=void
+ret(|function modx|)=void
+ret(|function modx|)=void
+|(function modx() {
+  x = 490;
+})()|=ret(|(function modx() {
+  x = 490;
+})|)
+|(function modx() {
+  x = 490;
+})|=|function modx|
+|(function modx2_outer() {
+  return function modx2_inner() {
+  x = 265;
+};
+})()()|=ret(|(function modx2_outer() {
+  return function modx2_inner() {
+  x = 265;
+};
+})()|)
+|(function modx2_outer() {
+  return function modx2_inner() {
+  x = 265;
+};
+})()|=ret(|(function modx2_outer() {
+  return function modx2_inner() {
+  x = 265;
+};
+})|)
+|(function modx2_outer() {
+  return function modx2_inner() {
+  x = 265;
+};
+})|=|function modx2_outer|
+|130|<:|x|
+|130|=integer
+|130|=integer
+|239|<:|y|
+|239|=integer
+|239|=integer
+|260|=integer
+|265|<:|x|
+|265|=integer
+|265|=integer
+|2|=integer
+|490|<:|x|
+|490|=integer
+|490|=integer
+|assert(x == 130)|=ret(|assert|)
+|assert(x == 260)|=ret(|assert|)
+|assert(x == 265)|=ret(|assert|)
+|assert(x == 490)|=ret(|assert|)
+|assert(y == 239)|=ret(|assert|)
+|assert|=|assert|
+|assert|=|assert|
+|assert|=|assert|
+|assert|=|assert|
+|assert|=|assert|
+|function modx2_inner|<:ret(|function modx2_outer|)
+|function modx2_inner|<:|modx2_inner|
+|function modx2_outer|<:|modx2_outer|
+|function modx|<:|modx|
+|x * 2|<:|x|
+|x * 2|=op(|x|*|2|)
+|x = 265|=|x|
+|x = 490|=|x|
+|x = x * 2|=|x|
+|x == 130|<:param(|assert|,0)
+|x == 130|=op(|x|==|130|)
+|x == 260|<:param(|assert|,0)
+|x == 260|=op(|x|==|260|)
+|x == 265|<:param(|assert|,0)
+|x == 265|=op(|x|==|265|)
+|x == 490|<:param(|assert|,0)
+|x == 490|=op(|x|==|490|)
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|y == 239|<:param(|assert|,0)
+|y == 239|=op(|y|==|239|)
+|y|=|y|

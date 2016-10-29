@@ -1,0 +1,2 @@
+Error on line 12: new D() is abstract
+    Note: missing read-write property 'b'

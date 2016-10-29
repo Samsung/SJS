@@ -1,0 +1,6 @@
+[] --> Array<boolean>
+a --> Array<boolean>
+a --> Array<boolean>
+a.push --> [](boolean) -> integer
+a.push(false) --> integer
+false --> boolean

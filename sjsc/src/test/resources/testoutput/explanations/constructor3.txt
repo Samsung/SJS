@@ -1,0 +1,3 @@
+Error on line 7: x.f assigned to y
+    Note: type is integer
+    Note: expected string

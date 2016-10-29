@@ -1,0 +1,8 @@
+MakeConcreteConstraint [term=|3|]
+MakeConcreteConstraint [term=|undefined|]
+TP(undefined)=|undefined|
+|3|<:|x|
+|3|=integer
+|undefined|=|x|
+|x = undefined|=|x|
+|x|=|x|

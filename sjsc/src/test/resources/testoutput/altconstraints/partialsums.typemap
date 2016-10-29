@@ -1,0 +1,221 @@
+"\t(2/3)^k" --> string
+"\t1/k(k+1)" --> string
+"\tAlternating Harmonic" --> string
+"\tCookson Hills" --> string
+"\tFlint Hills" --> string
+"\tGregory" --> string
+"\tHarmonic" --> string
+"\tRiemann Zeta" --> string
+"\tk^-0.5" --> string
+(2 * k - 1) --> integer
+(k * (k + 1.0)) --> float
+(k + 1.0) --> float
+(k3 * ck * ck) --> float
+(k3 * sk * sk) --> float
+-0.5 --> float
+-1.0 --> float
+-alt --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.5 --> float
+1 --> integer
+1 --> integer
+1.0 --> float
+1.0 --> float
+1.0 --> float
+1.0 --> float
+1.0 --> float
+1.0 --> float
+1.0 --> float
+1.0 --> float
+1.0 --> float
+1.0 --> float
+1.0 --> float
+1.0 --> float
+1.0 / (k * (k + 1.0)) --> float
+1.0 / (k3 * ck * ck) --> float
+1.0 / (k3 * sk * sk) --> float
+1.0 / k --> float
+1.0 / k2 --> float
+10000 --> integer
+2 * k - 1 --> integer
+2 * k --> integer
+2 --> integer
+2.0 --> float
+2.0 / 3.0 --> float
+3.0 --> float
+9 --> integer
+9 --> integer
+9 --> integer
+9 --> integer
+9 --> integer
+9 --> integer
+9 --> integer
+9 --> integer
+9 --> integer
+Math --> { E: float, LN2: float, LN10: float, LOG2E: float, LOG10E: float, PI: float, SQRT1_2: float, SQRT2: float, abs: [](float) -> float, acos: [](float) -> float, acosh: [](float) -> float, asin: [](float) -> float, asinh: [](float) -> float, atan: [](float) -> float, atanh: [](float) -> float, atan2: [](float,float) -> float, cbrt: [](float) -> float, ceil: [](float) -> float, cos: [](float) -> float, cosh: [](float) -> float, exp: [](float) -> float, expm1: [](float) -> float, floor: [](float) -> integer, fround: [](float) -> float, hypot: [](float,float) -> float, imul: [](float,float) -> float, log: [](float) -> float, log1p: [](float) -> float, log10: [](float) -> float, log2: [](float) -> float, max: [](float,float) -> float, min: [](float,float) -> float, pow: [](float,float) -> float, random: []() -> float, round: [](float) -> float, sign: [](float) -> float, sin: [](float) -> float, sinh: [](float) -> float, sqrt: [](float) -> float, tan: [](float) -> float, tanh: [](float) -> float, toSource: []() -> string, trunc: [](float) -> float |  }
+Math --> { E: float, LN2: float, LN10: float, LOG2E: float, LOG10E: float, PI: float, SQRT1_2: float, SQRT2: float, abs: [](float) -> float, acos: [](float) -> float, acosh: [](float) -> float, asin: [](float) -> float, asinh: [](float) -> float, atan: [](float) -> float, atanh: [](float) -> float, atan2: [](float,float) -> float, cbrt: [](float) -> float, ceil: [](float) -> float, cos: [](float) -> float, cosh: [](float) -> float, exp: [](float) -> float, expm1: [](float) -> float, floor: [](float) -> integer, fround: [](float) -> float, hypot: [](float,float) -> float, imul: [](float,float) -> float, log: [](float) -> float, log1p: [](float) -> float, log10: [](float) -> float, log2: [](float) -> float, max: [](float,float) -> float, min: [](float,float) -> float, pow: [](float,float) -> float, random: []() -> float, round: [](float) -> float, sign: [](float) -> float, sin: [](float) -> float, sinh: [](float) -> float, sqrt: [](float) -> float, tan: [](float) -> float, tanh: [](float) -> float, toSource: []() -> string, trunc: [](float) -> float |  }
+Math --> { E: float, LN2: float, LN10: float, LOG2E: float, LOG10E: float, PI: float, SQRT1_2: float, SQRT2: float, abs: [](float) -> float, acos: [](float) -> float, acosh: [](float) -> float, asin: [](float) -> float, asinh: [](float) -> float, atan: [](float) -> float, atanh: [](float) -> float, atan2: [](float,float) -> float, cbrt: [](float) -> float, ceil: [](float) -> float, cos: [](float) -> float, cosh: [](float) -> float, exp: [](float) -> float, expm1: [](float) -> float, floor: [](float) -> integer, fround: [](float) -> float, hypot: [](float,float) -> float, imul: [](float,float) -> float, log: [](float) -> float, log1p: [](float) -> float, log10: [](float) -> float, log2: [](float) -> float, max: [](float,float) -> float, min: [](float,float) -> float, pow: [](float,float) -> float, random: []() -> float, round: [](float) -> float, sign: [](float) -> float, sin: [](float) -> float, sinh: [](float) -> float, sqrt: [](float) -> float, tan: [](float) -> float, tanh: [](float) -> float, toSource: []() -> string, trunc: [](float) -> float |  }
+Math --> { E: float, LN2: float, LN10: float, LOG2E: float, LOG10E: float, PI: float, SQRT1_2: float, SQRT2: float, abs: [](float) -> float, acos: [](float) -> float, acosh: [](float) -> float, asin: [](float) -> float, asinh: [](float) -> float, atan: [](float) -> float, atanh: [](float) -> float, atan2: [](float,float) -> float, cbrt: [](float) -> float, ceil: [](float) -> float, cos: [](float) -> float, cosh: [](float) -> float, exp: [](float) -> float, expm1: [](float) -> float, floor: [](float) -> integer, fround: [](float) -> float, hypot: [](float,float) -> float, imul: [](float,float) -> float, log: [](float) -> float, log1p: [](float) -> float, log10: [](float) -> float, log2: [](float) -> float, max: [](float,float) -> float, min: [](float,float) -> float, pow: [](float,float) -> float, random: []() -> float, round: [](float) -> float, sign: [](float) -> float, sin: [](float) -> float, sinh: [](float) -> float, sqrt: [](float) -> float, tan: [](float) -> float, tanh: [](float) -> float, toSource: []() -> string, trunc: [](float) -> float |  }
+Math.cos --> [](float) -> float
+Math.cos(k * 1.0) --> float
+Math.pow --> [](float,float) -> float
+Math.pow --> [](float,float) -> float
+Math.pow(k * 1.0, -0.5) --> float
+Math.pow(twothirds, k - 1.0) --> float
+Math.sin --> [](float) -> float
+Math.sin(k * 1.0) --> float
+a1 += Math.pow(twothirds, k - 1.0) --> float
+a1 --> float
+a1 --> float
+a1 --> float
+a1.toFixed --> [](integer) -> string
+a1.toFixed(9) + "\t(2/3)^k" --> string
+a1.toFixed(9) --> string
+a2 += Math.pow(k * 1.0, -0.5) --> float
+a2 --> float
+a2 --> float
+a2 --> float
+a2.toFixed --> [](integer) -> string
+a2.toFixed(9) + "\tk^-0.5" --> string
+a2.toFixed(9) --> string
+a3 += 1.0 / (k * (k + 1.0)) --> float
+a3 --> float
+a3 --> float
+a3 --> float
+a3.toFixed --> [](integer) -> string
+a3.toFixed(9) + "\t1/k(k+1)" --> string
+a3.toFixed(9) --> string
+a4 += 1.0 / (k3 * sk * sk) --> float
+a4 --> float
+a4 --> float
+a4 --> float
+a4.toFixed --> [](integer) -> string
+a4.toFixed(9) + "\tFlint Hills" --> string
+a4.toFixed(9) --> string
+a5 += 1.0 / (k3 * ck * ck) --> float
+a5 --> float
+a5 --> float
+a5 --> float
+a5.toFixed --> [](integer) -> string
+a5.toFixed(9) + "\tCookson Hills" --> string
+a5.toFixed(9) --> string
+a6 += 1.0 / k --> float
+a6 --> float
+a6 --> float
+a6 --> float
+a6.toFixed --> [](integer) -> string
+a6.toFixed(9) + "\tHarmonic" --> string
+a6.toFixed(9) --> string
+a7 += 1.0 / k2 --> float
+a7 --> float
+a7 --> float
+a7 --> float
+a7.toFixed --> [](integer) -> string
+a7.toFixed(9) + "\tRiemann Zeta" --> string
+a7.toFixed(9) --> string
+a8 += alt / k --> float
+a8 --> float
+a8 --> float
+a8 --> float
+a8.toFixed --> [](integer) -> string
+a8.toFixed(9) + "\tAlternating Harmonic" --> string
+a8.toFixed(9) --> string
+a9 += alt / (2 * k - 1) --> float
+a9 --> float
+a9 --> float
+a9 --> float
+a9.toFixed --> [](integer) -> string
+a9.toFixed(9) + "\tGregory" --> string
+a9.toFixed(9) --> string
+alt --> float
+alt --> float
+alt --> float
+alt --> float
+alt --> float
+alt / (2 * k - 1) --> float
+alt / k --> float
+alt = -alt --> float
+ck --> float
+ck --> float
+ck --> float
+ck --> float
+ck = Math.cos(k * 1.0) --> float
+k * (k + 1.0) --> float
+k * 1.0 --> float
+k * 1.0 --> float
+k * 1.0 --> float
+k * k * 1.0 --> float
+k * k --> integer
+k + 1.0 --> float
+k - 1.0 --> float
+k --> integer
+k --> integer
+k --> integer
+k --> integer
+k --> integer
+k --> integer
+k --> integer
+k --> integer
+k --> integer
+k --> integer
+k --> integer
+k --> integer
+k --> integer
+k --> integer
+k --> integer
+k <= n --> boolean
+k++ --> integer
+k2 * k --> float
+k2 --> float
+k2 --> float
+k2 --> float
+k2 --> float
+k2 = k * k * 1.0 --> float
+k3 * ck * ck --> float
+k3 * ck --> float
+k3 * sk * sk --> float
+k3 * sk --> float
+k3 --> float
+k3 --> float
+k3 --> float
+k3 --> float
+k3 = k2 * k --> float
+n --> integer
+n --> integer
+printString --> (string) -> void
+printString --> (string) -> void
+printString --> (string) -> void
+printString --> (string) -> void
+printString --> (string) -> void
+printString --> (string) -> void
+printString --> (string) -> void
+printString --> (string) -> void
+printString --> (string) -> void
+printString(a1.toFixed(9) + "\t(2/3)^k") --> void
+printString(a2.toFixed(9) + "\tk^-0.5") --> void
+printString(a3.toFixed(9) + "\t1/k(k+1)") --> void
+printString(a4.toFixed(9) + "\tFlint Hills") --> void
+printString(a5.toFixed(9) + "\tCookson Hills") --> void
+printString(a6.toFixed(9) + "\tHarmonic") --> void
+printString(a7.toFixed(9) + "\tRiemann Zeta") --> void
+printString(a8.toFixed(9) + "\tAlternating Harmonic") --> void
+printString(a9.toFixed(9) + "\tGregory") --> void
+sk --> float
+sk --> float
+sk --> float
+sk --> float
+sk = Math.sin(k * 1.0) --> float
+twothirds --> float
+twothirds --> float

@@ -1,0 +1,256 @@
+CheckArity(ret(|Array|))
+CheckArity(ret(|ary[n].toFixed|))
+CheckArity(ret(|gen_random|))
+CheckArity(ret(|heapsort|))
+CheckArity(ret(|printString|))
+Elem(|ary|)=|ary[i]|
+Elem(|ary|)=|ary[n]|
+Elem(|ra|)=|ra[--l]|
+Elem(|ra|)=|ra[1]|
+Elem(|ra|)=|ra[1]|
+Elem(|ra|)=|ra[i]|
+Elem(|ra|)=|ra[i]|
+Elem(|ra|)=|ra[ir]|
+Elem(|ra|)=|ra[ir]|
+Elem(|ra|)=|ra[j + 1]|
+Elem(|ra|)=|ra[j]|
+Elem(|ra|)=|ra[j]|
+Elem(|ra|)=|ra[j]|
+MakeConcreteConstraint [term=|(i = j)|]
+MakeConcreteConstraint [term=|(last * IA + IC) % IM|]
+MakeConcreteConstraint [term=|(n >> 1) + 1|]
+MakeConcreteConstraint [term=|1.0|]
+MakeConcreteConstraint [term=|10|]
+MakeConcreteConstraint [term=|10|]
+MakeConcreteConstraint [term=|139968|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|29573|]
+MakeConcreteConstraint [term=|3877|]
+MakeConcreteConstraint [term=|42|]
+MakeConcreteConstraint [term=|Array(n + 1)|]
+MakeConcreteConstraint [term=|ary[n].toFixed(10)|]
+MakeConcreteConstraint [term=|ary[n]|]
+MakeConcreteConstraint [term=|ary|]
+MakeConcreteConstraint [term=|gen_random(1.0)|]
+MakeConcreteConstraint [term=|ir + 1|]
+MakeConcreteConstraint [term=|j|]
+MakeConcreteConstraint [term=|l << 1|]
+MakeConcreteConstraint [term=|l|]
+MakeConcreteConstraint [term=|n + 1|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|ra[--l]|]
+MakeConcreteConstraint [term=|ra[1]|]
+MakeConcreteConstraint [term=|ra[ir]|]
+MakeConcreteConstraint [term=|ra[j]|]
+MakeConcreteConstraint [term=|rra|]
+MakeConcreteConstraint [term=|rra|]
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,1)
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+op(--|l|)=Key(|ra|)
+param(|function gen_random|,0)=|max|
+param(|function heapsort|,0)=|n|
+param(|function heapsort|,1)=|ra|
+ret(|function heapsort|)=void
+void=ret(|function heapsort|)
+|(i = j)|<:|j|
+|(i = j)|=|i = j|
+|(last * IA + IC) % IM|<:|last|
+|(last * IA + IC) % IM|=op(|(last * IA + IC)|%|IM|)
+|(last * IA + IC)|=|last * IA + IC|
+|(last = (last * IA + IC) % IM)|=|last = (last * IA + IC) % IM|
+|(max * (last = (last * IA + IC) % IM) / IM)|<:ret(|function gen_random|)
+|(max * (last = (last * IA + IC) % IM) / IM)|=|max * (last = (last * IA + IC) % IM) / IM|
+|(n >> 1) + 1|<:|l|
+|(n >> 1) + 1|=op(|(n >> 1)|+|1|)
+|(n >> 1)|=|n >> 1|
+|++j|=op(++|j|)
+|--ir == 1|=op(op(--|ir|)==|1|)
+|--ir|=op(--|ir|)
+|--l|=op(--|l|)
+|1.0|<:param(|gen_random|,0)
+|1.0|=float
+|10|<:param(|ary[n].toFixed|,0)
+|10|<:|n|
+|10|=integer
+|10|=integer
+|139968|<:|IM|
+|139968|=integer
+|1|<:|i|
+|1|=Key(|ra|)
+|1|=Key(|ra|)
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|29573|<:|IC|
+|29573|=integer
+|3877|<:|IA|
+|3877|=integer
+|42|<:|last|
+|42|=integer
+|Array(n + 1)|<:|ary|
+|Array(n + 1)|=ret(|Array|)
+|Array|=|Array|
+|IA|=|IA|
+|IC|=|IC|
+|IM|=|IM|
+|IM|=|IM|
+|ary = Array(n + 1)|=|ary|
+|ary[i] = gen_random(1.0)|=|ary[i]|
+|ary[n].toFixed(10)|<:param(|printString|,0)
+|ary[n].toFixed(10)|=ret(|ary[n].toFixed|)
+|ary[n].toFixed|=prop(|ary[n]|,toFixed)
+|ary|<:param(|heapsort|,1)
+|ary|=|ary|
+|ary|=|ary|
+|ary|=|ary|
+|ary|=|ary|
+|function gen_random|<:|gen_random|
+|function heapsort|<:|heapsort|
+|gen_random(1.0)|<:|ary[i]|
+|gen_random(1.0)|=ret(|gen_random|)
+|gen_random|=|gen_random|
+|heapsort(n, ary)|=ret(|heapsort|)
+|heapsort|=|heapsort|
+|i <= n|=op(|i|<=|n|)
+|i = 1|=|i|
+|i = j|=|i|
+|i = l|=|i|
+|i++|=op(|i|++)
+|ir + 1|<:|j|
+|ir + 1|=op(|ir|+|1|)
+|ir = n|=|ir|
+|ir|=Key(|ra|)
+|ir|=Key(|ra|)
+|ir|=|ir|
+|ir|=|ir|
+|ir|=|ir|
+|ir|=|ir|
+|ir|=|ir|
+|ir|=|ir|
+|ir|=|ir|
+|i|=Key(|ary|)
+|i|=Key(|ra|)
+|i|=Key(|ra|)
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|j + 1|=Key(|ra|)
+|j + 1|=op(|j|+|1|)
+|j += (i = j)|=|j|
+|j < ir && ra[j] < ra[j + 1]|=op(|j < ir|&&|ra[j] < ra[j + 1]|)
+|j < ir|=op(|j|<|ir|)
+|j <= ir|=op(|j|<=|ir|)
+|j = ir + 1|=|j|
+|j = l << 1|=|j|
+|j|<:|i|
+|j|=Key(|ra|)
+|j|=Key(|ra|)
+|j|=Key(|ra|)
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|l << 1|<:|j|
+|l << 1|=op(|l|<<|1|)
+|l = (n >> 1) + 1|=|l|
+|l > 1|=op(|l|>|1|)
+|last * IA + IC|=op(|last * IA|+|IC|)
+|last * IA|=op(|last|*|IA|)
+|last = (last * IA + IC) % IM|=|last|
+|last|=|last|
+|last|=|last|
+|l|<:|i|
+|l|=|l|
+|l|=|l|
+|l|=|l|
+|l|=|l|
+|l|=|l|
+|max * (last = (last * IA + IC) % IM) / IM|=op(|max * (last = (last * IA + IC) % IM)|/|IM|)
+|max * (last = (last * IA + IC) % IM)|=op(|max|*|(last = (last * IA + IC) % IM)|)
+|max|=|max|
+|n + 1|<:param(|Array|,0)
+|n + 1|=op(|n|+|1|)
+|n >> 1|=op(|n|>>|1|)
+|n|<:param(|heapsort|,0)
+|n|<:|ir|
+|n|=Key(|ary|)
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|printString(ary[n].toFixed(10))|=ret(|printString|)
+|printString|=|printString|
+|ra[--l]|<:|rra|
+|ra[1] = rra|=|ra[1]|
+|ra[1]|<:|ra[ir]|
+|ra[i] = ra[j]|=|ra[i]|
+|ra[i] = rra|=|ra[i]|
+|ra[ir] = ra[1]|=|ra[ir]|
+|ra[ir]|<:|rra|
+|ra[j] < ra[j + 1]|=op(|ra[j]|<|ra[j + 1]|)
+|ra[j]|<:|ra[i]|
+|ra|=|ra|
+|ra|=|ra|
+|ra|=|ra|
+|ra|=|ra|
+|ra|=|ra|
+|ra|=|ra|
+|ra|=|ra|
+|ra|=|ra|
+|ra|=|ra|
+|ra|=|ra|
+|ra|=|ra|
+|rra < ra[j]|=op(|rra|<|ra[j]|)
+|rra = ra[--l]|=|rra|
+|rra = ra[ir]|=|rra|
+|rra|<:|ra[1]|
+|rra|<:|ra[i]|
+|rra|=|rra|
+|rra|=|rra|
+|rra|=|rra|
+|rra|=|rra|
+|rra|=|rra|

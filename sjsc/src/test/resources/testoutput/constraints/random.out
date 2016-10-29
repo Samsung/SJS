@@ -1,0 +1,67 @@
+CheckArity(ret(|printString|))
+CheckArity(ret(|rand(100).toFixed|))
+CheckArity(ret(|rand|))
+CheckArity(ret(|rand|))
+MakeConcreteConstraint [term=|(last * A + C) % M|]
+MakeConcreteConstraint [term=|100|]
+MakeConcreteConstraint [term=|100|]
+MakeConcreteConstraint [term=|139968|]
+MakeConcreteConstraint [term=|17|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|29573|]
+MakeConcreteConstraint [term=|3877|]
+MakeConcreteConstraint [term=|42.0|]
+MakeConcreteConstraint [term=|9|]
+MakeConcreteConstraint [term=|rand(100).toFixed(9)|]
+MakeConcreteConstraint [term=|rand(100)|]
+param(|function rand|,0)=|max|
+|(last * A + C) % M|<:|last|
+|(last * A + C) % M|=op(|(last * A + C)|%|M|)
+|(last * A + C)|=|last * A + C|
+|100|<:param(|rand|,0)
+|100|<:param(|rand|,0)
+|100|=integer
+|100|=integer
+|139968|<:|M|
+|139968|=integer
+|17|<:|n|
+|17|=integer
+|1|<:|i|
+|1|=integer
+|29573|<:|C|
+|29573|=integer
+|3877|<:|A|
+|3877|=integer
+|42.0|<:|last|
+|42.0|=float
+|9|<:param(|rand(100).toFixed|,0)
+|9|=integer
+|A|=|A|
+|C|=|C|
+|M|=|M|
+|M|=|M|
+|function rand|<:|rand|
+|i < n|=op(|i|<|n|)
+|i++|=op(|i|++)
+|i|=|i|
+|i|=|i|
+|last * A + C|=op(|last * A|+|C|)
+|last * A|=op(|last|*|A|)
+|last = (last * A + C) % M|=|last|
+|last|=|last|
+|last|=|last|
+|last|=|last|
+|max * last / M|<:ret(|function rand|)
+|max * last / M|=op(|max * last|/|M|)
+|max * last|=op(|max|*|last|)
+|max|=|max|
+|n|=|n|
+|printString(rand(100).toFixed(9))|=ret(|printString|)
+|printString|=|printString|
+|rand(100).toFixed(9)|<:param(|printString|,0)
+|rand(100).toFixed(9)|=ret(|rand(100).toFixed|)
+|rand(100).toFixed|=prop(|rand(100)|,toFixed)
+|rand(100)|=ret(|rand|)
+|rand(100)|=ret(|rand|)
+|rand|=|rand|
+|rand|=|rand|

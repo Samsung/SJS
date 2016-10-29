@@ -1,0 +1,30 @@
+CheckArity(ret(|printInt|))
+CheckArity(ret(|printInt|))
+CheckArity(ret(|printString|))
+CheckArity(ret(|printString|))
+MakeConcreteConstraint [term=|"foo"|]
+MakeConcreteConstraint [term=|"hello"|]
+MakeConcreteConstraint [term=|17|]
+MakeConcreteConstraint [term=|18|]
+MakeConcreteConstraint [term=|i|]
+MakeConcreteConstraint [term=|s|]
+|"foo"|<:param(|printString|,0)
+|"foo"|=string
+|"hello"|<:|s|
+|"hello"|=string
+|17|<:|i|
+|17|=integer
+|18|<:param(|printInt|,0)
+|18|=integer
+|i|<:param(|printInt|,0)
+|i|=|i|
+|printInt(18)|=ret(|printInt|)
+|printInt(i)|=ret(|printInt|)
+|printInt|=|printInt|
+|printInt|=|printInt|
+|printString("foo")|=ret(|printString|)
+|printString(s)|=ret(|printString|)
+|printString|=|printString|
+|printString|=|printString|
+|s|<:param(|printString|,0)
+|s|=|s|

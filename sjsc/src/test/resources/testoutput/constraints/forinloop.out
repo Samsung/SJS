@@ -1,0 +1,33 @@
+Elem(|table|)=|table[c]|
+Elem(|table|)=|table[last]|
+MakeConcreteConstraint [term=|"bar"|]
+MakeConcreteConstraint [term=|"baz"|]
+MakeConcreteConstraint [term=|"foo"|]
+MakeConcreteConstraint [term=|"foo"|]
+MakeConcreteConstraint [term=|c|]
+MakeConcreteConstraint [term=|table[last]|]
+MakeConcreteConstraint [term=|{"x": "foo", "y": "bar", "z": "baz"}|]
+|"bar"|<:Elem(|{"x": "foo", "y": "bar", "z": "baz"}|)
+|"bar"|=string
+|"baz"|<:Elem(|{"x": "foo", "y": "bar", "z": "baz"}|)
+|"baz"|=string
+|"foo"|<:Elem(|{"x": "foo", "y": "bar", "z": "baz"}|)
+|"foo"|<:|last|
+|"foo"|=string
+|"foo"|=string
+|c|<:string
+|c|<:|last|
+|c|=Key(|table|)
+|c|=|c|
+|c|=|c|
+|last = c|=|last|
+|last|=Key(|table|)
+|last|=|last|
+|last|=|last|
+|table[c] += table[last]|=|table[c]|
+|table[last]|<:|table[c]|
+|table|<:Map<X0>
+|table|=|table|
+|table|=|table|
+|table|=|table|
+|{"x": "foo", "y": "bar", "z": "baz"}|<:|table|

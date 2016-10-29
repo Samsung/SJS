@@ -1,0 +1,15 @@
+"foo" --> string
+[] --> Array<___>
+a --> Array<___>
+a --> Array<___>
+a === null --> boolean
+null --> {  |  }
+null --> {  |  }
+null --> {  |  }
+s !== null --> boolean
+s --> string
+s --> string
+x --> Map<___>
+x --> Map<___>
+x == null --> boolean
+{} --> Map<___>

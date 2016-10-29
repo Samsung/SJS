@@ -1,0 +1,4 @@
+could not join function types: (X4,X5) -> X6 and (X0) -> X1
+type source: |function sum| at line 3
+type source: |function id| at line 1
+target term: |z| at line 5

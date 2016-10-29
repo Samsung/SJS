@@ -1,0 +1,20 @@
+C.prototype (line 11) --> [MRO=[x], MRW=[]]
+C.prototype (line 6) --> [MRO=[x], MRW=[]]
+C.prototype = {x: 3, m: function() {
+  return this.x;
+}, n: function() {
+  return this.x * 2;
+}} (line 6) --> [MRO=[x], MRW=[]]
+D.prototype (line 19) --> [MRO=[x], MRW=[]]
+D.prototype = new C(19) (line 19) --> [MRO=[x], MRW=[]]
+new C(19) (line 10) --> [MRO=[x], MRW=[]]
+new C(19) (line 19) --> [MRO=[x], MRW=[]]
+new D() (line 20) --> [MRO=[x], MRW=[]]
+this (line 17) --> [MRO=[x], MRW=[]]
+this (line 3) --> [MRO=[x], MRW=[]]
+this (line 4) --> [MRO=[x], MRW=[]]
+{x: 3, m: function() {
+  return this.x;
+}, n: function() {
+  return this.x * 2;
+}} (line 6) --> [MRO=[x], MRW=[]]

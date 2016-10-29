@@ -1,0 +1,43 @@
+"hello" --> string
+3 --> integer
+C --> ctor<0>[{  | m: (integer) -> void }]() -> {  | m: (integer) -> void }
+C --> ctor<0>[{  | m: (integer) -> void }]() -> {  | m: (integer) -> void }
+C --> ctor<0>[{  | m: (integer) -> void }]() -> {  | m: (integer) -> void }
+C.prototype --> {  | m: (integer) -> void }
+C.prototype = {m: function(p) {
+  console.log(string_of_int(p));
+}} --> {  | m: (integer) -> void }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log("hello") --> void
+console.log(string_of_int(p)) --> void
+function C() {
+  this.m = function(q) {
+  console.log("hello");
+};
+}
+ --> ctor<0>[{  | m: (integer) -> void }]() -> {  | m: (integer) -> void }
+function(p) {
+  console.log(string_of_int(p));
+} --> (integer) -> void
+function(q) {
+  console.log("hello");
+} --> (integer) -> void
+new C() --> {  | m: (integer) -> void }
+new C().m --> (integer) -> void
+new C().m(3) --> void
+p --> integer
+p --> integer
+q --> integer
+string_of_int --> (integer) -> string
+string_of_int(p) --> string
+this --> {  | m: (integer) -> void }
+this.m --> (integer) -> void
+this.m = function(q) {
+  console.log("hello");
+} --> (integer) -> void
+{m: function(p) {
+  console.log(string_of_int(p));
+}} --> {  | m: (integer) -> void }

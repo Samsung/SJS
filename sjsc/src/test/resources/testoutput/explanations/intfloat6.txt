@@ -1,0 +1,3 @@
+Error on line 1: bad initialization of x
+    Note: type is float
+    Note: expected integer

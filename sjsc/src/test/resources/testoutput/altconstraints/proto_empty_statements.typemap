@@ -1,0 +1,31 @@
+1 --> integer
+3 --> integer
+C --> ctor<0>[{  | g: integer, m: []() -> integer }]() -> { g: integer, m: []() -> integer |  }
+C --> ctor<0>[{  | g: integer, m: []() -> integer }]() -> { g: integer, m: []() -> integer |  }
+C --> ctor<0>[{  | g: integer, m: []() -> integer }]() -> { g: integer, m: []() -> integer |  }
+C.prototype --> {  | g: integer, m: []() -> integer }
+C.prototype --> {  | g: integer, m: []() -> integer }
+C.prototype = {g: 3, m: function() {
+  return this.g;
+}} --> {  | g: integer, m: []() -> integer }
+C.prototype.m --> []() -> integer
+C.prototype.m = function() {
+  return this.g + 1;
+} --> []() -> integer
+function C() {
+}
+ --> ctor<0>[{  | g: integer, m: []() -> integer }]() -> { g: integer, m: []() -> integer |  }
+function() {
+  return this.g + 1;
+} --> [{ g: integer |  }]() -> integer
+function() {
+  return this.g;
+} --> [{ g: integer |  }]() -> integer
+this --> { g: integer |  }
+this --> { g: integer |  }
+this.g + 1 --> integer
+this.g --> integer
+this.g --> integer
+{g: 3, m: function() {
+  return this.g;
+}} --> {  | g: integer, m: []() -> integer }

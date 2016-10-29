@@ -1,0 +1,3 @@
+"Hello, via print()" --> string
+print --> (string) -> void
+print("Hello, via print()") --> void

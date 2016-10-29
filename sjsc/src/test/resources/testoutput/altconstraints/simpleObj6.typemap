@@ -1,0 +1,13 @@
+4 --> integer
+5 --> integer
+a --> {  | foo: {  | p: integer }, bar: integer }
+a --> {  | foo: {  | p: integer }, bar: integer }
+a.foo --> {  | p: integer }
+s --> integer
+t --> {  | p: integer }
+t --> {  | p: integer }
+t.p --> integer
+x --> {  | p: integer }
+x --> {  | p: integer }
+{foo: x, bar: 5} --> {  | foo: {  | p: integer }, bar: integer }
+{p: 4} --> {  | p: integer }

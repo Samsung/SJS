@@ -1,0 +1,34 @@
+CheckArity(ret(|partialSum.toFixed|))
+CheckArity(ret(|printString|))
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|1.0 / d|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|50|]
+MakeConcreteConstraint [term=|9|]
+MakeConcreteConstraint [term=|partialSum.toFixed(9)|]
+MakeConcreteConstraint [term=|partialSum|]
+|0.0|<:|partialSum|
+|0.0|=float
+|1.0 / d|<:|partialSum|
+|1.0 / d|=op(|1.0|/|d|)
+|1.0|=float
+|1|<:|d|
+|1|=integer
+|50|<:|n|
+|50|=integer
+|9|<:param(|partialSum.toFixed|,0)
+|9|=integer
+|d <= n|=op(|d|<=|n|)
+|d++|=op(|d|++)
+|d|=|d|
+|d|=|d|
+|d|=|d|
+|n|=|n|
+|partialSum += 1.0 / d|=|partialSum|
+|partialSum.toFixed(9)|<:param(|printString|,0)
+|partialSum.toFixed(9)|=ret(|partialSum.toFixed|)
+|partialSum.toFixed|=prop(|partialSum|,toFixed)
+|partialSum|=|partialSum|
+|partialSum|=|partialSum|
+|printString(partialSum.toFixed(9))|=ret(|printString|)
+|printString|=|printString|

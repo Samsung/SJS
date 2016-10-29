@@ -1,0 +1,21 @@
+25 --> integer
+3 --> integer
+5 --> integer
+7 --> integer
+foo --> () -> {  | a: integer, c: integer }
+foo --> () -> {  | a: integer, c: integer }
+foo() --> {  | a: integer, c: integer }
+function foo() {
+  return {a: 7, c: 25};
+}
+ --> () -> {  | a: integer, c: integer }
+x --> {  | a: integer, b: integer }
+x --> {  | a: integer, b: integer }
+y --> {  | a: integer }
+y --> {  | a: integer }
+y --> {  | a: integer }
+y = x --> {  | a: integer }
+y.a --> integer
+z --> integer
+{a: 5, b: 3} --> {  | a: integer, b: integer }
+{a: 7, c: 25} --> {  | a: integer, c: integer }

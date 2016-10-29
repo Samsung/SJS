@@ -1,0 +1,2 @@
+Error on line 5: ({fun: f}) is abstract
+    Note: missing read-write property 'b'

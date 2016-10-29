@@ -1,0 +1,23 @@
+"" --> string
+7 --> integer
+M --> ctor<0>[null]() -> {  | p: integer }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log(y.p + "") --> void
+function M() {
+  this.p = 7;
+} --> ctor<0>[null]() -> {  | p: integer }
+new x.m() --> {  | p: integer }
+this --> {  | p: integer }
+this.p --> integer
+this.p = 7 --> integer
+x --> {  | m: ctor<0>[null]() -> {  | p: integer } }
+x --> {  | m: ctor<0>[null]() -> {  | p: integer } }
+x.m --> ctor<0>[null]() -> {  | p: integer }
+y --> {  | p: integer }
+y --> {  | p: integer }
+y.p + "" --> string
+y.p --> integer
+{m: function M() {
+  this.p = 7;
+}} --> {  | m: ctor<0>[null]() -> {  | p: integer } }

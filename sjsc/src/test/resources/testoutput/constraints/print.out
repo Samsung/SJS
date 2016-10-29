@@ -1,0 +1,6 @@
+CheckArity(ret(|print|))
+MakeConcreteConstraint [term=|"Hello, via print()"|]
+|"Hello, via print()"|<:param(|print|,0)
+|"Hello, via print()"|=string
+|print("Hello, via print()")|=ret(|print|)
+|print|=|print|

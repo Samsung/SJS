@@ -1,0 +1,19 @@
+1 --> integer
+1 --> integer
+1 --> integer
+false --> boolean
+false ? x : y --> {  | a: {  | b: integer } }
+printInt --> (integer) -> void
+printInt(z.a.b) --> void
+x --> {  | a: {  | b: integer } }
+x --> {  | a: {  | b: integer } }
+y --> {  | a: {  | b: integer } }
+y --> {  | a: {  | b: integer } }
+z --> {  | a: {  | b: integer } }
+z --> {  | a: {  | b: integer } }
+z.a --> {  | b: integer }
+z.a.b --> integer
+{a: {b: 1, c: 1}} --> {  | a: {  | b: integer } }
+{a: {b: 1}} --> {  | a: {  | b: integer } }
+{b: 1, c: 1} --> {  | b: integer, c: integer }
+{b: 1} --> {  | b: integer }

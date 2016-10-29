@@ -1,0 +1,5201 @@
+CheckArity(ret(|"0".charCodeAt|))
+CheckArity(ret(|"A".charCodeAt|))
+CheckArity(ret(|"a".charCodeAt|))
+CheckArity(ret(|(function() {
+  var dbits = 28, BI_FP = 52, DB = dbits, DM = ((1 << dbits) - 1), DV = (1 << dbits), FV = Math.floor(Math.pow(2.0, BI_FP * 1.0)), F1 = BI_FP - dbits, F2 = 2 * dbits - BI_FP;
+  function am(This, i, x, w, j, c, n) {
+    var xl = x & 3fff, xh = x >> 14, z, l, h, m;
+    if (--n >= 0) 
+    for (; ; ) 
+      {
+        l = (((m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)) & 3fff) << 14) + xl * l + w.arr[j] + c;
+        w.arr[j++] = l & fffffff;
+        ++i;
+        if (--n >= 0) 
+        {
+          c = (l >> 28) + (m >> 14) + xh * h;
+        } else {
+          return (l >> 28) + (m >> 14) + xh * h;
+        }
+      }
+    return c;
+  }
+  var BI_RM = "0123456789abcdefghijklmnopqrstuvwxyz";
+  var BI_RC = new Array();
+  var rr, vv;
+  rr = "0".charCodeAt(0);
+  for (vv = 0; vv <= 9; ++vv) 
+    BI_RC[rr++] = vv;
+  rr = "a".charCodeAt(0);
+  for (vv = 10; vv < 36; ++vv) 
+    BI_RC[rr++] = vv;
+  rr = "A".charCodeAt(0);
+  for (vv = 10; vv < 36; ++vv) 
+    BI_RC[rr++] = vv;
+  function copyTo(o, r) {
+    for (var i = (r.t = o.t) - 1; i >= 0; --i) 
+      r.arr[i] = o.arr[i];
+    r.s = o.s;
+  }
+  function fromInt(o, x) {
+    o.t = 1;
+    o.s = (x < 0) ? -1 : 0;
+    if (x > 0) 
+    o.arr[0] = x; else if (x < -1) 
+    o.arr[0] = x + DV; else o.t = 0;
+  }
+  function nbv(i) {
+    var r = {arr: [], s: 0, t: 0};
+    fromInt(r, i);
+    return r;
+  }
+  function clamp(r) {
+    var c = r.s & DM, t = r.t;
+    while (t > 0 && r.arr[t - 1] == c) 
+      {
+        --t;
+      }
+    r.t = t;
+  }
+  function negate(o) {
+    var r = {arr: [], s: 0, t: 0};
+    bnpSubTo(ZERO, o, r);
+    return r;
+  }
+  function abs(o) {
+    return (o.s < 0) ? negate(o) : o;
+  }
+  function bnCompareTo(o, a) {
+    var r = o.s - a.s;
+    if (r != 0) 
+    return r;
+    var i = o.t;
+    r = i - a.t;
+    if (r != 0) 
+    return r;
+    while (--i >= 0) 
+      if ((r = o.arr[i] - a.arr[i]) != 0) 
+      return r;
+    return 0;
+  }
+  function nbits(x) {
+    var r = 1, t;
+    if ((t = x >>> 16) != 0) 
+    {
+      x = t;
+      r += 16;
+    }
+    if ((t = x >> 8) != 0) 
+    {
+      x = t;
+      r += 8;
+    }
+    if ((t = x >> 4) != 0) 
+    {
+      x = t;
+      r += 4;
+    }
+    if ((t = x >> 2) != 0) 
+    {
+      x = t;
+      r += 2;
+    }
+    if ((t = x >> 1) != 0) 
+    {
+      x = t;
+      r += 1;
+    }
+    return r;
+  }
+  function bnpDLShift(o, n) {
+    var i, t, r = {arr: Array((t = o.t) + n), s: 0, t: 0};
+    for (i = t - 1; i >= 0; --i) 
+      r.arr[i + n] = o.arr[i];
+    for (i = n - 1; i >= 0; --i) 
+      r.arr[i] = 0;
+    r.t = t + n;
+    r.s = o.s;
+    return r;
+  }
+  function bnpDRShiftTo(o, n, r) {
+    for (var i = n; i < o.t; ++i) 
+      r.arr[i - n] = o.arr[i];
+    r.t = Math.floor(Math.max(o.t - n * 1.0, 0.0));
+    r.s = o.s;
+  }
+  function bnpLShiftTo(o, n, r) {
+    var bs = n % DB, cbs = DB - bs, bm = (1 << cbs) - 1, ds = Math.floor(n / DB + 0.0), c = ((s = o.s) << bs) & DM, i, z, t, s;
+    for (i = (t = o.t) - 1; i >= 0; --i) 
+      {
+        r.arr[i + ds + 1] = ((z = o.arr[i]) >> cbs) | c;
+        c = (z & bm) << bs;
+      }
+    for (i = ds - 1; i >= 0; --i) 
+      r.arr[i] = 0;
+    r.arr[ds] = c;
+    r.t = t + ds + 1;
+    r.s = s;
+    clamp(r);
+  }
+  function bnpRShiftTo(o, n, r) {
+    r.s = o.s;
+    var ds = Math.floor(n / DB + 0.0), t = o.t, z;
+    if (ds >= t) 
+    {
+      r.t = 0;
+      return;
+    }
+    var bs = n % DB, cbs = DB - bs, bm = (1 << bs) - 1;
+    r.arr[0] = o.arr[ds] >> bs;
+    for (var i = ds + 1; i < t; ++i) 
+      {
+        r.arr[i - ds - 1] |= ((z = o.arr[i]) & bm) << cbs;
+        r.arr[i - ds] = z >> bs;
+      }
+    if (bs > 0) 
+    r.arr[t - ds - 1] |= (o.s & bm) << cbs;
+    r.t = t - ds;
+    clamp(r);
+  }
+  function bnpSubTo(o, a, r) {
+    var i = 0, c = 0, t, m = Math.min(a.t * 1.0, t = o.t * 1.0);
+    while (i < m) 
+      {
+        c += o.arr[i] - a.arr[i];
+        r.arr[i++] = c & DM;
+        c >>= DB;
+      }
+    if (a.t < t) 
+    {
+      c -= a.s;
+      while (i < t) 
+        {
+          c += o.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c += o.s;
+    } else {
+      c += o.s;
+      while (i < a.t) 
+        {
+          c -= a.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c -= a.s;
+    }
+    r.s = (c < 0) ? -1 : 0;
+    if (c < -1) 
+    r.arr[i++] = DV + c; else if (c > 0) 
+    r.arr[i++] = c;
+    r.t = i;
+    clamp(r);
+  }
+  function bnpMultiplyTo(o, a, r) {
+    var x = abs(o), y = abs(a);
+    var i = x.t;
+    r.t = i + y.t;
+    while (--i >= 0) 
+      r.arr[i] = 0;
+    for (i = 0; i < y.t; ++i) 
+      r.arr[i + x.t] = am(x, 0, y.arr[i], r, i, 0, x.t);
+    r.s = 0;
+    clamp(r);
+    if (o.s != a.s) 
+    bnpSubTo(ZERO, r, r);
+  }
+  function bnpDivRemTo(o, m, q, r) {
+    var pm = abs(m);
+    if (pm.t <= 0) 
+    return;
+    var pt = abs(o);
+    if (pt.t < pm.t) 
+    {
+      fromInt(q, 0);
+      if (r != null) 
+      copyTo(o, r);
+      return;
+    }
+    if (r == null) 
+    r = {arr: [], s: 0, t: 0};
+    var y = {arr: [], s: 0, t: 0}, ts = o.s, ms = m.s;
+    var nsh = DB - nbits(pm.arr[pm.t - 1]);
+    if (nsh > 0) 
+    {
+      bnpLShiftTo(pm, nsh, y);
+      bnpLShiftTo(pt, nsh, r);
+    } else {
+      copyTo(pm, y);
+      copyTo(pt, r);
+    }
+    var ys = y.t;
+    var y0 = y.arr[ys - 1];
+    if (y0 == 0) 
+    return;
+    var yt = y0 * (1 << F1) + ((ys > 1) ? y.arr[ys - 2] >> F2 : 0);
+    var d1 = FV / yt, d2 = (1 << F1) / yt, e = 1 << F2;
+    var i = r.t, j = i - ys, t = bnpDLShift(y, j);
+    if (bnCompareTo(r, t) >= 0) 
+    {
+      r.arr[r.t++] = 1;
+      bnpSubTo(r, t, r);
+    }
+    t = bnpDLShift(ONE, ys);
+    bnpSubTo(t, y, y);
+    while (y.t < ys) 
+      y.arr[y.t++] = 0;
+    while (--j >= 0) 
+      {
+        var qd = (r.arr[--i] == y0) ? DM : Math.floor(r.arr[i] * d1 + (r.arr[i - 1] + e) * d2 + 0.0);
+        if ((r.arr[i] += am(y, 0, qd, r, j, 0, ys)) < qd) 
+        {
+          t = bnpDLShift(y, j);
+          bnpSubTo(r, t, r);
+          while (r.arr[i] < --qd) 
+            bnpSubTo(r, t, r);
+        }
+      }
+    if (q != null) 
+    {
+      bnpDRShiftTo(r, ys, q);
+      if (ts != ms) 
+      bnpSubTo(ZERO, q, q);
+    }
+    r.t = ys;
+    clamp(r);
+    if (nsh > 0) 
+    bnpRShiftTo(r, nsh, r);
+    if (ts < 0) 
+    bnpSubTo(ZERO, r, r);
+  }
+  var ZERO = nbv(0);
+  var ONE = nbv(1);
+  function intValue(o) {
+    if (o.s < 0) 
+    {
+      if (o.t == 1) 
+      return o.arr[0] - DV; else if (o.t == 0) 
+      return -1;
+    } else if (o.t == 1) 
+    return o.arr[0]; else if (o.t == 0) 
+    return 0;
+    return ((o.arr[1] & ((1 << (32 - DB)) - 1)) << DB) | o.arr[0];
+  }
+  function shiftLeft(o, n) {
+    var r = {arr: [], s: 0, t: 0};
+    if (n < 0) 
+    bnpRShiftTo(o, -n, r); else bnpLShiftTo(o, n, r);
+    return r;
+  }
+  function bnpAddTo(o, a, r) {
+    var i = 0, c = 0, m = Math.min(a.t * 1.0, o.t * 1.0);
+    while (i < m) 
+      {
+        c += o.arr[i] + a.arr[i];
+        r.arr[i++] = c & DM;
+        c >>= DB;
+      }
+    if (a.t < o.t) 
+    {
+      c += a.s;
+      while (i < o.t) 
+        {
+          c += o.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c += o.s;
+    } else {
+      c += o.s;
+      while (i < a.t) 
+        {
+          c += a.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c += a.s;
+    }
+    r.s = (c < 0) ? -1 : 0;
+    if (c > 0) 
+    r.arr[i++] = c; else if (c < -1) 
+    r.arr[i++] = DV + c;
+    r.t = i;
+    clamp(r);
+  }
+  return {compareTo: bnCompareTo, multiply: function multiply(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpMultiplyTo(o, a, r);
+  return r;
+}, divide: function divide(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpDivRemTo(o, a, r, null);
+  return r;
+}, addTo: bnpAddTo, add: function add(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpAddTo(o, a, r);
+  return r;
+}, nbv: nbv, shiftLeft: shiftLeft, intValue: intValue};
+})|))
+CheckArity(ret(|(functions.add)|))
+CheckArity(ret(|(functions.add)|))
+CheckArity(ret(|(functions.addTo)|))
+CheckArity(ret(|(functions.addTo)|))
+CheckArity(ret(|(functions.compareTo)|))
+CheckArity(ret(|(functions.divide)|))
+CheckArity(ret(|(functions.divide)|))
+CheckArity(ret(|(functions.intValue)|))
+CheckArity(ret(|(functions.intValue)|))
+CheckArity(ret(|(functions.multiply)|))
+CheckArity(ret(|(functions.multiply)|))
+CheckArity(ret(|(functions.multiply)|))
+CheckArity(ret(|(functions.multiply)|))
+CheckArity(ret(|(functions.multiply)|))
+CheckArity(ret(|(functions.multiply)|))
+CheckArity(ret(|(functions.multiply)|))
+CheckArity(ret(|(functions.multiply)|))
+CheckArity(ret(|(functions.multiply)|))
+CheckArity(ret(|(functions.nbv)|))
+CheckArity(ret(|(functions.nbv)|))
+CheckArity(ret(|(functions.nbv)|))
+CheckArity(ret(|(functions.nbv)|))
+CheckArity(ret(|(functions.nbv)|))
+CheckArity(ret(|(functions.nbv)|))
+CheckArity(ret(|(functions.nbv)|))
+CheckArity(ret(|(functions.nbv)|))
+CheckArity(ret(|(functions.nbv)|))
+CheckArity(ret(|(functions.nbv)|))
+CheckArity(ret(|(functions.shiftLeft)|))
+CheckArity(ret(|Array(11 - $i).join|))
+CheckArity(ret(|Array|))
+CheckArity(ret(|Array|))
+CheckArity(ret(|Array|))
+CheckArity(ret(|Array|))
+CheckArity(ret(|Array|))
+CheckArity(ret(|Math.floor|))
+CheckArity(ret(|Math.floor|))
+CheckArity(ret(|Math.floor|))
+CheckArity(ret(|Math.floor|))
+CheckArity(ret(|Math.floor|))
+CheckArity(ret(|Math.max|))
+CheckArity(ret(|Math.min|))
+CheckArity(ret(|Math.min|))
+CheckArity(ret(|Math.pow|))
+CheckArity(ret(|abs|))
+CheckArity(ret(|abs|))
+CheckArity(ret(|abs|))
+CheckArity(ret(|abs|))
+CheckArity(ret(|am|))
+CheckArity(ret(|am|))
+CheckArity(ret(|bnCompareTo|))
+CheckArity(ret(|bnpAddTo|))
+CheckArity(ret(|bnpDLShift|))
+CheckArity(ret(|bnpDLShift|))
+CheckArity(ret(|bnpDLShift|))
+CheckArity(ret(|bnpDRShiftTo|))
+CheckArity(ret(|bnpDivRemTo|))
+CheckArity(ret(|bnpLShiftTo|))
+CheckArity(ret(|bnpLShiftTo|))
+CheckArity(ret(|bnpLShiftTo|))
+CheckArity(ret(|bnpMultiplyTo|))
+CheckArity(ret(|bnpRShiftTo|))
+CheckArity(ret(|bnpRShiftTo|))
+CheckArity(ret(|bnpSubTo|))
+CheckArity(ret(|bnpSubTo|))
+CheckArity(ret(|bnpSubTo|))
+CheckArity(ret(|bnpSubTo|))
+CheckArity(ret(|bnpSubTo|))
+CheckArity(ret(|bnpSubTo|))
+CheckArity(ret(|bnpSubTo|))
+CheckArity(ret(|bnpSubTo|))
+CheckArity(ret(|clamp|))
+CheckArity(ret(|clamp|))
+CheckArity(ret(|clamp|))
+CheckArity(ret(|clamp|))
+CheckArity(ret(|clamp|))
+CheckArity(ret(|clamp|))
+CheckArity(ret(|console.log|))
+CheckArity(ret(|console.log|))
+CheckArity(ret(|copyTo|))
+CheckArity(ret(|copyTo|))
+CheckArity(ret(|copyTo|))
+CheckArity(ret(|fromInt|))
+CheckArity(ret(|fromInt|))
+CheckArity(ret(|main|))
+CheckArity(ret(|nbits|))
+CheckArity(ret(|nbv|))
+CheckArity(ret(|nbv|))
+CheckArity(ret(|negate|))
+Elem(|BI_RC|)=|BI_RC[rr++]|
+Elem(|BI_RC|)=|BI_RC[rr++]|
+Elem(|BI_RC|)=|BI_RC[rr++]|
+Elem(|This.arr|)=|This.arr[i]|
+Elem(|a.arr|)=|a.arr[i]|
+Elem(|a.arr|)=|a.arr[i]|
+Elem(|a.arr|)=|a.arr[i]|
+Elem(|a.arr|)=|a.arr[i]|
+Elem(|a.arr|)=|a.arr[i]|
+Elem(|digits|)=|digits[i]|
+Elem(|negdigits|)=|negdigits[$d]|
+Elem(|negdigits|)=|negdigits[i]|
+Elem(|o.arr|)=|o.arr[0]|
+Elem(|o.arr|)=|o.arr[0]|
+Elem(|o.arr|)=|o.arr[0]|
+Elem(|o.arr|)=|o.arr[0]|
+Elem(|o.arr|)=|o.arr[0]|
+Elem(|o.arr|)=|o.arr[1]|
+Elem(|o.arr|)=|o.arr[ds]|
+Elem(|o.arr|)=|o.arr[i]|
+Elem(|o.arr|)=|o.arr[i]|
+Elem(|o.arr|)=|o.arr[i]|
+Elem(|o.arr|)=|o.arr[i]|
+Elem(|o.arr|)=|o.arr[i]|
+Elem(|o.arr|)=|o.arr[i]|
+Elem(|o.arr|)=|o.arr[i]|
+Elem(|o.arr|)=|o.arr[i]|
+Elem(|o.arr|)=|o.arr[i]|
+Elem(|o.arr|)=|o.arr[i]|
+Elem(|pm.arr|)=|pm.arr[pm.t - 1]|
+Elem(|r.arr|)=|r.arr[--i]|
+Elem(|r.arr|)=|r.arr[0]|
+Elem(|r.arr|)=|r.arr[ds]|
+Elem(|r.arr|)=|r.arr[i + ds + 1]|
+Elem(|r.arr|)=|r.arr[i + n]|
+Elem(|r.arr|)=|r.arr[i + x.t]|
+Elem(|r.arr|)=|r.arr[i - 1]|
+Elem(|r.arr|)=|r.arr[i - ds - 1]|
+Elem(|r.arr|)=|r.arr[i - ds]|
+Elem(|r.arr|)=|r.arr[i - n]|
+Elem(|r.arr|)=|r.arr[i++]|
+Elem(|r.arr|)=|r.arr[i++]|
+Elem(|r.arr|)=|r.arr[i++]|
+Elem(|r.arr|)=|r.arr[i++]|
+Elem(|r.arr|)=|r.arr[i++]|
+Elem(|r.arr|)=|r.arr[i++]|
+Elem(|r.arr|)=|r.arr[i++]|
+Elem(|r.arr|)=|r.arr[i++]|
+Elem(|r.arr|)=|r.arr[i++]|
+Elem(|r.arr|)=|r.arr[i++]|
+Elem(|r.arr|)=|r.arr[i]|
+Elem(|r.arr|)=|r.arr[i]|
+Elem(|r.arr|)=|r.arr[i]|
+Elem(|r.arr|)=|r.arr[i]|
+Elem(|r.arr|)=|r.arr[i]|
+Elem(|r.arr|)=|r.arr[i]|
+Elem(|r.arr|)=|r.arr[i]|
+Elem(|r.arr|)=|r.arr[r.t++]|
+Elem(|r.arr|)=|r.arr[t - 1]|
+Elem(|r.arr|)=|r.arr[t - ds - 1]|
+Elem(|w.arr|)=|w.arr[j++]|
+Elem(|w.arr|)=|w.arr[j]|
+Elem(|y.arr|)=|y.arr[i]|
+Elem(|y.arr|)=|y.arr[y.t++]|
+Elem(|y.arr|)=|y.arr[ys - 1]|
+Elem(|y.arr|)=|y.arr[ys - 2]|
+MakeConcreteConstraint [term=op(++|k|)]
+MakeConcreteConstraint [term=op(-|10|)]
+MakeConcreteConstraint [term=op(-|n|)]
+MakeConcreteConstraint [term=|""|]
+MakeConcreteConstraint [term=|""|]
+MakeConcreteConstraint [term=|"0".charCodeAt(0)|]
+MakeConcreteConstraint [term=|"0"|]
+MakeConcreteConstraint [term=|"0123456789abcdefghijklmnopqrstuvwxyz"|]
+MakeConcreteConstraint [term=|"A".charCodeAt(0)|]
+MakeConcreteConstraint [term=|"A"|]
+MakeConcreteConstraint [term=|"a".charCodeAt(0)|]
+MakeConcreteConstraint [term=|"a"|]
+MakeConcreteConstraint [term=|$g = (functions.nbv)(g += 2)|]
+MakeConcreteConstraint [term=|$g|]
+MakeConcreteConstraint [term=|$k = (functions.nbv)(++k)|]
+MakeConcreteConstraint [term=|$l = (functions.nbv)(l += 4)|]
+MakeConcreteConstraint [term=|$n % 10|]
+MakeConcreteConstraint [term=|$s + "\t:" + $i|]
+MakeConcreteConstraint [term=|$s + "\t:" + $n|]
+MakeConcreteConstraint [term=|$z0|]
+MakeConcreteConstraint [term=|$z0|]
+MakeConcreteConstraint [term=|$z0|]
+MakeConcreteConstraint [term=|$z0|]
+MakeConcreteConstraint [term=|$z0|]
+MakeConcreteConstraint [term=|$z0|]
+MakeConcreteConstraint [term=|$z1|]
+MakeConcreteConstraint [term=|$z1|]
+MakeConcreteConstraint [term=|$z1|]
+MakeConcreteConstraint [term=|$z1|]
+MakeConcreteConstraint [term=|$z1|]
+MakeConcreteConstraint [term=|$z1|]
+MakeConcreteConstraint [term=|$z1|]
+MakeConcreteConstraint [term=|$z1|]
+MakeConcreteConstraint [term=|$z2|]
+MakeConcreteConstraint [term=|$z2|]
+MakeConcreteConstraint [term=|$z2|]
+MakeConcreteConstraint [term=|$z2|]
+MakeConcreteConstraint [term=|$z2|]
+MakeConcreteConstraint [term=|' '|]
+MakeConcreteConstraint [term=|($d + "")|]
+MakeConcreteConstraint [term=|(((m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)) & 3fff) << 14) + xl * l + w.arr[j] + c|]
+MakeConcreteConstraint [term=|((1 << dbits) - 1)|]
+MakeConcreteConstraint [term=|((s = o.s) << bs) & DM|]
+MakeConcreteConstraint [term=|((z = o.arr[i]) & bm) << cbs|]
+MakeConcreteConstraint [term=|((z = o.arr[i]) >> cbs) | c|]
+MakeConcreteConstraint [term=|(1 << F1) / yt|]
+MakeConcreteConstraint [term=|(1 << bs) - 1|]
+MakeConcreteConstraint [term=|(1 << cbs) - 1|]
+MakeConcreteConstraint [term=|(1 << dbits)|]
+MakeConcreteConstraint [term=|(c < 0) ? -1 : 0|]
+MakeConcreteConstraint [term=|(c < 0) ? -1 : 0|]
+MakeConcreteConstraint [term=|(function() {
+  var dbits = 28, BI_FP = 52, DB = dbits, DM = ((1 << dbits) - 1), DV = (1 << dbits), FV = Math.floor(Math.pow(2.0, BI_FP * 1.0)), F1 = BI_FP - dbits, F2 = 2 * dbits - BI_FP;
+  function am(This, i, x, w, j, c, n) {
+    var xl = x & 3fff, xh = x >> 14, z, l, h, m;
+    if (--n >= 0) 
+    for (; ; ) 
+      {
+        l = (((m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)) & 3fff) << 14) + xl * l + w.arr[j] + c;
+        w.arr[j++] = l & fffffff;
+        ++i;
+        if (--n >= 0) 
+        {
+          c = (l >> 28) + (m >> 14) + xh * h;
+        } else {
+          return (l >> 28) + (m >> 14) + xh * h;
+        }
+      }
+    return c;
+  }
+  var BI_RM = "0123456789abcdefghijklmnopqrstuvwxyz";
+  var BI_RC = new Array();
+  var rr, vv;
+  rr = "0".charCodeAt(0);
+  for (vv = 0; vv <= 9; ++vv) 
+    BI_RC[rr++] = vv;
+  rr = "a".charCodeAt(0);
+  for (vv = 10; vv < 36; ++vv) 
+    BI_RC[rr++] = vv;
+  rr = "A".charCodeAt(0);
+  for (vv = 10; vv < 36; ++vv) 
+    BI_RC[rr++] = vv;
+  function copyTo(o, r) {
+    for (var i = (r.t = o.t) - 1; i >= 0; --i) 
+      r.arr[i] = o.arr[i];
+    r.s = o.s;
+  }
+  function fromInt(o, x) {
+    o.t = 1;
+    o.s = (x < 0) ? -1 : 0;
+    if (x > 0) 
+    o.arr[0] = x; else if (x < -1) 
+    o.arr[0] = x + DV; else o.t = 0;
+  }
+  function nbv(i) {
+    var r = {arr: [], s: 0, t: 0};
+    fromInt(r, i);
+    return r;
+  }
+  function clamp(r) {
+    var c = r.s & DM, t = r.t;
+    while (t > 0 && r.arr[t - 1] == c) 
+      {
+        --t;
+      }
+    r.t = t;
+  }
+  function negate(o) {
+    var r = {arr: [], s: 0, t: 0};
+    bnpSubTo(ZERO, o, r);
+    return r;
+  }
+  function abs(o) {
+    return (o.s < 0) ? negate(o) : o;
+  }
+  function bnCompareTo(o, a) {
+    var r = o.s - a.s;
+    if (r != 0) 
+    return r;
+    var i = o.t;
+    r = i - a.t;
+    if (r != 0) 
+    return r;
+    while (--i >= 0) 
+      if ((r = o.arr[i] - a.arr[i]) != 0) 
+      return r;
+    return 0;
+  }
+  function nbits(x) {
+    var r = 1, t;
+    if ((t = x >>> 16) != 0) 
+    {
+      x = t;
+      r += 16;
+    }
+    if ((t = x >> 8) != 0) 
+    {
+      x = t;
+      r += 8;
+    }
+    if ((t = x >> 4) != 0) 
+    {
+      x = t;
+      r += 4;
+    }
+    if ((t = x >> 2) != 0) 
+    {
+      x = t;
+      r += 2;
+    }
+    if ((t = x >> 1) != 0) 
+    {
+      x = t;
+      r += 1;
+    }
+    return r;
+  }
+  function bnpDLShift(o, n) {
+    var i, t, r = {arr: Array((t = o.t) + n), s: 0, t: 0};
+    for (i = t - 1; i >= 0; --i) 
+      r.arr[i + n] = o.arr[i];
+    for (i = n - 1; i >= 0; --i) 
+      r.arr[i] = 0;
+    r.t = t + n;
+    r.s = o.s;
+    return r;
+  }
+  function bnpDRShiftTo(o, n, r) {
+    for (var i = n; i < o.t; ++i) 
+      r.arr[i - n] = o.arr[i];
+    r.t = Math.floor(Math.max(o.t - n * 1.0, 0.0));
+    r.s = o.s;
+  }
+  function bnpLShiftTo(o, n, r) {
+    var bs = n % DB, cbs = DB - bs, bm = (1 << cbs) - 1, ds = Math.floor(n / DB + 0.0), c = ((s = o.s) << bs) & DM, i, z, t, s;
+    for (i = (t = o.t) - 1; i >= 0; --i) 
+      {
+        r.arr[i + ds + 1] = ((z = o.arr[i]) >> cbs) | c;
+        c = (z & bm) << bs;
+      }
+    for (i = ds - 1; i >= 0; --i) 
+      r.arr[i] = 0;
+    r.arr[ds] = c;
+    r.t = t + ds + 1;
+    r.s = s;
+    clamp(r);
+  }
+  function bnpRShiftTo(o, n, r) {
+    r.s = o.s;
+    var ds = Math.floor(n / DB + 0.0), t = o.t, z;
+    if (ds >= t) 
+    {
+      r.t = 0;
+      return;
+    }
+    var bs = n % DB, cbs = DB - bs, bm = (1 << bs) - 1;
+    r.arr[0] = o.arr[ds] >> bs;
+    for (var i = ds + 1; i < t; ++i) 
+      {
+        r.arr[i - ds - 1] |= ((z = o.arr[i]) & bm) << cbs;
+        r.arr[i - ds] = z >> bs;
+      }
+    if (bs > 0) 
+    r.arr[t - ds - 1] |= (o.s & bm) << cbs;
+    r.t = t - ds;
+    clamp(r);
+  }
+  function bnpSubTo(o, a, r) {
+    var i = 0, c = 0, t, m = Math.min(a.t * 1.0, t = o.t * 1.0);
+    while (i < m) 
+      {
+        c += o.arr[i] - a.arr[i];
+        r.arr[i++] = c & DM;
+        c >>= DB;
+      }
+    if (a.t < t) 
+    {
+      c -= a.s;
+      while (i < t) 
+        {
+          c += o.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c += o.s;
+    } else {
+      c += o.s;
+      while (i < a.t) 
+        {
+          c -= a.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c -= a.s;
+    }
+    r.s = (c < 0) ? -1 : 0;
+    if (c < -1) 
+    r.arr[i++] = DV + c; else if (c > 0) 
+    r.arr[i++] = c;
+    r.t = i;
+    clamp(r);
+  }
+  function bnpMultiplyTo(o, a, r) {
+    var x = abs(o), y = abs(a);
+    var i = x.t;
+    r.t = i + y.t;
+    while (--i >= 0) 
+      r.arr[i] = 0;
+    for (i = 0; i < y.t; ++i) 
+      r.arr[i + x.t] = am(x, 0, y.arr[i], r, i, 0, x.t);
+    r.s = 0;
+    clamp(r);
+    if (o.s != a.s) 
+    bnpSubTo(ZERO, r, r);
+  }
+  function bnpDivRemTo(o, m, q, r) {
+    var pm = abs(m);
+    if (pm.t <= 0) 
+    return;
+    var pt = abs(o);
+    if (pt.t < pm.t) 
+    {
+      fromInt(q, 0);
+      if (r != null) 
+      copyTo(o, r);
+      return;
+    }
+    if (r == null) 
+    r = {arr: [], s: 0, t: 0};
+    var y = {arr: [], s: 0, t: 0}, ts = o.s, ms = m.s;
+    var nsh = DB - nbits(pm.arr[pm.t - 1]);
+    if (nsh > 0) 
+    {
+      bnpLShiftTo(pm, nsh, y);
+      bnpLShiftTo(pt, nsh, r);
+    } else {
+      copyTo(pm, y);
+      copyTo(pt, r);
+    }
+    var ys = y.t;
+    var y0 = y.arr[ys - 1];
+    if (y0 == 0) 
+    return;
+    var yt = y0 * (1 << F1) + ((ys > 1) ? y.arr[ys - 2] >> F2 : 0);
+    var d1 = FV / yt, d2 = (1 << F1) / yt, e = 1 << F2;
+    var i = r.t, j = i - ys, t = bnpDLShift(y, j);
+    if (bnCompareTo(r, t) >= 0) 
+    {
+      r.arr[r.t++] = 1;
+      bnpSubTo(r, t, r);
+    }
+    t = bnpDLShift(ONE, ys);
+    bnpSubTo(t, y, y);
+    while (y.t < ys) 
+      y.arr[y.t++] = 0;
+    while (--j >= 0) 
+      {
+        var qd = (r.arr[--i] == y0) ? DM : Math.floor(r.arr[i] * d1 + (r.arr[i - 1] + e) * d2 + 0.0);
+        if ((r.arr[i] += am(y, 0, qd, r, j, 0, ys)) < qd) 
+        {
+          t = bnpDLShift(y, j);
+          bnpSubTo(r, t, r);
+          while (r.arr[i] < --qd) 
+            bnpSubTo(r, t, r);
+        }
+      }
+    if (q != null) 
+    {
+      bnpDRShiftTo(r, ys, q);
+      if (ts != ms) 
+      bnpSubTo(ZERO, q, q);
+    }
+    r.t = ys;
+    clamp(r);
+    if (nsh > 0) 
+    bnpRShiftTo(r, nsh, r);
+    if (ts < 0) 
+    bnpSubTo(ZERO, r, r);
+  }
+  var ZERO = nbv(0);
+  var ONE = nbv(1);
+  function intValue(o) {
+    if (o.s < 0) 
+    {
+      if (o.t == 1) 
+      return o.arr[0] - DV; else if (o.t == 0) 
+      return -1;
+    } else if (o.t == 1) 
+    return o.arr[0]; else if (o.t == 0) 
+    return 0;
+    return ((o.arr[1] & ((1 << (32 - DB)) - 1)) << DB) | o.arr[0];
+  }
+  function shiftLeft(o, n) {
+    var r = {arr: [], s: 0, t: 0};
+    if (n < 0) 
+    bnpRShiftTo(o, -n, r); else bnpLShiftTo(o, n, r);
+    return r;
+  }
+  function bnpAddTo(o, a, r) {
+    var i = 0, c = 0, m = Math.min(a.t * 1.0, o.t * 1.0);
+    while (i < m) 
+      {
+        c += o.arr[i] + a.arr[i];
+        r.arr[i++] = c & DM;
+        c >>= DB;
+      }
+    if (a.t < o.t) 
+    {
+      c += a.s;
+      while (i < o.t) 
+        {
+          c += o.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c += o.s;
+    } else {
+      c += o.s;
+      while (i < a.t) 
+        {
+          c += a.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c += a.s;
+    }
+    r.s = (c < 0) ? -1 : 0;
+    if (c > 0) 
+    r.arr[i++] = c; else if (c < -1) 
+    r.arr[i++] = DV + c;
+    r.t = i;
+    clamp(r);
+  }
+  return {compareTo: bnCompareTo, multiply: function multiply(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpMultiplyTo(o, a, r);
+  return r;
+}, divide: function divide(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpDivRemTo(o, a, r, null);
+  return r;
+}, addTo: bnpAddTo, add: function add(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpAddTo(o, a, r);
+  return r;
+}, nbv: nbv, shiftLeft: shiftLeft, intValue: intValue};
+})()|]
+MakeConcreteConstraint [term=|(functions.add)((functions.multiply)($z0, three), $z1)|]
+MakeConcreteConstraint [term=|(functions.add)((functions.shiftLeft)($z0, 2), $z1)|]
+MakeConcreteConstraint [term=|(functions.divide)((functions.add)((functions.multiply)($z0, three), $z1), $z2)|]
+MakeConcreteConstraint [term=|(functions.divide)((functions.add)((functions.shiftLeft)($z0, 2), $z1), $z2)|]
+MakeConcreteConstraint [term=|(functions.intValue)((functions.divide)((functions.add)((functions.multiply)($z0, three), $z1), $z2))|]
+MakeConcreteConstraint [term=|(functions.multiply)($z0, $k = (functions.nbv)(++k))|]
+MakeConcreteConstraint [term=|(functions.multiply)($z0, $l = (functions.nbv)(l += 4))|]
+MakeConcreteConstraint [term=|(functions.multiply)($z0, ten)|]
+MakeConcreteConstraint [term=|(functions.multiply)($z0, three)|]
+MakeConcreteConstraint [term=|(functions.multiply)($z1, $g = (functions.nbv)(g += 2))|]
+MakeConcreteConstraint [term=|(functions.multiply)($z1, ten)|]
+MakeConcreteConstraint [term=|(functions.multiply)($z2, $g)|]
+MakeConcreteConstraint [term=|(functions.multiply)($z2, negdigits[$d])|]
+MakeConcreteConstraint [term=|(functions.multiply)(digits[i] = (functions.nbv)(i), neg10)|]
+MakeConcreteConstraint [term=|(functions.nbv)(++k)|]
+MakeConcreteConstraint [term=|(functions.nbv)(-10)|]
+MakeConcreteConstraint [term=|(functions.nbv)(0)|]
+MakeConcreteConstraint [term=|(functions.nbv)(1)|]
+MakeConcreteConstraint [term=|(functions.nbv)(1)|]
+MakeConcreteConstraint [term=|(functions.nbv)(10)|]
+MakeConcreteConstraint [term=|(functions.nbv)(3)|]
+MakeConcreteConstraint [term=|(functions.nbv)(g += 2)|]
+MakeConcreteConstraint [term=|(functions.nbv)(i)|]
+MakeConcreteConstraint [term=|(functions.nbv)(l += 4)|]
+MakeConcreteConstraint [term=|(functions.shiftLeft)($z0, 2)|]
+MakeConcreteConstraint [term=|(l >> 28) + (m >> 14) + xh * h|]
+MakeConcreteConstraint [term=|(o.s & bm) << cbs|]
+MakeConcreteConstraint [term=|(r.arr[--i] == y0) ? DM : Math.floor(r.arr[i] * d1 + (r.arr[i - 1] + e) * d2 + 0.0)|]
+MakeConcreteConstraint [term=|(r.t = o.t) - 1|]
+MakeConcreteConstraint [term=|(t = o.t) + n|]
+MakeConcreteConstraint [term=|(t = o.t) - 1|]
+MakeConcreteConstraint [term=|(x < 0) ? -1 : 0|]
+MakeConcreteConstraint [term=|(z & bm) << bs|]
+MakeConcreteConstraint [term=|(z = This.arr[i]) & 3fff|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|1 << F2|]
+MakeConcreteConstraint [term=|1000|]
+MakeConcreteConstraint [term=|10|]
+MakeConcreteConstraint [term=|10|]
+MakeConcreteConstraint [term=|10|]
+MakeConcreteConstraint [term=|10|]
+MakeConcreteConstraint [term=|10|]
+MakeConcreteConstraint [term=|11 - $i|]
+MakeConcreteConstraint [term=|16|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|2 * dbits - BI_FP|]
+MakeConcreteConstraint [term=|2.0|]
+MakeConcreteConstraint [term=|28|]
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|3|]
+MakeConcreteConstraint [term=|4|]
+MakeConcreteConstraint [term=|4|]
+MakeConcreteConstraint [term=|52|]
+MakeConcreteConstraint [term=|8|]
+MakeConcreteConstraint [term=|Array((t = o.t) + n)|]
+MakeConcreteConstraint [term=|Array(10)|]
+MakeConcreteConstraint [term=|Array(10)|]
+MakeConcreteConstraint [term=|Array(11 - $i).join(' ')|]
+MakeConcreteConstraint [term=|Array(11 - $i)|]
+MakeConcreteConstraint [term=|BI_FP * 1.0|]
+MakeConcreteConstraint [term=|BI_FP - dbits|]
+MakeConcreteConstraint [term=|DB - bs|]
+MakeConcreteConstraint [term=|DB - bs|]
+MakeConcreteConstraint [term=|DB - nbits(pm.arr[pm.t - 1])|]
+MakeConcreteConstraint [term=|DB|]
+MakeConcreteConstraint [term=|DB|]
+MakeConcreteConstraint [term=|DB|]
+MakeConcreteConstraint [term=|DB|]
+MakeConcreteConstraint [term=|DB|]
+MakeConcreteConstraint [term=|DB|]
+MakeConcreteConstraint [term=|DV + c|]
+MakeConcreteConstraint [term=|DV + c|]
+MakeConcreteConstraint [term=|FV / yt|]
+MakeConcreteConstraint [term=|Math.floor(Math.max(o.t - n * 1.0, 0.0))|]
+MakeConcreteConstraint [term=|Math.floor(Math.pow(2.0, BI_FP * 1.0))|]
+MakeConcreteConstraint [term=|Math.floor(n / DB + 0.0)|]
+MakeConcreteConstraint [term=|Math.floor(n / DB + 0.0)|]
+MakeConcreteConstraint [term=|Math.max(o.t - n * 1.0, 0.0)|]
+MakeConcreteConstraint [term=|Math.min(a.t * 1.0, o.t * 1.0)|]
+MakeConcreteConstraint [term=|Math.min(a.t * 1.0, t = o.t * 1.0)|]
+MakeConcreteConstraint [term=|Math.pow(2.0, BI_FP * 1.0)|]
+MakeConcreteConstraint [term=|Math|]
+MakeConcreteConstraint [term=|Math|]
+MakeConcreteConstraint [term=|Math|]
+MakeConcreteConstraint [term=|Math|]
+MakeConcreteConstraint [term=|Math|]
+MakeConcreteConstraint [term=|Math|]
+MakeConcreteConstraint [term=|Math|]
+MakeConcreteConstraint [term=|Math|]
+MakeConcreteConstraint [term=|Math|]
+MakeConcreteConstraint [term=|ONE|]
+MakeConcreteConstraint [term=|This.arr[i]|]
+MakeConcreteConstraint [term=|ZERO|]
+MakeConcreteConstraint [term=|ZERO|]
+MakeConcreteConstraint [term=|ZERO|]
+MakeConcreteConstraint [term=|ZERO|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|a.arr[i]|]
+MakeConcreteConstraint [term=|a.arr[i]|]
+MakeConcreteConstraint [term=|a.s|]
+MakeConcreteConstraint [term=|a.s|]
+MakeConcreteConstraint [term=|a.s|]
+MakeConcreteConstraint [term=|a.s|]
+MakeConcreteConstraint [term=|a.t * 1.0|]
+MakeConcreteConstraint [term=|a.t * 1.0|]
+MakeConcreteConstraint [term=|abs(a)|]
+MakeConcreteConstraint [term=|abs(m)|]
+MakeConcreteConstraint [term=|abs(o)|]
+MakeConcreteConstraint [term=|abs(o)|]
+MakeConcreteConstraint [term=|am(x, 0, y.arr[i], r, i, 0, x.t)|]
+MakeConcreteConstraint [term=|am(y, 0, qd, r, j, 0, ys)|]
+MakeConcreteConstraint [term=|a|]
+MakeConcreteConstraint [term=|a|]
+MakeConcreteConstraint [term=|a|]
+MakeConcreteConstraint [term=|a|]
+MakeConcreteConstraint [term=|bnCompareTo|]
+MakeConcreteConstraint [term=|bnpAddTo|]
+MakeConcreteConstraint [term=|bnpDLShift(ONE, ys)|]
+MakeConcreteConstraint [term=|bnpDLShift(y, j)|]
+MakeConcreteConstraint [term=|bnpDLShift(y, j)|]
+MakeConcreteConstraint [term=|c & DM|]
+MakeConcreteConstraint [term=|c & DM|]
+MakeConcreteConstraint [term=|c & DM|]
+MakeConcreteConstraint [term=|c & DM|]
+MakeConcreteConstraint [term=|c & DM|]
+MakeConcreteConstraint [term=|c & DM|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|c|]
+MakeConcreteConstraint [term=|c|]
+MakeConcreteConstraint [term=|c|]
+MakeConcreteConstraint [term=|dbits|]
+MakeConcreteConstraint [term=|digits[i] = (functions.nbv)(i)|]
+MakeConcreteConstraint [term=|ds + 1|]
+MakeConcreteConstraint [term=|ds - 1|]
+MakeConcreteConstraint [term=|function add|]
+MakeConcreteConstraint [term=|function divide|]
+MakeConcreteConstraint [term=|function multiply|]
+MakeConcreteConstraint [term=|g += 2|]
+MakeConcreteConstraint [term=|i + y.t|]
+MakeConcreteConstraint [term=|i - a.t|]
+MakeConcreteConstraint [term=|i - ys|]
+MakeConcreteConstraint [term=|intValue|]
+MakeConcreteConstraint [term=|i|]
+MakeConcreteConstraint [term=|i|]
+MakeConcreteConstraint [term=|i|]
+MakeConcreteConstraint [term=|i|]
+MakeConcreteConstraint [term=|i|]
+MakeConcreteConstraint [term=|j|]
+MakeConcreteConstraint [term=|j|]
+MakeConcreteConstraint [term=|j|]
+MakeConcreteConstraint [term=|l & fffffff|]
+MakeConcreteConstraint [term=|l += 4|]
+MakeConcreteConstraint [term=|m.s|]
+MakeConcreteConstraint [term=|m|]
+MakeConcreteConstraint [term=|n % DB|]
+MakeConcreteConstraint [term=|n % DB|]
+MakeConcreteConstraint [term=|n - 1|]
+MakeConcreteConstraint [term=|n / DB + 0.0|]
+MakeConcreteConstraint [term=|n / DB + 0.0|]
+MakeConcreteConstraint [term=|nbv(0)|]
+MakeConcreteConstraint [term=|nbv(1)|]
+MakeConcreteConstraint [term=|nbv|]
+MakeConcreteConstraint [term=|neg10|]
+MakeConcreteConstraint [term=|negdigits[$d]|]
+MakeConcreteConstraint [term=|new Array()|]
+MakeConcreteConstraint [term=|nsh|]
+MakeConcreteConstraint [term=|nsh|]
+MakeConcreteConstraint [term=|nsh|]
+MakeConcreteConstraint [term=|null|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|o.arr[ds] >> bs|]
+MakeConcreteConstraint [term=|o.arr[i] + a.arr[i]|]
+MakeConcreteConstraint [term=|o.arr[i] - a.arr[i]|]
+MakeConcreteConstraint [term=|o.arr[i] - a.arr[i]|]
+MakeConcreteConstraint [term=|o.arr[i]|]
+MakeConcreteConstraint [term=|o.arr[i]|]
+MakeConcreteConstraint [term=|o.arr[i]|]
+MakeConcreteConstraint [term=|o.arr[i]|]
+MakeConcreteConstraint [term=|o.arr[i]|]
+MakeConcreteConstraint [term=|o.arr[i]|]
+MakeConcreteConstraint [term=|o.arr[i]|]
+MakeConcreteConstraint [term=|o.s - a.s|]
+MakeConcreteConstraint [term=|o.s|]
+MakeConcreteConstraint [term=|o.s|]
+MakeConcreteConstraint [term=|o.s|]
+MakeConcreteConstraint [term=|o.s|]
+MakeConcreteConstraint [term=|o.s|]
+MakeConcreteConstraint [term=|o.s|]
+MakeConcreteConstraint [term=|o.s|]
+MakeConcreteConstraint [term=|o.s|]
+MakeConcreteConstraint [term=|o.s|]
+MakeConcreteConstraint [term=|o.s|]
+MakeConcreteConstraint [term=|o.t * 1.0|]
+MakeConcreteConstraint [term=|o.t * 1.0|]
+MakeConcreteConstraint [term=|o.t - n * 1.0|]
+MakeConcreteConstraint [term=|o.t|]
+MakeConcreteConstraint [term=|o.t|]
+MakeConcreteConstraint [term=|o.t|]
+MakeConcreteConstraint [term=|o.t|]
+MakeConcreteConstraint [term=|o.t|]
+MakeConcreteConstraint [term=|o|]
+MakeConcreteConstraint [term=|o|]
+MakeConcreteConstraint [term=|o|]
+MakeConcreteConstraint [term=|o|]
+MakeConcreteConstraint [term=|o|]
+MakeConcreteConstraint [term=|o|]
+MakeConcreteConstraint [term=|o|]
+MakeConcreteConstraint [term=|o|]
+MakeConcreteConstraint [term=|o|]
+MakeConcreteConstraint [term=|o|]
+MakeConcreteConstraint [term=|pm.arr[pm.t - 1]|]
+MakeConcreteConstraint [term=|pm|]
+MakeConcreteConstraint [term=|pm|]
+MakeConcreteConstraint [term=|pt|]
+MakeConcreteConstraint [term=|pt|]
+MakeConcreteConstraint [term=|qd|]
+MakeConcreteConstraint [term=|q|]
+MakeConcreteConstraint [term=|q|]
+MakeConcreteConstraint [term=|q|]
+MakeConcreteConstraint [term=|q|]
+MakeConcreteConstraint [term=|r.arr[i] * d1 + (r.arr[i - 1] + e) * d2 + 0.0|]
+MakeConcreteConstraint [term=|r.s & DM|]
+MakeConcreteConstraint [term=|r.t|]
+MakeConcreteConstraint [term=|r.t|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|shiftLeft|]
+MakeConcreteConstraint [term=|s|]
+MakeConcreteConstraint [term=|t + ds + 1|]
+MakeConcreteConstraint [term=|t + n|]
+MakeConcreteConstraint [term=|t - 1|]
+MakeConcreteConstraint [term=|t - ds|]
+MakeConcreteConstraint [term=|t = o.t * 1.0|]
+MakeConcreteConstraint [term=|ten|]
+MakeConcreteConstraint [term=|ten|]
+MakeConcreteConstraint [term=|three|]
+MakeConcreteConstraint [term=|t|]
+MakeConcreteConstraint [term=|t|]
+MakeConcreteConstraint [term=|t|]
+MakeConcreteConstraint [term=|t|]
+MakeConcreteConstraint [term=|t|]
+MakeConcreteConstraint [term=|t|]
+MakeConcreteConstraint [term=|t|]
+MakeConcreteConstraint [term=|t|]
+MakeConcreteConstraint [term=|t|]
+MakeConcreteConstraint [term=|t|]
+MakeConcreteConstraint [term=|t|]
+MakeConcreteConstraint [term=|vv|]
+MakeConcreteConstraint [term=|vv|]
+MakeConcreteConstraint [term=|vv|]
+MakeConcreteConstraint [term=|x & 3fff|]
+MakeConcreteConstraint [term=|x + DV|]
+MakeConcreteConstraint [term=|x >> 14|]
+MakeConcreteConstraint [term=|x >> 1|]
+MakeConcreteConstraint [term=|x >> 2|]
+MakeConcreteConstraint [term=|x >> 4|]
+MakeConcreteConstraint [term=|x >> 8|]
+MakeConcreteConstraint [term=|x >>> 16|]
+MakeConcreteConstraint [term=|x.t|]
+MakeConcreteConstraint [term=|x.t|]
+MakeConcreteConstraint [term=|xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)|]
+MakeConcreteConstraint [term=|x|]
+MakeConcreteConstraint [term=|x|]
+MakeConcreteConstraint [term=|y.arr[i]|]
+MakeConcreteConstraint [term=|y.arr[ys - 1]|]
+MakeConcreteConstraint [term=|y.t|]
+MakeConcreteConstraint [term=|y0 * (1 << F1) + ((ys > 1) ? y.arr[ys - 2] >> F2 : 0)|]
+MakeConcreteConstraint [term=|ys|]
+MakeConcreteConstraint [term=|ys|]
+MakeConcreteConstraint [term=|ys|]
+MakeConcreteConstraint [term=|ys|]
+MakeConcreteConstraint [term=|y|]
+MakeConcreteConstraint [term=|y|]
+MakeConcreteConstraint [term=|y|]
+MakeConcreteConstraint [term=|y|]
+MakeConcreteConstraint [term=|y|]
+MakeConcreteConstraint [term=|y|]
+MakeConcreteConstraint [term=|y|]
+MakeConcreteConstraint [term=|z >> 14|]
+MakeConcreteConstraint [term=|z >> bs|]
+MakeConcreteConstraint [term=|{arr: Array((t = o.t) + n), s: 0, t: 0}|]
+MakeConcreteConstraint [term=|{arr: [], s: 0, t: 0}|]
+MakeConcreteConstraint [term=|{arr: [], s: 0, t: 0}|]
+MakeConcreteConstraint [term=|{arr: [], s: 0, t: 0}|]
+MakeConcreteConstraint [term=|{arr: [], s: 0, t: 0}|]
+MakeConcreteConstraint [term=|{arr: [], s: 0, t: 0}|]
+MakeConcreteConstraint [term=|{arr: [], s: 0, t: 0}|]
+MakeConcreteConstraint [term=|{arr: [], s: 0, t: 0}|]
+MakeConcreteConstraint [term=|{arr: [], s: 0, t: 0}|]
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,1)
+TP(Array)=param(|Array|,1)
+TP(Array)=param(|Array|,1)
+TP(Array)=param(|Array|,1)
+TP(Array)=param(|Array|,1)
+TP(Array)=param(|Array|,1)
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+op(++|k|)<:param(|(functions.nbv)|,0)
+op(--|i|)=Key(|r.arr|)
+op(-|10|)<:param(|(functions.nbv)|,0)
+op(-|1|)<:ret(|function intValue|)
+op(-|1|)<:|(c < 0) ? -1 : 0|
+op(-|1|)<:|(c < 0) ? -1 : 0|
+op(-|1|)<:|(x < 0) ? -1 : 0|
+op(-|n|)<:param(|bnpRShiftTo|,1)
+op(|i|++)=Key(|r.arr|)
+op(|i|++)=Key(|r.arr|)
+op(|i|++)=Key(|r.arr|)
+op(|i|++)=Key(|r.arr|)
+op(|i|++)=Key(|r.arr|)
+op(|i|++)=Key(|r.arr|)
+op(|i|++)=Key(|r.arr|)
+op(|i|++)=Key(|r.arr|)
+op(|i|++)=Key(|r.arr|)
+op(|i|++)=Key(|r.arr|)
+op(|j|++)=Key(|w.arr|)
+op(|r.t|++)=Key(|r.arr|)
+op(|rr|++)=Key(|BI_RC|)
+op(|rr|++)=Key(|BI_RC|)
+op(|rr|++)=Key(|BI_RC|)
+op(|y.t|++)=Key(|y.arr|)
+param(|function abs|,0)=|o|
+param(|function add|,0)=|o|
+param(|function add|,1)=|a|
+param(|function am|,0)=|This|
+param(|function am|,1)=|i|
+param(|function am|,2)=|x|
+param(|function am|,3)=|w|
+param(|function am|,4)=|j|
+param(|function am|,5)=|c|
+param(|function am|,6)=|n|
+param(|function bnCompareTo|,0)=|o|
+param(|function bnCompareTo|,1)=|a|
+param(|function bnpAddTo|,0)=|o|
+param(|function bnpAddTo|,1)=|a|
+param(|function bnpAddTo|,2)=|r|
+param(|function bnpDLShift|,0)=|o|
+param(|function bnpDLShift|,1)=|n|
+param(|function bnpDRShiftTo|,0)=|o|
+param(|function bnpDRShiftTo|,1)=|n|
+param(|function bnpDRShiftTo|,2)=|r|
+param(|function bnpDivRemTo|,0)=|o|
+param(|function bnpDivRemTo|,1)=|m|
+param(|function bnpDivRemTo|,2)=|q|
+param(|function bnpDivRemTo|,3)=|r|
+param(|function bnpLShiftTo|,0)=|o|
+param(|function bnpLShiftTo|,1)=|n|
+param(|function bnpLShiftTo|,2)=|r|
+param(|function bnpMultiplyTo|,0)=|o|
+param(|function bnpMultiplyTo|,1)=|a|
+param(|function bnpMultiplyTo|,2)=|r|
+param(|function bnpRShiftTo|,0)=|o|
+param(|function bnpRShiftTo|,1)=|n|
+param(|function bnpRShiftTo|,2)=|r|
+param(|function bnpSubTo|,0)=|o|
+param(|function bnpSubTo|,1)=|a|
+param(|function bnpSubTo|,2)=|r|
+param(|function clamp|,0)=|r|
+param(|function copyTo|,0)=|o|
+param(|function copyTo|,1)=|r|
+param(|function divide|,0)=|o|
+param(|function divide|,1)=|a|
+param(|function fromInt|,0)=|o|
+param(|function fromInt|,1)=|x|
+param(|function intValue|,0)=|o|
+param(|function main|,0)=|$n|
+param(|function multiply|,0)=|o|
+param(|function multiply|,1)=|a|
+param(|function nbits|,0)=|x|
+param(|function nbv|,0)=|i|
+param(|function negate|,0)=|o|
+param(|function shiftLeft|,0)=|o|
+param(|function shiftLeft|,1)=|n|
+ret(|function bnpAddTo|)=void
+ret(|function bnpDRShiftTo|)=void
+ret(|function bnpDivRemTo|)=void
+ret(|function bnpLShiftTo|)=void
+ret(|function bnpMultiplyTo|)=void
+ret(|function bnpRShiftTo|)=void
+ret(|function bnpSubTo|)=void
+ret(|function clamp|)=void
+ret(|function copyTo|)=void
+ret(|function fromInt|)=void
+ret(|function main|)=void
+void=ret(|function bnpDivRemTo|)
+void=ret(|function bnpDivRemTo|)
+void=ret(|function bnpDivRemTo|)
+void=ret(|function bnpRShiftTo|)
+|""|<:|$s|
+|""|<:|$s|
+|""|=string
+|""|=string
+|""|=string
+|"0".charCodeAt(0)|<:|rr|
+|"0".charCodeAt(0)|=ret(|"0".charCodeAt|)
+|"0".charCodeAt|=prop(|"0"|,charCodeAt)
+|"0"|=string
+|"0123456789abcdefghijklmnopqrstuvwxyz"|<:|BI_RM|
+|"0123456789abcdefghijklmnopqrstuvwxyz"|=string
+|"A".charCodeAt(0)|<:|rr|
+|"A".charCodeAt(0)|=ret(|"A".charCodeAt|)
+|"A".charCodeAt|=prop(|"A"|,charCodeAt)
+|"A"|=string
+|"\t:"|=string
+|"\t:"|=string
+|"a".charCodeAt(0)|<:|rr|
+|"a".charCodeAt(0)|=ret(|"a".charCodeAt|)
+|"a".charCodeAt|=prop(|"a"|,charCodeAt)
+|"a"|=string
+|$d + ""|=op(|$d|+|""|)
+|$d = (functions.intValue)((functions.divide)((functions.add)((functions.multiply)($z0, three), $z1), $z2))|=|$d|
+|$d|=Key(|negdigits|)
+|$d|=|$d|
+|$d|=|$d|
+|$d|=|$d|
+|$g = (functions.nbv)(g += 2)|<:param(|(functions.multiply)|,1)
+|$g = (functions.nbv)(g += 2)|=|$g|
+|$g|<:param(|(functions.multiply)|,1)
+|$g|=|$g|
+|$g|=|$g|
+|$i % 10 == 0|=op(|$i % 10|==|0|)
+|$i % 10|=op(|$i|%|10|)
+|$i = $n % 10|=|$i|
+|$i|=|$i|
+|$i|=|$i|
+|$i|=|$i|
+|$i|=|$i|
+|$i|=|$i|
+|$k = (functions.nbv)(++k)|<:param(|(functions.multiply)|,1)
+|$k = (functions.nbv)(++k)|=|$k|
+|$k|=|$k|
+|$l = (functions.nbv)(l += 4)|<:param(|(functions.multiply)|,1)
+|$l = (functions.nbv)(l += 4)|=|$l|
+|$l|=|$l|
+|$n % 10|<:|$i|
+|$n % 10|=op(|$n|%|10|)
+|$n|=|$n|
+|$n|=|$n|
+|$n|=|$n|
+|$s + "\t:" + $i|<:param(|console.log|,0)
+|$s + "\t:" + $i|=op(|$s + "\t:"|+|$i|)
+|$s + "\t:" + $n|<:param(|console.log|,0)
+|$s + "\t:" + $n|=op(|$s + "\t:"|+|$n|)
+|$s + "\t:"|=op(|$s|+|"\t:"|)
+|$s + "\t:"|=op(|$s|+|"\t:"|)
+|$s += ($d + "")|=|$s|
+|$s += Array(11 - $i).join(' ')|=|$s|
+|$s = ""|=|$s|
+|$s.length > 0|=op(|$s.length|>|0|)
+|$s.length|=prop(|$s|,length)
+|$s|=|$s|
+|$s|=|$s|
+|$s|=|$s|
+|$s|=|$s|
+|$s|=|$s|
+|$s|=|$s|
+|$z0 = (functions.multiply)($z0, $k = (functions.nbv)(++k))|=|$z0|
+|$z0 = (functions.multiply)($z0, ten)|=|$z0|
+|$z0|<:param(|(functions.compareTo)|,0)
+|$z0|<:param(|(functions.multiply)|,0)
+|$z0|<:param(|(functions.multiply)|,0)
+|$z0|<:param(|(functions.multiply)|,0)
+|$z0|<:param(|(functions.multiply)|,0)
+|$z0|<:param(|(functions.shiftLeft)|,0)
+|$z0|=|$z0|
+|$z0|=|$z0|
+|$z0|=|$z0|
+|$z0|=|$z0|
+|$z0|=|$z0|
+|$z0|=|$z0|
+|$z0|=|$z0|
+|$z0|=|$z0|
+|$z1 = (functions.multiply)($z1, $g = (functions.nbv)(g += 2))|=|$z1|
+|$z1 = (functions.multiply)($z1, ten)|=|$z1|
+|$z1|<:param(|(functions.add)|,1)
+|$z1|<:param(|(functions.add)|,1)
+|$z1|<:param(|(functions.addTo)|,0)
+|$z1|<:param(|(functions.addTo)|,0)
+|$z1|<:param(|(functions.addTo)|,2)
+|$z1|<:param(|(functions.addTo)|,2)
+|$z1|<:param(|(functions.multiply)|,0)
+|$z1|<:param(|(functions.multiply)|,0)
+|$z1|=|$z1|
+|$z1|=|$z1|
+|$z1|=|$z1|
+|$z1|=|$z1|
+|$z1|=|$z1|
+|$z1|=|$z1|
+|$z1|=|$z1|
+|$z1|=|$z1|
+|$z1|=|$z1|
+|$z1|=|$z1|
+|$z2 = (functions.multiply)($z2, $g)|=|$z2|
+|$z2|<:param(|(functions.compareTo)|,1)
+|$z2|<:param(|(functions.divide)|,1)
+|$z2|<:param(|(functions.divide)|,1)
+|$z2|<:param(|(functions.multiply)|,0)
+|$z2|<:param(|(functions.multiply)|,0)
+|$z2|=|$z2|
+|$z2|=|$z2|
+|$z2|=|$z2|
+|$z2|=|$z2|
+|$z2|=|$z2|
+|$z2|=|$z2|
+|' '|<:param(|Array(11 - $i).join|,0)
+|' '|=string
+|($d + "")|<:|$s|
+|($d + "")|=|$d + ""|
+|($d = (functions.intValue)((functions.divide)((functions.add)((functions.multiply)($z0, three), $z1), $z2))) != (functions.intValue)((functions.divide)((functions.add)((functions.shiftLeft)($z0, 2), $z1), $z2))|=op(|($d = (functions.intValue)((functions.divide)((functions.add)((functions.multiply)($z0, three), $z1), $z2)))|!=|(functions.intValue)((functions.divide)((functions.add)((functions.shiftLeft)($z0, 2), $z1), $z2))|)
+|($d = (functions.intValue)((functions.divide)((functions.add)((functions.multiply)($z0, three), $z1), $z2)))|=|$d = (functions.intValue)((functions.divide)((functions.add)((functions.multiply)($z0, three), $z1), $z2))|
+|($i = $n % 10) != 0|=op(|($i = $n % 10)|!=|0|)
+|($i = $n % 10)|=|$i = $n % 10|
+|(((m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)) & 3fff) << 14) + xl * l + w.arr[j] + c|<:|l|
+|(((m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)) & 3fff) << 14) + xl * l + w.arr[j] + c|=op(|(((m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)) & 3fff) << 14) + xl * l + w.arr[j]|+|c|)
+|(((m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)) & 3fff) << 14) + xl * l + w.arr[j]|=op(|(((m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)) & 3fff) << 14) + xl * l|+|w.arr[j]|)
+|(((m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)) & 3fff) << 14) + xl * l|=op(|(((m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)) & 3fff) << 14)|+|xl * l|)
+|(((m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)) & 3fff) << 14)|=|((m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)) & 3fff) << 14|
+|((1 << (32 - DB)) - 1)|=|(1 << (32 - DB)) - 1|
+|((1 << dbits) - 1)|<:|DM|
+|((1 << dbits) - 1)|=|(1 << dbits) - 1|
+|((m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)) & 3fff) << 14|=op(|((m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)) & 3fff)|<<|14|)
+|((m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)) & 3fff)|=|(m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)) & 3fff|
+|((o.arr[1] & ((1 << (32 - DB)) - 1)) << DB) | o.arr[0]|<:ret(|function intValue|)
+|((o.arr[1] & ((1 << (32 - DB)) - 1)) << DB) | o.arr[0]|=op(|((o.arr[1] & ((1 << (32 - DB)) - 1)) << DB)|||o.arr[0]|)
+|((o.arr[1] & ((1 << (32 - DB)) - 1)) << DB)|=|(o.arr[1] & ((1 << (32 - DB)) - 1)) << DB|
+|((s = o.s) << bs) & DM|<:|c|
+|((s = o.s) << bs) & DM|=op(|((s = o.s) << bs)|&|DM|)
+|((s = o.s) << bs)|=|(s = o.s) << bs|
+|((ys > 1) ? y.arr[ys - 2] >> F2 : 0)|=|(ys > 1) ? y.arr[ys - 2] >> F2 : 0|
+|((z = o.arr[i]) & bm) << cbs|<:|r.arr[i - ds - 1]|
+|((z = o.arr[i]) & bm) << cbs|=op(|((z = o.arr[i]) & bm)|<<|cbs|)
+|((z = o.arr[i]) & bm)|=|(z = o.arr[i]) & bm|
+|((z = o.arr[i]) >> cbs) | c|<:|r.arr[i + ds + 1]|
+|((z = o.arr[i]) >> cbs) | c|=op(|((z = o.arr[i]) >> cbs)|||c|)
+|((z = o.arr[i]) >> cbs)|=|(z = o.arr[i]) >> cbs|
+|(1 << (32 - DB)) - 1|=op(|(1 << (32 - DB))|-|1|)
+|(1 << (32 - DB))|=|1 << (32 - DB)|
+|(1 << F1) / yt|<:|d2|
+|(1 << F1) / yt|=op(|(1 << F1)|/|yt|)
+|(1 << F1)|=|1 << F1|
+|(1 << F1)|=|1 << F1|
+|(1 << bs) - 1|<:|bm|
+|(1 << bs) - 1|=op(|(1 << bs)|-|1|)
+|(1 << bs)|=|1 << bs|
+|(1 << cbs) - 1|<:|bm|
+|(1 << cbs) - 1|=op(|(1 << cbs)|-|1|)
+|(1 << cbs)|=|1 << cbs|
+|(1 << dbits) - 1|=op(|(1 << dbits)|-|1|)
+|(1 << dbits)|<:|DV|
+|(1 << dbits)|=|1 << dbits|
+|(1 << dbits)|=|1 << dbits|
+|(32 - DB)|=|32 - DB|
+|(c < 0) ? -1 : 0|<:prop(|r|,s)
+|(c < 0) ? -1 : 0|<:prop(|r|,s)
+|(c < 0)|=|c < 0|
+|(c < 0)|=|c < 0|
+|(function() {
+  var dbits = 28, BI_FP = 52, DB = dbits, DM = ((1 << dbits) - 1), DV = (1 << dbits), FV = Math.floor(Math.pow(2.0, BI_FP * 1.0)), F1 = BI_FP - dbits, F2 = 2 * dbits - BI_FP;
+  function am(This, i, x, w, j, c, n) {
+    var xl = x & 3fff, xh = x >> 14, z, l, h, m;
+    if (--n >= 0) 
+    for (; ; ) 
+      {
+        l = (((m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)) & 3fff) << 14) + xl * l + w.arr[j] + c;
+        w.arr[j++] = l & fffffff;
+        ++i;
+        if (--n >= 0) 
+        {
+          c = (l >> 28) + (m >> 14) + xh * h;
+        } else {
+          return (l >> 28) + (m >> 14) + xh * h;
+        }
+      }
+    return c;
+  }
+  var BI_RM = "0123456789abcdefghijklmnopqrstuvwxyz";
+  var BI_RC = new Array();
+  var rr, vv;
+  rr = "0".charCodeAt(0);
+  for (vv = 0; vv <= 9; ++vv) 
+    BI_RC[rr++] = vv;
+  rr = "a".charCodeAt(0);
+  for (vv = 10; vv < 36; ++vv) 
+    BI_RC[rr++] = vv;
+  rr = "A".charCodeAt(0);
+  for (vv = 10; vv < 36; ++vv) 
+    BI_RC[rr++] = vv;
+  function copyTo(o, r) {
+    for (var i = (r.t = o.t) - 1; i >= 0; --i) 
+      r.arr[i] = o.arr[i];
+    r.s = o.s;
+  }
+  function fromInt(o, x) {
+    o.t = 1;
+    o.s = (x < 0) ? -1 : 0;
+    if (x > 0) 
+    o.arr[0] = x; else if (x < -1) 
+    o.arr[0] = x + DV; else o.t = 0;
+  }
+  function nbv(i) {
+    var r = {arr: [], s: 0, t: 0};
+    fromInt(r, i);
+    return r;
+  }
+  function clamp(r) {
+    var c = r.s & DM, t = r.t;
+    while (t > 0 && r.arr[t - 1] == c) 
+      {
+        --t;
+      }
+    r.t = t;
+  }
+  function negate(o) {
+    var r = {arr: [], s: 0, t: 0};
+    bnpSubTo(ZERO, o, r);
+    return r;
+  }
+  function abs(o) {
+    return (o.s < 0) ? negate(o) : o;
+  }
+  function bnCompareTo(o, a) {
+    var r = o.s - a.s;
+    if (r != 0) 
+    return r;
+    var i = o.t;
+    r = i - a.t;
+    if (r != 0) 
+    return r;
+    while (--i >= 0) 
+      if ((r = o.arr[i] - a.arr[i]) != 0) 
+      return r;
+    return 0;
+  }
+  function nbits(x) {
+    var r = 1, t;
+    if ((t = x >>> 16) != 0) 
+    {
+      x = t;
+      r += 16;
+    }
+    if ((t = x >> 8) != 0) 
+    {
+      x = t;
+      r += 8;
+    }
+    if ((t = x >> 4) != 0) 
+    {
+      x = t;
+      r += 4;
+    }
+    if ((t = x >> 2) != 0) 
+    {
+      x = t;
+      r += 2;
+    }
+    if ((t = x >> 1) != 0) 
+    {
+      x = t;
+      r += 1;
+    }
+    return r;
+  }
+  function bnpDLShift(o, n) {
+    var i, t, r = {arr: Array((t = o.t) + n), s: 0, t: 0};
+    for (i = t - 1; i >= 0; --i) 
+      r.arr[i + n] = o.arr[i];
+    for (i = n - 1; i >= 0; --i) 
+      r.arr[i] = 0;
+    r.t = t + n;
+    r.s = o.s;
+    return r;
+  }
+  function bnpDRShiftTo(o, n, r) {
+    for (var i = n; i < o.t; ++i) 
+      r.arr[i - n] = o.arr[i];
+    r.t = Math.floor(Math.max(o.t - n * 1.0, 0.0));
+    r.s = o.s;
+  }
+  function bnpLShiftTo(o, n, r) {
+    var bs = n % DB, cbs = DB - bs, bm = (1 << cbs) - 1, ds = Math.floor(n / DB + 0.0), c = ((s = o.s) << bs) & DM, i, z, t, s;
+    for (i = (t = o.t) - 1; i >= 0; --i) 
+      {
+        r.arr[i + ds + 1] = ((z = o.arr[i]) >> cbs) | c;
+        c = (z & bm) << bs;
+      }
+    for (i = ds - 1; i >= 0; --i) 
+      r.arr[i] = 0;
+    r.arr[ds] = c;
+    r.t = t + ds + 1;
+    r.s = s;
+    clamp(r);
+  }
+  function bnpRShiftTo(o, n, r) {
+    r.s = o.s;
+    var ds = Math.floor(n / DB + 0.0), t = o.t, z;
+    if (ds >= t) 
+    {
+      r.t = 0;
+      return;
+    }
+    var bs = n % DB, cbs = DB - bs, bm = (1 << bs) - 1;
+    r.arr[0] = o.arr[ds] >> bs;
+    for (var i = ds + 1; i < t; ++i) 
+      {
+        r.arr[i - ds - 1] |= ((z = o.arr[i]) & bm) << cbs;
+        r.arr[i - ds] = z >> bs;
+      }
+    if (bs > 0) 
+    r.arr[t - ds - 1] |= (o.s & bm) << cbs;
+    r.t = t - ds;
+    clamp(r);
+  }
+  function bnpSubTo(o, a, r) {
+    var i = 0, c = 0, t, m = Math.min(a.t * 1.0, t = o.t * 1.0);
+    while (i < m) 
+      {
+        c += o.arr[i] - a.arr[i];
+        r.arr[i++] = c & DM;
+        c >>= DB;
+      }
+    if (a.t < t) 
+    {
+      c -= a.s;
+      while (i < t) 
+        {
+          c += o.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c += o.s;
+    } else {
+      c += o.s;
+      while (i < a.t) 
+        {
+          c -= a.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c -= a.s;
+    }
+    r.s = (c < 0) ? -1 : 0;
+    if (c < -1) 
+    r.arr[i++] = DV + c; else if (c > 0) 
+    r.arr[i++] = c;
+    r.t = i;
+    clamp(r);
+  }
+  function bnpMultiplyTo(o, a, r) {
+    var x = abs(o), y = abs(a);
+    var i = x.t;
+    r.t = i + y.t;
+    while (--i >= 0) 
+      r.arr[i] = 0;
+    for (i = 0; i < y.t; ++i) 
+      r.arr[i + x.t] = am(x, 0, y.arr[i], r, i, 0, x.t);
+    r.s = 0;
+    clamp(r);
+    if (o.s != a.s) 
+    bnpSubTo(ZERO, r, r);
+  }
+  function bnpDivRemTo(o, m, q, r) {
+    var pm = abs(m);
+    if (pm.t <= 0) 
+    return;
+    var pt = abs(o);
+    if (pt.t < pm.t) 
+    {
+      fromInt(q, 0);
+      if (r != null) 
+      copyTo(o, r);
+      return;
+    }
+    if (r == null) 
+    r = {arr: [], s: 0, t: 0};
+    var y = {arr: [], s: 0, t: 0}, ts = o.s, ms = m.s;
+    var nsh = DB - nbits(pm.arr[pm.t - 1]);
+    if (nsh > 0) 
+    {
+      bnpLShiftTo(pm, nsh, y);
+      bnpLShiftTo(pt, nsh, r);
+    } else {
+      copyTo(pm, y);
+      copyTo(pt, r);
+    }
+    var ys = y.t;
+    var y0 = y.arr[ys - 1];
+    if (y0 == 0) 
+    return;
+    var yt = y0 * (1 << F1) + ((ys > 1) ? y.arr[ys - 2] >> F2 : 0);
+    var d1 = FV / yt, d2 = (1 << F1) / yt, e = 1 << F2;
+    var i = r.t, j = i - ys, t = bnpDLShift(y, j);
+    if (bnCompareTo(r, t) >= 0) 
+    {
+      r.arr[r.t++] = 1;
+      bnpSubTo(r, t, r);
+    }
+    t = bnpDLShift(ONE, ys);
+    bnpSubTo(t, y, y);
+    while (y.t < ys) 
+      y.arr[y.t++] = 0;
+    while (--j >= 0) 
+      {
+        var qd = (r.arr[--i] == y0) ? DM : Math.floor(r.arr[i] * d1 + (r.arr[i - 1] + e) * d2 + 0.0);
+        if ((r.arr[i] += am(y, 0, qd, r, j, 0, ys)) < qd) 
+        {
+          t = bnpDLShift(y, j);
+          bnpSubTo(r, t, r);
+          while (r.arr[i] < --qd) 
+            bnpSubTo(r, t, r);
+        }
+      }
+    if (q != null) 
+    {
+      bnpDRShiftTo(r, ys, q);
+      if (ts != ms) 
+      bnpSubTo(ZERO, q, q);
+    }
+    r.t = ys;
+    clamp(r);
+    if (nsh > 0) 
+    bnpRShiftTo(r, nsh, r);
+    if (ts < 0) 
+    bnpSubTo(ZERO, r, r);
+  }
+  var ZERO = nbv(0);
+  var ONE = nbv(1);
+  function intValue(o) {
+    if (o.s < 0) 
+    {
+      if (o.t == 1) 
+      return o.arr[0] - DV; else if (o.t == 0) 
+      return -1;
+    } else if (o.t == 1) 
+    return o.arr[0]; else if (o.t == 0) 
+    return 0;
+    return ((o.arr[1] & ((1 << (32 - DB)) - 1)) << DB) | o.arr[0];
+  }
+  function shiftLeft(o, n) {
+    var r = {arr: [], s: 0, t: 0};
+    if (n < 0) 
+    bnpRShiftTo(o, -n, r); else bnpLShiftTo(o, n, r);
+    return r;
+  }
+  function bnpAddTo(o, a, r) {
+    var i = 0, c = 0, m = Math.min(a.t * 1.0, o.t * 1.0);
+    while (i < m) 
+      {
+        c += o.arr[i] + a.arr[i];
+        r.arr[i++] = c & DM;
+        c >>= DB;
+      }
+    if (a.t < o.t) 
+    {
+      c += a.s;
+      while (i < o.t) 
+        {
+          c += o.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c += o.s;
+    } else {
+      c += o.s;
+      while (i < a.t) 
+        {
+          c += a.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c += a.s;
+    }
+    r.s = (c < 0) ? -1 : 0;
+    if (c > 0) 
+    r.arr[i++] = c; else if (c < -1) 
+    r.arr[i++] = DV + c;
+    r.t = i;
+    clamp(r);
+  }
+  return {compareTo: bnCompareTo, multiply: function multiply(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpMultiplyTo(o, a, r);
+  return r;
+}, divide: function divide(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpDivRemTo(o, a, r, null);
+  return r;
+}, addTo: bnpAddTo, add: function add(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpAddTo(o, a, r);
+  return r;
+}, nbv: nbv, shiftLeft: shiftLeft, intValue: intValue};
+})()|<:|functions|
+|(function() {
+  var dbits = 28, BI_FP = 52, DB = dbits, DM = ((1 << dbits) - 1), DV = (1 << dbits), FV = Math.floor(Math.pow(2.0, BI_FP * 1.0)), F1 = BI_FP - dbits, F2 = 2 * dbits - BI_FP;
+  function am(This, i, x, w, j, c, n) {
+    var xl = x & 3fff, xh = x >> 14, z, l, h, m;
+    if (--n >= 0) 
+    for (; ; ) 
+      {
+        l = (((m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)) & 3fff) << 14) + xl * l + w.arr[j] + c;
+        w.arr[j++] = l & fffffff;
+        ++i;
+        if (--n >= 0) 
+        {
+          c = (l >> 28) + (m >> 14) + xh * h;
+        } else {
+          return (l >> 28) + (m >> 14) + xh * h;
+        }
+      }
+    return c;
+  }
+  var BI_RM = "0123456789abcdefghijklmnopqrstuvwxyz";
+  var BI_RC = new Array();
+  var rr, vv;
+  rr = "0".charCodeAt(0);
+  for (vv = 0; vv <= 9; ++vv) 
+    BI_RC[rr++] = vv;
+  rr = "a".charCodeAt(0);
+  for (vv = 10; vv < 36; ++vv) 
+    BI_RC[rr++] = vv;
+  rr = "A".charCodeAt(0);
+  for (vv = 10; vv < 36; ++vv) 
+    BI_RC[rr++] = vv;
+  function copyTo(o, r) {
+    for (var i = (r.t = o.t) - 1; i >= 0; --i) 
+      r.arr[i] = o.arr[i];
+    r.s = o.s;
+  }
+  function fromInt(o, x) {
+    o.t = 1;
+    o.s = (x < 0) ? -1 : 0;
+    if (x > 0) 
+    o.arr[0] = x; else if (x < -1) 
+    o.arr[0] = x + DV; else o.t = 0;
+  }
+  function nbv(i) {
+    var r = {arr: [], s: 0, t: 0};
+    fromInt(r, i);
+    return r;
+  }
+  function clamp(r) {
+    var c = r.s & DM, t = r.t;
+    while (t > 0 && r.arr[t - 1] == c) 
+      {
+        --t;
+      }
+    r.t = t;
+  }
+  function negate(o) {
+    var r = {arr: [], s: 0, t: 0};
+    bnpSubTo(ZERO, o, r);
+    return r;
+  }
+  function abs(o) {
+    return (o.s < 0) ? negate(o) : o;
+  }
+  function bnCompareTo(o, a) {
+    var r = o.s - a.s;
+    if (r != 0) 
+    return r;
+    var i = o.t;
+    r = i - a.t;
+    if (r != 0) 
+    return r;
+    while (--i >= 0) 
+      if ((r = o.arr[i] - a.arr[i]) != 0) 
+      return r;
+    return 0;
+  }
+  function nbits(x) {
+    var r = 1, t;
+    if ((t = x >>> 16) != 0) 
+    {
+      x = t;
+      r += 16;
+    }
+    if ((t = x >> 8) != 0) 
+    {
+      x = t;
+      r += 8;
+    }
+    if ((t = x >> 4) != 0) 
+    {
+      x = t;
+      r += 4;
+    }
+    if ((t = x >> 2) != 0) 
+    {
+      x = t;
+      r += 2;
+    }
+    if ((t = x >> 1) != 0) 
+    {
+      x = t;
+      r += 1;
+    }
+    return r;
+  }
+  function bnpDLShift(o, n) {
+    var i, t, r = {arr: Array((t = o.t) + n), s: 0, t: 0};
+    for (i = t - 1; i >= 0; --i) 
+      r.arr[i + n] = o.arr[i];
+    for (i = n - 1; i >= 0; --i) 
+      r.arr[i] = 0;
+    r.t = t + n;
+    r.s = o.s;
+    return r;
+  }
+  function bnpDRShiftTo(o, n, r) {
+    for (var i = n; i < o.t; ++i) 
+      r.arr[i - n] = o.arr[i];
+    r.t = Math.floor(Math.max(o.t - n * 1.0, 0.0));
+    r.s = o.s;
+  }
+  function bnpLShiftTo(o, n, r) {
+    var bs = n % DB, cbs = DB - bs, bm = (1 << cbs) - 1, ds = Math.floor(n / DB + 0.0), c = ((s = o.s) << bs) & DM, i, z, t, s;
+    for (i = (t = o.t) - 1; i >= 0; --i) 
+      {
+        r.arr[i + ds + 1] = ((z = o.arr[i]) >> cbs) | c;
+        c = (z & bm) << bs;
+      }
+    for (i = ds - 1; i >= 0; --i) 
+      r.arr[i] = 0;
+    r.arr[ds] = c;
+    r.t = t + ds + 1;
+    r.s = s;
+    clamp(r);
+  }
+  function bnpRShiftTo(o, n, r) {
+    r.s = o.s;
+    var ds = Math.floor(n / DB + 0.0), t = o.t, z;
+    if (ds >= t) 
+    {
+      r.t = 0;
+      return;
+    }
+    var bs = n % DB, cbs = DB - bs, bm = (1 << bs) - 1;
+    r.arr[0] = o.arr[ds] >> bs;
+    for (var i = ds + 1; i < t; ++i) 
+      {
+        r.arr[i - ds - 1] |= ((z = o.arr[i]) & bm) << cbs;
+        r.arr[i - ds] = z >> bs;
+      }
+    if (bs > 0) 
+    r.arr[t - ds - 1] |= (o.s & bm) << cbs;
+    r.t = t - ds;
+    clamp(r);
+  }
+  function bnpSubTo(o, a, r) {
+    var i = 0, c = 0, t, m = Math.min(a.t * 1.0, t = o.t * 1.0);
+    while (i < m) 
+      {
+        c += o.arr[i] - a.arr[i];
+        r.arr[i++] = c & DM;
+        c >>= DB;
+      }
+    if (a.t < t) 
+    {
+      c -= a.s;
+      while (i < t) 
+        {
+          c += o.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c += o.s;
+    } else {
+      c += o.s;
+      while (i < a.t) 
+        {
+          c -= a.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c -= a.s;
+    }
+    r.s = (c < 0) ? -1 : 0;
+    if (c < -1) 
+    r.arr[i++] = DV + c; else if (c > 0) 
+    r.arr[i++] = c;
+    r.t = i;
+    clamp(r);
+  }
+  function bnpMultiplyTo(o, a, r) {
+    var x = abs(o), y = abs(a);
+    var i = x.t;
+    r.t = i + y.t;
+    while (--i >= 0) 
+      r.arr[i] = 0;
+    for (i = 0; i < y.t; ++i) 
+      r.arr[i + x.t] = am(x, 0, y.arr[i], r, i, 0, x.t);
+    r.s = 0;
+    clamp(r);
+    if (o.s != a.s) 
+    bnpSubTo(ZERO, r, r);
+  }
+  function bnpDivRemTo(o, m, q, r) {
+    var pm = abs(m);
+    if (pm.t <= 0) 
+    return;
+    var pt = abs(o);
+    if (pt.t < pm.t) 
+    {
+      fromInt(q, 0);
+      if (r != null) 
+      copyTo(o, r);
+      return;
+    }
+    if (r == null) 
+    r = {arr: [], s: 0, t: 0};
+    var y = {arr: [], s: 0, t: 0}, ts = o.s, ms = m.s;
+    var nsh = DB - nbits(pm.arr[pm.t - 1]);
+    if (nsh > 0) 
+    {
+      bnpLShiftTo(pm, nsh, y);
+      bnpLShiftTo(pt, nsh, r);
+    } else {
+      copyTo(pm, y);
+      copyTo(pt, r);
+    }
+    var ys = y.t;
+    var y0 = y.arr[ys - 1];
+    if (y0 == 0) 
+    return;
+    var yt = y0 * (1 << F1) + ((ys > 1) ? y.arr[ys - 2] >> F2 : 0);
+    var d1 = FV / yt, d2 = (1 << F1) / yt, e = 1 << F2;
+    var i = r.t, j = i - ys, t = bnpDLShift(y, j);
+    if (bnCompareTo(r, t) >= 0) 
+    {
+      r.arr[r.t++] = 1;
+      bnpSubTo(r, t, r);
+    }
+    t = bnpDLShift(ONE, ys);
+    bnpSubTo(t, y, y);
+    while (y.t < ys) 
+      y.arr[y.t++] = 0;
+    while (--j >= 0) 
+      {
+        var qd = (r.arr[--i] == y0) ? DM : Math.floor(r.arr[i] * d1 + (r.arr[i - 1] + e) * d2 + 0.0);
+        if ((r.arr[i] += am(y, 0, qd, r, j, 0, ys)) < qd) 
+        {
+          t = bnpDLShift(y, j);
+          bnpSubTo(r, t, r);
+          while (r.arr[i] < --qd) 
+            bnpSubTo(r, t, r);
+        }
+      }
+    if (q != null) 
+    {
+      bnpDRShiftTo(r, ys, q);
+      if (ts != ms) 
+      bnpSubTo(ZERO, q, q);
+    }
+    r.t = ys;
+    clamp(r);
+    if (nsh > 0) 
+    bnpRShiftTo(r, nsh, r);
+    if (ts < 0) 
+    bnpSubTo(ZERO, r, r);
+  }
+  var ZERO = nbv(0);
+  var ONE = nbv(1);
+  function intValue(o) {
+    if (o.s < 0) 
+    {
+      if (o.t == 1) 
+      return o.arr[0] - DV; else if (o.t == 0) 
+      return -1;
+    } else if (o.t == 1) 
+    return o.arr[0]; else if (o.t == 0) 
+    return 0;
+    return ((o.arr[1] & ((1 << (32 - DB)) - 1)) << DB) | o.arr[0];
+  }
+  function shiftLeft(o, n) {
+    var r = {arr: [], s: 0, t: 0};
+    if (n < 0) 
+    bnpRShiftTo(o, -n, r); else bnpLShiftTo(o, n, r);
+    return r;
+  }
+  function bnpAddTo(o, a, r) {
+    var i = 0, c = 0, m = Math.min(a.t * 1.0, o.t * 1.0);
+    while (i < m) 
+      {
+        c += o.arr[i] + a.arr[i];
+        r.arr[i++] = c & DM;
+        c >>= DB;
+      }
+    if (a.t < o.t) 
+    {
+      c += a.s;
+      while (i < o.t) 
+        {
+          c += o.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c += o.s;
+    } else {
+      c += o.s;
+      while (i < a.t) 
+        {
+          c += a.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c += a.s;
+    }
+    r.s = (c < 0) ? -1 : 0;
+    if (c > 0) 
+    r.arr[i++] = c; else if (c < -1) 
+    r.arr[i++] = DV + c;
+    r.t = i;
+    clamp(r);
+  }
+  return {compareTo: bnCompareTo, multiply: function multiply(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpMultiplyTo(o, a, r);
+  return r;
+}, divide: function divide(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpDivRemTo(o, a, r, null);
+  return r;
+}, addTo: bnpAddTo, add: function add(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpAddTo(o, a, r);
+  return r;
+}, nbv: nbv, shiftLeft: shiftLeft, intValue: intValue};
+})()|=ret(|(function() {
+  var dbits = 28, BI_FP = 52, DB = dbits, DM = ((1 << dbits) - 1), DV = (1 << dbits), FV = Math.floor(Math.pow(2.0, BI_FP * 1.0)), F1 = BI_FP - dbits, F2 = 2 * dbits - BI_FP;
+  function am(This, i, x, w, j, c, n) {
+    var xl = x & 3fff, xh = x >> 14, z, l, h, m;
+    if (--n >= 0) 
+    for (; ; ) 
+      {
+        l = (((m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)) & 3fff) << 14) + xl * l + w.arr[j] + c;
+        w.arr[j++] = l & fffffff;
+        ++i;
+        if (--n >= 0) 
+        {
+          c = (l >> 28) + (m >> 14) + xh * h;
+        } else {
+          return (l >> 28) + (m >> 14) + xh * h;
+        }
+      }
+    return c;
+  }
+  var BI_RM = "0123456789abcdefghijklmnopqrstuvwxyz";
+  var BI_RC = new Array();
+  var rr, vv;
+  rr = "0".charCodeAt(0);
+  for (vv = 0; vv <= 9; ++vv) 
+    BI_RC[rr++] = vv;
+  rr = "a".charCodeAt(0);
+  for (vv = 10; vv < 36; ++vv) 
+    BI_RC[rr++] = vv;
+  rr = "A".charCodeAt(0);
+  for (vv = 10; vv < 36; ++vv) 
+    BI_RC[rr++] = vv;
+  function copyTo(o, r) {
+    for (var i = (r.t = o.t) - 1; i >= 0; --i) 
+      r.arr[i] = o.arr[i];
+    r.s = o.s;
+  }
+  function fromInt(o, x) {
+    o.t = 1;
+    o.s = (x < 0) ? -1 : 0;
+    if (x > 0) 
+    o.arr[0] = x; else if (x < -1) 
+    o.arr[0] = x + DV; else o.t = 0;
+  }
+  function nbv(i) {
+    var r = {arr: [], s: 0, t: 0};
+    fromInt(r, i);
+    return r;
+  }
+  function clamp(r) {
+    var c = r.s & DM, t = r.t;
+    while (t > 0 && r.arr[t - 1] == c) 
+      {
+        --t;
+      }
+    r.t = t;
+  }
+  function negate(o) {
+    var r = {arr: [], s: 0, t: 0};
+    bnpSubTo(ZERO, o, r);
+    return r;
+  }
+  function abs(o) {
+    return (o.s < 0) ? negate(o) : o;
+  }
+  function bnCompareTo(o, a) {
+    var r = o.s - a.s;
+    if (r != 0) 
+    return r;
+    var i = o.t;
+    r = i - a.t;
+    if (r != 0) 
+    return r;
+    while (--i >= 0) 
+      if ((r = o.arr[i] - a.arr[i]) != 0) 
+      return r;
+    return 0;
+  }
+  function nbits(x) {
+    var r = 1, t;
+    if ((t = x >>> 16) != 0) 
+    {
+      x = t;
+      r += 16;
+    }
+    if ((t = x >> 8) != 0) 
+    {
+      x = t;
+      r += 8;
+    }
+    if ((t = x >> 4) != 0) 
+    {
+      x = t;
+      r += 4;
+    }
+    if ((t = x >> 2) != 0) 
+    {
+      x = t;
+      r += 2;
+    }
+    if ((t = x >> 1) != 0) 
+    {
+      x = t;
+      r += 1;
+    }
+    return r;
+  }
+  function bnpDLShift(o, n) {
+    var i, t, r = {arr: Array((t = o.t) + n), s: 0, t: 0};
+    for (i = t - 1; i >= 0; --i) 
+      r.arr[i + n] = o.arr[i];
+    for (i = n - 1; i >= 0; --i) 
+      r.arr[i] = 0;
+    r.t = t + n;
+    r.s = o.s;
+    return r;
+  }
+  function bnpDRShiftTo(o, n, r) {
+    for (var i = n; i < o.t; ++i) 
+      r.arr[i - n] = o.arr[i];
+    r.t = Math.floor(Math.max(o.t - n * 1.0, 0.0));
+    r.s = o.s;
+  }
+  function bnpLShiftTo(o, n, r) {
+    var bs = n % DB, cbs = DB - bs, bm = (1 << cbs) - 1, ds = Math.floor(n / DB + 0.0), c = ((s = o.s) << bs) & DM, i, z, t, s;
+    for (i = (t = o.t) - 1; i >= 0; --i) 
+      {
+        r.arr[i + ds + 1] = ((z = o.arr[i]) >> cbs) | c;
+        c = (z & bm) << bs;
+      }
+    for (i = ds - 1; i >= 0; --i) 
+      r.arr[i] = 0;
+    r.arr[ds] = c;
+    r.t = t + ds + 1;
+    r.s = s;
+    clamp(r);
+  }
+  function bnpRShiftTo(o, n, r) {
+    r.s = o.s;
+    var ds = Math.floor(n / DB + 0.0), t = o.t, z;
+    if (ds >= t) 
+    {
+      r.t = 0;
+      return;
+    }
+    var bs = n % DB, cbs = DB - bs, bm = (1 << bs) - 1;
+    r.arr[0] = o.arr[ds] >> bs;
+    for (var i = ds + 1; i < t; ++i) 
+      {
+        r.arr[i - ds - 1] |= ((z = o.arr[i]) & bm) << cbs;
+        r.arr[i - ds] = z >> bs;
+      }
+    if (bs > 0) 
+    r.arr[t - ds - 1] |= (o.s & bm) << cbs;
+    r.t = t - ds;
+    clamp(r);
+  }
+  function bnpSubTo(o, a, r) {
+    var i = 0, c = 0, t, m = Math.min(a.t * 1.0, t = o.t * 1.0);
+    while (i < m) 
+      {
+        c += o.arr[i] - a.arr[i];
+        r.arr[i++] = c & DM;
+        c >>= DB;
+      }
+    if (a.t < t) 
+    {
+      c -= a.s;
+      while (i < t) 
+        {
+          c += o.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c += o.s;
+    } else {
+      c += o.s;
+      while (i < a.t) 
+        {
+          c -= a.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c -= a.s;
+    }
+    r.s = (c < 0) ? -1 : 0;
+    if (c < -1) 
+    r.arr[i++] = DV + c; else if (c > 0) 
+    r.arr[i++] = c;
+    r.t = i;
+    clamp(r);
+  }
+  function bnpMultiplyTo(o, a, r) {
+    var x = abs(o), y = abs(a);
+    var i = x.t;
+    r.t = i + y.t;
+    while (--i >= 0) 
+      r.arr[i] = 0;
+    for (i = 0; i < y.t; ++i) 
+      r.arr[i + x.t] = am(x, 0, y.arr[i], r, i, 0, x.t);
+    r.s = 0;
+    clamp(r);
+    if (o.s != a.s) 
+    bnpSubTo(ZERO, r, r);
+  }
+  function bnpDivRemTo(o, m, q, r) {
+    var pm = abs(m);
+    if (pm.t <= 0) 
+    return;
+    var pt = abs(o);
+    if (pt.t < pm.t) 
+    {
+      fromInt(q, 0);
+      if (r != null) 
+      copyTo(o, r);
+      return;
+    }
+    if (r == null) 
+    r = {arr: [], s: 0, t: 0};
+    var y = {arr: [], s: 0, t: 0}, ts = o.s, ms = m.s;
+    var nsh = DB - nbits(pm.arr[pm.t - 1]);
+    if (nsh > 0) 
+    {
+      bnpLShiftTo(pm, nsh, y);
+      bnpLShiftTo(pt, nsh, r);
+    } else {
+      copyTo(pm, y);
+      copyTo(pt, r);
+    }
+    var ys = y.t;
+    var y0 = y.arr[ys - 1];
+    if (y0 == 0) 
+    return;
+    var yt = y0 * (1 << F1) + ((ys > 1) ? y.arr[ys - 2] >> F2 : 0);
+    var d1 = FV / yt, d2 = (1 << F1) / yt, e = 1 << F2;
+    var i = r.t, j = i - ys, t = bnpDLShift(y, j);
+    if (bnCompareTo(r, t) >= 0) 
+    {
+      r.arr[r.t++] = 1;
+      bnpSubTo(r, t, r);
+    }
+    t = bnpDLShift(ONE, ys);
+    bnpSubTo(t, y, y);
+    while (y.t < ys) 
+      y.arr[y.t++] = 0;
+    while (--j >= 0) 
+      {
+        var qd = (r.arr[--i] == y0) ? DM : Math.floor(r.arr[i] * d1 + (r.arr[i - 1] + e) * d2 + 0.0);
+        if ((r.arr[i] += am(y, 0, qd, r, j, 0, ys)) < qd) 
+        {
+          t = bnpDLShift(y, j);
+          bnpSubTo(r, t, r);
+          while (r.arr[i] < --qd) 
+            bnpSubTo(r, t, r);
+        }
+      }
+    if (q != null) 
+    {
+      bnpDRShiftTo(r, ys, q);
+      if (ts != ms) 
+      bnpSubTo(ZERO, q, q);
+    }
+    r.t = ys;
+    clamp(r);
+    if (nsh > 0) 
+    bnpRShiftTo(r, nsh, r);
+    if (ts < 0) 
+    bnpSubTo(ZERO, r, r);
+  }
+  var ZERO = nbv(0);
+  var ONE = nbv(1);
+  function intValue(o) {
+    if (o.s < 0) 
+    {
+      if (o.t == 1) 
+      return o.arr[0] - DV; else if (o.t == 0) 
+      return -1;
+    } else if (o.t == 1) 
+    return o.arr[0]; else if (o.t == 0) 
+    return 0;
+    return ((o.arr[1] & ((1 << (32 - DB)) - 1)) << DB) | o.arr[0];
+  }
+  function shiftLeft(o, n) {
+    var r = {arr: [], s: 0, t: 0};
+    if (n < 0) 
+    bnpRShiftTo(o, -n, r); else bnpLShiftTo(o, n, r);
+    return r;
+  }
+  function bnpAddTo(o, a, r) {
+    var i = 0, c = 0, m = Math.min(a.t * 1.0, o.t * 1.0);
+    while (i < m) 
+      {
+        c += o.arr[i] + a.arr[i];
+        r.arr[i++] = c & DM;
+        c >>= DB;
+      }
+    if (a.t < o.t) 
+    {
+      c += a.s;
+      while (i < o.t) 
+        {
+          c += o.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c += o.s;
+    } else {
+      c += o.s;
+      while (i < a.t) 
+        {
+          c += a.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c += a.s;
+    }
+    r.s = (c < 0) ? -1 : 0;
+    if (c > 0) 
+    r.arr[i++] = c; else if (c < -1) 
+    r.arr[i++] = DV + c;
+    r.t = i;
+    clamp(r);
+  }
+  return {compareTo: bnCompareTo, multiply: function multiply(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpMultiplyTo(o, a, r);
+  return r;
+}, divide: function divide(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpDivRemTo(o, a, r, null);
+  return r;
+}, addTo: bnpAddTo, add: function add(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpAddTo(o, a, r);
+  return r;
+}, nbv: nbv, shiftLeft: shiftLeft, intValue: intValue};
+})|)
+|(function() {
+  var dbits = 28, BI_FP = 52, DB = dbits, DM = ((1 << dbits) - 1), DV = (1 << dbits), FV = Math.floor(Math.pow(2.0, BI_FP * 1.0)), F1 = BI_FP - dbits, F2 = 2 * dbits - BI_FP;
+  function am(This, i, x, w, j, c, n) {
+    var xl = x & 3fff, xh = x >> 14, z, l, h, m;
+    if (--n >= 0) 
+    for (; ; ) 
+      {
+        l = (((m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)) & 3fff) << 14) + xl * l + w.arr[j] + c;
+        w.arr[j++] = l & fffffff;
+        ++i;
+        if (--n >= 0) 
+        {
+          c = (l >> 28) + (m >> 14) + xh * h;
+        } else {
+          return (l >> 28) + (m >> 14) + xh * h;
+        }
+      }
+    return c;
+  }
+  var BI_RM = "0123456789abcdefghijklmnopqrstuvwxyz";
+  var BI_RC = new Array();
+  var rr, vv;
+  rr = "0".charCodeAt(0);
+  for (vv = 0; vv <= 9; ++vv) 
+    BI_RC[rr++] = vv;
+  rr = "a".charCodeAt(0);
+  for (vv = 10; vv < 36; ++vv) 
+    BI_RC[rr++] = vv;
+  rr = "A".charCodeAt(0);
+  for (vv = 10; vv < 36; ++vv) 
+    BI_RC[rr++] = vv;
+  function copyTo(o, r) {
+    for (var i = (r.t = o.t) - 1; i >= 0; --i) 
+      r.arr[i] = o.arr[i];
+    r.s = o.s;
+  }
+  function fromInt(o, x) {
+    o.t = 1;
+    o.s = (x < 0) ? -1 : 0;
+    if (x > 0) 
+    o.arr[0] = x; else if (x < -1) 
+    o.arr[0] = x + DV; else o.t = 0;
+  }
+  function nbv(i) {
+    var r = {arr: [], s: 0, t: 0};
+    fromInt(r, i);
+    return r;
+  }
+  function clamp(r) {
+    var c = r.s & DM, t = r.t;
+    while (t > 0 && r.arr[t - 1] == c) 
+      {
+        --t;
+      }
+    r.t = t;
+  }
+  function negate(o) {
+    var r = {arr: [], s: 0, t: 0};
+    bnpSubTo(ZERO, o, r);
+    return r;
+  }
+  function abs(o) {
+    return (o.s < 0) ? negate(o) : o;
+  }
+  function bnCompareTo(o, a) {
+    var r = o.s - a.s;
+    if (r != 0) 
+    return r;
+    var i = o.t;
+    r = i - a.t;
+    if (r != 0) 
+    return r;
+    while (--i >= 0) 
+      if ((r = o.arr[i] - a.arr[i]) != 0) 
+      return r;
+    return 0;
+  }
+  function nbits(x) {
+    var r = 1, t;
+    if ((t = x >>> 16) != 0) 
+    {
+      x = t;
+      r += 16;
+    }
+    if ((t = x >> 8) != 0) 
+    {
+      x = t;
+      r += 8;
+    }
+    if ((t = x >> 4) != 0) 
+    {
+      x = t;
+      r += 4;
+    }
+    if ((t = x >> 2) != 0) 
+    {
+      x = t;
+      r += 2;
+    }
+    if ((t = x >> 1) != 0) 
+    {
+      x = t;
+      r += 1;
+    }
+    return r;
+  }
+  function bnpDLShift(o, n) {
+    var i, t, r = {arr: Array((t = o.t) + n), s: 0, t: 0};
+    for (i = t - 1; i >= 0; --i) 
+      r.arr[i + n] = o.arr[i];
+    for (i = n - 1; i >= 0; --i) 
+      r.arr[i] = 0;
+    r.t = t + n;
+    r.s = o.s;
+    return r;
+  }
+  function bnpDRShiftTo(o, n, r) {
+    for (var i = n; i < o.t; ++i) 
+      r.arr[i - n] = o.arr[i];
+    r.t = Math.floor(Math.max(o.t - n * 1.0, 0.0));
+    r.s = o.s;
+  }
+  function bnpLShiftTo(o, n, r) {
+    var bs = n % DB, cbs = DB - bs, bm = (1 << cbs) - 1, ds = Math.floor(n / DB + 0.0), c = ((s = o.s) << bs) & DM, i, z, t, s;
+    for (i = (t = o.t) - 1; i >= 0; --i) 
+      {
+        r.arr[i + ds + 1] = ((z = o.arr[i]) >> cbs) | c;
+        c = (z & bm) << bs;
+      }
+    for (i = ds - 1; i >= 0; --i) 
+      r.arr[i] = 0;
+    r.arr[ds] = c;
+    r.t = t + ds + 1;
+    r.s = s;
+    clamp(r);
+  }
+  function bnpRShiftTo(o, n, r) {
+    r.s = o.s;
+    var ds = Math.floor(n / DB + 0.0), t = o.t, z;
+    if (ds >= t) 
+    {
+      r.t = 0;
+      return;
+    }
+    var bs = n % DB, cbs = DB - bs, bm = (1 << bs) - 1;
+    r.arr[0] = o.arr[ds] >> bs;
+    for (var i = ds + 1; i < t; ++i) 
+      {
+        r.arr[i - ds - 1] |= ((z = o.arr[i]) & bm) << cbs;
+        r.arr[i - ds] = z >> bs;
+      }
+    if (bs > 0) 
+    r.arr[t - ds - 1] |= (o.s & bm) << cbs;
+    r.t = t - ds;
+    clamp(r);
+  }
+  function bnpSubTo(o, a, r) {
+    var i = 0, c = 0, t, m = Math.min(a.t * 1.0, t = o.t * 1.0);
+    while (i < m) 
+      {
+        c += o.arr[i] - a.arr[i];
+        r.arr[i++] = c & DM;
+        c >>= DB;
+      }
+    if (a.t < t) 
+    {
+      c -= a.s;
+      while (i < t) 
+        {
+          c += o.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c += o.s;
+    } else {
+      c += o.s;
+      while (i < a.t) 
+        {
+          c -= a.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c -= a.s;
+    }
+    r.s = (c < 0) ? -1 : 0;
+    if (c < -1) 
+    r.arr[i++] = DV + c; else if (c > 0) 
+    r.arr[i++] = c;
+    r.t = i;
+    clamp(r);
+  }
+  function bnpMultiplyTo(o, a, r) {
+    var x = abs(o), y = abs(a);
+    var i = x.t;
+    r.t = i + y.t;
+    while (--i >= 0) 
+      r.arr[i] = 0;
+    for (i = 0; i < y.t; ++i) 
+      r.arr[i + x.t] = am(x, 0, y.arr[i], r, i, 0, x.t);
+    r.s = 0;
+    clamp(r);
+    if (o.s != a.s) 
+    bnpSubTo(ZERO, r, r);
+  }
+  function bnpDivRemTo(o, m, q, r) {
+    var pm = abs(m);
+    if (pm.t <= 0) 
+    return;
+    var pt = abs(o);
+    if (pt.t < pm.t) 
+    {
+      fromInt(q, 0);
+      if (r != null) 
+      copyTo(o, r);
+      return;
+    }
+    if (r == null) 
+    r = {arr: [], s: 0, t: 0};
+    var y = {arr: [], s: 0, t: 0}, ts = o.s, ms = m.s;
+    var nsh = DB - nbits(pm.arr[pm.t - 1]);
+    if (nsh > 0) 
+    {
+      bnpLShiftTo(pm, nsh, y);
+      bnpLShiftTo(pt, nsh, r);
+    } else {
+      copyTo(pm, y);
+      copyTo(pt, r);
+    }
+    var ys = y.t;
+    var y0 = y.arr[ys - 1];
+    if (y0 == 0) 
+    return;
+    var yt = y0 * (1 << F1) + ((ys > 1) ? y.arr[ys - 2] >> F2 : 0);
+    var d1 = FV / yt, d2 = (1 << F1) / yt, e = 1 << F2;
+    var i = r.t, j = i - ys, t = bnpDLShift(y, j);
+    if (bnCompareTo(r, t) >= 0) 
+    {
+      r.arr[r.t++] = 1;
+      bnpSubTo(r, t, r);
+    }
+    t = bnpDLShift(ONE, ys);
+    bnpSubTo(t, y, y);
+    while (y.t < ys) 
+      y.arr[y.t++] = 0;
+    while (--j >= 0) 
+      {
+        var qd = (r.arr[--i] == y0) ? DM : Math.floor(r.arr[i] * d1 + (r.arr[i - 1] + e) * d2 + 0.0);
+        if ((r.arr[i] += am(y, 0, qd, r, j, 0, ys)) < qd) 
+        {
+          t = bnpDLShift(y, j);
+          bnpSubTo(r, t, r);
+          while (r.arr[i] < --qd) 
+            bnpSubTo(r, t, r);
+        }
+      }
+    if (q != null) 
+    {
+      bnpDRShiftTo(r, ys, q);
+      if (ts != ms) 
+      bnpSubTo(ZERO, q, q);
+    }
+    r.t = ys;
+    clamp(r);
+    if (nsh > 0) 
+    bnpRShiftTo(r, nsh, r);
+    if (ts < 0) 
+    bnpSubTo(ZERO, r, r);
+  }
+  var ZERO = nbv(0);
+  var ONE = nbv(1);
+  function intValue(o) {
+    if (o.s < 0) 
+    {
+      if (o.t == 1) 
+      return o.arr[0] - DV; else if (o.t == 0) 
+      return -1;
+    } else if (o.t == 1) 
+    return o.arr[0]; else if (o.t == 0) 
+    return 0;
+    return ((o.arr[1] & ((1 << (32 - DB)) - 1)) << DB) | o.arr[0];
+  }
+  function shiftLeft(o, n) {
+    var r = {arr: [], s: 0, t: 0};
+    if (n < 0) 
+    bnpRShiftTo(o, -n, r); else bnpLShiftTo(o, n, r);
+    return r;
+  }
+  function bnpAddTo(o, a, r) {
+    var i = 0, c = 0, m = Math.min(a.t * 1.0, o.t * 1.0);
+    while (i < m) 
+      {
+        c += o.arr[i] + a.arr[i];
+        r.arr[i++] = c & DM;
+        c >>= DB;
+      }
+    if (a.t < o.t) 
+    {
+      c += a.s;
+      while (i < o.t) 
+        {
+          c += o.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c += o.s;
+    } else {
+      c += o.s;
+      while (i < a.t) 
+        {
+          c += a.arr[i];
+          r.arr[i++] = c & DM;
+          c >>= DB;
+        }
+      c += a.s;
+    }
+    r.s = (c < 0) ? -1 : 0;
+    if (c > 0) 
+    r.arr[i++] = c; else if (c < -1) 
+    r.arr[i++] = DV + c;
+    r.t = i;
+    clamp(r);
+  }
+  return {compareTo: bnCompareTo, multiply: function multiply(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpMultiplyTo(o, a, r);
+  return r;
+}, divide: function divide(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpDivRemTo(o, a, r, null);
+  return r;
+}, addTo: bnpAddTo, add: function add(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpAddTo(o, a, r);
+  return r;
+}, nbv: nbv, shiftLeft: shiftLeft, intValue: intValue};
+})|=|function <anonymous>|
+|(functions.add)((functions.multiply)($z0, three), $z1)|<:param(|(functions.divide)|,0)
+|(functions.add)((functions.multiply)($z0, three), $z1)|=ret(|(functions.add)|)
+|(functions.add)((functions.shiftLeft)($z0, 2), $z1)|<:param(|(functions.divide)|,0)
+|(functions.add)((functions.shiftLeft)($z0, 2), $z1)|=ret(|(functions.add)|)
+|(functions.add)|=|functions.add|
+|(functions.add)|=|functions.add|
+|(functions.addTo)($z1, (functions.multiply)($z0, $l = (functions.nbv)(l += 4)), $z1)|=ret(|(functions.addTo)|)
+|(functions.addTo)($z1, (functions.multiply)($z2, negdigits[$d]), $z1)|=ret(|(functions.addTo)|)
+|(functions.addTo)|=|functions.addTo|
+|(functions.addTo)|=|functions.addTo|
+|(functions.compareTo)($z0, $z2) > 0 || ($d = (functions.intValue)((functions.divide)((functions.add)((functions.multiply)($z0, three), $z1), $z2))) != (functions.intValue)((functions.divide)((functions.add)((functions.shiftLeft)($z0, 2), $z1), $z2))|=op(|(functions.compareTo)($z0, $z2) > 0||||($d = (functions.intValue)((functions.divide)((functions.add)((functions.multiply)($z0, three), $z1), $z2))) != (functions.intValue)((functions.divide)((functions.add)((functions.shiftLeft)($z0, 2), $z1), $z2))|)
+|(functions.compareTo)($z0, $z2) > 0|=op(|(functions.compareTo)($z0, $z2)|>|0|)
+|(functions.compareTo)($z0, $z2)|=ret(|(functions.compareTo)|)
+|(functions.compareTo)|=|functions.compareTo|
+|(functions.divide)((functions.add)((functions.multiply)($z0, three), $z1), $z2)|<:param(|(functions.intValue)|,0)
+|(functions.divide)((functions.add)((functions.multiply)($z0, three), $z1), $z2)|=ret(|(functions.divide)|)
+|(functions.divide)((functions.add)((functions.shiftLeft)($z0, 2), $z1), $z2)|<:param(|(functions.intValue)|,0)
+|(functions.divide)((functions.add)((functions.shiftLeft)($z0, 2), $z1), $z2)|=ret(|(functions.divide)|)
+|(functions.divide)|=|functions.divide|
+|(functions.divide)|=|functions.divide|
+|(functions.intValue)((functions.divide)((functions.add)((functions.multiply)($z0, three), $z1), $z2))|<:|$d|
+|(functions.intValue)((functions.divide)((functions.add)((functions.multiply)($z0, three), $z1), $z2))|=ret(|(functions.intValue)|)
+|(functions.intValue)((functions.divide)((functions.add)((functions.shiftLeft)($z0, 2), $z1), $z2))|=ret(|(functions.intValue)|)
+|(functions.intValue)|=|functions.intValue|
+|(functions.intValue)|=|functions.intValue|
+|(functions.multiply)($z0, $k = (functions.nbv)(++k))|<:|$z0|
+|(functions.multiply)($z0, $k = (functions.nbv)(++k))|=ret(|(functions.multiply)|)
+|(functions.multiply)($z0, $l = (functions.nbv)(l += 4))|<:param(|(functions.addTo)|,1)
+|(functions.multiply)($z0, $l = (functions.nbv)(l += 4))|=ret(|(functions.multiply)|)
+|(functions.multiply)($z0, ten)|<:|$z0|
+|(functions.multiply)($z0, ten)|=ret(|(functions.multiply)|)
+|(functions.multiply)($z0, three)|<:param(|(functions.add)|,0)
+|(functions.multiply)($z0, three)|=ret(|(functions.multiply)|)
+|(functions.multiply)($z1, $g = (functions.nbv)(g += 2))|<:|$z1|
+|(functions.multiply)($z1, $g = (functions.nbv)(g += 2))|=ret(|(functions.multiply)|)
+|(functions.multiply)($z1, ten)|<:|$z1|
+|(functions.multiply)($z1, ten)|=ret(|(functions.multiply)|)
+|(functions.multiply)($z2, $g)|<:|$z2|
+|(functions.multiply)($z2, $g)|=ret(|(functions.multiply)|)
+|(functions.multiply)($z2, negdigits[$d])|<:param(|(functions.addTo)|,1)
+|(functions.multiply)($z2, negdigits[$d])|=ret(|(functions.multiply)|)
+|(functions.multiply)(digits[i] = (functions.nbv)(i), neg10)|<:|negdigits[i]|
+|(functions.multiply)(digits[i] = (functions.nbv)(i), neg10)|=ret(|(functions.multiply)|)
+|(functions.multiply)|=|functions.multiply|
+|(functions.multiply)|=|functions.multiply|
+|(functions.multiply)|=|functions.multiply|
+|(functions.multiply)|=|functions.multiply|
+|(functions.multiply)|=|functions.multiply|
+|(functions.multiply)|=|functions.multiply|
+|(functions.multiply)|=|functions.multiply|
+|(functions.multiply)|=|functions.multiply|
+|(functions.multiply)|=|functions.multiply|
+|(functions.nbv)(++k)|<:|$k|
+|(functions.nbv)(++k)|=ret(|(functions.nbv)|)
+|(functions.nbv)(-10)|<:|neg10|
+|(functions.nbv)(-10)|=ret(|(functions.nbv)|)
+|(functions.nbv)(0)|<:|$z1|
+|(functions.nbv)(0)|=ret(|(functions.nbv)|)
+|(functions.nbv)(1)|<:|$z0|
+|(functions.nbv)(1)|<:|$z2|
+|(functions.nbv)(1)|=ret(|(functions.nbv)|)
+|(functions.nbv)(1)|=ret(|(functions.nbv)|)
+|(functions.nbv)(10)|<:|ten|
+|(functions.nbv)(10)|=ret(|(functions.nbv)|)
+|(functions.nbv)(3)|<:|three|
+|(functions.nbv)(3)|=ret(|(functions.nbv)|)
+|(functions.nbv)(g += 2)|<:|$g|
+|(functions.nbv)(g += 2)|=ret(|(functions.nbv)|)
+|(functions.nbv)(i)|<:|digits[i]|
+|(functions.nbv)(i)|=ret(|(functions.nbv)|)
+|(functions.nbv)(l += 4)|<:|$l|
+|(functions.nbv)(l += 4)|=ret(|(functions.nbv)|)
+|(functions.nbv)|=|functions.nbv|
+|(functions.nbv)|=|functions.nbv|
+|(functions.nbv)|=|functions.nbv|
+|(functions.nbv)|=|functions.nbv|
+|(functions.nbv)|=|functions.nbv|
+|(functions.nbv)|=|functions.nbv|
+|(functions.nbv)|=|functions.nbv|
+|(functions.nbv)|=|functions.nbv|
+|(functions.nbv)|=|functions.nbv|
+|(functions.nbv)|=|functions.nbv|
+|(functions.shiftLeft)($z0, 2)|<:param(|(functions.add)|,0)
+|(functions.shiftLeft)($z0, 2)|=ret(|(functions.shiftLeft)|)
+|(functions.shiftLeft)|=|functions.shiftLeft|
+|(h = z >> 14)|=|h = z >> 14|
+|(l = (z = This.arr[i]) & 3fff)|=|l = (z = This.arr[i]) & 3fff|
+|(l >> 28) + (m >> 14) + xh * h|<:ret(|function am|)
+|(l >> 28) + (m >> 14) + xh * h|<:|c|
+|(l >> 28) + (m >> 14) + xh * h|=op(|(l >> 28) + (m >> 14)|+|xh * h|)
+|(l >> 28) + (m >> 14) + xh * h|=op(|(l >> 28) + (m >> 14)|+|xh * h|)
+|(l >> 28) + (m >> 14)|=op(|(l >> 28)|+|(m >> 14)|)
+|(l >> 28) + (m >> 14)|=op(|(l >> 28)|+|(m >> 14)|)
+|(l >> 28)|=|l >> 28|
+|(l >> 28)|=|l >> 28|
+|(m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)) & 3fff|=op(|(m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14))|&|3fff|)
+|(m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14))|=|m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)|
+|(m >> 14)|=|m >> 14|
+|(m >> 14)|=|m >> 14|
+|(o.arr[1] & ((1 << (32 - DB)) - 1)) << DB|=op(|(o.arr[1] & ((1 << (32 - DB)) - 1))|<<|DB|)
+|(o.arr[1] & ((1 << (32 - DB)) - 1))|=|o.arr[1] & ((1 << (32 - DB)) - 1)|
+|(o.s & bm) << cbs|<:|r.arr[t - ds - 1]|
+|(o.s & bm) << cbs|=op(|(o.s & bm)|<<|cbs|)
+|(o.s & bm)|=|o.s & bm|
+|(o.s < 0) ? negate(o) : o|<:ret(|function abs|)
+|(o.s < 0)|=|o.s < 0|
+|(r = o.arr[i] - a.arr[i]) != 0|=op(|(r = o.arr[i] - a.arr[i])|!=|0|)
+|(r = o.arr[i] - a.arr[i])|=|r = o.arr[i] - a.arr[i]|
+|(r.arr[--i] == y0) ? DM : Math.floor(r.arr[i] * d1 + (r.arr[i - 1] + e) * d2 + 0.0)|<:|qd|
+|(r.arr[--i] == y0)|=|r.arr[--i] == y0|
+|(r.arr[i - 1] + e) * d2|=op(|(r.arr[i - 1] + e)|*|d2|)
+|(r.arr[i - 1] + e)|=|r.arr[i - 1] + e|
+|(r.arr[i] += am(y, 0, qd, r, j, 0, ys)) < qd|=op(|(r.arr[i] += am(y, 0, qd, r, j, 0, ys))|<|qd|)
+|(r.arr[i] += am(y, 0, qd, r, j, 0, ys))|=|r.arr[i] += am(y, 0, qd, r, j, 0, ys)|
+|(r.t = o.t) - 1|<:|i|
+|(r.t = o.t) - 1|=op(|(r.t = o.t)|-|1|)
+|(r.t = o.t)|=|r.t = o.t|
+|(s = o.s) << bs|=op(|(s = o.s)|<<|bs|)
+|(s = o.s)|=|s = o.s|
+|(t = o.t) + n|<:param(|Array|,0)
+|(t = o.t) + n|=op(|(t = o.t)|+|n|)
+|(t = o.t) - 1|<:|i|
+|(t = o.t) - 1|=op(|(t = o.t)|-|1|)
+|(t = o.t)|=|t = o.t|
+|(t = o.t)|=|t = o.t|
+|(t = x >> 1) != 0|=op(|(t = x >> 1)|!=|0|)
+|(t = x >> 1)|=|t = x >> 1|
+|(t = x >> 2) != 0|=op(|(t = x >> 2)|!=|0|)
+|(t = x >> 2)|=|t = x >> 2|
+|(t = x >> 4) != 0|=op(|(t = x >> 4)|!=|0|)
+|(t = x >> 4)|=|t = x >> 4|
+|(t = x >> 8) != 0|=op(|(t = x >> 8)|!=|0|)
+|(t = x >> 8)|=|t = x >> 8|
+|(t = x >>> 16) != 0|=op(|(t = x >>> 16)|!=|0|)
+|(t = x >>> 16)|=|t = x >>> 16|
+|(x < 0) ? -1 : 0|<:prop(|o|,s)
+|(x < 0)|=|x < 0|
+|(ys > 1)|=|ys > 1|
+|(z & bm) << bs|<:|c|
+|(z & bm) << bs|=op(|(z & bm)|<<|bs|)
+|(z & bm)|=|z & bm|
+|(z = This.arr[i]) & 3fff|<:|l|
+|(z = This.arr[i]) & 3fff|=op(|(z = This.arr[i])|&|3fff|)
+|(z = This.arr[i])|=|z = This.arr[i]|
+|(z = o.arr[i]) & bm|=op(|(z = o.arr[i])|&|bm|)
+|(z = o.arr[i]) >> cbs|=op(|(z = o.arr[i])|>>|cbs|)
+|(z = o.arr[i])|=|z = o.arr[i]|
+|(z = o.arr[i])|=|z = o.arr[i]|
+|++$i <= $n|=op(op(++|$i|)<=|$n|)
+|++$i|=op(++|$i|)
+|++i|=op(++|i|)
+|++i|=op(++|i|)
+|++i|=op(++|i|)
+|++i|=op(++|i|)
+|++i|=op(++|i|)
+|++k|=op(++|k|)
+|++vv|=op(++|vv|)
+|++vv|=op(++|vv|)
+|++vv|=op(++|vv|)
+|--i >= 0|=op(op(--|i|)>=|0|)
+|--i >= 0|=op(op(--|i|)>=|0|)
+|--i|=op(--|i|)
+|--i|=op(--|i|)
+|--i|=op(--|i|)
+|--i|=op(--|i|)
+|--i|=op(--|i|)
+|--i|=op(--|i|)
+|--i|=op(--|i|)
+|--i|=op(--|i|)
+|--j >= 0|=op(op(--|j|)>=|0|)
+|--j|=op(--|j|)
+|--n >= 0|=op(op(--|n|)>=|0|)
+|--n >= 0|=op(op(--|n|)>=|0|)
+|--n|=op(--|n|)
+|--n|=op(--|n|)
+|--qd|=op(--|qd|)
+|--t|=op(--|t|)
+|-10|=op(-|10|)
+|-1|=op(-|1|)
+|-1|=op(-|1|)
+|-1|=op(-|1|)
+|-1|=op(-|1|)
+|-1|=op(-|1|)
+|-1|=op(-|1|)
+|-1|=op(-|1|)
+|-n|=op(-|n|)
+|0.0|<:param(|Math.max|,1)
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0|<:param(|"0".charCodeAt|,0)
+|0|<:param(|"A".charCodeAt|,0)
+|0|<:param(|"a".charCodeAt|,0)
+|0|<:param(|(functions.nbv)|,0)
+|0|<:param(|am|,1)
+|0|<:param(|am|,1)
+|0|<:param(|am|,5)
+|0|<:param(|am|,5)
+|0|<:param(|fromInt|,1)
+|0|<:param(|nbv|,0)
+|0|<:prop(|o|,t)
+|0|<:prop(|r|,s)
+|0|<:prop(|r|,t)
+|0|<:prop(|{arr: Array((t = o.t) + n), s: 0, t: 0}|,s)
+|0|<:prop(|{arr: Array((t = o.t) + n), s: 0, t: 0}|,t)
+|0|<:prop(|{arr: [], s: 0, t: 0}|,s)
+|0|<:prop(|{arr: [], s: 0, t: 0}|,s)
+|0|<:prop(|{arr: [], s: 0, t: 0}|,s)
+|0|<:prop(|{arr: [], s: 0, t: 0}|,s)
+|0|<:prop(|{arr: [], s: 0, t: 0}|,s)
+|0|<:prop(|{arr: [], s: 0, t: 0}|,s)
+|0|<:prop(|{arr: [], s: 0, t: 0}|,s)
+|0|<:prop(|{arr: [], s: 0, t: 0}|,s)
+|0|<:prop(|{arr: [], s: 0, t: 0}|,t)
+|0|<:prop(|{arr: [], s: 0, t: 0}|,t)
+|0|<:prop(|{arr: [], s: 0, t: 0}|,t)
+|0|<:prop(|{arr: [], s: 0, t: 0}|,t)
+|0|<:prop(|{arr: [], s: 0, t: 0}|,t)
+|0|<:prop(|{arr: [], s: 0, t: 0}|,t)
+|0|<:prop(|{arr: [], s: 0, t: 0}|,t)
+|0|<:prop(|{arr: [], s: 0, t: 0}|,t)
+|0|<:ret(|function bnCompareTo|)
+|0|<:ret(|function intValue|)
+|0|<:|$d|
+|0|<:|(c < 0) ? -1 : 0|
+|0|<:|(c < 0) ? -1 : 0|
+|0|<:|(x < 0) ? -1 : 0|
+|0|<:|(ys > 1) ? y.arr[ys - 2] >> F2 : 0|
+|0|<:|c|
+|0|<:|c|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|k|
+|0|<:|r.arr[i]|
+|0|<:|r.arr[i]|
+|0|<:|r.arr[i]|
+|0|<:|vv|
+|0|<:|y.arr[y.t++]|
+|0|=Key(|o.arr|)
+|0|=Key(|o.arr|)
+|0|=Key(|o.arr|)
+|0|=Key(|o.arr|)
+|0|=Key(|o.arr|)
+|0|=Key(|r.arr|)
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|1 << (32 - DB)|=op(|1|<<|(32 - DB)|)
+|1 << F1|=op(|1|<<|F1|)
+|1 << F1|=op(|1|<<|F1|)
+|1 << F2|<:|e|
+|1 << F2|=op(|1|<<|F2|)
+|1 << bs|=op(|1|<<|bs|)
+|1 << cbs|=op(|1|<<|cbs|)
+|1 << dbits|=op(|1|<<|dbits|)
+|1 << dbits|=op(|1|<<|dbits|)
+|1.0|=float
+|1.0|=float
+|1.0|=float
+|1.0|=float
+|1.0|=float
+|1.0|=float
+|1000|<:param(|main|,0)
+|1000|=integer
+|10|<:param(|(functions.nbv)|,0)
+|10|<:param(|Array|,0)
+|10|<:param(|Array|,0)
+|10|<:|vv|
+|10|<:|vv|
+|10|=integer
+|10|=integer
+|10|=integer
+|10|=integer
+|10|=integer
+|10|=integer
+|10|=integer
+|10|=integer
+|10|=integer
+|11 - $i|<:param(|Array|,0)
+|11 - $i|=op(|11|-|$i|)
+|11|=integer
+|14|=integer
+|14|=integer
+|14|=integer
+|14|=integer
+|14|=integer
+|16|<:|r|
+|16|=integer
+|16|=integer
+|1|<:param(|(functions.nbv)|,0)
+|1|<:param(|(functions.nbv)|,0)
+|1|<:param(|nbv|,0)
+|1|<:prop(|o|,t)
+|1|<:|$i|
+|1|<:|g|
+|1|<:|r.arr[r.t++]|
+|1|<:|r|
+|1|<:|r|
+|1|=Key(|o.arr|)
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|2 * dbits - BI_FP|<:|F2|
+|2 * dbits - BI_FP|=op(|2 * dbits|-|BI_FP|)
+|2 * dbits|=op(|2|*|dbits|)
+|2.0|<:param(|Math.pow|,0)
+|2.0|=float
+|28|<:|dbits|
+|28|=integer
+|28|=integer
+|28|=integer
+|2|<:param(|(functions.shiftLeft)|,1)
+|2|<:|g|
+|2|<:|l|
+|2|<:|r|
+|2|=integer
+|2|=integer
+|2|=integer
+|2|=integer
+|2|=integer
+|2|=integer
+|2|=integer
+|32 - DB|=op(|32|-|DB|)
+|32|=integer
+|36|=integer
+|36|=integer
+|3fff|=integer
+|3fff|=integer
+|3fff|=integer
+|3|<:param(|(functions.nbv)|,0)
+|3|=integer
+|4|<:|l|
+|4|<:|r|
+|4|=integer
+|4|=integer
+|4|=integer
+|52|<:|BI_FP|
+|52|=integer
+|8|<:|r|
+|8|=integer
+|8|=integer
+|9|=integer
+|Array((t = o.t) + n)|<:prop(|{arr: Array((t = o.t) + n), s: 0, t: 0}|,arr)
+|Array((t = o.t) + n)|=ret(|Array|)
+|Array(10)|<:|digits|
+|Array(10)|<:|negdigits|
+|Array(10)|=ret(|Array|)
+|Array(10)|=ret(|Array|)
+|Array(11 - $i).join(' ')|<:|$s|
+|Array(11 - $i).join(' ')|=ret(|Array(11 - $i).join|)
+|Array(11 - $i).join|=prop(|Array(11 - $i)|,join)
+|Array(11 - $i)|=ret(|Array|)
+|Array|<:ctor<0>[X1]() -> X0
+|Array|=|Array|
+|Array|=|Array|
+|Array|=|Array|
+|Array|=|Array|
+|Array|=|Array|
+|BI_FP * 1.0|<:param(|Math.pow|,1)
+|BI_FP * 1.0|=op(|BI_FP|*|1.0|)
+|BI_FP - dbits|<:|F1|
+|BI_FP - dbits|=op(|BI_FP|-|dbits|)
+|BI_FP|=|BI_FP|
+|BI_FP|=|BI_FP|
+|BI_FP|=|BI_FP|
+|BI_RC[rr++] = vv|=|BI_RC[rr++]|
+|BI_RC[rr++] = vv|=|BI_RC[rr++]|
+|BI_RC[rr++] = vv|=|BI_RC[rr++]|
+|BI_RC|=|BI_RC|
+|BI_RC|=|BI_RC|
+|BI_RC|=|BI_RC|
+|DB - bs|<:|cbs|
+|DB - bs|<:|cbs|
+|DB - bs|=op(|DB|-|bs|)
+|DB - bs|=op(|DB|-|bs|)
+|DB - nbits(pm.arr[pm.t - 1])|<:|nsh|
+|DB - nbits(pm.arr[pm.t - 1])|=op(|DB|-|nbits(pm.arr[pm.t - 1])|)
+|DB|<:|c|
+|DB|<:|c|
+|DB|<:|c|
+|DB|<:|c|
+|DB|<:|c|
+|DB|<:|c|
+|DB|=|DB|
+|DB|=|DB|
+|DB|=|DB|
+|DB|=|DB|
+|DB|=|DB|
+|DB|=|DB|
+|DB|=|DB|
+|DB|=|DB|
+|DB|=|DB|
+|DB|=|DB|
+|DB|=|DB|
+|DB|=|DB|
+|DB|=|DB|
+|DB|=|DB|
+|DB|=|DB|
+|DM|<:|(r.arr[--i] == y0) ? DM : Math.floor(r.arr[i] * d1 + (r.arr[i - 1] + e) * d2 + 0.0)|
+|DM|=|DM|
+|DM|=|DM|
+|DM|=|DM|
+|DM|=|DM|
+|DM|=|DM|
+|DM|=|DM|
+|DM|=|DM|
+|DM|=|DM|
+|DM|=|DM|
+|DV + c|<:|r.arr[i++]|
+|DV + c|<:|r.arr[i++]|
+|DV + c|=op(|DV|+|c|)
+|DV + c|=op(|DV|+|c|)
+|DV|=|DV|
+|DV|=|DV|
+|DV|=|DV|
+|DV|=|DV|
+|F1|=|F1|
+|F1|=|F1|
+|F2|=|F2|
+|F2|=|F2|
+|FV / yt|<:|d1|
+|FV / yt|=op(|FV|/|yt|)
+|FV|=|FV|
+|Math.floor(Math.max(o.t - n * 1.0, 0.0))|<:prop(|r|,t)
+|Math.floor(Math.max(o.t - n * 1.0, 0.0))|=ret(|Math.floor|)
+|Math.floor(Math.pow(2.0, BI_FP * 1.0))|<:|FV|
+|Math.floor(Math.pow(2.0, BI_FP * 1.0))|=ret(|Math.floor|)
+|Math.floor(n / DB + 0.0)|<:|ds|
+|Math.floor(n / DB + 0.0)|<:|ds|
+|Math.floor(n / DB + 0.0)|=ret(|Math.floor|)
+|Math.floor(n / DB + 0.0)|=ret(|Math.floor|)
+|Math.floor(r.arr[i] * d1 + (r.arr[i - 1] + e) * d2 + 0.0)|<:|(r.arr[--i] == y0) ? DM : Math.floor(r.arr[i] * d1 + (r.arr[i - 1] + e) * d2 + 0.0)|
+|Math.floor(r.arr[i] * d1 + (r.arr[i - 1] + e) * d2 + 0.0)|=ret(|Math.floor|)
+|Math.floor|=prop(|Math|,floor)
+|Math.floor|=prop(|Math|,floor)
+|Math.floor|=prop(|Math|,floor)
+|Math.floor|=prop(|Math|,floor)
+|Math.floor|=prop(|Math|,floor)
+|Math.max(o.t - n * 1.0, 0.0)|<:param(|Math.floor|,0)
+|Math.max(o.t - n * 1.0, 0.0)|=ret(|Math.max|)
+|Math.max|=prop(|Math|,max)
+|Math.min(a.t * 1.0, o.t * 1.0)|<:|m|
+|Math.min(a.t * 1.0, o.t * 1.0)|=ret(|Math.min|)
+|Math.min(a.t * 1.0, t = o.t * 1.0)|<:|m|
+|Math.min(a.t * 1.0, t = o.t * 1.0)|=ret(|Math.min|)
+|Math.min|=prop(|Math|,min)
+|Math.min|=prop(|Math|,min)
+|Math.pow(2.0, BI_FP * 1.0)|<:param(|Math.floor|,0)
+|Math.pow(2.0, BI_FP * 1.0)|=ret(|Math.pow|)
+|Math.pow|=prop(|Math|,pow)
+|Math|=|Math|
+|Math|=|Math|
+|Math|=|Math|
+|Math|=|Math|
+|Math|=|Math|
+|Math|=|Math|
+|Math|=|Math|
+|Math|=|Math|
+|Math|=|Math|
+|ONE|<:param(|bnpDLShift|,0)
+|ONE|=|ONE|
+|This.arr[i]|<:|z|
+|This.arr|=prop(|This|,arr)
+|This|=|This|
+|ZERO|<:param(|bnpSubTo|,0)
+|ZERO|<:param(|bnpSubTo|,0)
+|ZERO|<:param(|bnpSubTo|,0)
+|ZERO|<:param(|bnpSubTo|,0)
+|ZERO|=|ZERO|
+|ZERO|=|ZERO|
+|ZERO|=|ZERO|
+|ZERO|=|ZERO|
+|[]|<:prop(|{arr: [], s: 0, t: 0}|,arr)
+|[]|<:prop(|{arr: [], s: 0, t: 0}|,arr)
+|[]|<:prop(|{arr: [], s: 0, t: 0}|,arr)
+|[]|<:prop(|{arr: [], s: 0, t: 0}|,arr)
+|[]|<:prop(|{arr: [], s: 0, t: 0}|,arr)
+|[]|<:prop(|{arr: [], s: 0, t: 0}|,arr)
+|[]|<:prop(|{arr: [], s: 0, t: 0}|,arr)
+|[]|<:prop(|{arr: [], s: 0, t: 0}|,arr)
+|a.arr[i]|<:|c|
+|a.arr[i]|<:|c|
+|a.arr|=prop(|a|,arr)
+|a.arr|=prop(|a|,arr)
+|a.arr|=prop(|a|,arr)
+|a.arr|=prop(|a|,arr)
+|a.arr|=prop(|a|,arr)
+|a.s|<:|c|
+|a.s|<:|c|
+|a.s|<:|c|
+|a.s|<:|c|
+|a.s|=prop(|a|,s)
+|a.s|=prop(|a|,s)
+|a.s|=prop(|a|,s)
+|a.s|=prop(|a|,s)
+|a.s|=prop(|a|,s)
+|a.s|=prop(|a|,s)
+|a.t * 1.0|<:param(|Math.min|,0)
+|a.t * 1.0|<:param(|Math.min|,0)
+|a.t * 1.0|=op(|a.t|*|1.0|)
+|a.t * 1.0|=op(|a.t|*|1.0|)
+|a.t < o.t|=op(|a.t|<|o.t|)
+|a.t < t|=op(|a.t|<|t|)
+|a.t|=prop(|a|,t)
+|a.t|=prop(|a|,t)
+|a.t|=prop(|a|,t)
+|a.t|=prop(|a|,t)
+|a.t|=prop(|a|,t)
+|a.t|=prop(|a|,t)
+|a.t|=prop(|a|,t)
+|abs(a)|<:|y|
+|abs(a)|=ret(|abs|)
+|abs(m)|<:|pm|
+|abs(m)|=ret(|abs|)
+|abs(o)|<:|pt|
+|abs(o)|<:|x|
+|abs(o)|=ret(|abs|)
+|abs(o)|=ret(|abs|)
+|abs|=|abs|
+|abs|=|abs|
+|abs|=|abs|
+|abs|=|abs|
+|am(x, 0, y.arr[i], r, i, 0, x.t)|<:|r.arr[i + x.t]|
+|am(x, 0, y.arr[i], r, i, 0, x.t)|=ret(|am|)
+|am(y, 0, qd, r, j, 0, ys)|<:|r.arr[i]|
+|am(y, 0, qd, r, j, 0, ys)|=ret(|am|)
+|am|=|am|
+|am|=|am|
+|a|<:param(|abs|,0)
+|a|<:param(|bnpAddTo|,1)
+|a|<:param(|bnpDivRemTo|,1)
+|a|<:param(|bnpMultiplyTo|,1)
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|bm|=|bm|
+|bm|=|bm|
+|bm|=|bm|
+|bnCompareTo(r, t) >= 0|=op(|bnCompareTo(r, t)|>=|0|)
+|bnCompareTo(r, t)|=ret(|bnCompareTo|)
+|bnCompareTo|<:prop(|{compareTo: bnCompareTo, multiply: function multiply(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpMultiplyTo(o, a, r);
+  return r;
+}, divide: function divide(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpDivRemTo(o, a, r, null);
+  return r;
+}, addTo: bnpAddTo, add: function add(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpAddTo(o, a, r);
+  return r;
+}, nbv: nbv, shiftLeft: shiftLeft, intValue: intValue}|,compareTo)
+|bnCompareTo|=|bnCompareTo|
+|bnCompareTo|=|bnCompareTo|
+|bnpAddTo(o, a, r)|=ret(|bnpAddTo|)
+|bnpAddTo|<:prop(|{compareTo: bnCompareTo, multiply: function multiply(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpMultiplyTo(o, a, r);
+  return r;
+}, divide: function divide(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpDivRemTo(o, a, r, null);
+  return r;
+}, addTo: bnpAddTo, add: function add(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpAddTo(o, a, r);
+  return r;
+}, nbv: nbv, shiftLeft: shiftLeft, intValue: intValue}|,addTo)
+|bnpAddTo|=|bnpAddTo|
+|bnpAddTo|=|bnpAddTo|
+|bnpDLShift(ONE, ys)|<:|t|
+|bnpDLShift(ONE, ys)|=ret(|bnpDLShift|)
+|bnpDLShift(y, j)|<:|t|
+|bnpDLShift(y, j)|<:|t|
+|bnpDLShift(y, j)|=ret(|bnpDLShift|)
+|bnpDLShift(y, j)|=ret(|bnpDLShift|)
+|bnpDLShift|=|bnpDLShift|
+|bnpDLShift|=|bnpDLShift|
+|bnpDLShift|=|bnpDLShift|
+|bnpDRShiftTo(r, ys, q)|=ret(|bnpDRShiftTo|)
+|bnpDRShiftTo|=|bnpDRShiftTo|
+|bnpDivRemTo(o, a, r, null)|=ret(|bnpDivRemTo|)
+|bnpDivRemTo|=|bnpDivRemTo|
+|bnpLShiftTo(o, n, r)|=ret(|bnpLShiftTo|)
+|bnpLShiftTo(pm, nsh, y)|=ret(|bnpLShiftTo|)
+|bnpLShiftTo(pt, nsh, r)|=ret(|bnpLShiftTo|)
+|bnpLShiftTo|=|bnpLShiftTo|
+|bnpLShiftTo|=|bnpLShiftTo|
+|bnpLShiftTo|=|bnpLShiftTo|
+|bnpMultiplyTo(o, a, r)|=ret(|bnpMultiplyTo|)
+|bnpMultiplyTo|=|bnpMultiplyTo|
+|bnpRShiftTo(o, -n, r)|=ret(|bnpRShiftTo|)
+|bnpRShiftTo(r, nsh, r)|=ret(|bnpRShiftTo|)
+|bnpRShiftTo|=|bnpRShiftTo|
+|bnpRShiftTo|=|bnpRShiftTo|
+|bnpSubTo(ZERO, o, r)|=ret(|bnpSubTo|)
+|bnpSubTo(ZERO, q, q)|=ret(|bnpSubTo|)
+|bnpSubTo(ZERO, r, r)|=ret(|bnpSubTo|)
+|bnpSubTo(ZERO, r, r)|=ret(|bnpSubTo|)
+|bnpSubTo(r, t, r)|=ret(|bnpSubTo|)
+|bnpSubTo(r, t, r)|=ret(|bnpSubTo|)
+|bnpSubTo(r, t, r)|=ret(|bnpSubTo|)
+|bnpSubTo(t, y, y)|=ret(|bnpSubTo|)
+|bnpSubTo|=|bnpSubTo|
+|bnpSubTo|=|bnpSubTo|
+|bnpSubTo|=|bnpSubTo|
+|bnpSubTo|=|bnpSubTo|
+|bnpSubTo|=|bnpSubTo|
+|bnpSubTo|=|bnpSubTo|
+|bnpSubTo|=|bnpSubTo|
+|bnpSubTo|=|bnpSubTo|
+|bs > 0|=op(|bs|>|0|)
+|bs|=|bs|
+|bs|=|bs|
+|bs|=|bs|
+|bs|=|bs|
+|bs|=|bs|
+|bs|=|bs|
+|bs|=|bs|
+|bs|=|bs|
+|c & DM|<:|r.arr[i++]|
+|c & DM|<:|r.arr[i++]|
+|c & DM|<:|r.arr[i++]|
+|c & DM|<:|r.arr[i++]|
+|c & DM|<:|r.arr[i++]|
+|c & DM|<:|r.arr[i++]|
+|c & DM|=op(|c|&|DM|)
+|c & DM|=op(|c|&|DM|)
+|c & DM|=op(|c|&|DM|)
+|c & DM|=op(|c|&|DM|)
+|c & DM|=op(|c|&|DM|)
+|c & DM|=op(|c|&|DM|)
+|c += a.arr[i]|=|c|
+|c += a.s|=|c|
+|c += a.s|=|c|
+|c += o.arr[i] + a.arr[i]|=|c|
+|c += o.arr[i] - a.arr[i]|=|c|
+|c += o.arr[i]|=|c|
+|c += o.arr[i]|=|c|
+|c += o.s|=|c|
+|c += o.s|=|c|
+|c += o.s|=|c|
+|c += o.s|=|c|
+|c -= a.arr[i]|=|c|
+|c -= a.s|=|c|
+|c -= a.s|=|c|
+|c < -1|=op(|c|<op(-|1|))
+|c < -1|=op(|c|<op(-|1|))
+|c < 0|=op(|c|<|0|)
+|c < 0|=op(|c|<|0|)
+|c = (l >> 28) + (m >> 14) + xh * h|=|c|
+|c = (z & bm) << bs|=|c|
+|c > 0|=op(|c|>|0|)
+|c > 0|=op(|c|>|0|)
+|c >>= DB|=|c|
+|c >>= DB|=|c|
+|c >>= DB|=|c|
+|c >>= DB|=|c|
+|c >>= DB|=|c|
+|c >>= DB|=|c|
+|cbs|=|cbs|
+|cbs|=|cbs|
+|cbs|=|cbs|
+|cbs|=|cbs|
+|clamp(r)|=ret(|clamp|)
+|clamp(r)|=ret(|clamp|)
+|clamp(r)|=ret(|clamp|)
+|clamp(r)|=ret(|clamp|)
+|clamp(r)|=ret(|clamp|)
+|clamp(r)|=ret(|clamp|)
+|clamp|=|clamp|
+|clamp|=|clamp|
+|clamp|=|clamp|
+|clamp|=|clamp|
+|clamp|=|clamp|
+|clamp|=|clamp|
+|console.log($s + "\t:" + $i)|=ret(|console.log|)
+|console.log($s + "\t:" + $n)|=ret(|console.log|)
+|console.log|=prop(|console|,log)
+|console.log|=prop(|console|,log)
+|console|=|console|
+|console|=|console|
+|copyTo(o, r)|=ret(|copyTo|)
+|copyTo(pm, y)|=ret(|copyTo|)
+|copyTo(pt, r)|=ret(|copyTo|)
+|copyTo|=|copyTo|
+|copyTo|=|copyTo|
+|copyTo|=|copyTo|
+|c|<:ret(|function am|)
+|c|<:|r.arr[ds]|
+|c|<:|r.arr[i++]|
+|c|<:|r.arr[i++]|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|d1|=|d1|
+|d2|=|d2|
+|dbits|<:|DB|
+|dbits|=|dbits|
+|dbits|=|dbits|
+|dbits|=|dbits|
+|dbits|=|dbits|
+|dbits|=|dbits|
+|digits[i] = (functions.nbv)(i)|<:param(|(functions.multiply)|,0)
+|digits[i] = (functions.nbv)(i)|=|digits[i]|
+|digits|=|digits|
+|ds + 1|<:|i|
+|ds + 1|=op(|ds|+|1|)
+|ds - 1|<:|i|
+|ds - 1|=op(|ds|-|1|)
+|ds >= t|=op(|ds|>=|t|)
+|ds|=Key(|o.arr|)
+|ds|=Key(|r.arr|)
+|ds|=|ds|
+|ds|=|ds|
+|ds|=|ds|
+|ds|=|ds|
+|ds|=|ds|
+|ds|=|ds|
+|ds|=|ds|
+|ds|=|ds|
+|ds|=|ds|
+|ds|=|ds|
+|ds|=|ds|
+|e|=|e|
+|fffffff|=integer
+|fromInt(q, 0)|=ret(|fromInt|)
+|fromInt(r, i)|=ret(|fromInt|)
+|fromInt|=|fromInt|
+|fromInt|=|fromInt|
+|function abs|<:|abs|
+|function add|<:prop(|{compareTo: bnCompareTo, multiply: function multiply(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpMultiplyTo(o, a, r);
+  return r;
+}, divide: function divide(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpDivRemTo(o, a, r, null);
+  return r;
+}, addTo: bnpAddTo, add: function add(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpAddTo(o, a, r);
+  return r;
+}, nbv: nbv, shiftLeft: shiftLeft, intValue: intValue}|,add)
+|function add|<:|add|
+|function am|<:|am|
+|function bnCompareTo|<:|bnCompareTo|
+|function bnpAddTo|<:|bnpAddTo|
+|function bnpDLShift|<:|bnpDLShift|
+|function bnpDRShiftTo|<:|bnpDRShiftTo|
+|function bnpDivRemTo|<:|bnpDivRemTo|
+|function bnpLShiftTo|<:|bnpLShiftTo|
+|function bnpMultiplyTo|<:|bnpMultiplyTo|
+|function bnpRShiftTo|<:|bnpRShiftTo|
+|function bnpSubTo|<:|bnpSubTo|
+|function clamp|<:|clamp|
+|function copyTo|<:|copyTo|
+|function divide|<:prop(|{compareTo: bnCompareTo, multiply: function multiply(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpMultiplyTo(o, a, r);
+  return r;
+}, divide: function divide(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpDivRemTo(o, a, r, null);
+  return r;
+}, addTo: bnpAddTo, add: function add(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpAddTo(o, a, r);
+  return r;
+}, nbv: nbv, shiftLeft: shiftLeft, intValue: intValue}|,divide)
+|function divide|<:|divide|
+|function fromInt|<:|fromInt|
+|function intValue|<:|intValue|
+|function main|<:|main|
+|function multiply|<:prop(|{compareTo: bnCompareTo, multiply: function multiply(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpMultiplyTo(o, a, r);
+  return r;
+}, divide: function divide(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpDivRemTo(o, a, r, null);
+  return r;
+}, addTo: bnpAddTo, add: function add(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpAddTo(o, a, r);
+  return r;
+}, nbv: nbv, shiftLeft: shiftLeft, intValue: intValue}|,multiply)
+|function multiply|<:|multiply|
+|function nbits|<:|nbits|
+|function nbv|<:|nbv|
+|function negate|<:|negate|
+|function shiftLeft|<:|shiftLeft|
+|functions.addTo|=prop(|functions|,addTo)
+|functions.addTo|=prop(|functions|,addTo)
+|functions.add|=prop(|functions|,add)
+|functions.add|=prop(|functions|,add)
+|functions.compareTo|=prop(|functions|,compareTo)
+|functions.divide|=prop(|functions|,divide)
+|functions.divide|=prop(|functions|,divide)
+|functions.intValue|=prop(|functions|,intValue)
+|functions.intValue|=prop(|functions|,intValue)
+|functions.multiply|=prop(|functions|,multiply)
+|functions.multiply|=prop(|functions|,multiply)
+|functions.multiply|=prop(|functions|,multiply)
+|functions.multiply|=prop(|functions|,multiply)
+|functions.multiply|=prop(|functions|,multiply)
+|functions.multiply|=prop(|functions|,multiply)
+|functions.multiply|=prop(|functions|,multiply)
+|functions.multiply|=prop(|functions|,multiply)
+|functions.multiply|=prop(|functions|,multiply)
+|functions.nbv|=prop(|functions|,nbv)
+|functions.nbv|=prop(|functions|,nbv)
+|functions.nbv|=prop(|functions|,nbv)
+|functions.nbv|=prop(|functions|,nbv)
+|functions.nbv|=prop(|functions|,nbv)
+|functions.nbv|=prop(|functions|,nbv)
+|functions.nbv|=prop(|functions|,nbv)
+|functions.nbv|=prop(|functions|,nbv)
+|functions.nbv|=prop(|functions|,nbv)
+|functions.nbv|=prop(|functions|,nbv)
+|functions.shiftLeft|=prop(|functions|,shiftLeft)
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|functions|=|functions|
+|g += 2|<:param(|(functions.nbv)|,0)
+|g += 2|=|g|
+|g|=|g|
+|h = z >> 14|=|h|
+|h|=|h|
+|h|=|h|
+|h|=|h|
+|i + ds + 1|=Key(|r.arr|)
+|i + ds + 1|=op(|i + ds|+|1|)
+|i + ds|=op(|i|+|ds|)
+|i + n|=Key(|r.arr|)
+|i + n|=op(|i|+|n|)
+|i + x.t|=Key(|r.arr|)
+|i + x.t|=op(|i|+|x.t|)
+|i + y.t|<:prop(|r|,t)
+|i + y.t|=op(|i|+|y.t|)
+|i - 1|=Key(|r.arr|)
+|i - 1|=op(|i|-|1|)
+|i - a.t|<:|r|
+|i - a.t|=op(|i|-|a.t|)
+|i - ds - 1|=Key(|r.arr|)
+|i - ds - 1|=op(|i - ds|-|1|)
+|i - ds|=Key(|r.arr|)
+|i - ds|=op(|i|-|ds|)
+|i - ds|=op(|i|-|ds|)
+|i - n|=Key(|r.arr|)
+|i - n|=op(|i|-|n|)
+|i - ys|<:|j|
+|i - ys|=op(|i|-|ys|)
+|i < 10|=op(|i|<|10|)
+|i < a.t|=op(|i|<|a.t|)
+|i < a.t|=op(|i|<|a.t|)
+|i < m|=op(|i|<|m|)
+|i < m|=op(|i|<|m|)
+|i < o.t|=op(|i|<|o.t|)
+|i < o.t|=op(|i|<|o.t|)
+|i < t|=op(|i|<|t|)
+|i < t|=op(|i|<|t|)
+|i < y.t|=op(|i|<|y.t|)
+|i = (t = o.t) - 1|=|i|
+|i = 0|=|i|
+|i = ds - 1|=|i|
+|i = n - 1|=|i|
+|i = t - 1|=|i|
+|i >= 0|=op(|i|>=|0|)
+|i >= 0|=op(|i|>=|0|)
+|i >= 0|=op(|i|>=|0|)
+|i >= 0|=op(|i|>=|0|)
+|i >= 0|=op(|i|>=|0|)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|intValue|<:prop(|{compareTo: bnCompareTo, multiply: function multiply(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpMultiplyTo(o, a, r);
+  return r;
+}, divide: function divide(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpDivRemTo(o, a, r, null);
+  return r;
+}, addTo: bnpAddTo, add: function add(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpAddTo(o, a, r);
+  return r;
+}, nbv: nbv, shiftLeft: shiftLeft, intValue: intValue}|,intValue)
+|intValue|=|intValue|
+|i|<:param(|(functions.nbv)|,0)
+|i|<:param(|am|,4)
+|i|<:param(|fromInt|,1)
+|i|<:prop(|r|,t)
+|i|<:prop(|r|,t)
+|i|=Key(|This.arr|)
+|i|=Key(|a.arr|)
+|i|=Key(|a.arr|)
+|i|=Key(|a.arr|)
+|i|=Key(|a.arr|)
+|i|=Key(|a.arr|)
+|i|=Key(|digits|)
+|i|=Key(|negdigits|)
+|i|=Key(|o.arr|)
+|i|=Key(|o.arr|)
+|i|=Key(|o.arr|)
+|i|=Key(|o.arr|)
+|i|=Key(|o.arr|)
+|i|=Key(|o.arr|)
+|i|=Key(|o.arr|)
+|i|=Key(|o.arr|)
+|i|=Key(|o.arr|)
+|i|=Key(|o.arr|)
+|i|=Key(|r.arr|)
+|i|=Key(|r.arr|)
+|i|=Key(|r.arr|)
+|i|=Key(|r.arr|)
+|i|=Key(|r.arr|)
+|i|=Key(|r.arr|)
+|i|=Key(|r.arr|)
+|i|=Key(|y.arr|)
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|j++|=op(|j|++)
+|j|<:param(|am|,4)
+|j|<:param(|bnpDLShift|,1)
+|j|<:param(|bnpDLShift|,1)
+|j|=Key(|w.arr|)
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|k|=|k|
+|l & fffffff|<:|w.arr[j++]|
+|l & fffffff|=op(|l|&|fffffff|)
+|l += 4|<:param(|(functions.nbv)|,0)
+|l += 4|=|l|
+|l = (((m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)) & 3fff) << 14) + xl * l + w.arr[j] + c|=|l|
+|l = (z = This.arr[i]) & 3fff|=|l|
+|l >> 28|=op(|l|>>|28|)
+|l >> 28|=op(|l|>>|28|)
+|l|=|l|
+|l|=|l|
+|l|=|l|
+|l|=|l|
+|l|=|l|
+|l|=|l|
+|l|=|l|
+|m = xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)|=|m|
+|m >> 14|=op(|m|>>|14|)
+|m >> 14|=op(|m|>>|14|)
+|m.s|<:|ms|
+|m.s|=prop(|m|,s)
+|main(1000)|=ret(|main|)
+|main|=|main|
+|ms|=|ms|
+|m|<:param(|abs|,0)
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|n % DB|<:|bs|
+|n % DB|<:|bs|
+|n % DB|=op(|n|%|DB|)
+|n % DB|=op(|n|%|DB|)
+|n * 1.0|=op(|n|*|1.0|)
+|n - 1|<:|i|
+|n - 1|=op(|n|-|1|)
+|n / DB + 0.0|<:param(|Math.floor|,0)
+|n / DB + 0.0|<:param(|Math.floor|,0)
+|n / DB + 0.0|=op(|n / DB|+|0.0|)
+|n / DB + 0.0|=op(|n / DB|+|0.0|)
+|n / DB|=op(|n|/|DB|)
+|n / DB|=op(|n|/|DB|)
+|n < 0|=op(|n|<|0|)
+|nbits(pm.arr[pm.t - 1])|=ret(|nbits|)
+|nbits|=|nbits|
+|nbv(0)|<:|ZERO|
+|nbv(0)|=ret(|nbv|)
+|nbv(1)|<:|ONE|
+|nbv(1)|=ret(|nbv|)
+|nbv|<:prop(|{compareTo: bnCompareTo, multiply: function multiply(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpMultiplyTo(o, a, r);
+  return r;
+}, divide: function divide(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpDivRemTo(o, a, r, null);
+  return r;
+}, addTo: bnpAddTo, add: function add(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpAddTo(o, a, r);
+  return r;
+}, nbv: nbv, shiftLeft: shiftLeft, intValue: intValue}|,nbv)
+|nbv|=|nbv|
+|nbv|=|nbv|
+|nbv|=|nbv|
+|neg10|<:param(|(functions.multiply)|,1)
+|neg10|=|neg10|
+|negate(o)|<:|(o.s < 0) ? negate(o) : o|
+|negate(o)|=ret(|negate|)
+|negate|=|negate|
+|negdigits[$d]|<:param(|(functions.multiply)|,1)
+|negdigits[i] = (functions.multiply)(digits[i] = (functions.nbv)(i), neg10)|=|negdigits[i]|
+|negdigits|=|negdigits|
+|negdigits|=|negdigits|
+|new Array()|<:|BI_RC|
+|new Array()|=ret(|Array|)
+|nsh > 0|=op(|nsh|>|0|)
+|nsh > 0|=op(|nsh|>|0|)
+|nsh|<:param(|bnpLShiftTo|,1)
+|nsh|<:param(|bnpLShiftTo|,1)
+|nsh|<:param(|bnpRShiftTo|,1)
+|nsh|=|nsh|
+|nsh|=|nsh|
+|nsh|=|nsh|
+|nsh|=|nsh|
+|nsh|=|nsh|
+|null|=param(|bnpDivRemTo|,3)
+|n|<:param(|bnpLShiftTo|,1)
+|n|<:|i|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|o.arr[0] - DV|<:ret(|function intValue|)
+|o.arr[0] - DV|=op(|o.arr[0]|-|DV|)
+|o.arr[0] = x + DV|=|o.arr[0]|
+|o.arr[0] = x|=|o.arr[0]|
+|o.arr[0]|<:ret(|function intValue|)
+|o.arr[1] & ((1 << (32 - DB)) - 1)|=op(|o.arr[1]|&|((1 << (32 - DB)) - 1)|)
+|o.arr[ds] >> bs|<:|r.arr[0]|
+|o.arr[ds] >> bs|=op(|o.arr[ds]|>>|bs|)
+|o.arr[i] + a.arr[i]|<:|c|
+|o.arr[i] + a.arr[i]|=op(|o.arr[i]|+|a.arr[i]|)
+|o.arr[i] - a.arr[i]|<:|c|
+|o.arr[i] - a.arr[i]|<:|r|
+|o.arr[i] - a.arr[i]|=op(|o.arr[i]|-|a.arr[i]|)
+|o.arr[i] - a.arr[i]|=op(|o.arr[i]|-|a.arr[i]|)
+|o.arr[i]|<:|c|
+|o.arr[i]|<:|c|
+|o.arr[i]|<:|r.arr[i + n]|
+|o.arr[i]|<:|r.arr[i - n]|
+|o.arr[i]|<:|r.arr[i]|
+|o.arr[i]|<:|z|
+|o.arr[i]|<:|z|
+|o.arr|=prop(|o|,arr)
+|o.arr|=prop(|o|,arr)
+|o.arr|=prop(|o|,arr)
+|o.arr|=prop(|o|,arr)
+|o.arr|=prop(|o|,arr)
+|o.arr|=prop(|o|,arr)
+|o.arr|=prop(|o|,arr)
+|o.arr|=prop(|o|,arr)
+|o.arr|=prop(|o|,arr)
+|o.arr|=prop(|o|,arr)
+|o.arr|=prop(|o|,arr)
+|o.arr|=prop(|o|,arr)
+|o.arr|=prop(|o|,arr)
+|o.arr|=prop(|o|,arr)
+|o.arr|=prop(|o|,arr)
+|o.arr|=prop(|o|,arr)
+|o.arr|=prop(|o|,arr)
+|o.s != a.s|=op(|o.s|!=|a.s|)
+|o.s & bm|=op(|o.s|&|bm|)
+|o.s - a.s|<:|r|
+|o.s - a.s|=op(|o.s|-|a.s|)
+|o.s < 0|=op(|o.s|<|0|)
+|o.s < 0|=op(|o.s|<|0|)
+|o.s = (x < 0) ? -1 : 0|=prop(|o|,s)
+|o.s|<:prop(|r|,s)
+|o.s|<:prop(|r|,s)
+|o.s|<:prop(|r|,s)
+|o.s|<:prop(|r|,s)
+|o.s|<:|c|
+|o.s|<:|c|
+|o.s|<:|c|
+|o.s|<:|c|
+|o.s|<:|s|
+|o.s|<:|ts|
+|o.s|=prop(|o|,s)
+|o.s|=prop(|o|,s)
+|o.s|=prop(|o|,s)
+|o.s|=prop(|o|,s)
+|o.s|=prop(|o|,s)
+|o.s|=prop(|o|,s)
+|o.s|=prop(|o|,s)
+|o.s|=prop(|o|,s)
+|o.s|=prop(|o|,s)
+|o.s|=prop(|o|,s)
+|o.s|=prop(|o|,s)
+|o.s|=prop(|o|,s)
+|o.s|=prop(|o|,s)
+|o.s|=prop(|o|,s)
+|o.s|=prop(|o|,s)
+|o.s|=prop(|o|,s)
+|o.t * 1.0|<:param(|Math.min|,1)
+|o.t * 1.0|<:|t|
+|o.t * 1.0|=op(|o.t|*|1.0|)
+|o.t * 1.0|=op(|o.t|*|1.0|)
+|o.t - n * 1.0|<:param(|Math.max|,0)
+|o.t - n * 1.0|=op(|o.t|-|n * 1.0|)
+|o.t = 0|=prop(|o|,t)
+|o.t = 1|=prop(|o|,t)
+|o.t == 0|=op(|o.t|==|0|)
+|o.t == 0|=op(|o.t|==|0|)
+|o.t == 1|=op(|o.t|==|1|)
+|o.t == 1|=op(|o.t|==|1|)
+|o.t|<:prop(|r|,t)
+|o.t|<:|i|
+|o.t|<:|t|
+|o.t|<:|t|
+|o.t|<:|t|
+|o.t|=prop(|o|,t)
+|o.t|=prop(|o|,t)
+|o.t|=prop(|o|,t)
+|o.t|=prop(|o|,t)
+|o.t|=prop(|o|,t)
+|o.t|=prop(|o|,t)
+|o.t|=prop(|o|,t)
+|o.t|=prop(|o|,t)
+|o.t|=prop(|o|,t)
+|o.t|=prop(|o|,t)
+|o.t|=prop(|o|,t)
+|o.t|=prop(|o|,t)
+|o.t|=prop(|o|,t)
+|o.t|=prop(|o|,t)
+|o.t|=prop(|o|,t)
+|o.t|=prop(|o|,t)
+|o.t|=prop(|o|,t)
+|o|<:param(|abs|,0)
+|o|<:param(|abs|,0)
+|o|<:param(|bnpAddTo|,0)
+|o|<:param(|bnpDivRemTo|,0)
+|o|<:param(|bnpLShiftTo|,0)
+|o|<:param(|bnpMultiplyTo|,0)
+|o|<:param(|bnpRShiftTo|,0)
+|o|<:param(|bnpSubTo|,1)
+|o|<:param(|copyTo|,0)
+|o|<:param(|negate|,0)
+|o|<:|(o.s < 0) ? negate(o) : o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|o|=|o|
+|pm.arr[pm.t - 1]|<:param(|nbits|,0)
+|pm.arr|=prop(|pm|,arr)
+|pm.t - 1|=Key(|pm.arr|)
+|pm.t - 1|=op(|pm.t|-|1|)
+|pm.t <= 0|=op(|pm.t|<=|0|)
+|pm.t|=prop(|pm|,t)
+|pm.t|=prop(|pm|,t)
+|pm.t|=prop(|pm|,t)
+|pm|<:param(|bnpLShiftTo|,0)
+|pm|<:param(|copyTo|,0)
+|pm|=|pm|
+|pm|=|pm|
+|pm|=|pm|
+|pm|=|pm|
+|pm|=|pm|
+|pm|=|pm|
+|pt.t < pm.t|=op(|pt.t|<|pm.t|)
+|pt.t|=prop(|pt|,t)
+|pt|<:param(|bnpLShiftTo|,0)
+|pt|<:param(|copyTo|,0)
+|pt|=|pt|
+|pt|=|pt|
+|pt|=|pt|
+|q != null|=op(|q|!=|null|)
+|qd|<:param(|am|,2)
+|qd|=|qd|
+|qd|=|qd|
+|qd|=|qd|
+|q|<:param(|bnpDRShiftTo|,2)
+|q|<:param(|bnpSubTo|,1)
+|q|<:param(|bnpSubTo|,2)
+|q|<:param(|fromInt|,0)
+|q|=|q|
+|q|=|q|
+|q|=|q|
+|q|=|q|
+|q|=|q|
+|r != 0|=op(|r|!=|0|)
+|r != 0|=op(|r|!=|0|)
+|r != null|=op(|r|!=|null|)
+|r += 16|=|r|
+|r += 1|=|r|
+|r += 2|=|r|
+|r += 4|=|r|
+|r += 8|=|r|
+|r = i - a.t|=|r|
+|r = o.arr[i] - a.arr[i]|=|r|
+|r = {arr: [], s: 0, t: 0}|=|r|
+|r == null|=op(|r|==|null|)
+|r.arr[--i] == y0|=op(|r.arr[--i]|==|y0|)
+|r.arr[0] = o.arr[ds] >> bs|=|r.arr[0]|
+|r.arr[ds] = c|=|r.arr[ds]|
+|r.arr[i + ds + 1] = ((z = o.arr[i]) >> cbs) | c|=|r.arr[i + ds + 1]|
+|r.arr[i + n] = o.arr[i]|=|r.arr[i + n]|
+|r.arr[i + x.t] = am(x, 0, y.arr[i], r, i, 0, x.t)|=|r.arr[i + x.t]|
+|r.arr[i - 1] + e|=op(|r.arr[i - 1]|+|e|)
+|r.arr[i - ds - 1] |= ((z = o.arr[i]) & bm) << cbs|=|r.arr[i - ds - 1]|
+|r.arr[i - ds] = z >> bs|=|r.arr[i - ds]|
+|r.arr[i - n] = o.arr[i]|=|r.arr[i - n]|
+|r.arr[i++] = DV + c|=|r.arr[i++]|
+|r.arr[i++] = DV + c|=|r.arr[i++]|
+|r.arr[i++] = c & DM|=|r.arr[i++]|
+|r.arr[i++] = c & DM|=|r.arr[i++]|
+|r.arr[i++] = c & DM|=|r.arr[i++]|
+|r.arr[i++] = c & DM|=|r.arr[i++]|
+|r.arr[i++] = c & DM|=|r.arr[i++]|
+|r.arr[i++] = c & DM|=|r.arr[i++]|
+|r.arr[i++] = c|=|r.arr[i++]|
+|r.arr[i++] = c|=|r.arr[i++]|
+|r.arr[i] * d1 + (r.arr[i - 1] + e) * d2 + 0.0|<:param(|Math.floor|,0)
+|r.arr[i] * d1 + (r.arr[i - 1] + e) * d2 + 0.0|=op(|r.arr[i] * d1 + (r.arr[i - 1] + e) * d2|+|0.0|)
+|r.arr[i] * d1 + (r.arr[i - 1] + e) * d2|=op(|r.arr[i] * d1|+|(r.arr[i - 1] + e) * d2|)
+|r.arr[i] * d1|=op(|r.arr[i]|*|d1|)
+|r.arr[i] += am(y, 0, qd, r, j, 0, ys)|=|r.arr[i]|
+|r.arr[i] < --qd|=op(|r.arr[i]|<op(--|qd|))
+|r.arr[i] = 0|=|r.arr[i]|
+|r.arr[i] = 0|=|r.arr[i]|
+|r.arr[i] = 0|=|r.arr[i]|
+|r.arr[i] = o.arr[i]|=|r.arr[i]|
+|r.arr[r.t++] = 1|=|r.arr[r.t++]|
+|r.arr[t - 1] == c|=op(|r.arr[t - 1]|==|c|)
+|r.arr[t - ds - 1] |= (o.s & bm) << cbs|=|r.arr[t - ds - 1]|
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.arr|=prop(|r|,arr)
+|r.s & DM|<:|c|
+|r.s & DM|=op(|r.s|&|DM|)
+|r.s = (c < 0) ? -1 : 0|=prop(|r|,s)
+|r.s = (c < 0) ? -1 : 0|=prop(|r|,s)
+|r.s = 0|=prop(|r|,s)
+|r.s = o.s|=prop(|r|,s)
+|r.s = o.s|=prop(|r|,s)
+|r.s = o.s|=prop(|r|,s)
+|r.s = o.s|=prop(|r|,s)
+|r.s = s|=prop(|r|,s)
+|r.s|=prop(|r|,s)
+|r.s|=prop(|r|,s)
+|r.s|=prop(|r|,s)
+|r.s|=prop(|r|,s)
+|r.s|=prop(|r|,s)
+|r.s|=prop(|r|,s)
+|r.s|=prop(|r|,s)
+|r.s|=prop(|r|,s)
+|r.s|=prop(|r|,s)
+|r.t = 0|=prop(|r|,t)
+|r.t = Math.floor(Math.max(o.t - n * 1.0, 0.0))|=prop(|r|,t)
+|r.t = i + y.t|=prop(|r|,t)
+|r.t = i|=prop(|r|,t)
+|r.t = i|=prop(|r|,t)
+|r.t = o.t|=prop(|r|,t)
+|r.t = t + ds + 1|=prop(|r|,t)
+|r.t = t + n|=prop(|r|,t)
+|r.t = t - ds|=prop(|r|,t)
+|r.t = t|=prop(|r|,t)
+|r.t = ys|=prop(|r|,t)
+|r.t++|=op(|r.t|++)
+|r.t|<:|i|
+|r.t|<:|t|
+|r.t|=prop(|r|,t)
+|r.t|=prop(|r|,t)
+|r.t|=prop(|r|,t)
+|r.t|=prop(|r|,t)
+|r.t|=prop(|r|,t)
+|r.t|=prop(|r|,t)
+|r.t|=prop(|r|,t)
+|r.t|=prop(|r|,t)
+|r.t|=prop(|r|,t)
+|r.t|=prop(|r|,t)
+|r.t|=prop(|r|,t)
+|r.t|=prop(|r|,t)
+|r.t|=prop(|r|,t)
+|r.t|=prop(|r|,t)
+|rr = "0".charCodeAt(0)|=|rr|
+|rr = "A".charCodeAt(0)|=|rr|
+|rr = "a".charCodeAt(0)|=|rr|
+|rr++|=op(|rr|++)
+|rr++|=op(|rr|++)
+|rr++|=op(|rr|++)
+|rr|=|rr|
+|rr|=|rr|
+|rr|=|rr|
+|rr|=|rr|
+|rr|=|rr|
+|rr|=|rr|
+|r|<:param(|am|,3)
+|r|<:param(|am|,3)
+|r|<:param(|bnCompareTo|,0)
+|r|<:param(|bnpAddTo|,2)
+|r|<:param(|bnpDRShiftTo|,0)
+|r|<:param(|bnpDivRemTo|,2)
+|r|<:param(|bnpLShiftTo|,2)
+|r|<:param(|bnpLShiftTo|,2)
+|r|<:param(|bnpMultiplyTo|,2)
+|r|<:param(|bnpRShiftTo|,0)
+|r|<:param(|bnpRShiftTo|,2)
+|r|<:param(|bnpRShiftTo|,2)
+|r|<:param(|bnpSubTo|,0)
+|r|<:param(|bnpSubTo|,0)
+|r|<:param(|bnpSubTo|,0)
+|r|<:param(|bnpSubTo|,1)
+|r|<:param(|bnpSubTo|,1)
+|r|<:param(|bnpSubTo|,2)
+|r|<:param(|bnpSubTo|,2)
+|r|<:param(|bnpSubTo|,2)
+|r|<:param(|bnpSubTo|,2)
+|r|<:param(|bnpSubTo|,2)
+|r|<:param(|bnpSubTo|,2)
+|r|<:param(|clamp|,0)
+|r|<:param(|clamp|,0)
+|r|<:param(|clamp|,0)
+|r|<:param(|clamp|,0)
+|r|<:param(|clamp|,0)
+|r|<:param(|clamp|,0)
+|r|<:param(|copyTo|,1)
+|r|<:param(|copyTo|,1)
+|r|<:param(|fromInt|,0)
+|r|<:ret(|function add|)
+|r|<:ret(|function bnCompareTo|)
+|r|<:ret(|function bnCompareTo|)
+|r|<:ret(|function bnCompareTo|)
+|r|<:ret(|function bnpDLShift|)
+|r|<:ret(|function divide|)
+|r|<:ret(|function multiply|)
+|r|<:ret(|function nbits|)
+|r|<:ret(|function nbv|)
+|r|<:ret(|function negate|)
+|r|<:ret(|function shiftLeft|)
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|s = o.s|=|s|
+|shiftLeft|<:prop(|{compareTo: bnCompareTo, multiply: function multiply(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpMultiplyTo(o, a, r);
+  return r;
+}, divide: function divide(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpDivRemTo(o, a, r, null);
+  return r;
+}, addTo: bnpAddTo, add: function add(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpAddTo(o, a, r);
+  return r;
+}, nbv: nbv, shiftLeft: shiftLeft, intValue: intValue}|,shiftLeft)
+|shiftLeft|=|shiftLeft|
+|s|<:prop(|r|,s)
+|s|=|s|
+|s|=|s|
+|t + ds + 1|<:prop(|r|,t)
+|t + ds + 1|=op(|t + ds|+|1|)
+|t + ds|=op(|t|+|ds|)
+|t + n|<:prop(|r|,t)
+|t + n|=op(|t|+|n|)
+|t - 1|<:|i|
+|t - 1|=Key(|r.arr|)
+|t - 1|=op(|t|-|1|)
+|t - 1|=op(|t|-|1|)
+|t - ds - 1|=Key(|r.arr|)
+|t - ds - 1|=op(|t - ds|-|1|)
+|t - ds|<:prop(|r|,t)
+|t - ds|=op(|t|-|ds|)
+|t - ds|=op(|t|-|ds|)
+|t = bnpDLShift(ONE, ys)|=|t|
+|t = bnpDLShift(y, j)|=|t|
+|t = o.t * 1.0|<:param(|Math.min|,1)
+|t = o.t * 1.0|=|t|
+|t = o.t|=|t|
+|t = o.t|=|t|
+|t = x >> 1|=|t|
+|t = x >> 2|=|t|
+|t = x >> 4|=|t|
+|t = x >> 8|=|t|
+|t = x >>> 16|=|t|
+|t > 0 && r.arr[t - 1] == c|=op(|t > 0|&&|r.arr[t - 1] == c|)
+|t > 0|=op(|t|>|0|)
+|ten|<:param(|(functions.multiply)|,1)
+|ten|<:param(|(functions.multiply)|,1)
+|ten|=|ten|
+|ten|=|ten|
+|three|<:param(|(functions.multiply)|,1)
+|three|=|three|
+|ts != ms|=op(|ts|!=|ms|)
+|ts < 0|=op(|ts|<|0|)
+|ts|=|ts|
+|ts|=|ts|
+|t|<:param(|bnCompareTo|,1)
+|t|<:param(|bnpSubTo|,0)
+|t|<:param(|bnpSubTo|,1)
+|t|<:param(|bnpSubTo|,1)
+|t|<:param(|bnpSubTo|,1)
+|t|<:prop(|r|,t)
+|t|<:|x|
+|t|<:|x|
+|t|<:|x|
+|t|<:|x|
+|t|<:|x|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|t|=|t|
+|vv < 36|=op(|vv|<|36|)
+|vv < 36|=op(|vv|<|36|)
+|vv <= 9|=op(|vv|<=|9|)
+|vv = 0|=|vv|
+|vv = 10|=|vv|
+|vv = 10|=|vv|
+|vv|<:|BI_RC[rr++]|
+|vv|<:|BI_RC[rr++]|
+|vv|<:|BI_RC[rr++]|
+|vv|=|vv|
+|vv|=|vv|
+|vv|=|vv|
+|vv|=|vv|
+|vv|=|vv|
+|vv|=|vv|
+|vv|=|vv|
+|vv|=|vv|
+|vv|=|vv|
+|vv|=|vv|
+|vv|=|vv|
+|vv|=|vv|
+|w.arr[j++] = l & fffffff|=|w.arr[j++]|
+|w.arr|=prop(|w|,arr)
+|w.arr|=prop(|w|,arr)
+|w|=|w|
+|w|=|w|
+|x & 3fff|<:|xl|
+|x & 3fff|=op(|x|&|3fff|)
+|x + DV|<:|o.arr[0]|
+|x + DV|=op(|x|+|DV|)
+|x < -1|=op(|x|<op(-|1|))
+|x < 0|=op(|x|<|0|)
+|x = t|=|x|
+|x = t|=|x|
+|x = t|=|x|
+|x = t|=|x|
+|x = t|=|x|
+|x > 0|=op(|x|>|0|)
+|x >> 14|<:|xh|
+|x >> 14|=op(|x|>>|14|)
+|x >> 1|<:|t|
+|x >> 1|=op(|x|>>|1|)
+|x >> 2|<:|t|
+|x >> 2|=op(|x|>>|2|)
+|x >> 4|<:|t|
+|x >> 4|=op(|x|>>|4|)
+|x >> 8|<:|t|
+|x >> 8|=op(|x|>>|8|)
+|x >>> 16|<:|t|
+|x >>> 16|=op(|x|>>>|16|)
+|x.t|<:param(|am|,6)
+|x.t|<:|i|
+|x.t|=prop(|x|,t)
+|x.t|=prop(|x|,t)
+|x.t|=prop(|x|,t)
+|xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)|<:|m|
+|xh * (l = (z = This.arr[i]) & 3fff) + xl * (h = z >> 14)|=op(|xh * (l = (z = This.arr[i]) & 3fff)|+|xl * (h = z >> 14)|)
+|xh * (l = (z = This.arr[i]) & 3fff)|=op(|xh|*|(l = (z = This.arr[i]) & 3fff)|)
+|xh * h|=op(|xh|*|h|)
+|xh * h|=op(|xh|*|h|)
+|xh|=|xh|
+|xh|=|xh|
+|xh|=|xh|
+|xl * (h = z >> 14)|=op(|xl|*|(h = z >> 14)|)
+|xl * l|=op(|xl|*|l|)
+|xl|=|xl|
+|xl|=|xl|
+|x|<:param(|am|,0)
+|x|<:|o.arr[0]|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|y.arr[i]|<:param(|am|,2)
+|y.arr[y.t++] = 0|=|y.arr[y.t++]|
+|y.arr[ys - 1]|<:|y0|
+|y.arr[ys - 2] >> F2|<:|(ys > 1) ? y.arr[ys - 2] >> F2 : 0|
+|y.arr[ys - 2] >> F2|=op(|y.arr[ys - 2]|>>|F2|)
+|y.arr|=prop(|y|,arr)
+|y.arr|=prop(|y|,arr)
+|y.arr|=prop(|y|,arr)
+|y.arr|=prop(|y|,arr)
+|y.t < ys|=op(|y.t|<|ys|)
+|y.t++|=op(|y.t|++)
+|y.t|<:|ys|
+|y.t|=prop(|y|,t)
+|y.t|=prop(|y|,t)
+|y.t|=prop(|y|,t)
+|y.t|=prop(|y|,t)
+|y.t|=prop(|y|,t)
+|y0 * (1 << F1) + ((ys > 1) ? y.arr[ys - 2] >> F2 : 0)|<:|yt|
+|y0 * (1 << F1) + ((ys > 1) ? y.arr[ys - 2] >> F2 : 0)|=op(|y0 * (1 << F1)|+|((ys > 1) ? y.arr[ys - 2] >> F2 : 0)|)
+|y0 * (1 << F1)|=op(|y0|*|(1 << F1)|)
+|y0 == 0|=op(|y0|==|0|)
+|y0|=|y0|
+|y0|=|y0|
+|y0|=|y0|
+|ys - 1|=Key(|y.arr|)
+|ys - 1|=op(|ys|-|1|)
+|ys - 2|=Key(|y.arr|)
+|ys - 2|=op(|ys|-|2|)
+|ys > 1|=op(|ys|>|1|)
+|ys|<:param(|am|,6)
+|ys|<:param(|bnpDLShift|,1)
+|ys|<:param(|bnpDRShiftTo|,1)
+|ys|<:prop(|r|,t)
+|ys|=|ys|
+|ys|=|ys|
+|ys|=|ys|
+|ys|=|ys|
+|ys|=|ys|
+|ys|=|ys|
+|ys|=|ys|
+|ys|=|ys|
+|ys|=|ys|
+|yt|=|yt|
+|yt|=|yt|
+|y|<:param(|am|,0)
+|y|<:param(|bnpDLShift|,0)
+|y|<:param(|bnpDLShift|,0)
+|y|<:param(|bnpLShiftTo|,2)
+|y|<:param(|bnpSubTo|,1)
+|y|<:param(|bnpSubTo|,2)
+|y|<:param(|copyTo|,1)
+|y|=|y|
+|y|=|y|
+|y|=|y|
+|y|=|y|
+|y|=|y|
+|y|=|y|
+|y|=|y|
+|y|=|y|
+|y|=|y|
+|y|=|y|
+|y|=|y|
+|y|=|y|
+|y|=|y|
+|y|=|y|
+|y|=|y|
+|y|=|y|
+|z & bm|=op(|z|&|bm|)
+|z = This.arr[i]|=|z|
+|z = o.arr[i]|=|z|
+|z = o.arr[i]|=|z|
+|z >> 14|<:|h|
+|z >> 14|=op(|z|>>|14|)
+|z >> bs|<:|r.arr[i - ds]|
+|z >> bs|=op(|z|>>|bs|)
+|z|=|z|
+|z|=|z|
+|z|=|z|
+|z|=|z|
+|z|=|z|
+|z|=|z|
+|{arr: Array((t = o.t) + n), s: 0, t: 0}|<:|r|
+|{arr: [], s: 0, t: 0}|<:|r|
+|{arr: [], s: 0, t: 0}|<:|r|
+|{arr: [], s: 0, t: 0}|<:|r|
+|{arr: [], s: 0, t: 0}|<:|r|
+|{arr: [], s: 0, t: 0}|<:|r|
+|{arr: [], s: 0, t: 0}|<:|r|
+|{arr: [], s: 0, t: 0}|<:|r|
+|{arr: [], s: 0, t: 0}|<:|y|
+|{compareTo: bnCompareTo, multiply: function multiply(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpMultiplyTo(o, a, r);
+  return r;
+}, divide: function divide(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpDivRemTo(o, a, r, null);
+  return r;
+}, addTo: bnpAddTo, add: function add(o, a) {
+  var r = {arr: [], s: 0, t: 0};
+  bnpAddTo(o, a, r);
+  return r;
+}, nbv: nbv, shiftLeft: shiftLeft, intValue: intValue}|<:ret(|function <anonymous>|)

@@ -1,0 +1,19 @@
+CheckArity(ret(|Math.sqrt|))
+CheckArity(ret(|printFloat|))
+MakeConcreteConstraint [term=|33.0|]
+MakeConcreteConstraint [term=|Math.sqrt(f)|]
+MakeConcreteConstraint [term=|Math|]
+MakeConcreteConstraint [term=|f|]
+MakeConcreteConstraint [term=|g|]
+|33.0|<:|f|
+|33.0|=float
+|Math.sqrt(f)|<:|g|
+|Math.sqrt(f)|=ret(|Math.sqrt|)
+|Math.sqrt|=prop(|Math|,sqrt)
+|Math|=|Math|
+|f|<:param(|Math.sqrt|,0)
+|f|=|f|
+|g|<:param(|printFloat|,0)
+|g|=|g|
+|printFloat(g)|=ret(|printFloat|)
+|printFloat|=|printFloat|

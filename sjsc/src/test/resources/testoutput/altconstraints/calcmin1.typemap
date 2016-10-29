@@ -1,0 +1,87 @@
+"Constructing... woo!" --> string
+Application --> ctor<0>[null]() -> {  | AddFrame: ({  | is_frame: boolean, Construct: () -> void }) -> void }
+Application --> ctor<0>[null]() -> {  | AddFrame: ({  | is_frame: boolean, Construct: () -> void }) -> void }
+Calculator --> ctor<0>[{  | AddFrame: ({  | is_frame: boolean, Construct: () -> void }) -> void }]() -> { AddFrame: ({  | is_frame: boolean, Construct: () -> void }) -> void | OnAppInitializing: []() -> void }
+Calculator --> ctor<0>[{  | AddFrame: ({  | is_frame: boolean, Construct: () -> void }) -> void }]() -> { AddFrame: ({  | is_frame: boolean, Construct: () -> void }) -> void | OnAppInitializing: []() -> void }
+Calculator.prototype --> {  | AddFrame: ({  | is_frame: boolean, Construct: () -> void }) -> void }
+Calculator.prototype = new Application() --> {  | AddFrame: ({  | is_frame: boolean, Construct: () -> void }) -> void }
+Frame --> ctor<0>[null]() -> {  | is_frame: boolean, Construct: () -> void }
+Frame --> ctor<0>[null]() -> {  | is_frame: boolean, Construct: () -> void }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.assert --> [](boolean) -> void
+console.assert(fr.is_frame) --> void
+console.log --> [](string) -> void
+console.log("Constructing... woo!") --> void
+fr --> {  | is_frame: boolean, Construct: () -> void }
+fr --> {  | is_frame: boolean, Construct: () -> void }
+fr --> {  | is_frame: boolean, Construct: () -> void }
+fr.Construct --> () -> void
+fr.Construct() --> void
+fr.is_frame --> boolean
+frame --> {  | is_frame: boolean, Construct: () -> void }
+frame --> {  | is_frame: boolean, Construct: () -> void }
+frame --> {  | is_frame: boolean, Construct: () -> void }
+frame.Construct --> () -> void
+frame.Construct() --> void
+function Application() {
+  this.AddFrame = function(fr) {
+  console.assert(fr.is_frame);
+  fr.Construct();
+};
+}
+ --> ctor<0>[null]() -> {  | AddFrame: ({  | is_frame: boolean, Construct: () -> void }) -> void }
+function Calculator() {
+  this.OnAppInitializing = function() {
+  var frame = new Frame();
+  frame.Construct();
+  this.AddFrame(frame);
+};
+}
+ --> ctor<0>[{  | AddFrame: ({  | is_frame: boolean, Construct: () -> void }) -> void }]() -> { AddFrame: ({  | is_frame: boolean, Construct: () -> void }) -> void | OnAppInitializing: []() -> void }
+function Frame() {
+  this.is_frame = true;
+  this.Construct = function() {
+  console.log("Constructing... woo!");
+};
+}
+ --> ctor<0>[null]() -> {  | is_frame: boolean, Construct: () -> void }
+function() {
+  console.log("Constructing... woo!");
+} --> () -> void
+function() {
+  var frame = new Frame();
+  frame.Construct();
+  this.AddFrame(frame);
+} --> [{ AddFrame: ({  | is_frame: boolean, Construct: () -> void }) -> void |  }]() -> void
+function(fr) {
+  console.assert(fr.is_frame);
+  fr.Construct();
+} --> ({  | is_frame: boolean, Construct: () -> void }) -> void
+new Application() --> {  | AddFrame: ({  | is_frame: boolean, Construct: () -> void }) -> void }
+new Frame() --> {  | is_frame: boolean, Construct: () -> void }
+this --> {  | AddFrame: ({  | is_frame: boolean, Construct: () -> void }) -> void }
+this --> {  | is_frame: boolean, Construct: () -> void }
+this --> {  | is_frame: boolean, Construct: () -> void }
+this --> { AddFrame: ({  | is_frame: boolean, Construct: () -> void }) -> void |  }
+this --> { AddFrame: ({  | is_frame: boolean, Construct: () -> void }) -> void | OnAppInitializing: []() -> void }
+this.AddFrame --> ({  | is_frame: boolean, Construct: () -> void }) -> void
+this.AddFrame --> ({  | is_frame: boolean, Construct: () -> void }) -> void
+this.AddFrame = function(fr) {
+  console.assert(fr.is_frame);
+  fr.Construct();
+} --> ({  | is_frame: boolean, Construct: () -> void }) -> void
+this.AddFrame(frame) --> void
+this.Construct --> () -> void
+this.Construct = function() {
+  console.log("Constructing... woo!");
+} --> () -> void
+this.OnAppInitializing --> []() -> void
+this.OnAppInitializing = function() {
+  var frame = new Frame();
+  frame.Construct();
+  this.AddFrame(frame);
+} --> []() -> void
+this.is_frame --> boolean
+this.is_frame = true --> boolean
+true --> boolean

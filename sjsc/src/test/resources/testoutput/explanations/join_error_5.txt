@@ -1,0 +1,3 @@
+Error on line 6: sum assigned to z
+    Note: type is (integer,integer) -> integer
+    Note: expected (integer) -> integer

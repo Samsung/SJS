@@ -1,0 +1,33 @@
+"" --> string
+42 --> integer
+T1 --> ctor<0>[null]() -> {  | a: integer }
+T1 --> ctor<0>[null]() -> {  | a: integer }
+T2 --> ctor<0>[{  | a: integer }]() -> { a: integer | b: boolean }
+T2 --> ctor<0>[{  | a: integer }]() -> { a: integer | b: boolean }
+T2 --> ctor<0>[{  | a: integer }]() -> { a: integer | b: boolean }
+T2.prototype --> {  | a: integer }
+T2.prototype = new T1() --> {  | a: integer }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log(t2.a + "") --> void
+false --> boolean
+function T1() {
+  this.a = 42;
+}
+ --> ctor<0>[null]() -> {  | a: integer }
+function T2() {
+  this.b = false;
+}
+ --> ctor<0>[{  | a: integer }]() -> { a: integer | b: boolean }
+new T1() --> {  | a: integer }
+new T2() --> { a: integer | b: boolean }
+t2 --> { a: integer | b: boolean }
+t2 --> { a: integer | b: boolean }
+t2.a + "" --> string
+t2.a --> integer
+this --> {  | a: integer }
+this --> { a: integer | b: boolean }
+this.a --> integer
+this.a = 42 --> integer
+this.b --> boolean
+this.b = false --> boolean

@@ -1,0 +1,3 @@
+{a: 3, p: function f() {
+  return this.a;
+}} (line 1) --> [MRO=[a], MRW=[]]

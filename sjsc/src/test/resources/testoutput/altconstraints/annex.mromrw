@@ -1,0 +1,485 @@
+new Annex() (line 874) --> [MRO=[AddFrame], MRW=[]]
+new AnnexActionEventListener(this) (line 765) --> [MRO=[annexForm], MRW=[]]
+new AnnexForm() (line 859) --> [MRO=[AddAnnexPanel, Construct, GetControl, ael, button_names, showBoard], MRW=[labelPrint]]
+this (line 737) --> [MRO=[annexForm], MRW=[]]
+this (line 739) --> [MRO=[annexForm], MRW=[]]
+this (line 763) --> [MRO=[AddAnnexPanel, Construct, GetControl, ael, button_names, showBoard], MRW=[labelPrint]]
+this (line 765) --> [MRO=[AddAnnexPanel, Construct, GetControl, ael, button_names, showBoard], MRW=[labelPrint]]
+this (line 765) --> [MRO=[AddAnnexPanel, Construct, GetControl, ael, button_names, showBoard], MRW=[labelPrint]]
+this (line 770) --> [MRO=[AddAnnexPanel, Construct, GetControl, ael, button_names, showBoard], MRW=[labelPrint]]
+this (line 780) --> [MRO=[AddAnnexPanel, Construct, GetControl, ael, button_names, showBoard], MRW=[labelPrint]]
+this (line 788) --> [MRO=[AddAnnexPanel, Construct, GetControl, ael, button_names, showBoard], MRW=[labelPrint]]
+this (line 793) --> [MRO=[AddAnnexPanel, Construct, GetControl, ael, button_names, showBoard], MRW=[labelPrint]]
+this (line 798) --> [MRO=[AddAnnexPanel, Construct, GetControl, ael, button_names, showBoard], MRW=[labelPrint]]
+this (line 809) --> [MRO=[AddAnnexPanel, Construct, GetControl, ael, button_names, showBoard], MRW=[labelPrint]]
+this (line 833) --> [MRO=[AddAnnexPanel, Construct, GetControl, ael, button_names, showBoard], MRW=[labelPrint]]
+this (line 855) --> [MRO=[AddFrame], MRW=[]]
+this (line 865) --> [MRO=[AddFrame], MRW=[]]
+{board: [[], [], [], [], [], [], [], []], bounder: 8, boardview: 'board', messageview: 'message', result: 'result', isEnd: false, endMessage: '', isUserTurn: true, isDrawing: false, isLock: false, isInit: false, isConfigure: false, isResult: false, level: 3, hasHelp: false, hasInit: false, playerNum: 1, currentColor: 'black', step: 4, point: null, directs: [[1, 0], [1, 1], [1, -1], [0, 1], [0, -1], [-1, 0], [-1, 1], [-1, -1]], heap: new Heap(), possible: null, pendingDrawMessage: 0, status: {bc: 0, wc: 0, result: "Unknown"}, init: function _init(play) {
+  this.playerNum = play || 1;
+  var i;
+  var j;
+  for (i = 0; i < this.bounder; i++) 
+    {
+      for (j = 0; j < this.bounder; j++) 
+        {
+          this.board[i][j] = 'board';
+        }
+    }
+  this.board[3][3] = 'black';
+  this.board[4][4] = 'black';
+  this.board[3][4] = 'white';
+  this.board[4][3] = 'white';
+  this.isUserTurn = true;
+  this.isLock = false;
+  this.isConfigure = false;
+  this.isResult = false;
+  this.currentColor = 'white';
+  this.step = 4;
+  this.level = 3;
+  this.point = [];
+  this.heap = new Heap();
+  this.isInit = true;
+  this.endConfigure();
+  this.drawMessage();
+}, endConfigure: function() {
+  this.isConfigure = false;
+}, startOver: function() {
+  this.init(this.playerNum);
+  this.endConfigure();
+}, actionAtPoint: function(place, color) {
+  console.log("DEBUG: actionAtPoint" + place[0] + place[1] + color);
+  var path = [];
+  this.heap = this.heap.nextLevel[mString(place[0]) + mString(place[1])];
+  if (!this.heap) 
+  this.heap = new Heap();
+  if (this.heap.value > -1 && this.heap.color == color) 
+  {
+    path = this.heap.path;
+  } else {
+    var act = this.getRevertPath(place, color, null);
+    path = act.path;
+    var heap = new Heap();
+    heap.color = color;
+    heap.path = path;
+    heap.place = place;
+    this.heap = heap;
+  }
+  this.step += 1;
+  if (this.step >= 50) 
+  this.level += 1; else if (this.step >= 53) 
+  this.level += 1; else if (this.step >= 55) 
+  this.level += 2;
+  this.setPoint(place, color);
+  this.drawPath(path, color);
+}, setPoint: function(place, color) {
+  this.board[place[0]][place[1]] = color;
+  this.drawPoint(place, color);
+}, drawPoint: function(place, color) {
+}, drawPath: function(path, color) {
+  this.isDrawing = true;
+  var n;
+  for (n = 0; n < path.length; n++) 
+    {
+      this.board[path[n][0]][path[n][1]] = color;
+      this.drawPoint([path[n][0], path[n][1]], color);
+    }
+  this.pendingDrawMessage = this.pendingDrawMessage + 1;
+}, drawMessage: function() {
+  console.log("DEBUG: drawMessage " + this.playerNum + this.currentColor + (this.isUserTurn ? "true" : "false"));
+  var bc = 0;
+  var wc = 0;
+  if (this.heap.value > -1) 
+  {
+    bc = this.heap.colorCount['black'];
+    wc = this.heap.colorCount['white'];
+  } else {
+    var count = {'black': 0, 'white': 0};
+    var i, j;
+    for (i = 0; i < this.bounder; i++) 
+      {
+        for (j = 0; j < this.bounder; j++) 
+          {
+            count[this.board[i][j]] += 1;
+          }
+      }
+    bc = count['black'];
+    wc = count['white'];
+  }
+  var bpossible;
+  var wpossible;
+  this.status = {bc: bc, wc: wc, result: "Unknown"};
+  if (this.heap.value > -1 && this.heap.color == this.currentColor) 
+  {
+    if (this.heap.color == 'white') 
+    {
+      bpossible = this.heap.upossible;
+      wpossible = this.heap.cpossible;
+    } else {
+      wpossible = this.heap.upossible;
+      bpossible = this.heap.cpossible;
+    }
+  } else {
+    wpossible = this.possiblePlace('white', null);
+    bpossible = this.possiblePlace('black', null);
+  }
+  this.isEnd = ((bpossible.length == 0 && wpossible.length == 0) || (this.step == 64));
+  if (!this.isEnd) 
+  {
+    var tpossible = bpossible;
+    if (this.currentColor == 'black') 
+    {
+      if (wpossible.length > 0) 
+      {
+        this.currentColor = 'white';
+        tpossible = wpossible;
+      }
+    } else {
+      if (bpossible.length > 0) 
+      {
+        this.currentColor = 'black';
+      } else {
+        tpossible = wpossible;
+      }
+    }
+    this.possible = tpossible;
+    if (this.playerNum == 1 && this.currentColor == 'white') 
+    {
+      this.isUserTurn = false;
+      this.computerTurn();
+    } else {
+      this.isUserTurn = true;
+    }
+  } else {
+    if (bc > wc) 
+    {
+      console.log("Player 1 wins");
+      this.status.result = "Player 1 wins";
+    } else if (bc == wc) 
+    {
+      console.log("Draw");
+      this.status.result = "Draw";
+    } else {
+      console.log("Computer wins");
+      this.status.result = "Computer wins";
+    }
+    this.isLock = true;
+    this.isResult = true;
+  }
+  console.log("DEBUG: drawMessage exiting " + this.playerNum + this.currentColor + (this.isUserTurn ? "true" : "false"));
+  this.isDrawing = false;
+}, closeResult: function() {
+  this.isResult = false;
+}, displayBoard: function() {
+  console.log("DEBUG: displayBoard");
+  var i, j;
+  for (i = 0; i < this.bounder; i++) 
+    {
+      var line = "";
+      for (j = 0; j < this.bounder; j++) 
+        {
+          var c = "_";
+          if (this.board[i][j] === 'black') 
+          c = "B"; else if (this.board[i][j] === 'white') 
+          c = "W";
+          line = line + c;
+        }
+      console.log(line);
+    }
+  console.log("BC = " + this.status.bc + ", WC = " + this.status.wc + ", Result = " + this.status.result);
+  console.log("");
+}, click: function(i, j) {
+  console.log("DEBUG: click " + i + j + " " + (this.isUserTurn ? "true" : "false"));
+  if (this.board[i][j] === 'board' && !this.isEnd && this.isUserTurn && !this.isDrawing && !this.isLock && !this.isConfigure) 
+  {
+    if (this.canRevert([i, j], this.currentColor, null)) 
+    {
+      this.actionAtPoint([i, j], this.currentColor);
+      if (this.playerNum == 1) 
+      this.isUserTurn = false;
+    } else {
+    }
+  } else if ((this.isConfigure && !this.isEnd && !this.isDrawing && !this.isLock) || (this.isConfigure && this.isEnd && !this.isDrawing && this.isLock && !this.isResult)) 
+  {
+    this.endConfigure();
+  }
+  while (this.pendingDrawMessage > 0) 
+    {
+      this.pendingDrawMessage = this.pendingDrawMessage - 1;
+      this.drawMessage();
+    }
+}, computerTurn: function() {
+  console.log("DEBUG: computerTurn");
+  var possible;
+  if (this.heap.value > -1) 
+  {
+    if (this.heap.color == 'white') 
+    {
+      possible = this.heap.cpossible;
+    } else {
+      possible = this.heap.upossible;
+    }
+  } else {
+    possible = this.possiblePlace('white', null);
+  }
+  var place = this.bestPlace(possible);
+  if (possible.length > 0 && place.length > 0) 
+  {
+    this.actionAtPoint(place, 'white');
+  }
+}, isContain: function(place, _array) {
+  var heat = _array || [];
+  var i = 0;
+  for (i = 0; i < heat.length; i++) 
+    {
+      if (heat[i][0] == place[0] && heat[i][1] == place[1]) 
+      {
+        return true;
+      }
+    }
+  return false;
+}, possiblePlace: function(color, _board) {
+  var ret = [];
+  var tmp = {};
+  var revColor = ((color == 'white') ? 'black' : 'white');
+  var board = _board ? _board : this.board;
+  var i, j, n;
+  for (i = 0; i < this.bounder; i++) 
+    {
+      for (j = 0; j < this.bounder; j++) 
+        {
+          if (board[i][j] === revColor) 
+          {
+            for (n = 0; n < this.directs.length; n++) 
+              {
+                var ni = i + this.directs[n][0];
+                var nj = j + this.directs[n][1];
+                if (ni >= 0 && ni < this.bounder && nj >= 0 && nj < this.bounder && board[ni][nj] === 'board') 
+                {
+                  if (this.canRevert([ni, nj], color, board) && !this.isContain([ni, nj], ret)) 
+                  {
+                    ret.push([ni, nj]);
+                  }
+                }
+              }
+          }
+        }
+    }
+  return ret;
+}, canRevert: function(place, color, _board) {
+  var i = place[0];
+  var j = place[1];
+  var revColor = ((color == 'white') ? 'black' : 'white');
+  var board = _board ? _board : this.board;
+  var n;
+  for (n = 0; n < this.directs.length; n++) 
+    {
+      var di = this.directs[n][0];
+      var dj = this.directs[n][1];
+      var ni = i + di;
+      var nj = j + dj;
+      while (ni >= 0 && ni < this.bounder && nj >= 0 && nj < this.bounder && board[ni][nj] === revColor) 
+        {
+          ni += di;
+          nj += dj;
+          if (ni >= 0 && ni < this.bounder && nj >= 0 && nj < this.bounder && board[ni][nj] === color) 
+          {
+            return true;
+          }
+        }
+    }
+  return false;
+}, getClone: function(obj) {
+  var ret = [[], [], [], [], [], [], [], []];
+  var i, j;
+  for (i = 0; i < this.bounder; i++) 
+    {
+      for (j = 0; j < this.bounder; j++) 
+        {
+          ret[i][j] = obj[i][j];
+        }
+    }
+  return ret;
+}, getRevertPath: function(place, color, _board) {
+  var i = place[0];
+  var j = place[1];
+  var revColor = ((color == 'white') ? 'black' : 'white');
+  var board = _board ? _board : this.board;
+  var path = [];
+  var n;
+  for (n = 0; n < this.directs.length; n++) 
+    {
+      var ni = i + this.directs[n][0];
+      var nj = j + this.directs[n][1];
+      var tpath = [];
+      while (ni >= 0 && ni < this.bounder && nj >= 0 && nj < this.bounder && board[ni][nj] === revColor) 
+        {
+          tpath.push([ni, nj]);
+          ni += this.directs[n][0];
+          nj += this.directs[n][1];
+          if (ni >= 0 && ni < this.bounder && nj >= 0 && nj < this.bounder && board[ni][nj] === color) 
+          {
+            var tmp = [0, 0];
+            while (tpath.length > 0) 
+              {
+                tmp = tpath.pop();
+                path.push(tmp);
+              }
+          }
+        }
+    }
+  return {place: place, path: path, color: color};
+}, doRevert: function(action, _board) {
+  var color = action.color;
+  var board = _board ? _board : this.board;
+  var path = action.path;
+  var p;
+  for (p = 0; p < path.length; p++) 
+    {
+      board[path[p][0]][path[p][1]] = color;
+    }
+  return board;
+}, getValue: function(place, _board) {
+  var ret = 0;
+  var board = _board ? _board : this.board;
+  var i = place[0];
+  var j = place[1];
+  var mtable = [[100, -50, 40, 30, 30, 40, -50, 100], [-50, -30, 5, 1, 1, 5, -30, -50], [40, 5, 20, 10, 10, 20, 5, 40], [30, 1, 10, 0, 0, 10, 1, 30], [30, 1, 10, 0, 0, 10, 1, 30], [40, 5, 20, 10, 10, 20, 5, 40], [-50, -30, 5, 1, 1, 5, -30, -50], [100, -50, 40, 30, 30, 40, -50, 100]];
+  return mtable[i][j];
+}, evaluate: function(place, _color, _board, _level, _heap) {
+  var ret = -100000;
+  var level = _level ? _level : this.level;
+  var heap = _heap ? _heap : this.heap;
+  if (!heap.nextLevel[mString(place[0]) + mString(place[1])]) 
+  {
+    heap.nextLevel[mString(place[0]) + mString(place[1])] = new Heap();
+  }
+  heap = heap.nextLevel[mString(place[0]) + mString(place[1])];
+  var toEndLevel = 64 - this.step;
+  level = (level > toEndLevel ? toEndLevel : level);
+  var nextValue = 0.0;
+  var color = _color || 'white';
+  var board = _board ? _board : this.board;
+  board = this.getClone(board);
+  var revColor = ((color == 'white') ? 'black' : 'white');
+  var sym = ((color == 'white') ? 1 : -1);
+  board[place[0]][place[1]] = color;
+  var path;
+  var cp;
+  var up;
+  if (heap.value > -1) 
+  {
+    path = heap.path;
+    ret = heap.value;
+    cp = heap.cpossible;
+    up = heap.upossible;
+    board = this.doRevert(heap, board);
+  } else {
+    var act = this.getRevertPath(place, color, board);
+    heap.path = act.path;
+    heap.color = color;
+    heap.place = place;
+    board = this.doRevert(heap, board);
+    cp = this.possiblePlace(color, board);
+    up = this.possiblePlace(revColor, board);
+    var cv = 0;
+    var uv = 0;
+    var cc = 0;
+    var uc = 0;
+    var i, j;
+    for (i = 0; i < this.bounder; i++) 
+      {
+        for (j = 0; j < this.bounder; j++) 
+          {
+            if (board[i][j] === color) 
+            {
+              cv += this.getValue([i, j], board);
+              cc++;
+            } else if (board[i][j] === revColor) 
+            {
+              uv += this.getValue([i, j], board);
+              uc++;
+            }
+          }
+      }
+    ret = (cp.length - up.length) * 10;
+    ret += (cv - uv) * 2;
+    if (up.length == 0 && cp.length > 0) 
+    ret = 100000;
+    heap.value = ret;
+    heap.nextLevel = {};
+    heap.cpossible = cp;
+    heap.upossible = up;
+    heap.colorCount[color] = cc;
+    heap.colorCount[revColor] = uc;
+  }
+  if (level > 1 && (up.length > 0 || cp.length > 0)) 
+  {
+    if (up.length == 0) 
+    {
+      up = cp;
+      revColor = color;
+    }
+    up = this.getBestPlaceSet(up);
+    var p;
+    for (p = 0; p < up.length; p++) 
+      {
+        nextValue = nextValue + this.evaluate(up[p], revColor, board, level - 1, heap);
+      }
+    if (up.length > 0) 
+    {
+      nextValue = nextValue / up.length;
+      ret = Math.round(ret * 0.5 + nextValue * 0.5);
+    }
+  }
+  return ret * sym;
+}, getBestPlaceSet: function(possible) {
+  var best = [];
+  var middle = [];
+  var ret = [];
+  var i;
+  for (i = 0; i < possible.length; i++) 
+    {
+      var t = this.getValue(possible[i], null);
+      if (t == 100) 
+      {
+        best.push(possible[i]);
+      } else if (t >= 0) 
+      {
+        middle.push(possible[i]);
+      }
+    }
+  if (best.length > 0) 
+  {
+    ret = best;
+  } else if (middle.length > 0) 
+  {
+    ret = middle;
+  } else {
+    ret = possible;
+  }
+  return ret;
+}, bestPlace: function(possible) {
+  if (possible.length == 0) 
+  console.log('Error: No possible places?!!!');
+  possible = this.getBestPlaceSet(possible);
+  var ret = [];
+  if (possible.length > 0) 
+  {
+    ret = possible[0];
+    var p;
+    var value = this.evaluate(ret, null, null, 0, null);
+    for (p = 1; p < possible.length; p++) 
+      {
+        var v = this.evaluate(possible[p], null, null, 0, null);
+        if (v > value) 
+        {
+          value = v;
+          ret = possible[p];
+        }
+      }
+  } else {
+    console.log('Error: No Setting place for Computer');
+  }
+  return ret;
+}} (line 31) --> [MRO=[actionAtPoint, bestPlace, board, bounder, canRevert, computerTurn, directs, doRevert, drawMessage, drawPath, drawPoint, endConfigure, evaluate, getBestPlaceSet, getClone, getRevertPath, getValue, init, isContain, possiblePlace, setPoint], MRW=[currentColor, heap, isConfigure, isDrawing, isEnd, isInit, isLock, isResult, isUserTurn, level, pendingDrawMessage, playerNum, point, possible, status, step]]

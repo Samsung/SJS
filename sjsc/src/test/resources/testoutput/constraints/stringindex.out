@@ -1,0 +1,15 @@
+CheckArity(ret(|printString|))
+Elem(|x|)=|x[0]|
+MakeConcreteConstraint [term=|"abracadabra"|]
+MakeConcreteConstraint [term=|x[0]|]
+MakeConcreteConstraint [term=|y|]
+|"abracadabra"|<:|x|
+|"abracadabra"|=string
+|0|=Key(|x|)
+|0|=integer
+|printString(y)|=ret(|printString|)
+|printString|=|printString|
+|x[0]|<:|y|
+|x|=|x|
+|y|<:param(|printString|,0)
+|y|=|y|

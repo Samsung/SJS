@@ -1,0 +1,3 @@
+Error on line 3: for-in loop can only iterate over map objects; x is not a map
+    Note: type is {  | a: integer, b: boolean }
+    Note: expected Map<X0>

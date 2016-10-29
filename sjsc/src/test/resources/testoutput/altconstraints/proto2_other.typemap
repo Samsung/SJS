@@ -1,0 +1,127 @@
+"d.x =" --> string
+1 --> integer
+19 --> integer
+19 --> integer
+2 --> integer
+20 --> integer
+3 --> integer
+C --> ctor<0>[{  | x: integer, m: []() -> integer, n: []() -> integer }](integer) -> { m: []() -> integer | x: integer, n: []() -> integer }
+C --> ctor<0>[{  | x: integer, m: []() -> integer, n: []() -> integer }](integer) -> { m: []() -> integer | x: integer, n: []() -> integer }
+C --> ctor<0>[{  | x: integer, m: []() -> integer, n: []() -> integer }](integer) -> { m: []() -> integer | x: integer, n: []() -> integer }
+C --> ctor<0>[{  | x: integer, m: []() -> integer, n: []() -> integer }](integer) -> { m: []() -> integer | x: integer, n: []() -> integer }
+C --> ctor<0>[{  | x: integer, m: []() -> integer, n: []() -> integer }](integer) -> { m: []() -> integer | x: integer, n: []() -> integer }
+C.prototype --> {  | x: integer, m: []() -> integer, n: []() -> integer }
+C.prototype --> {  | x: integer, m: []() -> integer, n: []() -> integer }
+C.prototype = {x: 3, m: function() {
+  return this.x;
+}, n: function() {
+  return this.x * 2;
+}} --> {  | x: integer, m: []() -> integer, n: []() -> integer }
+C.prototype.m --> []() -> integer
+C.prototype.m() --> integer
+C.prototype.m().toString --> []() -> string INTERSECT [](integer) -> string
+C.prototype.m().toString() --> string
+D --> ctor<0>[{ m: []() -> integer | x: integer, n: []() -> integer }]() -> { n: []() -> integer, m: []() -> integer | x: integer }
+D --> ctor<0>[{ m: []() -> integer | x: integer, n: []() -> integer }]() -> { n: []() -> integer, m: []() -> integer | x: integer }
+D --> ctor<0>[{ m: []() -> integer | x: integer, n: []() -> integer }]() -> { n: []() -> integer, m: []() -> integer | x: integer }
+D.prototype --> { m: []() -> integer | x: integer, n: []() -> integer }
+D.prototype = new C(19) --> { m: []() -> integer | x: integer, n: []() -> integer }
+c --> { m: []() -> integer | x: integer, n: []() -> integer }
+c --> { m: []() -> integer | x: integer, n: []() -> integer }
+c.m --> []() -> integer
+c.m() --> integer
+c.m().toString --> []() -> string INTERSECT [](integer) -> string
+c.m().toString() --> string
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log("d.x =") --> void
+console.log(s) --> void
+console.log(s) --> void
+console.log(s) --> void
+console.log(s) --> void
+console.log(string_of_int(d.x)) --> void
+d --> { n: []() -> integer, m: []() -> integer | x: integer }
+d --> { n: []() -> integer, m: []() -> integer | x: integer }
+d --> { n: []() -> integer, m: []() -> integer | x: integer }
+d --> { n: []() -> integer, m: []() -> integer | x: integer }
+d.m --> []() -> integer
+d.m() --> integer
+d.m().toString --> []() -> string INTERSECT [](integer) -> string
+d.m().toString() --> string
+d.n --> []() -> integer
+d.n() --> integer
+d.n().toString --> []() -> string INTERSECT [](integer) -> string
+d.n().toString() --> string
+d.x --> integer
+function C(v) {
+  this.x = v;
+  this.n = function() {
+  return this.x * 20;
+};
+}
+ --> ctor<0>[{  | x: integer, m: []() -> integer, n: []() -> integer }](integer) -> { m: []() -> integer | x: integer, n: []() -> integer }
+function D() {
+  this.x = 1;
+}
+ --> ctor<0>[{ m: []() -> integer | x: integer, n: []() -> integer }]() -> { n: []() -> integer, m: []() -> integer | x: integer }
+function() {
+  return this.x * 20;
+} --> [{ x: integer |  }]() -> integer
+function() {
+  return this.x * 2;
+} --> [{ x: integer |  }]() -> integer
+function() {
+  return this.x;
+} --> [{ x: integer |  }]() -> integer
+new C(19) --> { m: []() -> integer | x: integer, n: []() -> integer }
+new C(19) --> { m: []() -> integer | x: integer, n: []() -> integer }
+new D() --> { n: []() -> integer, m: []() -> integer | x: integer }
+s --> string
+s --> string
+s --> string
+s --> string
+s --> string
+s --> string
+s --> string
+s --> string
+s = c.m().toString() --> string
+s = d.m().toString() --> string
+s = d.n().toString() --> string
+string_of_int --> (integer) -> string
+string_of_int(d.x) --> string
+this --> { m: []() -> integer | x: integer, n: []() -> integer }
+this --> { m: []() -> integer | x: integer, n: []() -> integer }
+this --> { n: []() -> integer, m: []() -> integer | x: integer }
+this --> { x: integer |  }
+this --> { x: integer |  }
+this --> { x: integer |  }
+this.n --> []() -> integer
+this.n = function() {
+  return this.x * 20;
+} --> []() -> integer
+this.x * 2 --> integer
+this.x * 20 --> integer
+this.x --> integer
+this.x --> integer
+this.x --> integer
+this.x --> integer
+this.x --> integer
+this.x = 1 --> integer
+this.x = v --> integer
+v --> integer
+v --> integer
+{x: 3, m: function() {
+  return this.x;
+}, n: function() {
+  return this.x * 2;
+}} --> {  | x: integer, m: []() -> integer, n: []() -> integer }

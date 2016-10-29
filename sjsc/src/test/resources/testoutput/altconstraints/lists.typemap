@@ -1,0 +1,116 @@
+(tmp = Li2.shift()) --> integer
+(tmp = Li3.pop()) --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+1 --> integer
+10000 --> integer
+17 --> integer
+Array --> () -> Array<integer> INTERSECT (integer) -> Array<integer> INTERSECT (integer,integer) -> Array<integer>
+Array --> () -> Array<integer> INTERSECT (integer) -> Array<integer> INTERSECT (integer,integer) -> Array<integer>
+Array() --> Array<integer>
+Array() --> Array<integer>
+Li1 --> Array<integer>
+Li1 --> Array<integer>
+Li1 --> Array<integer>
+Li1 --> Array<integer>
+Li1 --> Array<integer>
+Li1 --> Array<integer>
+Li1 --> Array<integer>
+Li1 --> Array<integer>
+Li1 = Array() --> Array<integer>
+Li1.concat --> []() -> Array<integer>
+Li1.concat() --> Array<integer>
+Li1.length --> integer
+Li1.push --> [](integer) -> integer
+Li1.push(tmp) --> integer
+Li1.reverse --> []() -> Array<integer>
+Li1.reverse() --> Array<integer>
+Li1[0] != SIZE --> boolean
+Li1[0] --> integer
+Li1[tmp] != Li2[tmp] --> boolean
+Li1[tmp] --> integer
+Li2 --> Array<integer>
+Li2 --> Array<integer>
+Li2 --> Array<integer>
+Li2 --> Array<integer>
+Li2 --> Array<integer>
+Li2 = Li1.concat() --> Array<integer>
+Li2.push --> [](integer) -> integer
+Li2.push(tmp) --> integer
+Li2.shift --> []() -> integer
+Li2.shift() --> integer
+Li2[tmp] --> integer
+Li3 --> Array<integer>
+Li3 --> Array<integer>
+Li3 --> Array<integer>
+Li3 --> Array<integer>
+Li3 = Array() --> Array<integer>
+Li3.pop --> []() -> integer
+Li3.pop() --> integer
+Li3.push --> [](integer) -> integer
+Li3.push(tmp) --> integer
+SIZE --> integer
+SIZE --> integer
+SIZE --> integer
+SIZE --> integer
+function test_lists() {
+  var Li1, Li2, Li3;
+  var tmp;
+  Li1 = Array();
+  for (tmp = 1; tmp <= SIZE; tmp++) 
+    Li1.push(tmp);
+  Li2 = Li1.concat();
+  Li3 = Array();
+  while ((tmp = Li2.shift())) 
+    {
+      Li3.push(tmp);
+    }
+  while ((tmp = Li3.pop())) 
+    {
+      Li2.push(tmp);
+    }
+  Li1.reverse();
+  if (Li1[0] != SIZE) 
+  return 0;
+  for (tmp = 0; tmp < SIZE; tmp++) 
+    if (Li1[tmp] != Li2[tmp]) 
+    return 0;
+  return Li1.length;
+}
+ --> () -> integer
+n --> integer
+n --> integer
+n-- --> integer
+printInt --> (integer) -> void
+printInt(result) --> void
+result --> integer
+result --> integer
+result --> integer
+result = test_lists() --> integer
+test_lists --> () -> integer
+test_lists --> () -> integer
+test_lists() --> integer
+tmp --> integer
+tmp --> integer
+tmp --> integer
+tmp --> integer
+tmp --> integer
+tmp --> integer
+tmp --> integer
+tmp --> integer
+tmp --> integer
+tmp --> integer
+tmp --> integer
+tmp --> integer
+tmp --> integer
+tmp --> integer
+tmp < SIZE --> boolean
+tmp <= SIZE --> boolean
+tmp = 0 --> integer
+tmp = 1 --> integer
+tmp = Li2.shift() --> integer
+tmp = Li3.pop() --> integer
+tmp++ --> integer
+tmp++ --> integer

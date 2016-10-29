@@ -1,0 +1,19 @@
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|4|]
+MakeConcreteConstraint [term=|[1]|]
+MakeConcreteConstraint [term=|{x: 2, y: 4, z: [1]}|]
+TP([1])=Elem(ret(prop(|[1]|,concat)))
+TP([1])=Elem(ret(prop(|[1]|,reverse)))
+TP([1])=Elem(|[1]|)
+TP([1])=param(prop(|[1]|,push),0)
+TP([1])=ret(prop(|[1]|,pop))
+TP([1])=ret(prop(|[1]|,shift))
+|1|<:Elem(|[1]|)
+|1|=integer
+|2|<:prop(|{x: 2, y: 4, z: [1]}|,x)
+|2|=integer
+|4|<:prop(|{x: 2, y: 4, z: [1]}|,y)
+|4|=integer
+|[1]|<:prop(|{x: 2, y: 4, z: [1]}|,z)
+|{x: 2, y: 4, z: [1]}|<:|a|

@@ -1,0 +1,51 @@
+CheckArity(ret(|(function() {
+  function foo(o) {
+    return o;
+  }
+  return {add: foo};
+})|))
+CheckArity(ret(|(functions.add)|))
+MakeConcreteConstraint [term=|(function() {
+  function foo(o) {
+    return o;
+  }
+  return {add: foo};
+})()|]
+MakeConcreteConstraint [term=|4|]
+MakeConcreteConstraint [term=|foo|]
+param(|function foo|,0)=|o|
+|(function() {
+  function foo(o) {
+    return o;
+  }
+  return {add: foo};
+})()|<:|functions|
+|(function() {
+  function foo(o) {
+    return o;
+  }
+  return {add: foo};
+})()|=ret(|(function() {
+  function foo(o) {
+    return o;
+  }
+  return {add: foo};
+})|)
+|(function() {
+  function foo(o) {
+    return o;
+  }
+  return {add: foo};
+})|=|function <anonymous>|
+|(functions.add)(4)|=ret(|(functions.add)|)
+|(functions.add)|=|functions.add|
+|4|<:param(|(functions.add)|,0)
+|4|=integer
+|foo|<:prop(|{add: foo}|,add)
+|foo|=|foo|
+|function foo|<:|foo|
+|functions.add|=prop(|functions|,add)
+|functions|=|functions|
+|o|<:ret(|function foo|)
+|o|=|o|
+|{add: foo}|<:ret(|function <anonymous>|)

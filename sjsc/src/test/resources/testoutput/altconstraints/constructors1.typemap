@@ -1,0 +1,38 @@
+"asdf" --> string
+3 --> integer
+3 --> integer
+9 --> integer
+9 --> integer
+C --> ctor<0>[null]() -> {  | a: integer, b: string }
+C --> ctor<0>[null]() -> {  | a: integer, b: string }
+assert --> (boolean) -> void
+assert --> (boolean) -> void
+assert(x.a == 3) --> void
+assert(x.a == 9) --> void
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log(x.b) --> void
+function C() {
+  this.a = 3;
+  this.b = "asdf";
+}
+ --> ctor<0>[null]() -> {  | a: integer, b: string }
+new C() --> {  | a: integer, b: string }
+this --> {  | a: integer, b: string }
+this --> {  | a: integer, b: string }
+this.a --> integer
+this.a = 3 --> integer
+this.b --> string
+this.b = "asdf" --> string
+x --> {  | a: integer, b: string }
+x --> {  | a: integer, b: string }
+x --> {  | a: integer, b: string }
+x --> {  | a: integer, b: string }
+x --> {  | a: integer, b: string }
+x.a --> integer
+x.a --> integer
+x.a --> integer
+x.a = 9 --> integer
+x.a == 3 --> boolean
+x.a == 9 --> boolean
+x.b --> string

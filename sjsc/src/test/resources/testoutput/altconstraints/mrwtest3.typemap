@@ -1,0 +1,33 @@
+1 --> integer
+1 --> integer
+3 --> integer
+B --> ctor<0>[{  | a: integer, f: [](integer) -> void }]() -> { f: [](integer) -> void | a: integer }
+B --> ctor<0>[{  | a: integer, f: [](integer) -> void }]() -> { f: [](integer) -> void | a: integer }
+B --> ctor<0>[{  | a: integer, f: [](integer) -> void }]() -> { f: [](integer) -> void | a: integer }
+B.prototype --> {  | a: integer, f: [](integer) -> void }
+B.prototype = {a: 1, f: function(x) {
+  this.a = x;
+}} --> {  | a: integer, f: [](integer) -> void }
+b --> { f: [](integer) -> void | a: integer }
+b --> { f: [](integer) -> void | a: integer }
+b.f --> [](integer) -> void
+b.f(3) --> void
+function B() {
+  this.a = 1;
+}
+ --> ctor<0>[{  | a: integer, f: [](integer) -> void }]() -> { f: [](integer) -> void | a: integer }
+function(x) {
+  this.a = x;
+} --> [{  | a: integer }](integer) -> void
+new B() --> { f: [](integer) -> void | a: integer }
+this --> {  | a: integer }
+this --> { f: [](integer) -> void | a: integer }
+this.a --> integer
+this.a --> integer
+this.a = 1 --> integer
+this.a = x --> integer
+x --> integer
+x --> integer
+{a: 1, f: function(x) {
+  this.a = x;
+}} --> {  | a: integer, f: [](integer) -> void }

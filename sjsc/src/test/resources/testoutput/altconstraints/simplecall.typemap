@@ -1,0 +1,10 @@
+17 --> integer
+foo --> (integer) -> integer
+foo --> (integer) -> integer
+foo(17) --> integer
+function foo(v) {
+  return v;
+}
+ --> (integer) -> integer
+v --> integer
+v --> integer

@@ -1,0 +1,19 @@
+"" --> string
+0 --> integer
+0 --> integer
+1 --> integer
+2 --> integer
+[{foo: 1}] --> Array<{  | foo: integer }>
+arr --> Array<{  | foo: integer }>
+arr --> Array<{  | foo: integer }>
+arr --> Array<{  | foo: integer }>
+arr[0] --> {  | foo: integer }
+arr[0] --> {  | foo: integer }
+arr[0].foo + "" --> string
+arr[0].foo --> integer
+arr[0].foo --> integer
+arr[0].foo = 2 --> integer
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log(arr[0].foo + "") --> void
+{foo: 1} --> {  | foo: integer }

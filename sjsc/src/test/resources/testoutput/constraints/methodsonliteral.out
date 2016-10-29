@@ -1,0 +1,61 @@
+CheckArity(ret(|o.getX|))
+CheckArity(ret(|o.setX|))
+CheckArity(ret(|printInt|))
+MakeConcreteConstraint [term=|19|]
+MakeConcreteConstraint [term=|3|]
+MakeConcreteConstraint [term=|method <anonymous>|]
+MakeConcreteConstraint [term=|method <anonymous>|]
+MakeConcreteConstraint [term=|o.getX()|]
+MakeConcreteConstraint [term=|o|]
+MakeConcreteConstraint [term=|o|]
+MakeConcreteConstraint [term=|y|]
+MakeConcreteConstraint [term=|{x: 3, setX: function(y) {
+  this.x = y;
+}, getX: function() {
+  return this.x;
+}}|]
+param(|method <anonymous>|,0)=|y|
+ret(|method <anonymous>|)=void
+ret(|method <anonymous>|)=void
+|19|<:param(|o.setX|,0)
+|19|=integer
+|3|<:prop(|{x: 3, setX: function(y) {
+  this.x = y;
+}, getX: function() {
+  return this.x;
+}}|,x)
+|3|=integer
+|method <anonymous>|<:prop(|{x: 3, setX: function(y) {
+  this.x = y;
+}, getX: function() {
+  return this.x;
+}}|,getX)
+|method <anonymous>|<:prop(|{x: 3, setX: function(y) {
+  this.x = y;
+}, getX: function() {
+  return this.x;
+}}|,setX)
+|o.getX()|<:param(|printInt|,0)
+|o.getX()|=ret(|o.getX|)
+|o.getX|=prop(|o|,getX)
+|o.setX(19)|=ret(|o.setX|)
+|o.setX|=prop(|o|,setX)
+|o|=|o|
+|o|=|o|
+|printInt(o.getX())|=ret(|printInt|)
+|printInt|=|printInt|
+|this.x = y|=prop(|this|,x)
+|this.x|<:ret(|method <anonymous>|)
+|this.x|=prop(|this|,x)
+|this.x|=prop(|this|,x)
+|this|=receiver(|method <anonymous>|)
+|this|=receiver(|method <anonymous>|)
+|this|=|this|
+|this|=|this|
+|y|<:prop(|this|,x)
+|y|=|y|
+|{x: 3, setX: function(y) {
+  this.x = y;
+}, getX: function() {
+  return this.x;
+}}|<:|o|

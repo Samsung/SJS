@@ -1,0 +1,30 @@
+1 --> integer
+1 --> integer
+17 --> integer
+2 --> integer
+2 --> integer
+fib --> (integer) -> integer
+fib --> (integer) -> integer
+fib --> (integer) -> integer
+fib --> (integer) -> integer
+fib(n - 1) --> integer
+fib(n - 2) + fib(n - 1) --> integer
+fib(n - 2) --> integer
+fib(n) --> integer
+function fib(n) {
+  if (n < 2) 
+  return 1;
+  return fib(n - 2) + fib(n - 1);
+}
+ --> (integer) -> integer
+n - 1 --> integer
+n - 2 --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n < 2 --> boolean
+printInt --> (integer) -> void
+printInt(fib(n)) --> void

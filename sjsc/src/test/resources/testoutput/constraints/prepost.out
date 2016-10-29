@@ -1,0 +1,17 @@
+CheckArity(ret(|console.log|))
+MakeConcreteConstraint [term=|"x = " + x|]
+MakeConcreteConstraint [term=|3|]
+MakeConcreteConstraint [term=|console|]
+|"x = " + x|<:param(|console.log|,0)
+|"x = " + x|=op(|"x = "|+|x|)
+|"x = "|=string
+|++x|=op(++|x|)
+|3|<:|x|
+|3|=integer
+|console.log("x = " + x)|=ret(|console.log|)
+|console.log|=prop(|console|,log)
+|console|=|console|
+|x++|=op(|x|++)
+|x|=|x|
+|x|=|x|
+|x|=|x|

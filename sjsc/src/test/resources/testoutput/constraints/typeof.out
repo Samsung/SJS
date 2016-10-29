@@ -1,0 +1,15 @@
+CheckArity(ret(|console.log|))
+MakeConcreteConstraint [term=op(typeof|x|)]
+MakeConcreteConstraint [term=|3.3|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|s|]
+op(typeof|x|)<:|s|
+|3.3|<:|x|
+|3.3|=float
+|console.log(s)|=ret(|console.log|)
+|console.log|=prop(|console|,log)
+|console|=|console|
+|s|<:param(|console.log|,0)
+|s|=|s|
+|typeof x|=op(typeof|x|)
+|x|=|x|

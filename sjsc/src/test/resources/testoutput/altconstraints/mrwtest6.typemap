@@ -1,0 +1,28 @@
+3 --> integer
+C --> ctor<0>[null]() -> {  | a: integer, b: boolean, p: []() -> integer }
+false --> boolean
+function C() {
+  this.a = 3;
+  this.b = false;
+  this.p = function m() {
+  return this.a;
+};
+}
+ --> ctor<0>[null]() -> {  | a: integer, b: boolean, p: []() -> integer }
+function m() {
+  return this.a;
+} --> [{ a: integer |  }]() -> integer
+m --> [{ a: integer |  }]() -> integer
+this --> {  | a: integer, b: boolean, p: []() -> integer }
+this --> {  | a: integer, b: boolean, p: []() -> integer }
+this --> {  | a: integer, b: boolean, p: []() -> integer }
+this --> { a: integer |  }
+this.a --> integer
+this.a --> integer
+this.a = 3 --> integer
+this.b --> boolean
+this.b = false --> boolean
+this.p --> []() -> integer
+this.p = function m() {
+  return this.a;
+} --> []() -> integer

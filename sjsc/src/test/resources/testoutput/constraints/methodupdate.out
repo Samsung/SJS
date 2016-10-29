@@ -1,0 +1,78 @@
+CheckArity(ret(|C|))
+CheckArity(ret(|D|))
+CheckArity(ret(|o1.m1|))
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|10|]
+MakeConcreteConstraint [term=|10|]
+MakeConcreteConstraint [term=|2 * x|]
+MakeConcreteConstraint [term=|3|]
+MakeConcreteConstraint [term=|method <anonymous>|]
+MakeConcreteConstraint [term=|method <anonymous>|]
+MakeConcreteConstraint [term=|new D()|]
+MakeConcreteConstraint [term=|o1|]
+param(|method <anonymous>|,0)=|x|
+param(|method <anonymous>|,0)=|x|
+prototype(|constructor C|)=__proto__(ret(|constructor C|))
+prototype(|constructor D|)=__proto__(ret(|constructor D|))
+ret(|method <anonymous>|)=void
+ret(|method <anonymous>|)=void
+ret(|method <anonymous>|)=void
+ret(|method <anonymous>|)=void
+|0|<:prop(|this|,a)
+|0|=integer
+|10|<:prop(|this|,a)
+|10|<:prop(|this|,a)
+|10|=integer
+|10|=integer
+|2 * x|<:prop(|this|,a)
+|2 * x|=op(|2|*|x|)
+|2|=integer
+|3|<:param(|o1.m1|,0)
+|3|=integer
+|C|<:ctor<0>[X1]() -> X0
+|C|=|C|
+|D.prototype = new C()|=prototype(|D|)
+|D.prototype.m1 = function(x) {
+  this.a = 2 * x;
+}|=prop(|D.prototype|,m1)
+|D.prototype.m1|=prop(|D.prototype|,m1)
+|D.prototype|=prototype(|D|)
+|D.prototype|=prototype(|D|)
+|D|<:ctor<0>[X3]() -> X2
+|D|=|D|
+|D|=|D|
+|D|=|D|
+|constructor C|<:|C|
+|constructor D|<:|D|
+|method <anonymous>|<:prop(|D.prototype|,m1)
+|method <anonymous>|<:prop(|this|,m1)
+|new C()|=prototype(|D|)
+|new C()|=ret(|C|)
+|new D()|<:|o1|
+|new D()|=ret(|D|)
+|o1.m1(3)|=ret(|o1.m1|)
+|o1.m1|=prop(|o1|,m1)
+|o1|=|o1|
+|this.a = 0|=prop(|this|,a)
+|this.a = 10|=prop(|this|,a)
+|this.a = 10|=prop(|this|,a)
+|this.a = 2 * x|=prop(|this|,a)
+|this.a|=prop(|this|,a)
+|this.a|=prop(|this|,a)
+|this.a|=prop(|this|,a)
+|this.a|=prop(|this|,a)
+|this.m1 = function(x) {
+  this.a = 10;
+}|=prop(|this|,m1)
+|this.m1|=prop(|this|,m1)
+|this|=receiver(|method <anonymous>|)
+|this|=receiver(|method <anonymous>|)
+|this|=ret(|constructor C|)
+|this|=ret(|constructor C|)
+|this|=ret(|constructor D|)
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|x|=|x|

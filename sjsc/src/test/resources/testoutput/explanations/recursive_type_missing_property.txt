@@ -1,0 +1,2 @@
+Error on line 5: read of missing property 'y' on x.x.x.x
+    Note: type is {  | x: <<recursive>>, a: integer }

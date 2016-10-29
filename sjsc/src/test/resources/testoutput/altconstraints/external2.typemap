@@ -1,0 +1,18 @@
+"bar" --> string
+"foo" --> string
+0 --> integer
+0 --> integer
+3 --> integer
+3 --> integer
+Array --> () -> Array<integer> INTERSECT (integer) -> Array<integer> INTERSECT (integer,integer) -> Array<integer>
+Array --> () -> Array<string> INTERSECT (integer) -> Array<string> INTERSECT (___,___) -> Array<___>
+a --> Array<integer>
+a --> Array<integer>
+a[0] --> integer
+a[0] = 3 --> integer
+b --> Array<string>
+b --> Array<string>
+b[0] --> string
+c --> string
+new Array("foo", "bar") --> Array<string>
+new Array(3) --> Array<integer>

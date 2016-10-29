@@ -1,0 +1,20 @@
+"goodbye" --> string
+"hello" --> string
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log(x) --> void
+console.log(y) --> void
+null --> string
+null --> string
+null --> string
+null --> string
+null || "goodbye" --> string
+null || "hello" --> string
+null || null || "goodbye" --> string
+null || null || null || "goodbye" --> string
+x --> string
+x --> string
+y --> string
+y --> string

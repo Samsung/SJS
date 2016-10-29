@@ -1,0 +1,276 @@
+CheckArity(ret(|String.fromCharCode|))
+CheckArity(ret(|String.fromCharCode|))
+CheckArity(ret(|document.write|))
+CheckArity(ret(|document.write|))
+CheckArity(ret(|document.write|))
+MakeConcreteConstraint [term=|"P4\n" + w + " " + h + "\n"|]
+MakeConcreteConstraint [term=|(2.0 * x / w - 1.5)|]
+MakeConcreteConstraint [term=|(2.0 * y / h - 1.0)|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|2.0 * Zr * Zi + Ci|]
+MakeConcreteConstraint [term=|3000|]
+MakeConcreteConstraint [term=|4|]
+MakeConcreteConstraint [term=|50|]
+MakeConcreteConstraint [term=|String.fromCharCode(byte_acc)|]
+MakeConcreteConstraint [term=|String.fromCharCode(byte_acc)|]
+MakeConcreteConstraint [term=|String|]
+MakeConcreteConstraint [term=|String|]
+MakeConcreteConstraint [term=|Tr - Ti + Cr|]
+MakeConcreteConstraint [term=|Zi * Zi|]
+MakeConcreteConstraint [term=|Zr * Zr|]
+MakeConcreteConstraint [term=|byte_acc << (8 - w % 8)|]
+MakeConcreteConstraint [term=|byte_acc << 1|]
+MakeConcreteConstraint [term=|byte_acc | 1|]
+MakeConcreteConstraint [term=|byte_acc|]
+MakeConcreteConstraint [term=|byte_acc|]
+MakeConcreteConstraint [term=|document|]
+MakeConcreteConstraint [term=|document|]
+MakeConcreteConstraint [term=|document|]
+MakeConcreteConstraint [term=|h|]
+|" "|=string
+|"P4\n" + w + " " + h + "\n"|<:param(|document.write|,0)
+|"P4\n" + w + " " + h + "\n"|=op(|"P4\n" + w + " " + h|+|"\n"|)
+|"P4\n" + w + " " + h|=op(|"P4\n" + w + " "|+|h|)
+|"P4\n" + w + " "|=op(|"P4\n" + w|+|" "|)
+|"P4\n" + w|=op(|"P4\n"|+|w|)
+|"P4\n"|=string
+|"\n"|=string
+|(2.0 * x / w - 1.5)|<:|Cr|
+|(2.0 * x / w - 1.5)|=|2.0 * x / w - 1.5|
+|(2.0 * y / h - 1.0)|<:|Ci|
+|(2.0 * y / h - 1.0)|=|2.0 * y / h - 1.0|
+|(8 - w % 8)|=|8 - w % 8|
+|(Tr + Ti <= limit2)|=|Tr + Ti <= limit2|
+|0.0|<:|Ci|
+|0.0|<:|Cr|
+|0.0|<:|Ti|
+|0.0|<:|Ti|
+|0.0|<:|Tr|
+|0.0|<:|Tr|
+|0.0|<:|Zi|
+|0.0|<:|Zi|
+|0.0|<:|Zr|
+|0.0|<:|Zr|
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0|<:|bit_num|
+|0|<:|bit_num|
+|0|<:|bit_num|
+|0|<:|byte_acc|
+|0|<:|byte_acc|
+|0|<:|byte_acc|
+|0|<:|h|
+|0|<:|i|
+|0|<:|i|
+|0|<:|w|
+|0|<:|x|
+|0|<:|x|
+|0|<:|y|
+|0|<:|y|
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|1.0|=float
+|1.5|=float
+|1|=integer
+|1|=integer
+|1|=integer
+|2.0 * Zr * Zi + Ci|<:|Zi|
+|2.0 * Zr * Zi + Ci|=op(|2.0 * Zr * Zi|+|Ci|)
+|2.0 * Zr * Zi|=op(|2.0 * Zr|*|Zi|)
+|2.0 * Zr|=op(|2.0|*|Zr|)
+|2.0 * x / w - 1.5|=op(|2.0 * x / w|-|1.5|)
+|2.0 * x / w|=op(|2.0 * x|/|w|)
+|2.0 * x|=op(|2.0|*|x|)
+|2.0 * y / h - 1.0|=op(|2.0 * y / h|-|1.0|)
+|2.0 * y / h|=op(|2.0 * y|/|h|)
+|2.0 * y|=op(|2.0|*|y|)
+|2.0|=float
+|2.0|=float
+|2.0|=float
+|3000|<:|h|
+|3000|=integer
+|4|<:|limit2|
+|4|=integer
+|50|<:|iter|
+|50|=integer
+|8 - w % 8|=op(|8|-|w % 8|)
+|8|=integer
+|8|=integer
+|8|=integer
+|Ci = (2.0 * y / h - 1.0)|=|Ci|
+|Ci|=|Ci|
+|Ci|=|Ci|
+|Cr = (2.0 * x / w - 1.5)|=|Cr|
+|Cr|=|Cr|
+|Cr|=|Cr|
+|String.fromCharCode(byte_acc)|<:param(|document.write|,0)
+|String.fromCharCode(byte_acc)|<:param(|document.write|,0)
+|String.fromCharCode(byte_acc)|=ret(|String.fromCharCode|)
+|String.fromCharCode(byte_acc)|=ret(|String.fromCharCode|)
+|String.fromCharCode|=prop(|String|,fromCharCode)
+|String.fromCharCode|=prop(|String|,fromCharCode)
+|String|=|String|
+|String|=|String|
+|Ti = 0.0|=|Ti|
+|Ti = Zi * Zi|=|Ti|
+|Ti|=|Ti|
+|Ti|=|Ti|
+|Ti|=|Ti|
+|Ti|=|Ti|
+|Ti|=|Ti|
+|Tr + Ti <= limit2|=op(|Tr + Ti|<=|limit2|)
+|Tr + Ti <= limit2|=op(|Tr + Ti|<=|limit2|)
+|Tr + Ti|=op(|Tr|+|Ti|)
+|Tr + Ti|=op(|Tr|+|Ti|)
+|Tr - Ti + Cr|<:|Zr|
+|Tr - Ti + Cr|=op(|Tr - Ti|+|Cr|)
+|Tr - Ti|=op(|Tr|-|Ti|)
+|Tr = 0.0|=|Tr|
+|Tr = Zr * Zr|=|Tr|
+|Tr|=|Tr|
+|Tr|=|Tr|
+|Tr|=|Tr|
+|Tr|=|Tr|
+|Tr|=|Tr|
+|Zi * Zi|<:|Ti|
+|Zi * Zi|=op(|Zi|*|Zi|)
+|Zi = 0.0|=|Zi|
+|Zi = 2.0 * Zr * Zi + Ci|=|Zi|
+|Zi|=|Zi|
+|Zi|=|Zi|
+|Zi|=|Zi|
+|Zi|=|Zi|
+|Zi|=|Zi|
+|Zr * Zr|<:|Tr|
+|Zr * Zr|=op(|Zr|*|Zr|)
+|Zr = 0.0|=|Zr|
+|Zr = Tr - Ti + Cr|=|Zr|
+|Zr|=|Zr|
+|Zr|=|Zr|
+|Zr|=|Zr|
+|Zr|=|Zr|
+|Zr|=|Zr|
+|bit_num = 0|=|bit_num|
+|bit_num = 0|=|bit_num|
+|bit_num == 8|=op(|bit_num|==|8|)
+|bit_num++|=op(|bit_num|++)
+|bit_num|=|bit_num|
+|bit_num|=|bit_num|
+|bit_num|=|bit_num|
+|bit_num|=|bit_num|
+|byte_acc << (8 - w % 8)|<:|byte_acc|
+|byte_acc << (8 - w % 8)|=op(|byte_acc|<<|(8 - w % 8)|)
+|byte_acc << 1|<:|byte_acc|
+|byte_acc << 1|=op(|byte_acc|<<|1|)
+|byte_acc = 0|=|byte_acc|
+|byte_acc = 0|=|byte_acc|
+|byte_acc = byte_acc << (8 - w % 8)|=|byte_acc|
+|byte_acc = byte_acc << 1|=|byte_acc|
+|byte_acc = byte_acc | 1|=|byte_acc|
+|byte_acc | 1|<:|byte_acc|
+|byte_acc | 1|=op(|byte_acc|||1|)
+|byte_acc|<:param(|String.fromCharCode|,0)
+|byte_acc|<:param(|String.fromCharCode|,0)
+|byte_acc|=|byte_acc|
+|byte_acc|=|byte_acc|
+|byte_acc|=|byte_acc|
+|byte_acc|=|byte_acc|
+|byte_acc|=|byte_acc|
+|byte_acc|=|byte_acc|
+|byte_acc|=|byte_acc|
+|byte_acc|=|byte_acc|
+|byte_acc|=|byte_acc|
+|byte_acc|=|byte_acc|
+|document.write("P4\n" + w + " " + h + "\n")|=ret(|document.write|)
+|document.write(String.fromCharCode(byte_acc))|=ret(|document.write|)
+|document.write(String.fromCharCode(byte_acc))|=ret(|document.write|)
+|document.write|=prop(|document|,write)
+|document.write|=prop(|document|,write)
+|document.write|=prop(|document|,write)
+|document|=|document|
+|document|=|document|
+|document|=|document|
+|h|<:|w|
+|h|=|h|
+|h|=|h|
+|h|=|h|
+|h|=|h|
+|h|=|h|
+|i < iter && (Tr + Ti <= limit2)|=op(|i < iter|&&|(Tr + Ti <= limit2)|)
+|i < iter|=op(|i|<|iter|)
+|i = 0|=|i|
+|i++|=op(|i|++)
+|iter|=|iter|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|limit2|=|limit2|
+|limit2|=|limit2|
+|w % 8|=op(|w|%|8|)
+|w - 1|=op(|w|-|1|)
+|w = h|=|w|
+|w|=|w|
+|w|=|w|
+|w|=|w|
+|w|=|w|
+|w|=|w|
+|w|=|w|
+|x < w|=op(|x|<|w|)
+|x = 0|=|x|
+|x == w - 1|=op(|x|==|w - 1|)
+|x++|=op(|x|++)
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|y < h|=op(|y|<|h|)
+|y = 0|=|y|
+|y++|=op(|y|++)
+|y|=|y|
+|y|=|y|
+|y|=|y|
+|y|=|y|

@@ -1,0 +1,23 @@
+MakeConcreteConstraint [term=|"bar"|]
+MakeConcreteConstraint [term=|"foo"|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|17|]
+MakeConcreteConstraint [term=|3000|]
+ret(|function zap|)=void
+|"bar"|<:|y|
+|"bar"|=string
+|"foo"|<:|y|
+|"foo"|=string
+|0|<:|h|
+|0|<:|x|
+|0|=integer
+|0|=integer
+|17|<:|h|
+|17|=integer
+|3000|<:|h|
+|3000|=integer
+|function zap|<:|zap|
+|h|=|h|
+|h|=|h|
+|y|=|y|

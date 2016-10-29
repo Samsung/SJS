@@ -1,0 +1,22 @@
+"" --> string
+"" --> string
+3 --> integer
+3.3 --> float
+a --> integer
+a --> integer
+b + "" --> string
+b --> integer
+b --> integer
+c --> float
+c --> float
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log(b + "") --> void
+console.log(d + "") --> void
+d + "" --> string
+d --> integer
+d --> integer
+~a --> integer
+~c --> integer

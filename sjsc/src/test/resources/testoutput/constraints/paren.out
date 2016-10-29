@@ -1,0 +1,19 @@
+CheckArity(ret(|ack|))
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|3|]
+MakeConcreteConstraint [term=|ack(3, 2)|]
+param(|function ack|,0)=|m|
+param(|function ack|,1)=|n|
+|(m + n)|<:ret(|function ack|)
+|(m + n)|=|m + n|
+|2|<:param(|ack|,1)
+|2|=integer
+|3|<:param(|ack|,0)
+|3|=integer
+|ack(3, 2)|<:|x|
+|ack(3, 2)|=ret(|ack|)
+|ack|=|ack|
+|function ack|<:|ack|
+|m + n|=op(|m|+|n|)
+|m|=|m|
+|n|=|n|

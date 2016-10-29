@@ -1,0 +1,28 @@
+"foo" --> string
+1 --> integer
+2.2 --> float
+C --> ctor<0>[null](integer,float,string) -> {  | x: integer, y: float, z: string }
+C --> ctor<0>[null](integer,float,string) -> {  | x: integer, y: float, z: string }
+function C(x, y, z) {
+  this.x = x;
+  this.y = y;
+  this.z = z;
+}
+ --> ctor<0>[null](integer,float,string) -> {  | x: integer, y: float, z: string }
+new C(1, 2.2, "foo") --> {  | x: integer, y: float, z: string }
+this --> {  | x: integer, y: float, z: string }
+this --> {  | x: integer, y: float, z: string }
+this --> {  | x: integer, y: float, z: string }
+this.x --> integer
+this.x = x --> integer
+this.y --> float
+this.y = y --> float
+this.z --> string
+this.z = z --> string
+x --> integer
+x --> integer
+x --> {  | x: integer, y: float, z: string }
+y --> float
+y --> float
+z --> string
+z --> string

@@ -1,0 +1,94 @@
+0 --> integer
+0 --> integer
+0 --> integer
+0.5 --> float
+1 --> integer
+1 --> integer
+1 --> integer
+FluidField --> ctor<0>[null]() -> {  |  }
+b --> integer
+currentRow --> integer
+currentRow --> integer
+currentRow --> integer
+div --> Array<float>
+div --> Array<float>
+div --> Array<float>
+div[currentRow] --> float
+div[currentRow] = h * u[nextValue] --> float
+function FluidField() {
+  function set_bnd(b, x) {
+    for (var i = 1; ; ) 
+      x[i];
+  }
+  function project(u, p, div) {
+    var h = 0.5;
+    for (var j = 1; ; ) 
+      {
+        var row = j;
+        var currentRow = row;
+        var nextValue = row;
+        {
+          div[currentRow] = h * u[nextValue];
+          p[currentRow] = 0;
+        }
+      }
+    set_bnd(0, div);
+    set_bnd(0, p);
+    set_bnd(1, u);
+  }
+}
+ --> ctor<0>[null]() -> {  |  }
+function project(u, p, div) {
+  var h = 0.5;
+  for (var j = 1; ; ) 
+    {
+      var row = j;
+      var currentRow = row;
+      var nextValue = row;
+      {
+        div[currentRow] = h * u[nextValue];
+        p[currentRow] = 0;
+      }
+    }
+  set_bnd(0, div);
+  set_bnd(0, p);
+  set_bnd(1, u);
+}
+ --> (Array<float>,Array<float>,Array<float>) -> void
+function set_bnd(b, x) {
+  for (var i = 1; ; ) 
+    x[i];
+}
+ --> (integer,Array<float>) -> void
+h * u[nextValue] --> float
+h --> float
+h --> float
+i --> integer
+i --> integer
+j --> integer
+j --> integer
+nextValue --> integer
+nextValue --> integer
+p --> Array<float>
+p --> Array<float>
+p --> Array<float>
+p[currentRow] --> float
+p[currentRow] = 0 --> float
+project --> (Array<float>,Array<float>,Array<float>) -> void
+row --> integer
+row --> integer
+row --> integer
+set_bnd --> (integer,Array<float>) -> void
+set_bnd --> (integer,Array<float>) -> void
+set_bnd --> (integer,Array<float>) -> void
+set_bnd --> (integer,Array<float>) -> void
+set_bnd(0, div) --> void
+set_bnd(0, p) --> void
+set_bnd(1, u) --> void
+u --> Array<float>
+u --> Array<float>
+u --> Array<float>
+u[nextValue] --> float
+x --> Array<float>
+x --> Array<float>
+x[i] --> float

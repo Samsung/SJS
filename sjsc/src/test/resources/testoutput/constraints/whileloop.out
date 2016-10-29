@@ -1,0 +1,11 @@
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|5|]
+|0|<:|index|
+|0|=integer
+|5|<:|seed|
+|5|=integer
+|index++|=op(|index|++)
+|index|=|index|
+|index|=|index|
+|seed >= index|=op(|seed|>=|index|)
+|seed|=|seed|

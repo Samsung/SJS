@@ -1,0 +1,30 @@
+CheckArity(ret(|String|))
+CheckArity(ret(|console.log|))
+MakeConcreteConstraint [term=|"" + str.length|]
+MakeConcreteConstraint [term=|""|]
+MakeConcreteConstraint [term=|"hello\n"|]
+MakeConcreteConstraint [term=|10|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|new String("")|]
+|"" + str.length|<:param(|console.log|,0)
+|"" + str.length|=op(|""|+|str.length|)
+|""|<:param(|String|,0)
+|""|=string
+|""|=string
+|"hello\n"|<:|str|
+|"hello\n"|=string
+|10|<:|n|
+|10|=integer
+|String|<:ctor<0>[X2](X0) -> X1
+|String|=|String|
+|console.log("" + str.length)|=ret(|console.log|)
+|console.log|=prop(|console|,log)
+|console|=|console|
+|n--|=op(|n|--)
+|new String("")|<:|str|
+|new String("")|=ret(|String|)
+|n|=|n|
+|str += "hello\n"|=|str|
+|str.length|=prop(|str|,length)
+|str|=|str|
+|str|=|str|

@@ -1,0 +1,62 @@
+CheckArity(ret(|Body|))
+CheckArity(ret(|NBodySystem|))
+Elem(|this.bodies|)=|this.bodies[0]|
+MakeConcreteConstraint [term=|4.4|]
+MakeConcreteConstraint [term=|[new Body(4.4)]|]
+MakeConcreteConstraint [term=|bodies3|]
+MakeConcreteConstraint [term=|method <anonymous>|]
+MakeConcreteConstraint [term=|new Body(4.4)|]
+MakeConcreteConstraint [term=|new NBodySystem([new Body(4.4)])|]
+MakeConcreteConstraint [term=|this.bodies[0]|]
+MakeConcreteConstraint [term=|x|]
+TP([new Body(4.4)])=Elem(ret(prop(|[new Body(4.4)]|,concat)))
+TP([new Body(4.4)])=Elem(ret(prop(|[new Body(4.4)]|,reverse)))
+TP([new Body(4.4)])=Elem(|[new Body(4.4)]|)
+TP([new Body(4.4)])=param(prop(|[new Body(4.4)]|,push),0)
+TP([new Body(4.4)])=ret(prop(|[new Body(4.4)]|,pop))
+TP([new Body(4.4)])=ret(prop(|[new Body(4.4)]|,shift))
+param(|constructor Body|,0)=|x|
+param(|constructor NBodySystem|,0)=|bodies3|
+param(|method <anonymous>|,0)=|dt|
+prototype(|constructor Body|)=__proto__(ret(|constructor Body|))
+prototype(|constructor NBodySystem|)=__proto__(ret(|constructor NBodySystem|))
+ret(|method <anonymous>|)=void
+ret(|method <anonymous>|)=void
+|0|=Key(|this.bodies|)
+|0|=integer
+|4.4|<:param(|Body|,0)
+|4.4|=float
+|Body|<:ctor<0>[X5](X3) -> X4
+|Body|=|Body|
+|NBodySystem|<:ctor<0>[X2](X0) -> X1
+|NBodySystem|=|NBodySystem|
+|[new Body(4.4)]|<:param(|NBodySystem|,0)
+|bodies3|<:prop(|this|,bodies)
+|bodies3|=|bodies3|
+|constructor Body|<:|Body|
+|constructor NBodySystem|<:|NBodySystem|
+|method <anonymous>|<:prop(|this|,advance)
+|new Body(4.4)|<:Elem(|[new Body(4.4)]|)
+|new Body(4.4)|=ret(|Body|)
+|new NBodySystem([new Body(4.4)])|<:|bodies2|
+|new NBodySystem([new Body(4.4)])|=ret(|NBodySystem|)
+|this.advance = function(dt) {
+  var bodyi = this.bodies[0];
+}|=prop(|this|,advance)
+|this.advance|=prop(|this|,advance)
+|this.bodies = bodies3|=prop(|this|,bodies)
+|this.bodies[0]|<:|bodyi|
+|this.bodies|=prop(|this|,bodies)
+|this.bodies|=prop(|this|,bodies)
+|this.x = x|=prop(|this|,x)
+|this.x|=prop(|this|,x)
+|this|=receiver(|method <anonymous>|)
+|this|=ret(|constructor Body|)
+|this|=ret(|constructor NBodySystem|)
+|this|=ret(|constructor NBodySystem|)
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|x|<:prop(|this|,x)
+|x|=|x|

@@ -1,0 +1,372 @@
+CheckArity(ret(|matrix|))
+CheckArity(ret(|matrix|))
+CheckArity(ret(|matrix|))
+CheckArity(ret(|mul|))
+CheckArity(ret(|printInt|))
+CheckArity(ret(|printInt|))
+CheckArity(ret(|printInt|))
+CheckArity(ret(|printInt|))
+CheckArity(ret(|rowColumnDot|))
+Elem(|a.data|)=|a.data[aindex + i]|
+Elem(|b.data|)=|b.data[j]|
+Elem(|buffer|)=|buffer[index]|
+Elem(|c.data|)=|c.data[0]|
+Elem(|c.data|)=|c.data[1]|
+Elem(|c.data|)=|c.data[2]|
+Elem(|c.data|)=|c.data[3]|
+Elem(|data|)=|data[i]|
+MakeConcreteConstraint [term=|(ax * bx)|]
+MakeConcreteConstraint [term=|(i + 1) % 100|]
+MakeConcreteConstraint [term=|(rowColumnDot(a, b, aindex, j))|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|1000|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|4|]
+MakeConcreteConstraint [term=|[1]|]
+MakeConcreteConstraint [term=|[1]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|a.data[aindex + i]|]
+MakeConcreteConstraint [term=|a.height|]
+MakeConcreteConstraint [term=|a.width|]
+MakeConcreteConstraint [term=|aindex|]
+MakeConcreteConstraint [term=|aindex|]
+MakeConcreteConstraint [term=|a|]
+MakeConcreteConstraint [term=|a|]
+MakeConcreteConstraint [term=|a|]
+MakeConcreteConstraint [term=|a|]
+MakeConcreteConstraint [term=|b.data[j]|]
+MakeConcreteConstraint [term=|b.width|]
+MakeConcreteConstraint [term=|b.width|]
+MakeConcreteConstraint [term=|buffer|]
+MakeConcreteConstraint [term=|buffer|]
+MakeConcreteConstraint [term=|buffer|]
+MakeConcreteConstraint [term=|buffer|]
+MakeConcreteConstraint [term=|b|]
+MakeConcreteConstraint [term=|b|]
+MakeConcreteConstraint [term=|b|]
+MakeConcreteConstraint [term=|b|]
+MakeConcreteConstraint [term=|c.data[0]|]
+MakeConcreteConstraint [term=|c.data[1]|]
+MakeConcreteConstraint [term=|c.data[2]|]
+MakeConcreteConstraint [term=|c.data[3]|]
+MakeConcreteConstraint [term=|data|]
+MakeConcreteConstraint [term=|data|]
+MakeConcreteConstraint [term=|h|]
+MakeConcreteConstraint [term=|h|]
+MakeConcreteConstraint [term=|j|]
+MakeConcreteConstraint [term=|j|]
+MakeConcreteConstraint [term=|matrix(a.height, b.width, buffer)|]
+MakeConcreteConstraint [term=|matrix(s, s, data)|]
+MakeConcreteConstraint [term=|matrix(s, s, data)|]
+MakeConcreteConstraint [term=|mul(a, b)|]
+MakeConcreteConstraint [term=|s|]
+MakeConcreteConstraint [term=|s|]
+MakeConcreteConstraint [term=|s|]
+MakeConcreteConstraint [term=|s|]
+MakeConcreteConstraint [term=|t|]
+MakeConcreteConstraint [term=|w|]
+MakeConcreteConstraint [term=|w|]
+MakeConcreteConstraint [term=|{height: 2, width: 4, data: [1]}|]
+MakeConcreteConstraint [term=|{height: h, width: w, data: buffer}|]
+TP([1])=Elem(ret(prop(|[1]|,concat)))
+TP([1])=Elem(ret(prop(|[1]|,concat)))
+TP([1])=Elem(ret(prop(|[1]|,reverse)))
+TP([1])=Elem(ret(prop(|[1]|,reverse)))
+TP([1])=Elem(|[1]|)
+TP([1])=Elem(|[1]|)
+TP([1])=param(prop(|[1]|,push),0)
+TP([1])=param(prop(|[1]|,push),0)
+TP([1])=ret(prop(|[1]|,pop))
+TP([1])=ret(prop(|[1]|,pop))
+TP([1])=ret(prop(|[1]|,shift))
+TP([1])=ret(prop(|[1]|,shift))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+param(|function matrix|,0)=|h|
+param(|function matrix|,1)=|w|
+param(|function matrix|,2)=|buffer|
+param(|function mul|,0)=|a|
+param(|function mul|,1)=|b|
+param(|function rowColumnDot|,0)=|a|
+param(|function rowColumnDot|,1)=|b|
+param(|function rowColumnDot|,2)=|aindex|
+param(|function rowColumnDot|,3)=|j|
+|(ax * bx)|<:|r|
+|(ax * bx)|=|ax * bx|
+|(i + 1) % 100|<:|data[i]|
+|(i + 1) % 100|=op(|(i + 1)|%|100|)
+|(i + 1)|=|i + 1|
+|(rowColumnDot(a, b, aindex, j))|<:|buffer[index]|
+|(rowColumnDot(a, b, aindex, j))|=|rowColumnDot(a, b, aindex, j)|
+|0|<:|aindex|
+|0|<:|index|
+|0|<:|intHint|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|j|
+|0|<:|r|
+|0|<:|tmp|
+|0|=Key(|c.data|)
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|1000|<:|s|
+|1000|=integer
+|100|=integer
+|1|<:Elem(|[1]|)
+|1|<:Elem(|[1]|)
+|1|=Key(|c.data|)
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|2|<:prop(|{height: 2, width: 4, data: [1]}|,height)
+|2|=Key(|c.data|)
+|2|=integer
+|2|=integer
+|3|=Key(|c.data|)
+|3|=integer
+|4|<:prop(|{height: 2, width: 4, data: [1]}|,width)
+|4|=integer
+|[1]|<:prop(|{height: 2, width: 4, data: [1]}|,data)
+|[1]|<:|intArrHint|
+|[]|<:|buffer|
+|[]|<:|data|
+|a.data[aindex + i]|<:|ax|
+|a.data|=prop(|a|,data)
+|a.height|<:param(|matrix|,0)
+|a.height|=prop(|a|,height)
+|a.height|=prop(|a|,height)
+|a.width !== b.height|=op(|a.width|!==|b.height|)
+|a.width|<:|aindex|
+|a.width|=prop(|a|,width)
+|a.width|=prop(|a|,width)
+|a.width|=prop(|a|,width)
+|aindex + i|=Key(|a.data|)
+|aindex + i|=op(|aindex|+|i|)
+|aindex += a.width|=|aindex|
+|aindex|<:param(|rowColumnDot|,2)
+|aindex|<:|intHint|
+|aindex|=|aindex|
+|aindex|=|aindex|
+|aindex|=|aindex|
+|aindex|=|aindex|
+|ax * bx|=op(|ax|*|bx|)
+|ax = a.data[aindex + i]|=|ax|
+|ax|=|ax|
+|ax|=|ax|
+|a|<:param(|mul|,0)
+|a|<:param(|rowColumnDot|,0)
+|a|<:|mhint|
+|a|<:|mhint|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|b.data[j]|<:|bx|
+|b.data|=prop(|b|,data)
+|b.height|=prop(|b|,height)
+|b.width|<:param(|matrix|,1)
+|b.width|<:|j|
+|b.width|=prop(|b|,width)
+|b.width|=prop(|b|,width)
+|b.width|=prop(|b|,width)
+|buffer[index] = (rowColumnDot(a, b, aindex, j))|=|buffer[index]|
+|buffer|<:param(|matrix|,2)
+|buffer|<:prop(|{height: h, width: w, data: buffer}|,data)
+|buffer|<:|intArrHint|
+|buffer|<:|intArrHint|
+|buffer|=|buffer|
+|buffer|=|buffer|
+|buffer|=|buffer|
+|buffer|=|buffer|
+|buffer|=|buffer|
+|bx = b.data[j]|=|bx|
+|bx|=|bx|
+|bx|=|bx|
+|b|<:param(|mul|,1)
+|b|<:param(|rowColumnDot|,1)
+|b|<:|mhint|
+|b|<:|mhint|
+|b|=|b|
+|b|=|b|
+|b|=|b|
+|b|=|b|
+|b|=|b|
+|b|=|b|
+|b|=|b|
+|b|=|b|
+|b|=|b|
+|c.data[0]|<:param(|printInt|,0)
+|c.data[1]|<:param(|printInt|,0)
+|c.data[2]|<:param(|printInt|,0)
+|c.data[3]|<:param(|printInt|,0)
+|c.data|=prop(|c|,data)
+|c.data|=prop(|c|,data)
+|c.data|=prop(|c|,data)
+|c.data|=prop(|c|,data)
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|data[i] = (i + 1) % 100|=|data[i]|
+|data|<:param(|matrix|,2)
+|data|<:param(|matrix|,2)
+|data|=|data|
+|data|=|data|
+|data|=|data|
+|function matrix|<:|matrix|
+|function mul|<:|mul|
+|function rowColumnDot|<:|rowColumnDot|
+|h|<:prop(|{height: h, width: w, data: buffer}|,height)
+|h|<:|intHint|
+|h|=|h|
+|h|=|h|
+|i + 1|=op(|i|+|1|)
+|i < a.height|=op(|i|<|a.height|)
+|i < a.width|=op(|i|<|a.width|)
+|i < s * s|=op(|i|<|s * s|)
+|i = 0|=|i|
+|i = 0|=|i|
+|i = 0|=|i|
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|index++|=op(|index|++)
+|index|=Key(|buffer|)
+|index|=|index|
+|index|=|index|
+|intArrHint = buffer|=|intArrHint|
+|intArrHint = buffer|=|intArrHint|
+|intArrHint|=|intArrHint|
+|intArrHint|=|intArrHint|
+|intHint = aindex|=|intHint|
+|intHint = h|=|intHint|
+|intHint = j|=|intHint|
+|intHint = w|=|intHint|
+|intHint|=|intHint|
+|intHint|=|intHint|
+|intHint|=|intHint|
+|intHint|=|intHint|
+|i|=Key(|data|)
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|j += b.width|=|j|
+|j < b.width|=op(|j|<|b.width|)
+|j = 0|=|j|
+|j++|=op(|j|++)
+|j|<:param(|rowColumnDot|,3)
+|j|<:|intHint|
+|j|=Key(|b.data|)
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|matrix(a.height, b.width, buffer)|<:|r|
+|matrix(a.height, b.width, buffer)|=ret(|matrix|)
+|matrix(s, s, data)|<:|a|
+|matrix(s, s, data)|<:|b|
+|matrix(s, s, data)|=ret(|matrix|)
+|matrix(s, s, data)|=ret(|matrix|)
+|matrix|=|matrix|
+|matrix|=|matrix|
+|matrix|=|matrix|
+|mhint = a|=|mhint|
+|mhint = a|=|mhint|
+|mhint = b|=|mhint|
+|mhint = b|=|mhint|
+|mhint = t|=|mhint|
+|mhint|=|mhint|
+|mhint|=|mhint|
+|mhint|=|mhint|
+|mhint|=|mhint|
+|mhint|=|mhint|
+|mul(a, b)|<:|c|
+|mul(a, b)|=ret(|mul|)
+|mul|=|mul|
+|null|<:ret(|function mul|)
+|printInt(c.data[0])|=ret(|printInt|)
+|printInt(c.data[1])|=ret(|printInt|)
+|printInt(c.data[2])|=ret(|printInt|)
+|printInt(c.data[3])|=ret(|printInt|)
+|printInt|=|printInt|
+|printInt|=|printInt|
+|printInt|=|printInt|
+|printInt|=|printInt|
+|r += (ax * bx)|=|r|
+|rowColumnDot(a, b, aindex, j)|=ret(|rowColumnDot|)
+|rowColumnDot|=|rowColumnDot|
+|r|<:ret(|function mul|)
+|r|<:ret(|function rowColumnDot|)
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|s * s|=op(|s|*|s|)
+|s|<:param(|matrix|,0)
+|s|<:param(|matrix|,0)
+|s|<:param(|matrix|,1)
+|s|<:param(|matrix|,1)
+|s|=|s|
+|s|=|s|
+|s|=|s|
+|s|=|s|
+|s|=|s|
+|s|=|s|
+|t|<:ret(|function matrix|)
+|t|<:|mhint|
+|t|=|t|
+|t|=|t|
+|w|<:prop(|{height: h, width: w, data: buffer}|,width)
+|w|<:|intHint|
+|w|=|w|
+|w|=|w|
+|{height: 2, width: 4, data: [1]}|<:|mhint|
+|{height: h, width: w, data: buffer}|<:|t|

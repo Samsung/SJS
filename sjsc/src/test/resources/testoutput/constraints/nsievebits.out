@@ -1,0 +1,239 @@
+CheckArity(ret(|Array|))
+CheckArity(ret(|n.toString|))
+CheckArity(ret(|pad|))
+CheckArity(ret(|pad|))
+CheckArity(ret(|primes|))
+CheckArity(ret(|primes|))
+CheckArity(ret(|primes|))
+CheckArity(ret(|printString|))
+Elem(|isPrime|)=|isPrime[i >> 5]|
+Elem(|isPrime|)=|isPrime[i]|
+Elem(|isPrime|)=|isPrime[j >> 5]|
+MakeConcreteConstraint [term=op(~|(1 << (j & 31))|)]
+MakeConcreteConstraint [term=|"Primes up to" + pad(m, 9) + pad(count, 9)|]
+MakeConcreteConstraint [term=|' ' + s|]
+MakeConcreteConstraint [term=|(10000 << n) + 31 >> 5|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|10000 << n|]
+MakeConcreteConstraint [term=|12|]
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|9|]
+MakeConcreteConstraint [term=|9|]
+MakeConcreteConstraint [term=|count|]
+MakeConcreteConstraint [term=|ffffffff | 0|]
+MakeConcreteConstraint [term=|i + i|]
+MakeConcreteConstraint [term=|isPrime|]
+MakeConcreteConstraint [term=|isPrime|]
+MakeConcreteConstraint [term=|isPrime|]
+MakeConcreteConstraint [term=|i|]
+MakeConcreteConstraint [term=|m + 31 >> 5|]
+MakeConcreteConstraint [term=|m|]
+MakeConcreteConstraint [term=|n - 1|]
+MakeConcreteConstraint [term=|n - 2|]
+MakeConcreteConstraint [term=|n.toString()|]
+MakeConcreteConstraint [term=|new Array((10000 << n) + 31 >> 5)|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|n|]
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,1)
+TP(Array)=param(|Array|,1)
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+op(~|(1 << (j & 31))|)<:|isPrime[j >> 5]|
+param(|function pad|,0)=|n|
+param(|function pad|,1)=|width|
+param(|function primes|,0)=|isPrime|
+param(|function primes|,1)=|n|
+ret(|function primes|)=void
+|"Primes up to" + pad(m, 9) + pad(count, 9)|<:param(|printString|,0)
+|"Primes up to" + pad(m, 9) + pad(count, 9)|=op(|"Primes up to" + pad(m, 9)|+|pad(count, 9)|)
+|"Primes up to" + pad(m, 9)|=op(|"Primes up to"|+|pad(m, 9)|)
+|"Primes up to"|=string
+|' ' + s|<:|s|
+|' ' + s|=op(|' '|+|s|)
+|' '|=string
+|(1 << (j & 31))|=|1 << (j & 31)|
+|(10000 << n) + 31 >> 5|<:param(|Array|,0)
+|(10000 << n) + 31 >> 5|=op(|(10000 << n) + 31|>>|5|)
+|(10000 << n) + 31|=op(|(10000 << n)|+|31|)
+|(10000 << n)|=|10000 << n|
+|(i & 31)|=|i & 31|
+|(j & 31)|=|j & 31|
+|0|<:|count|
+|0|<:|i|
+|0|=integer
+|0|=integer
+|0|=integer
+|1 << (i & 31)|=op(|1|<<|(i & 31)|)
+|1 << (j & 31)|=op(|1|<<|(j & 31)|)
+|10000 << n|<:|m|
+|10000 << n|=op(|10000|<<|n|)
+|10000 << n|=op(|10000|<<|n|)
+|10000|=integer
+|10000|=integer
+|12|<:|n|
+|12|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|2|<:|i|
+|2|=integer
+|2|=integer
+|31|=integer
+|31|=integer
+|31|=integer
+|31|=integer
+|5|=integer
+|5|=integer
+|5|=integer
+|5|=integer
+|9|<:param(|pad|,1)
+|9|<:param(|pad|,1)
+|9|=integer
+|9|=integer
+|Array|<:ctor<0>[X2](X0) -> X1
+|Array|=|Array|
+|count++|=op(|count|++)
+|count|<:param(|pad|,0)
+|count|=|count|
+|count|=|count|
+|ffffffff | 0|<:|isPrime[i]|
+|ffffffff | 0|=op(|ffffffff|||0|)
+|ffffffff|=float
+|function pad|<:|pad|
+|function primes|<:|primes|
+|i & 31|=op(|i|&|31|)
+|i + i|<:|j|
+|i + i|=op(|i|+|i|)
+|i < m|=op(|i|<|m|)
+|i < size|=op(|i|<|size|)
+|i = 0|=|i|
+|i = 2|=|i|
+|i >> 5|=Key(|isPrime|)
+|i >> 5|=op(|i|>>|5|)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|isPrime[i >> 5] & 1 << (i & 31)|=op(|isPrime[i >> 5]|&|1 << (i & 31)|)
+|isPrime[i] = ffffffff | 0|=|isPrime[i]|
+|isPrime[j >> 5] &= ~(1 << (j & 31))|=|isPrime[j >> 5]|
+|isPrime|<:param(|primes|,0)
+|isPrime|<:param(|primes|,0)
+|isPrime|<:param(|primes|,0)
+|isPrime|=|isPrime|
+|isPrime|=|isPrime|
+|isPrime|=|isPrime|
+|isPrime|=|isPrime|
+|isPrime|=|isPrime|
+|isPrime|=|isPrime|
+|i|<:|j|
+|i|=Key(|isPrime|)
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|j & 31|=op(|j|&|31|)
+|j += i|=|j|
+|j < m|=op(|j|<|m|)
+|j >> 5|=Key(|isPrime|)
+|j >> 5|=op(|j|>>|5|)
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|m + 31 >> 5|<:|size|
+|m + 31 >> 5|=op(|m + 31|>>|5|)
+|m + 31|=op(|m|+|31|)
+|m|<:param(|pad|,0)
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|n - 1|<:param(|primes|,1)
+|n - 1|=op(|n|-|1|)
+|n - 2|<:param(|primes|,1)
+|n - 2|=op(|n|-|2|)
+|n.toString()|<:|s|
+|n.toString()|=ret(|n.toString|)
+|n.toString|=prop(|n|,toString)
+|new Array((10000 << n) + 31 >> 5)|<:|isPrime|
+|new Array((10000 << n) + 31 >> 5)|=ret(|Array|)
+|n|<:param(|primes|,1)
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|pad(count, 9)|=ret(|pad|)
+|pad(m, 9)|=ret(|pad|)
+|pad|=|pad|
+|pad|=|pad|
+|primes(isPrime, n - 1)|=ret(|primes|)
+|primes(isPrime, n - 2)|=ret(|primes|)
+|primes(isPrime, n)|=ret(|primes|)
+|primes|=|primes|
+|primes|=|primes|
+|primes|=|primes|
+|printString("Primes up to" + pad(m, 9) + pad(count, 9))|=ret(|printString|)
+|printString|=|printString|
+|s = ' ' + s|=|s|
+|s.length < width|=op(|s.length|<|width|)
+|s.length|=prop(|s|,length)
+|size|=|size|
+|s|<:ret(|function pad|)
+|s|=|s|
+|s|=|s|
+|s|=|s|
+|s|=|s|
+|width|=|width|
+|~(1 << (j & 31))|=op(~|(1 << (j & 31))|)

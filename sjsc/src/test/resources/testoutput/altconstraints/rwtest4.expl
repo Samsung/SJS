@@ -1,0 +1,2 @@
+could not find property h in type {  | g: integer } for term prop(|{f: {g: 3}}|,f)
+property accessed on line 2

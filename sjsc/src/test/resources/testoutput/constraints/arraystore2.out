@@ -1,0 +1,25 @@
+Elem(|x|)=|x[6]|
+MakeConcreteConstraint [term=|"a"|]
+MakeConcreteConstraint [term=|"b"|]
+MakeConcreteConstraint [term=|"c"|]
+MakeConcreteConstraint [term=|17|]
+MakeConcreteConstraint [term=|["a", "b", "c"]|]
+TP(["a", "b", "c"])=Elem(ret(prop(|["a", "b", "c"]|,concat)))
+TP(["a", "b", "c"])=Elem(ret(prop(|["a", "b", "c"]|,reverse)))
+TP(["a", "b", "c"])=Elem(|["a", "b", "c"]|)
+TP(["a", "b", "c"])=param(prop(|["a", "b", "c"]|,push),0)
+TP(["a", "b", "c"])=ret(prop(|["a", "b", "c"]|,pop))
+TP(["a", "b", "c"])=ret(prop(|["a", "b", "c"]|,shift))
+|"a"|<:Elem(|["a", "b", "c"]|)
+|"a"|=string
+|"b"|<:Elem(|["a", "b", "c"]|)
+|"b"|=string
+|"c"|<:Elem(|["a", "b", "c"]|)
+|"c"|=string
+|17|<:|x[6]|
+|17|=integer
+|6|=Key(|x|)
+|6|=integer
+|["a", "b", "c"]|<:|x|
+|x[6] = 17|=|x[6]|
+|x|=|x|

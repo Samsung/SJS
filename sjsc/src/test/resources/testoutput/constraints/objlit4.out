@@ -1,0 +1,25 @@
+CheckArity(ret(|(fn.code)|))
+CheckArity(ret(|console.log|))
+MakeConcreteConstraint [term=|"hello"|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|function <anonymous>|]
+MakeConcreteConstraint [term=|{code: function() {
+  console.log("hello");
+}}|]
+ret(|function <anonymous>|)=void
+ret(|function <anonymous>|)=void
+|"hello"|<:param(|console.log|,0)
+|"hello"|=string
+|(fn.code)()|=ret(|(fn.code)|)
+|(fn.code)|=|fn.code|
+|console.log("hello")|=ret(|console.log|)
+|console.log|=prop(|console|,log)
+|console|=|console|
+|fn.code|=prop(|fn|,code)
+|fn|=|fn|
+|function <anonymous>|<:prop(|{code: function() {
+  console.log("hello");
+}}|,code)
+|{code: function() {
+  console.log("hello");
+}}|<:|fn|

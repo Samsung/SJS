@@ -1,0 +1,31 @@
+"" + x --> string
+"" --> string
+0 --> integer
+0 --> integer
+1 --> integer
+2 --> integer
+2 --> integer
+3 --> integer
+[1, 2, 3] --> Array<integer>
+a --> Array<integer>
+a --> Array<integer>
+a --> Array<integer>
+a --> Array<integer>
+a.length --> integer
+a[i] --> integer
+a[i] --> integer
+a[i] == 2 --> boolean
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log("" + x) --> void
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i < a.length --> boolean
+i++ --> integer
+x += a[i] --> integer
+x --> integer
+x --> integer
+x --> integer

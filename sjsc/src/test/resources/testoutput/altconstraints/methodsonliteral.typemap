@@ -1,0 +1,29 @@
+19 --> integer
+3 --> integer
+function() {
+  return this.x;
+} --> [{ x: integer |  }]() -> integer
+function(y) {
+  this.x = y;
+} --> [{  | x: integer }](integer) -> void
+o --> {  | x: integer, setX: [](integer) -> void, getX: []() -> integer }
+o --> {  | x: integer, setX: [](integer) -> void, getX: []() -> integer }
+o --> {  | x: integer, setX: [](integer) -> void, getX: []() -> integer }
+o.getX --> []() -> integer
+o.getX() --> integer
+o.setX --> [](integer) -> void
+o.setX(19) --> void
+printInt --> (integer) -> void
+printInt(o.getX()) --> void
+this --> {  | x: integer }
+this --> { x: integer |  }
+this.x --> integer
+this.x --> integer
+this.x = y --> integer
+y --> integer
+y --> integer
+{x: 3, setX: function(y) {
+  this.x = y;
+}, getX: function() {
+  return this.x;
+}} --> {  | x: integer, setX: [](integer) -> void, getX: []() -> integer }

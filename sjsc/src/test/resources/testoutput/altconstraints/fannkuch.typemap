@@ -1,0 +1,309 @@
+!((k = perm[0]) == 0) --> boolean
+!(perm1[0] == 0 || perm1[m] == m) --> boolean
+"" --> string
+") = " --> string
+"Pfannkuchen(" + n + ") = " + fannkuch(n) --> string
+"Pfannkuchen(" + n + ") = " --> string
+"Pfannkuchen(" + n --> string
+"Pfannkuchen(" --> string
+((k = perm[0]) == 0) --> boolean
+(k + 1) --> integer
+(k + 1) >> 1 --> integer
+(k = perm[0]) --> integer
+(k = perm[0]) == 0 --> boolean
+(perm1[0] == 0 || perm1[m] == m) --> boolean
+(perm1[i] + 1) --> integer
+(perm1[i] + 1).toString --> []() -> string INTERSECT [](integer) -> string
+(perm1[i] + 1).toString() --> string
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+10 --> integer
+30 --> integer
+Array --> () -> Array<integer> INTERSECT (integer) -> Array<integer> INTERSECT (integer,integer) -> Array<integer>
+Array --> () -> Array<integer> INTERSECT (integer) -> Array<integer> INTERSECT (integer,integer) -> Array<integer>
+Array --> () -> Array<integer> INTERSECT (integer) -> Array<integer> INTERSECT (integer,integer) -> Array<integer>
+Array --> () -> Array<integer> INTERSECT (integer) -> Array<integer> INTERSECT (integer,integer) -> Array<integer>
+Array(n) --> Array<integer>
+Array(n) --> Array<integer>
+Array(n) --> Array<integer>
+Array(n) --> Array<integer>
+check --> integer
+check --> integer
+check --> integer
+check < 30 --> boolean
+check++ --> integer
+count --> Array<integer>
+count --> Array<integer>
+count --> Array<integer>
+count --> Array<integer>
+count --> Array<integer>
+count[r - 1] --> integer
+count[r - 1] = r --> integer
+count[r] - 1 --> integer
+count[r] --> integer
+count[r] --> integer
+count[r] --> integer
+count[r] = count[r] - 1 --> integer
+count[r] > 0 --> boolean
+fannkuch --> (integer) -> integer
+fannkuch --> (integer) -> integer
+fannkuch(n) --> integer
+flipsCount --> integer
+flipsCount --> integer
+flipsCount --> integer
+flipsCount --> integer
+flipsCount > maxFlipsCount --> boolean
+flipsCount++ --> integer
+function fannkuch(n) {
+  var check = 0;
+  var perm = Array(n);
+  var perm1 = Array(n);
+  var count = Array(n);
+  var maxPerm = Array(n);
+  var maxFlipsCount = 0;
+  var m = n - 1;
+  for (var i = 0; i < n; i++) 
+    perm1[i] = i;
+  var r = n;
+  while (true) 
+    {
+      if (check < 30) 
+      {
+        var s = "";
+        for (var i = 0; i < n; i++) 
+          s += (perm1[i] + 1).toString();
+        printString(s);
+        check++;
+      }
+      while (r != 1) 
+        {
+          count[r - 1] = r;
+          r--;
+        }
+      if (!(perm1[0] == 0 || perm1[m] == m)) 
+      {
+        for (var i = 0; i < n; i++) 
+          perm[i] = perm1[i];
+        var flipsCount = 0;
+        var k;
+        while (!((k = perm[0]) == 0)) 
+          {
+            var k2 = (k + 1) >> 1;
+            for (var i = 0; i < k2; i++) 
+              {
+                var temp = perm[i];
+                perm[i] = perm[k - i];
+                perm[k - i] = temp;
+              }
+            flipsCount++;
+          }
+        if (flipsCount > maxFlipsCount) 
+        {
+          maxFlipsCount = flipsCount;
+          for (var i = 0; i < n; i++) 
+            maxPerm[i] = perm1[i];
+        }
+      }
+      while (true) 
+        {
+          if (r == n) 
+          return maxFlipsCount;
+          var perm0 = perm1[0];
+          var i = 0;
+          while (i < r) 
+            {
+              var j = i + 1;
+              perm1[i] = perm1[j];
+              i = j;
+            }
+          perm1[r] = perm0;
+          count[r] = count[r] - 1;
+          if (count[r] > 0) 
+          break;
+          r++;
+        }
+    }
+}
+ --> (integer) -> integer
+i + 1 --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i < k2 --> boolean
+i < n --> boolean
+i < n --> boolean
+i < n --> boolean
+i < n --> boolean
+i < r --> boolean
+i = j --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+j --> integer
+j --> integer
+j --> integer
+k + 1 --> integer
+k - i --> integer
+k - i --> integer
+k --> integer
+k --> integer
+k --> integer
+k --> integer
+k --> integer
+k = perm[0] --> integer
+k2 --> integer
+k2 --> integer
+m --> integer
+m --> integer
+m --> integer
+maxFlipsCount --> integer
+maxFlipsCount --> integer
+maxFlipsCount --> integer
+maxFlipsCount --> integer
+maxFlipsCount = flipsCount --> integer
+maxPerm --> Array<integer>
+maxPerm --> Array<integer>
+maxPerm[i] --> integer
+maxPerm[i] = perm1[i] --> integer
+n - 1 --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+perm --> Array<integer>
+perm --> Array<integer>
+perm --> Array<integer>
+perm --> Array<integer>
+perm --> Array<integer>
+perm --> Array<integer>
+perm --> Array<integer>
+perm0 --> integer
+perm0 --> integer
+perm1 --> Array<integer>
+perm1 --> Array<integer>
+perm1 --> Array<integer>
+perm1 --> Array<integer>
+perm1 --> Array<integer>
+perm1 --> Array<integer>
+perm1 --> Array<integer>
+perm1 --> Array<integer>
+perm1 --> Array<integer>
+perm1 --> Array<integer>
+perm1 --> Array<integer>
+perm1[0] --> integer
+perm1[0] --> integer
+perm1[0] == 0 --> boolean
+perm1[0] == 0 || perm1[m] == m --> boolean
+perm1[i] + 1 --> integer
+perm1[i] --> integer
+perm1[i] --> integer
+perm1[i] --> integer
+perm1[i] --> integer
+perm1[i] --> integer
+perm1[i] = i --> integer
+perm1[i] = perm1[j] --> integer
+perm1[j] --> integer
+perm1[m] --> integer
+perm1[m] == m --> boolean
+perm1[r] --> integer
+perm1[r] = perm0 --> integer
+perm[0] --> integer
+perm[i] --> integer
+perm[i] --> integer
+perm[i] --> integer
+perm[i] = perm1[i] --> integer
+perm[i] = perm[k - i] --> integer
+perm[k - i] --> integer
+perm[k - i] --> integer
+perm[k - i] = temp --> integer
+printString --> (string) -> void
+printString --> (string) -> void
+printString("Pfannkuchen(" + n + ") = " + fannkuch(n)) --> void
+printString(s) --> void
+r != 1 --> boolean
+r - 1 --> integer
+r --> integer
+r --> integer
+r --> integer
+r --> integer
+r --> integer
+r --> integer
+r --> integer
+r --> integer
+r --> integer
+r --> integer
+r --> integer
+r --> integer
+r == n --> boolean
+r++ --> integer
+r-- --> integer
+s += (perm1[i] + 1).toString() --> string
+s --> string
+s --> string
+s --> string
+temp --> integer
+temp --> integer
+true --> boolean
+true --> boolean

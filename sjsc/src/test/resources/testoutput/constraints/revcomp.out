@@ -1,0 +1,267 @@
+CheckArity(ret(|out.push|))
+CheckArity(ret(|printString|))
+CheckArity(ret(|printString|))
+CheckArity(ret(|printString|))
+CheckArity(ret(|readline|))
+CheckArity(ret(|reverseFormat|))
+CheckArity(ret(|reverseFormat|))
+Elem(|a|)=|a[l]|
+Elem(|complement|)=|complement[line[i]]|
+Elem(|line|)=|line[0]|
+Elem(|line|)=|line[i]|
+MakeConcreteConstraint [term=|''|]
+MakeConcreteConstraint [term=|''|]
+MakeConcreteConstraint [term=|'A'|]
+MakeConcreteConstraint [term=|'A'|]
+MakeConcreteConstraint [term=|'A'|]
+MakeConcreteConstraint [term=|'A'|]
+MakeConcreteConstraint [term=|'B'|]
+MakeConcreteConstraint [term=|'B'|]
+MakeConcreteConstraint [term=|'C'|]
+MakeConcreteConstraint [term=|'C'|]
+MakeConcreteConstraint [term=|'D'|]
+MakeConcreteConstraint [term=|'D'|]
+MakeConcreteConstraint [term=|'G'|]
+MakeConcreteConstraint [term=|'G'|]
+MakeConcreteConstraint [term=|'H'|]
+MakeConcreteConstraint [term=|'H'|]
+MakeConcreteConstraint [term=|'K'|]
+MakeConcreteConstraint [term=|'K'|]
+MakeConcreteConstraint [term=|'M'|]
+MakeConcreteConstraint [term=|'M'|]
+MakeConcreteConstraint [term=|'N'|]
+MakeConcreteConstraint [term=|'N'|]
+MakeConcreteConstraint [term=|'R'|]
+MakeConcreteConstraint [term=|'R'|]
+MakeConcreteConstraint [term=|'S'|]
+MakeConcreteConstraint [term=|'S'|]
+MakeConcreteConstraint [term=|'T'|]
+MakeConcreteConstraint [term=|'T'|]
+MakeConcreteConstraint [term=|'V'|]
+MakeConcreteConstraint [term=|'V'|]
+MakeConcreteConstraint [term=|'W'|]
+MakeConcreteConstraint [term=|'W'|]
+MakeConcreteConstraint [term=|'Y'|]
+MakeConcreteConstraint [term=|'Y'|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|a.length|]
+MakeConcreteConstraint [term=|a[l]|]
+MakeConcreteConstraint [term=|complement[line[i]]|]
+MakeConcreteConstraint [term=|complement|]
+MakeConcreteConstraint [term=|complement|]
+MakeConcreteConstraint [term=|function <anonymous>|]
+MakeConcreteConstraint [term=|line.length|]
+MakeConcreteConstraint [term=|line|]
+MakeConcreteConstraint [term=|line|]
+MakeConcreteConstraint [term=|out|]
+MakeConcreteConstraint [term=|out|]
+MakeConcreteConstraint [term=|out|]
+MakeConcreteConstraint [term=|out|]
+MakeConcreteConstraint [term=|out|]
+MakeConcreteConstraint [term=|readline()|]
+MakeConcreteConstraint [term=|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|]
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+param(|function <anonymous>|,0)=|a|
+param(|function <anonymous>|,1)=|complement|
+ret(|function <anonymous>|)=void
+ret(|function <anonymous>|)=void
+|''|<:|out|
+|''|<:|out|
+|''|=string
+|''|=string
+|'>'|=string
+|'A'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'A'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'A'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'A'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'A'|=string
+|'A'|=string
+|'A'|=string
+|'A'|=string
+|'B'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'B'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'B'|=string
+|'B'|=string
+|'C'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'C'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'C'|=string
+|'C'|=string
+|'D'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'D'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'D'|=string
+|'D'|=string
+|'G'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'G'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'G'|=string
+|'G'|=string
+|'H'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'H'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'H'|=string
+|'H'|=string
+|'K'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'K'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'K'|=string
+|'K'|=string
+|'M'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'M'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'M'|=string
+|'M'|=string
+|'N'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'N'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'N'|=string
+|'N'|=string
+|'R'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'R'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'R'|=string
+|'R'|=string
+|'S'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'S'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'S'|=string
+|'S'|=string
+|'T'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'T'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'T'|=string
+|'T'|=string
+|'V'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'V'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'V'|=string
+|'V'|=string
+|'W'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'W'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'W'|=string
+|'W'|=string
+|'Y'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'Y'|<:Elem(|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|)
+|'Y'|=string
+|'Y'|=string
+|(line = readline())|=|line = readline()|
+|0|<:|c|
+|0|=Key(|line|)
+|0|=integer
+|0|=integer
+|1|<:|c|
+|1|=integer
+|60|=integer
+|[]|<:|out|
+|[]|<:|out|
+|a.length|<:|l|
+|a.length|=prop(|a|,length)
+|a[l]|<:|line|
+|a|=|a|
+|a|=|a|
+|c = 0|=|c|
+|c === 60|=op(|c|===|60|)
+|c++|=op(|c|++)
+|complement = {'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|=|complement|
+|complement[line[i]]|<:|out|
+|complement|<:param(|reverseFormat|,1)
+|complement|<:param(|reverseFormat|,1)
+|complement|=|complement|
+|complement|=|complement|
+|complement|=|complement|
+|complement|=|complement|
+|c|=|c|
+|c|=|c|
+|c|=|c|
+|function <anonymous>|<:|reverseFormat|
+|i = line.length|=|i|
+|i--|=op(|i|--)
+|i|=Key(|line|)
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|l = a.length|=|l|
+|l--|=op(|l|--)
+|line = a[l]|=|line|
+|line = readline()|=|line|
+|line.length|<:|i|
+|line.length|=prop(|line|,length)
+|line[0] !== '>'|=op(|line[0]|!==|'>'|)
+|line[i]|=Key(|complement|)
+|line|<:param(|out.push|,0)
+|line|<:param(|printString|,0)
+|line|=|line|
+|line|=|line|
+|line|=|line|
+|line|=|line|
+|line|=|line|
+|line|=|line|
+|line|=|line|
+|l|=Key(|a|)
+|l|=|l|
+|l|=|l|
+|l|=|l|
+|out += complement[line[i]]|=|out|
+|out = ''|=|out|
+|out = ''|=|out|
+|out = []|=|out|
+|out = []|=|out|
+|out.length|=prop(|out|,length)
+|out.push(line)|=ret(|out.push|)
+|out.push|=prop(|out|,push)
+|out|<:param(|printString|,0)
+|out|<:param(|printString|,0)
+|out|<:param(|reverseFormat|,0)
+|out|<:param(|reverseFormat|,0)
+|out|=|out|
+|out|=|out|
+|out|=|out|
+|out|=|out|
+|out|=|out|
+|out|=|out|
+|out|=|out|
+|out|=|out|
+|out|=|out|
+|out|=|out|
+|out|=|out|
+|printString(line)|=ret(|printString|)
+|printString(out)|=ret(|printString|)
+|printString(out)|=ret(|printString|)
+|printString|=|printString|
+|printString|=|printString|
+|printString|=|printString|
+|readline()|<:|line|
+|readline()|=ret(|readline|)
+|readline|=|readline|
+|reverseFormat = function(a, complement) {
+  var i, l, line, c = 1, out;
+  out = '';
+  for (l = a.length; l--; ) 
+    {
+      line = a[l];
+      for (i = line.length; i--; c++) 
+        {
+          out += complement[line[i]];
+          if (c === 60) 
+          {
+            printString(out);
+            out = '';
+            c = 0;
+          }
+        }
+    }
+  if (out.length) 
+  {
+    printString(out);
+  }
+}|=|reverseFormat|
+|reverseFormat(out, complement)|=ret(|reverseFormat|)
+|reverseFormat(out, complement)|=ret(|reverseFormat|)
+|reverseFormat|=|reverseFormat|
+|reverseFormat|=|reverseFormat|
+|reverseFormat|=|reverseFormat|
+|{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'}|<:|complement|

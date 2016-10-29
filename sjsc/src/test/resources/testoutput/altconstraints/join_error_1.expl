@@ -1,0 +1,4 @@
+join not defined on types: integer and boolean
+type source: |3| at line 2
+type source: |true| at line 1
+target term: |y.g > 7 ? y.g : x.f| at line 3

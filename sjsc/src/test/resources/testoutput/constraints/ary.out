@@ -1,0 +1,146 @@
+CheckArity(ret(|Array|))
+CheckArity(ret(|Array|))
+CheckArity(ret(|printInt|))
+CheckArity(ret(|printInt|))
+Elem(|x|)=|x[i]|
+Elem(|x|)=|x[i]|
+Elem(|y|)=|y[0]|
+Elem(|y|)=|y[i]|
+Elem(|y|)=|y[i]|
+Elem(|y|)=|y[n - 1]|
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|17|]
+MakeConcreteConstraint [term=|Array(n)|]
+MakeConcreteConstraint [term=|Array(n)|]
+MakeConcreteConstraint [term=|i + 1|]
+MakeConcreteConstraint [term=|n - 1|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|x[i]|]
+MakeConcreteConstraint [term=|y[0]|]
+MakeConcreteConstraint [term=|y[n - 1]|]
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,1)
+TP(Array)=param(|Array|,1)
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+|0|<:|i|
+|0|<:|k|
+|0|<:|y[i]|
+|0|=Key(|y|)
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|1000|=integer
+|17|<:|n|
+|17|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|Array(n)|<:|x|
+|Array(n)|<:|y|
+|Array(n)|=ret(|Array|)
+|Array(n)|=ret(|Array|)
+|Array|=|Array|
+|Array|=|Array|
+|i + 1|<:|x[i]|
+|i + 1|=op(|i|+|1|)
+|i < n|=op(|i|<|n|)
+|i = 0|=|i|
+|i = n - 1|=|i|
+|i >= 0|=op(|i|>=|0|)
+|i++|=op(|i|++)
+|i--|=op(|i|--)
+|i|=Key(|x|)
+|i|=Key(|x|)
+|i|=Key(|y|)
+|i|=Key(|y|)
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|k < 1000|=op(|k|<|1000|)
+|k = 0|=|k|
+|k++|=op(|k|++)
+|k|=|k|
+|k|=|k|
+|k|=|k|
+|n - 1|<:|i|
+|n - 1|=Key(|y|)
+|n - 1|=op(|n|-|1|)
+|n - 1|=op(|n|-|1|)
+|n|<:param(|Array|,0)
+|n|<:param(|Array|,0)
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|printInt(y[0])|=ret(|printInt|)
+|printInt(y[n - 1])|=ret(|printInt|)
+|printInt|=|printInt|
+|printInt|=|printInt|
+|x[i] = i + 1|=|x[i]|
+|x[i]|<:|y[i]|
+|x|=|x|
+|x|=|x|
+|y[0]|<:param(|printInt|,0)
+|y[i] += x[i]|=|y[i]|
+|y[i] = 0|=|y[i]|
+|y[n - 1]|<:param(|printInt|,0)
+|y|=|y|
+|y|=|y|
+|y|=|y|
+|y|=|y|

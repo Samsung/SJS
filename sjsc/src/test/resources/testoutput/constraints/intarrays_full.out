@@ -1,0 +1,57 @@
+CheckArity(ret(|sum|))
+Elem(|a|)=|a[i]|
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|3|]
+MakeConcreteConstraint [term=|4|]
+MakeConcreteConstraint [term=|5|]
+MakeConcreteConstraint [term=|[1, 2, 3, 4, 5]|]
+MakeConcreteConstraint [term=|arr|]
+MakeConcreteConstraint [term=|result + a[i]|]
+MakeConcreteConstraint [term=|sum(arr)|]
+TP([1, 2, 3, 4, 5])=Elem(ret(prop(|[1, 2, 3, 4, 5]|,concat)))
+TP([1, 2, 3, 4, 5])=Elem(ret(prop(|[1, 2, 3, 4, 5]|,reverse)))
+TP([1, 2, 3, 4, 5])=Elem(|[1, 2, 3, 4, 5]|)
+TP([1, 2, 3, 4, 5])=param(prop(|[1, 2, 3, 4, 5]|,push),0)
+TP([1, 2, 3, 4, 5])=ret(prop(|[1, 2, 3, 4, 5]|,pop))
+TP([1, 2, 3, 4, 5])=ret(prop(|[1, 2, 3, 4, 5]|,shift))
+param(|function sum|,0)=|a|
+|0|<:|i|
+|0|<:|result|
+|0|=integer
+|0|=integer
+|1|<:Elem(|[1, 2, 3, 4, 5]|)
+|1|=integer
+|2|<:Elem(|[1, 2, 3, 4, 5]|)
+|2|=integer
+|3|<:Elem(|[1, 2, 3, 4, 5]|)
+|3|=integer
+|4|<:Elem(|[1, 2, 3, 4, 5]|)
+|4|=integer
+|5|<:Elem(|[1, 2, 3, 4, 5]|)
+|5|=integer
+|[1, 2, 3, 4, 5]|<:|arr|
+|a.length|=prop(|a|,length)
+|arr|<:param(|sum|,0)
+|arr|=|arr|
+|a|=|a|
+|a|=|a|
+|function sum|<:|sum|
+|i < a.length|=op(|i|<|a.length|)
+|i++|=op(|i|++)
+|i|=Key(|a|)
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|result + a[i]|<:|result|
+|result + a[i]|=op(|result|+|a[i]|)
+|result = result + a[i]|=|result|
+|result|<:ret(|function sum|)
+|result|=|result|
+|result|=|result|
+|result|=|result|
+|sum(arr)|<:|r|
+|sum(arr)|=ret(|sum|)
+|sum|=|sum|

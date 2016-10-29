@@ -1,0 +1,37 @@
+'black' --> string
+'hello' --> string
+'white' --> string
+f --> (string) -> string
+f --> (string) -> string
+f(null) --> string
+function f(p) {
+  var t = isNull(p) ? 'hello' : p;
+  if (t == 'white') 
+  t = 'black';
+  return t;
+}
+ --> (string) -> string
+function isNull(q) {
+  return q == null;
+}
+ --> ({  |  }) -> boolean
+isNull --> ({  |  }) -> boolean
+isNull --> ({  |  }) -> boolean
+isNull(p) --> boolean
+isNull(p) ? 'hello' : p --> string
+null --> string
+null --> {  |  }
+p --> string
+p --> string
+p --> string
+print --> (string) -> void
+print(f(null)) --> void
+q --> {  |  }
+q --> {  |  }
+q == null --> boolean
+t --> string
+t --> string
+t --> string
+t --> string
+t = 'black' --> string
+t == 'white' --> boolean

@@ -1,0 +1,50 @@
+19 --> integer
+3 --> integer
+C --> ctor<0>[{  | x: integer, m: []() -> integer }](integer) -> { m: []() -> integer | x: integer }
+C --> ctor<0>[{  | x: integer, m: []() -> integer }](integer) -> { m: []() -> integer | x: integer }
+C --> ctor<0>[{  | x: integer, m: []() -> integer }](integer) -> { m: []() -> integer | x: integer }
+C --> ctor<0>[{  | x: integer, m: []() -> integer }](integer) -> { m: []() -> integer | x: integer }
+C.prototype --> {  | x: integer, m: []() -> integer }
+C.prototype --> {  | x: integer, m: []() -> integer }
+C.prototype = {x: 3, m: function() {
+  return this.x;
+}} --> {  | x: integer, m: []() -> integer }
+C.prototype.m --> []() -> integer
+C.prototype.m() --> integer
+C.prototype.m().toString --> []() -> string INTERSECT [](integer) -> string
+C.prototype.m().toString() --> string
+c --> { m: []() -> integer | x: integer }
+c --> { m: []() -> integer | x: integer }
+c.m --> []() -> integer
+c.m() --> integer
+c.m().toString --> []() -> string INTERSECT [](integer) -> string
+c.m().toString() --> string
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log(s) --> void
+console.log(s) --> void
+function C(v) {
+  this.x = v;
+}
+ --> ctor<0>[{  | x: integer, m: []() -> integer }](integer) -> { m: []() -> integer | x: integer }
+function() {
+  return this.x;
+} --> [{ x: integer |  }]() -> integer
+new C(19) --> { m: []() -> integer | x: integer }
+s --> string
+s --> string
+s --> string
+s --> string
+s = c.m().toString() --> string
+this --> { m: []() -> integer | x: integer }
+this --> { x: integer |  }
+this.x --> integer
+this.x --> integer
+this.x = v --> integer
+v --> integer
+v --> integer
+{x: 3, m: function() {
+  return this.x;
+}} --> {  | x: integer, m: []() -> integer }

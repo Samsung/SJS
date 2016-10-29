@@ -1,0 +1,8 @@
+D.prototype (line 8) --> [MRO=[], MRW=[a]]
+D.prototype (line 9) --> [MRO=[], MRW=[a]]
+D.prototype = new C() (line 8) --> [MRO=[], MRW=[a]]
+new C() (line 8) --> [MRO=[], MRW=[a]]
+new D() (line 11) --> [MRO=[], MRW=[a]]
+this (line 2) --> [MRO=[], MRW=[a]]
+this (line 3) --> [MRO=[], MRW=[a]]
+this (line 6) --> [MRO=[], MRW=[a]]

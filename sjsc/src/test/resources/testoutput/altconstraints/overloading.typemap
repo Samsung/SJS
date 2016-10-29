@@ -1,0 +1,11 @@
+16 --> integer
+17 --> integer
+i --> integer
+i --> integer
+i --> integer
+i.toString --> []() -> string INTERSECT [](integer) -> string
+i.toString --> []() -> string INTERSECT [](integer) -> string
+i.toString() --> string
+i.toString(16) --> string
+s --> string
+t --> string

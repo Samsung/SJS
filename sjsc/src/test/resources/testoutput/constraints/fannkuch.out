@@ -1,0 +1,426 @@
+CheckArity(ret(|(perm1[i] + 1).toString|))
+CheckArity(ret(|Array|))
+CheckArity(ret(|Array|))
+CheckArity(ret(|Array|))
+CheckArity(ret(|Array|))
+CheckArity(ret(|fannkuch|))
+CheckArity(ret(|printString|))
+CheckArity(ret(|printString|))
+Elem(|count|)=|count[r - 1]|
+Elem(|count|)=|count[r]|
+Elem(|count|)=|count[r]|
+Elem(|count|)=|count[r]|
+Elem(|maxPerm|)=|maxPerm[i]|
+Elem(|perm1|)=|perm1[0]|
+Elem(|perm1|)=|perm1[0]|
+Elem(|perm1|)=|perm1[i]|
+Elem(|perm1|)=|perm1[i]|
+Elem(|perm1|)=|perm1[i]|
+Elem(|perm1|)=|perm1[i]|
+Elem(|perm1|)=|perm1[i]|
+Elem(|perm1|)=|perm1[j]|
+Elem(|perm1|)=|perm1[m]|
+Elem(|perm1|)=|perm1[r]|
+Elem(|perm|)=|perm[0]|
+Elem(|perm|)=|perm[i]|
+Elem(|perm|)=|perm[i]|
+Elem(|perm|)=|perm[i]|
+Elem(|perm|)=|perm[k - i]|
+Elem(|perm|)=|perm[k - i]|
+MakeConcreteConstraint [term=|""|]
+MakeConcreteConstraint [term=|"Pfannkuchen(" + n + ") = " + fannkuch(n)|]
+MakeConcreteConstraint [term=|(k + 1) >> 1|]
+MakeConcreteConstraint [term=|(perm1[i] + 1).toString()|]
+MakeConcreteConstraint [term=|(perm1[i] + 1)|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|10|]
+MakeConcreteConstraint [term=|Array(n)|]
+MakeConcreteConstraint [term=|Array(n)|]
+MakeConcreteConstraint [term=|Array(n)|]
+MakeConcreteConstraint [term=|Array(n)|]
+MakeConcreteConstraint [term=|count[r] - 1|]
+MakeConcreteConstraint [term=|flipsCount|]
+MakeConcreteConstraint [term=|i + 1|]
+MakeConcreteConstraint [term=|i|]
+MakeConcreteConstraint [term=|j|]
+MakeConcreteConstraint [term=|n - 1|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|n|]
+MakeConcreteConstraint [term=|perm0|]
+MakeConcreteConstraint [term=|perm1[0]|]
+MakeConcreteConstraint [term=|perm1[i]|]
+MakeConcreteConstraint [term=|perm1[i]|]
+MakeConcreteConstraint [term=|perm1[j]|]
+MakeConcreteConstraint [term=|perm[0]|]
+MakeConcreteConstraint [term=|perm[i]|]
+MakeConcreteConstraint [term=|perm[k - i]|]
+MakeConcreteConstraint [term=|r|]
+MakeConcreteConstraint [term=|s|]
+MakeConcreteConstraint [term=|temp|]
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,1)
+TP(Array)=param(|Array|,1)
+TP(Array)=param(|Array|,1)
+TP(Array)=param(|Array|,1)
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+param(|function fannkuch|,0)=|n|
+|!((k = perm[0]) == 0)|=op(!|((k = perm[0]) == 0)|)
+|!(perm1[0] == 0 || perm1[m] == m)|=op(!|(perm1[0] == 0 || perm1[m] == m)|)
+|""|<:|s|
+|""|=string
+|") = "|=string
+|"Pfannkuchen(" + n + ") = " + fannkuch(n)|<:param(|printString|,0)
+|"Pfannkuchen(" + n + ") = " + fannkuch(n)|=op(|"Pfannkuchen(" + n + ") = "|+|fannkuch(n)|)
+|"Pfannkuchen(" + n + ") = "|=op(|"Pfannkuchen(" + n|+|") = "|)
+|"Pfannkuchen(" + n|=op(|"Pfannkuchen("|+|n|)
+|"Pfannkuchen("|=string
+|((k = perm[0]) == 0)|=|(k = perm[0]) == 0|
+|(k + 1) >> 1|<:|k2|
+|(k + 1) >> 1|=op(|(k + 1)|>>|1|)
+|(k + 1)|=|k + 1|
+|(k = perm[0]) == 0|=op(|(k = perm[0])|==|0|)
+|(k = perm[0])|=|k = perm[0]|
+|(perm1[0] == 0 || perm1[m] == m)|=|perm1[0] == 0 || perm1[m] == m|
+|(perm1[i] + 1).toString()|<:|s|
+|(perm1[i] + 1).toString()|=ret(|(perm1[i] + 1).toString|)
+|(perm1[i] + 1).toString|=prop(|(perm1[i] + 1)|,toString)
+|(perm1[i] + 1)|=|perm1[i] + 1|
+|0|<:|check|
+|0|<:|flipsCount|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|maxFlipsCount|
+|0|=Key(|perm1|)
+|0|=Key(|perm1|)
+|0|=Key(|perm|)
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|10|<:|n|
+|10|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|30|=integer
+|Array(n)|<:|count|
+|Array(n)|<:|maxPerm|
+|Array(n)|<:|perm1|
+|Array(n)|<:|perm|
+|Array(n)|=ret(|Array|)
+|Array(n)|=ret(|Array|)
+|Array(n)|=ret(|Array|)
+|Array(n)|=ret(|Array|)
+|Array|=|Array|
+|Array|=|Array|
+|Array|=|Array|
+|Array|=|Array|
+|check < 30|=op(|check|<|30|)
+|check++|=op(|check|++)
+|check|=|check|
+|check|=|check|
+|count[r - 1] = r|=|count[r - 1]|
+|count[r] - 1|<:|count[r]|
+|count[r] - 1|=op(|count[r]|-|1|)
+|count[r] = count[r] - 1|=|count[r]|
+|count[r] > 0|=op(|count[r]|>|0|)
+|count|=|count|
+|count|=|count|
+|count|=|count|
+|count|=|count|
+|fannkuch(n)|=ret(|fannkuch|)
+|fannkuch|=|fannkuch|
+|flipsCount > maxFlipsCount|=op(|flipsCount|>|maxFlipsCount|)
+|flipsCount++|=op(|flipsCount|++)
+|flipsCount|<:|maxFlipsCount|
+|flipsCount|=|flipsCount|
+|flipsCount|=|flipsCount|
+|flipsCount|=|flipsCount|
+|function fannkuch|<:|fannkuch|
+|i + 1|<:|j|
+|i + 1|=op(|i|+|1|)
+|i < k2|=op(|i|<|k2|)
+|i < n|=op(|i|<|n|)
+|i < n|=op(|i|<|n|)
+|i < n|=op(|i|<|n|)
+|i < n|=op(|i|<|n|)
+|i < r|=op(|i|<|r|)
+|i = j|=|i|
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i|<:|perm1[i]|
+|i|=Key(|maxPerm|)
+|i|=Key(|perm1|)
+|i|=Key(|perm1|)
+|i|=Key(|perm1|)
+|i|=Key(|perm1|)
+|i|=Key(|perm1|)
+|i|=Key(|perm|)
+|i|=Key(|perm|)
+|i|=Key(|perm|)
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|j|<:|i|
+|j|=Key(|perm1|)
+|j|=|j|
+|j|=|j|
+|k + 1|=op(|k|+|1|)
+|k - i|=Key(|perm|)
+|k - i|=Key(|perm|)
+|k - i|=op(|k|-|i|)
+|k - i|=op(|k|-|i|)
+|k = perm[0]|=|k|
+|k2|=|k2|
+|k|=|k|
+|k|=|k|
+|k|=|k|
+|k|=|k|
+|maxFlipsCount = flipsCount|=|maxFlipsCount|
+|maxFlipsCount|<:ret(|function fannkuch|)
+|maxFlipsCount|=|maxFlipsCount|
+|maxFlipsCount|=|maxFlipsCount|
+|maxFlipsCount|=|maxFlipsCount|
+|maxPerm[i] = perm1[i]|=|maxPerm[i]|
+|maxPerm|=|maxPerm|
+|m|=Key(|perm1|)
+|m|=|m|
+|m|=|m|
+|n - 1|<:|m|
+|n - 1|=op(|n|-|1|)
+|n|<:param(|Array|,0)
+|n|<:param(|Array|,0)
+|n|<:param(|Array|,0)
+|n|<:param(|Array|,0)
+|n|<:param(|fannkuch|,0)
+|n|<:|r|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|n|=|n|
+|perm0|<:|perm1[r]|
+|perm0|=|perm0|
+|perm1[0] == 0 || perm1[m] == m|=op(|perm1[0] == 0||||perm1[m] == m|)
+|perm1[0] == 0|=op(|perm1[0]|==|0|)
+|perm1[0]|<:|perm0|
+|perm1[i] + 1|=op(|perm1[i]|+|1|)
+|perm1[i] = i|=|perm1[i]|
+|perm1[i] = perm1[j]|=|perm1[i]|
+|perm1[i]|<:|maxPerm[i]|
+|perm1[i]|<:|perm[i]|
+|perm1[j]|<:|perm1[i]|
+|perm1[m] == m|=op(|perm1[m]|==|m|)
+|perm1[r] = perm0|=|perm1[r]|
+|perm1|=|perm1|
+|perm1|=|perm1|
+|perm1|=|perm1|
+|perm1|=|perm1|
+|perm1|=|perm1|
+|perm1|=|perm1|
+|perm1|=|perm1|
+|perm1|=|perm1|
+|perm1|=|perm1|
+|perm1|=|perm1|
+|perm[0]|<:|k|
+|perm[i] = perm1[i]|=|perm[i]|
+|perm[i] = perm[k - i]|=|perm[i]|
+|perm[i]|<:|temp|
+|perm[k - i] = temp|=|perm[k - i]|
+|perm[k - i]|<:|perm[i]|
+|perm|=|perm|
+|perm|=|perm|
+|perm|=|perm|
+|perm|=|perm|
+|perm|=|perm|
+|perm|=|perm|
+|printString("Pfannkuchen(" + n + ") = " + fannkuch(n))|=ret(|printString|)
+|printString(s)|=ret(|printString|)
+|printString|=|printString|
+|printString|=|printString|
+|r != 1|=op(|r|!=|1|)
+|r - 1|=Key(|count|)
+|r - 1|=op(|r|-|1|)
+|r == n|=op(|r|==|n|)
+|r++|=op(|r|++)
+|r--|=op(|r|--)
+|r|<:|count[r - 1]|
+|r|=Key(|count|)
+|r|=Key(|count|)
+|r|=Key(|count|)
+|r|=Key(|perm1|)
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|r|=|r|
+|s += (perm1[i] + 1).toString()|=|s|
+|s|<:param(|printString|,0)
+|s|=|s|
+|s|=|s|
+|temp|<:|perm[k - i]|
+|temp|=|temp|
+|true|=boolean
+|true|=boolean

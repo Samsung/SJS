@@ -1,0 +1,295 @@
+CheckArity(ret(|Array|))
+CheckArity(ret(|Array|))
+CheckArity(ret(|mkmatrix|))
+CheckArity(ret(|mkmatrix|))
+CheckArity(ret(|mkmatrix|))
+CheckArity(ret(|mmult|))
+CheckArity(ret(|printInt|))
+CheckArity(ret(|printInt|))
+CheckArity(ret(|printInt|))
+CheckArity(ret(|printInt|))
+Elem(|m1[i]|)=|m1[i][k]|
+Elem(|m1|)=|m1[i]|
+Elem(|m2[k]|)=|m2[k][j]|
+Elem(|m2|)=|m2[k]|
+Elem(|m3[i]|)=|m3[i][j]|
+Elem(|m3|)=|m3[i]|
+Elem(|m[i]|)=|m[i][j]|
+Elem(|mm[0]|)=|mm[0][0]|
+Elem(|mm[2]|)=|mm[2][3]|
+Elem(|mm[3]|)=|mm[3][2]|
+Elem(|mm[4]|)=|mm[4][4]|
+Elem(|mm|)=|mm[0]|
+Elem(|mm|)=|mm[2]|
+Elem(|mm|)=|mm[3]|
+Elem(|mm|)=|mm[4]|
+Elem(|m|)=|m[i]|
+Elem(|m|)=|m[i]|
+MakeConcreteConstraint [term=op(|count|++)]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|17|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|30|]
+MakeConcreteConstraint [term=|Array(cols)|]
+MakeConcreteConstraint [term=|Array(rows)|]
+MakeConcreteConstraint [term=|SIZE|]
+MakeConcreteConstraint [term=|SIZE|]
+MakeConcreteConstraint [term=|SIZE|]
+MakeConcreteConstraint [term=|SIZE|]
+MakeConcreteConstraint [term=|SIZE|]
+MakeConcreteConstraint [term=|SIZE|]
+MakeConcreteConstraint [term=|SIZE|]
+MakeConcreteConstraint [term=|SIZE|]
+MakeConcreteConstraint [term=|cols|]
+MakeConcreteConstraint [term=|m1[i][k] * m2[k][j]|]
+MakeConcreteConstraint [term=|m1|]
+MakeConcreteConstraint [term=|m2|]
+MakeConcreteConstraint [term=|mkmatrix(SIZE, SIZE)|]
+MakeConcreteConstraint [term=|mkmatrix(SIZE, SIZE)|]
+MakeConcreteConstraint [term=|mkmatrix(SIZE, SIZE)|]
+MakeConcreteConstraint [term=|mm[0][0]|]
+MakeConcreteConstraint [term=|mm[2][3]|]
+MakeConcreteConstraint [term=|mm[3][2]|]
+MakeConcreteConstraint [term=|mm[4][4]|]
+MakeConcreteConstraint [term=|mm|]
+MakeConcreteConstraint [term=|rows|]
+MakeConcreteConstraint [term=|val|]
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),concat)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(prop(ret(|Array|),reverse)))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=Elem(ret(|Array|))
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(prop(ret(|Array|),push),0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,0)
+TP(Array)=param(|Array|,1)
+TP(Array)=param(|Array|,1)
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),pop))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+TP(Array)=ret(prop(ret(|Array|),shift))
+op(|count|++)<:|m[i][j]|
+param(|function mkmatrix|,0)=|rows|
+param(|function mkmatrix|,1)=|cols|
+param(|function mmult|,0)=|rows|
+param(|function mmult|,1)=|cols|
+param(|function mmult|,2)=|m1|
+param(|function mmult|,3)=|m2|
+param(|function mmult|,4)=|m3|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|j|
+|0|<:|j|
+|0|<:|k|
+|0|<:|val|
+|0|=Key(|mm[0]|)
+|0|=Key(|mm|)
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|17|<:|n|
+|17|=integer
+|1|<:|count|
+|1|=integer
+|2|=Key(|mm[3]|)
+|2|=Key(|mm|)
+|2|=integer
+|2|=integer
+|30|<:|SIZE|
+|30|=integer
+|3|=Key(|mm[2]|)
+|3|=Key(|mm|)
+|3|=integer
+|3|=integer
+|4|=Key(|mm[4]|)
+|4|=Key(|mm|)
+|4|=integer
+|4|=integer
+|Array(cols)|<:|m[i]|
+|Array(cols)|=ret(|Array|)
+|Array(rows)|<:|m|
+|Array(rows)|=ret(|Array|)
+|Array|=|Array|
+|Array|=|Array|
+|SIZE|<:param(|mkmatrix|,0)
+|SIZE|<:param(|mkmatrix|,0)
+|SIZE|<:param(|mkmatrix|,0)
+|SIZE|<:param(|mkmatrix|,1)
+|SIZE|<:param(|mkmatrix|,1)
+|SIZE|<:param(|mkmatrix|,1)
+|SIZE|<:param(|mmult|,0)
+|SIZE|<:param(|mmult|,1)
+|SIZE|=|SIZE|
+|SIZE|=|SIZE|
+|SIZE|=|SIZE|
+|SIZE|=|SIZE|
+|SIZE|=|SIZE|
+|SIZE|=|SIZE|
+|SIZE|=|SIZE|
+|SIZE|=|SIZE|
+|cols|<:param(|Array|,0)
+|cols|=|cols|
+|cols|=|cols|
+|cols|=|cols|
+|cols|=|cols|
+|count++|=op(|count|++)
+|count|=|count|
+|function mkmatrix|<:|mkmatrix|
+|function mmult|<:|mmult|
+|i < n|=op(|i|<|n|)
+|i < rows|=op(|i|<|rows|)
+|i < rows|=op(|i|<|rows|)
+|i = 0|=|i|
+|i = 0|=|i|
+|i = 0|=|i|
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i|=Key(|m1|)
+|i|=Key(|m3|)
+|i|=Key(|m|)
+|i|=Key(|m|)
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|j < cols|=op(|j|<|cols|)
+|j < cols|=op(|j|<|cols|)
+|j = 0|=|j|
+|j = 0|=|j|
+|j++|=op(|j|++)
+|j++|=op(|j|++)
+|j|=Key(|m2[k]|)
+|j|=Key(|m3[i]|)
+|j|=Key(|m[i]|)
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|k < cols|=op(|k|<|cols|)
+|k = 0|=|k|
+|k++|=op(|k|++)
+|k|=Key(|m1[i]|)
+|k|=Key(|m2|)
+|k|=|k|
+|k|=|k|
+|k|=|k|
+|k|=|k|
+|k|=|k|
+|m1[i][k] * m2[k][j]|<:|val|
+|m1[i][k] * m2[k][j]|=op(|m1[i][k]|*|m2[k][j]|)
+|m1|<:param(|mmult|,2)
+|m1|=|m1|
+|m1|=|m1|
+|m2|<:param(|mmult|,3)
+|m2|=|m2|
+|m2|=|m2|
+|m3[i][j] = val|=|m3[i][j]|
+|m3|<:ret(|function mmult|)
+|m3|=|m3|
+|m3|=|m3|
+|m[i] = Array(cols)|=|m[i]|
+|m[i][j] = count++|=|m[i][j]|
+|mkmatrix(SIZE, SIZE)|<:|m1|
+|mkmatrix(SIZE, SIZE)|<:|m2|
+|mkmatrix(SIZE, SIZE)|<:|mm|
+|mkmatrix(SIZE, SIZE)|=ret(|mkmatrix|)
+|mkmatrix(SIZE, SIZE)|=ret(|mkmatrix|)
+|mkmatrix(SIZE, SIZE)|=ret(|mkmatrix|)
+|mkmatrix|=|mkmatrix|
+|mkmatrix|=|mkmatrix|
+|mkmatrix|=|mkmatrix|
+|mm[0][0]|<:param(|printInt|,0)
+|mm[2][3]|<:param(|printInt|,0)
+|mm[3][2]|<:param(|printInt|,0)
+|mm[4][4]|<:param(|printInt|,0)
+|mmult(SIZE, SIZE, m1, m2, mm)|=ret(|mmult|)
+|mmult|=|mmult|
+|mm|<:param(|mmult|,4)
+|mm|=|mm|
+|mm|=|mm|
+|mm|=|mm|
+|mm|=|mm|
+|mm|=|mm|
+|m|<:ret(|function mkmatrix|)
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|n|=|n|
+|printInt(mm[0][0])|=ret(|printInt|)
+|printInt(mm[2][3])|=ret(|printInt|)
+|printInt(mm[3][2])|=ret(|printInt|)
+|printInt(mm[4][4])|=ret(|printInt|)
+|printInt|=|printInt|
+|printInt|=|printInt|
+|printInt|=|printInt|
+|printInt|=|printInt|
+|rows|<:param(|Array|,0)
+|rows|=|rows|
+|rows|=|rows|
+|rows|=|rows|
+|val += m1[i][k] * m2[k][j]|=|val|
+|val = 0|=|val|
+|val|<:|m3[i][j]|
+|val|=|val|
+|val|=|val|
+|val|=|val|

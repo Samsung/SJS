@@ -1,0 +1,4 @@
+C.prototype (line 4) --> [MRO=[f], MRW=[]]
+C.prototype (line 5) --> [MRO=[f], MRW=[]]
+new C() (line 7) --> [MRO=[f], MRW=[]]
+this (line 2) --> [MRO=[f], MRW=[]]

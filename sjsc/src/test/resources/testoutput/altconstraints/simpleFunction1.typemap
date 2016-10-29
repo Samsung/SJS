@@ -1,0 +1,15 @@
+2 --> integer
+3 --> integer
+f --> (integer) -> boolean
+f --> (integer) -> boolean
+f(y) --> boolean
+function f(x) {
+  return x > 2;
+}
+ --> (integer) -> boolean
+x --> integer
+x --> integer
+x > 2 --> boolean
+y --> integer
+y --> integer
+z --> boolean

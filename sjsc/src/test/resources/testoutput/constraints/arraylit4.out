@@ -1,0 +1,187 @@
+CheckArity(ret(|a.pop|))
+CheckArity(ret(|a.pop|))
+CheckArity(ret(|a.push|))
+CheckArity(ret(|a.push|))
+CheckArity(ret(|a.push|))
+CheckArity(ret(|console.assert|))
+CheckArity(ret(|console.assert|))
+CheckArity(ret(|console.assert|))
+CheckArity(ret(|console.assert|))
+CheckArity(ret(|console.assert|))
+CheckArity(ret(|console.assert|))
+CheckArity(ret(|console.assert|))
+CheckArity(ret(|console.assert|))
+CheckArity(ret(|console.assert|))
+CheckArity(ret(|console.assert|))
+CheckArity(ret(|console.assert|))
+Elem(|a|)=|a[0]|
+Elem(|a|)=|a[1]|
+Elem(|a|)=|a[2]|
+Elem(|a|)=|a[3]|
+Elem(|a|)=|a[4]|
+MakeConcreteConstraint [term=|10|]
+MakeConcreteConstraint [term=|11|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|3|]
+MakeConcreteConstraint [term=|4|]
+MakeConcreteConstraint [term=|9|]
+MakeConcreteConstraint [term=|[1, 2, 3, 4]|]
+MakeConcreteConstraint [term=|a.length == 2|]
+MakeConcreteConstraint [term=|a.length == 3|]
+MakeConcreteConstraint [term=|a.length == 4|]
+MakeConcreteConstraint [term=|a.length == 5|]
+MakeConcreteConstraint [term=|a.pop()|]
+MakeConcreteConstraint [term=|a.pop()|]
+MakeConcreteConstraint [term=|a[0] == 1|]
+MakeConcreteConstraint [term=|a[1] == 2|]
+MakeConcreteConstraint [term=|a[2] == 9|]
+MakeConcreteConstraint [term=|a[3] == 10|]
+MakeConcreteConstraint [term=|a[4] == 11|]
+MakeConcreteConstraint [term=|a|]
+MakeConcreteConstraint [term=|a|]
+MakeConcreteConstraint [term=|a|]
+MakeConcreteConstraint [term=|a|]
+MakeConcreteConstraint [term=|a|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|x == 4|]
+MakeConcreteConstraint [term=|y == 3|]
+TP([1, 2, 3, 4])=Elem(ret(prop(|[1, 2, 3, 4]|,concat)))
+TP([1, 2, 3, 4])=Elem(ret(prop(|[1, 2, 3, 4]|,reverse)))
+TP([1, 2, 3, 4])=Elem(|[1, 2, 3, 4]|)
+TP([1, 2, 3, 4])=param(prop(|[1, 2, 3, 4]|,push),0)
+TP([1, 2, 3, 4])=ret(prop(|[1, 2, 3, 4]|,pop))
+TP([1, 2, 3, 4])=ret(prop(|[1, 2, 3, 4]|,shift))
+|0|=Key(|a|)
+|0|=integer
+|10|<:param(|a.push|,0)
+|10|=integer
+|10|=integer
+|11|<:param(|a.push|,0)
+|11|=integer
+|11|=integer
+|1|<:Elem(|[1, 2, 3, 4]|)
+|1|=Key(|a|)
+|1|=integer
+|1|=integer
+|1|=integer
+|2|<:Elem(|[1, 2, 3, 4]|)
+|2|=Key(|a|)
+|2|=integer
+|2|=integer
+|2|=integer
+|2|=integer
+|3|<:Elem(|[1, 2, 3, 4]|)
+|3|=Key(|a|)
+|3|=integer
+|3|=integer
+|3|=integer
+|3|=integer
+|4|<:Elem(|[1, 2, 3, 4]|)
+|4|=Key(|a|)
+|4|=integer
+|4|=integer
+|4|=integer
+|4|=integer
+|5|=integer
+|9|<:param(|a.push|,0)
+|9|=integer
+|9|=integer
+|[1, 2, 3, 4]|<:|a|
+|a.length == 2|<:param(|console.assert|,0)
+|a.length == 2|=op(|a.length|==|2|)
+|a.length == 3|<:param(|console.assert|,0)
+|a.length == 3|=op(|a.length|==|3|)
+|a.length == 4|<:param(|console.assert|,0)
+|a.length == 4|=op(|a.length|==|4|)
+|a.length == 5|<:param(|console.assert|,0)
+|a.length == 5|=op(|a.length|==|5|)
+|a.length|=prop(|a|,length)
+|a.length|=prop(|a|,length)
+|a.length|=prop(|a|,length)
+|a.length|=prop(|a|,length)
+|a.pop()|<:|x|
+|a.pop()|<:|y|
+|a.pop()|=ret(|a.pop|)
+|a.pop()|=ret(|a.pop|)
+|a.pop|=prop(|a|,pop)
+|a.pop|=prop(|a|,pop)
+|a.push(10)|=ret(|a.push|)
+|a.push(11)|=ret(|a.push|)
+|a.push(9)|=ret(|a.push|)
+|a.push|=prop(|a|,push)
+|a.push|=prop(|a|,push)
+|a.push|=prop(|a|,push)
+|a[0] == 1|<:param(|console.assert|,0)
+|a[0] == 1|=op(|a[0]|==|1|)
+|a[1] == 2|<:param(|console.assert|,0)
+|a[1] == 2|=op(|a[1]|==|2|)
+|a[2] == 9|<:param(|console.assert|,0)
+|a[2] == 9|=op(|a[2]|==|9|)
+|a[3] == 10|<:param(|console.assert|,0)
+|a[3] == 10|=op(|a[3]|==|10|)
+|a[4] == 11|<:param(|console.assert|,0)
+|a[4] == 11|=op(|a[4]|==|11|)
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|a|=|a|
+|console.assert(a.length == 2)|=ret(|console.assert|)
+|console.assert(a.length == 3)|=ret(|console.assert|)
+|console.assert(a.length == 4)|=ret(|console.assert|)
+|console.assert(a.length == 5)|=ret(|console.assert|)
+|console.assert(a[0] == 1)|=ret(|console.assert|)
+|console.assert(a[1] == 2)|=ret(|console.assert|)
+|console.assert(a[2] == 9)|=ret(|console.assert|)
+|console.assert(a[3] == 10)|=ret(|console.assert|)
+|console.assert(a[4] == 11)|=ret(|console.assert|)
+|console.assert(x == 4)|=ret(|console.assert|)
+|console.assert(y == 3)|=ret(|console.assert|)
+|console.assert|=prop(|console|,assert)
+|console.assert|=prop(|console|,assert)
+|console.assert|=prop(|console|,assert)
+|console.assert|=prop(|console|,assert)
+|console.assert|=prop(|console|,assert)
+|console.assert|=prop(|console|,assert)
+|console.assert|=prop(|console|,assert)
+|console.assert|=prop(|console|,assert)
+|console.assert|=prop(|console|,assert)
+|console.assert|=prop(|console|,assert)
+|console.assert|=prop(|console|,assert)
+|console|=|console|
+|console|=|console|
+|console|=|console|
+|console|=|console|
+|console|=|console|
+|console|=|console|
+|console|=|console|
+|console|=|console|
+|console|=|console|
+|console|=|console|
+|console|=|console|
+|x == 4|<:param(|console.assert|,0)
+|x == 4|=op(|x|==|4|)
+|x|=|x|
+|y == 3|<:param(|console.assert|,0)
+|y == 3|=op(|y|==|3|)
+|y|=|y|

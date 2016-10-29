@@ -1,0 +1,169 @@
+'' --> string
+'' --> string
+'>' --> string
+'A' --> string
+'A' --> string
+'A' --> string
+'A' --> string
+'B' --> string
+'B' --> string
+'C' --> string
+'C' --> string
+'D' --> string
+'D' --> string
+'G' --> string
+'G' --> string
+'H' --> string
+'H' --> string
+'K' --> string
+'K' --> string
+'M' --> string
+'M' --> string
+'N' --> string
+'N' --> string
+'R' --> string
+'R' --> string
+'S' --> string
+'S' --> string
+'T' --> string
+'T' --> string
+'V' --> string
+'V' --> string
+'W' --> string
+'W' --> string
+'Y' --> string
+'Y' --> string
+(line = readline()) --> string
+0 --> integer
+0 --> integer
+1 --> integer
+60 --> integer
+[] --> Array<string>
+[] --> Array<string>
+a --> Array<string>
+a --> Array<string>
+a --> Array<string>
+a.length --> integer
+a[l] --> string
+c --> integer
+c --> integer
+c --> integer
+c --> integer
+c = 0 --> integer
+c === 60 --> boolean
+c++ --> integer
+complement --> Map<string>
+complement --> Map<string>
+complement --> Map<string>
+complement --> Map<string>
+complement --> Map<string>
+complement --> Map<string>
+complement = {'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'} --> Map<string>
+complement[line[i]] --> string
+function(a, complement) {
+  var i, l, line, c = 1, out;
+  out = '';
+  for (l = a.length; l--; ) 
+    {
+      line = a[l];
+      for (i = line.length; i--; c++) 
+        {
+          out += complement[line[i]];
+          if (c === 60) 
+          {
+            printString(out);
+            out = '';
+            c = 0;
+          }
+        }
+    }
+  if (out.length) 
+  {
+    printString(out);
+  }
+} --> (Array<string>,Map<string>) -> void
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i = line.length --> integer
+i-- --> integer
+l --> integer
+l --> integer
+l --> integer
+l --> integer
+l = a.length --> integer
+l-- --> integer
+line --> string
+line --> string
+line --> string
+line --> string
+line --> string
+line --> string
+line --> string
+line --> string
+line --> string
+line = a[l] --> string
+line = readline() --> string
+line.length --> integer
+line[0] !== '>' --> boolean
+line[0] --> string
+line[i] --> string
+out += complement[line[i]] --> string
+out --> Array<string>
+out --> Array<string>
+out --> Array<string>
+out --> Array<string>
+out --> Array<string>
+out --> Array<string>
+out --> string
+out --> string
+out --> string
+out --> string
+out --> string
+out --> string
+out --> string
+out = '' --> string
+out = '' --> string
+out = [] --> Array<string>
+out = [] --> Array<string>
+out.length --> integer
+out.push --> [](string) -> integer
+out.push(line) --> integer
+printString --> (string) -> void
+printString --> (string) -> void
+printString --> (string) -> void
+printString(line) --> void
+printString(out) --> void
+printString(out) --> void
+readline --> () -> string
+readline() --> string
+reverseFormat --> (Array<string>,Map<string>) -> void
+reverseFormat --> (Array<string>,Map<string>) -> void
+reverseFormat --> (Array<string>,Map<string>) -> void
+reverseFormat --> (Array<string>,Map<string>) -> void
+reverseFormat = function(a, complement) {
+  var i, l, line, c = 1, out;
+  out = '';
+  for (l = a.length; l--; ) 
+    {
+      line = a[l];
+      for (i = line.length; i--; c++) 
+        {
+          out += complement[line[i]];
+          if (c === 60) 
+          {
+            printString(out);
+            out = '';
+            c = 0;
+          }
+        }
+    }
+  if (out.length) 
+  {
+    printString(out);
+  }
+} --> (Array<string>,Map<string>) -> void
+reverseFormat(out, complement) --> void
+reverseFormat(out, complement) --> void
+{'y': 'R', 'v': 'B', 'w': 'W', 't': 'A', 'u': 'A', 'r': 'Y', 's': 'S', 'n': 'N', 'm': 'K', 'k': 'M', 'h': 'D', 'g': 'C', 'd': 'H', 'b': 'V', 'c': 'G', 'a': 'T', 'Y': 'R', 'V': 'B', 'W': 'W', 'T': 'A', 'U': 'A', 'R': 'Y', 'S': 'S', 'N': 'N', 'M': 'K', 'K': 'M', 'H': 'D', 'G': 'C', 'D': 'H', 'B': 'V', 'C': 'G', 'A': 'T'} --> Map<string>

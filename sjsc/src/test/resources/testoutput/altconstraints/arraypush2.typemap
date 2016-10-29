@@ -1,0 +1,7 @@
+1 --> integer
+Array --> () -> Array<integer> INTERSECT (integer) -> Array<integer> INTERSECT (integer,integer) -> Array<integer>
+Array() --> Array<integer>
+a --> Array<integer>
+a --> Array<integer>
+a.push --> [](integer) -> integer
+a.push(1) --> integer

@@ -1,0 +1,7 @@
+Error on line 5: {actionAtPoint: function(place) {... is abstract
+    Note: missing read-write property 'heap'
+Error on line 11: misuse of binary operator + in "myString() + myString()"
+Error on line 11: wrong number of parameters in call: myString()
+    Note: 1 expected, 0 given
+Error on line 11: wrong number of parameters in call: myString()
+    Note: 1 expected, 0 given

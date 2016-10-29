@@ -1,0 +1,7 @@
+#!/bin/bash
+JAR=build/libs/sjsc-0.1-alpha.jar
+if [ -e "$JAR" ]; then
+    java -ea -jar $JAR --runtime-src `pwd`/src/main/resources/backend/ --ext-path `pwd`/external/ $@
+else
+    echo "error: cannot find $JAR; run 'gradle depJar'"
+fi

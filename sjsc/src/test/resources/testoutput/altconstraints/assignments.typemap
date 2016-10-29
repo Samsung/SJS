@@ -1,0 +1,10 @@
+1 --> integer
+2 --> integer
+2 --> integer
+x --> integer
+x --> integer
+x = y --> integer
+y --> integer
+y --> integer
+y --> integer
+y = 2 --> integer

@@ -1,0 +1,20 @@
+MakeConcreteConstraint [term=|3|]
+MakeConcreteConstraint [term=|undefined|]
+MakeConcreteConstraint [term=|void 3|]
+MakeConcreteConstraint [term=|void false|]
+TP(undefined)=|undefined|
+TP(void 3)=|void 3|
+TP(void false)=|void false|
+|3|<:|x|
+|3|=integer
+|3|=integer
+|false|=boolean
+|undefined|=|x|
+|void 3|=|x|
+|void false|=|x|
+|x = undefined|=|x|
+|x = void 3|=|x|
+|x = void false|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|

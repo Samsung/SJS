@@ -1,0 +1,16 @@
+0 --> integer
+1 --> integer
+1 --> integer
+2 --> integer
+3 --> integer
+[1, 2] --> Array<integer>
+[3] --> Array<integer>
+x --> Array<integer>
+x --> Array<integer>
+x --> Array<integer>
+x --> Array<integer>
+x = [3] --> Array<integer>
+x[0] --> integer
+x[1] --> integer
+y --> integer
+z --> integer

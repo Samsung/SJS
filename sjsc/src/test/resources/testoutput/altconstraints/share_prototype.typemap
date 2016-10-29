@@ -1,0 +1,101 @@
+" apples." --> string
+" ate " --> string
+" moved " --> string
+"Ed" --> string
+"m." --> string
+3 --> integer
+4 --> integer
+Animal --> ctor<0>[{  | move: [](integer) -> void }](string) -> { move: [](integer) -> void | name: string }
+Animal --> ctor<0>[{  | move: [](integer) -> void }](string) -> { move: [](integer) -> void | name: string }
+Animal --> ctor<0>[{  | move: [](integer) -> void }](string) -> { move: [](integer) -> void | name: string }
+Animal.prototype --> {  | move: [](integer) -> void }
+Animal.prototype --> {  | move: [](integer) -> void }
+Animal.prototype = new AnimalProto() --> {  | move: [](integer) -> void }
+AnimalProto --> ctor<0>[null]() -> {  | move: [](integer) -> void }
+AnimalProto --> ctor<0>[null]() -> {  | move: [](integer) -> void }
+Horse --> ctor<0>[{ move: [](integer) -> void | eatApples: [](integer) -> void }](string) -> { eatApples: [](integer) -> void, move: [](integer) -> void | name: string }
+Horse --> ctor<0>[{ move: [](integer) -> void | eatApples: [](integer) -> void }](string) -> { eatApples: [](integer) -> void, move: [](integer) -> void | name: string }
+Horse --> ctor<0>[{ move: [](integer) -> void | eatApples: [](integer) -> void }](string) -> { eatApples: [](integer) -> void, move: [](integer) -> void | name: string }
+Horse.prototype --> { move: [](integer) -> void | eatApples: [](integer) -> void }
+Horse.prototype = new HorseProto() --> { move: [](integer) -> void | eatApples: [](integer) -> void }
+HorseProto --> ctor<0>[{  | move: [](integer) -> void }]() -> { move: [](integer) -> void | eatApples: [](integer) -> void }
+HorseProto --> ctor<0>[{  | move: [](integer) -> void }]() -> { move: [](integer) -> void | eatApples: [](integer) -> void }
+HorseProto --> ctor<0>[{  | move: [](integer) -> void }]() -> { move: [](integer) -> void | eatApples: [](integer) -> void }
+HorseProto.prototype --> {  | move: [](integer) -> void }
+HorseProto.prototype = Animal.prototype --> {  | move: [](integer) -> void }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log(this.name + " ate " + numApples + " apples.") --> void
+console.log(this.name + " moved " + meters + "m.") --> void
+function Animal(theName) {
+  this.name = theName;
+}
+ --> ctor<0>[{  | move: [](integer) -> void }](string) -> { move: [](integer) -> void | name: string }
+function AnimalProto() {
+  this.move = function(meters) {
+  console.log(this.name + " moved " + meters + "m.");
+};
+}
+ --> ctor<0>[null]() -> {  | move: [](integer) -> void }
+function Horse(name) {
+  this.name = name;
+}
+ --> ctor<0>[{ move: [](integer) -> void | eatApples: [](integer) -> void }](string) -> { eatApples: [](integer) -> void, move: [](integer) -> void | name: string }
+function HorseProto() {
+  this.eatApples = function(numApples) {
+  console.log(this.name + " ate " + numApples + " apples.");
+};
+}
+ --> ctor<0>[{  | move: [](integer) -> void }]() -> { move: [](integer) -> void | eatApples: [](integer) -> void }
+function(meters) {
+  console.log(this.name + " moved " + meters + "m.");
+} --> [{ name: string |  }](integer) -> void
+function(numApples) {
+  console.log(this.name + " ate " + numApples + " apples.");
+} --> [{ name: string |  }](integer) -> void
+meters --> integer
+meters --> integer
+name --> string
+name --> string
+new AnimalProto() --> {  | move: [](integer) -> void }
+new Horse("Ed") --> { eatApples: [](integer) -> void, move: [](integer) -> void | name: string }
+new HorseProto() --> { move: [](integer) -> void | eatApples: [](integer) -> void }
+numApples --> integer
+numApples --> integer
+theName --> string
+theName --> string
+this --> {  | move: [](integer) -> void }
+this --> { eatApples: [](integer) -> void, move: [](integer) -> void | name: string }
+this --> { move: [](integer) -> void | eatApples: [](integer) -> void }
+this --> { move: [](integer) -> void | name: string }
+this --> { name: string |  }
+this --> { name: string |  }
+this.eatApples --> [](integer) -> void
+this.eatApples = function(numApples) {
+  console.log(this.name + " ate " + numApples + " apples.");
+} --> [](integer) -> void
+this.move --> [](integer) -> void
+this.move = function(meters) {
+  console.log(this.name + " moved " + meters + "m.");
+} --> [](integer) -> void
+this.name + " ate " + numApples + " apples." --> string
+this.name + " ate " + numApples --> string
+this.name + " ate " --> string
+this.name + " moved " + meters + "m." --> string
+this.name + " moved " + meters --> string
+this.name + " moved " --> string
+this.name --> string
+this.name --> string
+this.name --> string
+this.name --> string
+this.name = name --> string
+this.name = theName --> string
+x --> { eatApples: [](integer) -> void, move: [](integer) -> void | name: string }
+x --> { eatApples: [](integer) -> void, move: [](integer) -> void | name: string }
+x --> { eatApples: [](integer) -> void, move: [](integer) -> void | name: string }
+x.eatApples --> [](integer) -> void
+x.eatApples(3) --> void
+x.move --> [](integer) -> void
+x.move(4) --> void

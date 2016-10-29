@@ -1,0 +1,874 @@
+CheckArity(ret(|Body|))
+CheckArity(ret(|Body|))
+CheckArity(ret(|Body|))
+CheckArity(ret(|Body|))
+CheckArity(ret(|Body|))
+CheckArity(ret(|Math.sqrt|))
+CheckArity(ret(|Math.sqrt|))
+CheckArity(ret(|NBodySystem|))
+CheckArity(ret(|bodies.advance|))
+CheckArity(ret(|bodies.energy().toFixed|))
+CheckArity(ret(|bodies.energy().toFixed|))
+CheckArity(ret(|bodies.energy|))
+CheckArity(ret(|bodies.energy|))
+CheckArity(ret(|bodies[0].offsetMomentum|))
+CheckArity(ret(|jupiter|))
+CheckArity(ret(|neptune|))
+CheckArity(ret(|printString|))
+CheckArity(ret(|printString|))
+CheckArity(ret(|saturn|))
+CheckArity(ret(|sun|))
+CheckArity(ret(|uranus|))
+Elem(|bodies|)=|bodies[0]|
+Elem(|bodies|)=|bodies[i]|
+Elem(|this.bodies|)=|this.bodies[i]|
+Elem(|this.bodies|)=|this.bodies[i]|
+Elem(|this.bodies|)=|this.bodies[i]|
+Elem(|this.bodies|)=|this.bodies[j]|
+Elem(|this.bodies|)=|this.bodies[j]|
+MakeConcreteConstraint [term=op(-|1.03622044471123109e-01|)]
+MakeConcreteConstraint [term=op(-|1.16032004402742839e+00|)]
+MakeConcreteConstraint [term=op(-|1.51111514016986312e+01|)]
+MakeConcreteConstraint [term=op(-|2.23307578892655734e-01|)]
+MakeConcreteConstraint [term=op(-|2.59193146099879641e+01|)]
+MakeConcreteConstraint [term=op(-|4.03523417114321381e-01|)]
+MakeConcreteConstraint [term=|(bodyi.mass * bodyj.mass) / distance|]
+MakeConcreteConstraint [term=|-2.76742510726862411e-03 * DAYS_PER_YEAR|]
+MakeConcreteConstraint [term=|-2.96589568540237556e-05 * DAYS_PER_YEAR|]
+MakeConcreteConstraint [term=|-6.90460016972063023e-05 * DAYS_PER_YEAR|]
+MakeConcreteConstraint [term=|-9.51592254519715870e-05 * DAYS_PER_YEAR|]
+MakeConcreteConstraint [term=|-px / SOLAR_MASS|]
+MakeConcreteConstraint [term=|-py / SOLAR_MASS|]
+MakeConcreteConstraint [term=|-pz / SOLAR_MASS|]
+MakeConcreteConstraint [term=|0.01|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.5 * bodyi.mass * (bodyi.vx * bodyi.vx + bodyi.vy * bodyi.vy + bodyi.vz * bodyi.vz)|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|1.28943695621391310e+01|]
+MakeConcreteConstraint [term=|1.53796971148509165e+01|]
+MakeConcreteConstraint [term=|1.62824170038242295e-03 * DAYS_PER_YEAR|]
+MakeConcreteConstraint [term=|1.66007664274403694e-03 * DAYS_PER_YEAR|]
+MakeConcreteConstraint [term=|1.79258772950371181e-01|]
+MakeConcreteConstraint [term=|2.30417297573763929e-05 * DAYS_PER_YEAR|]
+MakeConcreteConstraint [term=|2.37847173959480950e-03 * DAYS_PER_YEAR|]
+MakeConcreteConstraint [term=|2.68067772490389322e-03 * DAYS_PER_YEAR|]
+MakeConcreteConstraint [term=|2.85885980666130812e-04 * SOLAR_MASS|]
+MakeConcreteConstraint [term=|2.96460137564761618e-03 * DAYS_PER_YEAR|]
+MakeConcreteConstraint [term=|20|]
+MakeConcreteConstraint [term=|3.141592653589793|]
+MakeConcreteConstraint [term=|365.24|]
+MakeConcreteConstraint [term=|4 * PI * PI|]
+MakeConcreteConstraint [term=|4.12479856412430479e+00|]
+MakeConcreteConstraint [term=|4.36624404335156298e-05 * SOLAR_MASS|]
+MakeConcreteConstraint [term=|4.84143144246472090e+00|]
+MakeConcreteConstraint [term=|4.99852801234917238e-03 * DAYS_PER_YEAR|]
+MakeConcreteConstraint [term=|5.15138902046611451e-05 * SOLAR_MASS|]
+MakeConcreteConstraint [term=|7.69901118419740425e-03 * DAYS_PER_YEAR|]
+MakeConcreteConstraint [term=|8.34336671824457987e+00|]
+MakeConcreteConstraint [term=|9.54791938424326609e-04 * SOLAR_MASS|]
+MakeConcreteConstraint [term=|9|]
+MakeConcreteConstraint [term=|9|]
+MakeConcreteConstraint [term=|Math.sqrt(dx * dx + dy * dy + dz * dz)|]
+MakeConcreteConstraint [term=|Math.sqrt(dx * dx + dy * dy + dz * dz)|]
+MakeConcreteConstraint [term=|Math|]
+MakeConcreteConstraint [term=|Math|]
+MakeConcreteConstraint [term=|SOLAR_MASS|]
+MakeConcreteConstraint [term=|[sun(), jupiter(), saturn(), uranus(), neptune()]|]
+MakeConcreteConstraint [term=|b.mass|]
+MakeConcreteConstraint [term=|b.vx * m|]
+MakeConcreteConstraint [term=|b.vy * m|]
+MakeConcreteConstraint [term=|b.vz * m|]
+MakeConcreteConstraint [term=|bodies.energy().toFixed(9)|]
+MakeConcreteConstraint [term=|bodies.energy().toFixed(9)|]
+MakeConcreteConstraint [term=|bodies.energy()|]
+MakeConcreteConstraint [term=|bodies.energy()|]
+MakeConcreteConstraint [term=|bodies.length|]
+MakeConcreteConstraint [term=|bodies[0]|]
+MakeConcreteConstraint [term=|bodies[i]|]
+MakeConcreteConstraint [term=|bodies|]
+MakeConcreteConstraint [term=|bodies|]
+MakeConcreteConstraint [term=|bodies|]
+MakeConcreteConstraint [term=|bodies|]
+MakeConcreteConstraint [term=|bodyi.x - bodyj.x|]
+MakeConcreteConstraint [term=|bodyi.x - bodyj.x|]
+MakeConcreteConstraint [term=|bodyi.y - bodyj.y|]
+MakeConcreteConstraint [term=|bodyi.y - bodyj.y|]
+MakeConcreteConstraint [term=|bodyi.z - bodyj.z|]
+MakeConcreteConstraint [term=|bodyi.z - bodyj.z|]
+MakeConcreteConstraint [term=|dt * body.vx|]
+MakeConcreteConstraint [term=|dt * body.vy|]
+MakeConcreteConstraint [term=|dt * body.vz|]
+MakeConcreteConstraint [term=|dt / (distance * distance * distance)|]
+MakeConcreteConstraint [term=|dx * bodyi.mass * mag|]
+MakeConcreteConstraint [term=|dx * bodyj.mass * mag|]
+MakeConcreteConstraint [term=|dx * dx + dy * dy + dz * dz|]
+MakeConcreteConstraint [term=|dx * dx + dy * dy + dz * dz|]
+MakeConcreteConstraint [term=|dy * bodyi.mass * mag|]
+MakeConcreteConstraint [term=|dy * bodyj.mass * mag|]
+MakeConcreteConstraint [term=|dz * bodyi.mass * mag|]
+MakeConcreteConstraint [term=|dz * bodyj.mass * mag|]
+MakeConcreteConstraint [term=|i + 1|]
+MakeConcreteConstraint [term=|i + 1|]
+MakeConcreteConstraint [term=|jupiter()|]
+MakeConcreteConstraint [term=|mass|]
+MakeConcreteConstraint [term=|method <anonymous>|]
+MakeConcreteConstraint [term=|method <anonymous>|]
+MakeConcreteConstraint [term=|method <anonymous>|]
+MakeConcreteConstraint [term=|neptune()|]
+MakeConcreteConstraint [term=|new NBodySystem([sun(), jupiter(), saturn(), uranus(), neptune()])|]
+MakeConcreteConstraint [term=|px|]
+MakeConcreteConstraint [term=|py|]
+MakeConcreteConstraint [term=|pz|]
+MakeConcreteConstraint [term=|saturn()|]
+MakeConcreteConstraint [term=|sun()|]
+MakeConcreteConstraint [term=|this.bodies.length|]
+MakeConcreteConstraint [term=|this.bodies.length|]
+MakeConcreteConstraint [term=|this.bodies[i]|]
+MakeConcreteConstraint [term=|this.bodies[i]|]
+MakeConcreteConstraint [term=|this.bodies[i]|]
+MakeConcreteConstraint [term=|this.bodies[j]|]
+MakeConcreteConstraint [term=|this.bodies[j]|]
+MakeConcreteConstraint [term=|uranus()|]
+MakeConcreteConstraint [term=|vx|]
+MakeConcreteConstraint [term=|vy|]
+MakeConcreteConstraint [term=|vz|]
+MakeConcreteConstraint [term=|x|]
+MakeConcreteConstraint [term=|y|]
+MakeConcreteConstraint [term=|z|]
+TP([sun(), jupiter(), saturn(), uranus(), neptune()])=Elem(ret(prop(|[sun(), jupiter(), saturn(), uranus(), neptune()]|,concat)))
+TP([sun(), jupiter(), saturn(), uranus(), neptune()])=Elem(ret(prop(|[sun(), jupiter(), saturn(), uranus(), neptune()]|,reverse)))
+TP([sun(), jupiter(), saturn(), uranus(), neptune()])=Elem(|[sun(), jupiter(), saturn(), uranus(), neptune()]|)
+TP([sun(), jupiter(), saturn(), uranus(), neptune()])=param(prop(|[sun(), jupiter(), saturn(), uranus(), neptune()]|,push),0)
+TP([sun(), jupiter(), saturn(), uranus(), neptune()])=ret(prop(|[sun(), jupiter(), saturn(), uranus(), neptune()]|,pop))
+TP([sun(), jupiter(), saturn(), uranus(), neptune()])=ret(prop(|[sun(), jupiter(), saturn(), uranus(), neptune()]|,shift))
+op(-|1.03622044471123109e-01|)<:param(|Body|,2)
+op(-|1.16032004402742839e+00|)<:param(|Body|,1)
+op(-|1.51111514016986312e+01|)<:param(|Body|,1)
+op(-|2.23307578892655734e-01|)<:param(|Body|,2)
+op(-|2.59193146099879641e+01|)<:param(|Body|,1)
+op(-|4.03523417114321381e-01|)<:param(|Body|,2)
+param(|constructor Body|,0)=|x|
+param(|constructor Body|,1)=|y|
+param(|constructor Body|,2)=|z|
+param(|constructor Body|,3)=|vx|
+param(|constructor Body|,4)=|vy|
+param(|constructor Body|,5)=|vz|
+param(|constructor Body|,6)=|mass|
+param(|constructor NBodySystem|,0)=|bodies|
+param(|method <anonymous>|,0)=|dt|
+param(|method <anonymous>|,0)=|px|
+param(|method <anonymous>|,1)=|py|
+param(|method <anonymous>|,2)=|pz|
+prototype(|constructor Body|)=__proto__(ret(|constructor Body|))
+prototype(|constructor NBodySystem|)=__proto__(ret(|constructor NBodySystem|))
+ret(|method <anonymous>|)=void
+ret(|method <anonymous>|)=void
+ret(|method <anonymous>|)=void
+ret(|method <anonymous>|)=void
+|(bodyi.mass * bodyj.mass) / distance|<:|e|
+|(bodyi.mass * bodyj.mass) / distance|=op(|(bodyi.mass * bodyj.mass)|/|distance|)
+|(bodyi.mass * bodyj.mass)|=|bodyi.mass * bodyj.mass|
+|(bodyi.vx * bodyi.vx + bodyi.vy * bodyi.vy + bodyi.vz * bodyi.vz)|=|bodyi.vx * bodyi.vx + bodyi.vy * bodyi.vy + bodyi.vz * bodyi.vz|
+|(distance * distance * distance)|=|distance * distance * distance|
+|-1.03622044471123109e-01|=op(-|1.03622044471123109e-01|)
+|-1.16032004402742839e+00|=op(-|1.16032004402742839e+00|)
+|-1.51111514016986312e+01|=op(-|1.51111514016986312e+01|)
+|-2.23307578892655734e-01|=op(-|2.23307578892655734e-01|)
+|-2.59193146099879641e+01|=op(-|2.59193146099879641e+01|)
+|-2.76742510726862411e-03 * DAYS_PER_YEAR|<:param(|Body|,3)
+|-2.76742510726862411e-03 * DAYS_PER_YEAR|=op(op(-|2.76742510726862411e-03|)*|DAYS_PER_YEAR|)
+|-2.76742510726862411e-03|=op(-|2.76742510726862411e-03|)
+|-2.96589568540237556e-05 * DAYS_PER_YEAR|<:param(|Body|,5)
+|-2.96589568540237556e-05 * DAYS_PER_YEAR|=op(op(-|2.96589568540237556e-05|)*|DAYS_PER_YEAR|)
+|-2.96589568540237556e-05|=op(-|2.96589568540237556e-05|)
+|-4.03523417114321381e-01|=op(-|4.03523417114321381e-01|)
+|-6.90460016972063023e-05 * DAYS_PER_YEAR|<:param(|Body|,5)
+|-6.90460016972063023e-05 * DAYS_PER_YEAR|=op(op(-|6.90460016972063023e-05|)*|DAYS_PER_YEAR|)
+|-6.90460016972063023e-05|=op(-|6.90460016972063023e-05|)
+|-9.51592254519715870e-05 * DAYS_PER_YEAR|<:param(|Body|,5)
+|-9.51592254519715870e-05 * DAYS_PER_YEAR|=op(op(-|9.51592254519715870e-05|)*|DAYS_PER_YEAR|)
+|-9.51592254519715870e-05|=op(-|9.51592254519715870e-05|)
+|-px / SOLAR_MASS|<:prop(|this|,vx)
+|-px / SOLAR_MASS|=op(op(-|px|)/|SOLAR_MASS|)
+|-px|=op(-|px|)
+|-py / SOLAR_MASS|<:prop(|this|,vy)
+|-py / SOLAR_MASS|=op(op(-|py|)/|SOLAR_MASS|)
+|-py|=op(-|py|)
+|-pz / SOLAR_MASS|<:prop(|this|,vz)
+|-pz / SOLAR_MASS|=op(op(-|pz|)/|SOLAR_MASS|)
+|-pz|=op(-|pz|)
+|0.01|<:param(|bodies.advance|,0)
+|0.01|=float
+|0.0|<:param(|Body|,0)
+|0.0|<:param(|Body|,1)
+|0.0|<:param(|Body|,2)
+|0.0|<:param(|Body|,3)
+|0.0|<:param(|Body|,4)
+|0.0|<:param(|Body|,5)
+|0.0|<:|e|
+|0.0|<:|px|
+|0.0|<:|py|
+|0.0|<:|pz|
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.5 * bodyi.mass * (bodyi.vx * bodyi.vx + bodyi.vy * bodyi.vy + bodyi.vz * bodyi.vz)|<:|e|
+|0.5 * bodyi.mass * (bodyi.vx * bodyi.vx + bodyi.vy * bodyi.vy + bodyi.vz * bodyi.vz)|=op(|0.5 * bodyi.mass|*|(bodyi.vx * bodyi.vx + bodyi.vy * bodyi.vy + bodyi.vz * bodyi.vz)|)
+|0.5 * bodyi.mass|=op(|0.5|*|bodyi.mass|)
+|0.5|=float
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|=Key(|bodies|)
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|1.03622044471123109e-01|=float
+|1.16032004402742839e+00|=float
+|1.28943695621391310e+01|<:param(|Body|,0)
+|1.28943695621391310e+01|=float
+|1.51111514016986312e+01|=float
+|1.53796971148509165e+01|<:param(|Body|,0)
+|1.53796971148509165e+01|=float
+|1.62824170038242295e-03 * DAYS_PER_YEAR|<:param(|Body|,4)
+|1.62824170038242295e-03 * DAYS_PER_YEAR|=op(|1.62824170038242295e-03|*|DAYS_PER_YEAR|)
+|1.62824170038242295e-03|=float
+|1.66007664274403694e-03 * DAYS_PER_YEAR|<:param(|Body|,3)
+|1.66007664274403694e-03 * DAYS_PER_YEAR|=op(|1.66007664274403694e-03|*|DAYS_PER_YEAR|)
+|1.66007664274403694e-03|=float
+|1.79258772950371181e-01|<:param(|Body|,2)
+|1.79258772950371181e-01|=float
+|1|=integer
+|1|=integer
+|2.23307578892655734e-01|=float
+|2.30417297573763929e-05 * DAYS_PER_YEAR|<:param(|Body|,5)
+|2.30417297573763929e-05 * DAYS_PER_YEAR|=op(|2.30417297573763929e-05|*|DAYS_PER_YEAR|)
+|2.30417297573763929e-05|=float
+|2.37847173959480950e-03 * DAYS_PER_YEAR|<:param(|Body|,4)
+|2.37847173959480950e-03 * DAYS_PER_YEAR|=op(|2.37847173959480950e-03|*|DAYS_PER_YEAR|)
+|2.37847173959480950e-03|=float
+|2.59193146099879641e+01|=float
+|2.68067772490389322e-03 * DAYS_PER_YEAR|<:param(|Body|,3)
+|2.68067772490389322e-03 * DAYS_PER_YEAR|=op(|2.68067772490389322e-03|*|DAYS_PER_YEAR|)
+|2.68067772490389322e-03|=float
+|2.76742510726862411e-03|=float
+|2.85885980666130812e-04 * SOLAR_MASS|<:param(|Body|,6)
+|2.85885980666130812e-04 * SOLAR_MASS|=op(|2.85885980666130812e-04|*|SOLAR_MASS|)
+|2.85885980666130812e-04|=float
+|2.96460137564761618e-03 * DAYS_PER_YEAR|<:param(|Body|,3)
+|2.96460137564761618e-03 * DAYS_PER_YEAR|=op(|2.96460137564761618e-03|*|DAYS_PER_YEAR|)
+|2.96460137564761618e-03|=float
+|2.96589568540237556e-05|=float
+|20|<:|n|
+|20|=integer
+|3.141592653589793|<:|PI|
+|3.141592653589793|=float
+|365.24|<:|DAYS_PER_YEAR|
+|365.24|=float
+|4 * PI * PI|<:|SOLAR_MASS|
+|4 * PI * PI|=op(|4 * PI|*|PI|)
+|4 * PI|=op(|4|*|PI|)
+|4.03523417114321381e-01|=float
+|4.12479856412430479e+00|<:param(|Body|,1)
+|4.12479856412430479e+00|=float
+|4.36624404335156298e-05 * SOLAR_MASS|<:param(|Body|,6)
+|4.36624404335156298e-05 * SOLAR_MASS|=op(|4.36624404335156298e-05|*|SOLAR_MASS|)
+|4.36624404335156298e-05|=float
+|4.84143144246472090e+00|<:param(|Body|,0)
+|4.84143144246472090e+00|=float
+|4.99852801234917238e-03 * DAYS_PER_YEAR|<:param(|Body|,4)
+|4.99852801234917238e-03 * DAYS_PER_YEAR|=op(|4.99852801234917238e-03|*|DAYS_PER_YEAR|)
+|4.99852801234917238e-03|=float
+|4|=integer
+|5.15138902046611451e-05 * SOLAR_MASS|<:param(|Body|,6)
+|5.15138902046611451e-05 * SOLAR_MASS|=op(|5.15138902046611451e-05|*|SOLAR_MASS|)
+|5.15138902046611451e-05|=float
+|6.90460016972063023e-05|=float
+|7.69901118419740425e-03 * DAYS_PER_YEAR|<:param(|Body|,4)
+|7.69901118419740425e-03 * DAYS_PER_YEAR|=op(|7.69901118419740425e-03|*|DAYS_PER_YEAR|)
+|7.69901118419740425e-03|=float
+|8.34336671824457987e+00|<:param(|Body|,0)
+|8.34336671824457987e+00|=float
+|9.51592254519715870e-05|=float
+|9.54791938424326609e-04 * SOLAR_MASS|<:param(|Body|,6)
+|9.54791938424326609e-04 * SOLAR_MASS|=op(|9.54791938424326609e-04|*|SOLAR_MASS|)
+|9.54791938424326609e-04|=float
+|9|<:param(|bodies.energy().toFixed|,0)
+|9|<:param(|bodies.energy().toFixed|,0)
+|9|=integer
+|9|=integer
+|Body|<:ctor<0>[X17](X9,X10,X11,X12,X13,X14,X15) -> X16
+|Body|<:ctor<0>[X26](X18,X19,X20,X21,X22,X23,X24) -> X25
+|Body|<:ctor<0>[X35](X27,X28,X29,X30,X31,X32,X33) -> X34
+|Body|<:ctor<0>[X44](X36,X37,X38,X39,X40,X41,X42) -> X43
+|Body|<:ctor<0>[X8](X0,X1,X2,X3,X4,X5,X6) -> X7
+|Body|=|Body|
+|Body|=|Body|
+|Body|=|Body|
+|Body|=|Body|
+|Body|=|Body|
+|DAYS_PER_YEAR|=|DAYS_PER_YEAR|
+|DAYS_PER_YEAR|=|DAYS_PER_YEAR|
+|DAYS_PER_YEAR|=|DAYS_PER_YEAR|
+|DAYS_PER_YEAR|=|DAYS_PER_YEAR|
+|DAYS_PER_YEAR|=|DAYS_PER_YEAR|
+|DAYS_PER_YEAR|=|DAYS_PER_YEAR|
+|DAYS_PER_YEAR|=|DAYS_PER_YEAR|
+|DAYS_PER_YEAR|=|DAYS_PER_YEAR|
+|DAYS_PER_YEAR|=|DAYS_PER_YEAR|
+|DAYS_PER_YEAR|=|DAYS_PER_YEAR|
+|DAYS_PER_YEAR|=|DAYS_PER_YEAR|
+|DAYS_PER_YEAR|=|DAYS_PER_YEAR|
+|Math.sqrt(dx * dx + dy * dy + dz * dz)|<:|distance|
+|Math.sqrt(dx * dx + dy * dy + dz * dz)|<:|distance|
+|Math.sqrt(dx * dx + dy * dy + dz * dz)|=ret(|Math.sqrt|)
+|Math.sqrt(dx * dx + dy * dy + dz * dz)|=ret(|Math.sqrt|)
+|Math.sqrt|=prop(|Math|,sqrt)
+|Math.sqrt|=prop(|Math|,sqrt)
+|Math|=|Math|
+|Math|=|Math|
+|NBodySystem|<:ctor<0>[X47](X45) -> X46
+|NBodySystem|=|NBodySystem|
+|PI|=|PI|
+|PI|=|PI|
+|SOLAR_MASS|<:param(|Body|,6)
+|SOLAR_MASS|=|SOLAR_MASS|
+|SOLAR_MASS|=|SOLAR_MASS|
+|SOLAR_MASS|=|SOLAR_MASS|
+|SOLAR_MASS|=|SOLAR_MASS|
+|SOLAR_MASS|=|SOLAR_MASS|
+|SOLAR_MASS|=|SOLAR_MASS|
+|SOLAR_MASS|=|SOLAR_MASS|
+|SOLAR_MASS|=|SOLAR_MASS|
+|[sun(), jupiter(), saturn(), uranus(), neptune()]|<:param(|NBodySystem|,0)
+|b.mass|<:|m|
+|b.mass|=prop(|b|,mass)
+|b.vx * m|<:|px|
+|b.vx * m|=op(|b.vx|*|m|)
+|b.vx|=prop(|b|,vx)
+|b.vy * m|<:|py|
+|b.vy * m|=op(|b.vy|*|m|)
+|b.vy|=prop(|b|,vy)
+|b.vz * m|<:|pz|
+|b.vz * m|=op(|b.vz|*|m|)
+|b.vz|=prop(|b|,vz)
+|bodies.advance(0.01)|=ret(|bodies.advance|)
+|bodies.advance|=prop(|bodies|,advance)
+|bodies.energy().toFixed(9)|<:param(|printString|,0)
+|bodies.energy().toFixed(9)|<:param(|printString|,0)
+|bodies.energy().toFixed(9)|=ret(|bodies.energy().toFixed|)
+|bodies.energy().toFixed(9)|=ret(|bodies.energy().toFixed|)
+|bodies.energy().toFixed|=prop(|bodies.energy()|,toFixed)
+|bodies.energy().toFixed|=prop(|bodies.energy()|,toFixed)
+|bodies.energy()|=ret(|bodies.energy|)
+|bodies.energy()|=ret(|bodies.energy|)
+|bodies.energy|=prop(|bodies|,energy)
+|bodies.energy|=prop(|bodies|,energy)
+|bodies.length|<:|size|
+|bodies.length|=prop(|bodies|,length)
+|bodies[0].offsetMomentum(px, py, pz)|=ret(|bodies[0].offsetMomentum|)
+|bodies[0].offsetMomentum|=prop(|bodies[0]|,offsetMomentum)
+|bodies[i]|<:|b|
+|bodies|<:prop(|this|,bodies)
+|bodies|=|bodies|
+|bodies|=|bodies|
+|bodies|=|bodies|
+|bodies|=|bodies|
+|bodies|=|bodies|
+|bodies|=|bodies|
+|bodies|=|bodies|
+|body.vx|=prop(|body|,vx)
+|body.vy|=prop(|body|,vy)
+|body.vz|=prop(|body|,vz)
+|body.x += dt * body.vx|=prop(|body|,x)
+|body.x|=prop(|body|,x)
+|body.y += dt * body.vy|=prop(|body|,y)
+|body.y|=prop(|body|,y)
+|body.z += dt * body.vz|=prop(|body|,z)
+|body.z|=prop(|body|,z)
+|bodyi.mass * bodyj.mass|=op(|bodyi.mass|*|bodyj.mass|)
+|bodyi.mass|=prop(|bodyi|,mass)
+|bodyi.mass|=prop(|bodyi|,mass)
+|bodyi.mass|=prop(|bodyi|,mass)
+|bodyi.mass|=prop(|bodyi|,mass)
+|bodyi.mass|=prop(|bodyi|,mass)
+|bodyi.vx * bodyi.vx + bodyi.vy * bodyi.vy + bodyi.vz * bodyi.vz|=op(|bodyi.vx * bodyi.vx + bodyi.vy * bodyi.vy|+|bodyi.vz * bodyi.vz|)
+|bodyi.vx * bodyi.vx + bodyi.vy * bodyi.vy|=op(|bodyi.vx * bodyi.vx|+|bodyi.vy * bodyi.vy|)
+|bodyi.vx * bodyi.vx|=op(|bodyi.vx|*|bodyi.vx|)
+|bodyi.vx -= dx * bodyj.mass * mag|=prop(|bodyi|,vx)
+|bodyi.vx|=prop(|bodyi|,vx)
+|bodyi.vx|=prop(|bodyi|,vx)
+|bodyi.vx|=prop(|bodyi|,vx)
+|bodyi.vy * bodyi.vy|=op(|bodyi.vy|*|bodyi.vy|)
+|bodyi.vy -= dy * bodyj.mass * mag|=prop(|bodyi|,vy)
+|bodyi.vy|=prop(|bodyi|,vy)
+|bodyi.vy|=prop(|bodyi|,vy)
+|bodyi.vy|=prop(|bodyi|,vy)
+|bodyi.vz * bodyi.vz|=op(|bodyi.vz|*|bodyi.vz|)
+|bodyi.vz -= dz * bodyj.mass * mag|=prop(|bodyi|,vz)
+|bodyi.vz|=prop(|bodyi|,vz)
+|bodyi.vz|=prop(|bodyi|,vz)
+|bodyi.vz|=prop(|bodyi|,vz)
+|bodyi.x - bodyj.x|<:|dx|
+|bodyi.x - bodyj.x|<:|dx|
+|bodyi.x - bodyj.x|=op(|bodyi.x|-|bodyj.x|)
+|bodyi.x - bodyj.x|=op(|bodyi.x|-|bodyj.x|)
+|bodyi.x|=prop(|bodyi|,x)
+|bodyi.x|=prop(|bodyi|,x)
+|bodyi.y - bodyj.y|<:|dy|
+|bodyi.y - bodyj.y|<:|dy|
+|bodyi.y - bodyj.y|=op(|bodyi.y|-|bodyj.y|)
+|bodyi.y - bodyj.y|=op(|bodyi.y|-|bodyj.y|)
+|bodyi.y|=prop(|bodyi|,y)
+|bodyi.y|=prop(|bodyi|,y)
+|bodyi.z - bodyj.z|<:|dz|
+|bodyi.z - bodyj.z|<:|dz|
+|bodyi.z - bodyj.z|=op(|bodyi.z|-|bodyj.z|)
+|bodyi.z - bodyj.z|=op(|bodyi.z|-|bodyj.z|)
+|bodyi.z|=prop(|bodyi|,z)
+|bodyi.z|=prop(|bodyi|,z)
+|bodyi|=|bodyi|
+|bodyi|=|bodyi|
+|bodyi|=|bodyi|
+|bodyi|=|bodyi|
+|bodyi|=|bodyi|
+|bodyi|=|bodyi|
+|bodyi|=|bodyi|
+|bodyi|=|bodyi|
+|bodyi|=|bodyi|
+|bodyi|=|bodyi|
+|bodyi|=|bodyi|
+|bodyi|=|bodyi|
+|bodyi|=|bodyi|
+|bodyi|=|bodyi|
+|bodyi|=|bodyi|
+|bodyi|=|bodyi|
+|bodyi|=|bodyi|
+|bodyi|=|bodyi|
+|bodyi|=|bodyi|
+|bodyi|=|bodyi|
+|bodyj.mass|=prop(|bodyj|,mass)
+|bodyj.mass|=prop(|bodyj|,mass)
+|bodyj.mass|=prop(|bodyj|,mass)
+|bodyj.mass|=prop(|bodyj|,mass)
+|bodyj.vx += dx * bodyi.mass * mag|=prop(|bodyj|,vx)
+|bodyj.vx|=prop(|bodyj|,vx)
+|bodyj.vy += dy * bodyi.mass * mag|=prop(|bodyj|,vy)
+|bodyj.vy|=prop(|bodyj|,vy)
+|bodyj.vz += dz * bodyi.mass * mag|=prop(|bodyj|,vz)
+|bodyj.vz|=prop(|bodyj|,vz)
+|bodyj.x|=prop(|bodyj|,x)
+|bodyj.x|=prop(|bodyj|,x)
+|bodyj.y|=prop(|bodyj|,y)
+|bodyj.y|=prop(|bodyj|,y)
+|bodyj.z|=prop(|bodyj|,z)
+|bodyj.z|=prop(|bodyj|,z)
+|bodyj|=|bodyj|
+|bodyj|=|bodyj|
+|bodyj|=|bodyj|
+|bodyj|=|bodyj|
+|bodyj|=|bodyj|
+|bodyj|=|bodyj|
+|bodyj|=|bodyj|
+|bodyj|=|bodyj|
+|bodyj|=|bodyj|
+|bodyj|=|bodyj|
+|bodyj|=|bodyj|
+|bodyj|=|bodyj|
+|bodyj|=|bodyj|
+|body|=|body|
+|body|=|body|
+|body|=|body|
+|body|=|body|
+|body|=|body|
+|body|=|body|
+|b|=|b|
+|b|=|b|
+|b|=|b|
+|b|=|b|
+|constructor Body|<:|Body|
+|constructor NBodySystem|<:|NBodySystem|
+|distance * distance * distance|=op(|distance * distance|*|distance|)
+|distance * distance|=op(|distance|*|distance|)
+|distance = Math.sqrt(dx * dx + dy * dy + dz * dz)|=|distance|
+|distance = Math.sqrt(dx * dx + dy * dy + dz * dz)|=|distance|
+|distance|=|distance|
+|distance|=|distance|
+|distance|=|distance|
+|distance|=|distance|
+|distance|=|distance|
+|distance|=|distance|
+|dt * body.vx|<:prop(|body|,x)
+|dt * body.vx|=op(|dt|*|body.vx|)
+|dt * body.vy|<:prop(|body|,y)
+|dt * body.vy|=op(|dt|*|body.vy|)
+|dt * body.vz|<:prop(|body|,z)
+|dt * body.vz|=op(|dt|*|body.vz|)
+|dt / (distance * distance * distance)|<:|mag|
+|dt / (distance * distance * distance)|=op(|dt|/|(distance * distance * distance)|)
+|dt|=|dt|
+|dt|=|dt|
+|dt|=|dt|
+|dt|=|dt|
+|dx * bodyi.mass * mag|<:prop(|bodyj|,vx)
+|dx * bodyi.mass * mag|=op(|dx * bodyi.mass|*|mag|)
+|dx * bodyi.mass|=op(|dx|*|bodyi.mass|)
+|dx * bodyj.mass * mag|<:prop(|bodyi|,vx)
+|dx * bodyj.mass * mag|=op(|dx * bodyj.mass|*|mag|)
+|dx * bodyj.mass|=op(|dx|*|bodyj.mass|)
+|dx * dx + dy * dy + dz * dz|<:param(|Math.sqrt|,0)
+|dx * dx + dy * dy + dz * dz|<:param(|Math.sqrt|,0)
+|dx * dx + dy * dy + dz * dz|=op(|dx * dx + dy * dy|+|dz * dz|)
+|dx * dx + dy * dy + dz * dz|=op(|dx * dx + dy * dy|+|dz * dz|)
+|dx * dx + dy * dy|=op(|dx * dx|+|dy * dy|)
+|dx * dx + dy * dy|=op(|dx * dx|+|dy * dy|)
+|dx * dx|=op(|dx|*|dx|)
+|dx * dx|=op(|dx|*|dx|)
+|dx = bodyi.x - bodyj.x|=|dx|
+|dx = bodyi.x - bodyj.x|=|dx|
+|dx|=|dx|
+|dx|=|dx|
+|dx|=|dx|
+|dx|=|dx|
+|dx|=|dx|
+|dx|=|dx|
+|dx|=|dx|
+|dx|=|dx|
+|dy * bodyi.mass * mag|<:prop(|bodyj|,vy)
+|dy * bodyi.mass * mag|=op(|dy * bodyi.mass|*|mag|)
+|dy * bodyi.mass|=op(|dy|*|bodyi.mass|)
+|dy * bodyj.mass * mag|<:prop(|bodyi|,vy)
+|dy * bodyj.mass * mag|=op(|dy * bodyj.mass|*|mag|)
+|dy * bodyj.mass|=op(|dy|*|bodyj.mass|)
+|dy * dy|=op(|dy|*|dy|)
+|dy * dy|=op(|dy|*|dy|)
+|dy = bodyi.y - bodyj.y|=|dy|
+|dy = bodyi.y - bodyj.y|=|dy|
+|dy|=|dy|
+|dy|=|dy|
+|dy|=|dy|
+|dy|=|dy|
+|dy|=|dy|
+|dy|=|dy|
+|dy|=|dy|
+|dy|=|dy|
+|dz * bodyi.mass * mag|<:prop(|bodyj|,vz)
+|dz * bodyi.mass * mag|=op(|dz * bodyi.mass|*|mag|)
+|dz * bodyi.mass|=op(|dz|*|bodyi.mass|)
+|dz * bodyj.mass * mag|<:prop(|bodyi|,vz)
+|dz * bodyj.mass * mag|=op(|dz * bodyj.mass|*|mag|)
+|dz * bodyj.mass|=op(|dz|*|bodyj.mass|)
+|dz * dz|=op(|dz|*|dz|)
+|dz * dz|=op(|dz|*|dz|)
+|dz = bodyi.z - bodyj.z|=|dz|
+|dz = bodyi.z - bodyj.z|=|dz|
+|dz|=|dz|
+|dz|=|dz|
+|dz|=|dz|
+|dz|=|dz|
+|dz|=|dz|
+|dz|=|dz|
+|dz|=|dz|
+|dz|=|dz|
+|e += 0.5 * bodyi.mass * (bodyi.vx * bodyi.vx + bodyi.vy * bodyi.vy + bodyi.vz * bodyi.vz)|=|e|
+|e -= (bodyi.mass * bodyj.mass) / distance|=|e|
+|e|<:ret(|method <anonymous>|)
+|e|=|e|
+|e|=|e|
+|e|=|e|
+|function jupiter|<:|jupiter|
+|function neptune|<:|neptune|
+|function saturn|<:|saturn|
+|function sun|<:|sun|
+|function uranus|<:|uranus|
+|i + 1|<:|j|
+|i + 1|<:|j|
+|i + 1|=op(|i|+|1|)
+|i + 1|=op(|i|+|1|)
+|i < n|=op(|i|<|n|)
+|i < size|=op(|i|<|size|)
+|i < size|=op(|i|<|size|)
+|i < size|=op(|i|<|size|)
+|i < size|=op(|i|<|size|)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i|=Key(|bodies|)
+|i|=Key(|this.bodies|)
+|i|=Key(|this.bodies|)
+|i|=Key(|this.bodies|)
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|j < size|=op(|j|<|size|)
+|j < size|=op(|j|<|size|)
+|j++|=op(|j|++)
+|j++|=op(|j|++)
+|jupiter()|<:Elem(|[sun(), jupiter(), saturn(), uranus(), neptune()]|)
+|jupiter()|=ret(|jupiter|)
+|jupiter|=|jupiter|
+|j|=Key(|this.bodies|)
+|j|=Key(|this.bodies|)
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|mag = dt / (distance * distance * distance)|=|mag|
+|mag|=|mag|
+|mag|=|mag|
+|mag|=|mag|
+|mag|=|mag|
+|mag|=|mag|
+|mag|=|mag|
+|mag|=|mag|
+|mass|<:prop(|this|,mass)
+|mass|=|mass|
+|method <anonymous>|<:prop(|this|,advance)
+|method <anonymous>|<:prop(|this|,energy)
+|method <anonymous>|<:prop(|this|,offsetMomentum)
+|m|=|m|
+|m|=|m|
+|m|=|m|
+|neptune()|<:Elem(|[sun(), jupiter(), saturn(), uranus(), neptune()]|)
+|neptune()|=ret(|neptune|)
+|neptune|=|neptune|
+|new Body(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, SOLAR_MASS)|<:ret(|function sun|)
+|new Body(0.0, 0.0, 0.0, 0.0, 0.0, 0.0, SOLAR_MASS)|=ret(|Body|)
+|new Body(1.28943695621391310e+01, -1.51111514016986312e+01, -2.23307578892655734e-01, 2.96460137564761618e-03 * DAYS_PER_YEAR, 2.37847173959480950e-03 * DAYS_PER_YEAR, -2.96589568540237556e-05 * DAYS_PER_YEAR, 4.36624404335156298e-05 * SOLAR_MASS)|<:ret(|function uranus|)
+|new Body(1.28943695621391310e+01, -1.51111514016986312e+01, -2.23307578892655734e-01, 2.96460137564761618e-03 * DAYS_PER_YEAR, 2.37847173959480950e-03 * DAYS_PER_YEAR, -2.96589568540237556e-05 * DAYS_PER_YEAR, 4.36624404335156298e-05 * SOLAR_MASS)|=ret(|Body|)
+|new Body(1.53796971148509165e+01, -2.59193146099879641e+01, 1.79258772950371181e-01, 2.68067772490389322e-03 * DAYS_PER_YEAR, 1.62824170038242295e-03 * DAYS_PER_YEAR, -9.51592254519715870e-05 * DAYS_PER_YEAR, 5.15138902046611451e-05 * SOLAR_MASS)|<:ret(|function neptune|)
+|new Body(1.53796971148509165e+01, -2.59193146099879641e+01, 1.79258772950371181e-01, 2.68067772490389322e-03 * DAYS_PER_YEAR, 1.62824170038242295e-03 * DAYS_PER_YEAR, -9.51592254519715870e-05 * DAYS_PER_YEAR, 5.15138902046611451e-05 * SOLAR_MASS)|=ret(|Body|)
+|new Body(4.84143144246472090e+00, -1.16032004402742839e+00, -1.03622044471123109e-01, 1.66007664274403694e-03 * DAYS_PER_YEAR, 7.69901118419740425e-03 * DAYS_PER_YEAR, -6.90460016972063023e-05 * DAYS_PER_YEAR, 9.54791938424326609e-04 * SOLAR_MASS)|<:ret(|function jupiter|)
+|new Body(4.84143144246472090e+00, -1.16032004402742839e+00, -1.03622044471123109e-01, 1.66007664274403694e-03 * DAYS_PER_YEAR, 7.69901118419740425e-03 * DAYS_PER_YEAR, -6.90460016972063023e-05 * DAYS_PER_YEAR, 9.54791938424326609e-04 * SOLAR_MASS)|=ret(|Body|)
+|new Body(8.34336671824457987e+00, 4.12479856412430479e+00, -4.03523417114321381e-01, -2.76742510726862411e-03 * DAYS_PER_YEAR, 4.99852801234917238e-03 * DAYS_PER_YEAR, 2.30417297573763929e-05 * DAYS_PER_YEAR, 2.85885980666130812e-04 * SOLAR_MASS)|<:ret(|function saturn|)
+|new Body(8.34336671824457987e+00, 4.12479856412430479e+00, -4.03523417114321381e-01, -2.76742510726862411e-03 * DAYS_PER_YEAR, 4.99852801234917238e-03 * DAYS_PER_YEAR, 2.30417297573763929e-05 * DAYS_PER_YEAR, 2.85885980666130812e-04 * SOLAR_MASS)|=ret(|Body|)
+|new NBodySystem([sun(), jupiter(), saturn(), uranus(), neptune()])|<:|bodies|
+|new NBodySystem([sun(), jupiter(), saturn(), uranus(), neptune()])|=ret(|NBodySystem|)
+|n|=|n|
+|printString(bodies.energy().toFixed(9))|=ret(|printString|)
+|printString(bodies.energy().toFixed(9))|=ret(|printString|)
+|printString|=|printString|
+|printString|=|printString|
+|px += b.vx * m|=|px|
+|px|<:param(|bodies[0].offsetMomentum|,0)
+|px|=|px|
+|px|=|px|
+|px|=|px|
+|py += b.vy * m|=|py|
+|py|<:param(|bodies[0].offsetMomentum|,1)
+|py|=|py|
+|py|=|py|
+|py|=|py|
+|pz += b.vz * m|=|pz|
+|pz|<:param(|bodies[0].offsetMomentum|,2)
+|pz|=|pz|
+|pz|=|pz|
+|pz|=|pz|
+|saturn()|<:Elem(|[sun(), jupiter(), saturn(), uranus(), neptune()]|)
+|saturn()|=ret(|saturn|)
+|saturn|=|saturn|
+|size|=|size|
+|size|=|size|
+|size|=|size|
+|size|=|size|
+|size|=|size|
+|size|=|size|
+|sun()|<:Elem(|[sun(), jupiter(), saturn(), uranus(), neptune()]|)
+|sun()|=ret(|sun|)
+|sun|=|sun|
+|this.advance = function(dt) {
+  var dx, dy, dz, distance, mag;
+  var size = this.bodies.length;
+  for (var i = 0; i < size; i++) 
+    {
+      var bodyi = this.bodies[i];
+      for (var j = i + 1; j < size; j++) 
+        {
+          var bodyj = this.bodies[j];
+          dx = bodyi.x - bodyj.x;
+          dy = bodyi.y - bodyj.y;
+          dz = bodyi.z - bodyj.z;
+          distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
+          mag = dt / (distance * distance * distance);
+          bodyi.vx -= dx * bodyj.mass * mag;
+          bodyi.vy -= dy * bodyj.mass * mag;
+          bodyi.vz -= dz * bodyj.mass * mag;
+          bodyj.vx += dx * bodyi.mass * mag;
+          bodyj.vy += dy * bodyi.mass * mag;
+          bodyj.vz += dz * bodyi.mass * mag;
+        }
+    }
+  for (var i = 0; i < size; i++) 
+    {
+      var body = this.bodies[i];
+      body.x += dt * body.vx;
+      body.y += dt * body.vy;
+      body.z += dt * body.vz;
+    }
+}|=prop(|this|,advance)
+|this.advance|=prop(|this|,advance)
+|this.bodies = bodies|=prop(|this|,bodies)
+|this.bodies.length|<:|size|
+|this.bodies.length|<:|size|
+|this.bodies.length|=prop(|this.bodies|,length)
+|this.bodies.length|=prop(|this.bodies|,length)
+|this.bodies[i]|<:|bodyi|
+|this.bodies[i]|<:|bodyi|
+|this.bodies[i]|<:|body|
+|this.bodies[j]|<:|bodyj|
+|this.bodies[j]|<:|bodyj|
+|this.bodies|=prop(|this|,bodies)
+|this.bodies|=prop(|this|,bodies)
+|this.bodies|=prop(|this|,bodies)
+|this.bodies|=prop(|this|,bodies)
+|this.bodies|=prop(|this|,bodies)
+|this.bodies|=prop(|this|,bodies)
+|this.bodies|=prop(|this|,bodies)
+|this.bodies|=prop(|this|,bodies)
+|this.energy = function() {
+  var dx, dy, dz, distance;
+  var e = 0.0;
+  var size = this.bodies.length;
+  for (var i = 0; i < size; i++) 
+    {
+      var bodyi = this.bodies[i];
+      e += 0.5 * bodyi.mass * (bodyi.vx * bodyi.vx + bodyi.vy * bodyi.vy + bodyi.vz * bodyi.vz);
+      for (var j = i + 1; j < size; j++) 
+        {
+          var bodyj = this.bodies[j];
+          dx = bodyi.x - bodyj.x;
+          dy = bodyi.y - bodyj.y;
+          dz = bodyi.z - bodyj.z;
+          distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
+          e -= (bodyi.mass * bodyj.mass) / distance;
+        }
+    }
+  return e;
+}|=prop(|this|,energy)
+|this.energy|=prop(|this|,energy)
+|this.mass = mass|=prop(|this|,mass)
+|this.mass|=prop(|this|,mass)
+|this.offsetMomentum = function(px, py, pz) {
+  this.vx = -px / SOLAR_MASS;
+  this.vy = -py / SOLAR_MASS;
+  this.vz = -pz / SOLAR_MASS;
+}|=prop(|this|,offsetMomentum)
+|this.offsetMomentum|=prop(|this|,offsetMomentum)
+|this.vx = -px / SOLAR_MASS|=prop(|this|,vx)
+|this.vx = vx|=prop(|this|,vx)
+|this.vx|=prop(|this|,vx)
+|this.vx|=prop(|this|,vx)
+|this.vy = -py / SOLAR_MASS|=prop(|this|,vy)
+|this.vy = vy|=prop(|this|,vy)
+|this.vy|=prop(|this|,vy)
+|this.vy|=prop(|this|,vy)
+|this.vz = -pz / SOLAR_MASS|=prop(|this|,vz)
+|this.vz = vz|=prop(|this|,vz)
+|this.vz|=prop(|this|,vz)
+|this.vz|=prop(|this|,vz)
+|this.x = x|=prop(|this|,x)
+|this.x|=prop(|this|,x)
+|this.y = y|=prop(|this|,y)
+|this.y|=prop(|this|,y)
+|this.z = z|=prop(|this|,z)
+|this.z|=prop(|this|,z)
+|this|=receiver(|method <anonymous>|)
+|this|=receiver(|method <anonymous>|)
+|this|=receiver(|method <anonymous>|)
+|this|=receiver(|method <anonymous>|)
+|this|=receiver(|method <anonymous>|)
+|this|=receiver(|method <anonymous>|)
+|this|=receiver(|method <anonymous>|)
+|this|=receiver(|method <anonymous>|)
+|this|=receiver(|method <anonymous>|)
+|this|=receiver(|method <anonymous>|)
+|this|=ret(|constructor Body|)
+|this|=ret(|constructor Body|)
+|this|=ret(|constructor Body|)
+|this|=ret(|constructor Body|)
+|this|=ret(|constructor Body|)
+|this|=ret(|constructor Body|)
+|this|=ret(|constructor Body|)
+|this|=ret(|constructor Body|)
+|this|=ret(|constructor NBodySystem|)
+|this|=ret(|constructor NBodySystem|)
+|this|=ret(|constructor NBodySystem|)
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|this|=|this|
+|uranus()|<:Elem(|[sun(), jupiter(), saturn(), uranus(), neptune()]|)
+|uranus()|=ret(|uranus|)
+|uranus|=|uranus|
+|vx|<:prop(|this|,vx)
+|vx|=|vx|
+|vy|<:prop(|this|,vy)
+|vy|=|vy|
+|vz|<:prop(|this|,vz)
+|vz|=|vz|
+|x|<:prop(|this|,x)
+|x|=|x|
+|y|<:prop(|this|,y)
+|y|=|y|
+|z|<:prop(|this|,z)
+|z|=|z|

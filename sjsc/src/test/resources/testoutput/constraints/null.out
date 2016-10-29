@@ -1,0 +1,4 @@
+MakeConcreteConstraint [term=|null|]
+MakeConcreteConstraint [term=|{f: null}|]
+|null|=prop(|{f: null}|,f)
+|{f: null}|<:|v|

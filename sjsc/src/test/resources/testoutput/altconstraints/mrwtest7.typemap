@@ -1,0 +1,29 @@
+3 --> integer
+C --> ctor<0>[{  | get_a: []() -> integer }]() -> { get_a: []() -> integer | a: integer }
+C --> ctor<0>[{  | get_a: []() -> integer }]() -> { get_a: []() -> integer | a: integer }
+C --> ctor<0>[{  | get_a: []() -> integer }]() -> { get_a: []() -> integer | a: integer }
+C.prototype --> {  | get_a: []() -> integer }
+C.prototype = {get_a: function m() {
+  return this.a;
+}} --> {  | get_a: []() -> integer }
+c --> { get_a: []() -> integer | a: integer }
+c --> { get_a: []() -> integer | a: integer }
+c.get_a --> []() -> integer
+c.get_a() --> integer
+function C() {
+  this.a = 3;
+}
+ --> ctor<0>[{  | get_a: []() -> integer }]() -> { get_a: []() -> integer | a: integer }
+function m() {
+  return this.a;
+} --> [{ a: integer |  }]() -> integer
+m --> [{ a: integer |  }]() -> integer
+new C() --> { get_a: []() -> integer | a: integer }
+this --> { a: integer |  }
+this --> { get_a: []() -> integer | a: integer }
+this.a --> integer
+this.a --> integer
+this.a = 3 --> integer
+{get_a: function m() {
+  return this.a;
+}} --> {  | get_a: []() -> integer }

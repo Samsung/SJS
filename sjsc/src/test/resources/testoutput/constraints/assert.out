@@ -1,0 +1,25 @@
+CheckArity(ret(|assert|))
+CheckArity(ret(|console.assert|))
+MakeConcreteConstraint [term=|3|]
+MakeConcreteConstraint [term=|4|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|true|]
+MakeConcreteConstraint [term=|x|]
+MakeConcreteConstraint [term=|y == z|]
+|3|<:|y|
+|3|=integer
+|4|<:|z|
+|4|=integer
+|assert(x)|=ret(|assert|)
+|assert|=|assert|
+|console.assert(y == z)|=ret(|console.assert|)
+|console.assert|=prop(|console|,assert)
+|console|=|console|
+|true|<:|x|
+|true|=boolean
+|x|<:param(|assert|,0)
+|x|=|x|
+|y == z|<:param(|console.assert|,0)
+|y == z|=op(|y|==|z|)
+|y|=|y|
+|z|=|z|

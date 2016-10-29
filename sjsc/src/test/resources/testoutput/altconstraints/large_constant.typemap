@@ -1,0 +1,12 @@
+"" --> string
+"" --> string
+1122926989487 + "" --> string
+1122926989487 --> float
+3 + "" --> string
+3 --> integer
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log(1122926989487 + "") --> void
+console.log(3 + "") --> void

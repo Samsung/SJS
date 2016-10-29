@@ -1,0 +1,45 @@
+1 --> integer
+17 --> integer
+18 --> integer
+3.3 --> float
+bar --> (float) -> float
+bar --> (float) -> float
+bar(3.3) --> float
+false --> boolean
+foo --> (integer) -> integer
+foo --> (integer) -> integer
+foo(17) --> integer
+function bar(w) {
+  var x = false;
+  var z = x;
+  return w;
+}
+ --> (float) -> float
+function foo(v) {
+  var x = 1;
+  var y = x;
+  return v;
+}
+ --> (integer) -> integer
+function zap() {
+  function zip() {
+    return 18;
+  }
+}
+ --> () -> void
+function zip() {
+  return 18;
+}
+ --> () -> integer
+v --> integer
+v --> integer
+w --> float
+w --> float
+x --> boolean
+x --> boolean
+x --> integer
+x --> integer
+y --> integer
+z --> boolean
+zap --> () -> void
+zip --> () -> integer

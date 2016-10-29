@@ -1,0 +1,69 @@
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1000 --> integer
+17 --> integer
+Array --> () -> Array<integer> INTERSECT (integer) -> Array<integer> INTERSECT (integer,integer) -> Array<integer>
+Array --> () -> Array<integer> INTERSECT (integer) -> Array<integer> INTERSECT (integer,integer) -> Array<integer>
+Array(n) --> Array<integer>
+Array(n) --> Array<integer>
+i + 1 --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i < n --> boolean
+i = 0 --> integer
+i = n - 1 --> integer
+i >= 0 --> boolean
+i++ --> integer
+i-- --> integer
+k --> integer
+k --> integer
+k --> integer
+k --> integer
+k < 1000 --> boolean
+k = 0 --> integer
+k++ --> integer
+n - 1 --> integer
+n - 1 --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+n --> integer
+printInt --> (integer) -> void
+printInt --> (integer) -> void
+printInt(y[0]) --> void
+printInt(y[n - 1]) --> void
+x --> Array<integer>
+x --> Array<integer>
+x --> Array<integer>
+x[i] --> integer
+x[i] --> integer
+x[i] = i + 1 --> integer
+y --> Array<integer>
+y --> Array<integer>
+y --> Array<integer>
+y --> Array<integer>
+y --> Array<integer>
+y[0] --> integer
+y[i] += x[i] --> integer
+y[i] --> integer
+y[i] --> integer
+y[i] = 0 --> integer
+y[n - 1] --> integer

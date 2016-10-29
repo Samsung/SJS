@@ -1,0 +1,279 @@
+(ax * bx) --> integer
+(i + 1) % 100 --> integer
+(i + 1) --> integer
+(rowColumnDot(a, b, aindex, j)) --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+100 --> integer
+1000 --> integer
+2 --> integer
+2 --> integer
+3 --> integer
+4 --> integer
+[1] --> Array<integer>
+[1] --> Array<integer>
+[] --> Array<integer>
+[] --> Array<integer>
+a --> {  | height: integer, width: integer, data: Array<integer> }
+a --> {  | height: integer, width: integer, data: Array<integer> }
+a --> {  | height: integer, width: integer, data: Array<integer> }
+a --> {  | height: integer, width: integer, data: Array<integer> }
+a --> {  | height: integer, width: integer, data: Array<integer> }
+a --> {  | height: integer, width: integer, data: Array<integer> }
+a --> {  | height: integer, width: integer, data: Array<integer> }
+a --> {  | height: integer, width: integer, data: Array<integer> }
+a --> {  | height: integer, width: integer, data: Array<integer> }
+a --> {  | height: integer, width: integer, data: Array<integer> }
+a --> {  | height: integer, width: integer, data: Array<integer> }
+a --> {  | height: integer, width: integer, data: Array<integer> }
+a --> {  | height: integer, width: integer, data: Array<integer> }
+a.data --> Array<integer>
+a.data[aindex + i] --> integer
+a.height --> integer
+a.height --> integer
+a.width !== b.height --> boolean
+a.width --> integer
+a.width --> integer
+a.width --> integer
+aindex + i --> integer
+aindex += a.width --> integer
+aindex --> integer
+aindex --> integer
+aindex --> integer
+aindex --> integer
+aindex --> integer
+aindex --> integer
+ax * bx --> integer
+ax --> integer
+ax --> integer
+ax --> integer
+ax = a.data[aindex + i] --> integer
+b --> {  | height: integer, width: integer, data: Array<integer> }
+b --> {  | height: integer, width: integer, data: Array<integer> }
+b --> {  | height: integer, width: integer, data: Array<integer> }
+b --> {  | height: integer, width: integer, data: Array<integer> }
+b --> {  | height: integer, width: integer, data: Array<integer> }
+b --> {  | height: integer, width: integer, data: Array<integer> }
+b --> {  | height: integer, width: integer, data: Array<integer> }
+b --> {  | height: integer, width: integer, data: Array<integer> }
+b --> {  | height: integer, width: integer, data: Array<integer> }
+b --> {  | height: integer, width: integer, data: Array<integer> }
+b --> {  | height: integer, width: integer, data: Array<integer> }
+b --> {  | height: integer, width: integer, data: Array<integer> }
+b.data --> Array<integer>
+b.data[j] --> integer
+b.height --> integer
+b.width --> integer
+b.width --> integer
+b.width --> integer
+buffer --> Array<integer>
+buffer --> Array<integer>
+buffer --> Array<integer>
+buffer --> Array<integer>
+buffer --> Array<integer>
+buffer --> Array<integer>
+buffer --> Array<integer>
+buffer[index] --> integer
+buffer[index] = (rowColumnDot(a, b, aindex, j)) --> integer
+bx --> integer
+bx --> integer
+bx --> integer
+bx = b.data[j] --> integer
+c --> {  | height: integer, width: integer, data: Array<integer> }
+c --> {  | height: integer, width: integer, data: Array<integer> }
+c --> {  | height: integer, width: integer, data: Array<integer> }
+c --> {  | height: integer, width: integer, data: Array<integer> }
+c --> {  | height: integer, width: integer, data: Array<integer> }
+c.data --> Array<integer>
+c.data --> Array<integer>
+c.data --> Array<integer>
+c.data --> Array<integer>
+c.data[0] --> integer
+c.data[1] --> integer
+c.data[2] --> integer
+c.data[3] --> integer
+data --> Array<integer>
+data --> Array<integer>
+data --> Array<integer>
+data --> Array<integer>
+data[i] --> integer
+data[i] = (i + 1) % 100 --> integer
+function matrix(h, w, buffer) {
+  intHint = h;
+  intHint = w;
+  intArrHint = buffer;
+  var t = {height: h, width: w, data: buffer};
+  mhint = t;
+  return t;
+}
+ --> (integer,integer,Array<integer>) -> {  | height: integer, width: integer, data: Array<integer> }
+function mul(a, b) {
+  mhint = a;
+  mhint = b;
+  if (a.width !== b.height) 
+  return null;
+  var buffer = [];
+  intArrHint = buffer;
+  var r = matrix(a.height, b.width, buffer);
+  var index = 0;
+  var aindex = 0;
+  var i, j;
+  var tmp = 0;
+  for (i = 0; i < a.height; i++) 
+    {
+      for (j = 0; j < b.width; j++) 
+        {
+          buffer[index] = (rowColumnDot(a, b, aindex, j));
+          index++;
+        }
+      aindex += a.width;
+    }
+  return r;
+}
+ --> ({  | height: integer, width: integer, data: Array<integer> },{  | height: integer, width: integer, data: Array<integer> }) -> {  | height: integer, width: integer, data: Array<integer> }
+function rowColumnDot(a, b, aindex, j) {
+  mhint = a;
+  mhint = b;
+  intHint = aindex;
+  intHint = j;
+  var r = 0;
+  var i;
+  var ax;
+  var bx;
+  for (i = 0; i < a.width; i++) 
+    {
+      ax = a.data[aindex + i];
+      bx = b.data[j];
+      r += (ax * bx);
+      j += b.width;
+    }
+  return r;
+}
+ --> ({  | height: integer, width: integer, data: Array<integer> },{  | height: integer, width: integer, data: Array<integer> },integer,integer) -> integer
+h --> integer
+h --> integer
+h --> integer
+i + 1 --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i < a.height --> boolean
+i < a.width --> boolean
+i < s * s --> boolean
+i = 0 --> integer
+i = 0 --> integer
+i = 0 --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+index --> integer
+index --> integer
+index --> integer
+index++ --> integer
+intArrHint --> Array<integer>
+intArrHint --> Array<integer>
+intArrHint --> Array<integer>
+intArrHint = buffer --> Array<integer>
+intArrHint = buffer --> Array<integer>
+intHint --> integer
+intHint --> integer
+intHint --> integer
+intHint --> integer
+intHint --> integer
+intHint = aindex --> integer
+intHint = h --> integer
+intHint = j --> integer
+intHint = w --> integer
+j += b.width --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j < b.width --> boolean
+j = 0 --> integer
+j++ --> integer
+matrix --> (integer,integer,Array<integer>) -> {  | height: integer, width: integer, data: Array<integer> }
+matrix --> (integer,integer,Array<integer>) -> {  | height: integer, width: integer, data: Array<integer> }
+matrix --> (integer,integer,Array<integer>) -> {  | height: integer, width: integer, data: Array<integer> }
+matrix --> (integer,integer,Array<integer>) -> {  | height: integer, width: integer, data: Array<integer> }
+matrix(a.height, b.width, buffer) --> {  | height: integer, width: integer, data: Array<integer> }
+matrix(s, s, data) --> {  | height: integer, width: integer, data: Array<integer> }
+matrix(s, s, data) --> {  | height: integer, width: integer, data: Array<integer> }
+mhint --> {  | height: integer, width: integer, data: Array<integer> }
+mhint --> {  | height: integer, width: integer, data: Array<integer> }
+mhint --> {  | height: integer, width: integer, data: Array<integer> }
+mhint --> {  | height: integer, width: integer, data: Array<integer> }
+mhint --> {  | height: integer, width: integer, data: Array<integer> }
+mhint --> {  | height: integer, width: integer, data: Array<integer> }
+mhint = a --> {  | height: integer, width: integer, data: Array<integer> }
+mhint = a --> {  | height: integer, width: integer, data: Array<integer> }
+mhint = b --> {  | height: integer, width: integer, data: Array<integer> }
+mhint = b --> {  | height: integer, width: integer, data: Array<integer> }
+mhint = t --> {  | height: integer, width: integer, data: Array<integer> }
+mul --> ({  | height: integer, width: integer, data: Array<integer> },{  | height: integer, width: integer, data: Array<integer> }) -> {  | height: integer, width: integer, data: Array<integer> }
+mul --> ({  | height: integer, width: integer, data: Array<integer> },{  | height: integer, width: integer, data: Array<integer> }) -> {  | height: integer, width: integer, data: Array<integer> }
+mul(a, b) --> {  | height: integer, width: integer, data: Array<integer> }
+null --> {  | height: integer, width: integer, data: Array<integer> }
+printInt --> (integer) -> void
+printInt --> (integer) -> void
+printInt --> (integer) -> void
+printInt --> (integer) -> void
+printInt(c.data[0]) --> void
+printInt(c.data[1]) --> void
+printInt(c.data[2]) --> void
+printInt(c.data[3]) --> void
+r += (ax * bx) --> integer
+r --> integer
+r --> integer
+r --> integer
+r --> {  | height: integer, width: integer, data: Array<integer> }
+r --> {  | height: integer, width: integer, data: Array<integer> }
+rowColumnDot --> ({  | height: integer, width: integer, data: Array<integer> },{  | height: integer, width: integer, data: Array<integer> },integer,integer) -> integer
+rowColumnDot --> ({  | height: integer, width: integer, data: Array<integer> },{  | height: integer, width: integer, data: Array<integer> },integer,integer) -> integer
+rowColumnDot(a, b, aindex, j) --> integer
+s * s --> integer
+s --> integer
+s --> integer
+s --> integer
+s --> integer
+s --> integer
+s --> integer
+s --> integer
+t --> {  | height: integer, width: integer, data: Array<integer> }
+t --> {  | height: integer, width: integer, data: Array<integer> }
+t --> {  | height: integer, width: integer, data: Array<integer> }
+tmp --> integer
+w --> integer
+w --> integer
+w --> integer
+{height: 2, width: 4, data: [1]} --> {  | height: integer, width: integer, data: Array<integer> }
+{height: h, width: w, data: buffer} --> {  | height: integer, width: integer, data: Array<integer> }

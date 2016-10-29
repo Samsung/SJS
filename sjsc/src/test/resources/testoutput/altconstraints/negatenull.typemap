@@ -1,0 +1,10 @@
+!x --> boolean
+3 --> integer
+4 --> integer
+null --> {  |  }
+printInt --> (integer) -> void
+printInt --> (integer) -> void
+printInt(3) --> void
+printInt(4) --> void
+x --> {  |  }
+x --> {  |  }

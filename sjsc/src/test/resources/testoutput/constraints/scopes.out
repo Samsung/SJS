@@ -1,0 +1,17 @@
+CheckArity(ret(|bar|))
+MakeConcreteConstraint [term=|1.0|]
+MakeConcreteConstraint [term=|u|]
+param(|function bar|,0)=|u|
+param(|function foo|,0)=|u|
+ret(|function bar|)=void
+ret(|function foo|)=void
+|1.0|<:|u|
+|1.0|=float
+|bar(u)|=ret(|bar|)
+|bar|=|bar|
+|function bar|<:|bar|
+|function foo|<:|foo|
+|u = 1.0|=|u|
+|u|<:param(|bar|,0)
+|u|=|u|
+|u|=|u|

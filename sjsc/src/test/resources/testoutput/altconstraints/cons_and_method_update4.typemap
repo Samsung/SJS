@@ -1,0 +1,31 @@
+"confused" --> string
+Quo --> ctor<0>[{  | get_status: []() -> string }](string) -> { get_status: []() -> string | status: string }
+Quo --> ctor<0>[{  | get_status: []() -> string }](string) -> { get_status: []() -> string | status: string }
+Quo --> ctor<0>[{  | get_status: []() -> string }](string) -> { get_status: []() -> string | status: string }
+Quo.prototype --> {  | get_status: []() -> string }
+Quo.prototype.get_status --> []() -> string
+Quo.prototype.get_status = function() {
+  return this.status;
+} --> []() -> string
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log(myQuo.get_status()) --> void
+function Quo(string) {
+  this.status = string;
+}
+ --> ctor<0>[{  | get_status: []() -> string }](string) -> { get_status: []() -> string | status: string }
+function() {
+  return this.status;
+} --> [{ status: string |  }]() -> string
+myQuo --> { get_status: []() -> string | status: string }
+myQuo --> { get_status: []() -> string | status: string }
+myQuo.get_status --> []() -> string
+myQuo.get_status() --> string
+new Quo("confused") --> { get_status: []() -> string | status: string }
+string --> string
+string --> string
+this --> { get_status: []() -> string | status: string }
+this --> { status: string |  }
+this.status --> string
+this.status --> string
+this.status = string --> string

@@ -1,0 +1,17 @@
+"bar" --> string
+"foo" --> string
+"zap" --> string
+1 --> integer
+7 --> integer
+Array --> () -> Array<integer> INTERSECT (integer) -> Array<integer> INTERSECT (integer,integer) -> Array<integer>
+Array --> () -> Array<string> INTERSECT (integer) -> Array<string> INTERSECT (string,string) -> Array<string>
+Array("foo", "bar") --> Array<string>
+Array(7) --> Array<integer>
+a --> Array<integer>
+a --> Array<integer>
+a.push --> [](integer) -> integer
+a.push(1) --> integer
+b --> Array<string>
+b --> Array<string>
+b.push --> [](string) -> integer
+b.push("zap") --> integer

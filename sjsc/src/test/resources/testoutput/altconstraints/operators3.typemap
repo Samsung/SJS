@@ -1,0 +1,38 @@
+(x + 1) + (y + 1) * rowSize --> integer
+(x + 1) --> integer
+(y + 1) * rowSize --> integer
+(y + 1) --> integer
+1 --> integer
+1 --> integer
+3 --> integer
+7 --> integer
+[3] --> Array<integer>
+a - 7 --> integer
+a --> integer
+a --> integer
+f --> (integer,integer) -> integer
+function f(x, y) {
+  return z[(x + 1) + (y + 1) * rowSize];
+}
+ --> (integer,integer) -> integer
+function g(a) {
+  var t = a - 7;
+  printInt(t);
+}
+ --> (integer) -> void
+g --> (integer) -> void
+printInt --> (integer) -> void
+printInt(t) --> void
+rowSize --> integer
+rowSize --> integer
+t --> integer
+t --> integer
+x + 1 --> integer
+x --> integer
+x --> integer
+y + 1 --> integer
+y --> integer
+y --> integer
+z --> Array<integer>
+z --> Array<integer>
+z[(x + 1) + (y + 1) * rowSize] --> integer

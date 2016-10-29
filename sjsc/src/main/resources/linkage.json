@@ -1,0 +1,61 @@
+/* 
+ * Copyright 2014-2016 Samsung Research America, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* This file specifies how we link entities named in the global environment file. 
+ * Specifically, this file is a list of linkage entries for *variables* in the global
+ * namespace, indicating whether they're boxed or not, and optionally specifying a textual rewrite,
+ * for example mapping some local name to a qualified C++ name.
+ * */
+
+/* TODO: In general, the linkage file needs to specify a few additional things:
+ *   - which header each entry is in (or perhaps, group entries by header file)
+ *   - which .c file each primitive is in
+ *
+ * These will allow us to emit the necessary #include statements in the generated code, as well as
+ * allowing us to compute the minimal set of .c/.cpp files for compiling a given program.  This way,
+ * we could forgo compiling the stubs for the whole Tizen base library, and only build the ones used
+ * in a given program.
+ */
+{ globals: [
+    { name: "console", boxed: true },
+    { name: "Array", boxed: true },
+    { name: "Math", boxed: true },
+    { name: "Number", boxed: true },
+    { name: "Infinity", boxed: true },
+    { name: "String", boxed: true },
+    { name: "Date", boxed: true }
+  ],
+  indirections: [
+      { name: "closure_table", fields: [ "_____env", "_____code" ] },
+      { name: "constructor_table", fields: [ "_____env", "_____code", "prototype" ] },
+      { name: "object_proto_table", fields: [ "toString" ] },
+      { name: "console_table", fields: [ "log", "assert", "error", "warn" ] },
+      { name: "array_table", fields: [ "length", "pop", "push", "shift", "unshift" ] },
+      { name: "math_table",
+        fields: [ "E", "LN2", "LN10", "LOG2E", "LOG10E", "PI", "SQRT1_2", "SQRT2", 
+                  "abs", "acos", "acosh", "asin", "asinh", "atan", "atanh", "atan2", "cbrt", "ceil", "cos", "cosh",
+                  "exp", "expm1", "floor", "fround", "hypot", "imul", "log", "log1p", "log10", "log2",
+                  "max", "min", "pow", "random", "round", "sign", "sin", "sinh", "sqrt", "tan", "tanh",
+                  "toSource", "trunc" ] },
+      { name: "number_table",
+        fields: [ "EPSILON", "MAX_SAFE_INTEGER", "MAX_VALUE",
+                  "MIN_SAFE_INTEGER", "MIN_VALUE", "NaN",
+                  "NEGATIVE_INFINITY", "POSITIVE_INFINITY",
+                  "isFinite", "isNaN" ] },
+      { name: "string_table", fields: [ "fromCharCode" ] },
+      { name: "date_table", fields: [ "getDate", "getDay", "getFullYear", "getHours", "getMilliseconds", "getMinutes",
+                                      "getMonth", "getSeconds", "getTime", "getTimezoneOffset", "toDateString", "valueOf"]}
+  ]
+}

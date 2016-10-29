@@ -1,0 +1,2 @@
+could not find property g in type {  | f: []() -> void } for term |this|
+property accessed on line 8

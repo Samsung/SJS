@@ -1,0 +1,51 @@
+"Double" --> string
+"Single" --> string
+"Too many" --> string
+"Triple" --> string
+1 --> integer
+11 --> integer
+12 --> integer
+13 --> integer
+14 --> integer
+2 --> integer
+3 --> integer
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log("Double") --> void
+console.log("Single") --> void
+console.log("Too many") --> void
+console.log("Triple") --> void
+function say(k) {
+  switch (k) {
+    case 1:
+      console.log("Single");
+      break;
+    case 2:
+      console.log("Double");
+      break;
+    case 3:
+      console.log("Triple");
+      break;
+    default:
+      console.log("Too many");
+  }
+  return;
+}
+ --> (integer) -> void
+k --> integer
+k --> integer
+say --> (integer) -> void
+say --> (integer) -> void
+say --> (integer) -> void
+say --> (integer) -> void
+say --> (integer) -> void
+say(11) --> void
+say(12) --> void
+say(13) --> void
+say(14) --> void

@@ -1,0 +1,50 @@
+0 --> integer
+0 --> integer
+3 --> integer
+3 --> integer
+3 --> integer
+3 --> integer
+4 --> integer
+4 --> integer
+4 --> integer
+4 --> integer
+4 --> integer
+4 --> integer
+5 --> integer
+5 --> integer
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.assert --> [](boolean) -> void
+console.assert --> [](boolean) -> void
+console.assert(o.f === 3) --> void
+console.assert(p.g === 4) --> void
+o --> {  | f: integer }
+o --> {  | f: integer }
+o --> {  | f: integer }
+o.f --> integer
+o.f --> integer
+o.f === 3 --> boolean
+p --> {  | g: integer }
+p --> {  | g: integer }
+p --> {  | g: integer }
+p.g --> integer
+p.g --> integer
+p.g === 4 --> boolean
+printInt --> (integer) -> void
+printInt --> (integer) -> void
+printInt(o.f) --> void
+printInt(p.g) --> void
+void 0 --> {  | f: integer }
+void 0 --> {  | g: integer }
+void 0 || {f: 3} --> {  | f: integer }
+x --> boolean
+y --> {  | b: integer }
+{a: 3, b: 4} --> {  | a: integer, b: integer }
+{a: 3, b: 4} --> {  | a: integer, b: integer }
+{a: 3, b: 4} === {b: 4, s: 5} --> boolean
+{a: 3, b: 4} || {b: 4, s: 5} --> {  | b: integer }
+{b: 4, s: 5} --> {  | b: integer, s: integer }
+{b: 4, s: 5} --> {  | b: integer, s: integer }
+{f: 3} --> {  | f: integer }
+{g: 4} --> {  | g: integer }
+{g: 4} || void 0 --> {  | g: integer }

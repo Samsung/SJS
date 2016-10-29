@@ -1,0 +1,27 @@
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|3|]
+MakeConcreteConstraint [term=|4|]
+MakeConcreteConstraint [term=|5|]
+MakeConcreteConstraint [term=|[1, 2, 3, 4, 5]|]
+MakeConcreteConstraint [term=|a.length|]
+TP([1, 2, 3, 4, 5])=Elem(ret(prop(|[1, 2, 3, 4, 5]|,concat)))
+TP([1, 2, 3, 4, 5])=Elem(ret(prop(|[1, 2, 3, 4, 5]|,reverse)))
+TP([1, 2, 3, 4, 5])=Elem(|[1, 2, 3, 4, 5]|)
+TP([1, 2, 3, 4, 5])=param(prop(|[1, 2, 3, 4, 5]|,push),0)
+TP([1, 2, 3, 4, 5])=ret(prop(|[1, 2, 3, 4, 5]|,pop))
+TP([1, 2, 3, 4, 5])=ret(prop(|[1, 2, 3, 4, 5]|,shift))
+|1|<:Elem(|[1, 2, 3, 4, 5]|)
+|1|=integer
+|2|<:Elem(|[1, 2, 3, 4, 5]|)
+|2|=integer
+|3|<:Elem(|[1, 2, 3, 4, 5]|)
+|3|=integer
+|4|<:Elem(|[1, 2, 3, 4, 5]|)
+|4|=integer
+|5|<:Elem(|[1, 2, 3, 4, 5]|)
+|5|=integer
+|[1, 2, 3, 4, 5]|<:|a|
+|a.length|<:|r|
+|a.length|=prop(|a|,length)
+|a|=|a|

@@ -1,0 +1,1874 @@
+"" --> string
+"" --> string
+"" --> string
+"" --> string
+"" --> string
+"" --> string
+"" --> string
+"" --> string
+"" --> string
+((10 * (t1 + selectivePressure * t2)) / t1) --> float
+((10 * (t1 + selectivePressure * t2)) / t1) | 0 --> integer
+((average / (average - bestScore))) * 100 --> float
+((average / (average - bestScore))) * 100 | 0 --> integer
+((average / (average - bestScore))) --> float
+((max - min) * (prev / 16777216)) --> float
+((scores[i] + (population / 2)) / population) --> float
+((scores[i] + (population / 2)) / population) | 0 --> integer
+((t2 + 1) % population) --> integer
+((t2 + 1) % population) | 0 --> integer
+(10 * (t1 + selectivePressure * t2)) --> integer
+(10 * (t1 + selectivePressure * t2)) / t1 --> float
+(48271 * prev + 12820163) & 16777215 --> integer
+(48271 * prev + 12820163) --> integer
+(average - bestScore) --> integer
+(average - maxScore) --> integer
+(average / (average - bestScore)) --> float
+(calcFitness(chromosomes[currentGeneration][i]) / population) --> float
+(calcFitness(chromosomes[currentGeneration][i]) / population) | 0 --> integer
+(childGeneration + 1) % 2 --> integer
+(childGeneration + 1) % 2 | 0 --> integer
+(childGeneration + 1) --> integer
+(currentGeneration + 1) % 2 --> integer
+(currentGeneration + 1) % 2 | 0 --> integer
+(currentGeneration + 1) --> integer
+(max - min) * (prev / 16777216) --> float
+(max - min) --> integer
+(population / 2) --> float
+(prev / 16777216) --> float
+(s / x) --> float
+(s / x) --> float
+(s / x) --> float
+(s / x) --> float
+(scores[i] + (population / 2)) --> float
+(scores[i] + (population / 2)) / population --> float
+(selectivePressure + 1) * 100 --> integer
+(selectivePressure + 1) --> integer
+(selectivePressure + 1) --> integer
+(sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000) --> float
+(sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000) --> float
+(sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000) | 0 --> integer
+(sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000) | 0 --> integer
+(t1 * t1 + t2 * t2) * 1.0 --> float
+(t1 * t1 + t2 * t2) * 1.0 --> float
+(t1 * t1 + t2 * t2) --> integer
+(t1 * t1 + t2 * t2) --> integer
+(t1 + selectivePressure * t2) --> integer
+(t2 + 1) % population --> integer
+(t2 + 1) --> integer
+(x + (s / x)) --> float
+(x + (s / x)) --> float
+(x + (s / x)) --> float
+(x + (s / x)) --> float
+(x + (s / x)) / 2.0 --> float
+(x + (s / x)) / 2.0 --> float
+(x + (s / x)) / 2.0 --> float
+(x + (s / x)) / 2.0 --> float
+-1 --> integer
+-1 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 --> integer
+0 === selected[index] --> boolean
+0 === t1 --> boolean
+0.0 --> float
+0.0 --> float
+0.0 --> float
+0.999 * s --> float
+0.999 --> float
+1 + "" --> string
+1 + "" --> string
+1 + "" --> string
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1 --> integer
+1.0 --> float
+1.0 --> float
+1.001 * s --> float
+1.001 --> float
+10 * (t1 + selectivePressure * t2) --> integer
+10 --> integer
+10 --> integer
+10 --> integer
+10 --> integer
+100 --> integer
+100 --> integer
+100 --> integer
+1000 --> integer
+1000 --> integer
+1000 --> integer
+1000 --> integer
+1000 --> integer
+1000 --> integer
+1000 --> integer
+12820163 --> integer
+16777215 --> integer
+16777216 --> integer
+17 --> integer
+18 --> integer
+19 --> integer
+2 + "" --> string
+2 --> integer
+2 --> integer
+2 --> integer
+2 --> integer
+2 --> integer
+2.0 --> float
+2.0 --> float
+2.0 --> float
+2.0 --> float
+200 --> integer
+200 --> integer
+200000000 --> integer
+4 --> integer
+48271 * prev + 12820163 --> integer
+48271 * prev --> integer
+48271 --> integer
+500 --> integer
+99999999 --> integer
+999999999 --> integer
+999999999 --> integer
+MAXCUSTOMER --> integer
+MAXPOP --> integer
+RAND_MAX --> integer
+RAND_MAX --> integer
+RAND_MAX --> integer
+RAND_MAX / 1000 * mutationRate --> float
+RAND_MAX / 1000 --> float
+[0.0] --> Array<float>
+[0] --> Array<integer>
+[0] --> Array<integer>
+[0] --> Array<integer>
+[[0]] --> Array<Array<integer>>
+[[0]] --> Array<Array<integer>>
+[[[0]]] --> Array<Array<Array<integer>>>
+[[], []] --> Array<Array<Array<integer>>>
+[] --> Array<Array<integer>>
+[] --> Array<Array<integer>>
+[] --> Array<Array<integer>>
+[] --> Array<Array<integer>>
+[] --> Array<Array<integer>>
+[] --> Array<boolean>
+[] --> Array<integer>
+[] --> Array<integer>
+[] --> Array<integer>
+[] --> Array<integer>
+[] --> Array<integer>
+[] --> Array<integer>
+[] --> Array<integer>
+[] --> Array<integer>
+[] --> Array<integer>
+[] --> Array<integer>
+[] --> Array<integer>
+[] --> Array<integer>
+[] --> Array<integer>
+average += ((scores[i] + (population / 2)) / population) | 0 --> integer
+average += (calcFitness(chromosomes[currentGeneration][i]) / population) | 0 --> integer
+average - bestScore --> integer
+average - maxScore --> integer
+average --> integer
+average --> integer
+average --> integer
+average --> integer
+average --> integer
+average --> integer
+average --> integer
+average --> integer
+average --> integer
+average --> integer
+average --> integer
+average / (average - bestScore) --> float
+average / (average - maxScore) --> float
+average / (average - maxScore) > 200 --> boolean
+average = 0 --> integer
+average = 0 --> integer
+average === maxScore --> boolean
+base --> integer
+base --> integer
+base --> integer
+base --> integer
+base --> integer
+base --> integer
+base --> integer
+base = t1 + t4 - t2 --> integer
+base = t1 --> integer
+base = t4 - t3 + t1 --> integer
+baseDistance --> Array<integer>
+baseDistance --> Array<integer>
+baseDistance --> Array<integer>
+baseDistance --> Array<integer>
+baseDistance --> Array<integer>
+baseDistance[chromo[0]] --> integer
+baseDistance[chromo[customerNumber - 1]] --> integer
+baseDistance[i] --> integer
+baseDistance[i] = (sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000) | 0 --> integer
+baseX + "" --> string
+baseX --> integer
+baseX --> integer
+baseX --> integer
+baseX --> integer
+baseX = rand(0, 1000) --> integer
+baseY + "" --> string
+baseY --> integer
+baseY --> integer
+baseY --> integer
+baseY --> integer
+baseY = rand(0, 1000) --> integer
+bestChromosome --> Array<integer>
+bestChromosome --> Array<integer>
+bestChromosome --> Array<integer>
+bestChromosome --> Array<integer>
+bestChromosome --> Array<integer>
+bestChromosome --> Array<integer>
+bestChromosomeGlobal --> Array<integer>
+bestChromosomeGlobal --> Array<integer>
+bestChromosome[i] --> integer
+bestChromosome[j] --> integer
+bestChromosome[j] --> integer
+bestChromosome[j] --> integer
+bestChromosome[j] = chromo[j] --> integer
+bestChromosome[j] = chromo[j] --> integer
+bestScore --> integer
+bestScore --> integer
+bestScore --> integer
+bestScore --> integer
+bestScore --> integer
+bestScore = 999999999 --> integer
+bestScore = scores[i] --> integer
+bestScore > scores[i] --> boolean
+bestScoreGlobal + "" --> string
+bestScoreGlobal --> integer
+bestScoreGlobal --> integer
+bestScoreGlobal --> integer
+bestScoreGlobal --> integer
+bestScoreGlobal --> integer
+bestScoreGlobal = 999999999 --> integer
+bestScoreGlobal = scores[i] --> integer
+bestScoreGlobal > scores[i] --> boolean
+bigGA --> () -> void
+bigGA --> () -> void
+bigGA() --> void
+boolHint --> boolean
+boolHint --> boolean
+boolHint = isFirstCall --> boolean
+bound --> integer
+bound --> integer
+bound --> integer
+bound --> integer
+bound --> integer
+bound --> integer
+bound --> integer
+bound = t2 - t1 --> integer
+bound = t3 - t2 --> integer
+bound = t4 - t3 --> integer
+calcFitness --> (Array<integer>) -> integer
+calcFitness --> (Array<integer>) -> integer
+calcFitness --> (Array<integer>) -> integer
+calcFitness(chromo) --> integer
+calcFitness(chromosomes[currentGeneration][i]) --> integer
+calcFitness(chromosomes[currentGeneration][i]) / population --> float
+childGeneration + 1 --> integer
+childGeneration --> integer
+childGeneration --> integer
+childGeneration --> integer
+childGeneration --> integer
+childGeneration --> integer
+childGeneration = (childGeneration + 1) % 2 | 0 --> integer
+childGeneration = 1 --> integer
+chrom --> Array<Array<integer>>
+chrom --> Array<Array<integer>>
+chrom --> Array<Array<integer>>
+chrom --> Array<Array<integer>>
+chrom --> Array<Array<integer>>
+chrom --> Array<Array<integer>>
+chrom[i] --> Array<integer>
+chrom[i] --> Array<integer>
+chrom[i] --> Array<integer>
+chrom[i] = [] --> Array<integer>
+chrom[i][j] --> integer
+chrom[i][j] --> integer
+chrom[i][j] = bestChromosome[j] --> integer
+chrom[victim1] --> Array<integer>
+chrom[victim1][i] --> integer
+chrom[victim1][i] = bestChromosome[i] --> integer
+chromo --> Array<integer>
+chromo --> Array<integer>
+chromo --> Array<integer>
+chromo --> Array<integer>
+chromo --> Array<integer>
+chromo --> Array<integer>
+chromo --> Array<integer>
+chromo --> Array<integer>
+chromo --> Array<integer>
+chromo --> Array<integer>
+chromo --> Array<integer>
+chromo --> Array<integer>
+chromo --> Array<integer>
+chromo --> Array<integer>
+chromo --> Array<integer>
+chromo --> Array<integer>
+chromo --> Array<integer>
+chromo --> Array<integer>
+chromo --> Array<integer>
+chromo --> Array<integer>
+chromo --> Array<integer>
+chromo --> Array<integer>
+chromo --> Array<integer>
+chromo = chromosomes[currentGeneration][i] --> Array<integer>
+chromoC --> Array<integer>
+chromoC --> Array<integer>
+chromoC --> Array<integer>
+chromoC --> Array<integer>
+chromoC --> Array<integer>
+chromoC --> Array<integer>
+chromoC --> Array<integer>
+chromoC --> Array<integer>
+chromoC --> Array<integer>
+chromoC --> Array<integer>
+chromoC = chromosomes[childGeneration][i] --> Array<integer>
+chromoC = intArrHint --> Array<integer>
+chromoC[t1] --> integer
+chromoC[t1] = -1 --> integer
+chromoC[t3] --> integer
+chromoC[t3] --> integer
+chromoC[t3] --> integer
+chromoC[t3] = chromoM[t3] --> integer
+chromoC[t3] = t1 --> integer
+chromoC[t3] === -1 --> boolean
+chromoF --> Array<integer>
+chromoF --> Array<integer>
+chromoF --> Array<integer>
+chromoF --> Array<integer>
+chromoF --> Array<integer>
+chromoF --> Array<integer>
+chromoF --> Array<integer>
+chromoF = chromosomes[currentGeneration][father] --> Array<integer>
+chromoF = intArrHint --> Array<integer>
+chromoF[t3] --> integer
+chromoF[t3] --> integer
+chromoM --> Array<integer>
+chromoM --> Array<integer>
+chromoM --> Array<integer>
+chromoM --> Array<integer>
+chromoM --> Array<integer>
+chromoM --> Array<integer>
+chromoM --> Array<integer>
+chromoM --> Array<integer>
+chromoM = chromosomes[currentGeneration][mother] --> Array<integer>
+chromoM = intArrHint --> Array<integer>
+chromoM[t3] --> integer
+chromoM[t3] --> integer
+chromoM[t3] --> integer
+chromoTypeHint --> () -> void
+chromo[0] --> integer
+chromo[customerNumber - 1] --> integer
+chromo[i + t1] --> integer
+chromo[i + t2] --> integer
+chromo[i + t3] --> integer
+chromo[i - 1] --> integer
+chromo[i] --> integer
+chromo[i] --> integer
+chromo[i] --> integer
+chromo[i] --> integer
+chromo[i] --> integer
+chromo[i] = initSelect(rand(0, customerNumber), selected) --> integer
+chromo[i] = temp[i] --> integer
+chromo[j] --> integer
+chromo[j] --> integer
+chromosomes --> Array<Array<Array<integer>>>
+chromosomes --> Array<Array<Array<integer>>>
+chromosomes --> Array<Array<Array<integer>>>
+chromosomes --> Array<Array<Array<integer>>>
+chromosomes --> Array<Array<Array<integer>>>
+chromosomes --> Array<Array<Array<integer>>>
+chromosomes --> Array<Array<Array<integer>>>
+chromosomes --> Array<Array<Array<integer>>>
+chromosomes --> Array<Array<Array<integer>>>
+chromosomes --> Array<Array<Array<integer>>>
+chromosomes --> Array<Array<Array<integer>>>
+chromosomes --> Array<Array<Array<integer>>>
+chromosomes --> Array<Array<Array<integer>>>
+chromosomes --> Array<Array<Array<integer>>>
+chromosomes[childGeneration] --> Array<Array<integer>>
+chromosomes[childGeneration][i] --> Array<integer>
+chromosomes[currentGeneration] --> Array<Array<integer>>
+chromosomes[currentGeneration] --> Array<Array<integer>>
+chromosomes[currentGeneration] --> Array<Array<integer>>
+chromosomes[currentGeneration] --> Array<Array<integer>>
+chromosomes[currentGeneration] --> Array<Array<integer>>
+chromosomes[currentGeneration] --> Array<Array<integer>>
+chromosomes[currentGeneration] --> Array<Array<integer>>
+chromosomes[currentGeneration] --> Array<Array<integer>>
+chromosomes[currentGeneration] --> Array<Array<integer>>
+chromosomes[currentGeneration][father] --> Array<integer>
+chromosomes[currentGeneration][i] --> Array<integer>
+chromosomes[currentGeneration][i] --> Array<integer>
+chromosomes[currentGeneration][i] --> Array<integer>
+chromosomes[currentGeneration][i] --> Array<integer>
+chromosomes[currentGeneration][i] --> Array<integer>
+chromosomes[currentGeneration][i] --> Array<integer>
+chromosomes[currentGeneration][i] --> Array<integer>
+chromosomes[currentGeneration][i][j] --> integer
+chromosomes[currentGeneration][i][j] --> integer
+chromosomes[currentGeneration][i][j] --> integer
+chromosomes[currentGeneration][i][j] = chrom[i][j] --> integer
+chromosomes[currentGeneration][mother] --> Array<integer>
+chromosomes[i] --> Array<Array<integer>>
+chromosomes[i] --> Array<Array<integer>>
+chromosomes[i] = [] --> Array<Array<integer>>
+chromosomes[i][j] --> Array<integer>
+chromosomes[i][j] = [] --> Array<integer>
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log(1 + "") --> void
+console.log(1 + "") --> void
+console.log(1 + "") --> void
+console.log(2 + "") --> void
+console.log(baseX + "") --> void
+console.log(baseY + "") --> void
+console.log(bestScoreGlobal + "") --> void
+console.log(customerX[i] + "") --> void
+console.log(customerY[i] + "") --> void
+crossover --> (Array<integer>,Array<integer>,Array<integer>) -> void
+crossover --> (Array<integer>,Array<integer>,Array<integer>) -> void
+crossover(chromoC, chromoF, chromoM) --> void
+currentGeneration + 1 --> integer
+currentGeneration --> integer
+currentGeneration --> integer
+currentGeneration --> integer
+currentGeneration --> integer
+currentGeneration --> integer
+currentGeneration --> integer
+currentGeneration --> integer
+currentGeneration --> integer
+currentGeneration --> integer
+currentGeneration --> integer
+currentGeneration --> integer
+currentGeneration --> integer
+currentGeneration --> integer
+currentGeneration --> integer
+currentGeneration --> integer
+currentGeneration = (currentGeneration + 1) % 2 | 0 --> integer
+currentGeneration = 0 --> integer
+currentGeneration = 0 --> integer
+currentGeneration = 0 --> integer
+customerNumber - 1 --> integer
+customerNumber - 1 --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber --> integer
+customerNumber = 17 --> integer
+customerX --> Array<integer>
+customerX --> Array<integer>
+customerX --> Array<integer>
+customerX --> Array<integer>
+customerX --> Array<integer>
+customerX --> Array<integer>
+customerX[i] + "" --> string
+customerX[i] - baseX --> integer
+customerX[i] - customerX[j] --> integer
+customerX[i] --> integer
+customerX[i] --> integer
+customerX[i] --> integer
+customerX[i] --> integer
+customerX[i] = rand(0, 1000) --> integer
+customerX[j] --> integer
+customerY --> Array<integer>
+customerY --> Array<integer>
+customerY --> Array<integer>
+customerY --> Array<integer>
+customerY --> Array<integer>
+customerY --> Array<integer>
+customerY[i] + "" --> string
+customerY[i] - baseY --> integer
+customerY[i] - customerY[j] --> integer
+customerY[i] --> integer
+customerY[i] --> integer
+customerY[i] --> integer
+customerY[i] --> integer
+customerY[i] = rand(0, 1000) --> integer
+customerY[j] --> integer
+distance --> Array<Array<integer>>
+distance --> Array<Array<integer>>
+distance --> Array<Array<integer>>
+distance --> Array<Array<integer>>
+distance --> Array<Array<integer>>
+distance --> Array<Array<integer>>
+distance --> Array<Array<integer>>
+distance[i] --> Array<integer>
+distance[i] --> Array<integer>
+distance[i] --> Array<integer>
+distance[i] = [] --> Array<integer>
+distance[i][j] --> integer
+distance[i][j] --> integer
+distance[i][j] = (sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000) | 0 --> integer
+distance[j] --> Array<integer>
+distance[j][i] --> integer
+distance[j][i] = distance[i][j] --> integer
+distance[t1] --> Array<integer>
+distance[t1][t2] --> integer
+evaluate --> () -> boolean
+evaluate --> () -> boolean
+evaluate --> () -> boolean
+evaluate() --> boolean
+evaluate() --> boolean
+evolve --> () -> void
+evolve --> () -> void
+evolve() --> void
+false --> boolean
+false --> boolean
+false --> boolean
+false --> boolean
+father !== mother --> boolean
+father --> integer
+father --> integer
+father --> integer
+father --> integer
+father = selection() --> integer
+flag --> boolean
+flag --> boolean
+flag --> boolean
+flag --> integer
+flag --> integer
+flag --> integer
+flag = 0 --> integer
+flag = false --> boolean
+floatArrHint --> Array<float>
+floatHint --> float
+floatHint --> float
+floatHint = s --> float
+function bigGA() {
+  var chrom = [];
+  intArrArrHint = chrom;
+  var i, j, average, worstScore, victim1;
+  bestScoreGlobal = 999999999;
+  mutationRate = 10;
+  selectivePressure = 4;
+  for (i = 0; i < 2; i++) 
+    {
+      chromosomes[i] = [];
+      for (j = 0; j < population; j++) 
+        {
+          chromosomes[i][j] = [];
+        }
+    }
+  console.log(1 + "");
+  worstScore = 0;
+  for (i = 0; i < population; i++) 
+    {
+      smallGA(true);
+      chrom[i] = [];
+      for (j = 0; j < customerNumber; j++) 
+        chrom[i][j] = bestChromosome[j];
+    }
+  console.log(2 + "");
+  var gen = 0;
+  for (; gen < generationGoal; gen++) 
+    {
+      currentGeneration = 0;
+      worstScore = 0;
+      mutationRate = ((average / (average - bestScore))) * 100 | 0;
+      average = 0;
+      for (i = 0; i < population; i++) 
+        {
+          for (j = 0; j < customerNumber; j++) 
+            chromosomes[currentGeneration][i][j] = chrom[i][j];
+        }
+      evaluate();
+      victim1 = selection();
+      for (i = 0; i < population; i++) 
+        {
+          average += (calcFitness(chromosomes[currentGeneration][i]) / population) | 0;
+          mutate(chromosomes[currentGeneration][i]);
+        }
+      mutationRate = 10;
+      smallGA(false);
+      for (i = 0; i < customerNumber; i++) 
+        {
+          chrom[victim1][i] = bestChromosome[i];
+        }
+    }
+}
+ --> () -> void
+function calcFitness(chromo) {
+  var t1, t2, i, length;
+  intArrHint = chromo;
+  length = 0;
+  for (i = 1; i < customerNumber - 1; i++) 
+    {
+      t1 = chromo[i - 1];
+      t2 = chromo[i];
+      length += distance[t1][t2];
+    }
+  length += baseDistance[chromo[0]];
+  length += baseDistance[chromo[customerNumber - 1]];
+  return length;
+}
+ --> (Array<integer>) -> integer
+function chromoTypeHint() {
+  var hint = [[[0]]];
+  hint = chromosomes;
+}
+ --> () -> void
+function crossover(chromoC, chromoF, chromoM) {
+  var t1, t2, t3;
+  var usedNumber = [];
+  var map = [];
+  for (t1 = 0; t1 < customerNumber; t1++) 
+    {
+      usedNumber[t1] = 0;
+      chromoC[t1] = -1;
+    }
+  t1 = rand(0, customerNumber);
+  t2 = rand(0, t1);
+  for (t3 = t2; t3 < t1; t3++) 
+    {
+      chromoC[t3] = chromoM[t3];
+      usedNumber[chromoM[t3]] = 1;
+    }
+  for (t3 = 0; t3 < customerNumber; t3++) 
+    {
+      map[chromoM[t3]] = chromoF[t3];
+    }
+  for (t3 = 0; t3 < customerNumber; t3++) 
+    {
+      if (chromoC[t3] === -1) 
+      {
+        t1 = chromoF[t3];
+        while (usedNumber[t1]) 
+          {
+            t1 = map[t1];
+          }
+        chromoC[t3] = t1;
+        usedNumber[t1];
+      }
+    }
+  chromoC = intArrHint;
+  chromoF = intArrHint;
+  chromoM = intArrHint;
+}
+ --> (Array<integer>,Array<integer>,Array<integer>) -> void
+function evaluate() {
+  var i, j;
+  var chromo;
+  intArrHint = chromo;
+  var temp = [];
+  var average;
+  maxScore = 99999999;
+  minScore = 0;
+  average = 0;
+  for (i = 0; i < population; i++) 
+    {
+      chromo = chromosomes[currentGeneration][i];
+      scores[i] = calcFitness(chromo);
+      average += ((scores[i] + (population / 2)) / population) | 0;
+      if (maxScore > scores[i]) 
+      maxScore = scores[i];
+      if (minScore < scores[i]) 
+      minScore = scores[i];
+      if (bestScore > scores[i]) 
+      {
+        bestScore = scores[i];
+        for (j = 0; j < customerNumber; j++) 
+          bestChromosome[j] = chromo[j];
+      }
+      if (bestScoreGlobal > scores[i]) 
+      {
+        bestScoreGlobal = scores[i];
+        for (j = 0; j < customerNumber; j++) 
+          bestChromosome[j] = chromo[j];
+      }
+      for (j = 0; j < customerNumber; j++) 
+        temp[j] = false;
+      for (j = 0; j < customerNumber; j++) 
+        {
+          if (temp[chromosomes[currentGeneration][i][j]]) 
+          {
+          } else {
+          }
+          temp[chromosomes[currentGeneration][i][j]] = true;
+        }
+    }
+  if (average === maxScore) 
+  return true;
+  if (average / (average - maxScore) > 200) 
+  return false;
+  return true;
+}
+ --> () -> boolean
+function evolve() {
+  var i, father, mother;
+  var chromoC, chromoF, chromoM;
+  for (i = 0; i < population; i++) 
+    {
+      var flag = true;
+      father = selection();
+      while (flag) 
+        {
+          mother = selection();
+          if (father !== mother) 
+          flag = false;
+        }
+      chromoC = chromosomes[childGeneration][i];
+      chromoF = chromosomes[currentGeneration][father];
+      chromoM = chromosomes[currentGeneration][mother];
+      crossover(chromoC, chromoF, chromoM);
+      mutate(chromoC);
+    }
+  return;
+}
+ --> () -> void
+function initSelect(seed, selected) {
+  var index = 0;
+  while (seed >= 0) 
+    {
+      if (0 === selected[index]) 
+      seed--;
+      if (seed >= 0) 
+      {
+        index++;
+        if (index == customerNumber) 
+        index = 0;
+      }
+    }
+  selected[index] = 1;
+  return index;
+  intHint = seed;
+  intArrHint = selected;
+}
+ --> (integer,Array<integer>) -> integer
+function initialize() {
+  var i = 0;
+  currentGeneration = 0;
+  for (i = 0; i < population; i++) 
+    initializeChromosome(chromosomes[currentGeneration][i]);
+}
+ --> () -> void
+function initializeChromosome(chromo) {
+  var selected = [];
+  var i;
+  for (i = 0; i < customerNumber; i++) 
+    selected[i] = 0;
+  for (i = 0; i < customerNumber; i++) 
+    {
+      chromo[i] = initSelect(rand(0, customerNumber), selected);
+    }
+  intArrHint = chromo;
+}
+ --> (Array<integer>) -> void
+function mutate(chromo) {
+  var t1, t2, t3, t4, i, base, bound;
+  var temp = [];
+  if (rand(0, RAND_MAX) < RAND_MAX / 1000 * mutationRate) 
+  {
+    t4 = rand(0, customerNumber);
+    t3 = rand(0, t4);
+    t2 = rand(0, t3);
+    t1 = rand(0, t2);
+    for (i = 0; i < t1; i++) 
+      temp[i] = chromo[i];
+    base = t1;
+    bound = t4 - t3;
+    for (i = 0; i < bound; i++) 
+      temp[i + base] = chromo[i + t3];
+    base = t4 - t3 + t1;
+    bound = t3 - t2;
+    for (i = 0; i < bound; i++) 
+      temp[i + base] = chromo[i + t2];
+    base = t1 + t4 - t2;
+    bound = t2 - t1;
+    for (i = 0; i < bound; i++) 
+      temp[i + base] = chromo[i + t1];
+    for (i = t4; i < customerNumber; i++) 
+      temp[i] = chromo[i];
+    for (i = 0; i < customerNumber; i++) 
+      chromo[i] = temp[i];
+  }
+  intArrHint = chromo;
+}
+ --> (Array<integer>) -> void
+function rand(min, max) {
+  prev = (48271 * prev + 12820163) & 16777215;
+  var result = min + ((max - min) * (prev / 16777216));
+  return result | 0;
+  intHint = max;
+  intHint = min;
+}
+ --> (integer,integer) -> integer
+function randGen(seed) {
+  var prev = seed;
+  function rand(min, max) {
+    prev = (48271 * prev + 12820163) & 16777215;
+    var result = min + ((max - min) * (prev / 16777216));
+    return result | 0;
+    intHint = max;
+    intHint = min;
+  }
+  return rand;
+  intHint = seed;
+}
+ --> (integer) -> (integer,integer) -> integer
+function run() {
+  var i, j, t1, t2;
+  customerNumber = 17;
+  population = 18;
+  generationGoal = 19;
+  baseX = rand(0, 1000);
+  baseY = rand(0, 1000);
+  for (i = 0; i < customerNumber; i++) 
+    {
+      customerX[i] = rand(0, 1000);
+      customerY[i] = rand(0, 1000);
+    }
+  console.log(1 + "");
+  for (i = 0; i < customerNumber; i++) 
+    distance[i] = [];
+  console.log(1 + "");
+  for (i = 0; i < customerNumber; i++) 
+    {
+      for (j = i + 1; j < customerNumber; j++) 
+        {
+          t1 = customerX[i] - customerX[j];
+          t2 = customerY[i] - customerY[j];
+          distance[i][j] = (sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000) | 0;
+          distance[j][i] = distance[i][j];
+        }
+      t1 = customerX[i] - baseX;
+      t2 = customerY[i] - baseY;
+      baseDistance[i] = (sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000) | 0;
+    }
+  bigGA();
+  console.log(baseX + "");
+  console.log(baseY + "");
+  for (i = 0; i < customerNumber; i++) 
+    {
+      console.log(customerX[i] + "");
+      console.log(customerY[i] + "");
+    }
+  console.log(bestScoreGlobal + "");
+}
+ --> () -> void
+function selection() {
+  var t1, t2;
+  t1 = rand(0, population * 100 * (selectivePressure + 1));
+  t2 = 0;
+  while (1) 
+    {
+      t1 = t1 - wheelportion(t2);
+      if (t1 <= 0) 
+      return t2;
+      t2 = ((t2 + 1) % population) | 0;
+    }
+  return t2;
+}
+ --> () -> integer
+function smallGA(isFirstCall) {
+  boolHint = isFirstCall;
+  bestScore = 999999999;
+  currentGeneration = 0;
+  childGeneration = 1;
+  if (isFirstCall) 
+  initialize();
+  while (evaluate()) 
+    {
+      evolve();
+      switchGeneration();
+    }
+}
+ --> (boolean) -> void
+function sqrt(s) {
+  var x, z;
+  var flag = 1;
+  x = s;
+  if (x === 0.0) 
+  return x;
+  while (flag) 
+    {
+      x = (x + (s / x)) / 2.0;
+      x = (x + (s / x)) / 2.0;
+      x = (x + (s / x)) / 2.0;
+      x = (x + (s / x)) / 2.0;
+      z = x * x;
+      if (z > 0.999 * s && z < 1.001 * s) 
+      flag = 0;
+    }
+  return x;
+  floatHint = s;
+}
+ --> (float) -> float
+function switchGeneration() {
+  currentGeneration = (currentGeneration + 1) % 2 | 0;
+  childGeneration = (childGeneration + 1) % 2 | 0;
+}
+ --> () -> void
+function wheelportion(i) {
+  var t1, t2, t3;
+  t1 = minScore - maxScore;
+  if (0 === t1) 
+  return (selectivePressure + 1) * 100;
+  t2 = minScore - scores[i];
+  t3 = ((10 * (t1 + selectivePressure * t2)) / t1) | 0;
+  return t3 * 10;
+  intHint = i;
+}
+ --> (integer) -> integer
+gen --> integer
+gen --> integer
+gen --> integer
+gen < generationGoal --> boolean
+gen++ --> integer
+generationGoal --> integer
+generationGoal --> integer
+generationGoal --> integer
+generationGoal = 19 --> integer
+hint --> Array<Array<Array<integer>>>
+hint --> Array<Array<Array<integer>>>
+hint = chromosomes --> Array<Array<Array<integer>>>
+i + 1 --> integer
+i + base --> integer
+i + base --> integer
+i + base --> integer
+i + t1 --> integer
+i + t2 --> integer
+i + t3 --> integer
+i - 1 --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i < 2 --> boolean
+i < bound --> boolean
+i < bound --> boolean
+i < bound --> boolean
+i < customerNumber - 1 --> boolean
+i < customerNumber --> boolean
+i < customerNumber --> boolean
+i < customerNumber --> boolean
+i < customerNumber --> boolean
+i < customerNumber --> boolean
+i < customerNumber --> boolean
+i < customerNumber --> boolean
+i < customerNumber --> boolean
+i < customerNumber --> boolean
+i < population --> boolean
+i < population --> boolean
+i < population --> boolean
+i < population --> boolean
+i < population --> boolean
+i < population --> boolean
+i < t1 --> boolean
+i = 0 --> integer
+i = 0 --> integer
+i = 0 --> integer
+i = 0 --> integer
+i = 0 --> integer
+i = 0 --> integer
+i = 0 --> integer
+i = 0 --> integer
+i = 0 --> integer
+i = 0 --> integer
+i = 0 --> integer
+i = 0 --> integer
+i = 0 --> integer
+i = 0 --> integer
+i = 0 --> integer
+i = 0 --> integer
+i = 0 --> integer
+i = 0 --> integer
+i = 0 --> integer
+i = 1 --> integer
+i = t4 --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+i++ --> integer
+index --> integer
+index --> integer
+index --> integer
+index --> integer
+index --> integer
+index --> integer
+index --> integer
+index = 0 --> integer
+index == customerNumber --> boolean
+index++ --> integer
+initSelect --> (integer,Array<integer>) -> integer
+initSelect --> (integer,Array<integer>) -> integer
+initSelect(rand(0, customerNumber), selected) --> integer
+initialize --> () -> void
+initialize --> () -> void
+initialize() --> void
+initializeChromosome --> (Array<integer>) -> void
+initializeChromosome --> (Array<integer>) -> void
+initializeChromosome(chromosomes[currentGeneration][i]) --> void
+intArrArrHint --> Array<Array<integer>>
+intArrArrHint --> Array<Array<integer>>
+intArrArrHint --> Array<Array<integer>>
+intArrArrHint = chrom --> Array<Array<integer>>
+intArrArrHint = distance --> Array<Array<integer>>
+intArrHint --> Array<integer>
+intArrHint --> Array<integer>
+intArrHint --> Array<integer>
+intArrHint --> Array<integer>
+intArrHint --> Array<integer>
+intArrHint --> Array<integer>
+intArrHint --> Array<integer>
+intArrHint --> Array<integer>
+intArrHint --> Array<integer>
+intArrHint --> Array<integer>
+intArrHint --> Array<integer>
+intArrHint --> Array<integer>
+intArrHint --> Array<integer>
+intArrHint = baseDistance --> Array<integer>
+intArrHint = bestChromosome --> Array<integer>
+intArrHint = bestChromosomeGlobal --> Array<integer>
+intArrHint = chromo --> Array<integer>
+intArrHint = chromo --> Array<integer>
+intArrHint = chromo --> Array<integer>
+intArrHint = chromo --> Array<integer>
+intArrHint = scores --> Array<integer>
+intArrHint = selected --> Array<integer>
+intHint --> integer
+intHint --> integer
+intHint --> integer
+intHint --> integer
+intHint --> integer
+intHint --> integer
+intHint = i --> integer
+intHint = max --> integer
+intHint = min --> integer
+intHint = seed --> integer
+intHint = seed --> integer
+isFirstCall --> boolean
+isFirstCall --> boolean
+isFirstCall --> boolean
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j --> integer
+j < customerNumber --> boolean
+j < customerNumber --> boolean
+j < customerNumber --> boolean
+j < customerNumber --> boolean
+j < customerNumber --> boolean
+j < customerNumber --> boolean
+j < customerNumber --> boolean
+j < population --> boolean
+j = 0 --> integer
+j = 0 --> integer
+j = 0 --> integer
+j = 0 --> integer
+j = 0 --> integer
+j = 0 --> integer
+j = 0 --> integer
+j = i + 1 --> integer
+j++ --> integer
+j++ --> integer
+j++ --> integer
+j++ --> integer
+j++ --> integer
+j++ --> integer
+j++ --> integer
+j++ --> integer
+length += baseDistance[chromo[0]] --> integer
+length += baseDistance[chromo[customerNumber - 1]] --> integer
+length += distance[t1][t2] --> integer
+length --> integer
+length --> integer
+length --> integer
+length --> integer
+length --> integer
+length --> integer
+length = 0 --> integer
+map --> Array<integer>
+map --> Array<integer>
+map --> Array<integer>
+map[chromoM[t3]] --> integer
+map[chromoM[t3]] = chromoF[t3] --> integer
+map[t1] --> integer
+max - min --> integer
+max --> integer
+max --> integer
+max --> integer
+maxScore --> integer
+maxScore --> integer
+maxScore --> integer
+maxScore --> integer
+maxScore --> integer
+maxScore --> integer
+maxScore --> integer
+maxScore = 99999999 --> integer
+maxScore = scores[i] --> integer
+maxScore > scores[i] --> boolean
+min + ((max - min) * (prev / 16777216)) --> float
+min --> integer
+min --> integer
+min --> integer
+min --> integer
+minScore - maxScore --> integer
+minScore - scores[i] --> integer
+minScore --> integer
+minScore --> integer
+minScore --> integer
+minScore --> integer
+minScore --> integer
+minScore --> integer
+minScore < scores[i] --> boolean
+minScore = 0 --> integer
+minScore = scores[i] --> integer
+mother --> integer
+mother --> integer
+mother --> integer
+mother --> integer
+mother = selection() --> integer
+mutate --> (Array<integer>) -> void
+mutate --> (Array<integer>) -> void
+mutate --> (Array<integer>) -> void
+mutate(chromoC) --> void
+mutate(chromosomes[currentGeneration][i]) --> void
+mutationRate --> integer
+mutationRate --> integer
+mutationRate --> integer
+mutationRate --> integer
+mutationRate --> integer
+mutationRate = ((average / (average - bestScore))) * 100 | 0 --> integer
+mutationRate = 10 --> integer
+mutationRate = 10 --> integer
+population * 100 * (selectivePressure + 1) --> integer
+population * 100 --> integer
+population --> integer
+population --> integer
+population --> integer
+population --> integer
+population --> integer
+population --> integer
+population --> integer
+population --> integer
+population --> integer
+population --> integer
+population --> integer
+population --> integer
+population --> integer
+population --> integer
+population / 2 --> float
+population = 18 --> integer
+prev --> integer
+prev --> integer
+prev --> integer
+prev --> integer
+prev / 16777216 --> float
+prev = (48271 * prev + 12820163) & 16777215 --> integer
+rand --> (integer,integer) -> integer
+rand --> (integer,integer) -> integer
+rand --> (integer,integer) -> integer
+rand --> (integer,integer) -> integer
+rand --> (integer,integer) -> integer
+rand --> (integer,integer) -> integer
+rand --> (integer,integer) -> integer
+rand --> (integer,integer) -> integer
+rand --> (integer,integer) -> integer
+rand --> (integer,integer) -> integer
+rand --> (integer,integer) -> integer
+rand --> (integer,integer) -> integer
+rand --> (integer,integer) -> integer
+rand --> (integer,integer) -> integer
+rand --> (integer,integer) -> integer
+rand --> (integer,integer) -> integer
+rand(0, 1000) --> integer
+rand(0, 1000) --> integer
+rand(0, 1000) --> integer
+rand(0, 1000) --> integer
+rand(0, RAND_MAX) --> integer
+rand(0, RAND_MAX) < RAND_MAX / 1000 * mutationRate --> boolean
+rand(0, customerNumber) --> integer
+rand(0, customerNumber) --> integer
+rand(0, customerNumber) --> integer
+rand(0, population * 100 * (selectivePressure + 1)) --> integer
+rand(0, t1) --> integer
+rand(0, t2) --> integer
+rand(0, t3) --> integer
+rand(0, t4) --> integer
+randGen --> (integer) -> (integer,integer) -> integer
+randGen --> (integer) -> (integer,integer) -> integer
+randGen(0) --> (integer,integer) -> integer
+result --> float
+result --> float
+result | 0 --> integer
+run --> () -> void
+run --> () -> void
+run() --> void
+s --> float
+s --> float
+s --> float
+s --> float
+s --> float
+s --> float
+s --> float
+s --> float
+s --> float
+s / x --> float
+s / x --> float
+s / x --> float
+s / x --> float
+scores --> Array<integer>
+scores --> Array<integer>
+scores --> Array<integer>
+scores --> Array<integer>
+scores --> Array<integer>
+scores --> Array<integer>
+scores --> Array<integer>
+scores --> Array<integer>
+scores --> Array<integer>
+scores --> Array<integer>
+scores --> Array<integer>
+scores --> Array<integer>
+scores --> Array<integer>
+scores[i] + (population / 2) --> float
+scores[i] --> integer
+scores[i] --> integer
+scores[i] --> integer
+scores[i] --> integer
+scores[i] --> integer
+scores[i] --> integer
+scores[i] --> integer
+scores[i] --> integer
+scores[i] --> integer
+scores[i] --> integer
+scores[i] --> integer
+scores[i] = calcFitness(chromo) --> integer
+seed --> integer
+seed --> integer
+seed --> integer
+seed --> integer
+seed --> integer
+seed --> integer
+seed --> integer
+seed --> integer
+seed >= 0 --> boolean
+seed >= 0 --> boolean
+seed-- --> integer
+selected --> Array<integer>
+selected --> Array<integer>
+selected --> Array<integer>
+selected --> Array<integer>
+selected --> Array<integer>
+selected --> Array<integer>
+selected --> Array<integer>
+selected[i] --> integer
+selected[i] = 0 --> integer
+selected[index] --> integer
+selected[index] --> integer
+selected[index] = 1 --> integer
+selection --> () -> integer
+selection --> () -> integer
+selection --> () -> integer
+selection --> () -> integer
+selection() --> integer
+selection() --> integer
+selection() --> integer
+selectivePressure * t2 --> integer
+selectivePressure + 1 --> integer
+selectivePressure + 1 --> integer
+selectivePressure --> integer
+selectivePressure --> integer
+selectivePressure --> integer
+selectivePressure --> integer
+selectivePressure --> integer
+selectivePressure = 4 --> integer
+smallGA --> (boolean) -> void
+smallGA --> (boolean) -> void
+smallGA --> (boolean) -> void
+smallGA(false) --> void
+smallGA(true) --> void
+sqrt --> (float) -> float
+sqrt --> (float) -> float
+sqrt --> (float) -> float
+sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000 --> float
+sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000 --> float
+sqrt((t1 * t1 + t2 * t2) * 1.0) --> float
+sqrt((t1 * t1 + t2 * t2) * 1.0) --> float
+switchGeneration --> () -> void
+switchGeneration --> () -> void
+switchGeneration() --> void
+t1 * t1 + t2 * t2 --> integer
+t1 * t1 + t2 * t2 --> integer
+t1 * t1 --> integer
+t1 * t1 --> integer
+t1 + selectivePressure * t2 --> integer
+t1 + t4 - t2 --> integer
+t1 + t4 --> integer
+t1 - wheelportion(t2) --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 --> integer
+t1 < customerNumber --> boolean
+t1 <= 0 --> boolean
+t1 = 0 --> integer
+t1 = chromoF[t3] --> integer
+t1 = chromo[i - 1] --> integer
+t1 = customerX[i] - baseX --> integer
+t1 = customerX[i] - customerX[j] --> integer
+t1 = map[t1] --> integer
+t1 = minScore - maxScore --> integer
+t1 = rand(0, customerNumber) --> integer
+t1 = rand(0, population * 100 * (selectivePressure + 1)) --> integer
+t1 = rand(0, t2) --> integer
+t1 = t1 - wheelportion(t2) --> integer
+t1++ --> integer
+t2 * t2 --> integer
+t2 * t2 --> integer
+t2 + 1 --> integer
+t2 - t1 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 --> integer
+t2 = ((t2 + 1) % population) | 0 --> integer
+t2 = 0 --> integer
+t2 = chromo[i] --> integer
+t2 = customerY[i] - baseY --> integer
+t2 = customerY[i] - customerY[j] --> integer
+t2 = minScore - scores[i] --> integer
+t2 = rand(0, t1) --> integer
+t2 = rand(0, t3) --> integer
+t3 * 10 --> integer
+t3 - t2 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 --> integer
+t3 < customerNumber --> boolean
+t3 < customerNumber --> boolean
+t3 < t1 --> boolean
+t3 = ((10 * (t1 + selectivePressure * t2)) / t1) | 0 --> integer
+t3 = 0 --> integer
+t3 = 0 --> integer
+t3 = rand(0, t4) --> integer
+t3 = t2 --> integer
+t3++ --> integer
+t3++ --> integer
+t3++ --> integer
+t4 - t3 + t1 --> integer
+t4 - t3 --> integer
+t4 - t3 --> integer
+t4 --> integer
+t4 --> integer
+t4 --> integer
+t4 --> integer
+t4 --> integer
+t4 --> integer
+t4 --> integer
+t4 = rand(0, customerNumber) --> integer
+temp --> Array<boolean>
+temp --> Array<boolean>
+temp --> Array<boolean>
+temp --> Array<boolean>
+temp --> Array<integer>
+temp --> Array<integer>
+temp --> Array<integer>
+temp --> Array<integer>
+temp --> Array<integer>
+temp --> Array<integer>
+temp --> Array<integer>
+temp[chromosomes[currentGeneration][i][j]] --> boolean
+temp[chromosomes[currentGeneration][i][j]] --> boolean
+temp[chromosomes[currentGeneration][i][j]] = true --> boolean
+temp[i + base] --> integer
+temp[i + base] --> integer
+temp[i + base] --> integer
+temp[i + base] = chromo[i + t1] --> integer
+temp[i + base] = chromo[i + t2] --> integer
+temp[i + base] = chromo[i + t3] --> integer
+temp[i] --> integer
+temp[i] --> integer
+temp[i] --> integer
+temp[i] = chromo[i] --> integer
+temp[i] = chromo[i] --> integer
+temp[j] --> boolean
+temp[j] = false --> boolean
+true --> boolean
+true --> boolean
+true --> boolean
+true --> boolean
+true --> boolean
+true --> boolean
+usedNumber --> Array<integer>
+usedNumber --> Array<integer>
+usedNumber --> Array<integer>
+usedNumber --> Array<integer>
+usedNumber --> Array<integer>
+usedNumber[chromoM[t3]] --> integer
+usedNumber[chromoM[t3]] = 1 --> integer
+usedNumber[t1] --> integer
+usedNumber[t1] --> integer
+usedNumber[t1] --> integer
+usedNumber[t1] = 0 --> integer
+victim1 --> integer
+victim1 --> integer
+victim1 --> integer
+victim1 = selection() --> integer
+wheelportion --> (integer) -> integer
+wheelportion --> (integer) -> integer
+wheelportion(t2) --> integer
+worstScore --> integer
+worstScore --> integer
+worstScore --> integer
+worstScore = 0 --> integer
+worstScore = 0 --> integer
+x * x --> float
+x + (s / x) --> float
+x + (s / x) --> float
+x + (s / x) --> float
+x + (s / x) --> float
+x --> float
+x --> float
+x --> float
+x --> float
+x --> float
+x --> float
+x --> float
+x --> float
+x --> float
+x --> float
+x --> float
+x --> float
+x --> float
+x --> float
+x --> float
+x --> float
+x --> float
+x --> float
+x --> float
+x = (x + (s / x)) / 2.0 --> float
+x = (x + (s / x)) / 2.0 --> float
+x = (x + (s / x)) / 2.0 --> float
+x = (x + (s / x)) / 2.0 --> float
+x = s --> float
+x === 0.0 --> boolean
+z --> float
+z --> float
+z --> float
+z --> float
+z < 1.001 * s --> boolean
+z = x * x --> float
+z > 0.999 * s && z < 1.001 * s --> boolean
+z > 0.999 * s --> boolean

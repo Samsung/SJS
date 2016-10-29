@@ -1,0 +1,36 @@
+CheckArity(ret(|console.log|))
+Elem(|arr|)=|arr[0]|
+Elem(|arr|)=|arr[0]|
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|2|]
+MakeConcreteConstraint [term=|[{foo: 1}]|]
+MakeConcreteConstraint [term=|arr[0].foo + ""|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|{foo: 1}|]
+TP([{foo: 1}])=Elem(ret(prop(|[{foo: 1}]|,concat)))
+TP([{foo: 1}])=Elem(ret(prop(|[{foo: 1}]|,reverse)))
+TP([{foo: 1}])=Elem(|[{foo: 1}]|)
+TP([{foo: 1}])=param(prop(|[{foo: 1}]|,push),0)
+TP([{foo: 1}])=ret(prop(|[{foo: 1}]|,pop))
+TP([{foo: 1}])=ret(prop(|[{foo: 1}]|,shift))
+|""|=string
+|0|=Key(|arr|)
+|0|=Key(|arr|)
+|0|=integer
+|0|=integer
+|1|<:prop(|{foo: 1}|,foo)
+|1|=integer
+|2|<:prop(|arr[0]|,foo)
+|2|=integer
+|[{foo: 1}]|<:|arr|
+|arr[0].foo + ""|<:param(|console.log|,0)
+|arr[0].foo + ""|=op(|arr[0].foo|+|""|)
+|arr[0].foo = 2|=prop(|arr[0]|,foo)
+|arr[0].foo|=prop(|arr[0]|,foo)
+|arr[0].foo|=prop(|arr[0]|,foo)
+|arr|=|arr|
+|arr|=|arr|
+|console.log(arr[0].foo + "")|=ret(|console.log|)
+|console.log|=prop(|console|,log)
+|console|=|console|
+|{foo: 1}|<:Elem(|[{foo: 1}]|)

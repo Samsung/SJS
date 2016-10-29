@@ -1,0 +1,18 @@
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|result + i|]
+|0|<:|i|
+|0|<:|result|
+|0|=integer
+|0|=integer
+|10|=integer
+|i < 10|=op(|i|<|10|)
+|i++|=op(|i|++)
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|result + i|<:|result|
+|result + i|=op(|result|+|i|)
+|result = result + i|=|result|
+|result|=|result|
+|result|=|result|

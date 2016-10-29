@@ -1,0 +1,86 @@
+CheckArity(ret(|String.fromCharCode|))
+CheckArity(ret(|String|))
+CheckArity(ret(|String|))
+CheckArity(ret(|console.log|))
+CheckArity(ret(|console.log|))
+CheckArity(ret(|console.log|))
+CheckArity(ret(|console.log|))
+CheckArity(ret(|console.log|))
+CheckArity(ret(|s.fromCharCode|))
+CheckArity(ret(|s|))
+MakeConcreteConstraint [term=|"foo"|]
+MakeConcreteConstraint [term=|"hello"|]
+MakeConcreteConstraint [term=|65|]
+MakeConcreteConstraint [term=|66|]
+MakeConcreteConstraint [term=|String("hello")|]
+MakeConcreteConstraint [term=|String()|]
+MakeConcreteConstraint [term=|String.fromCharCode(65)|]
+MakeConcreteConstraint [term=|String|]
+MakeConcreteConstraint [term=|String|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|p|]
+MakeConcreteConstraint [term=|q|]
+MakeConcreteConstraint [term=|s("foo")|]
+MakeConcreteConstraint [term=|s.fromCharCode(66)|]
+MakeConcreteConstraint [term=|s|]
+MakeConcreteConstraint [term=|x + "!"|]
+MakeConcreteConstraint [term=|y|]
+MakeConcreteConstraint [term=|z|]
+|"!"|=string
+|"foo"|<:param(|s|,0)
+|"foo"|=string
+|"hello"|<:param(|String|,0)
+|"hello"|=string
+|65|<:param(|String.fromCharCode|,0)
+|65|=integer
+|66|<:param(|s.fromCharCode|,0)
+|66|=integer
+|String("hello")|<:|y|
+|String("hello")|=ret(|String|)
+|String()|<:|x|
+|String()|=ret(|String|)
+|String.fromCharCode(65)|<:|z|
+|String.fromCharCode(65)|=ret(|String.fromCharCode|)
+|String.fromCharCode|=prop(|String|,fromCharCode)
+|String|<:|s|
+|String|=|String|
+|String|=|String|
+|String|=|String|
+|String|=|String|
+|console.log(p)|=ret(|console.log|)
+|console.log(q)|=ret(|console.log|)
+|console.log(x + "!")|=ret(|console.log|)
+|console.log(y)|=ret(|console.log|)
+|console.log(z)|=ret(|console.log|)
+|console.log|=prop(|console|,log)
+|console.log|=prop(|console|,log)
+|console.log|=prop(|console|,log)
+|console.log|=prop(|console|,log)
+|console.log|=prop(|console|,log)
+|console|=|console|
+|console|=|console|
+|console|=|console|
+|console|=|console|
+|console|=|console|
+|p|<:param(|console.log|,0)
+|p|=|p|
+|q|<:param(|console.log|,0)
+|q|=|q|
+|s("foo")|<:|p|
+|s("foo")|=ret(|s|)
+|s.fromCharCode(66)|<:|q|
+|s.fromCharCode(66)|=ret(|s.fromCharCode|)
+|s.fromCharCode|=prop(|s|,fromCharCode)
+|s|=|s|
+|s|=|s|
+|x + "!"|<:param(|console.log|,0)
+|x + "!"|=op(|x|+|"!"|)
+|x|=|x|
+|y|<:param(|console.log|,0)
+|y|=|y|
+|z|<:param(|console.log|,0)
+|z|=|z|

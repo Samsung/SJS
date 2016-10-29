@@ -1,0 +1,25 @@
+D.prototype (line 10) --> [MRO=[f], MRW=[]]
+D.prototype (line 12) --> [MRO=[f], MRW=[]]
+D.prototype = new C() (line 10) --> [MRO=[f], MRW=[]]
+E.prototype (line 19) --> [MRO=[f], MRW=[]]
+E.prototype = {m1: function() {
+  return this.f + 1;
+}} (line 19) --> [MRO=[f], MRW=[]]
+E2.prototype (line 23) --> [MRO=[f], MRW=[]]
+E2.prototype = new E() (line 23) --> [MRO=[f], MRW=[]]
+F.prototype (line 27) --> [MRO=[f], MRW=[]]
+F.prototype = new E2() (line 27) --> [MRO=[f], MRW=[]]
+new C() (line 10) --> [MRO=[f], MRW=[]]
+new D() (line 13) --> [MRO=[f], MRW=[]]
+new E() (line 23) --> [MRO=[f], MRW=[]]
+new E2() (line 27) --> [MRO=[f], MRW=[]]
+new F() (line 29) --> [MRO=[f], MRW=[]]
+this (line 17) --> [MRO=[f], MRW=[]]
+this (line 2) --> [MRO=[f], MRW=[]]
+this (line 21) --> [MRO=[f], MRW=[]]
+this (line 25) --> [MRO=[f], MRW=[]]
+this (line 3) --> [MRO=[f], MRW=[]]
+this (line 8) --> [MRO=[f], MRW=[]]
+{m1: function() {
+  return this.f + 1;
+}} (line 19) --> [MRO=[f], MRW=[]]

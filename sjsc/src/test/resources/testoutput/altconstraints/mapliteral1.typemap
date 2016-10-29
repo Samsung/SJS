@@ -1,0 +1,13 @@
+"hi" --> string
+"there" --> string
+1 --> integer
+2 --> integer
+3.3 --> float
+4 --> integer
+4.4 --> float
+a --> Map<integer>
+b --> Map<float>
+c --> Map<string>
+{"a": "hi", "b": "there"} --> Map<string>
+{"a": 3.3, "b": 4.4} --> Map<float>
+{"x": 2, "y": 4, "z": 1} --> Map<integer>

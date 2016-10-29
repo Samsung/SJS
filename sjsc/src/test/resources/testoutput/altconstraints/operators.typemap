@@ -1,0 +1,20 @@
++x --> integer
+-x --> integer
+-z --> integer
+1 --> integer
+x + x --> integer
+x --> integer
+x --> integer
+x --> integer
+x --> integer
+x --> integer
+y --> integer
+y --> integer
+y = -x --> integer
+z + z + -z --> integer
+z + z --> integer
+z --> integer
+z --> integer
+z --> integer
+z --> integer
+zz --> integer

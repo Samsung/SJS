@@ -1,0 +1,2 @@
+Error on line 6: wrong number of parameters in call: x.m()
+    Note: 1 expected, 0 given

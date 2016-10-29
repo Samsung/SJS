@@ -1,0 +1,32 @@
+CheckArity(ret(|D|))
+CheckArity(ret(|console.log|))
+CheckArity(ret(|x.m|))
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|function <anonymous>|]
+MakeConcreteConstraint [term=|new D()|]
+MakeConcreteConstraint [term=|x|]
+MakeConcreteConstraint [term=|y|]
+param(|function <anonymous>|,0)=|y|
+prototype(|constructor D|)=__proto__(ret(|constructor D|))
+ret(|function <anonymous>|)=void
+ret(|function <anonymous>|)=void
+|D|<:ctor<0>[X1]() -> X0
+|D|=|D|
+|console.log(y)|=ret(|console.log|)
+|console.log|=prop(|console|,log)
+|console|=|console|
+|constructor D|<:|D|
+|function <anonymous>|<:prop(|this|,m)
+|new D()|<:|x|
+|new D()|=ret(|D|)
+|this.m = function(y) {
+  console.log(y);
+}|=prop(|this|,m)
+|this.m|=prop(|this|,m)
+|this|=ret(|constructor D|)
+|this|=|this|
+|x.m()|=ret(|x.m|)
+|x.m|=prop(|x|,m)
+|x|=|x|
+|y|<:param(|console.log|,0)
+|y|=|y|

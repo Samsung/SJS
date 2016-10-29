@@ -1,0 +1,20 @@
+CheckArity(ret(|i.toString|))
+CheckArity(ret(|i.toString|))
+MakeConcreteConstraint [term=|16|]
+MakeConcreteConstraint [term=|17|]
+MakeConcreteConstraint [term=|i.toString()|]
+MakeConcreteConstraint [term=|i.toString(16)|]
+MakeConcreteConstraint [term=|i|]
+MakeConcreteConstraint [term=|i|]
+|16|<:param(|i.toString|,0)
+|16|=integer
+|17|<:|i|
+|17|=integer
+|i.toString()|<:|t|
+|i.toString()|=ret(|i.toString|)
+|i.toString(16)|<:|s|
+|i.toString(16)|=ret(|i.toString|)
+|i.toString|=prop(|i|,toString)
+|i.toString|=prop(|i|,toString)
+|i|=|i|
+|i|=|i|

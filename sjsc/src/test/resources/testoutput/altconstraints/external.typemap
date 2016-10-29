@@ -1,0 +1,16 @@
+"foo" --> string
+"hello" --> string
+17 --> integer
+18 --> integer
+i --> integer
+i --> integer
+printInt --> (integer) -> void
+printInt --> (integer) -> void
+printInt(18) --> void
+printInt(i) --> void
+printString --> (string) -> void
+printString --> (string) -> void
+printString("foo") --> void
+printString(s) --> void
+s --> string
+s --> string

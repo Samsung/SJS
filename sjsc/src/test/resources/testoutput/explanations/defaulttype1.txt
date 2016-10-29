@@ -1,0 +1,2 @@
+Error on line 2: misuse of binary operator + in "i + true"
+    Note: right operand has type boolean

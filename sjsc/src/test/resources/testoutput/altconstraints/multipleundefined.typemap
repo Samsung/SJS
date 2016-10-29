@@ -1,0 +1,13 @@
+3 --> integer
+3 --> integer
+false --> boolean
+undefined --> integer
+void 3 --> integer
+void false --> integer
+x --> integer
+x --> integer
+x --> integer
+x --> integer
+x = undefined --> integer
+x = void 3 --> integer
+x = void false --> integer

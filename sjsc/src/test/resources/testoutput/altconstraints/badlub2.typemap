@@ -1,0 +1,49 @@
+"hello" --> string
+0 --> integer
+0 --> integer
+0 --> integer
+9.2 --> float
+a --> {  | check: [](integer) -> boolean, val2: string }
+a --> {  | check: [](integer) -> boolean, val2: string }
+b --> {  | check: [](integer) -> boolean, val2: float }
+b --> {  | check: [](integer) -> boolean, val2: float }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.assert --> [](boolean) -> void
+console.assert --> [](boolean) -> void
+console.assert(o.check(0)) --> void
+console.assert(o.check(0)) --> void
+function(x) {
+  return this.val2 > x;
+} --> [{ val2: float |  }](integer) -> boolean
+function(x) {
+  return x == 0 || this.val2 != null;
+} --> [{ val2: string |  }](integer) -> boolean
+null --> {  |  }
+o --> {  | check: [](integer) -> boolean }
+o --> {  | check: [](integer) -> boolean }
+o --> {  | check: [](integer) -> boolean }
+o --> {  | check: [](integer) -> boolean }
+o = b --> {  | check: [](integer) -> boolean }
+o.check --> [](integer) -> boolean
+o.check --> [](integer) -> boolean
+o.check(0) --> boolean
+o.check(0) --> boolean
+this --> { val2: float |  }
+this --> { val2: string |  }
+this.val2 != null --> boolean
+this.val2 --> float
+this.val2 --> string
+this.val2 > x --> boolean
+x --> integer
+x --> integer
+x --> integer
+x --> integer
+x == 0 --> boolean
+x == 0 || this.val2 != null --> boolean
+{check: function(x) {
+  return this.val2 > x;
+}, val2: 9.2} --> {  | check: [](integer) -> boolean, val2: float }
+{check: function(x) {
+  return x == 0 || this.val2 != null;
+}, val2: "hello"} --> {  | check: [](integer) -> boolean, val2: string }

@@ -1,0 +1,27 @@
+3 --> integer
+3 --> integer
+33 --> integer
+7 --> integer
+f --> ({  | foo: integer }) -> integer
+f --> ({  | foo: integer }) -> integer
+f --> ({  | foo: integer }) -> integer
+f(v) --> integer
+f(y) --> integer
+false --> boolean
+function f(x) {
+  return x.foo;
+}
+ --> ({  | foo: integer }) -> integer
+printInt --> (integer) -> void
+printInt(3) --> void
+v --> {  | foo: integer, baz: integer }
+v --> {  | foo: integer, baz: integer }
+w --> integer
+x --> {  | foo: integer }
+x --> {  | foo: integer }
+x.foo --> integer
+y --> {  | foo: integer, bar: boolean }
+y --> {  | foo: integer, bar: boolean }
+z --> integer
+{foo: 3, bar: false} --> {  | foo: integer, bar: boolean }
+{foo: 7, baz: 33} --> {  | foo: integer, baz: integer }

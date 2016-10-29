@@ -1,0 +1,18 @@
+"" + t --> string
+"" --> string
+0 --> integer
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log("" + t) --> void
+l --> string
+l --> string
+l --> string
+l = readline() --> string
+parseInt --> (string,integer) -> integer INTERSECT (string) -> integer
+parseInt(l) --> integer
+readline --> () -> string
+readline() --> string
+t += parseInt(l) --> integer
+t --> integer
+t --> integer
+t --> integer

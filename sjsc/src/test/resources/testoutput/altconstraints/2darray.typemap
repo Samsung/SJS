@@ -1,0 +1,18 @@
+0 --> integer
+1 --> integer
+2 --> integer
+3 --> integer
+4 --> integer
+5 --> integer
+Array --> () -> Array<Array<integer>> INTERSECT (integer) -> Array<Array<integer>> INTERSECT (Array<integer>,Array<integer>) -> Array<Array<integer>>
+Array --> () -> Array<integer> INTERSECT (integer) -> Array<integer> INTERSECT (integer,integer) -> Array<integer>
+m --> Array<Array<integer>>
+m --> Array<Array<integer>>
+m --> Array<Array<integer>>
+m[0] --> Array<integer>
+m[0] = new Array(4) --> Array<integer>
+m[1] --> Array<integer>
+m[1][2] --> integer
+m[1][2] = 5 --> integer
+new Array(3) --> Array<Array<integer>>
+new Array(4) --> Array<integer>

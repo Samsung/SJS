@@ -1,0 +1,4 @@
+MakeConcreteConstraint [term=|void 3|]
+TP(void 3)=|void 3|
+|3|=integer
+|void 3|=|x|

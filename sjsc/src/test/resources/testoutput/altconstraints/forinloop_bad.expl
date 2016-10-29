@@ -1,0 +1,4 @@
+type {  | a: X1, b: X2 } flows into |x|, which is used as type Map<X0>
+type source: |{a: 3, b: false}| at line 1
+use: |x| at line 3
+target term: |x| at line 3

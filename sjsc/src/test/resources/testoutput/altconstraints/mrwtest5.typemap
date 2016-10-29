@@ -1,0 +1,22 @@
+1 --> integer
+3 --> integer
+a --> {  | a: integer, f: [](___) -> void }
+foo --> ({  | a: integer }) -> void
+foo --> ({  | a: integer }) -> void
+foo(this) --> void
+function foo(x) {
+  x.a = 3;
+}
+ --> ({  | a: integer }) -> void
+function(x) {
+  foo(this);
+} --> [{  | a: integer }](___) -> void
+this --> {  | a: integer }
+x --> ___
+x --> {  | a: integer }
+x --> {  | a: integer }
+x.a --> integer
+x.a = 3 --> integer
+{a: 1, f: function(x) {
+  foo(this);
+}} --> {  | a: integer, f: [](___) -> void }

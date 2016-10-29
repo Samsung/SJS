@@ -1,0 +1,68 @@
+"Count:" --> string
+0 --> integer
+0 --> integer
+1 --> integer
+17 --> integer
+2 --> integer
+2 --> integer
+8192 --> integer
+8192 --> integer
+8192 --> integer
+8193 --> integer
+Array --> () -> Array<integer> INTERSECT (integer) -> Array<integer> INTERSECT (integer,integer) -> Array<integer>
+Array(8193) --> Array<integer>
+count --> integer
+count --> integer
+count --> integer
+count --> integer
+count = 0 --> integer
+count++ --> integer
+flags --> Array<integer>
+flags --> Array<integer>
+flags --> Array<integer>
+flags --> Array<integer>
+flags = flagsorig.concat() --> Array<integer>
+flags[i] --> integer
+flags[k] --> integer
+flags[k] = 0 --> integer
+flagsorig --> Array<integer>
+flagsorig --> Array<integer>
+flagsorig --> Array<integer>
+flagsorig.concat --> []() -> Array<integer>
+flagsorig.concat() --> Array<integer>
+flagsorig[i] --> integer
+flagsorig[i] = 1 --> integer
+i + i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i <= 8192 --> boolean
+i <= 8192 --> boolean
+i = 2 --> integer
+i = 2 --> integer
+i++ --> integer
+i++ --> integer
+k += i --> integer
+k --> integer
+k --> integer
+k --> integer
+k --> integer
+k --> integer
+k <= 8192 --> boolean
+k = i + i --> integer
+n --> integer
+n --> integer
+n-- --> integer
+printInt --> (integer) -> void
+printInt(count) --> void
+printString --> (string) -> void
+printString("Count:") --> void

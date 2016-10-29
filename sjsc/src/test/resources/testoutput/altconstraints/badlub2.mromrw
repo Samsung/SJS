@@ -1,0 +1,6 @@
+{check: function(x) {
+  return this.val2 > x;
+}, val2: 9.2} (line 2) --> [MRO=[val2], MRW=[]]
+{check: function(x) {
+  return x == 0 || this.val2 != null;
+}, val2: "hello"} (line 1) --> [MRO=[val2], MRW=[]]

@@ -1,0 +1,3 @@
+Error on line 4: bad assignment to property 'm'
+    Note: type is [{ g: ___ |  }]() -> ___
+    Note: expected []() -> integer

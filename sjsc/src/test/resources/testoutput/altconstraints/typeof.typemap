@@ -1,0 +1,9 @@
+3.3 --> float
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log(s) --> void
+s --> string
+s --> string
+typeof x --> string
+x --> float
+x --> float

@@ -1,0 +1,5 @@
+|new D()| is missing some MRO/MRW property, and hence cannot appear here
+line 12
+type { m1: [](integer) -> void | a: integer }
+[MRO=[], MRW=[a, b]]
+missing MRW: [b]

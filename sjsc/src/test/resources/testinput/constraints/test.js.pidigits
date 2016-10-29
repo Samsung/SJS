@@ -1,0 +1,84 @@
+ 
+var functions = (function(){
+ 
+var dbits = 28, BI_FP = 52, DB = dbits, DM = ((1<<dbits)-1), DV = (1<<dbits),
+  FV = Math.floor(Math.pow(2.0,BI_FP*1.0)), F1 = BI_FP-dbits, F2 = 2*dbits-BI_FP;
+
+ 
+ 
+
+// Digit conversions
+var BI_RM = "0123456789abcdefghijklmnopqrstuvwxyz";
+var BI_RC = new Array();
+var rr,vv;
+rr = "0".charCodeAt(0);
+for(vv = 0; vv <= 9; ++vv) BI_RC[rr++] = vv;
+rr = "a".charCodeAt(0);
+for(vv = 10; vv < 36; ++vv) BI_RC[rr++] = vv;
+rr = "A".charCodeAt(0);
+for(vv = 10; vv < 36; ++vv) BI_RC[rr++] = vv;
+
+ 
+
+// (protected) set from integer value x, -DV <= x < DV
+function fromInt(o,x) {
+  o.t = 1;
+  o.s = (x<0)?-1:0;
+  if(x > 0) o.arr[0] = x;
+  else if(x < -1) o.arr[0] = x+DV;
+  else o.t = 0;
+}
+
+// return bigint initialized to value
+function nbv(i) { var r = { arr : [], s : 0, t : 0 }; fromInt(r,i); return r; }
+
+// (protected) clamp off excess high words
+function clamp(r) {
+  var c = r.s&DM, t = r.t;
+  while(t > 0 && r.arr[t-1] == c) { --t; }
+  r.t = t;
+}
+
+function bnpSubTo(o,a,r) {
+   r = { arr : [], s : 0, t : 0 }; // test
+    a = { arr : [], s : 0, t : 0 }; // test
+    o = { arr : [], s : 0, t : 0 }; // test
+  var i = 0, c = 0, t, m = Math.min(a.t*1.0,t=o.t*1.0);
+  while(i < m) {
+    c += o.arr[i]-a.arr[i];
+    r.arr[i++] = c&DM;
+    c >>= DB;
+  }
+  if(a.t < t) {
+    c -= a.s;
+    while(i < t) {
+      c += o.arr[i];
+      r.arr[i++] = c&DM;
+      c >>= DB;
+    }
+    c += o.s;
+  }
+  else {
+    c += o.s;
+    while(i < a.t) {
+      c -= a.arr[i];
+      r.arr[i++] = c&DM;
+      c >>= DB;
+    }
+    c -= a.s;
+  }
+  r.s = (c<0)?-1:0;
+  if(c < -1) r.arr[i++] = DV+c;
+  else if(c > 0) r.arr[i++] = c;
+  r.t = i;
+  clamp(r);
+}
+ 
+ 
+ 
+var ZERO = nbv(0);
+var ONE = nbv(1);
+
+return { };
+})();
+

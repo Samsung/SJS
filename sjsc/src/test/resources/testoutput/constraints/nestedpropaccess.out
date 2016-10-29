@@ -1,0 +1,31 @@
+MakeConcreteConstraint [term=|3|]
+MakeConcreteConstraint [term=|4|]
+MakeConcreteConstraint [term=|false|]
+MakeConcreteConstraint [term=|true|]
+MakeConcreteConstraint [term=|{a: {b: 4}}|]
+MakeConcreteConstraint [term=|{b: 4}|]
+MakeConcreteConstraint [term=|{r: {s: {t: true}}}|]
+MakeConcreteConstraint [term=|{s: {t: true}}|]
+MakeConcreteConstraint [term=|{t: true}|]
+|3|<:prop(|y.a|,b)
+|3|=integer
+|4|<:prop(|{b: 4}|,b)
+|4|=integer
+|false|<:prop(|q.r.s|,t)
+|false|=boolean
+|q.r.s.t = false|=prop(|q.r.s|,t)
+|q.r.s.t|=prop(|q.r.s|,t)
+|q.r.s|=prop(|q.r|,s)
+|q.r|=prop(|q|,r)
+|q|=|q|
+|true|<:prop(|{t: true}|,t)
+|true|=boolean
+|y.a.b = 3|=prop(|y.a|,b)
+|y.a.b|=prop(|y.a|,b)
+|y.a|=prop(|y|,a)
+|y|=|y|
+|{a: {b: 4}}|<:|y|
+|{b: 4}|<:prop(|{a: {b: 4}}|,a)
+|{r: {s: {t: true}}}|<:|q|
+|{s: {t: true}}|<:prop(|{r: {s: {t: true}}}|,r)
+|{t: true}|<:prop(|{s: {t: true}}|,s)

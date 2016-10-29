@@ -1,0 +1,3 @@
+new C() (line 12) --> [MRO=[a], MRW=[]]
+this (line 2) --> [MRO=[a], MRW=[]]
+this (line 9) --> [MRO=[a], MRW=[]]

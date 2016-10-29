@@ -1,0 +1,39 @@
+Elem(|x|)=|x[i + j]|
+Elem(|x|)=|x[k]|
+MakeConcreteConstraint [term=|"a"|]
+MakeConcreteConstraint [term=|"b"|]
+MakeConcreteConstraint [term=|"c"|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|["a", "b", "c"]|]
+MakeConcreteConstraint [term=|x[i + j]|]
+TP(["a", "b", "c"])=Elem(ret(prop(|["a", "b", "c"]|,concat)))
+TP(["a", "b", "c"])=Elem(ret(prop(|["a", "b", "c"]|,reverse)))
+TP(["a", "b", "c"])=Elem(|["a", "b", "c"]|)
+TP(["a", "b", "c"])=param(prop(|["a", "b", "c"]|,push),0)
+TP(["a", "b", "c"])=ret(prop(|["a", "b", "c"]|,pop))
+TP(["a", "b", "c"])=ret(prop(|["a", "b", "c"]|,shift))
+|"a"|<:Elem(|["a", "b", "c"]|)
+|"a"|=string
+|"b"|<:Elem(|["a", "b", "c"]|)
+|"b"|=string
+|"c"|<:Elem(|["a", "b", "c"]|)
+|"c"|=string
+|0|<:|i|
+|0|<:|k|
+|0|=integer
+|0|=integer
+|1|<:|j|
+|1|=integer
+|["a", "b", "c"]|<:|x|
+|i + j|=Key(|x|)
+|i + j|=op(|i|+|j|)
+|i|=|i|
+|j|=|j|
+|k|=Key(|x|)
+|k|=|k|
+|x[i + j]|<:|x[k]|
+|x[k] = x[i + j]|=|x[k]|
+|x|=|x|
+|x|=|x|

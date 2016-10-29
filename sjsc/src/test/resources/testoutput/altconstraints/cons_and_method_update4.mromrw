@@ -1,0 +1,3 @@
+Quo.prototype (line 3) --> [MRO=[status], MRW=[]]
+new Quo("confused") (line 7) --> [MRO=[status], MRW=[]]
+this (line 1) --> [MRO=[status], MRW=[]]

@@ -1,0 +1,172 @@
+/* 
+ * Copyright 2014-2016 Samsung Research America, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* 
+ * This file is a JSON representation of the argument types and result types
+ * of JavaScript operators. For each binary operator, it specifies a list of
+ * tuples that specify the resulting type for given types of the left and 
+ * right operands. For each unary operator, it specifies the operand type,
+ * result type, and a boolean value that indicates whether it is a prefix or
+ * postfix unary operator.
+ *
+ */
+
+[
+/* UNARY OPERATORS */
+    { "~" : [   
+                { "operand" : "float", "result" : "int", "isprefix" : "true" }
+            ]
+    },
+    { "-" : [   { "operand" : "int", "result" : "int", "isprefix" : "true" },
+                { "operand" : "float", "result" : "float", "isprefix" : "true" },
+                { "operand" : "boolean", "result" : "boolean", "isprefix" : "true" }
+            ]
+    },
+    { "typeof" : [   
+                     { "operand" : "float", "result" : "string", "isprefix" : "true" },
+                     { "operand" : "object", "result" : "string", "isprefix" : "true" }
+            ]
+    },
+    { "++" : [   { "operand" : "int", "result" : "int", "isprefix" : "false" },
+     			 { "operand" : "float", "result" : "float", "isprefix" : "false" },
+     			 { "operand" : "int", "result" : "int", "isprefix" : "true" },
+     			 { "operand" : "float", "result" : "float", "isprefix" : "true" }  
+            ]
+    },
+    { "--" : [   { "operand" : "int", "result" : "int", "isprefix" : "false" },
+     			 { "operand" : "float", "result" : "float", "isprefix" : "false" },
+     			 { "operand" : "int", "result" : "int", "isprefix" : "true" }, 
+     			 { "operand" : "float", "result" : "float", "isprefix" : "true" }
+            ]
+    },
+    { "!" : [   { "operand" : "boolean", "result" : "boolean", "isprefix" : "true" },
+                { "operand" : "object", "result" : "boolean", "isprefix" : "true" },
+                { "operand" : "int", "result" : "boolean", "isprefix" : "true" },
+                { "operand" : "array", "result" : "boolean", "isprefix" : "true" }
+            ]
+    },
+    { "+" : [   { "operand" : "int", "result" : "int", "isprefix" : "true" } 
+            ]
+    },
+    /* Note: for now, the void operator is handled specially in ConstraintVisitor.processUnaryExpression() */
+    
+/* BINARY OPERATORS */    
+	{ "+" : [ 
+				{ "left" : "float", "right" : "float", "result" : "float" },
+				{ "left" : "int", "right" : "int", "result" : "int" },
+				{ "left" : "string", "right" : "float", "result" : "string" },
+				{ "left" : "string", "right" : "string", "result" : "string" },
+				{ "left" : "float", "right" : "string", "result" : "string" },				
+			]
+	},
+	{ "-" : [ 
+				{ "left" : "float", "right" : "float", "result" : "float" },
+				{ "left" : "int", "right" : "int", "result" : "int" }	
+			]
+	},
+	{ "*" : [ 
+				{ "left" : "float", "right" : "float", "result" : "float" },
+				{ "left" : "int", "right" : "int", "result" : "int" }	
+			]
+	},
+	{ "/" : [ 
+				{ "left" : "float", "right" : "float", "result" : "float" }
+			]
+	},
+	{ "%" : [
+				{ "left" : "int", "right" : "int", "result" : "int" },
+				{ "left" : "float", "right" : "int", "result" : "float" }	
+			]
+	},
+	{ "<" : [
+				{ "left" : "float", "right" : "float", "result" : "boolean" }
+			]
+	},
+	{ "<=" : [
+				{ "left" : "float", "right" : "float", "result" : "boolean" }
+			]
+	},
+	{ ">" : [
+				{ "left" : "float", "right" : "float", "result" : "boolean" }
+			]
+	},
+	{ ">=" : [
+				{ "left" : "float", "right" : "float", "result" : "boolean" }
+			]
+	},
+	{ "==" : [
+				{ "left" : "float", "right" : "float", "result" : "boolean" },
+                { "left" : "boolean", "right" : "boolean", "result" : "boolean" },
+                { "left" : "reference", "right" : "reference", "result" : "boolean" },
+             ]
+	},
+	{ "!==" : [
+				{ "left" : "float", "right" : "float", "result" : "boolean" },
+                { "left" : "boolean", "right" : "boolean", "result" : "boolean" },
+                { "left" : "reference", "right" : "reference", "result" : "boolean" },
+			]
+	},
+	{ "!=" : [
+				{ "left" : "float", "right" : "float", "result" : "boolean" },
+                { "left" : "boolean", "right" : "boolean", "result" : "boolean" },
+                { "left" : "reference", "right" : "reference", "result" : "boolean" },
+			]
+	},
+	{ "===" : [
+				{ "left" : "float", "right" : "float", "result" : "boolean" },
+                { "left" : "boolean", "right" : "boolean", "result" : "boolean" },
+                { "left" : "reference", "right" : "reference", "result" : "boolean" },
+              ]
+	},
+	{ "&&" : [
+				{ "left" : "boolean", "right" : "boolean", "result" : "boolean" } 		
+			]
+	},
+	{ "||" : [
+				{ "left" : "boolean", "right" : "boolean", "result" : "boolean" },
+	  			{ "left" : "string", "right" : "string", "result" : "string" },
+	  			{ "left" : "object", "right" : "object", "result" : "object" },
+	  			{ "left" : "function", "right" : "function", "result" : "function" },
+	  			{ "left" : "array", "right" : "array", "result" : "array" },
+	  			{ "left" : "int", "right" : "int", "result" : "int" }
+			]
+	},
+	{ "|" : [
+				{ "left" : "float", "right" : "float", "result" : "int" }
+			]
+	},
+	{ "^" : [
+				{ "left" : "float", "right" : "float", "result" : "int" }
+			]
+	},
+	{ "&" : [
+				{ "left" : "float", "right" : "float", "result" : "int" }
+			]
+	},
+	{ "<<" : [
+				{ "left" : "float", "right" : "int", "result" : "int" }
+			]
+	},
+	{ ">>" : [
+				{ "left" : "float", "right" : "int", "result" : "int" }
+			]
+	},
+	{ ">>>" : [
+				{ "left" : "float", "right" : "int", "result" : "int" }
+			]
+	},
+	{ "in" : [ { "left" : "string", "right": "map", "result" : "boolean" } ] }
+    // FYI, if you leave a trailing comma on the last element, it adds a null to the array
+]

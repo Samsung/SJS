@@ -1,0 +1,37 @@
+CheckArity(ret(|(bodies.advance)|))
+CheckArity(ret(|nBodySystem|))
+MakeConcreteConstraint [term=|0.01|]
+MakeConcreteConstraint [term=|1.0|]
+MakeConcreteConstraint [term=|4.84143144246472090e+00|]
+MakeConcreteConstraint [term=|function <anonymous>|]
+MakeConcreteConstraint [term=|nBodySystem()|]
+MakeConcreteConstraint [term=|{vx: 4.84143144246472090e+00}|]
+param(|function <anonymous>|,0)=|dt|
+ret(|function <anonymous>|)=void
+ret(|function <anonymous>|)=void
+|(bodies.advance)(0.01)|=ret(|(bodies.advance)|)
+|(bodies.advance)|=|bodies.advance|
+|0.01|<:param(|(bodies.advance)|,0)
+|0.01|=float
+|1.0|<:prop(|bodyi|,vx)
+|1.0|=float
+|4.84143144246472090e+00|<:prop(|{vx: 4.84143144246472090e+00}|,vx)
+|4.84143144246472090e+00|=float
+|bodies.advance|=prop(|bodies|,advance)
+|bodies|=|bodies|
+|bodyi.vx -= 1.0|=prop(|bodyi|,vx)
+|bodyi.vx|=prop(|bodyi|,vx)
+|bodyi|=|bodyi|
+|function <anonymous>|<:prop(|{advance: function(dt) {
+  var bodyi = {vx: 4.84143144246472090e+00};
+  bodyi.vx -= 1.0;
+}}|,advance)
+|function nBodySystem|<:|nBodySystem|
+|nBodySystem()|<:|bodies|
+|nBodySystem()|=ret(|nBodySystem|)
+|nBodySystem|=|nBodySystem|
+|{advance: function(dt) {
+  var bodyi = {vx: 4.84143144246472090e+00};
+  bodyi.vx -= 1.0;
+}}|<:ret(|function nBodySystem|)
+|{vx: 4.84143144246472090e+00}|<:|bodyi|

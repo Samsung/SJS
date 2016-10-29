@@ -1,0 +1,14 @@
+7 --> integer
+b --> integer
+b --> integer
+b / 7 --> float
+function h(b) {
+  var t = b / 7;
+  printFloat(t);
+}
+ --> (integer) -> void
+h --> (integer) -> void
+printFloat --> (float) -> void
+printFloat(t) --> void
+t --> float
+t --> float

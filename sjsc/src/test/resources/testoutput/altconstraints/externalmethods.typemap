@@ -1,0 +1,10 @@
+33.0 --> float
+Math --> { E: float, LN2: float, LN10: float, LOG2E: float, LOG10E: float, PI: float, SQRT1_2: float, SQRT2: float, abs: [](float) -> float, acos: [](float) -> float, acosh: [](float) -> float, asin: [](float) -> float, asinh: [](float) -> float, atan: [](float) -> float, atanh: [](float) -> float, atan2: [](float,float) -> float, cbrt: [](float) -> float, ceil: [](float) -> float, cos: [](float) -> float, cosh: [](float) -> float, exp: [](float) -> float, expm1: [](float) -> float, floor: [](float) -> integer, fround: [](float) -> float, hypot: [](float,float) -> float, imul: [](float,float) -> float, log: [](float) -> float, log1p: [](float) -> float, log10: [](float) -> float, log2: [](float) -> float, max: [](float,float) -> float, min: [](float,float) -> float, pow: [](float,float) -> float, random: []() -> float, round: [](float) -> float, sign: [](float) -> float, sin: [](float) -> float, sinh: [](float) -> float, sqrt: [](float) -> float, tan: [](float) -> float, tanh: [](float) -> float, toSource: []() -> string, trunc: [](float) -> float |  }
+Math.sqrt --> [](float) -> float
+Math.sqrt(f) --> float
+f --> float
+f --> float
+g --> float
+g --> float
+printFloat --> (float) -> void
+printFloat(g) --> void

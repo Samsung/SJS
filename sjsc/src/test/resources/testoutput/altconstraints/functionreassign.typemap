@@ -1,0 +1,38 @@
+"" --> string
+0 --> integer
+0 --> integer
+1 --> integer
+2 --> integer
+2 --> integer
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log(g(2) + "") --> void
+foo --> (integer) -> integer
+foo --> (integer) -> integer
+foo --> (integer) -> integer
+foo --> (integer) -> integer
+foo = function(p) {
+  return p;
+} --> (integer) -> integer
+foo(x - 1) + 2 --> integer
+foo(x - 1) --> integer
+function foo(x) {
+  if (x == 0) 
+  return 0;
+  return foo(x - 1) + 2;
+}
+ --> (integer) -> integer
+function(p) {
+  return p;
+} --> (integer) -> integer
+g --> (integer) -> integer
+g --> (integer) -> integer
+g(2) + "" --> string
+g(2) --> integer
+p --> integer
+p --> integer
+x - 1 --> integer
+x --> integer
+x --> integer
+x --> integer
+x == 0 --> boolean

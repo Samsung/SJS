@@ -1,0 +1,2274 @@
+CheckArity(ret(|bigGA|))
+CheckArity(ret(|calcFitness|))
+CheckArity(ret(|calcFitness|))
+CheckArity(ret(|console.log|))
+CheckArity(ret(|console.log|))
+CheckArity(ret(|console.log|))
+CheckArity(ret(|console.log|))
+CheckArity(ret(|console.log|))
+CheckArity(ret(|console.log|))
+CheckArity(ret(|console.log|))
+CheckArity(ret(|console.log|))
+CheckArity(ret(|console.log|))
+CheckArity(ret(|crossover|))
+CheckArity(ret(|evaluate|))
+CheckArity(ret(|evaluate|))
+CheckArity(ret(|evolve|))
+CheckArity(ret(|initSelect|))
+CheckArity(ret(|initializeChromosome|))
+CheckArity(ret(|initialize|))
+CheckArity(ret(|mutate|))
+CheckArity(ret(|mutate|))
+CheckArity(ret(|randGen|))
+CheckArity(ret(|rand|))
+CheckArity(ret(|rand|))
+CheckArity(ret(|rand|))
+CheckArity(ret(|rand|))
+CheckArity(ret(|rand|))
+CheckArity(ret(|rand|))
+CheckArity(ret(|rand|))
+CheckArity(ret(|rand|))
+CheckArity(ret(|rand|))
+CheckArity(ret(|rand|))
+CheckArity(ret(|rand|))
+CheckArity(ret(|rand|))
+CheckArity(ret(|rand|))
+CheckArity(ret(|run|))
+CheckArity(ret(|selection|))
+CheckArity(ret(|selection|))
+CheckArity(ret(|selection|))
+CheckArity(ret(|smallGA|))
+CheckArity(ret(|smallGA|))
+CheckArity(ret(|sqrt|))
+CheckArity(ret(|sqrt|))
+CheckArity(ret(|switchGeneration|))
+CheckArity(ret(|wheelportion|))
+Elem(|baseDistance|)=|baseDistance[chromo[0]]|
+Elem(|baseDistance|)=|baseDistance[chromo[customerNumber - 1]]|
+Elem(|baseDistance|)=|baseDistance[i]|
+Elem(|bestChromosome|)=|bestChromosome[i]|
+Elem(|bestChromosome|)=|bestChromosome[j]|
+Elem(|bestChromosome|)=|bestChromosome[j]|
+Elem(|bestChromosome|)=|bestChromosome[j]|
+Elem(|chrom[i]|)=|chrom[i][j]|
+Elem(|chrom[i]|)=|chrom[i][j]|
+Elem(|chrom[victim1]|)=|chrom[victim1][i]|
+Elem(|chromoC|)=|chromoC[t1]|
+Elem(|chromoC|)=|chromoC[t3]|
+Elem(|chromoC|)=|chromoC[t3]|
+Elem(|chromoC|)=|chromoC[t3]|
+Elem(|chromoF|)=|chromoF[t3]|
+Elem(|chromoF|)=|chromoF[t3]|
+Elem(|chromoM|)=|chromoM[t3]|
+Elem(|chromoM|)=|chromoM[t3]|
+Elem(|chromoM|)=|chromoM[t3]|
+Elem(|chromosomes[childGeneration]|)=|chromosomes[childGeneration][i]|
+Elem(|chromosomes[currentGeneration][i]|)=|chromosomes[currentGeneration][i][j]|
+Elem(|chromosomes[currentGeneration][i]|)=|chromosomes[currentGeneration][i][j]|
+Elem(|chromosomes[currentGeneration][i]|)=|chromosomes[currentGeneration][i][j]|
+Elem(|chromosomes[currentGeneration]|)=|chromosomes[currentGeneration][father]|
+Elem(|chromosomes[currentGeneration]|)=|chromosomes[currentGeneration][i]|
+Elem(|chromosomes[currentGeneration]|)=|chromosomes[currentGeneration][i]|
+Elem(|chromosomes[currentGeneration]|)=|chromosomes[currentGeneration][i]|
+Elem(|chromosomes[currentGeneration]|)=|chromosomes[currentGeneration][i]|
+Elem(|chromosomes[currentGeneration]|)=|chromosomes[currentGeneration][i]|
+Elem(|chromosomes[currentGeneration]|)=|chromosomes[currentGeneration][i]|
+Elem(|chromosomes[currentGeneration]|)=|chromosomes[currentGeneration][i]|
+Elem(|chromosomes[currentGeneration]|)=|chromosomes[currentGeneration][mother]|
+Elem(|chromosomes[i]|)=|chromosomes[i][j]|
+Elem(|chromosomes|)=|chromosomes[childGeneration]|
+Elem(|chromosomes|)=|chromosomes[currentGeneration]|
+Elem(|chromosomes|)=|chromosomes[currentGeneration]|
+Elem(|chromosomes|)=|chromosomes[currentGeneration]|
+Elem(|chromosomes|)=|chromosomes[currentGeneration]|
+Elem(|chromosomes|)=|chromosomes[currentGeneration]|
+Elem(|chromosomes|)=|chromosomes[currentGeneration]|
+Elem(|chromosomes|)=|chromosomes[currentGeneration]|
+Elem(|chromosomes|)=|chromosomes[currentGeneration]|
+Elem(|chromosomes|)=|chromosomes[currentGeneration]|
+Elem(|chromosomes|)=|chromosomes[i]|
+Elem(|chromosomes|)=|chromosomes[i]|
+Elem(|chromo|)=|chromo[0]|
+Elem(|chromo|)=|chromo[customerNumber - 1]|
+Elem(|chromo|)=|chromo[i + t1]|
+Elem(|chromo|)=|chromo[i + t2]|
+Elem(|chromo|)=|chromo[i + t3]|
+Elem(|chromo|)=|chromo[i - 1]|
+Elem(|chromo|)=|chromo[i]|
+Elem(|chromo|)=|chromo[i]|
+Elem(|chromo|)=|chromo[i]|
+Elem(|chromo|)=|chromo[i]|
+Elem(|chromo|)=|chromo[i]|
+Elem(|chromo|)=|chromo[j]|
+Elem(|chromo|)=|chromo[j]|
+Elem(|chrom|)=|chrom[i]|
+Elem(|chrom|)=|chrom[i]|
+Elem(|chrom|)=|chrom[i]|
+Elem(|chrom|)=|chrom[victim1]|
+Elem(|customerX|)=|customerX[i]|
+Elem(|customerX|)=|customerX[i]|
+Elem(|customerX|)=|customerX[i]|
+Elem(|customerX|)=|customerX[i]|
+Elem(|customerX|)=|customerX[j]|
+Elem(|customerY|)=|customerY[i]|
+Elem(|customerY|)=|customerY[i]|
+Elem(|customerY|)=|customerY[i]|
+Elem(|customerY|)=|customerY[i]|
+Elem(|customerY|)=|customerY[j]|
+Elem(|distance[i]|)=|distance[i][j]|
+Elem(|distance[i]|)=|distance[i][j]|
+Elem(|distance[j]|)=|distance[j][i]|
+Elem(|distance[t1]|)=|distance[t1][t2]|
+Elem(|distance|)=|distance[i]|
+Elem(|distance|)=|distance[i]|
+Elem(|distance|)=|distance[i]|
+Elem(|distance|)=|distance[j]|
+Elem(|distance|)=|distance[t1]|
+Elem(|map|)=|map[chromoM[t3]]|
+Elem(|map|)=|map[t1]|
+Elem(|scores|)=|scores[i]|
+Elem(|scores|)=|scores[i]|
+Elem(|scores|)=|scores[i]|
+Elem(|scores|)=|scores[i]|
+Elem(|scores|)=|scores[i]|
+Elem(|scores|)=|scores[i]|
+Elem(|scores|)=|scores[i]|
+Elem(|scores|)=|scores[i]|
+Elem(|scores|)=|scores[i]|
+Elem(|scores|)=|scores[i]|
+Elem(|scores|)=|scores[i]|
+Elem(|selected|)=|selected[i]|
+Elem(|selected|)=|selected[index]|
+Elem(|selected|)=|selected[index]|
+Elem(|temp|)=|temp[chromosomes[currentGeneration][i][j]]|
+Elem(|temp|)=|temp[chromosomes[currentGeneration][i][j]]|
+Elem(|temp|)=|temp[i + base]|
+Elem(|temp|)=|temp[i + base]|
+Elem(|temp|)=|temp[i + base]|
+Elem(|temp|)=|temp[i]|
+Elem(|temp|)=|temp[i]|
+Elem(|temp|)=|temp[i]|
+Elem(|temp|)=|temp[j]|
+Elem(|usedNumber|)=|usedNumber[chromoM[t3]]|
+Elem(|usedNumber|)=|usedNumber[t1]|
+Elem(|usedNumber|)=|usedNumber[t1]|
+Elem(|usedNumber|)=|usedNumber[t1]|
+MakeConcreteConstraint [term=op(-|1|)]
+MakeConcreteConstraint [term=|((10 * (t1 + selectivePressure * t2)) / t1) | 0|]
+MakeConcreteConstraint [term=|((average / (average - bestScore))) * 100 | 0|]
+MakeConcreteConstraint [term=|((scores[i] + (population / 2)) / population) | 0|]
+MakeConcreteConstraint [term=|((t2 + 1) % population) | 0|]
+MakeConcreteConstraint [term=|(48271 * prev + 12820163) & 16777215|]
+MakeConcreteConstraint [term=|(calcFitness(chromosomes[currentGeneration][i]) / population) | 0|]
+MakeConcreteConstraint [term=|(childGeneration + 1) % 2 | 0|]
+MakeConcreteConstraint [term=|(currentGeneration + 1) % 2 | 0|]
+MakeConcreteConstraint [term=|(sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000) | 0|]
+MakeConcreteConstraint [term=|(sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000) | 0|]
+MakeConcreteConstraint [term=|(t1 * t1 + t2 * t2) * 1.0|]
+MakeConcreteConstraint [term=|(t1 * t1 + t2 * t2) * 1.0|]
+MakeConcreteConstraint [term=|(x + (s / x)) / 2.0|]
+MakeConcreteConstraint [term=|(x + (s / x)) / 2.0|]
+MakeConcreteConstraint [term=|(x + (s / x)) / 2.0|]
+MakeConcreteConstraint [term=|(x + (s / x)) / 2.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0.0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|0|]
+MakeConcreteConstraint [term=|1 + ""|]
+MakeConcreteConstraint [term=|1 + ""|]
+MakeConcreteConstraint [term=|1 + ""|]
+MakeConcreteConstraint [term=|1000|]
+MakeConcreteConstraint [term=|1000|]
+MakeConcreteConstraint [term=|1000|]
+MakeConcreteConstraint [term=|1000|]
+MakeConcreteConstraint [term=|10|]
+MakeConcreteConstraint [term=|10|]
+MakeConcreteConstraint [term=|17|]
+MakeConcreteConstraint [term=|18|]
+MakeConcreteConstraint [term=|19|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|1|]
+MakeConcreteConstraint [term=|2 + ""|]
+MakeConcreteConstraint [term=|200000000|]
+MakeConcreteConstraint [term=|200|]
+MakeConcreteConstraint [term=|4|]
+MakeConcreteConstraint [term=|500|]
+MakeConcreteConstraint [term=|999999999|]
+MakeConcreteConstraint [term=|999999999|]
+MakeConcreteConstraint [term=|99999999|]
+MakeConcreteConstraint [term=|RAND_MAX|]
+MakeConcreteConstraint [term=|[0.0]|]
+MakeConcreteConstraint [term=|[0]|]
+MakeConcreteConstraint [term=|[0]|]
+MakeConcreteConstraint [term=|[0]|]
+MakeConcreteConstraint [term=|[[0]]|]
+MakeConcreteConstraint [term=|[[0]]|]
+MakeConcreteConstraint [term=|[[[0]]]|]
+MakeConcreteConstraint [term=|[[], []]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|[]|]
+MakeConcreteConstraint [term=|baseDistance[chromo[0]]|]
+MakeConcreteConstraint [term=|baseDistance[chromo[customerNumber - 1]]|]
+MakeConcreteConstraint [term=|baseDistance|]
+MakeConcreteConstraint [term=|baseX + ""|]
+MakeConcreteConstraint [term=|baseY + ""|]
+MakeConcreteConstraint [term=|bestChromosomeGlobal|]
+MakeConcreteConstraint [term=|bestChromosome[i]|]
+MakeConcreteConstraint [term=|bestChromosome[j]|]
+MakeConcreteConstraint [term=|bestChromosome|]
+MakeConcreteConstraint [term=|bestScoreGlobal + ""|]
+MakeConcreteConstraint [term=|calcFitness(chromo)|]
+MakeConcreteConstraint [term=|chrom[i][j]|]
+MakeConcreteConstraint [term=|chromoC|]
+MakeConcreteConstraint [term=|chromoC|]
+MakeConcreteConstraint [term=|chromoF[t3]|]
+MakeConcreteConstraint [term=|chromoF[t3]|]
+MakeConcreteConstraint [term=|chromoF|]
+MakeConcreteConstraint [term=|chromoM[t3]|]
+MakeConcreteConstraint [term=|chromoM|]
+MakeConcreteConstraint [term=|chromo[i + t1]|]
+MakeConcreteConstraint [term=|chromo[i + t2]|]
+MakeConcreteConstraint [term=|chromo[i + t3]|]
+MakeConcreteConstraint [term=|chromo[i - 1]|]
+MakeConcreteConstraint [term=|chromo[i]|]
+MakeConcreteConstraint [term=|chromo[i]|]
+MakeConcreteConstraint [term=|chromo[i]|]
+MakeConcreteConstraint [term=|chromo[j]|]
+MakeConcreteConstraint [term=|chromo[j]|]
+MakeConcreteConstraint [term=|chromosomes[childGeneration][i]|]
+MakeConcreteConstraint [term=|chromosomes[currentGeneration][father]|]
+MakeConcreteConstraint [term=|chromosomes[currentGeneration][i]|]
+MakeConcreteConstraint [term=|chromosomes[currentGeneration][i]|]
+MakeConcreteConstraint [term=|chromosomes[currentGeneration][i]|]
+MakeConcreteConstraint [term=|chromosomes[currentGeneration][i]|]
+MakeConcreteConstraint [term=|chromosomes[currentGeneration][mother]|]
+MakeConcreteConstraint [term=|chromosomes|]
+MakeConcreteConstraint [term=|chromo|]
+MakeConcreteConstraint [term=|chromo|]
+MakeConcreteConstraint [term=|chromo|]
+MakeConcreteConstraint [term=|chromo|]
+MakeConcreteConstraint [term=|chromo|]
+MakeConcreteConstraint [term=|chrom|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|customerNumber|]
+MakeConcreteConstraint [term=|customerNumber|]
+MakeConcreteConstraint [term=|customerNumber|]
+MakeConcreteConstraint [term=|customerX[i] + ""|]
+MakeConcreteConstraint [term=|customerX[i] - baseX|]
+MakeConcreteConstraint [term=|customerX[i] - customerX[j]|]
+MakeConcreteConstraint [term=|customerY[i] + ""|]
+MakeConcreteConstraint [term=|customerY[i] - baseY|]
+MakeConcreteConstraint [term=|customerY[i] - customerY[j]|]
+MakeConcreteConstraint [term=|distance[i][j]|]
+MakeConcreteConstraint [term=|distance[t1][t2]|]
+MakeConcreteConstraint [term=|distance|]
+MakeConcreteConstraint [term=|false|]
+MakeConcreteConstraint [term=|false|]
+MakeConcreteConstraint [term=|false|]
+MakeConcreteConstraint [term=|i + 1|]
+MakeConcreteConstraint [term=|initSelect(rand(0, customerNumber), selected)|]
+MakeConcreteConstraint [term=|intArrHint|]
+MakeConcreteConstraint [term=|intArrHint|]
+MakeConcreteConstraint [term=|intArrHint|]
+MakeConcreteConstraint [term=|isFirstCall|]
+MakeConcreteConstraint [term=|i|]
+MakeConcreteConstraint [term=|map[t1]|]
+MakeConcreteConstraint [term=|max|]
+MakeConcreteConstraint [term=|min + ((max - min) * (prev / 16777216))|]
+MakeConcreteConstraint [term=|minScore - maxScore|]
+MakeConcreteConstraint [term=|minScore - scores[i]|]
+MakeConcreteConstraint [term=|min|]
+MakeConcreteConstraint [term=|population * 100 * (selectivePressure + 1)|]
+MakeConcreteConstraint [term=|rand(0, 1000)|]
+MakeConcreteConstraint [term=|rand(0, 1000)|]
+MakeConcreteConstraint [term=|rand(0, 1000)|]
+MakeConcreteConstraint [term=|rand(0, 1000)|]
+MakeConcreteConstraint [term=|rand(0, customerNumber)|]
+MakeConcreteConstraint [term=|rand(0, customerNumber)|]
+MakeConcreteConstraint [term=|rand(0, customerNumber)|]
+MakeConcreteConstraint [term=|rand(0, population * 100 * (selectivePressure + 1))|]
+MakeConcreteConstraint [term=|rand(0, t1)|]
+MakeConcreteConstraint [term=|rand(0, t2)|]
+MakeConcreteConstraint [term=|rand(0, t3)|]
+MakeConcreteConstraint [term=|rand(0, t4)|]
+MakeConcreteConstraint [term=|randGen(0)|]
+MakeConcreteConstraint [term=|scores[i]|]
+MakeConcreteConstraint [term=|scores[i]|]
+MakeConcreteConstraint [term=|scores[i]|]
+MakeConcreteConstraint [term=|scores[i]|]
+MakeConcreteConstraint [term=|scores|]
+MakeConcreteConstraint [term=|seed|]
+MakeConcreteConstraint [term=|seed|]
+MakeConcreteConstraint [term=|seed|]
+MakeConcreteConstraint [term=|selected|]
+MakeConcreteConstraint [term=|selected|]
+MakeConcreteConstraint [term=|selection()|]
+MakeConcreteConstraint [term=|selection()|]
+MakeConcreteConstraint [term=|selection()|]
+MakeConcreteConstraint [term=|s|]
+MakeConcreteConstraint [term=|s|]
+MakeConcreteConstraint [term=|t1 + t4 - t2|]
+MakeConcreteConstraint [term=|t1 - wheelportion(t2)|]
+MakeConcreteConstraint [term=|t1|]
+MakeConcreteConstraint [term=|t1|]
+MakeConcreteConstraint [term=|t1|]
+MakeConcreteConstraint [term=|t2 - t1|]
+MakeConcreteConstraint [term=|t2|]
+MakeConcreteConstraint [term=|t2|]
+MakeConcreteConstraint [term=|t2|]
+MakeConcreteConstraint [term=|t3 - t2|]
+MakeConcreteConstraint [term=|t3|]
+MakeConcreteConstraint [term=|t4 - t3 + t1|]
+MakeConcreteConstraint [term=|t4 - t3|]
+MakeConcreteConstraint [term=|t4|]
+MakeConcreteConstraint [term=|t4|]
+MakeConcreteConstraint [term=|temp[i]|]
+MakeConcreteConstraint [term=|true|]
+MakeConcreteConstraint [term=|true|]
+MakeConcreteConstraint [term=|true|]
+MakeConcreteConstraint [term=|true|]
+MakeConcreteConstraint [term=|x * x|]
+TP([0.0])=Elem(ret(prop(|[0.0]|,concat)))
+TP([0.0])=Elem(ret(prop(|[0.0]|,reverse)))
+TP([0.0])=Elem(|[0.0]|)
+TP([0.0])=param(prop(|[0.0]|,push),0)
+TP([0.0])=ret(prop(|[0.0]|,pop))
+TP([0.0])=ret(prop(|[0.0]|,shift))
+TP([0])=Elem(ret(prop(|[0]|,concat)))
+TP([0])=Elem(ret(prop(|[0]|,concat)))
+TP([0])=Elem(ret(prop(|[0]|,concat)))
+TP([0])=Elem(ret(prop(|[0]|,reverse)))
+TP([0])=Elem(ret(prop(|[0]|,reverse)))
+TP([0])=Elem(ret(prop(|[0]|,reverse)))
+TP([0])=Elem(|[0]|)
+TP([0])=Elem(|[0]|)
+TP([0])=Elem(|[0]|)
+TP([0])=param(prop(|[0]|,push),0)
+TP([0])=param(prop(|[0]|,push),0)
+TP([0])=param(prop(|[0]|,push),0)
+TP([0])=ret(prop(|[0]|,pop))
+TP([0])=ret(prop(|[0]|,pop))
+TP([0])=ret(prop(|[0]|,pop))
+TP([0])=ret(prop(|[0]|,shift))
+TP([0])=ret(prop(|[0]|,shift))
+TP([0])=ret(prop(|[0]|,shift))
+TP([[0]])=Elem(ret(prop(|[[0]]|,concat)))
+TP([[0]])=Elem(ret(prop(|[[0]]|,concat)))
+TP([[0]])=Elem(ret(prop(|[[0]]|,reverse)))
+TP([[0]])=Elem(ret(prop(|[[0]]|,reverse)))
+TP([[0]])=Elem(|[[0]]|)
+TP([[0]])=Elem(|[[0]]|)
+TP([[0]])=param(prop(|[[0]]|,push),0)
+TP([[0]])=param(prop(|[[0]]|,push),0)
+TP([[0]])=ret(prop(|[[0]]|,pop))
+TP([[0]])=ret(prop(|[[0]]|,pop))
+TP([[0]])=ret(prop(|[[0]]|,shift))
+TP([[0]])=ret(prop(|[[0]]|,shift))
+TP([[[0]]])=Elem(ret(prop(|[[[0]]]|,concat)))
+TP([[[0]]])=Elem(ret(prop(|[[[0]]]|,reverse)))
+TP([[[0]]])=Elem(|[[[0]]]|)
+TP([[[0]]])=param(prop(|[[[0]]]|,push),0)
+TP([[[0]]])=ret(prop(|[[[0]]]|,pop))
+TP([[[0]]])=ret(prop(|[[[0]]]|,shift))
+TP([[], []])=Elem(ret(prop(|[[], []]|,concat)))
+TP([[], []])=Elem(ret(prop(|[[], []]|,reverse)))
+TP([[], []])=Elem(|[[], []]|)
+TP([[], []])=param(prop(|[[], []]|,push),0)
+TP([[], []])=ret(prop(|[[], []]|,pop))
+TP([[], []])=ret(prop(|[[], []]|,shift))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,concat)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(ret(prop(|[]|,reverse)))
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=Elem(|[]|)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=param(prop(|[]|,push),0)
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,pop))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+TP([])=ret(prop(|[]|,shift))
+op(-|1|)<:|chromoC[t1]|
+param(|function calcFitness|,0)=|chromo|
+param(|function crossover|,0)=|chromoC|
+param(|function crossover|,1)=|chromoF|
+param(|function crossover|,2)=|chromoM|
+param(|function initSelect|,0)=|seed|
+param(|function initSelect|,1)=|selected|
+param(|function initializeChromosome|,0)=|chromo|
+param(|function mutate|,0)=|chromo|
+param(|function randGen|,0)=|seed|
+param(|function rand|,0)=|min|
+param(|function rand|,1)=|max|
+param(|function smallGA|,0)=|isFirstCall|
+param(|function sqrt|,0)=|s|
+param(|function wheelportion|,0)=|i|
+ret(|function bigGA|)=void
+ret(|function chromoTypeHint|)=void
+ret(|function crossover|)=void
+ret(|function evolve|)=void
+ret(|function initializeChromosome|)=void
+ret(|function initialize|)=void
+ret(|function mutate|)=void
+ret(|function run|)=void
+ret(|function smallGA|)=void
+ret(|function switchGeneration|)=void
+void=ret(|function evolve|)
+|""|=string
+|""|=string
+|""|=string
+|""|=string
+|""|=string
+|""|=string
+|""|=string
+|""|=string
+|""|=string
+|((10 * (t1 + selectivePressure * t2)) / t1) | 0|<:|t3|
+|((10 * (t1 + selectivePressure * t2)) / t1) | 0|=op(|((10 * (t1 + selectivePressure * t2)) / t1)|||0|)
+|((10 * (t1 + selectivePressure * t2)) / t1)|=|(10 * (t1 + selectivePressure * t2)) / t1|
+|((average / (average - bestScore))) * 100 | 0|<:|mutationRate|
+|((average / (average - bestScore))) * 100 | 0|=op(|((average / (average - bestScore))) * 100|||0|)
+|((average / (average - bestScore))) * 100|=op(|((average / (average - bestScore)))|*|100|)
+|((average / (average - bestScore)))|=|(average / (average - bestScore))|
+|((max - min) * (prev / 16777216))|=|(max - min) * (prev / 16777216)|
+|((scores[i] + (population / 2)) / population) | 0|<:|average|
+|((scores[i] + (population / 2)) / population) | 0|=op(|((scores[i] + (population / 2)) / population)|||0|)
+|((scores[i] + (population / 2)) / population)|=|(scores[i] + (population / 2)) / population|
+|((t2 + 1) % population) | 0|<:|t2|
+|((t2 + 1) % population) | 0|=op(|((t2 + 1) % population)|||0|)
+|((t2 + 1) % population)|=|(t2 + 1) % population|
+|(10 * (t1 + selectivePressure * t2)) / t1|=op(|(10 * (t1 + selectivePressure * t2))|/|t1|)
+|(10 * (t1 + selectivePressure * t2))|=|10 * (t1 + selectivePressure * t2)|
+|(48271 * prev + 12820163) & 16777215|<:|prev|
+|(48271 * prev + 12820163) & 16777215|=op(|(48271 * prev + 12820163)|&|16777215|)
+|(48271 * prev + 12820163)|=|48271 * prev + 12820163|
+|(average - bestScore)|=|average - bestScore|
+|(average - maxScore)|=|average - maxScore|
+|(average / (average - bestScore))|=|average / (average - bestScore)|
+|(calcFitness(chromosomes[currentGeneration][i]) / population) | 0|<:|average|
+|(calcFitness(chromosomes[currentGeneration][i]) / population) | 0|=op(|(calcFitness(chromosomes[currentGeneration][i]) / population)|||0|)
+|(calcFitness(chromosomes[currentGeneration][i]) / population)|=|calcFitness(chromosomes[currentGeneration][i]) / population|
+|(childGeneration + 1) % 2 | 0|<:|childGeneration|
+|(childGeneration + 1) % 2 | 0|=op(|(childGeneration + 1) % 2|||0|)
+|(childGeneration + 1) % 2|=op(|(childGeneration + 1)|%|2|)
+|(childGeneration + 1)|=|childGeneration + 1|
+|(currentGeneration + 1) % 2 | 0|<:|currentGeneration|
+|(currentGeneration + 1) % 2 | 0|=op(|(currentGeneration + 1) % 2|||0|)
+|(currentGeneration + 1) % 2|=op(|(currentGeneration + 1)|%|2|)
+|(currentGeneration + 1)|=|currentGeneration + 1|
+|(max - min) * (prev / 16777216)|=op(|(max - min)|*|(prev / 16777216)|)
+|(max - min)|=|max - min|
+|(population / 2)|=|population / 2|
+|(prev / 16777216)|=|prev / 16777216|
+|(s / x)|=|s / x|
+|(s / x)|=|s / x|
+|(s / x)|=|s / x|
+|(s / x)|=|s / x|
+|(scores[i] + (population / 2)) / population|=op(|(scores[i] + (population / 2))|/|population|)
+|(scores[i] + (population / 2))|=|scores[i] + (population / 2)|
+|(selectivePressure + 1) * 100|<:ret(|function wheelportion|)
+|(selectivePressure + 1) * 100|=op(|(selectivePressure + 1)|*|100|)
+|(selectivePressure + 1)|=|selectivePressure + 1|
+|(selectivePressure + 1)|=|selectivePressure + 1|
+|(sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000) | 0|<:|baseDistance[i]|
+|(sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000) | 0|<:|distance[i][j]|
+|(sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000) | 0|=op(|(sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000)|||0|)
+|(sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000) | 0|=op(|(sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000)|||0|)
+|(sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000)|=|sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000|
+|(sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000)|=|sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000|
+|(t1 * t1 + t2 * t2) * 1.0|<:param(|sqrt|,0)
+|(t1 * t1 + t2 * t2) * 1.0|<:param(|sqrt|,0)
+|(t1 * t1 + t2 * t2) * 1.0|=op(|(t1 * t1 + t2 * t2)|*|1.0|)
+|(t1 * t1 + t2 * t2) * 1.0|=op(|(t1 * t1 + t2 * t2)|*|1.0|)
+|(t1 * t1 + t2 * t2)|=|t1 * t1 + t2 * t2|
+|(t1 * t1 + t2 * t2)|=|t1 * t1 + t2 * t2|
+|(t1 + selectivePressure * t2)|=|t1 + selectivePressure * t2|
+|(t2 + 1) % population|=op(|(t2 + 1)|%|population|)
+|(t2 + 1)|=|t2 + 1|
+|(x + (s / x)) / 2.0|<:|x|
+|(x + (s / x)) / 2.0|<:|x|
+|(x + (s / x)) / 2.0|<:|x|
+|(x + (s / x)) / 2.0|<:|x|
+|(x + (s / x)) / 2.0|=op(|(x + (s / x))|/|2.0|)
+|(x + (s / x)) / 2.0|=op(|(x + (s / x))|/|2.0|)
+|(x + (s / x)) / 2.0|=op(|(x + (s / x))|/|2.0|)
+|(x + (s / x)) / 2.0|=op(|(x + (s / x))|/|2.0|)
+|(x + (s / x))|=|x + (s / x)|
+|(x + (s / x))|=|x + (s / x)|
+|(x + (s / x))|=|x + (s / x)|
+|(x + (s / x))|=|x + (s / x)|
+|-1|=op(-|1|)
+|-1|=op(-|1|)
+|0 === selected[index]|=op(|0|===|selected[index]|)
+|0 === t1|=op(|0|===|t1|)
+|0.0|<:Elem(|[0.0]|)
+|0.0|<:|floatHint|
+|0.0|=float
+|0.0|=float
+|0.0|=float
+|0.999 * s|=op(|0.999|*|s|)
+|0.999|=float
+|0|<:Elem(|[0]|)
+|0|<:Elem(|[0]|)
+|0|<:Elem(|[0]|)
+|0|<:param(|randGen|,0)
+|0|<:param(|rand|,0)
+|0|<:param(|rand|,0)
+|0|<:param(|rand|,0)
+|0|<:param(|rand|,0)
+|0|<:param(|rand|,0)
+|0|<:param(|rand|,0)
+|0|<:param(|rand|,0)
+|0|<:param(|rand|,0)
+|0|<:param(|rand|,0)
+|0|<:param(|rand|,0)
+|0|<:param(|rand|,0)
+|0|<:param(|rand|,0)
+|0|<:param(|rand|,0)
+|0|<:|average|
+|0|<:|average|
+|0|<:|baseX|
+|0|<:|baseY|
+|0|<:|bestScoreGlobal|
+|0|<:|bestScore|
+|0|<:|childGeneration|
+|0|<:|currentGeneration|
+|0|<:|currentGeneration|
+|0|<:|currentGeneration|
+|0|<:|currentGeneration|
+|0|<:|customerNumber|
+|0|<:|flag|
+|0|<:|generationGoal|
+|0|<:|gen|
+|0|<:|index|
+|0|<:|index|
+|0|<:|intHint|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|i|
+|0|<:|j|
+|0|<:|j|
+|0|<:|j|
+|0|<:|j|
+|0|<:|j|
+|0|<:|j|
+|0|<:|j|
+|0|<:|length|
+|0|<:|maxScore|
+|0|<:|minScore|
+|0|<:|minScore|
+|0|<:|mutationRate|
+|0|<:|population|
+|0|<:|selected[i]|
+|0|<:|selectivePressure|
+|0|<:|t1|
+|0|<:|t2|
+|0|<:|t3|
+|0|<:|t3|
+|0|<:|usedNumber[t1]|
+|0|<:|worstScore|
+|0|<:|worstScore|
+|0|=Key(|chromo|)
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|0|=integer
+|1 + ""|<:param(|console.log|,0)
+|1 + ""|<:param(|console.log|,0)
+|1 + ""|<:param(|console.log|,0)
+|1 + ""|=op(|1|+|""|)
+|1 + ""|=op(|1|+|""|)
+|1 + ""|=op(|1|+|""|)
+|1.001 * s|=op(|1.001|*|s|)
+|1.001|=float
+|1.0|=float
+|1.0|=float
+|10 * (t1 + selectivePressure * t2)|=op(|10|*|(t1 + selectivePressure * t2)|)
+|1000|<:param(|rand|,1)
+|1000|<:param(|rand|,1)
+|1000|<:param(|rand|,1)
+|1000|<:param(|rand|,1)
+|1000|=integer
+|1000|=integer
+|1000|=integer
+|1000|=integer
+|1000|=integer
+|1000|=integer
+|1000|=integer
+|100|=integer
+|100|=integer
+|100|=integer
+|10|<:|mutationRate|
+|10|<:|mutationRate|
+|10|=integer
+|10|=integer
+|10|=integer
+|10|=integer
+|12820163|=integer
+|16777215|=integer
+|16777216|=integer
+|17|<:|customerNumber|
+|17|=integer
+|18|<:|population|
+|18|=integer
+|19|<:|generationGoal|
+|19|=integer
+|1|<:|childGeneration|
+|1|<:|flag|
+|1|<:|i|
+|1|<:|selected[index]|
+|1|<:|usedNumber[chromoM[t3]]|
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|1|=integer
+|2 + ""|<:param(|console.log|,0)
+|2 + ""|=op(|2|+|""|)
+|2.0|=float
+|2.0|=float
+|2.0|=float
+|2.0|=float
+|200000000|<:|RAND_MAX|
+|200000000|=integer
+|200|<:|MAXPOP|
+|200|=integer
+|200|=integer
+|2|=integer
+|2|=integer
+|2|=integer
+|2|=integer
+|2|=integer
+|48271 * prev + 12820163|=op(|48271 * prev|+|12820163|)
+|48271 * prev|=op(|48271|*|prev|)
+|48271|=integer
+|4|<:|selectivePressure|
+|4|=integer
+|500|<:|MAXCUSTOMER|
+|500|=integer
+|999999999|<:|bestScoreGlobal|
+|999999999|<:|bestScore|
+|999999999|=integer
+|999999999|=integer
+|99999999|<:|maxScore|
+|99999999|=integer
+|RAND_MAX / 1000 * mutationRate|=op(|RAND_MAX / 1000|*|mutationRate|)
+|RAND_MAX / 1000|=op(|RAND_MAX|/|1000|)
+|RAND_MAX|<:param(|rand|,1)
+|RAND_MAX|=|RAND_MAX|
+|RAND_MAX|=|RAND_MAX|
+|[0.0]|<:|floatArrHint|
+|[0]|<:Elem(|[[0]]|)
+|[0]|<:Elem(|[[0]]|)
+|[0]|<:|intArrHint|
+|[[0]]|<:Elem(|[[[0]]]|)
+|[[0]]|<:|intArrArrHint|
+|[[[0]]]|<:|hint|
+|[[], []]|<:|chromosomes|
+|[]|<:Elem(|[[], []]|)
+|[]|<:Elem(|[[], []]|)
+|[]|<:|baseDistance|
+|[]|<:|bestChromosomeGlobal|
+|[]|<:|bestChromosome|
+|[]|<:|chrom[i]|
+|[]|<:|chromosomes[i][j]|
+|[]|<:|chromosomes[i]|
+|[]|<:|chrom|
+|[]|<:|customerX|
+|[]|<:|customerY|
+|[]|<:|distance[i]|
+|[]|<:|distance|
+|[]|<:|map|
+|[]|<:|scores|
+|[]|<:|selected|
+|[]|<:|temp|
+|[]|<:|temp|
+|[]|<:|usedNumber|
+|average += ((scores[i] + (population / 2)) / population) | 0|=|average|
+|average += (calcFitness(chromosomes[currentGeneration][i]) / population) | 0|=|average|
+|average - bestScore|=op(|average|-|bestScore|)
+|average - maxScore|=op(|average|-|maxScore|)
+|average / (average - bestScore)|=op(|average|/|(average - bestScore)|)
+|average / (average - maxScore) > 200|=op(|average / (average - maxScore)|>|200|)
+|average / (average - maxScore)|=op(|average|/|(average - maxScore)|)
+|average = 0|=|average|
+|average = 0|=|average|
+|average === maxScore|=op(|average|===|maxScore|)
+|average|=|average|
+|average|=|average|
+|average|=|average|
+|average|=|average|
+|average|=|average|
+|average|=|average|
+|average|=|average|
+|average|=|average|
+|average|=|average|
+|base = t1 + t4 - t2|=|base|
+|base = t1|=|base|
+|base = t4 - t3 + t1|=|base|
+|baseDistance[chromo[0]]|<:|length|
+|baseDistance[chromo[customerNumber - 1]]|<:|length|
+|baseDistance[i] = (sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000) | 0|=|baseDistance[i]|
+|baseDistance|<:|intArrHint|
+|baseDistance|=|baseDistance|
+|baseDistance|=|baseDistance|
+|baseDistance|=|baseDistance|
+|baseDistance|=|baseDistance|
+|baseX + ""|<:param(|console.log|,0)
+|baseX + ""|=op(|baseX|+|""|)
+|baseX = rand(0, 1000)|=|baseX|
+|baseX|=|baseX|
+|baseX|=|baseX|
+|baseX|=|baseX|
+|baseY + ""|<:param(|console.log|,0)
+|baseY + ""|=op(|baseY|+|""|)
+|baseY = rand(0, 1000)|=|baseY|
+|baseY|=|baseY|
+|baseY|=|baseY|
+|baseY|=|baseY|
+|base|=|base|
+|base|=|base|
+|base|=|base|
+|base|=|base|
+|base|=|base|
+|base|=|base|
+|bestChromosomeGlobal|<:|intArrHint|
+|bestChromosomeGlobal|=|bestChromosomeGlobal|
+|bestChromosome[i]|<:|chrom[victim1][i]|
+|bestChromosome[j] = chromo[j]|=|bestChromosome[j]|
+|bestChromosome[j] = chromo[j]|=|bestChromosome[j]|
+|bestChromosome[j]|<:|chrom[i][j]|
+|bestChromosome|<:|intArrHint|
+|bestChromosome|=|bestChromosome|
+|bestChromosome|=|bestChromosome|
+|bestChromosome|=|bestChromosome|
+|bestChromosome|=|bestChromosome|
+|bestChromosome|=|bestChromosome|
+|bestScore = 999999999|=|bestScore|
+|bestScore = scores[i]|=|bestScore|
+|bestScore > scores[i]|=op(|bestScore|>|scores[i]|)
+|bestScoreGlobal + ""|<:param(|console.log|,0)
+|bestScoreGlobal + ""|=op(|bestScoreGlobal|+|""|)
+|bestScoreGlobal = 999999999|=|bestScoreGlobal|
+|bestScoreGlobal = scores[i]|=|bestScoreGlobal|
+|bestScoreGlobal > scores[i]|=op(|bestScoreGlobal|>|scores[i]|)
+|bestScoreGlobal|=|bestScoreGlobal|
+|bestScoreGlobal|=|bestScoreGlobal|
+|bestScoreGlobal|=|bestScoreGlobal|
+|bestScoreGlobal|=|bestScoreGlobal|
+|bestScore|=|bestScore|
+|bestScore|=|bestScore|
+|bestScore|=|bestScore|
+|bestScore|=|bestScore|
+|bigGA()|=ret(|bigGA|)
+|bigGA|=|bigGA|
+|boolHint = isFirstCall|=|boolHint|
+|boolHint|=|boolHint|
+|bound = t2 - t1|=|bound|
+|bound = t3 - t2|=|bound|
+|bound = t4 - t3|=|bound|
+|bound|=|bound|
+|bound|=|bound|
+|bound|=|bound|
+|bound|=|bound|
+|bound|=|bound|
+|bound|=|bound|
+|calcFitness(chromo)|<:|scores[i]|
+|calcFitness(chromo)|=ret(|calcFitness|)
+|calcFitness(chromosomes[currentGeneration][i]) / population|=op(|calcFitness(chromosomes[currentGeneration][i])|/|population|)
+|calcFitness(chromosomes[currentGeneration][i])|=ret(|calcFitness|)
+|calcFitness|=|calcFitness|
+|calcFitness|=|calcFitness|
+|childGeneration + 1|=op(|childGeneration|+|1|)
+|childGeneration = (childGeneration + 1) % 2 | 0|=|childGeneration|
+|childGeneration = 1|=|childGeneration|
+|childGeneration|=Key(|chromosomes|)
+|childGeneration|=|childGeneration|
+|childGeneration|=|childGeneration|
+|childGeneration|=|childGeneration|
+|childGeneration|=|childGeneration|
+|chrom[i] = []|=|chrom[i]|
+|chrom[i][j] = bestChromosome[j]|=|chrom[i][j]|
+|chrom[i][j]|<:|chromosomes[currentGeneration][i][j]|
+|chrom[victim1][i] = bestChromosome[i]|=|chrom[victim1][i]|
+|chromo = chromosomes[currentGeneration][i]|=|chromo|
+|chromoC = chromosomes[childGeneration][i]|=|chromoC|
+|chromoC = intArrHint|=|chromoC|
+|chromoC[t1] = -1|=|chromoC[t1]|
+|chromoC[t3] = chromoM[t3]|=|chromoC[t3]|
+|chromoC[t3] = t1|=|chromoC[t3]|
+|chromoC[t3] === -1|=op(|chromoC[t3]|===op(-|1|))
+|chromoC|<:param(|crossover|,0)
+|chromoC|<:param(|mutate|,0)
+|chromoC|=|chromoC|
+|chromoC|=|chromoC|
+|chromoC|=|chromoC|
+|chromoC|=|chromoC|
+|chromoC|=|chromoC|
+|chromoC|=|chromoC|
+|chromoC|=|chromoC|
+|chromoC|=|chromoC|
+|chromoF = chromosomes[currentGeneration][father]|=|chromoF|
+|chromoF = intArrHint|=|chromoF|
+|chromoF[t3]|<:|map[chromoM[t3]]|
+|chromoF[t3]|<:|t1|
+|chromoF|<:param(|crossover|,1)
+|chromoF|=|chromoF|
+|chromoF|=|chromoF|
+|chromoF|=|chromoF|
+|chromoF|=|chromoF|
+|chromoF|=|chromoF|
+|chromoM = chromosomes[currentGeneration][mother]|=|chromoM|
+|chromoM = intArrHint|=|chromoM|
+|chromoM[t3]|<:|chromoC[t3]|
+|chromoM[t3]|=Key(|map|)
+|chromoM[t3]|=Key(|usedNumber|)
+|chromoM|<:param(|crossover|,2)
+|chromoM|=|chromoM|
+|chromoM|=|chromoM|
+|chromoM|=|chromoM|
+|chromoM|=|chromoM|
+|chromoM|=|chromoM|
+|chromoM|=|chromoM|
+|chromo[0]|=Key(|baseDistance|)
+|chromo[customerNumber - 1]|=Key(|baseDistance|)
+|chromo[i + t1]|<:|temp[i + base]|
+|chromo[i + t2]|<:|temp[i + base]|
+|chromo[i + t3]|<:|temp[i + base]|
+|chromo[i - 1]|<:|t1|
+|chromo[i] = initSelect(rand(0, customerNumber), selected)|=|chromo[i]|
+|chromo[i] = temp[i]|=|chromo[i]|
+|chromo[i]|<:|t2|
+|chromo[i]|<:|temp[i]|
+|chromo[i]|<:|temp[i]|
+|chromo[j]|<:|bestChromosome[j]|
+|chromo[j]|<:|bestChromosome[j]|
+|chromosomes[childGeneration][i]|<:|chromoC|
+|chromosomes[currentGeneration][father]|<:|chromoF|
+|chromosomes[currentGeneration][i][j] = chrom[i][j]|=|chromosomes[currentGeneration][i][j]|
+|chromosomes[currentGeneration][i][j]|=Key(|temp|)
+|chromosomes[currentGeneration][i][j]|=Key(|temp|)
+|chromosomes[currentGeneration][i]|<:param(|calcFitness|,0)
+|chromosomes[currentGeneration][i]|<:param(|initializeChromosome|,0)
+|chromosomes[currentGeneration][i]|<:param(|mutate|,0)
+|chromosomes[currentGeneration][i]|<:|chromo|
+|chromosomes[currentGeneration][mother]|<:|chromoM|
+|chromosomes[i] = []|=|chromosomes[i]|
+|chromosomes[i][j] = []|=|chromosomes[i][j]|
+|chromosomes|<:|hint|
+|chromosomes|=|chromosomes|
+|chromosomes|=|chromosomes|
+|chromosomes|=|chromosomes|
+|chromosomes|=|chromosomes|
+|chromosomes|=|chromosomes|
+|chromosomes|=|chromosomes|
+|chromosomes|=|chromosomes|
+|chromosomes|=|chromosomes|
+|chromosomes|=|chromosomes|
+|chromosomes|=|chromosomes|
+|chromosomes|=|chromosomes|
+|chromosomes|=|chromosomes|
+|chromosomes|=|chromosomes|
+|chromo|<:param(|calcFitness|,0)
+|chromo|<:|intArrHint|
+|chromo|<:|intArrHint|
+|chromo|<:|intArrHint|
+|chromo|<:|intArrHint|
+|chromo|=|chromo|
+|chromo|=|chromo|
+|chromo|=|chromo|
+|chromo|=|chromo|
+|chromo|=|chromo|
+|chromo|=|chromo|
+|chromo|=|chromo|
+|chromo|=|chromo|
+|chromo|=|chromo|
+|chromo|=|chromo|
+|chromo|=|chromo|
+|chromo|=|chromo|
+|chromo|=|chromo|
+|chromo|=|chromo|
+|chromo|=|chromo|
+|chromo|=|chromo|
+|chromo|=|chromo|
+|chromo|=|chromo|
+|chromo|=|chromo|
+|chrom|<:|intArrArrHint|
+|chrom|=|chrom|
+|chrom|=|chrom|
+|chrom|=|chrom|
+|chrom|=|chrom|
+|chrom|=|chrom|
+|console.log(1 + "")|=ret(|console.log|)
+|console.log(1 + "")|=ret(|console.log|)
+|console.log(1 + "")|=ret(|console.log|)
+|console.log(2 + "")|=ret(|console.log|)
+|console.log(baseX + "")|=ret(|console.log|)
+|console.log(baseY + "")|=ret(|console.log|)
+|console.log(bestScoreGlobal + "")|=ret(|console.log|)
+|console.log(customerX[i] + "")|=ret(|console.log|)
+|console.log(customerY[i] + "")|=ret(|console.log|)
+|console.log|=prop(|console|,log)
+|console.log|=prop(|console|,log)
+|console.log|=prop(|console|,log)
+|console.log|=prop(|console|,log)
+|console.log|=prop(|console|,log)
+|console.log|=prop(|console|,log)
+|console.log|=prop(|console|,log)
+|console.log|=prop(|console|,log)
+|console.log|=prop(|console|,log)
+|console|=|console|
+|console|=|console|
+|console|=|console|
+|console|=|console|
+|console|=|console|
+|console|=|console|
+|console|=|console|
+|console|=|console|
+|console|=|console|
+|crossover(chromoC, chromoF, chromoM)|=ret(|crossover|)
+|crossover|=|crossover|
+|currentGeneration + 1|=op(|currentGeneration|+|1|)
+|currentGeneration = (currentGeneration + 1) % 2 | 0|=|currentGeneration|
+|currentGeneration = 0|=|currentGeneration|
+|currentGeneration = 0|=|currentGeneration|
+|currentGeneration = 0|=|currentGeneration|
+|currentGeneration|=Key(|chromosomes|)
+|currentGeneration|=Key(|chromosomes|)
+|currentGeneration|=Key(|chromosomes|)
+|currentGeneration|=Key(|chromosomes|)
+|currentGeneration|=Key(|chromosomes|)
+|currentGeneration|=Key(|chromosomes|)
+|currentGeneration|=Key(|chromosomes|)
+|currentGeneration|=Key(|chromosomes|)
+|currentGeneration|=Key(|chromosomes|)
+|currentGeneration|=|currentGeneration|
+|currentGeneration|=|currentGeneration|
+|currentGeneration|=|currentGeneration|
+|currentGeneration|=|currentGeneration|
+|currentGeneration|=|currentGeneration|
+|currentGeneration|=|currentGeneration|
+|currentGeneration|=|currentGeneration|
+|currentGeneration|=|currentGeneration|
+|currentGeneration|=|currentGeneration|
+|currentGeneration|=|currentGeneration|
+|currentGeneration|=|currentGeneration|
+|currentGeneration|=|currentGeneration|
+|currentGeneration|=|currentGeneration|
+|currentGeneration|=|currentGeneration|
+|customerNumber - 1|=Key(|chromo|)
+|customerNumber - 1|=op(|customerNumber|-|1|)
+|customerNumber - 1|=op(|customerNumber|-|1|)
+|customerNumber = 17|=|customerNumber|
+|customerNumber|<:param(|rand|,1)
+|customerNumber|<:param(|rand|,1)
+|customerNumber|<:param(|rand|,1)
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerNumber|=|customerNumber|
+|customerX[i] + ""|<:param(|console.log|,0)
+|customerX[i] + ""|=op(|customerX[i]|+|""|)
+|customerX[i] - baseX|<:|t1|
+|customerX[i] - baseX|=op(|customerX[i]|-|baseX|)
+|customerX[i] - customerX[j]|<:|t1|
+|customerX[i] - customerX[j]|=op(|customerX[i]|-|customerX[j]|)
+|customerX[i] = rand(0, 1000)|=|customerX[i]|
+|customerX|=|customerX|
+|customerX|=|customerX|
+|customerX|=|customerX|
+|customerX|=|customerX|
+|customerX|=|customerX|
+|customerY[i] + ""|<:param(|console.log|,0)
+|customerY[i] + ""|=op(|customerY[i]|+|""|)
+|customerY[i] - baseY|<:|t2|
+|customerY[i] - baseY|=op(|customerY[i]|-|baseY|)
+|customerY[i] - customerY[j]|<:|t2|
+|customerY[i] - customerY[j]|=op(|customerY[i]|-|customerY[j]|)
+|customerY[i] = rand(0, 1000)|=|customerY[i]|
+|customerY|=|customerY|
+|customerY|=|customerY|
+|customerY|=|customerY|
+|customerY|=|customerY|
+|customerY|=|customerY|
+|distance[i] = []|=|distance[i]|
+|distance[i][j] = (sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000) | 0|=|distance[i][j]|
+|distance[i][j]|<:|distance[j][i]|
+|distance[j][i] = distance[i][j]|=|distance[j][i]|
+|distance[t1][t2]|<:|length|
+|distance|<:|intArrArrHint|
+|distance|=|distance|
+|distance|=|distance|
+|distance|=|distance|
+|distance|=|distance|
+|distance|=|distance|
+|distance|=|distance|
+|evaluate()|=ret(|evaluate|)
+|evaluate()|=ret(|evaluate|)
+|evaluate|=|evaluate|
+|evaluate|=|evaluate|
+|evolve()|=ret(|evolve|)
+|evolve|=|evolve|
+|false|<:param(|smallGA|,0)
+|false|<:ret(|function evaluate|)
+|false|<:|flag|
+|false|<:|temp[j]|
+|false|=boolean
+|false|=boolean
+|false|=boolean
+|false|=boolean
+|father !== mother|=op(|father|!==|mother|)
+|father = selection()|=|father|
+|father|=Key(|chromosomes[currentGeneration]|)
+|father|=|father|
+|father|=|father|
+|father|=|father|
+|flag = 0|=|flag|
+|flag = false|=|flag|
+|flag|=|flag|
+|flag|=|flag|
+|flag|=|flag|
+|flag|=|flag|
+|floatHint = s|=|floatHint|
+|floatHint|=|floatHint|
+|function bigGA|<:|bigGA|
+|function calcFitness|<:|calcFitness|
+|function chromoTypeHint|<:|chromoTypeHint|
+|function crossover|<:|crossover|
+|function evaluate|<:|evaluate|
+|function evolve|<:|evolve|
+|function initSelect|<:|initSelect|
+|function initializeChromosome|<:|initializeChromosome|
+|function initialize|<:|initialize|
+|function mutate|<:|mutate|
+|function randGen|<:|randGen|
+|function rand|<:|rand|
+|function run|<:|run|
+|function selection|<:|selection|
+|function smallGA|<:|smallGA|
+|function sqrt|<:|sqrt|
+|function switchGeneration|<:|switchGeneration|
+|function wheelportion|<:|wheelportion|
+|gen < generationGoal|=op(|gen|<|generationGoal|)
+|gen++|=op(|gen|++)
+|generationGoal = 19|=|generationGoal|
+|generationGoal|=|generationGoal|
+|generationGoal|=|generationGoal|
+|gen|=|gen|
+|gen|=|gen|
+|hint = chromosomes|=|hint|
+|hint|=|hint|
+|i + 1|<:|j|
+|i + 1|=op(|i|+|1|)
+|i + base|=Key(|temp|)
+|i + base|=Key(|temp|)
+|i + base|=Key(|temp|)
+|i + base|=op(|i|+|base|)
+|i + base|=op(|i|+|base|)
+|i + base|=op(|i|+|base|)
+|i + t1|=Key(|chromo|)
+|i + t1|=op(|i|+|t1|)
+|i + t2|=Key(|chromo|)
+|i + t2|=op(|i|+|t2|)
+|i + t3|=Key(|chromo|)
+|i + t3|=op(|i|+|t3|)
+|i - 1|=Key(|chromo|)
+|i - 1|=op(|i|-|1|)
+|i < 2|=op(|i|<|2|)
+|i < bound|=op(|i|<|bound|)
+|i < bound|=op(|i|<|bound|)
+|i < bound|=op(|i|<|bound|)
+|i < customerNumber - 1|=op(|i|<|customerNumber - 1|)
+|i < customerNumber|=op(|i|<|customerNumber|)
+|i < customerNumber|=op(|i|<|customerNumber|)
+|i < customerNumber|=op(|i|<|customerNumber|)
+|i < customerNumber|=op(|i|<|customerNumber|)
+|i < customerNumber|=op(|i|<|customerNumber|)
+|i < customerNumber|=op(|i|<|customerNumber|)
+|i < customerNumber|=op(|i|<|customerNumber|)
+|i < customerNumber|=op(|i|<|customerNumber|)
+|i < customerNumber|=op(|i|<|customerNumber|)
+|i < population|=op(|i|<|population|)
+|i < population|=op(|i|<|population|)
+|i < population|=op(|i|<|population|)
+|i < population|=op(|i|<|population|)
+|i < population|=op(|i|<|population|)
+|i < population|=op(|i|<|population|)
+|i < t1|=op(|i|<|t1|)
+|i = 0|=|i|
+|i = 0|=|i|
+|i = 0|=|i|
+|i = 0|=|i|
+|i = 0|=|i|
+|i = 0|=|i|
+|i = 0|=|i|
+|i = 0|=|i|
+|i = 0|=|i|
+|i = 0|=|i|
+|i = 0|=|i|
+|i = 0|=|i|
+|i = 0|=|i|
+|i = 0|=|i|
+|i = 0|=|i|
+|i = 0|=|i|
+|i = 0|=|i|
+|i = 0|=|i|
+|i = 0|=|i|
+|i = 1|=|i|
+|i = t4|=|i|
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|i++|=op(|i|++)
+|index = 0|=|index|
+|index == customerNumber|=op(|index|==|customerNumber|)
+|index++|=op(|index|++)
+|index|<:ret(|function initSelect|)
+|index|=Key(|selected|)
+|index|=Key(|selected|)
+|index|=|index|
+|index|=|index|
+|index|=|index|
+|index|=|index|
+|index|=|index|
+|index|=|index|
+|initSelect(rand(0, customerNumber), selected)|<:|chromo[i]|
+|initSelect(rand(0, customerNumber), selected)|=ret(|initSelect|)
+|initSelect|=|initSelect|
+|initialize()|=ret(|initialize|)
+|initializeChromosome(chromosomes[currentGeneration][i])|=ret(|initializeChromosome|)
+|initializeChromosome|=|initializeChromosome|
+|initialize|=|initialize|
+|intArrArrHint = chrom|=|intArrArrHint|
+|intArrArrHint = distance|=|intArrArrHint|
+|intArrArrHint|=|intArrArrHint|
+|intArrArrHint|=|intArrArrHint|
+|intArrHint = baseDistance|=|intArrHint|
+|intArrHint = bestChromosomeGlobal|=|intArrHint|
+|intArrHint = bestChromosome|=|intArrHint|
+|intArrHint = chromo|=|intArrHint|
+|intArrHint = chromo|=|intArrHint|
+|intArrHint = chromo|=|intArrHint|
+|intArrHint = chromo|=|intArrHint|
+|intArrHint = scores|=|intArrHint|
+|intArrHint = selected|=|intArrHint|
+|intArrHint|<:|chromoC|
+|intArrHint|<:|chromoF|
+|intArrHint|<:|chromoM|
+|intArrHint|=|intArrHint|
+|intArrHint|=|intArrHint|
+|intArrHint|=|intArrHint|
+|intArrHint|=|intArrHint|
+|intArrHint|=|intArrHint|
+|intArrHint|=|intArrHint|
+|intArrHint|=|intArrHint|
+|intArrHint|=|intArrHint|
+|intArrHint|=|intArrHint|
+|intArrHint|=|intArrHint|
+|intArrHint|=|intArrHint|
+|intArrHint|=|intArrHint|
+|intHint = i|=|intHint|
+|intHint = max|=|intHint|
+|intHint = min|=|intHint|
+|intHint = seed|=|intHint|
+|intHint = seed|=|intHint|
+|intHint|=|intHint|
+|intHint|=|intHint|
+|intHint|=|intHint|
+|intHint|=|intHint|
+|intHint|=|intHint|
+|isFirstCall|<:|boolHint|
+|isFirstCall|=|isFirstCall|
+|isFirstCall|=|isFirstCall|
+|i|<:|intHint|
+|i|=Key(|baseDistance|)
+|i|=Key(|bestChromosome|)
+|i|=Key(|chrom[victim1]|)
+|i|=Key(|chromosomes[childGeneration]|)
+|i|=Key(|chromosomes[currentGeneration]|)
+|i|=Key(|chromosomes[currentGeneration]|)
+|i|=Key(|chromosomes[currentGeneration]|)
+|i|=Key(|chromosomes[currentGeneration]|)
+|i|=Key(|chromosomes[currentGeneration]|)
+|i|=Key(|chromosomes[currentGeneration]|)
+|i|=Key(|chromosomes[currentGeneration]|)
+|i|=Key(|chromosomes|)
+|i|=Key(|chromosomes|)
+|i|=Key(|chromo|)
+|i|=Key(|chromo|)
+|i|=Key(|chromo|)
+|i|=Key(|chromo|)
+|i|=Key(|chromo|)
+|i|=Key(|chrom|)
+|i|=Key(|chrom|)
+|i|=Key(|chrom|)
+|i|=Key(|customerX|)
+|i|=Key(|customerX|)
+|i|=Key(|customerX|)
+|i|=Key(|customerX|)
+|i|=Key(|customerY|)
+|i|=Key(|customerY|)
+|i|=Key(|customerY|)
+|i|=Key(|customerY|)
+|i|=Key(|distance[j]|)
+|i|=Key(|distance|)
+|i|=Key(|distance|)
+|i|=Key(|distance|)
+|i|=Key(|scores|)
+|i|=Key(|scores|)
+|i|=Key(|scores|)
+|i|=Key(|scores|)
+|i|=Key(|scores|)
+|i|=Key(|scores|)
+|i|=Key(|scores|)
+|i|=Key(|scores|)
+|i|=Key(|scores|)
+|i|=Key(|scores|)
+|i|=Key(|scores|)
+|i|=Key(|selected|)
+|i|=Key(|temp|)
+|i|=Key(|temp|)
+|i|=Key(|temp|)
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|i|=|i|
+|j < customerNumber|=op(|j|<|customerNumber|)
+|j < customerNumber|=op(|j|<|customerNumber|)
+|j < customerNumber|=op(|j|<|customerNumber|)
+|j < customerNumber|=op(|j|<|customerNumber|)
+|j < customerNumber|=op(|j|<|customerNumber|)
+|j < customerNumber|=op(|j|<|customerNumber|)
+|j < customerNumber|=op(|j|<|customerNumber|)
+|j < population|=op(|j|<|population|)
+|j = 0|=|j|
+|j = 0|=|j|
+|j = 0|=|j|
+|j = 0|=|j|
+|j = 0|=|j|
+|j = 0|=|j|
+|j = 0|=|j|
+|j = i + 1|=|j|
+|j++|=op(|j|++)
+|j++|=op(|j|++)
+|j++|=op(|j|++)
+|j++|=op(|j|++)
+|j++|=op(|j|++)
+|j++|=op(|j|++)
+|j++|=op(|j|++)
+|j++|=op(|j|++)
+|j|=Key(|bestChromosome|)
+|j|=Key(|bestChromosome|)
+|j|=Key(|bestChromosome|)
+|j|=Key(|chrom[i]|)
+|j|=Key(|chrom[i]|)
+|j|=Key(|chromosomes[currentGeneration][i]|)
+|j|=Key(|chromosomes[currentGeneration][i]|)
+|j|=Key(|chromosomes[currentGeneration][i]|)
+|j|=Key(|chromosomes[i]|)
+|j|=Key(|chromo|)
+|j|=Key(|chromo|)
+|j|=Key(|customerX|)
+|j|=Key(|customerY|)
+|j|=Key(|distance[i]|)
+|j|=Key(|distance[i]|)
+|j|=Key(|distance|)
+|j|=Key(|temp|)
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|j|=|j|
+|length += baseDistance[chromo[0]]|=|length|
+|length += baseDistance[chromo[customerNumber - 1]]|=|length|
+|length += distance[t1][t2]|=|length|
+|length = 0|=|length|
+|length|<:ret(|function calcFitness|)
+|length|=|length|
+|length|=|length|
+|length|=|length|
+|length|=|length|
+|length|=|length|
+|map[chromoM[t3]] = chromoF[t3]|=|map[chromoM[t3]]|
+|map[t1]|<:|t1|
+|map|=|map|
+|map|=|map|
+|max - min|=op(|max|-|min|)
+|maxScore = 99999999|=|maxScore|
+|maxScore = scores[i]|=|maxScore|
+|maxScore > scores[i]|=op(|maxScore|>|scores[i]|)
+|maxScore|=|maxScore|
+|maxScore|=|maxScore|
+|maxScore|=|maxScore|
+|maxScore|=|maxScore|
+|maxScore|=|maxScore|
+|maxScore|=|maxScore|
+|max|<:|intHint|
+|max|=|max|
+|max|=|max|
+|min + ((max - min) * (prev / 16777216))|<:|result|
+|min + ((max - min) * (prev / 16777216))|=op(|min|+|((max - min) * (prev / 16777216))|)
+|minScore - maxScore|<:|t1|
+|minScore - maxScore|=op(|minScore|-|maxScore|)
+|minScore - scores[i]|<:|t2|
+|minScore - scores[i]|=op(|minScore|-|scores[i]|)
+|minScore < scores[i]|=op(|minScore|<|scores[i]|)
+|minScore = 0|=|minScore|
+|minScore = scores[i]|=|minScore|
+|minScore|=|minScore|
+|minScore|=|minScore|
+|minScore|=|minScore|
+|minScore|=|minScore|
+|minScore|=|minScore|
+|min|<:|intHint|
+|min|=|min|
+|min|=|min|
+|min|=|min|
+|mother = selection()|=|mother|
+|mother|=Key(|chromosomes[currentGeneration]|)
+|mother|=|mother|
+|mother|=|mother|
+|mother|=|mother|
+|mutate(chromoC)|=ret(|mutate|)
+|mutate(chromosomes[currentGeneration][i])|=ret(|mutate|)
+|mutate|=|mutate|
+|mutate|=|mutate|
+|mutationRate = ((average / (average - bestScore))) * 100 | 0|=|mutationRate|
+|mutationRate = 10|=|mutationRate|
+|mutationRate = 10|=|mutationRate|
+|mutationRate|=|mutationRate|
+|mutationRate|=|mutationRate|
+|mutationRate|=|mutationRate|
+|mutationRate|=|mutationRate|
+|population * 100 * (selectivePressure + 1)|<:param(|rand|,1)
+|population * 100 * (selectivePressure + 1)|=op(|population * 100|*|(selectivePressure + 1)|)
+|population * 100|=op(|population|*|100|)
+|population / 2|=op(|population|/|2|)
+|population = 18|=|population|
+|population|=|population|
+|population|=|population|
+|population|=|population|
+|population|=|population|
+|population|=|population|
+|population|=|population|
+|population|=|population|
+|population|=|population|
+|population|=|population|
+|population|=|population|
+|population|=|population|
+|population|=|population|
+|population|=|population|
+|prev / 16777216|=op(|prev|/|16777216|)
+|prev = (48271 * prev + 12820163) & 16777215|=|prev|
+|prev|=|prev|
+|prev|=|prev|
+|prev|=|prev|
+|rand(0, 1000)|<:|baseX|
+|rand(0, 1000)|<:|baseY|
+|rand(0, 1000)|<:|customerX[i]|
+|rand(0, 1000)|<:|customerY[i]|
+|rand(0, 1000)|=ret(|rand|)
+|rand(0, 1000)|=ret(|rand|)
+|rand(0, 1000)|=ret(|rand|)
+|rand(0, 1000)|=ret(|rand|)
+|rand(0, RAND_MAX) < RAND_MAX / 1000 * mutationRate|=op(|rand(0, RAND_MAX)|<|RAND_MAX / 1000 * mutationRate|)
+|rand(0, RAND_MAX)|=ret(|rand|)
+|rand(0, customerNumber)|<:param(|initSelect|,0)
+|rand(0, customerNumber)|<:|t1|
+|rand(0, customerNumber)|<:|t4|
+|rand(0, customerNumber)|=ret(|rand|)
+|rand(0, customerNumber)|=ret(|rand|)
+|rand(0, customerNumber)|=ret(|rand|)
+|rand(0, population * 100 * (selectivePressure + 1))|<:|t1|
+|rand(0, population * 100 * (selectivePressure + 1))|=ret(|rand|)
+|rand(0, t1)|<:|t2|
+|rand(0, t1)|=ret(|rand|)
+|rand(0, t2)|<:|t1|
+|rand(0, t2)|=ret(|rand|)
+|rand(0, t3)|<:|t2|
+|rand(0, t3)|=ret(|rand|)
+|rand(0, t4)|<:|t3|
+|rand(0, t4)|=ret(|rand|)
+|randGen(0)|<:|rand|
+|randGen(0)|=ret(|randGen|)
+|randGen|=|randGen|
+|rand|<:ret(|function randGen|)
+|rand|=|rand|
+|rand|=|rand|
+|rand|=|rand|
+|rand|=|rand|
+|rand|=|rand|
+|rand|=|rand|
+|rand|=|rand|
+|rand|=|rand|
+|rand|=|rand|
+|rand|=|rand|
+|rand|=|rand|
+|rand|=|rand|
+|rand|=|rand|
+|rand|=|rand|
+|result | 0|<:ret(|function rand|)
+|result | 0|=op(|result|||0|)
+|result|=|result|
+|run()|=ret(|run|)
+|run|=|run|
+|s / x|=op(|s|/|x|)
+|s / x|=op(|s|/|x|)
+|s / x|=op(|s|/|x|)
+|s / x|=op(|s|/|x|)
+|scores[i] + (population / 2)|=op(|scores[i]|+|(population / 2)|)
+|scores[i] = calcFitness(chromo)|=|scores[i]|
+|scores[i]|<:|bestScoreGlobal|
+|scores[i]|<:|bestScore|
+|scores[i]|<:|maxScore|
+|scores[i]|<:|minScore|
+|scores|<:|intArrHint|
+|scores|=|scores|
+|scores|=|scores|
+|scores|=|scores|
+|scores|=|scores|
+|scores|=|scores|
+|scores|=|scores|
+|scores|=|scores|
+|scores|=|scores|
+|scores|=|scores|
+|scores|=|scores|
+|scores|=|scores|
+|scores|=|scores|
+|seed >= 0|=op(|seed|>=|0|)
+|seed >= 0|=op(|seed|>=|0|)
+|seed--|=op(|seed|--)
+|seed|<:|intHint|
+|seed|<:|intHint|
+|seed|<:|prev|
+|seed|=|seed|
+|seed|=|seed|
+|seed|=|seed|
+|seed|=|seed|
+|seed|=|seed|
+|seed|=|seed|
+|selected[i] = 0|=|selected[i]|
+|selected[index] = 1|=|selected[index]|
+|selected|<:param(|initSelect|,1)
+|selected|<:|intArrHint|
+|selected|=|selected|
+|selected|=|selected|
+|selected|=|selected|
+|selected|=|selected|
+|selected|=|selected|
+|selection()|<:|father|
+|selection()|<:|mother|
+|selection()|<:|victim1|
+|selection()|=ret(|selection|)
+|selection()|=ret(|selection|)
+|selection()|=ret(|selection|)
+|selection|=|selection|
+|selection|=|selection|
+|selection|=|selection|
+|selectivePressure * t2|=op(|selectivePressure|*|t2|)
+|selectivePressure + 1|=op(|selectivePressure|+|1|)
+|selectivePressure + 1|=op(|selectivePressure|+|1|)
+|selectivePressure = 4|=|selectivePressure|
+|selectivePressure|=|selectivePressure|
+|selectivePressure|=|selectivePressure|
+|selectivePressure|=|selectivePressure|
+|selectivePressure|=|selectivePressure|
+|smallGA(false)|=ret(|smallGA|)
+|smallGA(true)|=ret(|smallGA|)
+|smallGA|=|smallGA|
+|smallGA|=|smallGA|
+|sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000|=op(|sqrt((t1 * t1 + t2 * t2) * 1.0)|*|1000|)
+|sqrt((t1 * t1 + t2 * t2) * 1.0) * 1000|=op(|sqrt((t1 * t1 + t2 * t2) * 1.0)|*|1000|)
+|sqrt((t1 * t1 + t2 * t2) * 1.0)|=ret(|sqrt|)
+|sqrt((t1 * t1 + t2 * t2) * 1.0)|=ret(|sqrt|)
+|sqrt|=|sqrt|
+|sqrt|=|sqrt|
+|switchGeneration()|=ret(|switchGeneration|)
+|switchGeneration|=|switchGeneration|
+|s|<:|floatHint|
+|s|<:|x|
+|s|=|s|
+|s|=|s|
+|s|=|s|
+|s|=|s|
+|s|=|s|
+|s|=|s|
+|s|=|s|
+|s|=|s|
+|t1 * t1 + t2 * t2|=op(|t1 * t1|+|t2 * t2|)
+|t1 * t1 + t2 * t2|=op(|t1 * t1|+|t2 * t2|)
+|t1 * t1|=op(|t1|*|t1|)
+|t1 * t1|=op(|t1|*|t1|)
+|t1 + selectivePressure * t2|=op(|t1|+|selectivePressure * t2|)
+|t1 + t4 - t2|<:|base|
+|t1 + t4 - t2|=op(|t1 + t4|-|t2|)
+|t1 + t4|=op(|t1|+|t4|)
+|t1 - wheelportion(t2)|<:|t1|
+|t1 - wheelportion(t2)|=op(|t1|-|wheelportion(t2)|)
+|t1 < customerNumber|=op(|t1|<|customerNumber|)
+|t1 <= 0|=op(|t1|<=|0|)
+|t1 = 0|=|t1|
+|t1 = chromoF[t3]|=|t1|
+|t1 = chromo[i - 1]|=|t1|
+|t1 = customerX[i] - baseX|=|t1|
+|t1 = customerX[i] - customerX[j]|=|t1|
+|t1 = map[t1]|=|t1|
+|t1 = minScore - maxScore|=|t1|
+|t1 = rand(0, customerNumber)|=|t1|
+|t1 = rand(0, population * 100 * (selectivePressure + 1))|=|t1|
+|t1 = rand(0, t2)|=|t1|
+|t1 = t1 - wheelportion(t2)|=|t1|
+|t1++|=op(|t1|++)
+|t1|<:param(|rand|,1)
+|t1|<:|base|
+|t1|<:|chromoC[t3]|
+|t1|=Key(|chromoC|)
+|t1|=Key(|distance|)
+|t1|=Key(|map|)
+|t1|=Key(|usedNumber|)
+|t1|=Key(|usedNumber|)
+|t1|=Key(|usedNumber|)
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t1|=|t1|
+|t2 * t2|=op(|t2|*|t2|)
+|t2 * t2|=op(|t2|*|t2|)
+|t2 + 1|=op(|t2|+|1|)
+|t2 - t1|<:|bound|
+|t2 - t1|=op(|t2|-|t1|)
+|t2 = ((t2 + 1) % population) | 0|=|t2|
+|t2 = 0|=|t2|
+|t2 = chromo[i]|=|t2|
+|t2 = customerY[i] - baseY|=|t2|
+|t2 = customerY[i] - customerY[j]|=|t2|
+|t2 = minScore - scores[i]|=|t2|
+|t2 = rand(0, t1)|=|t2|
+|t2 = rand(0, t3)|=|t2|
+|t2|<:param(|rand|,1)
+|t2|<:param(|wheelportion|,0)
+|t2|<:ret(|function selection|)
+|t2|<:ret(|function selection|)
+|t2|<:|t3|
+|t2|=Key(|distance[t1]|)
+|t2|=|t2|
+|t2|=|t2|
+|t2|=|t2|
+|t2|=|t2|
+|t2|=|t2|
+|t2|=|t2|
+|t2|=|t2|
+|t2|=|t2|
+|t2|=|t2|
+|t2|=|t2|
+|t2|=|t2|
+|t2|=|t2|
+|t2|=|t2|
+|t2|=|t2|
+|t2|=|t2|
+|t2|=|t2|
+|t2|=|t2|
+|t2|=|t2|
+|t2|=|t2|
+|t2|=|t2|
+|t2|=|t2|
+|t2|=|t2|
+|t2|=|t2|
+|t2|=|t2|
+|t3 * 10|<:ret(|function wheelportion|)
+|t3 * 10|=op(|t3|*|10|)
+|t3 - t2|<:|bound|
+|t3 - t2|=op(|t3|-|t2|)
+|t3 < customerNumber|=op(|t3|<|customerNumber|)
+|t3 < customerNumber|=op(|t3|<|customerNumber|)
+|t3 < t1|=op(|t3|<|t1|)
+|t3 = ((10 * (t1 + selectivePressure * t2)) / t1) | 0|=|t3|
+|t3 = 0|=|t3|
+|t3 = 0|=|t3|
+|t3 = rand(0, t4)|=|t3|
+|t3 = t2|=|t3|
+|t3++|=op(|t3|++)
+|t3++|=op(|t3|++)
+|t3++|=op(|t3|++)
+|t3|<:param(|rand|,1)
+|t3|=Key(|chromoC|)
+|t3|=Key(|chromoC|)
+|t3|=Key(|chromoC|)
+|t3|=Key(|chromoF|)
+|t3|=Key(|chromoF|)
+|t3|=Key(|chromoM|)
+|t3|=Key(|chromoM|)
+|t3|=Key(|chromoM|)
+|t3|=|t3|
+|t3|=|t3|
+|t3|=|t3|
+|t3|=|t3|
+|t3|=|t3|
+|t3|=|t3|
+|t3|=|t3|
+|t3|=|t3|
+|t3|=|t3|
+|t3|=|t3|
+|t3|=|t3|
+|t3|=|t3|
+|t3|=|t3|
+|t3|=|t3|
+|t3|=|t3|
+|t3|=|t3|
+|t3|=|t3|
+|t3|=|t3|
+|t3|=|t3|
+|t3|=|t3|
+|t3|=|t3|
+|t3|=|t3|
+|t3|=|t3|
+|t3|=|t3|
+|t3|=|t3|
+|t4 - t3 + t1|<:|base|
+|t4 - t3 + t1|=op(|t4 - t3|+|t1|)
+|t4 - t3|<:|bound|
+|t4 - t3|=op(|t4|-|t3|)
+|t4 - t3|=op(|t4|-|t3|)
+|t4 = rand(0, customerNumber)|=|t4|
+|t4|<:param(|rand|,1)
+|t4|<:|i|
+|t4|=|t4|
+|t4|=|t4|
+|t4|=|t4|
+|t4|=|t4|
+|t4|=|t4|
+|t4|=|t4|
+|temp[chromosomes[currentGeneration][i][j]] = true|=|temp[chromosomes[currentGeneration][i][j]]|
+|temp[i + base] = chromo[i + t1]|=|temp[i + base]|
+|temp[i + base] = chromo[i + t2]|=|temp[i + base]|
+|temp[i + base] = chromo[i + t3]|=|temp[i + base]|
+|temp[i] = chromo[i]|=|temp[i]|
+|temp[i] = chromo[i]|=|temp[i]|
+|temp[i]|<:|chromo[i]|
+|temp[j] = false|=|temp[j]|
+|temp|=|temp|
+|temp|=|temp|
+|temp|=|temp|
+|temp|=|temp|
+|temp|=|temp|
+|temp|=|temp|
+|temp|=|temp|
+|temp|=|temp|
+|temp|=|temp|
+|true|<:param(|smallGA|,0)
+|true|<:ret(|function evaluate|)
+|true|<:ret(|function evaluate|)
+|true|<:|boolHint|
+|true|<:|flag|
+|true|<:|temp[chromosomes[currentGeneration][i][j]]|
+|true|=boolean
+|true|=boolean
+|true|=boolean
+|true|=boolean
+|true|=boolean
+|true|=boolean
+|usedNumber[chromoM[t3]] = 1|=|usedNumber[chromoM[t3]]|
+|usedNumber[t1] = 0|=|usedNumber[t1]|
+|usedNumber|=|usedNumber|
+|usedNumber|=|usedNumber|
+|usedNumber|=|usedNumber|
+|usedNumber|=|usedNumber|
+|victim1 = selection()|=|victim1|
+|victim1|=Key(|chrom|)
+|victim1|=|victim1|
+|victim1|=|victim1|
+|wheelportion(t2)|=ret(|wheelportion|)
+|wheelportion|=|wheelportion|
+|worstScore = 0|=|worstScore|
+|worstScore = 0|=|worstScore|
+|worstScore|=|worstScore|
+|worstScore|=|worstScore|
+|x * x|<:|z|
+|x * x|=op(|x|*|x|)
+|x + (s / x)|=op(|x|+|(s / x)|)
+|x + (s / x)|=op(|x|+|(s / x)|)
+|x + (s / x)|=op(|x|+|(s / x)|)
+|x + (s / x)|=op(|x|+|(s / x)|)
+|x = (x + (s / x)) / 2.0|=|x|
+|x = (x + (s / x)) / 2.0|=|x|
+|x = (x + (s / x)) / 2.0|=|x|
+|x = (x + (s / x)) / 2.0|=|x|
+|x = s|=|x|
+|x === 0.0|=op(|x|===|0.0|)
+|x|<:ret(|function sqrt|)
+|x|<:ret(|function sqrt|)
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|z < 1.001 * s|=op(|z|<|1.001 * s|)
+|z = x * x|=|z|
+|z > 0.999 * s && z < 1.001 * s|=op(|z > 0.999 * s|&&|z < 1.001 * s|)
+|z > 0.999 * s|=op(|z|>|0.999 * s|)
+|z|=|z|
+|z|=|z|
+|z|=|z|

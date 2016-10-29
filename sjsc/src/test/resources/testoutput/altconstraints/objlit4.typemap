@@ -1,0 +1,15 @@
+"hello" --> string
+(fn.code) --> () -> void
+(fn.code)() --> void
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log("hello") --> void
+fn --> {  | code: () -> void }
+fn --> {  | code: () -> void }
+fn.code --> () -> void
+function() {
+  console.log("hello");
+} --> () -> void
+{code: function() {
+  console.log("hello");
+}} --> {  | code: () -> void }

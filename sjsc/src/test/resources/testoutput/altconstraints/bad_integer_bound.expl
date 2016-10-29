@@ -1,0 +1,2 @@
+could not find property STRONG_DEFAULT in type { constraint_satisfy: []({  | strength: ___ },___) -> void, incrementalAdd: []({  | strength: ___ }) -> void, incrementalRemove: []({ output: () -> ___ |  }) -> void, addPropagate: ({  | strength: ___ },___) -> void, removePropagateFrom: (___) -> { add: []({  | strength: ___ }) -> void, at: [](integer) -> {  | strength: ___ } | elms: Array<{  | strength: ___ }> } |  } for term |new Planner()|
+property accessed on line 57

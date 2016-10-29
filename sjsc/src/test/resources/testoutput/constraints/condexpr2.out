@@ -1,0 +1,30 @@
+MakeConcreteConstraint [term=|(q) ? x.p : y.p|]
+MakeConcreteConstraint [term=|3|]
+MakeConcreteConstraint [term=|4|]
+MakeConcreteConstraint [term=|4|]
+MakeConcreteConstraint [term=|true|]
+MakeConcreteConstraint [term=|{f: 3, g: 4}|]
+MakeConcreteConstraint [term=|{f: 4}|]
+MakeConcreteConstraint [term=|{p: {f: 3, g: 4}}|]
+MakeConcreteConstraint [term=|{p: {f: 4}}|]
+|(q) ? x.p : y.p|<:|z|
+|(q)|=|q|
+|3|<:prop(|{f: 3, g: 4}|,f)
+|3|=integer
+|4|<:prop(|{f: 3, g: 4}|,g)
+|4|<:prop(|{f: 4}|,f)
+|4|=integer
+|4|=integer
+|q|=|q|
+|true|<:|q|
+|true|=boolean
+|x.p|<:|(q) ? x.p : y.p|
+|x.p|=prop(|x|,p)
+|x|=|x|
+|y.p|<:|(q) ? x.p : y.p|
+|y.p|=prop(|y|,p)
+|y|=|y|
+|{f: 3, g: 4}|<:prop(|{p: {f: 3, g: 4}}|,p)
+|{f: 4}|<:prop(|{p: {f: 4}}|,p)
+|{p: {f: 3, g: 4}}|<:|x|
+|{p: {f: 4}}|<:|y|

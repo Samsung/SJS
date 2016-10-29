@@ -1,0 +1,30 @@
+3 --> integer
+4 --> integer
+5 --> integer
+Foo --> ctor<0>[{  | a: integer }]() -> { a: integer |  }
+Foo --> ctor<0>[{  | a: integer }]() -> { a: integer |  }
+Foo --> ctor<0>[{  | a: integer }]() -> { a: integer |  }
+Foo.prototype --> {  | a: integer }
+Foo.prototype = {a: 5} --> {  | a: integer }
+fizz --> ({ a: integer |  }) -> integer
+fizz --> ({ a: integer |  }) -> integer
+fizz --> ({ a: integer |  }) -> integer
+fizz(x) --> integer
+fizz(z) --> integer
+function Foo() {
+}
+ --> ctor<0>[{  | a: integer }]() -> { a: integer |  }
+function fizz(p) {
+  return p.a;
+}
+ --> ({ a: integer |  }) -> integer
+new Foo() --> { a: integer |  }
+p --> { a: integer |  }
+p --> { a: integer |  }
+p.a --> integer
+x --> {  | a: integer, b: integer }
+x --> {  | a: integer, b: integer }
+z --> { a: integer |  }
+z --> { a: integer |  }
+{a: 3, b: 4} --> {  | a: integer, b: integer }
+{a: 5} --> {  | a: integer }

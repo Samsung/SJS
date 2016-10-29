@@ -1,0 +1,82 @@
+CheckArity(ret(|(function f() {
+  return (b ? x : y);
+})|))
+CheckArity(ret(|assert|))
+CheckArity(ret(|assert|))
+CheckArity(ret(|assert|))
+CheckArity(ret(|assert|))
+CheckArity(ret(|assert|))
+MakeConcreteConstraint [term=|(function f() {
+  return (b ? x : y);
+})() == 260|]
+MakeConcreteConstraint [term=|130|]
+MakeConcreteConstraint [term=|239|]
+MakeConcreteConstraint [term=|b|]
+MakeConcreteConstraint [term=|true|]
+MakeConcreteConstraint [term=|x * 2|]
+MakeConcreteConstraint [term=|x == 130|]
+MakeConcreteConstraint [term=|x == 260|]
+MakeConcreteConstraint [term=|y == 239|]
+|(b ? x : y)|<:ret(|function f|)
+|(b ? x : y)|=|b ? x : y|
+|(function f() {
+  return (b ? x : y);
+})() == 260|<:param(|assert|,0)
+|(function f() {
+  return (b ? x : y);
+})() == 260|=op(|(function f() {
+  return (b ? x : y);
+})()|==|260|)
+|(function f() {
+  return (b ? x : y);
+})()|=ret(|(function f() {
+  return (b ? x : y);
+})|)
+|(function f() {
+  return (b ? x : y);
+})|=|function f|
+|130|<:|x|
+|130|=integer
+|130|=integer
+|239|<:|y|
+|239|=integer
+|239|=integer
+|260|=integer
+|260|=integer
+|2|=integer
+|assert((function f() {
+  return (b ? x : y);
+})() == 260)|=ret(|assert|)
+|assert(b)|=ret(|assert|)
+|assert(x == 130)|=ret(|assert|)
+|assert(x == 260)|=ret(|assert|)
+|assert(y == 239)|=ret(|assert|)
+|assert|=|assert|
+|assert|=|assert|
+|assert|=|assert|
+|assert|=|assert|
+|assert|=|assert|
+|b|<:param(|assert|,0)
+|b|=|b|
+|b|=|b|
+|function f|<:|f|
+|true|<:|b|
+|true|=boolean
+|x * 2|<:|x|
+|x * 2|=op(|x|*|2|)
+|x = x * 2|=|x|
+|x == 130|<:param(|assert|,0)
+|x == 130|=op(|x|==|130|)
+|x == 260|<:param(|assert|,0)
+|x == 260|=op(|x|==|260|)
+|x|<:|b ? x : y|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|x|=|x|
+|y == 239|<:param(|assert|,0)
+|y == 239|=op(|y|==|239|)
+|y|<:|b ? x : y|
+|y|=|y|
+|y|=|y|

@@ -1,0 +1,19 @@
+CheckArity(ret(|console.log|))
+MakeConcreteConstraint [term=|"found foo"|]
+MakeConcreteConstraint [term=|3|]
+MakeConcreteConstraint [term=|7|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|{"foo": 3, "bar": 7}|]
+|"foo" in x|=op(|"foo"|in|x|)
+|"foo"|=string
+|"found foo"|<:param(|console.log|,0)
+|"found foo"|=string
+|3|<:Elem(|{"foo": 3, "bar": 7}|)
+|3|=integer
+|7|<:Elem(|{"foo": 3, "bar": 7}|)
+|7|=integer
+|console.log("found foo")|=ret(|console.log|)
+|console.log|=prop(|console|,log)
+|console|=|console|
+|x|=|x|
+|{"foo": 3, "bar": 7}|<:|x|

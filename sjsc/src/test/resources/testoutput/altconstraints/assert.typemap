@@ -1,0 +1,15 @@
+3 --> integer
+4 --> integer
+assert --> (boolean) -> void
+assert(x) --> void
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.assert --> [](boolean) -> void
+console.assert(y == z) --> void
+true --> boolean
+x --> boolean
+x --> boolean
+y --> integer
+y --> integer
+y == z --> boolean
+z --> integer
+z --> integer

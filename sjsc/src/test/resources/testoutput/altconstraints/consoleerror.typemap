@@ -1,0 +1,4 @@
+"stderror test 1" --> string
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.error --> [](string) -> void
+console.error("stderror test 1") --> void

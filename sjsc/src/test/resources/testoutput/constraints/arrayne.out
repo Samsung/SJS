@@ -1,0 +1,23 @@
+CheckArity(ret(|console.assert|))
+MakeConcreteConstraint [term=|3|]
+MakeConcreteConstraint [term=|4|]
+MakeConcreteConstraint [term=|[3, 4]|]
+MakeConcreteConstraint [term=|console|]
+MakeConcreteConstraint [term=|x != null|]
+TP([3, 4])=Elem(ret(prop(|[3, 4]|,concat)))
+TP([3, 4])=Elem(ret(prop(|[3, 4]|,reverse)))
+TP([3, 4])=Elem(|[3, 4]|)
+TP([3, 4])=param(prop(|[3, 4]|,push),0)
+TP([3, 4])=ret(prop(|[3, 4]|,pop))
+TP([3, 4])=ret(prop(|[3, 4]|,shift))
+|3|<:Elem(|[3, 4]|)
+|3|=integer
+|4|<:Elem(|[3, 4]|)
+|4|=integer
+|[3, 4]|<:|x|
+|console.assert(x != null)|=ret(|console.assert|)
+|console.assert|=prop(|console|,assert)
+|console|=|console|
+|x != null|<:param(|console.assert|,0)
+|x != null|=op(|x|!=|null|)
+|x|=|x|

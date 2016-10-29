@@ -1,0 +1,53 @@
+0 --> integer
+0 --> integer
+0 --> integer
+10 --> integer
+10 --> integer
+Node --> ctor<0>[null](integer,{  | val: integer, next: <<recursive>> }) -> {  | val: integer, next: <<recursive>> }
+Node --> ctor<0>[null](integer,{  | val: integer, next: <<recursive>> }) -> {  | val: integer, next: <<recursive>> }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log(string_of_int(x.val)) --> void
+function Node(v, nxt) {
+  this.val = v;
+  this.next = nxt;
+}
+ --> ctor<0>[null](integer,{  | val: integer, next: <<recursive>> }) -> {  | val: integer, next: <<recursive>> }
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i --> integer
+i < 10 --> boolean
+i < 10 --> boolean
+i = 0 --> integer
+i = 0 --> integer
+i++ --> integer
+i++ --> integer
+new Node(i, x) --> {  | val: integer, next: <<recursive>> }
+null --> {  | val: integer, next: <<recursive>> }
+nxt --> {  | val: integer, next: <<recursive>> }
+nxt --> {  | val: integer, next: <<recursive>> }
+string_of_int --> (integer) -> string
+string_of_int(x.val) --> string
+this --> {  | val: integer, next: <<recursive>> }
+this --> {  | val: integer, next: <<recursive>> }
+this.next --> {  | val: integer, next: <<recursive>> }
+this.next = nxt --> {  | val: integer, next: <<recursive>> }
+this.val --> integer
+this.val = v --> integer
+v --> integer
+v --> integer
+x --> {  | val: integer, next: <<recursive>> }
+x --> {  | val: integer, next: <<recursive>> }
+x --> {  | val: integer, next: <<recursive>> }
+x --> {  | val: integer, next: <<recursive>> }
+x --> {  | val: integer, next: <<recursive>> }
+x --> {  | val: integer, next: <<recursive>> }
+x = new Node(i, x) --> {  | val: integer, next: <<recursive>> }
+x = x.next --> {  | val: integer, next: <<recursive>> }
+x.next --> {  | val: integer, next: <<recursive>> }
+x.val --> integer

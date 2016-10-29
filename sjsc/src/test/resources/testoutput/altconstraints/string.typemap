@@ -1,0 +1,26 @@
+"!" --> string
+"hello" --> string
+65 --> integer
+String --> { fromCharCode: [](integer) -> string |  } INTERSECT () -> string INTERSECT (string) -> string
+String --> { fromCharCode: [](integer) -> string |  } INTERSECT () -> string INTERSECT (string) -> string
+String --> { fromCharCode: [](integer) -> string |  } INTERSECT () -> string INTERSECT (string) -> string
+String("hello") --> string
+String() --> string
+String.fromCharCode --> [](integer) -> string
+String.fromCharCode(65) --> string
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console --> { log: [](string) -> void, assert: [](boolean) -> void, error: [](string) -> void, warn: [](string) -> void |  }
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log --> [](string) -> void
+console.log(x + "!") --> void
+console.log(y) --> void
+console.log(z) --> void
+x + "!" --> string
+x --> string
+x --> string
+y --> string
+y --> string
+z --> string
+z --> string

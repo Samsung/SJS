@@ -1,0 +1,52 @@
+(b ? x : y) --> integer
+(function f() {
+  return (b ? x : y);
+}) --> () -> integer
+(function f() {
+  return (b ? x : y);
+})() --> integer
+(function f() {
+  return (b ? x : y);
+})() == 260 --> boolean
+130 --> integer
+130 --> integer
+2 --> integer
+239 --> integer
+239 --> integer
+260 --> integer
+260 --> integer
+assert --> (boolean) -> void
+assert --> (boolean) -> void
+assert --> (boolean) -> void
+assert --> (boolean) -> void
+assert --> (boolean) -> void
+assert((function f() {
+  return (b ? x : y);
+})() == 260) --> void
+assert(b) --> void
+assert(x == 130) --> void
+assert(x == 260) --> void
+assert(y == 239) --> void
+b --> boolean
+b --> boolean
+b --> boolean
+b ? x : y --> integer
+f --> () -> integer
+function f() {
+  return (b ? x : y);
+} --> () -> integer
+true --> boolean
+x * 2 --> integer
+x --> integer
+x --> integer
+x --> integer
+x --> integer
+x --> integer
+x --> integer
+x = x * 2 --> integer
+x == 130 --> boolean
+x == 260 --> boolean
+y --> integer
+y --> integer
+y --> integer
+y == 239 --> boolean
